@@ -1,0 +1,67 @@
+\section*{Hidden Constants in Integration by Parts}
+
+\url{https://www.youtube.com/watch?v=N5xtRr0jfWI} \\
+\url{https://www.youtube.com/watch?v=V8uZYdd4Jnk}
+
+\begin{itemize}
+
+\item Why does every indefinite integral include an arbitrary constant $C$?
+
+\item Derive the integration by parts formula from the product rule.
+
+\item Why is the equation
+  \[
+    \int u\,dv = uv - \int v\,du
+  \]
+  technically incomplete if we ignore constants of integration? Where are the hidden constants in this equation?
+
+\item Why can ignoring arbitrary constants sometimes lead to paradoxes or false identities when manipulating indefinite integrals?
+
+\item Consider this example
+  \[
+    I = \int \underbrace{\frac{f'(x)}{f(x)}}_{uv'} \, dx =
+      \underbrace{\frac{f(x)}{f(x)}}_{uv} - \int \underbrace{-\frac{f'(x)}{f^2(x)}}_{u'} \underbrace{f(x)}_{v} \, dx =
+      1 + \int \frac{f'(x)}{f(x)} \, dx =
+      1 + I
+  \]
+  \begin{align*}
+    u  &= \frac{1}{f(x)}        & v' &= f'(x) \\
+    u' &= -\frac{f'(x)}{f(x)^2} & v  &= f(x)
+  \end{align*}
+  Where is the error in this paradoxical derivation?
+
+\item Consider this example
+  \[
+    I = \int f(x)g'(x) \, dx
+  \]
+  \begin{align*}
+    u  &= f(x)  & v' &= g'(x) \\
+    u' &= f'(x) & v  &= g(x) + A
+  \end{align*}
+  Show how all the constants of integration are absorbed into one when applying integration by parts.
+
+\item Why can repeated applications of integration by parts accumulate multiple constants?
+
+\item How can these multiple constants always be absorbed into a single constant in the final answer?
+
+\item Why is it sometimes useful to deliberately choose a non-zero constant when computing an antiderivative inside integration by parts?
+
+\item If the integration by part is applied naively to integral $\int x\arctan(x) \, dx$ it leads to an incomplete solution
+  \[
+    \int \underbrace{x}_{v'} \underbrace{\arctan(x)}_{u} \, dx
+      = \underbrace{\frac{x^2}{2}}_{v} \underbrace{\arctan(x)}_{u} -
+        \int \underbrace{\frac{x^2}{2}}_{v} \underbrace{\frac{1}{x^2+1}}_{u'}\,dx.
+  \]
+  How can choosing a convenient constant in the antiderivative simplify the naive solution?
+
+\item If the integration by part is applied naively to integral $\int \ln(x+2) \, dx$ it leads to an incomplete solution
+  \[
+    \int \underbrace{1}_{v'} \underbrace{\ln(x+2)}_{u} \, dx
+      = \underbrace{x}_{v} \underbrace{\ln(x+2)}_{u} -
+        \int \underbrace{x}_{v} \underbrace{\frac{1}{x+2}}_{u'} \, dx.
+  \]
+  How can choosing a convenient constant in the antiderivative simplify the naive solution?
+
+\item Why are definite integrals immune to the constant-of-integration ambiguity?
+
+\end{itemize}
