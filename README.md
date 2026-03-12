@@ -6,7 +6,7 @@ You can preview these notes [online](https://aradzie.github.io/math-notes/notes.
 
 In this repository the `*.note` files are the source files of the notes in a simple human-readable format.
 
-To import these notes to Anki install the [Notatki Anki addon](https://ankiweb.net/shared/info/541850746). Then from the `File` menu select `Import Notatki...` and point to this directory.
+To import these notes to Anki install the [Notatki Anki addon](https://ankiweb.net/shared/info/541850746). Then from the `File` menu select `Import Models and Notes...` and point to this directory.
 
 We recommend the [Notatki Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=aradzie.notatki) for editing these note files
 
