@@ -1,16 +1,14 @@
-\section{Newton's Method}
+\section{Newton's (Newton--Raphson) Method}
 
 \begin{enumerate}
 
 \item What is the goal of a root-finding algorithm?
 
-\item State the Newton (Newton--Raphson) method iteration formula for finding a root of a function $f(x)$.
-
-\item How is the Newton iteration formula derived from the tangent line approximation?
-
-\item Write the equation of the tangent line to $f(x)$ at a point $x_n$.
+\item State the Newton method iteration formula for finding a root of a function $f(x)$.
 
 \item How do you obtain the next iterate $x_{n+1}$ from the tangent line?
+
+\item Derive the Newton iteration by applying a first-order Taylor expansion of $f(x)$ around $x_n$.
 
 \item What assumptions about $f(x)$ are required for Newton's method to work?
 
@@ -20,9 +18,11 @@
 
 \item What is quadratic convergence?
 
-\item Under what conditions does Newton's method exhibit quadratic convergence?
+\item Why does Newton's method converge faster near the root than far from it?
 
 \item What happens if $f'(x_n) = 0$ during the iteration?
+
+\item Why is Newton's method considered a local method?
 
 \item Why can Newton's method fail to converge for some initial guesses?
 
@@ -40,17 +40,13 @@
 
 \item Compare stopping criteria based on $|x_{n+1} - x_n|$ and $|f(x_n)|$.
 
-\item What is the computational cost of one Newton iteration?
-
-\item How does Newton's method compare to the bisection method in terms of speed and reliability?
-
-\item Why is Newton's method considered a local method?
-
-\item What is the geometric interpretation of Newton's method?
+\item How is Newton method formulated in terms of a vector-valued function $F(x)$?
 
 \item How can Newton's method be extended to systems of nonlinear equations?
 
-\item Write the Newton iteration for a system of equations using the Jacobian matrix.
+\item How do we define the Jacobian matrix $J_F(x)$ for a function $F : \mathbb{R}^n \to \mathbb{R}^n$?
+
+\item Write the Newton iteration formula for solving $F(x) = 0$ in $\mathbb{R}^n$.
 
 \item What role does the Jacobian matrix play in multidimensional Newton's method?
 
@@ -72,19 +68,13 @@
 
 \item When might the secant method be preferred over Newton's method?
 
-\item What is the effect of numerical errors in evaluating $f(x)$ or $f'(x)$?
-
 \item How can automatic differentiation help in implementing Newton's method?
-
-\item What are practical safeguards used in implementations of Newton's method?
 
 \item What is line search in the context of Newton's method?
 
 \item How can Newton's method behave near inflection points?
 
 \item What happens if the function is not differentiable at the root?
-
-\item How can Newton's method be visualized graphically?
 
 \item Why can Newton's method oscillate between points instead of converging?
 
@@ -96,12 +86,34 @@
 
 \item What is the role of scaling in Newton's method for systems?
 
-\item How does conditioning of the problem affect convergence?
-
 \item What is meant by the error $e_n = x_n - r$, and how does it evolve in Newton's method?
 
 \item Derive the error recurrence relation for Newton's method near a simple root.
 
-\item Why does Newton's method converge faster near the root than far from it?
+\item What is the goal of Newton's method in the context of optimization?
+
+\item How do we derive Newton's method for finding a local minimum of a scalar function $f(x)$?
+
+\item What role does the gradient $\nabla f(x)$ play in Newton's method?
+
+\item What is the Hessian matrix $\nabla^2 f(x)$ and how is it defined?
+
+\item Write the Newton iteration formula for optimization in $\mathbb{R}^n$.
+
+\item How does Newton's method extend to complex-valued functions?
+
+\item What are basins of attraction in the complex plane?
+
+\item How can we visualize the convergence behavior of Newton's method in the complex plane?
+
+\item How do Newton fractals arise from iterating Newton's method in $\mathbb{C}$?
+
+\item Why do the boundaries between basins of attraction exhibit fractal structure?
+
+\item What are fixed points of the Newton iteration map?
+
+\item Are all fixed points of the Newton map roots of $f(z)$?
+
+\item What are attracting, repelling, and neutral fixed points in this context?
 
 \end{enumerate}
