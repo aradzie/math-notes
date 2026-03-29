@@ -1,9 +1,11 @@
+\section{Implicit Function Theorem (2)}
+
 \subsection{Conceptual Foundations}
 
-\begin{enumerate}[leftmargin=*, label=\textbf{Q\arabic*.}]
+\begin{enumerate}
   \item State the \textbf{Implicit Function Theorem} (IFT) precisely. What are the hypotheses on $F : \mathbb{R}^{n+m} \to \mathbb{R}^m$, on the point $(a, b) \in \mathbb{R}^n \times \mathbb{R}^m$, and what does the conclusion guarantee?
-  \item In the IFT, why is it necessary to require that the \textbf{partial Jacobian} $D_y F(a,b)$ is invertible (i.e.\ $\det D_y F(a,b) \neq 0$)? What can go wrong if this condition fails? Provide a concrete example.
-  \item The IFT guarantees a function $g : U \to V$ such that $F(x, g(x)) = 0$ for all $x \in U$. What are $U$ and $V$? In what sense is $g$ \textbf{unique}?
+  \item In the IFT, why is it necessary to require that the partial Jacobian $D_y F(a,b)$ is invertible (i.e.\ $\det D_y F(a,b) \neq 0$)? What can go wrong if this condition fails? Provide a concrete example.
+  \item The IFT guarantees a function $g : U \to V$ such that $F(x, g(x)) = 0$ for all $x \in U$. What are $U$ and $V$? In what sense is $g$ unique?
   \item Explain the relationship between the \textbf{Implicit Function Theorem} and the \textbf{Inverse Function Theorem}. Can each be derived from the other?
   \item The IFT is a \textbf{local} result. What does ``local'' mean precisely here, and why can the conclusion generally not be extended to a global statement?
   \item What regularity does the IFT guarantee for $g$? If $F \in C^k$, what can you conclude about $g$?
@@ -11,7 +13,7 @@
 
 \subsection{Computing the Implicit Derivative}
 
-\begin{enumerate}[resume, leftmargin=*, label=\textbf{Q\arabic*.}]
+\begin{enumerate}[resume]
   \item Derive the formula for the derivative $Dg(x)$ in terms of the partial derivatives of $F$. Starting from the identity $F(x, g(x)) = 0$, apply the chain rule and solve for $Dg(x)$.
   \item In the scalar case $F(x, y) = 0$ with $F : \mathbb{R}^2 \to \mathbb{R}$, write down the explicit formula
     \[
@@ -31,7 +33,7 @@
 
 \subsection{Geometric and Analytic Interpretation}
 
-\begin{enumerate}[resume, leftmargin=*, label=\textbf{Q\arabic*.}]
+\begin{enumerate}[resume]
   \item Interpret the IFT geometrically: what does it say about the \textbf{level set} $\{(x,y) : F(x,y) = 0\}$ near a regular point?
   \item Define a \textbf{regular point} and a \textbf{critical point} of $F : \mathbb{R}^{n+m} \to \mathbb{R}^m$. How do these concepts relate to the hypothesis of the IFT?
   \item The IFT implies that the zero set of $F$ is locally a \textbf{smooth manifold} near a regular point. What is the dimension of this manifold, and why?
@@ -40,7 +42,7 @@
 
 \subsection{Applications and Extensions}
 
-\begin{enumerate}[resume, leftmargin=*, label=\textbf{Q\arabic*.}]
+\begin{enumerate}[resume]
   \item State the \textbf{rank theorem} (constant rank theorem). How does it generalise the IFT?
   \item In constrained optimisation, the method of \textbf{Lagrange multipliers} relies on the IFT. Explain what role the IFT plays in justifying why the constraint surface can be locally parameterised, thus reducing the problem.
   \item Let $F(x, \lambda) = 0$ define an \textbf{implicitly parameterised curve} in $(x,\lambda)$-space. What does the IFT say about the local structure of this curve? Where might the curve \textbf{bifurcate}, and how is this detected?
@@ -51,7 +53,7 @@
 
 \subsection{Proof and Technique}
 
-\begin{enumerate}[resume, leftmargin=*, label=\textbf{Q\arabic*.}]
+\begin{enumerate}[resume]
   \item Sketch the main idea of the \textbf{proof of the IFT}. Which fixed-point theorem (or contraction principle) is typically invoked, and how?
   \item In the proof of the IFT via the \textbf{Banach fixed-point theorem}, one defines an auxiliary map $T_x(y) = y - [D_y F(a,b)]^{-1} F(x,y)$. Explain why $T_x$ is a contraction on a suitable ball, and what the fixed point represents.
   \item Why does the proof of the IFT require $F$ to be at least $C^1$? Give an example of a function that satisfies $F(0,0) = 0$ and $\partial F/\partial y \neq 0$ at the origin but for which the conclusion of the IFT fails due to lack of continuity of derivatives.
@@ -60,7 +62,7 @@
 
 \subsection{Quick-Fire Recall}
 
-\begin{enumerate}[resume, leftmargin=*, label=\textbf{Q\arabic*.}]
+\begin{enumerate}[resume]
   \item True or False: if $F(a,b) = 0$ and $D_y F(a,b)$ is invertible, then $g$ is defined on all of $\mathbb{R}^n$.
   \item True or False: the IFT guarantees that $g$ is real-analytic whenever $F$ is real-analytic.
   \item What is the dimension of the solution set of $m$ independent equations $F(x) = 0$ in $\mathbb{R}^n$ (with $m < n$) near a regular point?
