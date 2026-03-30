@@ -1,0 +1,81 @@
+\section{Euler's Method}
+
+\subsection{Fundamental Concepts}
+\begin{enumerate}
+  \item What problem does Euler's method aim to solve? State the general form of an initial value problem.
+  \item What is meant by a numerical approximation to a solution of an ODE?
+  \item What role does the step size $h$ play in Euler's method?
+\end{enumerate}
+
+\subsection{Geometric and Intuitive Understanding}
+\begin{enumerate}[resume]
+  \item What is the geometric interpretation of Euler's method in terms of tangent lines?
+  \item How would you visualize the steps of Euler's method on a slope field?
+\end{enumerate}
+
+\subsection{Derivation and Formulation}
+\begin{enumerate}[resume]
+  \item Starting from the differential equation $y'(x) = f(x,y)$, derive the Euler update formula.
+  \item Write the recursive formula for Euler's method, defining all variables involved.
+  \item Given an initial condition $y(x_0) = y_0$, how do you compute $y_1$ using Euler's method?
+  \item How do you compute $y_{n+1}$ from $y_n$ in Euler's method?
+\end{enumerate}
+
+\subsection{Error Analysis and Accuracy}
+\begin{enumerate}[resume]
+  \item What is the local truncation error in Euler's method?
+  \item What is the global truncation error in Euler's method?
+  \item What is the order of accuracy of Euler's method?
+  \item How does decreasing the step size $h$ affect the accuracy of Euler's method?
+  \item What is the trade-off between accuracy and computational cost in Euler's method?
+  \item What types of errors can accumulate in Euler's method over many steps?
+  \item How can you estimate the error in Euler's method during computation?
+\end{enumerate}
+
+\subsection{Stability and Limitations}
+\begin{enumerate}[resume]
+  \item What is meant by stability in the context of numerical methods for ODEs?
+  \item Why can Euler's method become unstable for certain differential equations?
+  \item Give an example of a differential equation where Euler's method performs poorly.
+  \item What is a stiff differential equation, and why is Euler's method problematic for such equations?
+  \item What happens if the function $f(x,y)$ is not smooth? How does this affect Euler's method?
+  \item What are common pitfalls when using Euler's method in practice?
+\end{enumerate}
+
+\subsection{Variants and Improvements}
+\begin{enumerate}[resume]
+  \item What is the difference between explicit Euler and implicit Euler methods?
+  \item Write the update formula for the implicit Euler method.
+  \item What advantage does the implicit Euler method have over the explicit version?
+  \item How can you modify Euler's method to improve accuracy (e.g., midpoint or improved Euler methods)?
+  \item What is the idea behind the Heun method (improved Euler method)?
+\end{enumerate}
+
+\subsection{Theoretical Connections}
+\begin{enumerate}[resume]
+  \item How does Euler's method relate to the Taylor series expansion of the solution?
+  \item What term(s) of the Taylor series does Euler's method include or neglect?
+\end{enumerate}
+
+\subsection{Extensions and Generalizations}
+\begin{enumerate}[resume]
+  \item Can Euler's method be used for systems of differential equations? How?
+  \item How does Euler's method behave when applied backward in time (negative step size)?
+\end{enumerate}
+
+\subsection{Euler's Method as Integration}
+\begin{enumerate}[resume]
+  \item What is the standard form of an ordinary differential equation involving a function \( y(t) \)?
+  \item How can the differential equation \( \frac{dy}{dt} = f(t,y) \) be rewritten as an equivalent integral equation?
+  \item What does the integral \( \int_{t_n}^{t_{n+1}} f(s, y(s))\,ds \) represent conceptually?
+  \item Why is the integral form of the solution exact, even though we may not know \( y(s) \)?
+  \item What is the main difficulty in computing the integral \( \int_{t_n}^{t_{n+1}} f(s, y(s))\,ds \) exactly?
+  \item What approximation is made in the Forward Euler method for the integrand \( f(s, y(s)) \)?
+  \item What is the geometric interpretation of approximating \( f(s, y(s)) \) by \( f(t_n, y(t_n)) \)?
+  \item How does this approximation simplify the integral over the interval \( [t_n, t_{n+1}] \)?
+  \item How do we define the step size \( h \), and what role does it play?
+  \item How do we derive the Forward Euler update formula from the approximated integral?
+  \item Why can we interpret the Forward Euler method as a left-endpoint Riemann sum?
+  \item In what sense is Forward Euler performing “integration” of the differential equation?
+  \item Why does assuming a constant slope over the interval introduce error?
+\end{enumerate}
