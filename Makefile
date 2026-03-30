@@ -6,9 +6,11 @@
 all: pdf
 
 pdf:
+	node generate-stats.js
 	latexmk -pdf active-recall.tex
 
 pdf-preview:
+	node generate-stats.js
 	latexmk -pdf -pvc active-recall.tex
 
 clean:
