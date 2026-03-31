@@ -1,0 +1,105 @@
+\section {Geometry of Differential Equations}
+
+Let's develops a geometric understanding of differential equations by connecting them to vector fields and tangent structures. Instead of viewing a differential equation purely as an algebraic object, we interpret it as a rule that assigns a direction (velocity) to every point in space. This perspective reveals that solutions to differential equations are not arbitrary functions, but special curves—called integral curves—that follow these directions at every point.
+
+We begin by relating slope fields and vector fields, showing that a first-order differential equation naturally defines a direction field. From there, we introduce the concept of integral curves as trajectories that are everywhere tangent to the vector field. This provides a unifying viewpoint: solving a differential equation means finding curves whose tangent vectors agree with a prescribed field.
+
+We then connect these ideas to differential geometry by interpreting vector fields as tangent vector fields and surfaces as collections of tangent planes. This highlights the distinction between local information (given by the vector field) and global behavior (the resulting trajectories).
+
+Finally, we interpret the Forward Euler method geometrically as a procedure that approximates integral curves by taking small steps in the direction of the vector field. This reveals numerical methods as discrete versions of continuous geometric motion.
+
+Overall, the goal is to build an intuitive and structural understanding of differential equations as geometry: vector fields define motion, and solutions arise by following that motion.
+
+\subsection{Vector Fields and Differential Equations}
+
+\begin{enumerate}
+  \item What does a vector field $\mathbf{V}(\mathbf{x})$ assign to each point in space?
+  \item In what sense does a vector field define a ``local rule of motion''?
+  \item How can a differential equation $\frac{d\mathbf{x}}{dt} = \mathbf{V}(\mathbf{x})$ be interpreted geometrically?
+  \item Why does a vector field determine velocity but not a global destination?
+  \item How does an initial condition $\mathbf{x}(0)=\mathbf{x}_0$ select a unique trajectory?
+  \item What does it mean for the family of all solutions to be ``encoded'' in the vector field?
+\end{enumerate}
+
+\subsection{Slope Fields and Direction Fields}
+
+\begin{enumerate}[resume]
+  \item How does the equation $\frac{dy}{dx} = f(x,y)$ define a slope field?
+  \item How can a slope field be converted into a vector field using $(1, f(x,y))$?
+  \item Why is a slope field really a direction field rather than a unique vector field?
+  \item How are solution curves related to the directions shown in a slope field?
+  \item Why can we scale vectors (e.g.\ $(\lambda, \lambda f)$) without changing the solutions?
+\end{enumerate}
+
+\subsection{Integral Curves}
+
+\begin{enumerate}[resume]
+  \item What is the definition of an integral curve in terms of $\gamma'(t) = \mathbf{V}(\gamma(t))$?
+  \item Why is an integral curve the same thing as a solution to a differential equation?
+  \item What does it mean geometrically that a curve ``follows'' a vector field?
+  \item Why are integral curves also called trajectories or flow lines?
+  \item How can an integral curve be written in integral form:
+    \[
+      \gamma(t) = \gamma(0) + \int_0^t \mathbf{V}(\gamma(s))\,ds ?
+    \]
+  \item Why is the term ``integral'' used in ``integral curve''?
+\end{enumerate}
+
+\subsection{Tangent Vectors and Tangent Vector Fields}
+
+\begin{enumerate}[resume]
+  \item What is a tangent vector to a curve?
+  \item What is the tangent plane $T_p S$ at a point on a surface?
+  \item Why does a tangent plane contain infinitely many possible tangent directions?
+  \item What is a tangent vector field on a surface $S$?
+  \item Why does a tangent vector field require choosing one vector from each tangent plane?
+  \item How do parametrizations $\mathbf{r}(u,v)$ produce tangent vectors $\mathbf{r}_u$ and $\mathbf{r}_v$?
+  \item How can a general tangent vector be expressed as a linear combination $a\mathbf{r}_u + b\mathbf{r}_v$?
+  \item How can a vector field in $\mathbb{R}^3$ be projected onto a tangent plane?
+  \item How do curves on a surface naturally generate tangent vector fields?
+\end{enumerate}
+
+\subsection{Connection Between Tangent Fields and Differential Equations}
+
+\begin{enumerate}[resume]
+  \item How does the condition $\dot{\gamma}(t) = \mathbf{V}(\gamma(t))$ relate tangent vectors to vector fields?
+  \item Why can solution curves be viewed as curves whose tangent vectors match a vector field?
+  \item In what sense is a differential equation prescribing a tangent vector field?
+  \item How does this interpretation unify slope fields, vector fields, and tangent vectors?
+\end{enumerate}
+
+\subsection{Forward Euler Method}
+
+\begin{enumerate}[resume]
+  \item What is the Forward Euler update rule:
+    \[
+      \mathbf{x}_{n+1} = \mathbf{x}_n + h \mathbf{V}(\mathbf{x}_n) ?
+    \]
+  \item How can this be interpreted as ``taking a small step in the direction of the vector field''?
+  \item Why does Forward Euler approximate integral curves with piecewise linear segments?
+  \item What assumption does Euler make about the vector field over a small time step?
+  \item How does the exact solution use the integral:
+    \[
+      \mathbf{x}(t+h) = \mathbf{x}(t) + \int_t^{t+h} \mathbf{V}(\mathbf{x}(s))\,ds ?
+    \]
+  \item Why is Forward Euler equivalent to a left-endpoint Riemann sum?
+  \item Why does error accumulate in Forward Euler when the vector field changes along the path?
+\end{enumerate}
+
+\subsection{Local vs Global Behavior}
+
+\begin{enumerate}[resume]
+  \item What is the difference between a local rule (vector field) and a global object (solution curve)?
+  \item Why does repeatedly applying local information produce a global trajectory?
+  \item How does this idea relate to numerical methods like Forward Euler?
+\end{enumerate}
+
+\subsection{Flows and Deeper Geometric View}
+
+\begin{enumerate}[resume]
+  \item What is a flow $\varphi_t(\mathbf{x}_0)$ generated by a vector field?
+  \item How does a vector field define motion over time through its integral curves?
+  \item How does Forward Euler approximate a continuous flow with a discrete map?
+  \item Why can differential equations be viewed as describing motion on geometric spaces?
+  \item How does restricting motion to a surface require the vector field to lie in the tangent plane?
+\end{enumerate}
