@@ -1,0 +1,116 @@
+\section{Riemann and Darboux Integration}
+
+\subsection{Foundational Definitions}
+
+\begin{enumerate}
+  \item What is a partition of an interval $[a,b]$?
+  \item Define the norm (mesh size) of a partition.
+  \item What is a tagged partition?
+  \item Define a Riemann sum.
+  \item State the definition of the Riemann integral using Riemann sums.
+  \item Define the upper Darboux sum.
+  \item Define the lower Darboux sum.
+  \item What are the quantities
+    \[
+      M_i = \sup_{x \in [x_{i-1},x_i]} f(x)
+    \]
+    and
+    \[
+      m_i = \inf_{x \in [x_{i-1},x_i]} f(x)?
+    \]
+  \item Define the upper Darboux integral.
+  \item Define the lower Darboux integral.
+  \item State the definition of Darboux integrability.
+  \item Why must a function be bounded to be Riemann integrable?
+  \item Why must a function be bounded to be Darboux integrable?
+\end{enumerate}
+
+\subsection{Conceptual Understanding}
+
+\begin{enumerate}[resume]
+  \item What is the geometric intuition behind a Riemann sum?
+  \item What is the geometric intuition behind upper and lower Darboux sums?
+  \item Why does refining a partition generally improve approximation quality?
+  \item What happens to lower Darboux sums when a partition is refined?
+  \item What happens to upper Darboux sums when a partition is refined?
+  \item Why is
+    \[
+      L(f,P) \le U(f,P)
+    \]
+    always true?
+  \item Explain why
+    \[
+      \sup_P L(f,P) \le \inf_P U(f,P).
+    \]
+  \item What does it mean geometrically when the upper and lower integrals are equal?
+  \item Why are Darboux sums often considered technically simpler than Riemann sums?
+  \item Why are Riemann sums closer to the historical intuition of integration?
+
+\end{enumerate}
+
+\subsection{Comparisons Between Riemann and Darboux Integration}
+
+\begin{enumerate}[resume]
+  \item What is the main difference between a Riemann sum and a Darboux sum?
+  \item In a Riemann sum, how are sample points chosen?
+  \item In a Darboux sum, why are sample points unnecessary?
+  \item Which theory uses arbitrary sample points explicitly?
+  \item Which theory uses suprema and infima on subintervals?
+  \item What role does the partition norm play in Riemann integration?
+  \item What role does partition refinement play in Darboux integration?
+  \item State the theorem relating Riemann integrability and Darboux integrability.
+  \item Why are the two theories equivalent for bounded functions on closed intervals?
+  \item Which formulation is usually preferred in rigorous analysis courses?
+  \item Which formulation is usually easier for proving integrability?
+  \item Can two different tagged partitions with the same underlying partition produce different Riemann sums?
+  \item Can two different Darboux sums exist for the same partition?
+  \item How do upper and lower Darboux sums bound all possible Riemann sums?
+  \item Explain how Darboux integration avoids explicit limits of sums.
+  \item Explain how Riemann integration encodes convergence directly through limits.
+
+\end{enumerate}
+
+\subsection{Theorems and Properties}
+
+\begin{enumerate}[resume]
+  \item State the linearity property of the integral.
+  \item State the additivity over intervals property.
+  \item State the monotonicity property of the integral.
+  \item If $f$ is continuous on $[a,b]$, why is it integrable?
+  \item Why is every monotone function on $[a,b]$ integrable?
+  \item State a criterion for integrability involving discontinuities.
+  \item What is the relationship between measure-zero discontinuity sets and integrability?
+  \item Why is the Dirichlet function not Riemann integrable?
+  \item Why is the characteristic function of the rationals discontinuous everywhere?
+  \item Give an example of a function that is discontinuous but still Riemann integrable.
+  \item Why is a function with finitely many discontinuities integrable?
+  \item What happens to the integral if two functions differ only on finitely many points?
+  \item What happens if two functions differ only on a measure-zero set?
+
+\end{enumerate}
+
+\subsection{Technical Manipulation}
+
+\begin{enumerate}[resume]
+  \item Compute the lower and upper Darboux sums for a constant function.
+  \item Compute the lower and upper Darboux sums for $f(x)=x$ on $[0,1]$ using a uniform partition.
+  \item Derive the Riemann sum for $f(x)=x^2$ on $[0,1]$.
+  \item Show directly that
+    \[
+      \int_0^1 x\,dx = \frac12
+    \]
+    using Riemann sums.
+  \item Show directly that
+    \[
+      \int_0^1 x\,dx = \frac12
+    \]
+    using Darboux sums.
+  \item For a uniform partition, how do you compute
+    \[
+      \Delta x?
+    \]
+  \item Why do continuous functions attain maxima and minima on closed intervals?
+  \item Why is compactness important in Darboux integration?
+  \item What is the difference between taking a supremum over all lower sums and taking a limit?
+  \item Why does the existence of arbitrarily close upper and lower sums imply integrability?
+\end{enumerate}
