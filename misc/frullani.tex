@@ -1,6 +1,9 @@
 \section{Frullani's Integral}
 
 \begin{enumerate}
+
+    % --- Theorem statement and basic conditions ---
+
   \item State Frullani's integral theorem.
   \item What conditions on $f(x)$ are typically required for Frullani's theorem to hold?
   \item Why must the limits $f(0)$ and $f(\infty)$ exist?
@@ -8,41 +11,106 @@
   \item Why does the logarithm naturally appear in Frullani-type integrals?
   \item Derive
     \[
-      \int_0^\infty \frac{e^{-ax}-e^{-bx}}{x}\,dx
-      =
-      \ln\frac{b}{a}.
+      \int_0^\infty \frac{e^{-ax} - e^{-bx}}{x}\,dx = \ln\frac{b}{a}.
     \]
   \item Explain why
     \[
       \int_0^\infty \frac{e^{-ax}}{x}\,dx
     \]
     diverges.
-  \item Why does subtracting two divergent integrals sometimes produce a convergent result?
+  \item Why does subtracting two individually divergent integrals sometimes produce a convergent result?
+
+    % --- Edge cases ---
+
+  \item What happens if $a = b$?
+  \item What happens if one of the parameters tends to zero?
+  \item What happens if one of the parameters tends to infinity?
+
+    % --- Differentiation under the integral sign (Feynman trick) ---
+
   \item Show how Frullani's theorem can be derived using differentiation under the integral sign.
   \item Define
     \[
-      F(a)=\int_0^\infty \frac{e^{-x}-e^{-ax}}{x}\,dx.
+      F(a) = \int_0^\infty \frac{e^{-x} - e^{-ax}}{x}\,dx.
     \]
-    Compute $F'(a)$.
-  \item Solve the differential equation obtained from differentiating the Frullani integral with respect to a parameter.
-  \item Why does the final answer depend only on $f(0)$ and $f(\infty)$ rather than the full shape of $f$?
-  \item Give an example of a function for which Frullani's theorem fails.
-  \item Compute
+    Compute $F'(a)$, use the initial condition $F(1) = 0$ to determine the constant of integration, and write
+    down the closed form for $F(a)$.
+  \item When applying the Feynman trick to
     \[
-      \int_0^\infty \frac{\arctan(ax)-\arctan(bx)}{x}\,dx.
+      I(a) = \int_0^\infty \frac{f(x) - f(ax)}{x}\,dx,
     \]
+    what initial condition pins down the constant of integration? Why does this condition hold?
+  \item Differentiate
+    \[
+      \int_0^\infty \frac{f(ax) - f(bx)}{x}\,dx
+    \]
+    with respect to $a$, solve the resulting equation, and verify that the answer matches Frullani's theorem.
+  \item In the Feynman approach, differentiating with respect to $a$ removes the $\tfrac{1}{x}$ factor from
+    the integrand. Why does this make the integral tractable, and what condition on $f$ justifies
+    differentiating under the integral sign?
+  \item Why does the final answer depend only on $f(0)$ and $f(\infty)$ rather than the full shape of $f$?
+  \item Give an example of a function for which Frullani's theorem fails, and identify which hypothesis is violated.
+
+    % --- Alternative derivations and computations ---
+
   \item Derive Frullani's theorem from the identity
     \[
-      f(ax)-f(bx)
-      =
-      \int_b^a x f'(tx)\,dt.
+      f(ax) - f(bx) = \int_b^a x\,f'(tx)\,dt.
     \]
-  \item What changes if the integration interval is finite instead of $(0,\infty)$?
-  \item Give an example where Frullani's theorem produces a closed form for a difficult integral.
-  \item How is Frullani's theorem connected to Laplace transforms?
-  \item Compare Frullani's theorem with the Feynman differentiation trick.
-  \item What assumptions are required to differentiate under the integral sign?
-  \item What happens if $a=b$?
-  \item What happens if one of the parameters tends to zero?
-  \item What happens if one of the parameters tends to infinity?
+  \item Compute
+    \[
+      \int_0^\infty \frac{\arctan(ax) - \arctan(bx)}{x}\,dx.
+    \]
+  \item Compute
+    \[
+      \int_0^\infty \frac{\ln(1+ax) - \ln(1+bx)}{x}\,dx.
+    \]
+    Verify the answer by checking the $a = b$ limit.
+  \item Does Frullani's theorem apply to $\displaystyle\int_0^\infty \frac{\cos(ax) - \cos(bx)}{x}\,dx$?
+    Identify which hypothesis is (or is not) satisfied, and compute the integral by another method.
+  \item What changes if the integration interval is $(0,T)$ rather than $(0,\infty)$?
+
+    % --- Laplace transform connection ---
+
+  \item Write $\dfrac{1}{x} = \int_0^\infty e^{-xs}\,ds$ and substitute into $\displaystyle\int_0^\infty
+    \frac{f(ax)-f(bx)}{x}\,dx$.
+    After a formal interchange of the order of integration, express the result in terms of the Laplace
+    transform $\mathcal{L}\{f\}(s) = \int_0^\infty f(x)e^{-sx}\,dx$.
+  \item Show that
+    \[
+      \int_0^\infty \frac{f(ax)-f(bx)}{x}\,dx
+      = \int_0^\infty \left[
+        \frac{1}{a}\,\mathcal{L}\{f\}\!\left(\frac{s}{a}\right)
+        - \frac{1}{b}\,\mathcal{L}\{f\}\!\left(\frac{s}{b}\right)
+      \right]ds.
+    \]
+    Verify this for $f(x) = e^{-x}$ by computing the right-hand side directly and confirming the answer
+    equals $\ln(b/a)$.
+  \item State the identity
+    \[
+      \int_0^\infty \frac{g(x)}{x}\,dx = \int_0^\infty \mathcal{L}\{g\}(s)\,ds
+    \]
+    and give sufficient conditions for its validity. Use it to rederive Frullani's theorem in one step
+    by setting $g(x) = f(ax) - f(bx)$ and computing $\mathcal{L}\{g\}(s)$ explicitly.
+  \item In the Laplace-transform approach, why is the condition $g(0) = 0$ necessary for the identity
+    in the previous question? Show that $g(0) = 0$ follows automatically when $g(x) = f(ax) - f(bx)$ and
+    the hypotheses of Frullani's theorem are satisfied.
+  \item What justifies the interchange of the order of integration in the Laplace-transform proof? State
+    the theorem you invoke (e.g.\ Tonelli's theorem) and verify its hypotheses for $f(x) = e^{-x}$.
+  \item How is Frullani's theorem connected to Laplace transforms in a broader sense? (\textit{Hint}:
+      consider the formula $\int_0^\infty f(x)/x\,dx = \int_0^\infty F(s)\,ds$, where $F = \mathcal{L}\{f\}$,
+    and how it applies once the condition $g(0) = 0$ is ensured.)
+
+    % --- Comparison: Feynman trick vs.\ Laplace transform ---
+
+  \item Both the Feynman trick and the Laplace-kernel method deal with the $\tfrac{1}{x}$ factor. In the
+    Feynman approach, $\tfrac{1}{x}$ is absorbed by differentiating with respect to a parameter; in the
+    Laplace approach, $\tfrac{1}{x}$ is represented as $\int_0^\infty e^{-xs}\,ds$. Explain the structural
+    analogy between these two approaches, and describe a setting in which one is preferable to the other.
+
+    % --- Assumptions ---
+
+  \item What assumptions are required to differentiate under the integral sign? State a sufficient condition
+    (e.g.\ dominated convergence) and verify it for $f(x) = e^{-x}$ in the Feynman proof of Frullani's theorem.
+
 \end{enumerate}
