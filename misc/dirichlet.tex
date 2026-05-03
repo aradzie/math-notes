@@ -1,0 +1,189 @@
+\section{Dirichlet's Integral}
+
+\begin{enumerate}
+
+    % --- Statement and basic convergence ---
+
+  \item State Dirichlet's integral:
+    \[
+      \int_0^\infty \frac{\sin x}{x}\,dx.
+    \]
+    What is its value?
+  \item Why is the integrand not actually singular at $x=0$? Compute
+    \[
+      \lim_{x\to 0} \frac{\sin x}{x}.
+    \]
+  \item Does
+    \[
+      \int_0^\infty \left|\frac{\sin x}{x}\right|dx
+    \]
+    converge? What does this tell you about the convergence of Dirichlet's integral?
+  \item Use integration by parts on
+    \[
+      \int_1^R \frac{\sin x}{x}\,dx
+    \]
+    to show that the limit as $R\to\infty$ exists.
+
+    % --- Scaling and simple variants ---
+
+  \item For $a>0$, compute
+    \[
+      \int_0^\infty \frac{\sin(ax)}{x}\,dx
+    \]
+    by the substitution $u=ax$.
+  \item What happens to the previous integral when $a=0$?
+  \item What happens when $a<0$? Use the oddness of $\sin$ to determine the sign.
+  \item Compare
+    \[
+      \int_0^\infty \frac{\sin(ax)}{x}\,dx
+      \quad\text{and}\quad
+      \int_0^\infty \sin(ax)\,dx.
+    \]
+    Why does the factor $\tfrac1x$ matter so much?
+
+    % --- Introducing a parameter ---
+
+  \item Define
+    \[
+      F(a)=\int_0^\infty e^{-ax}\frac{\sin x}{x}\,dx,
+      \qquad a>0.
+    \]
+    Why is this integral easier to handle than
+    \[
+      \int_0^\infty \frac{\sin x}{x}\,dx
+    \]
+    directly?
+  \item Differentiate $F(a)$ with respect to $a$ and show that
+    \[
+      F'(a)=-\int_0^\infty e^{-ax}\sin x\,dx.
+    \]
+  \item Compute
+    \[
+      \int_0^\infty e^{-ax}\sin x\,dx
+    \]
+    for $a>0$.
+  \item Deduce that
+    \[
+      F'(a)=-\frac{1}{1+a^2}.
+    \]
+    Integrate this with respect to $a$.
+  \item Use the condition
+    \[
+      \lim_{a\to\infty} F(a)=0
+    \]
+    to determine the constant of integration.
+  \item Show that
+    \[
+      F(a)=\frac{\pi}{2}-\arctan a=\arctan\frac{1}{a}.
+    \]
+  \item Let $a\to 0^+$ and recover Dirichlet's integral.
+  \item Why is introducing the factor $e^{-ax}$ a useful trick before letting $a\to 0^+$?
+
+    % --- A useful identity ---
+
+  \item Verify the identity
+    \[
+      \frac{\sin x}{x}=\int_0^1 \cos(tx)\,dt.
+    \]
+  \item Substitute this identity into
+    \[
+      \int_0^\infty \frac{\sin x}{x}\,dx.
+    \]
+    What formal double integral do you obtain?
+  \item Why is it dangerous to interchange the order of integration in that double integral without extra justification?
+
+    % --- Laplace transform viewpoint ---
+
+  \item Explain why
+    \[
+      F(a)=\int_0^\infty e^{-ax}\frac{\sin x}{x}\,dx
+    \]
+    can be viewed as the Laplace transform of $\dfrac{\sin x}{x}$ evaluated at $a$.
+  \item If
+    \[
+      f(x)=\frac{\sin x}{x},
+    \]
+    write $F(a)=\mathcal{L}\{f\}(a)$. What does the formula
+    \[
+      F(a)=\frac{\pi}{2}-\arctan a
+    \]
+    tell you about $\mathcal{L}\!\left\{\dfrac{\sin x}{x}\right\}(a)$?
+  \item Starting from
+    \[
+      \frac{\sin x}{x}=\int_0^1 \cos(tx)\,dt,
+    \]
+    use linearity of the Laplace transform to derive
+    \[
+      \mathcal{L}\!\left\{\frac{\sin x}{x}\right\}(a)
+      =
+      \int_0^1 \mathcal{L}\{\cos(tx)\}(a)\,dt.
+    \]
+    Why is this a safer way to use the identity than working directly with
+    \[
+      \int_0^\infty \frac{\sin x}{x}\,dx?
+    \]
+  \item Compute
+    \[
+      \mathcal{L}\{\cos(tx)\}(a)
+    \]
+    for $a>0$, and use it to show that
+    \[
+      \mathcal{L}\!\left\{\frac{\sin x}{x}\right\}(a)
+      =
+      \int_0^1 \frac{a}{a^2+t^2}\,dt.
+    \]
+    In other words, show that
+    \[
+      F(a)=\int_0^1 \int_0^\infty e^{-ax}\cos(tx)\,dx\,dt.
+    \]
+  \item Evaluate
+    \[
+      \int_0^1 \frac{a}{a^2+t^2}\,dt
+    \]
+    and recover the formula
+    \[
+      \mathcal{L}\!\left\{\frac{\sin x}{x}\right\}(a)
+      =
+      \frac{\pi}{2}-\arctan a.
+    \]
+  \item Use the Laplace-transform identity
+    \[
+      \mathcal{L}\{f'\}(a)=a\mathcal{L}\{f\}(a)-f(0)
+    \]
+    with
+    \[
+      f(x)=\frac{\sin x}{x}
+    \]
+    to explain informally why the transform of $\dfrac{\sin x}{x}$ should be related to an arctangent.
+  \item Why does the limit
+    \[
+      \lim_{a\to 0^+}\mathcal{L}\!\left\{\frac{\sin x}{x}\right\}(a)
+    \]
+    recover Dirichlet's integral?
+  \item Compare these two viewpoints:
+    differentiating
+    \[
+      F(a)=\int_0^\infty e^{-ax}\frac{\sin x}{x}\,dx
+    \]
+    with respect to $a$, and recognizing $F(a)$ as a Laplace transform from the start.
+    Why are these really two versions of the same idea?
+  \item Which route feels more natural if you already know Laplace transforms well:
+    differentiating $F(a)$ first, or rewriting $F(a)$ as a Laplace transform of
+    $\dfrac{\sin x}{x}$? Explain your answer.
+
+    % --- Interpretation and checks ---
+
+  \item Why is the value $\pi/2$ plausible from the formula
+    \[
+      F(a)=\frac{\pi}{2}-\arctan a
+    \]
+    when $a\to 0^+$?
+  \item Explain in words why oscillation of $\sin x$ is essential for convergence on $(1,\infty)$.
+  \item Sketch the graph of $\dfrac{\sin x}{x}$ and explain how the alternating positive and negative lobes fit the value of the integral.
+  \item Compute
+    \[
+      \int_0^\infty \frac{\sin(bx)}{x}\,dx
+    \]
+    for $b>0$, and verify your formula by checking the special case $b=1$.
+
+\end{enumerate}
