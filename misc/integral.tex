@@ -45,7 +45,6 @@
   \item What does it mean geometrically when the upper and lower integrals are equal?
   \item Why are Darboux sums often considered technically simpler than Riemann sums?
   \item Why are Riemann sums closer to the historical intuition of integration?
-
 \end{enumerate}
 
 \subsection{Comparisons Between Riemann and Darboux Integration}
@@ -65,7 +64,6 @@
   \item How do upper and lower Darboux sums bound all possible Riemann sums?
   \item Explain how Darboux integration avoids explicit limits of sums.
   \item Explain how Riemann integration encodes convergence directly through limits.
-
 \end{enumerate}
 
 \subsection{Theorems and Properties}
@@ -84,7 +82,6 @@
   \item Why is a function with finitely many discontinuities integrable?
   \item What happens to the integral if two functions differ only on finitely many points?
   \item What happens if two functions differ only on a measure-zero set?
-
 \end{enumerate}
 
 \subsection{Technical Manipulation}
@@ -111,4 +108,134 @@
   \item Why is compactness important in Darboux integration?
   \item What is the difference between taking a supremum over all lower sums and taking a limit?
   \item Why does the existence of arbitrarily close upper and lower sums imply integrability?
+\end{enumerate}
+
+\subsection{Interpreting the Integral}
+
+\begin{enumerate}[resume]
+  \item What does the expression
+    \[
+      \sum_i f(x_i)\Delta x_i
+    \]
+    represent before assigning any geometric or physical interpretation to it?
+  \item Why is the integral fundamentally an accumulation operator rather than specifically an area operator?
+  \item In the area interpretation of the integral, what do the quantities
+    \[
+      f(x_i), \quad \Delta x_i, \quad f(x_i)\Delta x_i
+    \]
+    represent geometrically?
+  \item Why does
+    \[
+      f(x_i)\Delta x_i
+    \]
+    approximate the area of a thin rectangle?
+  \item What happens to the Riemann sum as
+    \[
+      \max \Delta x_i \to 0?
+    \]
+  \item Why does the definite integral emerge as a limit of Riemann sums?
+  \item If
+    \[
+      g'(x)=f(x),
+    \]
+    why does
+    \[
+      f(x)\Delta x
+    \]
+    approximate the small change
+    \[
+      \Delta g?
+    \]
+  \item What is the conceptual meaning of
+    \[
+      dg = g'(x)\,dx?
+    \]
+  \item Why can the same expression
+    \[
+      f(x)\Delta x
+    \]
+    be interpreted both as rectangle area and as accumulated change?
+  \item What determines the interpretation of the integrand \(f(x)\)?
+  \item Why is the equality
+    \[
+      \int_a^b g'(x)\,dx = g(b)-g(a)
+    \]
+    an accumulation statement?
+  \item In the Fundamental Theorem of Calculus, what exactly is being accumulated?
+  \item Why does integrating a derivative recover net change?
+  \item How does the telescoping intuition appear in
+    \[
+      \sum \Delta g_i?
+    \]
+  \item Define
+    \[
+      A(x)=\int_a^x f(t)\,dt.
+    \]
+    What does \(A(x)\) represent geometrically?
+  \item Why does increasing \(x\) by a small amount \(h\) add approximately
+    \[
+      f(x)h
+    \]
+    to the accumulated area?
+  \item Use the difference quotient to explain why
+    \[
+      A'(x)=f(x).
+    \]
+  \item Why does the identity
+    \[
+      A'(x)=f(x)
+    \]
+    connect the area interpretation to the antiderivative interpretation?
+  \item Why is the Fundamental Theorem of Calculus fundamentally a statement that differentiation and integration are inverse operations?
+  \item How does the notion of ``local rate'' connect to ``global accumulation''?
+  \item What is the difference between:
+    \begin{itemize}
+      \item a function value,
+      \item a derivative,
+      \item a differential,
+      \item an accumulated quantity?
+    \end{itemize}
+  \item Why is
+    \[
+      \int_a^b f(x)\,dx
+    \]
+    not intrinsically an area?
+  \item Give examples where the integral represents:
+    \begin{itemize}
+      \item distance,
+      \item mass,
+      \item charge,
+      \item probability,
+      \item energy.
+    \end{itemize}
+  \item In each example above, what plays the role of:
+    \begin{itemize}
+      \item density/rate,
+      \item small measure,
+      \item accumulated total?
+    \end{itemize}
+  \item Explain the pattern:
+    \[
+      \text{density} \times \text{small measure}
+      \to
+      \text{accumulated quantity}.
+    \]
+  \item Why is the rectangle picture only one geometric realization of integration?
+  \item What is the conceptual difference between:
+    \[
+      f(x)
+      \quad \text{and} \quad
+      f(x)\,dx?
+    \]
+  \item Why is
+    \[
+      dx
+    \]
+    best understood as ``a tiny increment of the independent variable''?
+  \item Why is the statement
+    \[
+      dg=g'(x)\,dx
+    \]
+    more fundamental than the rectangle interpretation?
+  \item What does the Fundamental Theorem of Calculus reveal about the relationship between local structure and global structure?
 \end{enumerate}
