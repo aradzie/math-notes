@@ -155,7 +155,7 @@
       f(x)\Delta x
     \]
     be interpreted both as rectangle area and as accumulated change?
-  \item What determines the interpretation of the integrand \(f(x)\)?
+  \item What determines the interpretation of the integrand~\(f(x)\)?
   \item Why is the equality
     \[
       \int_a^b g'(x)\,dx = g(b)-g(a)
@@ -171,8 +171,8 @@
     \[
       A(x)=\int_a^x f(t)\,dt.
     \]
-    What does \(A(x)\) represent geometrically?
-  \item Why does increasing \(x\) by a small amount \(h\) add approximately
+    What does~\(A(x)\) represent geometrically?
+  \item Why does increasing~\(x\) by a small amount~\(h\) add approximately
     \[
       f(x)h
     \]
@@ -238,4 +238,168 @@
     \]
     more fundamental than the rectangle interpretation?
   \item What does the Fundamental Theorem of Calculus reveal about the relationship between local structure and global structure?
+\end{enumerate}
+
+\subsection{Integrals and Euler's Method}
+
+\begin{enumerate}[resume]
+  \item Consider the initial value problem
+    \[
+      y'(x)=f(x,y(x)), \qquad y(a)=y_0.
+    \]
+    Write down the forward Euler update on a partition
+    \[
+      a=x_0<x_1<\cdots<x_n=b
+    \]
+    and explain why one step has the form
+    \[
+      y_{i+1}-y_i \approx f(x_i,y_i)\,\Delta x_i.
+    \]
+  \item Why is a single Euler update naturally interpreted as an accumulation of a local rate over a small interval?
+  \item Explain why it is reasonable to call
+    \[
+      y_{i+1}=y_i+f(x_i,y_i)\,\Delta x_i
+    \]
+    an integration step rather than merely an algebraic update.
+  \item Sum the Euler increments over many steps and derive
+    \[
+      y_n
+      =
+      y_0+\sum_{i=0}^{n-1} f(x_i,y_i)\,\Delta x_i.
+    \]
+    What is the conceptual meaning of this formula, and how does the initial value~\(y_0\) enter as the starting accumulated amount?
+  \item Why does the exact solution of
+    \[
+      y'(x)=f(x,y(x)), \qquad y(a)=y_0,
+    \]
+    satisfy the integral equation
+    \[
+      y(x)=y_0+\int_a^x f(t,y(t))\,dt?
+    \]
+    How does Euler's method mimic this identity?
+  \item Why is the solution curve of an ODE often called an integral curve?
+    What is being integrated, and in what sense is the curve determined by that integration?
+  \item For a general first-order ODE
+    \[
+      y'=f(x,y),
+    \]
+    what information does the slope field encode?
+    Why does prescribing an initial value
+    \[
+      y(a)=y_0
+    \]
+    select one particular curve from that field?
+  \item In the autonomous case
+    \[
+      y'=F(y),
+    \]
+    how does the interpretation of an integral curve differ from the case
+    \[
+      y'=f(x,y)?
+    \]
+    What remains the same?
+  \item Show that an ordinary definite integral is the special case of the ODE
+    \[
+      y'(x)=g(x), \qquad y(a)=y_0,
+    \]
+    where the right-hand side does not depend on~\(y\).
+    What is the exact solution?
+  \item Let~\(G\) be one antiderivative of~\(g\), so that
+    \[
+      G'(x)=g(x).
+    \]
+    Why are all solutions of
+    \[
+      y'(x)=g(x)
+    \]
+    of the form
+    \[
+      y(x)=G(x)+C?
+    \]
+    How does the initial condition
+    \[
+      y(a)=y_0
+    \]
+    determine the value of~\(C\)?
+  \item Compare the slope field of a general ODE
+    \[
+      y'=f(x,y)
+    \]
+    with the slope field of
+    \[
+      y'=g(x).
+    \]
+    Why is the latter vertically uniform, meaning that at a fixed~\(x\) the slope is the same at every height~\(y\)?
+  \item Why does the vertical uniformity of the slope field for
+    \[
+      y'=g(x)
+    \]
+    imply that all integral curves are vertical translates of one another?
+    How does this connect to the additive constant~\(C\) in
+    \[
+      y=G(x)+C?
+    \]
+  \item Apply Euler's method to
+    \[
+      y'(x)=g(x), \qquad y(a)=y_0.
+    \]
+    Why does the scheme become
+    \[
+      y_{i+1}=y_i+g(x_i)\,\Delta x_i?
+    \]
+  \item Iterate the previous update and show that
+    \[
+      y_n
+      =
+      y_0+\sum_{i=0}^{n-1} g(x_i)\,\Delta x_i.
+    \]
+    Why is this now literally a Riemann sum plus the initial value, rather than only an Euler approximation?
+  \item What special feature makes the discrete accumulation for
+    \[
+      y'=g(x)
+    \]
+    telescope exactly into
+    \[
+      y_n-y_0=\sum_{i=0}^{n-1} (y_{i+1}-y_i)?
+    \]
+    Why does the same telescoping identity not by itself turn a general Euler method for
+    \[
+      y'=f(x,y)
+    \]
+    into a classical Riemann sum for a known function of~\(x\) alone?
+  \item In the case
+    \[
+      y'(x)=g(x),
+    \]
+    under what conditions on the partition and sample points does
+    \[
+      \sum_{i=0}^{n-1} g(x_i)\,\Delta x_i
+    \]
+    converge to
+    \[
+      \int_a^b g(x)\,dx?
+    \]
+    State the connection with the definition of Riemann integrability.
+  \item If
+    \[
+      y'(x)=f(x,y)
+    \]
+    does depend on~\(y\), what breaks in the attempt to interpret Euler's method as an ordinary Riemann sum in the variable~\(x\) alone?
+    Which additional unknown quantity is being approximated at every step?
+  \item Compare these two viewpoints:
+    \[
+      \int_a^b g(x)\,dx
+      \quad \text{and} \quad
+      y(b)-y(a) \text{ for } y'=f(x,y).
+    \]
+    In what sense are both global accumulations of local data, and in what sense is the second problem structurally more implicit?
+  \item If two solutions of
+    \[
+      y'=g(x)
+    \]
+    have different initial values, why does their difference remain constant in~\(x\)?
+    Why is the analogous statement usually false for a general ODE
+    \[
+      y'=f(x,y)?
+    \]
 \end{enumerate}
