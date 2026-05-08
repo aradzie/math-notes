@@ -403,3 +403,121 @@
       y'=f(x,y)?
     \]
 \end{enumerate}
+
+\section{The Connection Between the Net Change Theorem, Differential Equations, and Euler's Method}
+
+The connection between the net change theorem, differential equations, and Euler's method is structural.
+They are different views of the same fundamental operation:
+
+\begin{itemize}
+  \item Differential equations describe \emph{local rates of change}.
+  \item Integration accumulates those local changes into a \emph{global change}.
+  \item Euler's method numerically performs that accumulation step-by-step.
+\end{itemize}
+
+The net change theorem is the bridge connecting these ideas.
+
+Suppose that
+\[
+  F'(t)=f(t).
+\]
+
+Then the net change theorem states:
+\[
+  F(b)-F(a)=\int_a^b f(t)\,dt \quad \text{or} \quad F(b)=F(a)+\int_a^b f(t)\,dt.
+\]
+
+The interpretation is:
+
+\begin{itemize}
+  \item \(f(t)\) is the instantaneous rate of change,
+  \item the integral accumulates infinitesimal changes,
+  \item the result is the total change in \(F\).
+\end{itemize}
+
+Now consider a differential equation:
+\[
+  y'(t)=f(t,y(t)).
+\]
+
+This equation states that the instantaneous change of the unknown function \(y\) is determined by the function \(f\).
+
+Applying the net change theorem to the unknown solution \(y\), we integrate both sides from \(t_0\) to \(t\):
+\[
+  y(t)-y(t_0)=\int_{t_0}^t f(s,y(s))\,ds.
+\]
+
+If the initial value is
+\[
+  y(t_0)=y_0,
+\]
+then:
+\[
+  y(t)=y_0+\int_{t_0}^t f(s,y(s))\,ds.
+\]
+
+This equation has a direct interpretation:
+
+\begin{itemize}
+  \item Start with the initial value \(y_0\),
+  \item accumulate all infinitesimal changes \(f(s,y(s))\,ds\),
+  \item obtain the final value \(y(t)\).
+\end{itemize}
+
+Thus, a differential equation is fundamentally an accumulation law.
+
+\subsection*{Euler's Method as Numerical Integration}
+
+Euler's method arises by approximating the integral with a Riemann sum.
+Take a small step size \(h\). Over the interval \([t_n,t_n+h]\),
+\[
+  y(t_{n+1})-y(t_n)
+  =
+  \int_{t_n}^{t_n+h} f(s,y(s))\,ds.
+\]
+
+Euler's approximation assumes that the slope remains approximately constant over this short interval:
+\[
+  f(s,y(s))
+  \approx
+  f(t_n,y_n).
+\]
+
+Therefore,
+\[
+  \int_{t_n}^{t_n+h} f(s,y(s))\,ds
+  \approx
+  h\,f(t_n,y_n).
+\]
+
+Substituting this approximation gives Euler's update rule:
+\[
+  y_{n+1}=y_n+h\,f(t_n,y_n).
+\]
+
+This is not merely inspired by integration. It \emph{is} numerical integration.
+Each Euler step performs the following process:
+
+\begin{enumerate}
+  \item Measure the current rate of change,
+  \item assume it remains roughly constant over a short interval,
+  \item accumulate the resulting small change,
+  \item repeat.
+\end{enumerate}
+
+Thus, every Euler step is a discrete version of the net change theorem:
+\[
+  \text{new value}
+  =
+  \text{old value}
+  +
+  \text{accumulated change}.
+\]
+
+This explains why:
+
+\begin{itemize}
+  \item numerical ODE solving is often called \emph{integration},
+  \item solution curves are called \emph{integral curves},
+  \item ODE solvers are often called \emph{integrators}.
+\end{itemize}
