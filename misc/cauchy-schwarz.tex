@@ -1,0 +1,155 @@
+\section{Cauchy–Schwarz Inequality}
+
+\subsection{Basic Definitions and Geometric Meaning}
+
+\begin{itemize}
+  \item State the Cauchy--Schwarz inequality for vectors in $\mathbb{R}^n$.
+  \item State the inequality for arbitrary inner product spaces.
+  \item What conditions must a function $\langle \cdot,\cdot\rangle$ satisfy to be an inner product?
+  \item Explain geometrically what the inequality says about two vectors.
+  \item Why does the inequality imply that
+    \[
+      |\cos\theta| \le 1
+    \]
+    for the angle between vectors?
+  \item Derive the formula
+    \[
+      \cos\theta = \frac{\langle u,v\rangle}{\|u\|\|v\|}
+    \]
+    from the inequality.
+  \item Compute both sides of the inequality for
+    \[
+      u=(1,2), \qquad v=(3,-4).
+    \]
+  \item Verify the inequality for
+    \[
+      u=(1,1,1), \qquad v=(2,0,-1).
+    \]
+  \item What happens if one of the vectors is the zero vector?
+  \item Why is the inequality trivial in that case?
+\end{itemize}
+
+\subsection{Equality Conditions}
+
+\begin{itemize}[resume]
+  \item Under what conditions does equality hold in the Cauchy--Schwarz inequality?
+  \item Prove that equality holds if $u=\lambda v$ for some scalar $\lambda$.
+  \item Prove the converse: if equality holds, then the vectors are linearly dependent.
+  \item Give examples of:
+    \begin{enumerate}
+      \item vectors for which equality holds,
+      \item vectors for which the inequality is strict.
+    \end{enumerate}
+  \item Explain geometrically why parallel vectors produce equality.
+  \item Can orthogonal vectors produce equality? Why or why not?
+\end{itemize}
+
+\subsection{Proof Techniques}
+
+\begin{itemize}[resume]
+  \item Prove the inequality using the nonnegativity of
+    \[
+      \|u-tv\|^2.
+    \]
+  \item In that proof, why must the discriminant of the resulting quadratic polynomial be nonpositive?
+  \item Expand
+    \[
+      \|u-tv\|^2
+    \]
+    explicitly and identify the quadratic coefficients.
+  \item Give a proof using orthogonal projection.
+  \item Give a proof using minimization.
+  \item Why does positivity of norms play a central role in every proof?
+  \item Which assumptions about the inner product are actually used in the standard proof?
+\end{itemize}
+
+\subsection{Complex Inner Product Spaces}
+
+\begin{itemize}[resume]
+  \item State the Cauchy--Schwarz inequality for complex vector spaces.
+  \item Why must absolute values appear around the inner product?
+  \item What changes in the proof for complex spaces?
+  \item Verify the inequality for
+    \[
+      u=(1+i,2), \qquad v=(i,1-i).
+    \]
+  \item Why is
+    \[
+      \langle u,u\rangle
+    \]
+    always real and nonnegative even in complex spaces?
+  \item Explain why
+    \[
+      \langle u,v\rangle \neq \langle v,u\rangle
+    \]
+    in general for complex inner products.
+\end{itemize}
+
+\subsection{Connections to Other Inequalities}
+
+\begin{itemize}[resume]
+  \item Derive the triangle inequality from Cauchy--Schwarz.
+  \item Show how Cauchy--Schwarz implies
+    \[
+      (a_1+\cdots+a_n)^2 \le n(a_1^2+\cdots+a_n^2).
+    \]
+  \item Derive the inequality
+    \[
+      \left(\sum_{k=1}^n a_k b_k\right)^2
+      \le
+      \left(\sum_{k=1}^n a_k^2\right)
+      \left(\sum_{k=1}^n b_k^2\right).
+    \]
+\end{itemize}
+
+\subsection{Function Spaces and Integrals}
+
+\begin{itemize}[resume]
+  \item State the integral version of the Cauchy--Schwarz inequality.
+  \item Verify the inequality for
+    \[
+      f(x)=x, \qquad g(x)=1-x
+    \]
+    on $[0,1]$.
+  \item Show that
+    \[
+      \left(\int_a^b f(x)g(x)\,dx\right)^2
+      \le
+      \left(\int_a^b f(x)^2\,dx\right)
+      \left(\int_a^b g(x)^2\,dx\right).
+    \]
+  \item What inner product naturally appears in function spaces?
+  \item What does equality mean in the integral version?
+  \item Why is the integral version important in Fourier analysis?
+\end{itemize}
+
+\subsection{Problem-Solving and Exploration}
+
+\begin{itemize}[resume]
+  \item Find vectors $u,v \in \mathbb{R}^2$ such that
+    \[
+      \langle u,v\rangle = 0.
+    \]
+  \item Find nonzero vectors satisfying equality in Cauchy--Schwarz.
+  \item Construct an example where the inequality is very far from equality.
+  \item Use Cauchy--Schwarz to prove
+    \[
+      (a+b+c)^2 \le 3(a^2+b^2+c^2).
+    \]
+  \item Use the inequality to bound
+    \[
+      |x+2y+3z|.
+    \]
+  \item Find the maximum possible value of
+    \[
+      x+2y
+    \]
+    subject to
+    \[
+      x^2+y^2=1.
+    \]
+  \item Show that the angle definition from inner products is well-defined.
+  \item Explain why projections minimize distance.
+  \item Derive the least-squares approximation formula using orthogonality and Cauchy--Schwarz.
+  \item Investigate whether analogous inequalities exist for norms that are not induced by inner products.
+\end{itemize}
