@@ -235,3 +235,24 @@ Substitute back:
 
 \[ \frac{dy}{dx} = \frac{1}{1 + x^2} \]
 ~~~
+
+!id: hApfgMtDMJ
+!front: Derive \( \int f^{-1}(y) \, dy \)
+!back:
+\[
+\begin{align*}
+    x &= f^{-1}(y) \\
+    y &= f(x) \\
+    dy &= f'(x) \, dx \\
+    f^{-1}( f(x) ) &= x
+\end{align*}
+\]
+
+Substitute:
+
+\[ \int f^{-1}(y) \, dy = \int f^{-1}( f(x) ) f'(x) \, dx = \int x f'(x) \, dx \]
+
+Integrate by parts:
+
+\[ \int f^{-1}(y) \, dy = \int x f'(x) \, dx = x f(x) - \int f(x) \, dx \]
+~~~
