@@ -26,5 +26,9 @@ See the [notatki](https://github.com/aradzie/notatki) repository for more detail
 - [The Geometry Of Linear Algebra](https://books.physics.oregonstate.edu/LinAlg/book-1.html)
 - [The Geometry Of Vector Calculus](https://books.physics.oregonstate.edu/GVC/GVC.html)
 - [The Geometry Of Static Fields](https://books.physics.oregonstate.edu/GSF/GSF.html)
+- [Elementary Differential Equations](https://digitalcommons.trinity.edu/mono/8/) by William F. Trench
+- [Notes on Diffy Qs: Differential Equations for Engineers](https://www.jirka.org/diffyqs/) by Jiří Lebl
+- [Introduction to Differential Equations](https://web.uvic.ca/~tbazett/diffyqs/diffyqs.html) by Jiří Lebl and Trefor Bazett
+- [Partial Differential Equations](https://www.math.toronto.edu/ivrii/PDE-textbook/) by Victor Ivrii
 - [Helping Engineers Learn Mathematics Workbooks (HELM)](https://www.lboro.ac.uk/departments/mlsc/student-resources/helm-workbooks/)
 - [Paul's Online Notes](https://tutorial.math.lamar.edu/)
