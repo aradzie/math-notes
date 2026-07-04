@@ -203,6 +203,48 @@ Path independence gives a second diagnosis of the rotation field: integrating $(
 \]
 whereas any gradient field integrates to zero around every closed loop. Different paths between the same endpoints give different answers, so no consistent potential can be defined.
 
+\subsection{Exact Differential Equations}
+\label{sec:exact}
+
+The gradient recovery algorithm just developed is, verbatim, the technique taught in every introductory course on ordinary differential equations under the heading \emph{exact equations}---though the connection is rarely made explicit.
+
+An equation of the form
+\[
+M(x,y)\,\dd x + N(x,y)\,\dd y = 0
+\]
+is called \emph{exact} if the left-hand side is $df$ for some function $f$, i.e., if $M = f_x$ and $N = f_y$ for a potential $f$. When this holds, the equation says simply $df = 0$ along any solution curve, so $f$ is constant on solutions: the implicit general solution is $f(x,y) = C$, with no further integration required once $f$ is found.
+
+Exactness is tested, and potentials are recovered, by exactly the machinery of Section~\ref{sec:gradient}: the equation is exact if and only if $(M,N)$ is a gradient field, which by Clairaut's theorem requires
+\[
+M_y = N_x,
+\]
+and when this holds, $f$ is found by the same integrate-then-match algorithm used above. The vocabulary differs---ODE textbooks say ``exact equation'' and ``test for exactness'' where this essay has said ``gradient field'' and ``compatibility condition''---but the content is identical: exact equations are the theory of Section~\ref{sec:gradient}, restated as a solution method for $M\dd x + N\dd y = 0$ rather than as a search for a potential in isolation. The terminology even gives away the connection: an ``exact'' differential $M\dd x + N\dd y$ is precisely a form that equals $df$ for some $f$---the same word used in Section~\ref{sec:topology} for a form that is $d$ of something.
+
+\begin{example}
+The equation
+\[
+(2xy + 3x^2)\,\dd x + (x^2 + \cos y)\,\dd y = 0
+\]
+has $M_y = 2x = N_x$, so it is exact. The potential was already found in Section~\ref{sec:gradient}: $f(x,y) = x^2y + x^3 + \sin y$. The implicit general solution is
+\[
+x^2 y + x^3 + \sin y = C.
+\]
+\end{example}
+
+When $M_y \neq N_x$, the equation as written is not exact, but it may become exact after multiplying through by a suitably chosen \emph{integrating factor} $\mu(x,y)$: the equation $\mu M\dd x + \mu N \dd y = 0$ has the same solution curves as the original (away from zeros of $\mu$), but the differential form $\mu M \dd x + \mu N \dd y$ may be closed even though $M\dd x + N\dd y$ was not.
+
+\begin{example}
+The equation $y\dd x - x\dd y = 0$ has $M_y = 1$ and $N_x = -1$: not exact. Multiplying by $\mu = -1/x^2$ gives
+\[
+-\frac{y}{x^2}\dd x + \frac1x \dd y = 0,
+\]
+whose left side is exactly $d(y/x)$. The equation is now exact with potential $f = y/x$, and the general solution of the original equation is $y/x = C$, i.e., $y = Cx$: a family of lines through the origin, as direct substitution confirms.
+\end{example}
+
+It is worth being precise about what an integrating factor does and does not do, since it is easy to conflate it with the concerns of Section~\ref{sec:topology}. Multiplying by $\mu$ changes the differential form itself---trading a non-closed form $M\dd x+N\dd y$ for a closed one $\mu M\dd x + \mu N\dd y$ with the same zero set---and this happens \emph{before} the recovery algorithm is invoked at all. An integrating factor repairs a failure of the compatibility condition itself. The Poincar\'e lemma, by contrast, concerns a form that already \emph{passes} the compatibility condition, and asks whether it is exact on the domain in question. The two questions are independent: a field can need an integrating factor on all of $\R^2$ and, once repaired, still run into the topological obstruction of Section~\ref{sec:topology} if the repaired form is only closed---not exact---on a punctured domain. (In general no integrating factor need exist at all; standard ODE courses give sufficient conditions for finding one when it can be taken to depend on $x$ alone or $y$ alone, a theory orthogonal to the concerns of this essay and not pursued further here.)
+
+Exact equations thus supply a second, very concrete reason to care about the compatibility condition $M_y = N_x$: it decides not only whether a vector field is a gradient in the abstract, but whether a first-order ODE can be solved by the direct route of finding a potential and setting it equal to a constant---no separation of variables, no integrating-factor search, required.
+
 \section{The Topological Twist}
 \label{sec:topology}
 
@@ -286,7 +328,7 @@ The rhetorical center of the whole subject is this: the duality between differen
 
 \section{Conclusion: The Fate of ``$+C$''}
 
-The essay's protagonist has been the lost information, and its biography can now be written in full. In one variable it is a constant: the kernel of $d/dx$. Under a single partial derivative it inflates to an arbitrary function $g(y)$: the kernel of $\partial/\partial x$. Under the mixed partial it becomes a sum of two arbitrary one-variable functions, $g_1(x) + g_2(y)$---the kernel of $\partial^2/\partial x\,\partial y$, and the secret content of d'Alembert's traveling waves. Under the gradient it shrinks back to a single constant, but the inverse problem becomes conditionally solvable, with the compatibility condition $P_y = Q_x$ standing guard. And globally, on domains with holes, a new kind of lost information appears that is not the kernel of anything local: the cohomology class, measured by loop integrals such as the $2\pi$ of the punctured plane.
+The essay's protagonist has been the lost information, and its biography can now be written in full. In one variable it is a constant: the kernel of $d/dx$. Under a single partial derivative it inflates to an arbitrary function $g(y)$: the kernel of $\partial/\partial x$. Under the mixed partial it becomes a sum of two arbitrary one-variable functions, $g_1(x) + g_2(y)$---the kernel of $\partial^2/\partial x\,\partial y$, and the secret content of d'Alembert's traveling waves. Under the gradient it shrinks back to a single constant, but the inverse problem becomes conditionally solvable, with the compatibility condition $P_y = Q_x$ standing guard---the same guard that reappears, under the name \emph{exactness}, in the elementary theory of first-order ordinary differential equations (Section~\ref{sec:exact}). And globally, on domains with holes, a new kind of lost information appears that is not the kernel of anything local: the cohomology class, measured by loop integrals such as the $2\pi$ of the punctured plane.
 
 \begin{center}
 \begin{tabular}{@{}llll@{}}
@@ -314,6 +356,8 @@ Two morals. First, ``indefinite multiple integrals'' exist---the iterated partia
 \item Run the recovery algorithm on $\nabla f = (y e^{xy},\; x e^{xy} + 2y)$ and confirm $f = e^{xy} + y^2 + C$.
 \item Verify by direct computation that the punctured-plane field $\left( \frac{-y}{x^2+y^2}, \frac{x}{x^2+y^2} \right)$ satisfies $P_y = Q_x$, then compute its integral around the unit circle (parametrize by $x = \cos\theta$, $y = \sin\theta$) and obtain $2\pi$.
 \item Show that on the half-plane $x > 0$ the same field has the potential $f = \arctan(y/x)$, by differentiating. Why does this not contradict the nonexistence of a global potential?
+\item Determine whether $(3x^2y + y^3)\dd x + (x^3 + 3xy^2 - 2y)\dd y = 0$ is exact, and if so, solve it.
+\item Verify that $\mu = -1/x^2$ turns $y\dd x - x\dd y = 0$ into an exact equation, and confirm that the resulting solution $y = Cx$ satisfies the original equation directly by substitution.
 \end{enumerate}
 
 \section{Self-Check Questions}
@@ -360,6 +404,12 @@ Cover the answers; attempt each question before revealing it.
 
 \item \textbf{State the gradient theorem. What is the multivariable analogue of ``antiderivative as definite integral with variable endpoint''?}\\
 \emph{Answer:} $\int_\gamma \nabla f \cdot d\mathbf{r} = f(B) - f(A)$ for any curve from $A$ to $B$. The analogue: $f(x,y) = \int_{(x_0,y_0)}^{(x,y)} P\,dx + Q\,dy$ along any path, well-defined when integrals are path independent.
+
+\item \textbf{What does it mean for a first-order ODE $M\dd x + N\dd y = 0$ to be exact, and how does this relate to Section~\ref{sec:gradient}?}\\
+\emph{Answer:} Exact means $M\dd x + N\dd y = df$ for some potential $f$; the general solution is then $f(x,y) = C$. Testing exactness and finding $f$ is exactly the compatibility test and recovery algorithm of Section~\ref{sec:gradient}, applied to the vector field $(M,N)$.
+
+\item \textbf{What is an integrating factor, and how is it different from the topological obstruction of Section~\ref{sec:topology}?}\\
+\emph{Answer:} An integrating factor $\mu$ is a function that, multiplied through a non-exact equation, makes $\mu M\dd x + \mu N\dd y$ closed; it repairs a failure of $M_y = N_x$ itself, before the recovery algorithm is invoked. The topological obstruction concerns a form that already satisfies $M_y = N_x$ but may still fail to be exact on a domain with holes---an independent issue.
 
 \item \textbf{Is $P_y = Q_x$ sufficient for a potential to exist? State the precise result.}\\
 \emph{Answer:} Only on simply connected domains (Poincar\'e lemma). On domains with holes it can fail.
