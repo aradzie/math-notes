@@ -2,9 +2,7 @@
 
 \documentclass{essay}
 
-\newenvironment{answer}{\par\smallskip\noindent\textit{Answer.}\enspace}{\par\medskip}
-
-\title{Self-Check Questions: Power Series and Coefficient Matching}
+\title{Self-Check Questions:\\ Power Series and Coefficient Matching}
 \author{}
 \date{}
 
@@ -12,9 +10,8 @@
 
 \maketitle
 
-\section*{Foundations}
+\begin{enumerate}[leftmargin=*, itemsep=8pt]
 
-\begin{enumerate}
   \item What does it mean for two power series to be equal?
     \begin{answer}
       Two power series $\sum_{n=0}^{\infty} a_n x^n$ and
@@ -80,11 +77,7 @@
       $n$ times and evaluating at $x = 0$ gives $f^{(n)}(0) = n!\,
       c_n$, so \[ c_n = \frac{f^{(n)}(0)}{n!}. \]
     \end{answer}
-\end{enumerate}
 
-\section*{Manipulating Series}
-
-\begin{enumerate}[resume]
   \item Rewrite \[ \sum_{n=1}^{\infty} a_n x^{n-1} \] as a power
     series in \(x^n\).
     \begin{answer}
@@ -129,11 +122,7 @@
     \begin{answer}
       Both series include $n = 5$, so the coefficient of $x^5$ is $a_5 + b_5$.
     \end{answer}
-\end{enumerate}
 
-\section*{Missing Terms}
-
-\begin{enumerate}[resume]
   \item Suppose \[ \sum_{n=0}^{\infty} a_n x^n + \sum_{n=3}^{\infty}
     b_n x^n =0. \] Why must \(a_0,a_1,a_2\) be treated separately?
     \begin{answer}
@@ -171,11 +160,7 @@
       Then $a_0, a_1, a_2, a_3, a_4$ would each be forced to zero individually
       (isolated terms), and for $n \ge 5$ one would obtain $a_n + b_n = 0$.
     \end{answer}
-\end{enumerate}
 
-\section*{Differential Equations}
-
-\begin{enumerate}[resume]
   \item If \[ y=\sum_{n=0}^{\infty} a_n x^n, \] what is \(y'\)?
     \begin{answer}
       \[
@@ -252,11 +237,7 @@
       sometimes also pinning
       early coefficients.
     \end{answer}
-\end{enumerate}
 
-\section*{Deeper Understanding}
-
-\begin{enumerate}[resume]
   \item Why is coefficient matching essentially equivalent to
     evaluating derivatives at \(x=0\)?
     \begin{answer}

@@ -77,12 +77,16 @@
 \newtheorem{remark}[theorem]{Remark}
 \newtheorem*{note}{Note}
 
+% ---------- Self-check answers ----------
+\newenvironment{answer}{\par\smallskip\noindent\textit{Answer.}\enspace}{\par\medskip}
+
 % ---------- Shared math macros ----------
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\dd}{\mathrm{d}}
 
 % ---------- Tables ----------
 \RequirePackage{booktabs}
+\RequirePackage{array}
 
 % ---------- Links (loaded last, per hyperref convention) ----------
 \RequirePackage{hyperref}
