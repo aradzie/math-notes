@@ -11,29 +11,29 @@
 \maketitle
 
 \begin{abstract}
-\noindent
-A routine algebraic step --- introducing a denominator, cancelling a common factor,
-dividing through by a variable expression, squaring both sides --- can quietly alter
-the set of values for which the manipulation is valid. This essay sets out, in a single
-coherent framework, why that happens and how to handle it. The central distinction
-is between an algebraic \emph{expression} (where cancellation is unconditional) and a
-\emph{function} or an \emph{equation} (where the domain is part of the object). The
-practical payoff is a simple rule for solving equations: a restriction that arises from a
-step you chose is not an exclusion but a blind spot, to be checked against the original
-problem rather than carried into the answer. The same rule explains the classical
-``$2=1$'' fallacies, which are not a separate genre of trickery but ordinary domain
-violations in disguise.
+  \noindent
+  A routine algebraic step --- introducing a denominator, cancelling a common factor,
+  dividing through by a variable expression, squaring both sides --- can quietly alter
+  the set of values for which the manipulation is valid. This essay sets out, in a single
+  coherent framework, why that happens and how to handle it. The central distinction
+  is between an algebraic \emph{expression} (where cancellation is unconditional) and a
+  \emph{function} or an \emph{equation} (where the domain is part of the object). The
+  practical payoff is a simple rule for solving equations: a restriction that arises from a
+  step you chose is not an exclusion but a blind spot, to be checked against the original
+  problem rather than carried into the answer. The same rule explains the classical
+  ``$2=1$'' fallacies, which are not a separate genre of trickery but ordinary domain
+  violations in disguise.
 \end{abstract}
 
 \section{Introduction}
 
 Consider an apparently trivial rewriting. The line
 \[
-y = x + 1
+  y = x + 1
 \]
 is defined for every real number. Multiply numerator and denominator by $x$:
 \[
-y = \frac{(x+1)\,x}{x}.
+  y = \frac{(x+1)\,x}{x}.
 \]
 For every $x \neq 0$ the new expression equals the old one, because the factor $x/x$ is
 just $1$. But at $x = 0$ the new expression reads $0/0$, which has no value. A single point
@@ -53,7 +53,7 @@ surprising amount of confusion. The aim here is to separate them cleanly.
 Treated purely as formal fractions --- elements of the field of rational functions
 $\R(x)$ --- the two expressions
 \[
-\frac{(x+1)\,x}{x} \qquad\text{and}\qquad x+1
+  \frac{(x+1)\,x}{x} \qquad\text{and}\qquad x+1
 \]
 are genuinely \emph{equal}. The field $\R(x)$ is built from the polynomial ring by
 identifying fractions that agree under cross-multiplication, and cancelling a common factor
@@ -68,9 +68,9 @@ a formula \emph{together with a domain}. The \emph{natural domain} of a rational
 is the set of inputs for which the formula yields a value, which means every zero of the
 denominator is excluded. Hence
 \[
-f(x) = x+1 \quad\text{has domain } \R,
-\qquad
-g(x) = \frac{(x+1)\,x}{x} \quad\text{has domain } \R\setminus\{0\}.
+  f(x) = x+1 \quad\text{has domain } \R,
+  \qquad
+  g(x) = \frac{(x+1)\,x}{x} \quad\text{has domain } \R\setminus\{0\}.
 \]
 The functions $f$ and $g$ agree at every point where both are defined, but they do not have
 the same domain, and so, strictly, they are different functions. As algebraic objects they
@@ -82,7 +82,7 @@ The point of disagreement is a single missing value. Because the surrounding val
 perfectly well, the gap is what is called a \emph{removable singularity}: the limit exists
 and matches what the neighbouring points predict,
 \[
-\lim_{x \to 0} \frac{(x+1)\,x}{x} \;=\; \lim_{x \to 0}(x+1) \;=\; 1.
+  \lim_{x \to 0} \frac{(x+1)\,x}{x} \;=\; \lim_{x \to 0}(x+1) \;=\; 1.
 \]
 ``Removable'' means that one \emph{may} patch the function by declaring $g(0) = 1$, after
 which $g$ becomes identical to $f$. But that patching is a deliberate act; it does not
@@ -120,16 +120,16 @@ other. Recognising which kind of step one has just taken is the whole game.
 Putting this together yields a single diagnostic question. When some point appears to be
 excluded, ask:
 \begin{quote}
-\emph{Is this point excluded by the original equation itself, or only by something I did to
-it?}
+  \emph{Is this point excluded by the original equation itself, or only by something I did to
+  it?}
 \end{quote}
 \begin{itemize}
-\item If the original equation already contained the offending denominator --- if the point
-lies outside the problem's own domain --- then the exclusion is genuine. The point cannot be
-a solution, and the restriction must be kept.
-\item If the restriction arose only from a step we introduced, it is a blind spot, not an
-exclusion. It must \emph{not} be carried into the answer. Instead, the flagged point is to
-be tested in the original equation, and kept if it satisfies it.
+  \item If the original equation already contained the offending denominator --- if the point
+    lies outside the problem's own domain --- then the exclusion is genuine. The point cannot be
+    a solution, and the restriction must be kept.
+  \item If the restriction arose only from a step we introduced, it is a blind spot, not an
+    exclusion. It must \emph{not} be carried into the answer. Instead, the flagged point is to
+    be tested in the original equation, and kept if it satisfies it.
 \end{itemize}
 So the discipline is not ``always keep the restriction'' and not ``always discard it,'' but
 ``trace the restriction to its source.''
@@ -138,83 +138,83 @@ So the discipline is not ``always keep the restriction'' and not ``always discar
 
 The same principle organises the familiar list of dangerous manipulations.
 \begin{description}
-\item[Multiplying both sides by $D(x)$.] Every solution of the original equation survives,
-but the new equation may \emph{gain} spurious solutions at the zeros of $D$. These are the
-classical \emph{extraneous roots}; they must be checked and discarded.
-\item[Dividing both sides by $D(x)$.] The new equation may \emph{lose} solutions at the
-zeros of $D$, because those points were quietly assumed nonzero. Never divide by a factor
-that can vanish without separately recording the case where it does.
-\item[Cancelling a common factor within a single expression.] This enlarges the natural
-domain of that expression, filling a hole. The cancelled form has forgotten a restriction
-the original carried; whether that matters depends on the source of the restriction.
-\item[Squaring both sides.] Squaring is not injective, so it may \emph{gain} extraneous
-roots even though no denominator is involved. As with multiplication, the cure is to check
-candidates in the original equation.
+  \item[Multiplying both sides by $D(x)$.] Every solution of the original equation survives,
+    but the new equation may \emph{gain} spurious solutions at the zeros of $D$. These are the
+    classical \emph{extraneous roots}; they must be checked and discarded.
+  \item[Dividing both sides by $D(x)$.] The new equation may \emph{lose} solutions at the
+    zeros of $D$, because those points were quietly assumed nonzero. Never divide by a factor
+    that can vanish without separately recording the case where it does.
+  \item[Cancelling a common factor within a single expression.] This enlarges the natural
+    domain of that expression, filling a hole. The cancelled form has forgotten a restriction
+    the original carried; whether that matters depends on the source of the restriction.
+  \item[Squaring both sides.] Squaring is not injective, so it may \emph{gain} extraneous
+    roots even though no denominator is involved. As with multiplication, the cure is to check
+    candidates in the original equation.
 \end{description}
 
 \section{Worked examples}
 
 \begin{example}[A step-induced restriction that must be discarded]
-Solve $x + 1 = 1$. The solution is plainly $x = 0$. Suppose that, mid-solution, we rewrite
-the left-hand side as a fraction:
-\[
-\frac{(x+1)\,x}{x} = 1 \qquad (\text{valid only for } x \neq 0).
-\]
-Cancelling the common factor (again valid only for $x \neq 0$) returns $x + 1 = 1$, hence
-$x = 0$. But $x = 0$ is exactly the point our detour excluded. If we obeyed the restriction
-literally, we would conclude that the equation has \emph{no} solution --- which is false.
-The restriction $x \neq 0$ was an artifact of the route, not a feature of the problem.
-Tracing it to its source, we see the original equation had no such restriction, so we test
-$x=0$ there: $0 + 1 = 1$ holds. The true solution sat precisely at the excluded point.
+  Solve $x + 1 = 1$. The solution is plainly $x = 0$. Suppose that, mid-solution, we rewrite
+  the left-hand side as a fraction:
+  \[
+    \frac{(x+1)\,x}{x} = 1 \qquad (\text{valid only for } x \neq 0).
+  \]
+  Cancelling the common factor (again valid only for $x \neq 0$) returns $x + 1 = 1$, hence
+  $x = 0$. But $x = 0$ is exactly the point our detour excluded. If we obeyed the restriction
+  literally, we would conclude that the equation has \emph{no} solution --- which is false.
+  The restriction $x \neq 0$ was an artifact of the route, not a feature of the problem.
+  Tracing it to its source, we see the original equation had no such restriction, so we test
+  $x=0$ there: $0 + 1 = 1$ holds. The true solution sat precisely at the excluded point.
 \end{example}
 
 \begin{example}[A genuine extraneous root from an original-domain restriction]
-Solve
-\[
-\frac{x^2}{x-1} = \frac{1}{x-1}.
-\]
-Here the denominator is present from the outset, so the original domain already excludes
-$x = 1$. Multiplying both sides by $x-1$ gives $x^2 = 1$, whose candidates are $x = \pm 1$.
-The candidate $x = 1$ lies outside the original domain and is therefore extraneous; it is
-correctly rejected. The solution is $x = -1$. Contrast this with Example~1: there the
-excluded point was a solution to keep, here it is a non-solution to discard --- and the only
-way to tell them apart is to ask where the restriction came from.
+  Solve
+  \[
+    \frac{x^2}{x-1} = \frac{1}{x-1}.
+  \]
+  Here the denominator is present from the outset, so the original domain already excludes
+  $x = 1$. Multiplying both sides by $x-1$ gives $x^2 = 1$, whose candidates are $x = \pm 1$.
+  The candidate $x = 1$ lies outside the original domain and is therefore extraneous; it is
+  correctly rejected. The solution is $x = -1$. Contrast this with Example~1: there the
+  excluded point was a solution to keep, here it is a non-solution to discard --- and the only
+  way to tell them apart is to ask where the restriction came from.
 \end{example}
 
 \begin{example}[Dividing by a variable and losing a solution]
-Solve $x^2 = x$. Dividing both sides by $x$ yields $x = 1$, and the solution $x = 0$ has
-vanished --- because the division silently assumed $x \neq 0$, and $x = 0$ was a genuine
-solution. The safe route never divides by a possibly-zero quantity:
-\[
-x^2 - x = 0 \;\Longrightarrow\; x(x-1) = 0 \;\Longrightarrow\; x \in \{0, 1\}.
-\]
+  Solve $x^2 = x$. Dividing both sides by $x$ yields $x = 1$, and the solution $x = 0$ has
+  vanished --- because the division silently assumed $x \neq 0$, and $x = 0$ was a genuine
+  solution. The safe route never divides by a possibly-zero quantity:
+  \[
+    x^2 - x = 0 \;\Longrightarrow\; x(x-1) = 0 \;\Longrightarrow\; x \in \{0, 1\}.
+  \]
 \end{example}
 
 \begin{example}[Squaring and gaining an extraneous root]
-Solve $\sqrt{x+2} = x$. Squaring gives
-\[
-x + 2 = x^2 \;\Longrightarrow\; x^2 - x - 2 = 0 \;\Longrightarrow\; (x-2)(x+1) = 0,
-\]
-with candidates $x = 2$ and $x = -1$. Checking in the original equation: $\sqrt{4} = 2$
-holds, but $\sqrt{1} = 1 \neq -1$ fails. The root $x = -1$ is extraneous, introduced by the
-non-injective squaring step. No denominator appeared, yet the same check-against-the-original
-discipline applies.
+  Solve $\sqrt{x+2} = x$. Squaring gives
+  \[
+    x + 2 = x^2 \;\Longrightarrow\; x^2 - x - 2 = 0 \;\Longrightarrow\; (x-2)(x+1) = 0,
+  \]
+  with candidates $x = 2$ and $x = -1$. Checking in the original equation: $\sqrt{4} = 2$
+  holds, but $\sqrt{1} = 1 \neq -1$ fails. The root $x = -1$ is extraneous, introduced by the
+  non-injective squaring step. No denominator appeared, yet the same check-against-the-original
+  discipline applies.
 \end{example}
 
 \begin{example}[The ``$2 = 1$'' fallacy]
-Begin with $a = b$ and proceed:
-\[
-a = b
-\;\Rightarrow\; a^2 = ab
-\;\Rightarrow\; a^2 - b^2 = ab - b^2
-\;\Rightarrow\; (a+b)(a-b) = b(a-b).
-\]
-Now divide both sides by $a - b$ to obtain $a + b = b$, and with $a = b$ this gives
-$2b = b$, hence $2 = 1$. The fatal step is the division by $a - b$, because the premise
-$a = b$ makes that factor exactly zero. This is not an exotic trick: it is precisely the
-forbidden move of Example~3 --- dividing by a quantity that vanishes --- staged so that the
-vanishing factor carries the entire content of the equation. Looking around the blind spot
-collapses the whole derivation.
+  Begin with $a = b$ and proceed:
+  \[
+    a = b
+    \;\Rightarrow\; a^2 = ab
+    \;\Rightarrow\; a^2 - b^2 = ab - b^2
+    \;\Rightarrow\; (a+b)(a-b) = b(a-b).
+  \]
+  Now divide both sides by $a - b$ to obtain $a + b = b$, and with $a = b$ this gives
+  $2b = b$, hence $2 = 1$. The fatal step is the division by $a - b$, because the premise
+  $a = b$ makes that factor exactly zero. This is not an exotic trick: it is precisely the
+  forbidden move of Example~3 --- dividing by a quantity that vanishes --- staged so that the
+  vanishing factor carries the entire content of the equation. Looking around the blind spot
+  collapses the whole derivation.
 \end{example}
 
 \section{Why this is rarely stated explicitly}
@@ -244,15 +244,15 @@ mechanism is visible.
 \section{A practical checklist}
 
 \begin{enumerate}
-\item Record the domain of the \emph{original} equation; solutions can only live where it
-makes sense.
-\item As you manipulate, flag every point at which a step becomes undefined or fails to be
-an equivalence, treating it as \emph{to be checked}, not as \emph{excluded}.
-\item Whenever you multiply, divide, cancel, or square, note which direction is safe and
-what the step might add or drop.
-\item Solve the transformed equation for its candidate values.
-\item Test each flagged point, and each candidate, in the \emph{original} equation. Keep
-those that satisfy it.
+  \item Record the domain of the \emph{original} equation; solutions can only live where it
+    makes sense.
+  \item As you manipulate, flag every point at which a step becomes undefined or fails to be
+    an equivalence, treating it as \emph{to be checked}, not as \emph{excluded}.
+  \item Whenever you multiply, divide, cancel, or square, note which direction is safe and
+    what the step might add or drop.
+  \item Solve the transformed equation for its candidate values.
+  \item Test each flagged point, and each candidate, in the \emph{original} equation. Keep
+    those that satisfy it.
 \end{enumerate}
 
 \section{Conclusion}

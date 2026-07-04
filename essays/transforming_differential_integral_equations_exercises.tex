@@ -14,182 +14,182 @@ These exercises accompany the essay \emph{Transforming Between Differential and 
 \section{First-Order Conversions and Picard Iteration}
 
 \begin{exercise}\label{ex:basic}
-Convert the initial value problem
-\[
-y'(t) = 2t\,y(t), \qquad y(0) = 1
-\]
-into a Volterra integral equation. Then verify directly that $y(t) = e^{t^2}$ satisfies your integral equation, by computing the integral (substitute $u = s^2$ after inserting the candidate solution).
+  Convert the initial value problem
+  \[
+    y'(t) = 2t\,y(t), \qquad y(0) = 1
+  \]
+  into a Volterra integral equation. Then verify directly that $y(t) = e^{t^2}$ satisfies your integral equation, by computing the integral (substitute $u = s^2$ after inserting the candidate solution).
 \end{exercise}
 
 \begin{exercise}\label{ex:picard}
-Apply Picard iteration to the integral equation from Exercise~\ref{ex:basic}, starting from $y_0(t) \equiv 1$. Compute $y_1, y_2, y_3$ explicitly and identify the pattern. Which function's Taylor partial sums are you generating, and how many new terms does each iteration contribute?
+  Apply Picard iteration to the integral equation from Exercise~\ref{ex:basic}, starting from $y_0(t) \equiv 1$. Compute $y_1, y_2, y_3$ explicitly and identify the pattern. Which function's Taylor partial sums are you generating, and how many new terms does each iteration contribute?
 \end{exercise}
 
 \begin{exercise}\label{ex:linear}
-Convert the general linear initial value problem
-\[
-y'(t) + p(t)\,y(t) = q(t), \qquad y(t_0) = y_0,
-\]
-into a Volterra equation of the second kind, identifying the kernel $K(t,s)$ and the forcing term $g(t)$ in the standard form $y(t) = g(t) + \int_{t_0}^{t} K(t,s)\,y(s)\,ds$. Is the kernel of \emph{convolution type} (a function of $t - s$ alone)? Under what condition on $p$ would it be?
+  Convert the general linear initial value problem
+  \[
+    y'(t) + p(t)\,y(t) = q(t), \qquad y(t_0) = y_0,
+  \]
+  into a Volterra equation of the second kind, identifying the kernel $K(t,s)$ and the forcing term $g(t)$ in the standard form $y(t) = g(t) + \int_{t_0}^{t} K(t,s)\,y(s)\,ds$. Is the kernel of \emph{convolution type} (a function of $t - s$ alone)? Under what condition on $p$ would it be?
 \end{exercise}
 
 \begin{exercise}\label{ex:backward}
-Go the other way. Given the integral equation
-\[
-y(t) = 1 + \int_0^t s\,y(s)\,ds,
-\]
-(a) differentiate to obtain an initial value problem, taking care to state where the initial condition comes from; (b) solve the IVP; (c) substitute the solution back into the integral equation and confirm it holds. Why is step (a) legitimate --- that is, what regularity of $y$ do you need, and how does the equation itself supply it?
+  Go the other way. Given the integral equation
+  \[
+    y(t) = 1 + \int_0^t s\,y(s)\,ds,
+  \]
+  (a) differentiate to obtain an initial value problem, taking care to state where the initial condition comes from; (b) solve the IVP; (c) substitute the solution back into the integral equation and confirm it holds. Why is step (a) legitimate --- that is, what regularity of $y$ do you need, and how does the equation itself supply it?
 \end{exercise}
 
 \begin{exercise}\label{ex:wrongway}
-A student converts $y' = f(t,y)$, $y(0) = y_0$ by integrating over the fixed interval $[0, 1]$ instead of $[0, t]$, obtaining $y(1) - y(0) = \int_0^1 f(s, y(s))\,ds$. Exhibit two \emph{different} functions that both satisfy this relation together with $y(0) = y_0$ for the concrete case $f(t,y) = y$, $y_0 = 1$, thereby demonstrating that the fixed-interval relation fails to determine the solution. (You may allow your second function to be any smooth function agreeing with the correct endpoint values and integral.)
+  A student converts $y' = f(t,y)$, $y(0) = y_0$ by integrating over the fixed interval $[0, 1]$ instead of $[0, t]$, obtaining $y(1) - y(0) = \int_0^1 f(s, y(s))\,ds$. Exhibit two \emph{different} functions that both satisfy this relation together with $y(0) = y_0$ for the concrete case $f(t,y) = y$, $y_0 = 1$, thereby demonstrating that the fixed-interval relation fails to determine the solution. (You may allow your second function to be any smooth function agreeing with the correct endpoint values and integral.)
 \end{exercise}
 
 \section{Second-Order Equations and the Cauchy Kernel}
 
 \begin{exercise}\label{ex:sine}
-Convert
-\[
-y'' + y = 0, \qquad y(0) = 0, \quad y'(0) = 1,
-\]
-into a Volterra equation. (Move $y$ to the right-hand side first, so the equation reads $y'' = -y$.) Then verify that $y(t) = \sin t$ satisfies the resulting equation
-\[
-y(t) = t - \int_0^t (t - s)\, y(s)\, ds
-\]
-by direct computation of the integral (integrate by parts twice, or split $(t-s) = t - s$ and integrate each piece).
+  Convert
+  \[
+    y'' + y = 0, \qquad y(0) = 0, \quad y'(0) = 1,
+  \]
+  into a Volterra equation. (Move $y$ to the right-hand side first, so the equation reads $y'' = -y$.) Then verify that $y(t) = \sin t$ satisfies the resulting equation
+  \[
+    y(t) = t - \int_0^t (t - s)\, y(s)\, ds
+  \]
+  by direct computation of the integral (integrate by parts twice, or split $(t-s) = t - s$ and integrate each piece).
 \end{exercise}
 
 \begin{exercise}\label{ex:cauchy3}
-Derive the $n = 3$ case of Cauchy's repeated-integration formula: show by two applications of Fubini's theorem that
-\[
-\int_{t_0}^{t}\!\!\int_{t_0}^{u_2}\!\!\int_{t_0}^{u_1} h(s)\, ds\, du_1\, du_2
-= \int_{t_0}^{t} \frac{(t - s)^2}{2}\, h(s)\, ds.
-\]
-Then state and prove the general-$n$ formula by induction, identifying exactly where the factor $1/(n-1)!$ accumulates.
+  Derive the $n = 3$ case of Cauchy's repeated-integration formula: show by two applications of Fubini's theorem that
+  \[
+    \int_{t_0}^{t}\!\!\int_{t_0}^{u_2}\!\!\int_{t_0}^{u_1} h(s)\, ds\, du_1\, du_2
+    = \int_{t_0}^{t} \frac{(t - s)^2}{2}\, h(s)\, ds.
+  \]
+  Then state and prove the general-$n$ formula by induction, identifying exactly where the factor $1/(n-1)!$ accumulates.
 \end{exercise}
 
 \begin{exercise}\label{ex:thirdorder}
-Convert the third-order problem
-\[
-y''' = f(t), \qquad y(0) = a, \quad y'(0) = b, \quad y''(0) = c,
-\]
-into a single integral formula for $y(t)$ with no unknowns on the right-hand side. Confirm that each initial condition was harvested by exactly one integration, and identify which polynomial term each one produced.
+  Convert the third-order problem
+  \[
+    y''' = f(t), \qquad y(0) = a, \quad y'(0) = b, \quad y''(0) = c,
+  \]
+  into a single integral formula for $y(t)$ with no unknowns on the right-hand side. Confirm that each initial condition was harvested by exactly one integration, and identify which polynomial term each one produced.
 \end{exercise}
 
 \begin{exercise}\label{ex:airy}
-Convert the Airy equation with initial data,
-\[
-y'' = t\,y, \qquad y(0) = 1, \quad y'(0) = 0,
-\]
-into a Volterra equation, and run two steps of Picard iteration from $y_0(t) \equiv 1$. Compare the terms you generate with the known power series of the Airy-type solution ($1 + \tfrac{t^3}{6} + \tfrac{t^6}{180} + \cdots$).
+  Convert the Airy equation with initial data,
+  \[
+    y'' = t\,y, \qquad y(0) = 1, \quad y'(0) = 0,
+  \]
+  into a Volterra equation, and run two steps of Picard iteration from $y_0(t) \equiv 1$. Compare the terms you generate with the known power series of the Airy-type solution ($1 + \tfrac{t^3}{6} + \tfrac{t^6}{180} + \cdots$).
 \end{exercise}
 
 \section{The Leibniz Rule: Differentiating Back}
 
 \begin{exercise}\label{ex:leibniz}
-Let $K$ and $g$ be smooth, and suppose $y$ is continuous and satisfies
-\[
-y(t) = g(t) + \int_{t_0}^{t} K(t, s)\, y(s)\, ds.
-\]
-(a) State the Leibniz rule for $\frac{d}{dt}\int_{t_0}^{t} K(t,s)\,y(s)\,ds$, identifying the boundary term and the interior term. (b) Differentiate the equation once. For a general kernel, what type of equation results --- differential, or integro-differential? (c) Show that if $K(t,s) = k(s)$ depends only on $s$, one differentiation yields a genuine first-order ODE.
+  Let $K$ and $g$ be smooth, and suppose $y$ is continuous and satisfies
+  \[
+    y(t) = g(t) + \int_{t_0}^{t} K(t, s)\, y(s)\, ds.
+  \]
+  (a) State the Leibniz rule for $\frac{d}{dt}\int_{t_0}^{t} K(t,s)\,y(s)\,ds$, identifying the boundary term and the interior term. (b) Differentiate the equation once. For a general kernel, what type of equation results --- differential, or integro-differential? (c) Show that if $K(t,s) = k(s)$ depends only on $s$, one differentiation yields a genuine first-order ODE.
 \end{exercise}
 
 \begin{exercise}\label{ex:twoderivs}
-Specialize Exercise~\ref{ex:leibniz} to the Cauchy kernel $K(t,s) = t - s$:
-\[
-y(t) = g(t) + \int_{t_0}^{t} (t - s)\, y(s)\, ds.
-\]
-Differentiate twice, carefully evaluating the boundary term at each stage (note that $K(t,t) = 0$ for this kernel --- what does that buy you?). Recover a second-order ODE together with \emph{two} initial conditions at $t_0$, read off from the equation and its first derivative. This is the full inverse of the forward transformation.
+  Specialize Exercise~\ref{ex:leibniz} to the Cauchy kernel $K(t,s) = t - s$:
+  \[
+    y(t) = g(t) + \int_{t_0}^{t} (t - s)\, y(s)\, ds.
+  \]
+  Differentiate twice, carefully evaluating the boundary term at each stage (note that $K(t,t) = 0$ for this kernel --- what does that buy you?). Recover a second-order ODE together with \emph{two} initial conditions at $t_0$, read off from the equation and its first derivative. This is the full inverse of the forward transformation.
 \end{exercise}
 
 \begin{exercise}\label{ex:convolution}
-Show that a Volterra equation with convolution kernel, $y(t) = g(t) + \int_0^t k(t-s)\,y(s)\,ds$, can be solved formally with the Laplace transform: derive $Y(p) = G(p)/(1 - \widehat{k}(p))$. Then apply this to Exercise~\ref{ex:sine} (where $g(t) = t$ and $k(\tau) = -\tau$) and confirm that the transform you obtain is that of $\sin t$. This connects the kernel to the transfer-function picture: identify which object plays the role of the impulse response.
+  Show that a Volterra equation with convolution kernel, $y(t) = g(t) + \int_0^t k(t-s)\,y(s)\,ds$, can be solved formally with the Laplace transform: derive $Y(p) = G(p)/(1 - \widehat{k}(p))$. Then apply this to Exercise~\ref{ex:sine} (where $g(t) = t$ and $k(\tau) = -\tau$) and confirm that the transform you obtain is that of $\sin t$. This connects the kernel to the transfer-function picture: identify which object plays the role of the impulse response.
 \end{exercise}
 
 \section{Boundary Value Problems and Green's Functions}
 
 \begin{exercise}\label{ex:green-construct}
-Construct from scratch the Green's function for
-\[
--y'' = f(t), \qquad y(0) = y(1) = 0,
-\]
-as follows: (a) for fixed $s$, solve $-y'' = 0$ separately on $[0,s)$ and $(s,1]$, imposing the boundary condition on each side; (b) glue the pieces by requiring continuity at $t = s$ and a jump of $-1$ in $y'$ across $t = s$; (c) verify your result agrees with $G(t,s) = s(1-t)$ for $s \le t$ and $t(1-s)$ for $s \ge t$. Explain, in terms of integrating $-y'' = \delta(t - s)$ across the singularity, where the jump condition comes from.
+  Construct from scratch the Green's function for
+  \[
+    -y'' = f(t), \qquad y(0) = y(1) = 0,
+  \]
+  as follows: (a) for fixed $s$, solve $-y'' = 0$ separately on $[0,s)$ and $(s,1]$, imposing the boundary condition on each side; (b) glue the pieces by requiring continuity at $t = s$ and a jump of $-1$ in $y'$ across $t = s$; (c) verify your result agrees with $G(t,s) = s(1-t)$ for $s \le t$ and $t(1-s)$ for $s \ge t$. Explain, in terms of integrating $-y'' = \delta(t - s)$ across the singularity, where the jump condition comes from.
 \end{exercise}
 
 \begin{exercise}\label{ex:green-verify}
-With $G$ as in Exercise~\ref{ex:green-construct}, verify by direct differentiation (splitting the integral at $t$) that
-\[
-y(t) = \int_0^1 G(t,s)\, f(s)\, ds
-\]
-satisfies $-y'' = f$ and both boundary conditions, for continuous $f$. Which single step in the computation uses the jump condition?
+  With $G$ as in Exercise~\ref{ex:green-construct}, verify by direct differentiation (splitting the integral at $t$) that
+  \[
+    y(t) = \int_0^1 G(t,s)\, f(s)\, ds
+  \]
+  satisfies $-y'' = f$ and both boundary conditions, for continuous $f$. Which single step in the computation uses the jump condition?
 \end{exercise}
 
 \begin{exercise}\label{ex:eigen}
-For the eigenvalue problem $y'' + \lambda y = 0$, $y(0) = y(\pi) = 0$: (a) write the equivalent Fredholm equation $y(t) = \lambda \int_0^\pi G(t,s)\, y(s)\, ds$, constructing $G$ on $[0,\pi]$ by the method of Exercise~\ref{ex:green-construct}; (b) verify by explicit integration that $y(t) = \sin(nt)$ satisfies it with $\lambda = n^2$, i.e.\ that
-\[
-\int_0^\pi G(t,s)\,\sin(ns)\, ds = \frac{\sin(nt)}{n^2};
-\]
-(c) interpret the result: which operator has eigenvalues $n^2$, which has $1/n^2$, and why does compactness of the integral operator force its eigenvalues to accumulate at $0$?
+  For the eigenvalue problem $y'' + \lambda y = 0$, $y(0) = y(\pi) = 0$: (a) write the equivalent Fredholm equation $y(t) = \lambda \int_0^\pi G(t,s)\, y(s)\, ds$, constructing $G$ on $[0,\pi]$ by the method of Exercise~\ref{ex:green-construct}; (b) verify by explicit integration that $y(t) = \sin(nt)$ satisfies it with $\lambda = n^2$, i.e.\ that
+  \[
+    \int_0^\pi G(t,s)\,\sin(ns)\, ds = \frac{\sin(nt)}{n^2};
+  \]
+  (c) interpret the result: which operator has eigenvalues $n^2$, which has $1/n^2$, and why does compactness of the integral operator force its eigenvalues to accumulate at $0$?
 \end{exercise}
 
 \begin{exercise}\label{ex:inhomog-bc}
-Show how inhomogeneous boundary data enter the integral formulation: convert
-\[
-y'' = f(t, y), \qquad y(0) = \alpha, \quad y(1) = \beta,
-\]
-into $y(t) = \ell(t) + \int_0^1 G(t,s)\, f(s, y(s))\, ds$, where $\ell$ is a first-degree polynomial. Determine $\ell$, and compare its role with the role of $y_0 + v_0(t - t_0)$ in the initial-value case: in each setting, what equation does the polynomial part solve, and what data does it carry?
+  Show how inhomogeneous boundary data enter the integral formulation: convert
+  \[
+    y'' = f(t, y), \qquad y(0) = \alpha, \quad y(1) = \beta,
+  \]
+  into $y(t) = \ell(t) + \int_0^1 G(t,s)\, f(s, y(s))\, ds$, where $\ell$ is a first-degree polynomial. Determine $\ell$, and compare its role with the role of $y_0 + v_0(t - t_0)$ in the initial-value case: in each setting, what equation does the polynomial part solve, and what data does it carry?
 \end{exercise}
 
 \section{Structural Results}
 
 \begin{exercise}\label{ex:bootstrap}
-(Regularity bootstrap.) Let $f$ be continuous, and let $y \in C[0, T]$ satisfy $y(t) = y_0 + \int_0^t f(s, y(s))\,ds$. Prove carefully, quoting the precise part of the Fundamental Theorem of Calculus you use, that $y \in C^1[0,T]$. Then formulate and prove the corresponding statement for the second-order Volterra form with kernel $(t - s)$: continuity of $y$ implies $y \in C^2$.
+  (Regularity bootstrap.) Let $f$ be continuous, and let $y \in C[0, T]$ satisfy $y(t) = y_0 + \int_0^t f(s, y(s))\,ds$. Prove carefully, quoting the precise part of the Fundamental Theorem of Calculus you use, that $y \in C^1[0,T]$. Then formulate and prove the corresponding statement for the second-order Volterra form with kernel $(t - s)$: continuity of $y$ implies $y \in C^2$.
 \end{exercise}
 
 \begin{exercise}\label{ex:illposed}
-(Ill-posedness of the first kind.) Consider the Fredholm equation of the first kind $\int_0^1 K(t,s)\, y(s)\, ds = g(t)$ with a smooth kernel. Let $y_n(s) = \sin(n\pi s)$. (a) Show, using the Riemann--Lebesgue lemma (or integration by parts if $K$ is $C^1$ in $s$), that the corresponding data $g_n(t) = \int_0^1 K(t,s)\, y_n(s)\, ds$ tends to $0$ uniformly as $n \to \infty$. (b) Conclude that arbitrarily large (unit-size) perturbations of the unknown produce arbitrarily small perturbations of the data, and explain in one paragraph why this violates Hadamard's continuous-dependence requirement for the \emph{inverse} problem. (c) Why does no such difficulty arise for the second-kind equation $y = g + \lambda K y$ when $|\lambda|$ is small?
+  (Ill-posedness of the first kind.) Consider the Fredholm equation of the first kind $\int_0^1 K(t,s)\, y(s)\, ds = g(t)$ with a smooth kernel. Let $y_n(s) = \sin(n\pi s)$. (a) Show, using the Riemann--Lebesgue lemma (or integration by parts if $K$ is $C^1$ in $s$), that the corresponding data $g_n(t) = \int_0^1 K(t,s)\, y_n(s)\, ds$ tends to $0$ uniformly as $n \to \infty$. (b) Conclude that arbitrarily large (unit-size) perturbations of the unknown produce arbitrarily small perturbations of the data, and explain in one paragraph why this violates Hadamard's continuous-dependence requirement for the \emph{inverse} problem. (c) Why does no such difficulty arise for the second-kind equation $y = g + \lambda K y$ when $|\lambda|$ is small?
 \end{exercise}
 
 \begin{exercise}\label{ex:contraction}
-(Why the analysis lives on the integral side.) On $C[0, h]$ with the supremum norm, define $(Ty)(t) = y_0 + \int_0^t f(s, y(s))\,ds$ where $f$ is continuous and satisfies the Lipschitz bound $|f(s, u) - f(s, v)| \le L|u - v|$. (a) Show $\|Ty - Tz\|_\infty \le Lh \|y - z\|_\infty$, so that $T$ is a contraction when $h < 1/L$. (b) Explain in a sentence or two why no analogous estimate can hold for the differentiation operator---what fails? (c) (Optional refinement.) Show that the \emph{second} iterate satisfies $\|T^2 y - T^2 z\|_\infty \le \frac{(Lh)^2}{2}\|y - z\|_\infty$, and that the $n$-th iterate carries $(Lh)^n/n!$, so that some iterate is a contraction for \emph{every} $h$. Where have you seen the kernel $(t-s)^{n-1}/(n-1)!$ before in this exercise set?
+  (Why the analysis lives on the integral side.) On $C[0, h]$ with the supremum norm, define $(Ty)(t) = y_0 + \int_0^t f(s, y(s))\,ds$ where $f$ is continuous and satisfies the Lipschitz bound $|f(s, u) - f(s, v)| \le L|u - v|$. (a) Show $\|Ty - Tz\|_\infty \le Lh \|y - z\|_\infty$, so that $T$ is a contraction when $h < 1/L$. (b) Explain in a sentence or two why no analogous estimate can hold for the differentiation operator---what fails? (c) (Optional refinement.) Show that the \emph{second} iterate satisfies $\|T^2 y - T^2 z\|_\infty \le \frac{(Lh)^2}{2}\|y - z\|_\infty$, and that the $n$-th iterate carries $(Lh)^n/n!$, so that some iterate is a contraction for \emph{every} $h$. Where have you seen the kernel $(t-s)^{n-1}/(n-1)!$ before in this exercise set?
 \end{exercise}
 
 \begin{exercise}\label{ex:abel}
-(Challenge: a genuinely non-differential kernel.) Abel's integral equation is
-\[
-\int_0^t \frac{y(s)}{\sqrt{t - s}}\, ds = g(t).
-\]
-(a) Explain why the strategy of ``differentiate until the integral disappears'' fails here: what goes wrong with the boundary term when you apply the Leibniz rule? (b) Verify the solution formula
-\[
-y(t) = \frac{1}{\pi} \frac{d}{dt} \int_0^t \frac{g(s)}{\sqrt{t - s}}\, ds
-\]
-in the special case $g(t) = t$, by computing both sides explicitly. (c) The kernel $(t-s)^{-1/2}$ can be viewed as the case $n = \tfrac12$ of the Cauchy kernel family $(t-s)^{n-1}/\Gamma(n)$. What operation does the equation then ask you to invert?
+  (Challenge: a genuinely non-differential kernel.) Abel's integral equation is
+  \[
+    \int_0^t \frac{y(s)}{\sqrt{t - s}}\, ds = g(t).
+  \]
+  (a) Explain why the strategy of ``differentiate until the integral disappears'' fails here: what goes wrong with the boundary term when you apply the Leibniz rule? (b) Verify the solution formula
+  \[
+    y(t) = \frac{1}{\pi} \frac{d}{dt} \int_0^t \frac{g(s)}{\sqrt{t - s}}\, ds
+  \]
+  in the special case $g(t) = t$, by computing both sides explicitly. (c) The kernel $(t-s)^{-1/2}$ can be viewed as the case $n = \tfrac12$ of the Cauchy kernel family $(t-s)^{n-1}/\Gamma(n)$. What operation does the equation then ask you to invert?
 \end{exercise}
 
 \clearpage
 \section{Hints}
 
 \begin{description}[leftmargin=0pt, itemsep=4pt]
-\item[\ref{ex:basic}.] The integral equation is $y(t) = 1 + \int_0^t 2s\,y(s)\,ds$. With $y(s) = e^{s^2}$ the integrand is an exact derivative.
-\item[\ref{ex:picard}.] Each iteration integrates the previous polynomial term by term; $\int_0^t 2s \cdot \frac{s^{2k}}{k!}\, ds = \frac{t^{2(k+1)}}{(k+1)!}$.
-\item[\ref{ex:linear}.] Move $p(t)y$ to the right side before integrating. The kernel is $-p(s)$; a kernel independent of $t$ is trivially of convolution type only if it is constant.
-\item[\ref{ex:backward}.] FTC Part 1 needs a continuous integrand; continuity of $y$ is given by hypothesis and continuity of $s\,y(s)$ follows. The initial condition is the equation evaluated at $t = 0$.
-\item[\ref{ex:wrongway}.] The true solution is $e^t$, with $\int_0^1 e^s ds = e - 1$ and $y(1) = e$. Now take any smooth $\phi$ with $\phi(0)=1$, $\phi(1)=e$, $\int_0^1 \phi = e - 1$: three linear conditions, infinitely many smooth functions. A cubic polynomial ansatz works.
-\item[\ref{ex:sine}.] For the verification, compute $\int_0^t (t-s)\sin s\, ds = t - \sin t$.
-\item[\ref{ex:cauchy3}.] The domain of the triple integral is $\{t_0 \le s \le u_1 \le u_2 \le t\}$; integrate out $u_1$ then $u_2$, or both at once: the volume of the simplex $\{s \le u_1 \le u_2 \le t\}$ in the $(u_1, u_2)$ variables is $(t-s)^2/2$.
-\item[\ref{ex:thirdorder}.] $y(t) = a + bt + \tfrac{c}{2}t^2 + \int_0^t \frac{(t-s)^2}{2} f(s)\, ds$.
-\item[\ref{ex:airy}.] $y(t) = 1 + \int_0^t (t-s)\,s\,y(s)\,ds$. Note the kernel is $(t-s)s$, not $(t-s)$: the factor $t$ from the equation rides along inside.
-\item[\ref{ex:leibniz}.] $\frac{d}{dt}\int_{t_0}^t K(t,s)y(s)ds = K(t,t)y(t) + \int_{t_0}^t \partial_t K(t,s)\, y(s)\, ds$.
-\item[\ref{ex:twoderivs}.] $K(t,t) = 0$ kills the boundary term on the first differentiation; after one derivative the kernel is $1$, and the second differentiation produces the boundary term $y(t)$.
-\item[\ref{ex:convolution}.] $\widehat{k}(p) = -1/p^2$, $G(p) = 1/p^2$, so $Y(p) = \frac{1/p^2}{1 + 1/p^2} = \frac{1}{p^2 + 1}$.
-\item[\ref{ex:green-construct}.] On each side the solution of $-y''=0$ is affine; the boundary conditions force $y = At$ on the left and $y = B(1-t)$ on the right. Continuity and the jump give two equations for $A, B$.
-\item[\ref{ex:green-verify}.] Write $y(t) = (1-t)\int_0^t s f(s) ds + t \int_t^1 (1-s) f(s) ds$ and differentiate; the terms from the moving limits cancel on the first derivative and produce $-f(t)$ on the second.
-\item[\ref{ex:eigen}.] On $[0,\pi]$, $G(t,s) = s(\pi - t)/\pi$ for $s \le t$. Split the integral at $t$ and integrate by parts, or just integrate directly; everything is elementary.
-\item[\ref{ex:inhomog-bc}.] $\ell$ solves $\ell'' = 0$ with $\ell(0) = \alpha$, $\ell(1) = \beta$; the polynomial part always carries the data and is annihilated by the differential operator.
-\item[\ref{ex:bootstrap}.] FTC Part 1 for the first claim. For the second, differentiate the $(t-s)$-kernel equation once via Exercise~\ref{ex:twoderivs} and apply the first claim to the result.
-\item[\ref{ex:illposed}.] Integration by parts in $s$ produces a factor $1/(n\pi)$ and bounded terms, uniformly in $t$ if $\partial_s K$ is bounded.
-\item[\ref{ex:contraction}.] For (b): consider $y_n(t) = \frac{1}{n}\sin(n^2 t)$, which is uniformly small while $y_n'$ is uniformly large. For (c): when you iterate, the inner integral deposits a factor $(t - s)$, then $(t-s)^2/2$, exactly as in Exercise~\ref{ex:cauchy3}.
-\item[\ref{ex:abel}.] (a) $K(t,t) = (t-t)^{-1/2}$ is infinite. (b) With $g(s) = s$, substitute $s = t\sin^2\theta$; the inner integral evaluates to $\tfrac{\pi}{2}\, t \cdot \frac{4}{3}\cdot\frac{1}{2}\cdot\ldots$ --- carry the Beta function through and differentiate. (c) A half-order integral; the equation asks you to invert semi-integration, and applying it twice gives ordinary integration.
+  \item[\ref{ex:basic}.] The integral equation is $y(t) = 1 + \int_0^t 2s\,y(s)\,ds$. With $y(s) = e^{s^2}$ the integrand is an exact derivative.
+  \item[\ref{ex:picard}.] Each iteration integrates the previous polynomial term by term; $\int_0^t 2s \cdot \frac{s^{2k}}{k!}\, ds = \frac{t^{2(k+1)}}{(k+1)!}$.
+  \item[\ref{ex:linear}.] Move $p(t)y$ to the right side before integrating. The kernel is $-p(s)$; a kernel independent of $t$ is trivially of convolution type only if it is constant.
+  \item[\ref{ex:backward}.] FTC Part 1 needs a continuous integrand; continuity of $y$ is given by hypothesis and continuity of $s\,y(s)$ follows. The initial condition is the equation evaluated at $t = 0$.
+  \item[\ref{ex:wrongway}.] The true solution is $e^t$, with $\int_0^1 e^s ds = e - 1$ and $y(1) = e$. Now take any smooth $\phi$ with $\phi(0)=1$, $\phi(1)=e$, $\int_0^1 \phi = e - 1$: three linear conditions, infinitely many smooth functions. A cubic polynomial ansatz works.
+  \item[\ref{ex:sine}.] For the verification, compute $\int_0^t (t-s)\sin s\, ds = t - \sin t$.
+  \item[\ref{ex:cauchy3}.] The domain of the triple integral is $\{t_0 \le s \le u_1 \le u_2 \le t\}$; integrate out $u_1$ then $u_2$, or both at once: the volume of the simplex $\{s \le u_1 \le u_2 \le t\}$ in the $(u_1, u_2)$ variables is $(t-s)^2/2$.
+  \item[\ref{ex:thirdorder}.] $y(t) = a + bt + \tfrac{c}{2}t^2 + \int_0^t \frac{(t-s)^2}{2} f(s)\, ds$.
+  \item[\ref{ex:airy}.] $y(t) = 1 + \int_0^t (t-s)\,s\,y(s)\,ds$. Note the kernel is $(t-s)s$, not $(t-s)$: the factor $t$ from the equation rides along inside.
+  \item[\ref{ex:leibniz}.] $\frac{d}{dt}\int_{t_0}^t K(t,s)y(s)ds = K(t,t)y(t) + \int_{t_0}^t \partial_t K(t,s)\, y(s)\, ds$.
+  \item[\ref{ex:twoderivs}.] $K(t,t) = 0$ kills the boundary term on the first differentiation; after one derivative the kernel is $1$, and the second differentiation produces the boundary term $y(t)$.
+  \item[\ref{ex:convolution}.] $\widehat{k}(p) = -1/p^2$, $G(p) = 1/p^2$, so $Y(p) = \frac{1/p^2}{1 + 1/p^2} = \frac{1}{p^2 + 1}$.
+  \item[\ref{ex:green-construct}.] On each side the solution of $-y''=0$ is affine; the boundary conditions force $y = At$ on the left and $y = B(1-t)$ on the right. Continuity and the jump give two equations for $A, B$.
+  \item[\ref{ex:green-verify}.] Write $y(t) = (1-t)\int_0^t s f(s) ds + t \int_t^1 (1-s) f(s) ds$ and differentiate; the terms from the moving limits cancel on the first derivative and produce $-f(t)$ on the second.
+  \item[\ref{ex:eigen}.] On $[0,\pi]$, $G(t,s) = s(\pi - t)/\pi$ for $s \le t$. Split the integral at $t$ and integrate by parts, or just integrate directly; everything is elementary.
+  \item[\ref{ex:inhomog-bc}.] $\ell$ solves $\ell'' = 0$ with $\ell(0) = \alpha$, $\ell(1) = \beta$; the polynomial part always carries the data and is annihilated by the differential operator.
+  \item[\ref{ex:bootstrap}.] FTC Part 1 for the first claim. For the second, differentiate the $(t-s)$-kernel equation once via Exercise~\ref{ex:twoderivs} and apply the first claim to the result.
+  \item[\ref{ex:illposed}.] Integration by parts in $s$ produces a factor $1/(n\pi)$ and bounded terms, uniformly in $t$ if $\partial_s K$ is bounded.
+  \item[\ref{ex:contraction}.] For (b): consider $y_n(t) = \frac{1}{n}\sin(n^2 t)$, which is uniformly small while $y_n'$ is uniformly large. For (c): when you iterate, the inner integral deposits a factor $(t - s)$, then $(t-s)^2/2$, exactly as in Exercise~\ref{ex:cauchy3}.
+  \item[\ref{ex:abel}.] (a) $K(t,t) = (t-t)^{-1/2}$ is infinite. (b) With $g(s) = s$, substitute $s = t\sin^2\theta$; the inner integral evaluates to $\tfrac{\pi}{2}\, t \cdot \frac{4}{3}\cdot\frac{1}{2}\cdot\ldots$ --- carry the Beta function through and differentiate. (c) A half-order integral; the equation asks you to invert semi-integration, and applying it twice gives ordinary integration.
 \end{description}
 
 \clearpage
@@ -197,47 +197,47 @@ in the special case $g(t) = t$, by computing both sides explicitly. (c) The kern
 
 \begin{description}[leftmargin=0pt, itemsep=6pt]
 
-\item[\ref{ex:basic}.] Integrating $y'(s) = 2s\,y(s)$ over $[0,t]$: $y(t) = 1 + \int_0^t 2s\,y(s)\,ds$. Verification: $\int_0^t 2s\,e^{s^2} ds = \bigl[e^{s^2}\bigr]_0^t = e^{t^2} - 1$, so the right-hand side is $1 + e^{t^2} - 1 = e^{t^2}$. \checkmark
+  \item[\ref{ex:basic}.] Integrating $y'(s) = 2s\,y(s)$ over $[0,t]$: $y(t) = 1 + \int_0^t 2s\,y(s)\,ds$. Verification: $\int_0^t 2s\,e^{s^2} ds = \bigl[e^{s^2}\bigr]_0^t = e^{t^2} - 1$, so the right-hand side is $1 + e^{t^2} - 1 = e^{t^2}$. \checkmark
 
-\item[\ref{ex:picard}.] $y_1 = 1 + t^2$; $y_2 = 1 + t^2 + \tfrac{t^4}{2}$; $y_3 = 1 + t^2 + \tfrac{t^4}{2} + \tfrac{t^6}{6}$. These are the partial sums of $e^{t^2} = \sum t^{2k}/k!$, one new term per iteration.
+  \item[\ref{ex:picard}.] $y_1 = 1 + t^2$; $y_2 = 1 + t^2 + \tfrac{t^4}{2}$; $y_3 = 1 + t^2 + \tfrac{t^4}{2} + \tfrac{t^6}{6}$. These are the partial sums of $e^{t^2} = \sum t^{2k}/k!$, one new term per iteration.
 
-\item[\ref{ex:linear}.] $y(t) = \Bigl(y_0 + \int_{t_0}^t q(s)\,ds\Bigr) + \int_{t_0}^t \bigl(-p(s)\bigr)\, y(s)\, ds$, so $g(t) = y_0 + \int_{t_0}^t q$ and $K(t,s) = -p(s)$. This is a function of $t - s$ alone only when $p$ is constant (then $K \equiv -p$), the autonomous case.
+  \item[\ref{ex:linear}.] $y(t) = \Bigl(y_0 + \int_{t_0}^t q(s)\,ds\Bigr) + \int_{t_0}^t \bigl(-p(s)\bigr)\, y(s)\, ds$, so $g(t) = y_0 + \int_{t_0}^t q$ and $K(t,s) = -p(s)$. This is a function of $t - s$ alone only when $p$ is constant (then $K \equiv -p$), the autonomous case.
 
-\item[\ref{ex:backward}.] (a) The map $t \mapsto \int_0^t s\,y(s)\,ds$ has a continuous integrand (product of continuous functions), so FTC Part 1 applies: $y' (t)= t\,y(t)$, and $t=0$ in the equation gives $y(0) = 1$. (b) Separable: $y = e^{t^2/2}$. (c) $\int_0^t s\,e^{s^2/2} ds = e^{t^2/2} - 1$; adding $1$ closes the loop. The regularity needed for (a) --- continuity of $y$ --- is exactly what the equation presupposes, and differentiability is then derived, not assumed.
+  \item[\ref{ex:backward}.] (a) The map $t \mapsto \int_0^t s\,y(s)\,ds$ has a continuous integrand (product of continuous functions), so FTC Part 1 applies: $y' (t)= t\,y(t)$, and $t=0$ in the equation gives $y(0) = 1$. (b) Separable: $y = e^{t^2/2}$. (c) $\int_0^t s\,e^{s^2/2} ds = e^{t^2/2} - 1$; adding $1$ closes the loop. The regularity needed for (a) --- continuity of $y$ --- is exactly what the equation presupposes, and differentiability is then derived, not assumed.
 
-\item[\ref{ex:wrongway}.] The relation demands $\phi(0) = 1$, $\phi(1) = e$, $\int_0^1 \phi = e-1$. Besides $e^t$, seek $\phi(t) = 1 + \alpha t + \beta t^2$: the endpoint condition gives $\alpha + \beta = e - 1$, and the integral condition gives $1 + \tfrac{\alpha}{2} + \tfrac{\beta}{3} = e - 1$, i.e.\ $3\alpha + 2\beta = 6e - 12$. Solving the pair: $\alpha = 4e - 10$, $\beta = 9 - 3e$; one checks $\alpha + \beta = e - 1$. \checkmark\ This quadratic $\phi \ne e^t$ satisfies the fixed-interval relation but not the ODE; a single scalar equation cannot pin down a function.
+  \item[\ref{ex:wrongway}.] The relation demands $\phi(0) = 1$, $\phi(1) = e$, $\int_0^1 \phi = e-1$. Besides $e^t$, seek $\phi(t) = 1 + \alpha t + \beta t^2$: the endpoint condition gives $\alpha + \beta = e - 1$, and the integral condition gives $1 + \tfrac{\alpha}{2} + \tfrac{\beta}{3} = e - 1$, i.e.\ $3\alpha + 2\beta = 6e - 12$. Solving the pair: $\alpha = 4e - 10$, $\beta = 9 - 3e$; one checks $\alpha + \beta = e - 1$. \checkmark\ This quadratic $\phi \ne e^t$ satisfies the fixed-interval relation but not the ODE; a single scalar equation cannot pin down a function.
 
-\item[\ref{ex:sine}.] Conversion gives $y(t) = t - \int_0^t (t - s)\,y(s)\,ds$ (the $t$ term carries $y'(0) = 1$; the constant term vanishes since $y(0)=0$). Verification: $\int_0^t (t-s)\sin s\,ds = t\int_0^t \sin s\, ds - \int_0^t s \sin s\, ds = t(1 - \cos t) - (\sin t - t\cos t) = t - \sin t$. Then $t - (t - \sin t) = \sin t$. \checkmark
+  \item[\ref{ex:sine}.] Conversion gives $y(t) = t - \int_0^t (t - s)\,y(s)\,ds$ (the $t$ term carries $y'(0) = 1$; the constant term vanishes since $y(0)=0$). Verification: $\int_0^t (t-s)\sin s\,ds = t\int_0^t \sin s\, ds - \int_0^t s \sin s\, ds = t(1 - \cos t) - (\sin t - t\cos t) = t - \sin t$. Then $t - (t - \sin t) = \sin t$. \checkmark
 
-\item[\ref{ex:cauchy3}.] The triple integral is over the simplex $t_0 \le s \le u_1 \le u_2 \le t$. Integrating in the order $u_1$, then $u_2$: the $u_1$-integral gives $(u_2 - s)$; the $u_2$-integral of $(u_2 - s)$ over $[s, t]$ gives $(t-s)^2/2$. Induction: each additional integration integrates $(u - s)^{k-1}/(k-1)!$ in $u$ from $s$ to the new limit, producing $(t-s)^k/k!$ --- the factorial accumulates one factor per layer.
+  \item[\ref{ex:cauchy3}.] The triple integral is over the simplex $t_0 \le s \le u_1 \le u_2 \le t$. Integrating in the order $u_1$, then $u_2$: the $u_1$-integral gives $(u_2 - s)$; the $u_2$-integral of $(u_2 - s)$ over $[s, t]$ gives $(t-s)^2/2$. Induction: each additional integration integrates $(u - s)^{k-1}/(k-1)!$ in $u$ from $s$ to the new limit, producing $(t-s)^k/k!$ --- the factorial accumulates one factor per layer.
 
-\item[\ref{ex:thirdorder}.] Three integrations harvest $c$, then $b$, then $a$:
-$y(t) = a + bt + \tfrac{c}{2}t^2 + \int_0^t \tfrac{(t-s)^2}{2} f(s)\,ds$. The $k$-th initial condition (the value of $y^{(k)}(0)$) produces the term $y^{(k)}(0)\, t^k / k!$ --- the polynomial part is precisely the degree-2 Taylor polynomial of the solution at $0$.
+  \item[\ref{ex:thirdorder}.] Three integrations harvest $c$, then $b$, then $a$:
+    $y(t) = a + bt + \tfrac{c}{2}t^2 + \int_0^t \tfrac{(t-s)^2}{2} f(s)\,ds$. The $k$-th initial condition (the value of $y^{(k)}(0)$) produces the term $y^{(k)}(0)\, t^k / k!$ --- the polynomial part is precisely the degree-2 Taylor polynomial of the solution at $0$.
 
-\item[\ref{ex:airy}.] $y(t) = 1 + \int_0^t (t-s)\,s\,y(s)\,ds$. First iteration: $\int_0^t (t-s)s\,ds = \tfrac{t^3}{6}$, so $y_1 = 1 + \tfrac{t^3}{6}$. Second: add $\int_0^t (t-s)s\cdot\tfrac{s^3}{6}\,ds = \tfrac{t^6}{180}$, so $y_2 = 1 + \tfrac{t^3}{6} + \tfrac{t^6}{180}$, matching the known series.
+  \item[\ref{ex:airy}.] $y(t) = 1 + \int_0^t (t-s)\,s\,y(s)\,ds$. First iteration: $\int_0^t (t-s)s\,ds = \tfrac{t^3}{6}$, so $y_1 = 1 + \tfrac{t^3}{6}$. Second: add $\int_0^t (t-s)s\cdot\tfrac{s^3}{6}\,ds = \tfrac{t^6}{180}$, so $y_2 = 1 + \tfrac{t^3}{6} + \tfrac{t^6}{180}$, matching the known series.
 
-\item[\ref{ex:leibniz}.] (a) Boundary term $K(t,t)\,y(t)$ plus interior term $\int \partial_t K(t,s)\,y(s)\,ds$. (b) In general the derivative of the equation still contains an integral of $y$ against $\partial_t K$: an \emph{integro-differential} equation. (c) If $K = k(s)$ then $\partial_t K = 0$ and the interior term dies: $y'(t) = g'(t) + k(t)\,y(t)$, a genuine ODE.
+  \item[\ref{ex:leibniz}.] (a) Boundary term $K(t,t)\,y(t)$ plus interior term $\int \partial_t K(t,s)\,y(s)\,ds$. (b) In general the derivative of the equation still contains an integral of $y$ against $\partial_t K$: an \emph{integro-differential} equation. (c) If $K = k(s)$ then $\partial_t K = 0$ and the interior term dies: $y'(t) = g'(t) + k(t)\,y(t)$, a genuine ODE.
 
-\item[\ref{ex:twoderivs}.] First derivative: boundary term $K(t,t)y(t) = 0$, interior term $\int_{t_0}^t 1 \cdot y(s)\,ds$; so $y' = g' + \int_{t_0}^t y$. Second derivative: now the ``kernel'' is $1$, whose boundary term is $y(t)$: $y'' = g'' + y$. Initial data: $y(t_0) = g(t_0)$ from the equation, $y'(t_0) = g'(t_0)$ from its first derivative (the integrals vanish at $t = t_0$). The vanishing of the Cauchy kernel on the diagonal is what delays the appearance of $y$ outside the integral until the second differentiation --- one differentiation per order of the original equation.
+  \item[\ref{ex:twoderivs}.] First derivative: boundary term $K(t,t)y(t) = 0$, interior term $\int_{t_0}^t 1 \cdot y(s)\,ds$; so $y' = g' + \int_{t_0}^t y$. Second derivative: now the ``kernel'' is $1$, whose boundary term is $y(t)$: $y'' = g'' + y$. Initial data: $y(t_0) = g(t_0)$ from the equation, $y'(t_0) = g'(t_0)$ from its first derivative (the integrals vanish at $t = t_0$). The vanishing of the Cauchy kernel on the diagonal is what delays the appearance of $y$ outside the integral until the second differentiation --- one differentiation per order of the original equation.
 
-\item[\ref{ex:convolution}.] Transforming, $Y = G + \widehat{k}\,Y$, so $Y = G/(1 - \widehat{k})$. For Exercise~\ref{ex:sine}: $G(p) = 1/p^2$, $\widehat{k}(p) = -1/p^2$, hence $Y = \frac{1/p^2}{1 + 1/p^2} = \frac{1}{p^2+1} = \mathcal{L}\{\sin t\}$. \checkmark\ The resolvent kernel of the integral equation plays the role of the impulse response; the map $G \mapsto Y$ is multiplication by the transfer function $1/(1-\widehat{k})$.
+  \item[\ref{ex:convolution}.] Transforming, $Y = G + \widehat{k}\,Y$, so $Y = G/(1 - \widehat{k})$. For Exercise~\ref{ex:sine}: $G(p) = 1/p^2$, $\widehat{k}(p) = -1/p^2$, hence $Y = \frac{1/p^2}{1 + 1/p^2} = \frac{1}{p^2+1} = \mathcal{L}\{\sin t\}$. \checkmark\ The resolvent kernel of the integral equation plays the role of the impulse response; the map $G \mapsto Y$ is multiplication by the transfer function $1/(1-\widehat{k})$.
 
-\item[\ref{ex:green-construct}.] Left piece $y = At$ (satisfies $y(0)=0$), right piece $y = B(1-t)$ (satisfies $y(1)=0$). Continuity at $s$: $As = B(1-s)$. Jump: $y'(s^+) - y'(s^-) = -B - A = -1$. Solving: $A = 1 - s$, $B = s$, giving $G(t,s) = t(1-s)$ for $t \le s$ and $s(1-t)$ for $t \ge s$. The jump condition comes from integrating $-y'' = \delta(\cdot - s)$ over $[s - \epsilon, s + \epsilon]$: the left side gives $-(y'(s^+) - y'(s^-))$, the right side gives $1$.
+  \item[\ref{ex:green-construct}.] Left piece $y = At$ (satisfies $y(0)=0$), right piece $y = B(1-t)$ (satisfies $y(1)=0$). Continuity at $s$: $As = B(1-s)$. Jump: $y'(s^+) - y'(s^-) = -B - A = -1$. Solving: $A = 1 - s$, $B = s$, giving $G(t,s) = t(1-s)$ for $t \le s$ and $s(1-t)$ for $t \ge s$. The jump condition comes from integrating $-y'' = \delta(\cdot - s)$ over $[s - \epsilon, s + \epsilon]$: the left side gives $-(y'(s^+) - y'(s^-))$, the right side gives $1$.
 
-\item[\ref{ex:green-verify}.] With $y(t) = (1-t)\int_0^t s f\,ds + t\int_t^1 (1-s) f\,ds$: the first derivative is $-\int_0^t s f\,ds + (1-t)\,t f(t) + \int_t^1 (1-s)f\,ds - t(1-t)f(t)$; the two boundary contributions cancel (this cancellation \emph{is} the continuity of $G$). Differentiating again: $-t f(t) - (1-t) f(t) = -f(t)$, i.e.\ $-y'' = f$ --- this step is the jump condition in action. Boundary values: at $t=0$ the first integral is empty and the prefactor $t$ kills the second; similarly at $t = 1$.
+  \item[\ref{ex:green-verify}.] With $y(t) = (1-t)\int_0^t s f\,ds + t\int_t^1 (1-s) f\,ds$: the first derivative is $-\int_0^t s f\,ds + (1-t)\,t f(t) + \int_t^1 (1-s)f\,ds - t(1-t)f(t)$; the two boundary contributions cancel (this cancellation \emph{is} the continuity of $G$). Differentiating again: $-t f(t) - (1-t) f(t) = -f(t)$, i.e.\ $-y'' = f$ --- this step is the jump condition in action. Boundary values: at $t=0$ the first integral is empty and the prefactor $t$ kills the second; similarly at $t = 1$.
 
-\item[\ref{ex:eigen}.] (a) $G(t,s) = s(\pi - t)/\pi$ for $s \le t$, $t(\pi - s)/\pi$ for $s \ge t$; the Fredholm form is $y = \lambda \int_0^\pi G\, y$. (b) Split at $t$:
-$\int_0^t \frac{s(\pi - t)}{\pi}\sin(ns)\,ds + \int_t^\pi \frac{t(\pi - s)}{\pi}\sin(ns)\,ds$. Each piece is elementary; the $\cos(nt)$ terms cancel between the two pieces and the total is $\sin(nt)/n^2$. \checkmark\ (c) $L = -d^2/dt^2$ has eigenvalues $n^2 \to \infty$ (unbounded operator); $K = L^{-1}$ has $1/n^2 \to 0$. A compact operator maps the unit ball to a precompact set, so it cannot have infinitely many eigenvalues bounded away from zero --- accumulation at $0$ is forced, and it is the mirror image of the unboundedness of $L$.
+  \item[\ref{ex:eigen}.] (a) $G(t,s) = s(\pi - t)/\pi$ for $s \le t$, $t(\pi - s)/\pi$ for $s \ge t$; the Fredholm form is $y = \lambda \int_0^\pi G\, y$. (b) Split at $t$:
+    $\int_0^t \frac{s(\pi - t)}{\pi}\sin(ns)\,ds + \int_t^\pi \frac{t(\pi - s)}{\pi}\sin(ns)\,ds$. Each piece is elementary; the $\cos(nt)$ terms cancel between the two pieces and the total is $\sin(nt)/n^2$. \checkmark\ (c) $L = -d^2/dt^2$ has eigenvalues $n^2 \to \infty$ (unbounded operator); $K = L^{-1}$ has $1/n^2 \to 0$. A compact operator maps the unit ball to a precompact set, so it cannot have infinitely many eigenvalues bounded away from zero --- accumulation at $0$ is forced, and it is the mirror image of the unboundedness of $L$.
 
-\item[\ref{ex:inhomog-bc}.] $\ell(t) = \alpha + (\beta - \alpha)t$. In both settings the polynomial part is the solution of the \emph{homogeneous} equation ($\ell'' = 0$, resp.\ $y'' = 0$) that carries all the auxiliary data, while the integral term is a particular solution with zero data. Superposition splits ``data'' from ``forcing'' cleanly in the integral representation.
+  \item[\ref{ex:inhomog-bc}.] $\ell(t) = \alpha + (\beta - \alpha)t$. In both settings the polynomial part is the solution of the \emph{homogeneous} equation ($\ell'' = 0$, resp.\ $y'' = 0$) that carries all the auxiliary data, while the integral term is a particular solution with zero data. Superposition splits ``data'' from ``forcing'' cleanly in the integral representation.
 
-\item[\ref{ex:bootstrap}.] The integrand $s \mapsto f(s, y(s))$ is continuous, so FTC Part 1 says the integral term is $C^1$ with derivative $f(t, y(t))$; since $y$ equals a constant plus this term, $y \in C^1$. For the second-order form, Exercise~\ref{ex:twoderivs} shows $y' = g' + \int_0^t f(s,y(s))\,ds$ (with $g$ the polynomial part, so $g' $ is smooth); the right side is again $C^1$ by the same argument, so $y \in C^2$. Each differentiation of the equation trades one layer of kernel for one derivative of $y$.
+  \item[\ref{ex:bootstrap}.] The integrand $s \mapsto f(s, y(s))$ is continuous, so FTC Part 1 says the integral term is $C^1$ with derivative $f(t, y(t))$; since $y$ equals a constant plus this term, $y \in C^1$. For the second-order form, Exercise~\ref{ex:twoderivs} shows $y' = g' + \int_0^t f(s,y(s))\,ds$ (with $g$ the polynomial part, so $g' $ is smooth); the right side is again $C^1$ by the same argument, so $y \in C^2$. Each differentiation of the equation trades one layer of kernel for one derivative of $y$.
 
-\item[\ref{ex:illposed}.] (a) Integrating by parts in $s$: $g_n(t) = \bigl[-\tfrac{\cos(n\pi s)}{n\pi}K(t,s)\bigr]_0^1 + \tfrac{1}{n\pi}\int_0^1 \cos(n\pi s)\,\partial_s K(t,s)\,ds$, and both terms are $O(1/n)$ uniformly in $t$ if $K, \partial_s K$ are bounded. (b) The inputs $y_n$ have unit sup-norm but the outputs $g_n \to 0$: inverting the map sends the small perturbation $g_n$ of the data $0$ to the unit-size perturbation $y_n$ of the solution $0$; continuous dependence fails, so the inverse problem is ill-posed in Hadamard's sense even if a solution exists and is unique. (c) For the second kind, $y = g + \lambda K y$ gives $(I - \lambda K)y = g$; for $|\lambda|\,\|K\| < 1$ the Neumann series makes $(I - \lambda K)^{-1}$ a \emph{bounded} operator, so small changes in $g$ produce small changes in $y$. The identity term is what saves you: you are never inverting the smoothing operator alone.
+  \item[\ref{ex:illposed}.] (a) Integrating by parts in $s$: $g_n(t) = \bigl[-\tfrac{\cos(n\pi s)}{n\pi}K(t,s)\bigr]_0^1 + \tfrac{1}{n\pi}\int_0^1 \cos(n\pi s)\,\partial_s K(t,s)\,ds$, and both terms are $O(1/n)$ uniformly in $t$ if $K, \partial_s K$ are bounded. (b) The inputs $y_n$ have unit sup-norm but the outputs $g_n \to 0$: inverting the map sends the small perturbation $g_n$ of the data $0$ to the unit-size perturbation $y_n$ of the solution $0$; continuous dependence fails, so the inverse problem is ill-posed in Hadamard's sense even if a solution exists and is unique. (c) For the second kind, $y = g + \lambda K y$ gives $(I - \lambda K)y = g$; for $|\lambda|\,\|K\| < 1$ the Neumann series makes $(I - \lambda K)^{-1}$ a \emph{bounded} operator, so small changes in $g$ produce small changes in $y$. The identity term is what saves you: you are never inverting the smoothing operator alone.
 
-\item[\ref{ex:contraction}.] (a) $|Ty(t) - Tz(t)| \le \int_0^t L|y(s)-z(s)|\,ds \le Lt\,\|y - z\|_\infty \le Lh\|y-z\|_\infty$. (b) Differentiation admits no bound $\|y'\|_\infty \le C\|y\|_\infty$: the functions $\tfrac1n\sin(n^2 t)$ are uniformly small with uniformly large derivatives. (c) Keeping the factor $Lt$ un-relaxed and iterating: $|T^2y - T^2z|(t) \le \int_0^t L \cdot Ls\,\|y-z\|\,ds = \tfrac{(Lt)^2}{2}\|y-z\|$, and inductively $(Lt)^n/n!$ --- the Cauchy kernel of Exercise~\ref{ex:cauchy3} reappearing as the engine of global existence: since $(Lh)^n/n! \to 0$, some iterate is a contraction on any interval.
+  \item[\ref{ex:contraction}.] (a) $|Ty(t) - Tz(t)| \le \int_0^t L|y(s)-z(s)|\,ds \le Lt\,\|y - z\|_\infty \le Lh\|y-z\|_\infty$. (b) Differentiation admits no bound $\|y'\|_\infty \le C\|y\|_\infty$: the functions $\tfrac1n\sin(n^2 t)$ are uniformly small with uniformly large derivatives. (c) Keeping the factor $Lt$ un-relaxed and iterating: $|T^2y - T^2z|(t) \le \int_0^t L \cdot Ls\,\|y-z\|\,ds = \tfrac{(Lt)^2}{2}\|y-z\|$, and inductively $(Lt)^n/n!$ --- the Cauchy kernel of Exercise~\ref{ex:cauchy3} reappearing as the engine of global existence: since $(Lh)^n/n! \to 0$, some iterate is a contraction on any interval.
 
-\item[\ref{ex:abel}.] (a) The Leibniz boundary term requires $K(t,t)$, but $(t-s)^{-1/2}$ blows up on the diagonal; the rule does not apply, and no finite number of differentiations removes the integral. (b) With $g(s) = s$: $\int_0^t \frac{s}{\sqrt{t-s}}\,ds = \tfrac{4}{3}t^{3/2}$, so the formula gives $y(t) = \tfrac{1}{\pi}\cdot\tfrac{d}{dt}\tfrac{4}{3}t^{3/2} = \tfrac{2}{\pi}\sqrt{t}$. Check forward: $\int_0^t \frac{2\sqrt{s}/\pi}{\sqrt{t-s}}\,ds = \tfrac{2}{\pi}\cdot t \cdot B(\tfrac32, \tfrac12) = \tfrac{2}{\pi} \cdot t \cdot \tfrac{\pi}{2} = t = g(t)$. \checkmark\ (c) Up to the constant $\Gamma(\tfrac12) = \sqrt{\pi}$, the left side is the half-order integral of $y$; the equation asks you to invert semi-integration (a fractional-calculus operation), which is why it sits genuinely outside the differential-equation world while remaining a perfectly good Volterra equation.
+  \item[\ref{ex:abel}.] (a) The Leibniz boundary term requires $K(t,t)$, but $(t-s)^{-1/2}$ blows up on the diagonal; the rule does not apply, and no finite number of differentiations removes the integral. (b) With $g(s) = s$: $\int_0^t \frac{s}{\sqrt{t-s}}\,ds = \tfrac{4}{3}t^{3/2}$, so the formula gives $y(t) = \tfrac{1}{\pi}\cdot\tfrac{d}{dt}\tfrac{4}{3}t^{3/2} = \tfrac{2}{\pi}\sqrt{t}$. Check forward: $\int_0^t \frac{2\sqrt{s}/\pi}{\sqrt{t-s}}\,ds = \tfrac{2}{\pi}\cdot t \cdot B(\tfrac32, \tfrac12) = \tfrac{2}{\pi} \cdot t \cdot \tfrac{\pi}{2} = t = g(t)$. \checkmark\ (c) Up to the constant $\Gamma(\tfrac12) = \sqrt{\pi}$, the left side is the half-order integral of $y$; the equation asks you to invert semi-integration (a fractional-calculus operation), which is why it sits genuinely outside the differential-equation world while remaining a perfectly good Volterra equation.
 
 \end{description}
 

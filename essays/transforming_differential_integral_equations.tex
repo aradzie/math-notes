@@ -25,8 +25,8 @@ This essay develops the correspondence carefully. Section~\ref{sec:volterra} car
 
 Consider the initial value problem
 \begin{equation}
-y'(t) = f\bigl(t, y(t)\bigr), \qquad y(t_0) = y_0,
-\label{eq:ivp}
+  y'(t) = f\bigl(t, y(t)\bigr), \qquad y(t_0) = y_0,
+  \label{eq:ivp}
 \end{equation}
 where $f$ is continuous on a suitable domain. The goal is to convert~\eqref{eq:ivp} into a statement of the form ``$y(t) = \text{something}$'' that contains no derivatives and no separate side condition.
 
@@ -36,30 +36,30 @@ The first step is to integrate both sides of the differential equation---but ove
 
 We know the value of $y$ at exactly one point, namely $t_0$. We want the value of $y$ at a generic point $t$. So we integrate \emph{from the point where information lives to the point where information is wanted}. The equation $y'(s) = f(s, y(s))$ holds for every $s$ in the interval of existence; integrating it over $s \in [t_0, t]$ gives
 \begin{equation}
-\int_{t_0}^{t} y'(s)\, ds \;=\; \int_{t_0}^{t} f\bigl(s, y(s)\bigr)\, ds.
-\label{eq:integrated}
+  \int_{t_0}^{t} y'(s)\, ds \;=\; \int_{t_0}^{t} f\bigl(s, y(s)\bigr)\, ds.
+  \label{eq:integrated}
 \end{equation}
 
 Two remarks are in order before continuing.
 
 \begin{remark}[The dummy variable]
-The upper limit of integration is $t$, a variable. One cannot use the same symbol for the integration variable and for a limit of integration: an expression such as $\int_{t_0}^{t} f(t, y(t))\, dt$ is meaningless, since the variable of integration would collide with a fixed endpoint. The integration variable is therefore renamed to $s$. This is exactly the same discipline as writing $\ln x = \int_1^x \frac{1}{s}\, ds$ rather than the ill-formed $\int_1^x \frac{1}{x}\, dx$.
+  The upper limit of integration is $t$, a variable. One cannot use the same symbol for the integration variable and for a limit of integration: an expression such as $\int_{t_0}^{t} f(t, y(t))\, dt$ is meaningless, since the variable of integration would collide with a fixed endpoint. The integration variable is therefore renamed to $s$. This is exactly the same discipline as writing $\ln x = \int_1^x \frac{1}{s}\, ds$ rather than the ill-formed $\int_1^x \frac{1}{x}\, dx$.
 \end{remark}
 
 \begin{remark}[Why integrating both sides is legitimate]
-The differential equation asserts that two functions of $s$ are equal \emph{pointwise} on an interval. Equal functions have equal integrals over any subinterval, so~\eqref{eq:integrated} follows. The converse fails---equal integrals do not imply equal integrands---which is why the reverse direction of the equivalence (Section~\ref{subsec:converse}) requires the Fundamental Theorem of Calculus rather than mere ``un-integration.''
+  The differential equation asserts that two functions of $s$ are equal \emph{pointwise} on an interval. Equal functions have equal integrals over any subinterval, so~\eqref{eq:integrated} follows. The converse fails---equal integrals do not imply equal integrands---which is why the reverse direction of the equivalence (Section~\ref{subsec:converse}) requires the Fundamental Theorem of Calculus rather than mere ``un-integration.''
 \end{remark}
 
 \subsection{Absorbing the initial condition}
 
 By the Fundamental Theorem of Calculus (Part 2, the ``net change'' form), the left-hand side of~\eqref{eq:integrated} evaluates to
 \[
-\int_{t_0}^{t} y'(s)\, ds = y(t) - y(t_0) = y(t) - y_0.
+  \int_{t_0}^{t} y'(s)\, ds = y(t) - y(t_0) = y(t) - y_0.
 \]
 Observe what has happened: \emph{the initial condition has entered the equation.} It was not appended as a side remark; it appeared as the boundary term of the FTC evaluation. This is precisely the mechanism by which the side condition is absorbed into the integral formulation. Solving for $y(t)$:
 \begin{equation}
-\boxed{\; y(t) = y_0 + \int_{t_0}^{t} f\bigl(s, y(s)\bigr)\, ds \;}
-\label{eq:volterra}
+  \boxed{\; y(t) = y_0 + \int_{t_0}^{t} f\bigl(s, y(s)\bigr)\, ds \;}
+  \label{eq:volterra}
 \end{equation}
 
 Equation~\eqref{eq:volterra} is a \emph{Volterra integral equation of the second kind}: the unknown $y$ appears both outside and inside the integral, and the upper limit of integration is variable. Read as a sentence, it says: \emph{the state at time $t$ equals the initial state plus the accumulated instantaneous change from $t_0$ up to $t$.} The variable upper limit is what makes the equation ``Volterra'': the value at time $t$ depends only on the history $[t_0, t]$, never on the future. Causality is visible in the limits of integration.
@@ -68,9 +68,9 @@ Equation~\eqref{eq:volterra} is a \emph{Volterra integral equation of the second
 
 Suppose one instead integrated over some fixed interval $[a, b]$:
 \[
-\int_a^b y'(s)\, ds = \int_a^b f\bigl(s, y(s)\bigr)\, ds
-\quad\Longrightarrow\quad
-y(b) - y(a) = \int_a^b f\bigl(s, y(s)\bigr)\, ds.
+  \int_a^b y'(s)\, ds = \int_a^b f\bigl(s, y(s)\bigr)\, ds
+  \quad\Longrightarrow\quad
+  y(b) - y(a) = \int_a^b f\bigl(s, y(s)\bigr)\, ds.
 \]
 This is a \emph{true} statement but a useless one: it is a single scalar relation between two unknown numbers $y(a)$ and $y(b)$, and it does not determine the function $y$. To characterize the whole function one needs one equation \emph{for each value of $t$}---which is exactly what a variable upper limit provides. The transformation produces a one-parameter family of equations, one per $t$, packaged as a single functional equation.
 
@@ -84,16 +84,16 @@ Nothing requires $t \ge t_0$, incidentally. For $t < t_0$ formula~\eqref{eq:volt
 We have shown that a solution of the initial value problem satisfies the integral equation. The converse deserves care, and it is where the Fundamental Theorem of Calculus earns its keep a second time.
 
 \begin{proposition}
-Let $f$ be continuous, and suppose $y$ is merely a \emph{continuous} function satisfying~\eqref{eq:volterra}. Then $y$ is continuously differentiable, satisfies $y'(t) = f(t, y(t))$, and satisfies $y(t_0) = y_0$.
+  Let $f$ be continuous, and suppose $y$ is merely a \emph{continuous} function satisfying~\eqref{eq:volterra}. Then $y$ is continuously differentiable, satisfies $y'(t) = f(t, y(t))$, and satisfies $y(t_0) = y_0$.
 \end{proposition}
 
 \begin{proof}[Proof sketch]
-Since $y$ and $f$ are continuous, the integrand $s \mapsto f(s, y(s))$ is continuous. By the Fundamental Theorem of Calculus (Part 1), the right-hand side of~\eqref{eq:volterra} is differentiable in $t$ with derivative $f(t, y(t))$; hence so is $y$, and $y'(t) = f(t, y(t))$. Setting $t = t_0$ in~\eqref{eq:volterra} makes the integral vanish (degenerate interval), recovering $y(t_0) = y_0$.
+  Since $y$ and $f$ are continuous, the integrand $s \mapsto f(s, y(s))$ is continuous. By the Fundamental Theorem of Calculus (Part 1), the right-hand side of~\eqref{eq:volterra} is differentiable in $t$ with derivative $f(t, y(t))$; hence so is $y$, and $y'(t) = f(t, y(t))$. Setting $t = t_0$ in~\eqref{eq:volterra} makes the integral vanish (degenerate interval), recovering $y(t_0) = y_0$.
 \end{proof}
 
 Note the asymmetry in the hypotheses: only continuity of $y$ was \emph{assumed}, and differentiability was \emph{derived}. The integral equation self-improves the regularity of its solutions. This bootstrapping is the reason analysts prefer the integral form: one may search for solutions in the large, friendly space $C[t_0, t_0 + h]$ of continuous functions---complete under the supremum norm, and hence ideal for the contraction mapping argument of the Picard--Lindel\"of theorem---and differentiability comes out for free at the end. Indeed, Picard iteration,
 \[
-y_{n+1}(t) = y_0 + \int_{t_0}^{t} f\bigl(s, y_n(s)\bigr)\, ds,
+  y_{n+1}(t) = y_0 + \int_{t_0}^{t} f\bigl(s, y_n(s)\bigr)\, ds,
 \]
 operates directly on the integral form; the integral operator is a contraction on a suitable space, whereas the differential operator is not even continuous.
 
@@ -102,26 +102,26 @@ operates directly on the integral form; the integral operator is a contraction o
 
 Consider now the second-order initial value problem
 \[
-y''(t) = f\bigl(t, y(t)\bigr), \qquad y(t_0) = y_0, \quad y'(t_0) = v_0.
+  y''(t) = f\bigl(t, y(t)\bigr), \qquad y(t_0) = y_0, \quad y'(t_0) = v_0.
 \]
 Integrating once (the same logic as before, applied to $y''$) gives
 \[
-y'(u) = v_0 + \int_{t_0}^{u} f\bigl(s, y(s)\bigr)\, ds,
+  y'(u) = v_0 + \int_{t_0}^{u} f\bigl(s, y(s)\bigr)\, ds,
 \]
 and integrating again, over $u \in [t_0, t]$,
 \[
-y(t) = y_0 + v_0 (t - t_0) + \int_{t_0}^{t} \!\int_{t_0}^{u} f\bigl(s, y(s)\bigr)\, ds\, du.
+  y(t) = y_0 + v_0 (t - t_0) + \int_{t_0}^{t} \!\int_{t_0}^{u} f\bigl(s, y(s)\bigr)\, ds\, du.
 \]
 Both initial conditions have now been absorbed: \emph{each integration harvested one boundary term}. The double integral extends over the triangle $\{(u, s) : t_0 \le s \le u \le t\}$. Interchanging the order of integration (Fubini), the variable $u$ ranges over $[s, t]$ for fixed $s$, and since the integrand does not depend on $u$, the inner integral contributes only the length $(t - s)$:
 \[
-\int_{t_0}^{t} \!\int_{t_0}^{u} f\bigl(s, y(s)\bigr)\, ds\, du
-= \int_{t_0}^{t} \left( \int_{s}^{t} du \right) f\bigl(s, y(s)\bigr)\, ds
-= \int_{t_0}^{t} (t - s)\, f\bigl(s, y(s)\bigr)\, ds.
+  \int_{t_0}^{t} \!\int_{t_0}^{u} f\bigl(s, y(s)\bigr)\, ds\, du
+  = \int_{t_0}^{t} \left( \int_{s}^{t} du \right) f\bigl(s, y(s)\bigr)\, ds
+  = \int_{t_0}^{t} (t - s)\, f\bigl(s, y(s)\bigr)\, ds.
 \]
 Therefore
 \begin{equation}
-y(t) = y_0 + v_0 (t - t_0) + \int_{t_0}^{t} (t - s)\, f\bigl(s, y(s)\bigr)\, ds.
-\label{eq:second-order-volterra}
+  y(t) = y_0 + v_0 (t - t_0) + \int_{t_0}^{t} (t - s)\, f\bigl(s, y(s)\bigr)\, ds.
+  \label{eq:second-order-volterra}
 \end{equation}
 
 The factor $(t - s)$ is a \emph{kernel}: the fingerprint of double integration collapsed into a single integral. It is the $n = 2$ case of Cauchy's formula for repeated integration, in which $n$-fold integration produces the kernel $(t - s)^{n-1} / (n-1)!$. Physically, for $y'' = a(t)$, formula~\eqref{eq:second-order-volterra} says that the displacement at time $t$ due to an acceleration impulse at time $s$ is proportional to the elapsed time $t - s$: an impulse acts longer if it happened earlier. The kernel is the \emph{influence function} of the past on the present---the causal, initial-value counterpart of the Green's function that arises in the boundary-value setting, to which we now turn.
@@ -131,24 +131,24 @@ The factor $(t - s)$ is a \emph{kernel}: the fingerprint of double integration c
 
 Suppose that instead of initial conditions the auxiliary data are boundary conditions, as in
 \[
-y''(t) = f\bigl(t, y(t)\bigr), \qquad y(0) = y(1) = 0.
+  y''(t) = f\bigl(t, y(t)\bigr), \qquad y(0) = y(1) = 0.
 \]
 The same program---integrate, absorb the data---now produces an integral equation with \emph{fixed} limits, a \emph{Fredholm equation}:
 \[
-y(t) = \int_0^1 G(t, s)\, f\bigl(s, y(s)\bigr)\, ds,
+  y(t) = \int_0^1 G(t, s)\, f\bigl(s, y(s)\bigr)\, ds,
 \]
 where $G(t, s)$ is the \emph{Green's function} of the operator $d^2/dt^2$ subject to those boundary conditions. For this example,
 \[
-G(t, s) =
-\begin{cases}
-\,s\,(1 - t), & 0 \le s \le t, \\[2pt]
-\,t\,(1 - s), & t \le s \le 1.
-\end{cases}
+  G(t, s) =
+  \begin{cases}
+    \,s\,(1 - t), & 0 \le s \le t, \\[2pt]
+    \,t\,(1 - s), & t \le s \le 1.
+  \end{cases}
 \]
 Once again the auxiliary data have been baked into the kernel. The structural correspondence is:
 \begin{itemize}
-\item \emph{Initial conditions} (data at one point; causal evolution) correspond to \emph{Volterra kernels} (variable limit; memory of the past only).
-\item \emph{Boundary conditions} (data at two ends; a global constraint) correspond to \emph{Fredholm kernels} (fixed limits; every point interacts with every point).
+  \item \emph{Initial conditions} (data at one point; causal evolution) correspond to \emph{Volterra kernels} (variable limit; memory of the past only).
+  \item \emph{Boundary conditions} (data at two ends; a global constraint) correspond to \emph{Fredholm kernels} (fixed limits; every point interacts with every point).
 \end{itemize}
 
 \section{Why This Is a Genuine Symmetry, Not a Formal Rewrite}
@@ -181,11 +181,11 @@ A solution of the integral equation need only be continuous (indeed, in more gen
 
 The passage from differential to integral form always works for a well-posed problem: integrate and absorb the data. The reverse passage works only when the kernel is smooth enough to differentiate through. A Volterra equation
 \[
-y(t) = g(t) + \int_{t_0}^{t} K(t, s)\, y(s)\, ds
+  y(t) = g(t) + \int_{t_0}^{t} K(t, s)\, y(s)\, ds
 \]
 with smooth $K$ and $g$ can be differentiated back into a differential equation (or an integro-differential equation if $K$ depends nontrivially on $t$). But some integral equations have no local differential counterpart at all. Fredholm equations of the \emph{first kind},
 \[
-\int_a^b K(t, s)\, y(s)\, ds = g(t),
+  \int_a^b K(t, s)\, y(s)\, ds = g(t),
 \]
 in which the unknown appears only inside the integral, are the standard example: they ask one to invert a smoothing operator, an inherently unstable task, and they are genuinely ill-posed in Hadamard's sense.
 

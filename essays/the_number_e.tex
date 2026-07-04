@@ -12,7 +12,7 @@
 \maketitle
 
 \begin{abstract}
-\noindent The number $e \approx 2.71828$ is one of the central constants of mathematics, sitting alongside $\pi$ as a quantity that appears unbidden across analysis, probability, and applied science. Unlike $\pi$, which has an obvious geometric origin, $e$ can feel mysterious: where does it come from, and why is it ``natural''? This article builds the answer in stages. We begin with a concrete financial question about compound interest, extract a limit from it, give that limit a numerical value, and then connect it to an infinite series. From there we arrive at the property that truly distinguishes $e$ in calculus---that the exponential function $e^x$ is its own derivative---and finally we give a clean, rigorous definition by way of the natural logarithm defined as an integral.
+  \noindent The number $e \approx 2.71828$ is one of the central constants of mathematics, sitting alongside $\pi$ as a quantity that appears unbidden across analysis, probability, and applied science. Unlike $\pi$, which has an obvious geometric origin, $e$ can feel mysterious: where does it come from, and why is it ``natural''? This article builds the answer in stages. We begin with a concrete financial question about compound interest, extract a limit from it, give that limit a numerical value, and then connect it to an infinite series. From there we arrive at the property that truly distinguishes $e$ in calculus---that the exponential function $e^x$ is its own derivative---and finally we give a clean, rigorous definition by way of the natural logarithm defined as an integral.
 \end{abstract}
 
 \section{A Question About Money}
@@ -21,33 +21,33 @@ Imagine you deposit \$1 in a bank account that pays $100\%$ annual interest. Aft
 
 Now suppose the bank compounds the interest twice a year. Instead of $100\%$ once, you get $50\%$ added halfway through the year, and then $50\%$ on the new, larger balance at the end:
 \[
-\left(1 + \tfrac{1}{2}\right)\left(1 + \tfrac{1}{2}\right) = \left(1 + \tfrac{1}{2}\right)^2 = 2.25.
+  \left(1 + \tfrac{1}{2}\right)\left(1 + \tfrac{1}{2}\right) = \left(1 + \tfrac{1}{2}\right)^2 = 2.25.
 \]
 Compounding more often earns you more, because you start earning interest on interest sooner. With quarterly compounding ($n = 4$):
 \[
-\left(1 + \tfrac{1}{4}\right)^4 = 2.44140\ldots,
+  \left(1 + \tfrac{1}{4}\right)^4 = 2.44140\ldots,
 \]
 and with monthly compounding ($n = 12$):
 \[
-\left(1 + \tfrac{1}{12}\right)^{12} = 2.61303\ldots
+  \left(1 + \tfrac{1}{12}\right)^{12} = 2.61303\ldots
 \]
 
 The natural question is: if we compound more and more frequently---daily, hourly, every second, \emph{continuously}---does the final balance grow without bound, or does it settle toward some limit? The pattern in the table below already suggests the answer.
 
 \begin{center}
-\begin{tabular}{rl}
-\hline
-Compounding periods $n$ & Balance $\left(1 + \tfrac{1}{n}\right)^n$ \\
-\hline
-$1$ & $2.000000$ \\
-$2$ & $2.250000$ \\
-$4$ & $2.441406$ \\
-$12$ & $2.613035$ \\
-$365$ & $2.714567$ \\
-$8{,}760$ & $2.718127$ \\
-$1{,}000{,}000$ & $2.718280$ \\
-\hline
-\end{tabular}
+  \begin{tabular}{rl}
+    \hline
+    Compounding periods $n$ & Balance $\left(1 + \tfrac{1}{n}\right)^n$ \\
+    \hline
+    $1$ & $2.000000$ \\
+    $2$ & $2.250000$ \\
+    $4$ & $2.441406$ \\
+    $12$ & $2.613035$ \\
+    $365$ & $2.714567$ \\
+    $8{,}760$ & $2.718127$ \\
+    $1{,}000{,}000$ & $2.718280$ \\
+    \hline
+  \end{tabular}
 \end{center}
 
 The numbers are increasing, but they are not running off to infinity. They are crowding up against a ceiling a little above $2.718$. That ceiling is the number $e$.
@@ -57,31 +57,31 @@ The numbers are increasing, but they are not running off to infinity. They are c
 The financial story gives us our first definition of $e$.
 
 \begin{definition}[Limit definition]
-\[
-e = \lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^n.
-\]
+  \[
+    e = \lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^n.
+  \]
 \end{definition}
 
 This raises an immediate worry: it is not obvious that the limit even exists. The base $1 + \tfrac{1}{n}$ is shrinking toward $1$, while the exponent $n$ is growing toward infinity. A quantity slightly larger than $1$ raised to a huge power could in principle do anything. We need to know that these two effects balance to produce a finite number.
 
 \begin{proposition}
-The sequence $a_n = \left(1 + \tfrac{1}{n}\right)^n$ is increasing and bounded above, hence it converges.
+  The sequence $a_n = \left(1 + \tfrac{1}{n}\right)^n$ is increasing and bounded above, hence it converges.
 \end{proposition}
 
 \begin{proof}[Sketch]
-Expanding $a_n$ with the binomial theorem gives
-\[
-a_n = \sum_{k=0}^{n} \binom{n}{k}\frac{1}{n^k}
+  Expanding $a_n$ with the binomial theorem gives
+  \[
+    a_n = \sum_{k=0}^{n} \binom{n}{k}\frac{1}{n^k}
     = \sum_{k=0}^{n} \frac{1}{k!}\cdot\frac{n(n-1)\cdots(n-k+1)}{n^k}
     = \sum_{k=0}^{n} \frac{1}{k!}\prod_{j=0}^{k-1}\left(1 - \frac{j}{n}\right).
-\]
-Each factor $\left(1 - \tfrac{j}{n}\right)$ lies in $(0,1]$ and \emph{increases} toward $1$ as $n$ grows; moreover increasing $n$ adds an extra nonnegative term to the sum. Both effects push $a_n$ upward, so the sequence is increasing. For an upper bound, drop the products (each is at most $1$) and bound the factorials below by powers of two:
-\[
-a_n \le \sum_{k=0}^{n}\frac{1}{k!}
-   \le 1 + \sum_{k=1}^{n}\frac{1}{2^{k-1}}
-   < 1 + 2 = 3.
-\]
-An increasing sequence bounded above converges, by the monotone convergence theorem for real sequences.
+  \]
+  Each factor $\left(1 - \tfrac{j}{n}\right)$ lies in $(0,1]$ and \emph{increases} toward $1$ as $n$ grows; moreover increasing $n$ adds an extra nonnegative term to the sum. Both effects push $a_n$ upward, so the sequence is increasing. For an upper bound, drop the products (each is at most $1$) and bound the factorials below by powers of two:
+  \[
+    a_n \le \sum_{k=0}^{n}\frac{1}{k!}
+    \le 1 + \sum_{k=1}^{n}\frac{1}{2^{k-1}}
+    < 1 + 2 = 3.
+  \]
+  An increasing sequence bounded above converges, by the monotone convergence theorem for real sequences.
 \end{proof}
 
 So the limit exists and lies between $2$ and $3$. ``Continuous compounding'' is not just a vivid phrase; it is a genuine mathematical limit, and its value is $e$.
@@ -91,20 +91,20 @@ So the limit exists and lies between $2$ and $3$. ``Continuous compounding'' is 
 The proof above quietly handed us a second, often more convenient, definition. The expansion of $a_n$ involved the partial sums of $\sum 1/k!$, and as $n \to \infty$ each product $\prod\left(1 - \tfrac{j}{n}\right)$ tends to $1$. Taking the limit term by term turns the limit definition into an infinite series.
 
 \begin{definition}[Series definition]
-\[
-e = \sum_{k=0}^{\infty} \frac{1}{k!}
-  = \frac{1}{0!} + \frac{1}{1!} + \frac{1}{2!} + \frac{1}{3!} + \cdots
-  = 1 + 1 + \frac{1}{2} + \frac{1}{6} + \frac{1}{24} + \cdots
-\]
+  \[
+    e = \sum_{k=0}^{\infty} \frac{1}{k!}
+    = \frac{1}{0!} + \frac{1}{1!} + \frac{1}{2!} + \frac{1}{3!} + \cdots
+    = 1 + 1 + \frac{1}{2} + \frac{1}{6} + \frac{1}{24} + \cdots
+  \]
 \end{definition}
 
 This series converges very fast, because factorials grow explosively. Just the first few terms already pin down several digits:
 \[
-1 + 1 + 0.5 + 0.1\overline{6} + 0.041\overline{6} + 0.008\overline{3} + \cdots = 2.71805\ldots,
+  1 + 1 + 0.5 + 0.1\overline{6} + 0.041\overline{6} + 0.008\overline{3} + \cdots = 2.71805\ldots,
 \]
 and only a handful more terms give
 \[
-e = 2.718281828459045\ldots
+  e = 2.718281828459045\ldots
 \]
 
 The two definitions describe the same number, but they are not interchangeable in difficulty. The limit definition is where $e$ comes \emph{from} (the modeling question), while the series is how you actually \emph{compute} it. The equivalence of the two is the content of the proposition above made fully rigorous.
@@ -114,22 +114,22 @@ The two definitions describe the same number, but they are not interchangeable i
 It is worth pausing to note that $e$, like $\pi$, is irrational: it cannot be written as a ratio of integers, and its decimal expansion never terminates or repeats. The series makes this surprisingly accessible.
 
 \begin{theorem}
-$e$ is irrational.
+  $e$ is irrational.
 \end{theorem}
 
 \begin{proof}[Sketch]
-Suppose for contradiction that $e = p/q$ with positive integers $p, q$. Consider
-\[
-x = q!\left(e - \sum_{k=0}^{q}\frac{1}{k!}\right).
-\]
-If $e = p/q$ then $q!\,e = p\,(q-1)!$ is an integer, and $q!\sum_{k=0}^{q}\tfrac{1}{k!}$ is an integer as well (every denominator $k!$ with $k \le q$ divides $q!$). So $x$ would be an integer. But writing out the leftover tail,
-\[
-x = \sum_{k=q+1}^{\infty}\frac{q!}{k!}
-  = \frac{1}{q+1} + \frac{1}{(q+1)(q+2)} + \cdots
-  < \sum_{m=1}^{\infty}\frac{1}{(q+1)^m}
-  = \frac{1}{q},
-\]
-so $0 < x < 1$. There is no integer strictly between $0$ and $1$, a contradiction. Hence $e$ is irrational.
+  Suppose for contradiction that $e = p/q$ with positive integers $p, q$. Consider
+  \[
+    x = q!\left(e - \sum_{k=0}^{q}\frac{1}{k!}\right).
+  \]
+  If $e = p/q$ then $q!\,e = p\,(q-1)!$ is an integer, and $q!\sum_{k=0}^{q}\tfrac{1}{k!}$ is an integer as well (every denominator $k!$ with $k \le q$ divides $q!$). So $x$ would be an integer. But writing out the leftover tail,
+  \[
+    x = \sum_{k=q+1}^{\infty}\frac{q!}{k!}
+    = \frac{1}{q+1} + \frac{1}{(q+1)(q+2)} + \cdots
+    < \sum_{m=1}^{\infty}\frac{1}{(q+1)^m}
+    = \frac{1}{q},
+  \]
+  so $0 < x < 1$. There is no integer strictly between $0$ and $1$, a contradiction. Hence $e$ is irrational.
 \end{proof}
 
 \section{What Makes $e$ ``Natural'': Calculus}
@@ -138,7 +138,7 @@ So far $e$ is a specific number that happens to arise from compounding. The reas
 
 Consider the family of exponential functions $f(x) = b^x$ for a base $b > 0$. Every one of them has a derivative proportional to itself:
 \[
-\frac{d}{dx}\,b^x
+  \frac{d}{dx}\,b^x
   = \lim_{h \to 0}\frac{b^{x+h} - b^x}{h}
   = b^x \lim_{h \to 0}\frac{b^{h} - 1}{h}
   = C_b\, b^x,
@@ -146,23 +146,23 @@ Consider the family of exponential functions $f(x) = b^x$ for a base $b > 0$. Ev
 where the constant $C_b = \lim_{h\to 0}\frac{b^h - 1}{h}$ depends only on the base. For $b = 2$ one finds $C_2 \approx 0.693$, and for $b = 3$ one finds $C_3 \approx 1.099$. Somewhere between $2$ and $3$ there must be a special base for which this constant is exactly $1$. That base is $e$, and it is the choice that makes the derivative formula as clean as possible.
 
 \begin{theorem}[The defining calculus property]
-The exponential function $e^x$ is its own derivative:
-\[
-\frac{d}{dx}\,e^x = e^x.
-\]
-Equivalently, $e$ is the unique base $b$ for which $\displaystyle \lim_{h\to 0}\frac{b^h - 1}{h} = 1$.
+  The exponential function $e^x$ is its own derivative:
+  \[
+    \frac{d}{dx}\,e^x = e^x.
+  \]
+  Equivalently, $e$ is the unique base $b$ for which $\displaystyle \lim_{h\to 0}\frac{b^h - 1}{h} = 1$.
 \end{theorem}
 
 This is why $e$ deserves the name ``natural.'' Among all exponential functions, $e^x$ is the one whose rate of change at every point equals its current value---no stray constant attached. Any process whose growth rate is proportional to its present size (radioactive decay, population models, charging capacitors, and yes, continuously compounded interest) is governed by $e^x$, because the equation $y' = ky$ has solution $y = y_0 e^{kx}$.
 
 We can also see this property directly from the series. Differentiating
 \[
-e^x = \sum_{k=0}^{\infty}\frac{x^k}{k!}
-    = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots
+  e^x = \sum_{k=0}^{\infty}\frac{x^k}{k!}
+  = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots
 \]
 term by term shifts every term down by one,
 \[
-\frac{d}{dx}\,e^x = 0 + 1 + x + \frac{x^2}{2!} + \cdots = e^x,
+  \frac{d}{dx}\,e^x = 0 + 1 + x + \frac{x^2}{2!} + \cdots = e^x,
 \]
 recovering the same function. (Setting $x = 1$ in the series gives back $\sum 1/k!$, our earlier value of $e$.)
 
@@ -171,35 +171,35 @@ recovering the same function. (Setting $x = 1$ in the series gives back $\sum 1/
 The definitions above are honest, but each leans on something delicate---existence of a limit, convergence of a series, or term-by-term differentiation. A modern analysis course usually prefers a cleaner foundation that builds everything from a single integral, and recovers $e$ at the end as a derived quantity. The starting point is the natural logarithm.
 
 \begin{definition}[Natural logarithm]
-For $x > 0$, define
-\[
-\ln x = \int_{1}^{x}\frac{1}{t}\,dt.
-\]
+  For $x > 0$, define
+  \[
+    \ln x = \int_{1}^{x}\frac{1}{t}\,dt.
+  \]
 \end{definition}
 
 This is well posed because $1/t$ is continuous on $(0,\infty)$, so the integral exists for every $x > 0$. The definition has immediate, easily proved consequences. By the Fundamental Theorem of Calculus,
 \[
-\frac{d}{dx}\,\ln x = \frac{1}{x} > 0,
+  \frac{d}{dx}\,\ln x = \frac{1}{x} > 0,
 \]
 so $\ln$ is strictly increasing, hence one-to-one. A change of variables $t \mapsto st$ in the integral yields the familiar law $\ln(xy) = \ln x + \ln y$, and from it $\ln(x^r) = r\ln x$. Because $\ln$ is strictly increasing and unbounded in both directions (the integral diverges as $x \to \infty$ and as $x \to 0^+$), it maps $(0,\infty)$ bijectively onto all of $\R$. It therefore has an inverse function, which we call $\exp$.
 
 Now $e$ has a strikingly simple definition: it is the input at which the area under $1/t$ first reaches exactly $1$.
 
 \begin{definition}[$e$ via area]
-$e$ is the unique real number satisfying
-\[
-\ln e = \int_{1}^{e}\frac{1}{t}\,dt = 1.
-\]
-Such a number exists and is unique because $\ln$ is a continuous strictly increasing bijection onto $\R$, so the equation $\ln x = 1$ has exactly one solution.
+  $e$ is the unique real number satisfying
+  \[
+    \ln e = \int_{1}^{e}\frac{1}{t}\,dt = 1.
+  \]
+  Such a number exists and is unique because $\ln$ is a continuous strictly increasing bijection onto $\R$, so the equation $\ln x = 1$ has exactly one solution.
 \end{definition}
 
 From this foundation everything else follows without any leaps of faith. Since $\exp$ is the inverse of $\ln$, the chain rule applied to $\ln(\exp x) = x$ gives
 \[
-\exp'(x) = \exp(x),
+  \exp'(x) = \exp(x),
 \]
 so the inverse of the logarithm is its own derivative---we have recovered the calculus property as a theorem rather than asserting it. Writing $e^x := \exp(x)$ is then justified: $\exp(1) = e$ by construction, and the logarithm laws force $\exp(x) = e^x$ in the ordinary sense for rational $x$, which extends to all real $x$ by continuity. The limit and series definitions reappear as standard theorems: the Taylor expansion of $\exp$ about $0$ is exactly $\sum x^k/k!$, and the continuous-compounding limit
 \[
-\lim_{n\to\infty}\left(1 + \frac{x}{n}\right)^n = e^x
+  \lim_{n\to\infty}\left(1 + \frac{x}{n}\right)^n = e^x
 \]
 follows by taking logarithms and using $\ln'(1) = 1$.
 
@@ -208,10 +208,10 @@ follows by taking logarithms and using $\ln'(1) = 1$.
 We have met the same number through four lenses, each illuminating a different facet:
 
 \begin{itemize}
-\item \textbf{Compound interest / limit:} $\displaystyle e = \lim_{n\to\infty}\left(1 + \frac{1}{n}\right)^n$, the value of continuous growth at $100\%$ per period.
-\item \textbf{Series:} $\displaystyle e = \sum_{k=0}^{\infty}\frac{1}{k!}$, the fastest practical way to compute its digits.
-\item \textbf{Calculus property:} $e$ is the unique base making $\dfrac{d}{dx}e^x = e^x$, which is what earns it the title ``natural.''
-\item \textbf{Integral / logarithm:} $e$ is the number for which $\displaystyle\int_1^e \frac{dt}{t} = 1$, the cleanest rigorous starting point.
+  \item \textbf{Compound interest / limit:} $\displaystyle e = \lim_{n\to\infty}\left(1 + \frac{1}{n}\right)^n$, the value of continuous growth at $100\%$ per period.
+  \item \textbf{Series:} $\displaystyle e = \sum_{k=0}^{\infty}\frac{1}{k!}$, the fastest practical way to compute its digits.
+  \item \textbf{Calculus property:} $e$ is the unique base making $\dfrac{d}{dx}e^x = e^x$, which is what earns it the title ``natural.''
+  \item \textbf{Integral / logarithm:} $e$ is the number for which $\displaystyle\int_1^e \frac{dt}{t} = 1$, the cleanest rigorous starting point.
 \end{itemize}
 
 These are not four different numbers that happen to coincide; they are four descriptions of one object, and proving their equivalence is much of what an analysis course does with $e$. The number that first appeared as a banker's curiosity turns out to be the hinge on which the entire theory of exponential growth, and a good deal of calculus, quietly turns.

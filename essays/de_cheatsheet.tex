@@ -53,10 +53,10 @@
 \newcommand{\dydx}{\frac{dy}{dx}}
 \newcommand{\sect}[2]{%
   \begin{tcolorbox}[blanker, breakable, before skip=2pt, after skip=2pt]
-  \begingroup\sffamily\bfseries\normalsize\color{#1}%
-  {\color{#1}\rule[-1pt]{3pt}{12pt}}\;#2\endgroup
-  \par\vspace{1pt}{\color{#1}\hrule height 1pt}
-  \end{tcolorbox}}
+    \begingroup\sffamily\bfseries\normalsize\color{#1}%
+    {\color{#1}\rule[-1pt]{3pt}{12pt}}\;#2\endgroup
+    \par\vspace{1pt}{\color{#1}\hrule height 1pt}
+\end{tcolorbox}}
 
 \begin{document}
 \small
@@ -73,134 +73,134 @@
 
 \begin{multicols}{3}
 
-% ================= COLUMN BLOCK 1: AXES =================
-\sect{axes}{1.\; How to Classify Any Equation}
+  % ================= COLUMN BLOCK 1: AXES =================
+  \sect{axes}{1.\; How to Classify Any Equation}
 
-\begin{card}{axes}{ODE vs.\ PDE}
-\lab{ODE} one independent variable; ordinary derivatives only.\\
-\lab{PDE} two or more independent variables; partial derivatives appear, e.g.\ $u_t = k\,u_{xx}$.
-\end{card}
+  \begin{card}{axes}{ODE vs.\ PDE}
+    \lab{ODE} one independent variable; ordinary derivatives only.\\
+    \lab{PDE} two or more independent variables; partial derivatives appear, e.g.\ $u_t = k\,u_{xx}$.
+  \end{card}
 
-\begin{card}{axes}{Order \& Degree}
-\lab{Order} the order of the \emph{highest} derivative present.\\
-\lab{Degree} power of the highest-order derivative once the equation is written free of radicals/fractions in its derivatives (only defined when such a polynomial form exists).\\[2pt]
-$\big(1+(y')^2\big)=\big(y''\big)^{2/3}\Rightarrow$ order $2$, degree $3$.
-\end{card}
+  \begin{card}{axes}{Order \& Degree}
+    \lab{Order} the order of the \emph{highest} derivative present.\\
+    \lab{Degree} power of the highest-order derivative once the equation is written free of radicals/fractions in its derivatives (only defined when such a polynomial form exists).\\[2pt]
+    $\big(1+(y')^2\big)=\big(y''\big)^{2/3}\Rightarrow$ order $2$, degree $3$.
+  \end{card}
 
-\begin{card}{axes}{Linear vs.\ Nonlinear}
-\lab{Linear} $y$ and its derivatives appear to the first power, never multiplied together, with coefficients in $x$ only:
-\[
-a_n(x)y^{(n)}+\dots+a_1(x)y'+a_0(x)y=g(x).
-\]
-\lab{Nonlinear} anything else: $yy'$, $(y')^2$, $\sin y$, $e^{y}$, \dots
-\end{card}
+  \begin{card}{axes}{Linear vs.\ Nonlinear}
+    \lab{Linear} $y$ and its derivatives appear to the first power, never multiplied together, with coefficients in $x$ only:
+    \[
+      a_n(x)y^{(n)}+\dots+a_1(x)y'+a_0(x)y=g(x).
+    \]
+    \lab{Nonlinear} anything else: $yy'$, $(y')^2$, $\sin y$, $e^{y}$, \dots
+  \end{card}
 
-\begin{card}{axes}{Autonomous?}
-\lab{Autonomous} the independent variable is absent: $y'=f(y)$.\\
-\lab{Non-autonomous} $x$ (or $t$) appears explicitly.
-\end{card}
+  \begin{card}{axes}{Autonomous?}
+    \lab{Autonomous} the independent variable is absent: $y'=f(y)$.\\
+    \lab{Non-autonomous} $x$ (or $t$) appears explicitly.
+  \end{card}
 
-\begin{card}{axes}{Side conditions}
-\lab{IVP} all conditions at one point: $y(x_0),y'(x_0),\dots$\\
-\lab{BVP} conditions given at two or more points.
-\end{card}
+  \begin{card}{axes}{Side conditions}
+    \lab{IVP} all conditions at one point: $y(x_0),y'(x_0),\dots$\\
+    \lab{BVP} conditions given at two or more points.
+  \end{card}
 
-\begin{card}{warn}{``Homogeneous'' has \emph{two} meanings}
-\lab{(a) Linear sense} the forcing term is zero, $g(x)=0$; otherwise \emph{nonhomogeneous}.\\[2pt]
-\lab{(b) First-order sense} $\dydx=F\!\left(\dfrac{y}{x}\right)$, i.e.\ $M\,dx+N\,dy=0$ with $M,N$ homogeneous of the \emph{same} degree.\\[2pt]
-\textit{Always check which sense the context intends.}
-\end{card}
+  \begin{card}{warn}{``Homogeneous'' has \emph{two} meanings}
+    \lab{(a) Linear sense} the forcing term is zero, $g(x)=0$; otherwise \emph{nonhomogeneous}.\\[2pt]
+    \lab{(b) First-order sense} $\dydx=F\!\left(\dfrac{y}{x}\right)$, i.e.\ $M\,dx+N\,dy=0$ with $M,N$ homogeneous of the \emph{same} degree.\\[2pt]
+    \textit{Always check which sense the context intends.}
+  \end{card}
 
-% ================= COLUMN BLOCK 2: FIRST ORDER =================
-\columnbreak
-\sect{first}{2.\; First-Order Solvable Types}
+  % ================= COLUMN BLOCK 2: FIRST ORDER =================
+  \columnbreak
+  \sect{first}{2.\; First-Order Solvable Types}
 
-\begin{card}{first}{Separable}
-\lab{Form} $\dydx=f(x)\,g(y)$.\\
-\lab{Method} divide \& integrate:
-\[
-\int\frac{dy}{g(y)}=\int f(x)\,dx + C.
-\]
-\end{card}
+  \begin{card}{first}{Separable}
+    \lab{Form} $\dydx=f(x)\,g(y)$.\\
+    \lab{Method} divide \& integrate:
+    \[
+      \int\frac{dy}{g(y)}=\int f(x)\,dx + C.
+    \]
+  \end{card}
 
-\begin{card}{first}{Linear (1st order)}
-\lab{Form} $\dydx+P(x)\,y=Q(x)$.\\
-\lab{Method} integrating factor $\mu=e^{\int P\,dx}$:
-\[
-(\mu y)'=\mu Q \;\Rightarrow\; y=\frac{1}{\mu}\!\left(\int \mu Q\,dx + C\right).
-\]
-\end{card}
+  \begin{card}{first}{Linear (1st order)}
+    \lab{Form} $\dydx+P(x)\,y=Q(x)$.\\
+    \lab{Method} integrating factor $\mu=e^{\int P\,dx}$:
+    \[
+      (\mu y)'=\mu Q \;\Rightarrow\; y=\frac{1}{\mu}\!\left(\int \mu Q\,dx + C\right).
+    \]
+  \end{card}
 
-\begin{card}{first}{Exact}
-\lab{Form} $M(x,y)\,dx+N(x,y)\,dy=0$ with
-\[
-\frac{\partial M}{\partial y}=\frac{\partial N}{\partial x}.
-\]
-\lab{Method} find $F$ with $F_x=M,\,F_y=N$; solution $F(x,y)=C$. If the test fails, seek an integrating factor.
-\end{card}
+  \begin{card}{first}{Exact}
+    \lab{Form} $M(x,y)\,dx+N(x,y)\,dy=0$ with
+    \[
+      \frac{\partial M}{\partial y}=\frac{\partial N}{\partial x}.
+    \]
+    \lab{Method} find $F$ with $F_x=M,\,F_y=N$; solution $F(x,y)=C$. If the test fails, seek an integrating factor.
+  \end{card}
 
-\begin{card}{first}{Homogeneous (substitution)}
-\lab{Form} $\dydx=F\!\left(\dfrac{y}{x}\right)$.\\
-\lab{Method} let $v=\dfrac{y}{x}$, so $y=vx$, $y'=v+xv'$; the result is separable in $v$ and $x$.
-\end{card}
+  \begin{card}{first}{Homogeneous (substitution)}
+    \lab{Form} $\dydx=F\!\left(\dfrac{y}{x}\right)$.\\
+    \lab{Method} let $v=\dfrac{y}{x}$, so $y=vx$, $y'=v+xv'$; the result is separable in $v$ and $x$.
+  \end{card}
 
-\begin{card}{first}{Bernoulli}
-\lab{Form} $\dydx+P(x)\,y=Q(x)\,y^{n}$, $\;n\neq0,1$.\\
-\lab{Method} substitute $v=y^{1-n}$ to obtain a linear equation in $v$.
-\end{card}
+  \begin{card}{first}{Bernoulli}
+    \lab{Form} $\dydx+P(x)\,y=Q(x)\,y^{n}$, $\;n\neq0,1$.\\
+    \lab{Method} substitute $v=y^{1-n}$ to obtain a linear equation in $v$.
+  \end{card}
 
-\begin{card}{first}{Riccati \small(bonus)}
-\lab{Form} $\dydx=q_0(x)+q_1(x)y+q_2(x)y^2$.\\
-\lab{Method} given one solution $y_1$, set $y=y_1+\frac1v$ to linearize.
-\end{card}
+  \begin{card}{first}{Riccati \small(bonus)}
+    \lab{Form} $\dydx=q_0(x)+q_1(x)y+q_2(x)y^2$.\\
+    \lab{Method} given one solution $y_1$, set $y=y_1+\frac1v$ to linearize.
+  \end{card}
 
-% ================= COLUMN BLOCK 3: HIGHER ORDER + FLOW =================
-\columnbreak
-\sect{higher}{3.\; Linear Equations of Higher Order}
+  % ================= COLUMN BLOCK 3: HIGHER ORDER + FLOW =================
+  \columnbreak
+  \sect{higher}{3.\; Linear Equations of Higher Order}
 
-\begin{card}{higher}{Constant coefficients (homogeneous)}
-\lab{Form} $ay''+by'+cy=0$.\\
-\lab{Method} solve the characteristic equation $ar^2+br+c=0$:
-\begin{itemize}
-\item real $r_1\neq r_2$:\; $y=C_1e^{r_1x}+C_2e^{r_2x}$
-\item repeated $r$:\; $y=(C_1+C_2x)e^{rx}$
-\item complex $\alpha\pm i\beta$:\\ $y=e^{\alpha x}(C_1\cos\beta x+C_2\sin\beta x)$
-\end{itemize}
-\end{card}
+  \begin{card}{higher}{Constant coefficients (homogeneous)}
+    \lab{Form} $ay''+by'+cy=0$.\\
+    \lab{Method} solve the characteristic equation $ar^2+br+c=0$:
+    \begin{itemize}
+      \item real $r_1\neq r_2$:\; $y=C_1e^{r_1x}+C_2e^{r_2x}$
+      \item repeated $r$:\; $y=(C_1+C_2x)e^{rx}$
+      \item complex $\alpha\pm i\beta$:\\ $y=e^{\alpha x}(C_1\cos\beta x+C_2\sin\beta x)$
+    \end{itemize}
+  \end{card}
 
-\begin{card}{higher}{Nonhomogeneous}
-General solution $y=y_h+y_p$.\\[2pt]
-\lab{Undetermined coeff.} when $g$ is a polynomial, $e^{kx}$, $\sin/\cos$, or their products: guess $y_p$ of like form.\\[2pt]
-\lab{Variation of parameters} for any $g$:
-\[
-y_p=-y_1\!\int\!\frac{y_2\,g}{W}dx+y_2\!\int\!\frac{y_1\,g}{W}dx,
-\]
-with Wronskian $W=y_1y_2'-y_1'y_2$.
-\end{card}
+  \begin{card}{higher}{Nonhomogeneous}
+    General solution $y=y_h+y_p$.\\[2pt]
+    \lab{Undetermined coeff.} when $g$ is a polynomial, $e^{kx}$, $\sin/\cos$, or their products: guess $y_p$ of like form.\\[2pt]
+    \lab{Variation of parameters} for any $g$:
+    \[
+      y_p=-y_1\!\int\!\frac{y_2\,g}{W}dx+y_2\!\int\!\frac{y_1\,g}{W}dx,
+    \]
+    with Wronskian $W=y_1y_2'-y_1'y_2$.
+  \end{card}
 
-\begin{card}{higher}{Cauchy--Euler}
-\lab{Form} $ax^2y''+bxy'+cy=0$.\\
-\lab{Method} try $y=x^{m}$, giving $am(m-1)+bm+c=0$; solve for $m$ (cases mirror those above).
-\end{card}
+  \begin{card}{higher}{Cauchy--Euler}
+    \lab{Form} $ax^2y''+bxy'+cy=0$.\\
+    \lab{Method} try $y=x^{m}$, giving $am(m-1)+bm+c=0$; solve for $m$ (cases mirror those above).
+  \end{card}
 
-\sect{flow}{4.\; First-Order Decision Flow}
+  \sect{flow}{4.\; First-Order Decision Flow}
 
-\begin{card}{flow}{Work top to bottom; stop at first match}
-\begin{enumerate}[leftmargin=1.4em]
-\item Can you write $\dydx=f(x)g(y)$? $\to$ \textbf{Separable}
-\item Form $y'+P(x)y=Q(x)$? $\to$ \textbf{Linear} (int.\ factor)
-\item $M\,dx+N\,dy=0$ with $M_y=N_x$? $\to$ \textbf{Exact}
-\item Depends only on $y/x$? $\to$ \textbf{Homogeneous}
-\item $y'+Py=Qy^{n}$? $\to$ \textbf{Bernoulli}
-\item Else: try an integrating factor, a clever substitution, or solve numerically.
-\end{enumerate}
-\end{card}
+  \begin{card}{flow}{Work top to bottom; stop at first match}
+    \begin{enumerate}[leftmargin=1.4em]
+      \item Can you write $\dydx=f(x)g(y)$? $\to$ \textbf{Separable}
+      \item Form $y'+P(x)y=Q(x)$? $\to$ \textbf{Linear} (int.\ factor)
+      \item $M\,dx+N\,dy=0$ with $M_y=N_x$? $\to$ \textbf{Exact}
+      \item Depends only on $y/x$? $\to$ \textbf{Homogeneous}
+      \item $y'+Py=Qy^{n}$? $\to$ \textbf{Bernoulli}
+      \item Else: try an integrating factor, a clever substitution, or solve numerically.
+    \end{enumerate}
+  \end{card}
 
-\begin{tcolorbox}[blanker,before skip=4pt]
-\centering\footnotesize\color{ink!70}
-\sffamily Linearity, order, and homogeneity are independent axes ---\\
-a single equation carries one label from each.
-\end{tcolorbox}
+  \begin{tcolorbox}[blanker,before skip=4pt]
+    \centering\footnotesize\color{ink!70}
+    \sffamily Linearity, order, and homogeneity are independent axes ---\\
+    a single equation carries one label from each.
+  \end{tcolorbox}
 
 \end{multicols}
 
@@ -220,144 +220,146 @@ a single equation carries one label from each.
 \footnotesize\linespread{0.95}\selectfont
 \begin{multicols}{3}
 
-% ----- COLUMN 1: SOLUTIONS + CONDITIONS -----
-\sect{first}{5.\; Solutions \& Their Behavior}
+  % ----- COLUMN 1: SOLUTIONS + CONDITIONS -----
+  \sect{first}{5.\; Solutions \& Their Behavior}
 
-\begin{card}{first}{Kinds of solution}
-\lab{General} the family carrying $n$ arbitrary constants ($n$th-order ODE).\\
-\lab{Particular} constants fixed by initial/boundary data.\\
-\lab{Singular} not obtainable from the general family for any constants --- often the envelope of the solution curves.\\
-\lab{Trivial} $y\equiv 0$ (homogeneous linear equations).\\
-\lab{Equilibrium} constant $y^\ast$ with $f(y^\ast)=0$; steady-state / critical point.
-\end{card}
+  \begin{card}{first}{Kinds of solution}
+    \lab{General} the family carrying $n$ arbitrary constants ($n$th-order ODE).\\
+    \lab{Particular} constants fixed by initial/boundary data.\\
+    \lab{Singular} not obtainable from the general family for any constants --- often the envelope of the solution curves.\\
+    \lab{Trivial} $y\equiv 0$ (homogeneous linear equations).\\
+    \lab{Equilibrium} constant $y^\ast$ with $f(y^\ast)=0$; steady-state / critical point.
+  \end{card}
 
-\begin{card}{first}{Curves \& forms}
-\lab{Integral curve} the graph of one solution; the slope field is tangent to it everywhere.\\
-\lab{Explicit} $y=\varphi(x)$. \quad\lab{Implicit} $G(x,y)=0$.\\
-\lab{Solution family} the general solution plotted for varying $C$.
-\end{card}
+  \begin{card}{first}{Curves \& forms}
+    \lab{Integral curve} the graph of one solution; the slope field is tangent to it everywhere.\\
+    \lab{Explicit} $y=\varphi(x)$. \quad\lab{Implicit} $G(x,y)=0$.\\
+    \lab{Solution family} the general solution plotted for varying $C$.
+  \end{card}
 
-\begin{card}{first}{Existence \& uniqueness}
-\lab{Picard--Lindel\"of} if $f$ and $\partial f/\partial y$ are continuous near $(x_0,y_0)$, the IVP $y'=f(x,y),\,y(x_0)=y_0$ has a \emph{unique} solution on some interval.\\
-\lab{Lipschitz} $|f(x,y_1)-f(x,y_2)|\le L\,|y_1-y_2|$ secures uniqueness.\\
-\lab{Well-posed} exists, is unique, and depends continuously on the data.
-\end{card}
+  \begin{card}{first}{Existence \& uniqueness}
+    \lab{Picard--Lindel\"of} if $f$ and $\partial f/\partial y$ are continuous near $(x_0,y_0)$, the IVP $y'=f(x,y),\,y(x_0)=y_0$ has a \emph{unique} solution on some interval.\\
+    \lab{Lipschitz} $|f(x,y_1)-f(x,y_2)|\le L\,|y_1-y_2|$ secures uniqueness.\\
+    \lab{Well-posed} exists, is unique, and depends continuously on the data.
+  \end{card}
 
-\sect{axes}{6.\; Conditions \& Boundary Problems}
+  \sect{axes}{6.\; Conditions \& Boundary Problems}
 
-\begin{card}{axes}{Initial vs.\ boundary}
-\lab{Initial condition (IC)} $y$ and derivatives prescribed at \emph{one} point $x_0$ $\to$ IVP.\\
-\lab{Boundary condition (BC)} conditions imposed at two or more points (the endpoints) $\to$ BVP.
-\end{card}
+  \begin{card}{axes}{Initial vs.\ boundary}
+    \lab{Initial condition (IC)} $y$ and derivatives prescribed at \emph{one} point $x_0$ $\to$ IVP.\\
+    \lab{Boundary condition (BC)} conditions imposed at two or more points (the endpoints) $\to$ BVP.
+  \end{card}
 
-\begin{card}{axes}{Types of boundary condition}
-On $[a,b]$ for a 2nd-order problem:
-\begin{itemize}
-\item \textbf{Dirichlet}: value fixed, $y(a)=\alpha$
-\item \textbf{Neumann}: slope fixed, $y'(a)=\alpha$
-\item \textbf{Robin (mixed)}: $\alpha y(a)+\beta y'(a)=\gamma$
-\item \textbf{Cauchy}: value \emph{and} slope at one point
-\end{itemize}
-\lab{Homogeneous BC} the prescribed value is $0$.
-\end{card}
+  \begin{card}{axes}{Types of boundary condition}
+    On $[a,b]$ for a 2nd-order problem:
+    \begin{itemize}
+      \item \textbf{Dirichlet}: value fixed, $y(a)=\alpha$
+      \item \textbf{Neumann}: slope fixed, $y'(a)=\alpha$
+      \item \textbf{Robin (mixed)}: $\alpha y(a)+\beta y'(a)=\gamma$
+      \item \textbf{Cauchy}: value \emph{and} slope at one point
+    \end{itemize}
+    \lab{Homogeneous BC} the prescribed value is $0$.
+  \end{card}
 
-\begin{card}{axes}{Eigenvalue (Sturm--Liouville) problems}
-A linear BVP carrying a parameter $\lambda$ that admits nontrivial solutions only for special \emph{eigenvalues} $\lambda_n$; the corresponding \emph{eigenfunctions} form the building blocks of series solutions for PDEs.
-\end{card}
+  \begin{card}{axes}{Eigenvalue (Sturm--Liouville) problems}
+    A linear BVP carrying a parameter $\lambda$ that admits nontrivial solutions only for special \emph{eigenvalues} $\lambda_n$; the corresponding \emph{eigenfunctions} form the building blocks of series solutions for PDEs.
+  \end{card}
 
-% ----- SERIES + LINEAR TOOLKIT -----
-\columnbreak
-\sect{higher}{7.\; Series Solutions \& Special Points}
+  % ----- SERIES + LINEAR TOOLKIT -----
+  \columnbreak
+  \sect{higher}{7.\; Series Solutions \& Special Points}
 
-\begin{card}{higher}{Classifying a point $x_0$}
-For $y''+P(x)y'+Q(x)y=0$ in standard form:
-\begin{itemize}
-\item \textbf{Ordinary point}: $P,Q$ analytic at $x_0$ $\Rightarrow$ two independent power-series solutions exist
-\item \textbf{Singular point}: $P$ or $Q$ fails to be analytic at $x_0$
-\item \textbf{Regular singular}: singular, yet $(x{-}x_0)P$ and $(x{-}x_0)^2Q$ are analytic $\Rightarrow$ Frobenius applies
-\item \textbf{Irregular singular}: singular and not regular --- standard series methods fail
-\end{itemize}
-\end{card}
+  \begin{card}{higher}{Classifying a point $x_0$}
+    For $y''+P(x)y'+Q(x)y=0$ in standard form:
+    \begin{itemize}
+      \item \textbf{Ordinary point}: $P,Q$ analytic at $x_0$ $\Rightarrow$ two independent power-series solutions exist
+      \item \textbf{Singular point}: $P$ or $Q$ fails to be analytic at $x_0$
+      \item \textbf{Regular singular}: singular, yet $(x{-}x_0)P$ and $(x{-}x_0)^2Q$ are analytic $\Rightarrow$ Frobenius applies
+      \item \textbf{Irregular singular}: singular and not regular --- standard series methods fail
+    \end{itemize}
+  \end{card}
 
-\begin{card}{higher}{Power-series method}
-At an ordinary point set
-\[
-y=\sum_{n\ge 0} a_n (x-x_0)^n,
-\]
-substitute, and match like powers to get a \textbf{recurrence relation} for the $a_n$.\\[2pt]
-\lab{Radius of convergence} at least the distance from $x_0$ to the nearest singular point.
-\end{card}
+  \begin{card}{higher}{Power-series method}
+    At an ordinary point set
+    \[
+      y=\sum_{n\ge 0} a_n (x-x_0)^n,
+    \]
+    substitute, and match like powers to get a \textbf{recurrence relation} for the $a_n$.\\[2pt]
+    \lab{Radius of convergence} at least the distance from $x_0$ to the nearest singular point.
+  \end{card}
 
-\begin{card}{higher}{Frobenius method}
-At a regular singular point assume
-\[
-y=(x-x_0)^{r}\sum_{n\ge 0} a_n (x-x_0)^n .
-\]
-\lab{Indicial equation} the lowest-power term gives $r(r-1)+p_0 r+q_0=0$, fixing the exponents $r_1,r_2$.\\
-The spacing $r_1-r_2$ (integer or not) determines the form of the second solution --- which may include a $\log$ term.
-\end{card}
+  \begin{card}{higher}{Frobenius method}
+    At a regular singular point assume
+    \[
+      y=(x-x_0)^{r}\sum_{n\ge 0} a_n (x-x_0)^n .
+    \]
+    \lab{Indicial equation} the lowest-power term gives $r(r-1)+p_0 r+q_0=0$, fixing the exponents $r_1,r_2$.\\
+    The spacing $r_1-r_2$ (integer or not) determines the form of the second solution --- which may include a $\log$ term.
+  \end{card}
 
-\sect{sys}{8.\; Linear-Theory Toolkit}
+  \sect{sys}{8.\; Linear-Theory Toolkit}
 
-\begin{card}{sys}{Superposition \& independence}
-\lab{Superposition} any linear combination of solutions of a \emph{linear homogeneous} ODE is again a solution.\\
-\lab{Linear independence} no solution is a constant-coefficient combination of the others.
-\end{card}
+  \begin{card}{sys}{Superposition \& independence}
+    \lab{Superposition} any linear combination of solutions of a \emph{linear homogeneous} ODE is again a solution.\\
+    \lab{Linear independence} no solution is a constant-coefficient combination of the others.
+  \end{card}
 
-\begin{card}{sys}{Wronskian \& fundamental set}
-\[
-W(y_1,y_2)=\begin{vmatrix} y_1 & y_2\\ y_1' & y_2' \end{vmatrix}.
-\]
-$W\neq 0$ on an interval $\Rightarrow$ the solutions are independent.\\
-\lab{Fundamental set} $n$ independent solutions of an $n$th-order linear homogeneous ODE; their span is the general solution.
-\end{card}
+  \begin{card}{sys}{Wronskian \& fundamental set}
+    \[
+      W(y_1,y_2)=
+      \begin{vmatrix} y_1 & y_2\\ y_1' & y_2'
+      \end{vmatrix}.
+    \]
+    $W\neq 0$ on an interval $\Rightarrow$ the solutions are independent.\\
+    \lab{Fundamental set} $n$ independent solutions of an $n$th-order linear homogeneous ODE; their span is the general solution.
+  \end{card}
 
-\begin{card}{sys}{Building the solution}
-\lab{Complementary fn.\ $y_c$} general solution of the homogeneous equation.\\
-\lab{Particular integral $y_p$} any one solution of the nonhomogeneous equation.\\
-\lab{Full solution} $y=y_c+y_p$.\\
-\lab{Operator} $L=a_nD^n+\dots+a_0$ with $D=\tfrac{d}{dx}$.
-\end{card}
+  \begin{card}{sys}{Building the solution}
+    \lab{Complementary fn.\ $y_c$} general solution of the homogeneous equation.\\
+    \lab{Particular integral $y_p$} any one solution of the nonhomogeneous equation.\\
+    \lab{Full solution} $y=y_c+y_p$.\\
+    \lab{Operator} $L=a_nD^n+\dots+a_0$ with $D=\tfrac{d}{dx}$.
+  \end{card}
 
-% ----- TRANSFORMS + SYSTEMS -----
-\sect{tool}{9.\; Transforms \& Numerics}
+  % ----- TRANSFORMS + SYSTEMS -----
+  \sect{tool}{9.\; Transforms \& Numerics}
 
-\begin{card}{tool}{Laplace transform}
-\[
-\mathcal{L}\{f\}(s)=\int_0^{\infty} e^{-st} f(t)\,dt .
-\]
-Turns a constant-coefficient linear IVP into algebra via $\mathcal{L}\{y'\}=sY-y(0)$; solve for $Y(s)$, then invert.
-\end{card}
+  \begin{card}{tool}{Laplace transform}
+    \[
+      \mathcal{L}\{f\}(s)=\int_0^{\infty} e^{-st} f(t)\,dt .
+    \]
+    Turns a constant-coefficient linear IVP into algebra via $\mathcal{L}\{y'\}=sY-y(0)$; solve for $Y(s)$, then invert.
+  \end{card}
 
-\begin{card}{tool}{Green's function}
-$G(x,\xi)$ solves $L\,G=\delta(x-\xi)$ with the problem's homogeneous BCs. Then
-\[
-y(x)=\int G(x,\xi)\,f(\xi)\,d\xi
-\]
-solves $Ly=f$ --- a reusable ``inverse'' of the operator.
-\end{card}
+  \begin{card}{tool}{Green's function}
+    $G(x,\xi)$ solves $L\,G=\delta(x-\xi)$ with the problem's homogeneous BCs. Then
+    \[
+      y(x)=\int G(x,\xi)\,f(\xi)\,d\xi
+    \]
+    solves $Ly=f$ --- a reusable ``inverse'' of the operator.
+  \end{card}
 
-\begin{card}{tool}{Numerical methods}
-\lab{Euler} $y_{n+1}=y_n+h\,f(x_n,y_n)$.\\
-\lab{Runge--Kutta (RK4)} weighted average of four slopes per step; far more accurate.\\
-\lab{Stiff equation} solution mixes very different scales; needs implicit solvers.
-\end{card}
+  \begin{card}{tool}{Numerical methods}
+    \lab{Euler} $y_{n+1}=y_n+h\,f(x_n,y_n)$.\\
+    \lab{Runge--Kutta (RK4)} weighted average of four slopes per step; far more accurate.\\
+    \lab{Stiff equation} solution mixes very different scales; needs implicit solvers.
+  \end{card}
 
-\sect{flow}{10.\; Systems \& Qualitative Behavior}
+  \sect{flow}{10.\; Systems \& Qualitative Behavior}
 
-\begin{card}{flow}{Systems \& fields}
-\lab{System} vector form $\mathbf{y}'=A\mathbf{y}+\mathbf{g}(x)$; an $n$th-order ODE rewrites as $n$ first-order equations.\\
-\lab{Slope (direction) field} a segment of slope $f(x,y)$ at each point; solution curves follow it.
-\end{card}
+  \begin{card}{flow}{Systems \& fields}
+    \lab{System} vector form $\mathbf{y}'=A\mathbf{y}+\mathbf{g}(x)$; an $n$th-order ODE rewrites as $n$ first-order equations.\\
+    \lab{Slope (direction) field} a segment of slope $f(x,y)$ at each point; solution curves follow it.
+  \end{card}
 
-\begin{card}{flow}{Phase plane, equilibria \& stability}
-\lab{Phase portrait} trajectories of an autonomous system drawn in state space.\\
-\lab{Equilibrium} a point where all derivatives vanish (critical / fixed point).\\
-\lab{Nullcline} a curve on which one component's derivative is $0$.\\
-\lab{Stability} \emph{stable} / \emph{asymptotically stable} / \emph{unstable} as nearby trajectories stay near / converge / diverge.\\
-\lab{Eigenvalue test} for $\mathbf{y}'=A\mathbf{y}$, the eigenvalues of $A$ classify the equilibrium: node, saddle, spiral, or center.\\
-\lab{Linearization} approximate a nonlinear system near an equilibrium via the Jacobian.
-\end{card}
+  \begin{card}{flow}{Phase plane, equilibria \& stability}
+    \lab{Phase portrait} trajectories of an autonomous system drawn in state space.\\
+    \lab{Equilibrium} a point where all derivatives vanish (critical / fixed point).\\
+    \lab{Nullcline} a curve on which one component's derivative is $0$.\\
+    \lab{Stability} \emph{stable} / \emph{asymptotically stable} / \emph{unstable} as nearby trajectories stay near / converge / diverge.\\
+    \lab{Eigenvalue test} for $\mathbf{y}'=A\mathbf{y}$, the eigenvalues of $A$ classify the equilibrium: node, saddle, spiral, or center.\\
+    \lab{Linearization} approximate a nonlinear system near an equilibrium via the Jacobian.
+  \end{card}
 
 \end{multicols}
 \end{document}

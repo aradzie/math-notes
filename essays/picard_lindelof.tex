@@ -29,11 +29,11 @@ Both questions have negative answers in general, and the counterexamples are not
 The key hypothesis of the theorem is a regularity condition on $f$ that is stronger than continuity but weaker than differentiability. It deserves careful attention, because it is precisely the ingredient that makes uniqueness work.
 
 \begin{definition}[Lipschitz condition in one variable]
-A function $g \colon I \to \R$ defined on an interval $I$ satisfies a \emph{Lipschitz condition} (or ``is Lipschitz'') on $I$ if there exists a constant $L \geq 0$ such that
-\[
-  |g(u) - g(v)| \leq L\,|u - v| \qquad \text{for all } u, v \in I.
-\]
-The smallest such $L$ is called the \emph{Lipschitz constant} of $g$ on $I$.
+  A function $g \colon I \to \R$ defined on an interval $I$ satisfies a \emph{Lipschitz condition} (or ``is Lipschitz'') on $I$ if there exists a constant $L \geq 0$ such that
+  \[
+    |g(u) - g(v)| \leq L\,|u - v| \qquad \text{for all } u, v \in I.
+  \]
+  The smallest such $L$ is called the \emph{Lipschitz constant} of $g$ on $I$.
 \end{definition}
 
 Geometrically, the condition says that the slope of every secant line through two points of the graph of $g$ is bounded in absolute value by $L$:
@@ -48,27 +48,27 @@ The Lipschitz condition sits strictly between continuity and having a bounded de
 \begin{itemize}
   \item \textbf{Lipschitz $\Rightarrow$ continuous.} If $|g(u)-g(v)| \leq L|u-v|$, then making $u$ close to $v$ forces $g(u)$ close to $g(v)$. (In fact Lipschitz functions are \emph{uniformly} continuous.)
   \item \textbf{Bounded derivative $\Rightarrow$ Lipschitz.} If $g$ is differentiable on $I$ and $|g'| \leq L$ throughout $I$, the Mean Value Theorem gives, for any $u, v \in I$,
-  \[
-    g(u) - g(v) = g'(\xi)(u - v) \quad \text{for some } \xi \text{ between } u \text{ and } v,
-  \]
-  hence $|g(u)-g(v)| \leq L|u-v|$. This is the practical test used most often: \emph{to check the Lipschitz condition, bound the derivative}.
+    \[
+      g(u) - g(v) = g'(\xi)(u - v) \quad \text{for some } \xi \text{ between } u \text{ and } v,
+    \]
+    hence $|g(u)-g(v)| \leq L|u-v|$. This is the practical test used most often: \emph{to check the Lipschitz condition, bound the derivative}.
   \item Neither implication reverses, as the examples below show.
 \end{itemize}
 
 \begin{example}[Lipschitz but not differentiable]
-$g(u) = |u|$ on $\R$. The triangle inequality gives $\bigl||u|-|v|\bigr| \leq |u-v|$, so $g$ is Lipschitz with $L = 1$, yet $g$ is not differentiable at $0$. Lipschitz functions may have corners; what they may not have is unbounded steepness.
+  $g(u) = |u|$ on $\R$. The triangle inequality gives $\bigl||u|-|v|\bigr| \leq |u-v|$, so $g$ is Lipschitz with $L = 1$, yet $g$ is not differentiable at $0$. Lipschitz functions may have corners; what they may not have is unbounded steepness.
 \end{example}
 
 \begin{example}[Continuous but not Lipschitz]
-$g(u) = \sqrt{|u|}$ on $[-1, 1]$. Take $v = 0$: then
-\[
-  \frac{|g(u) - g(0)|}{|u - 0|} = \frac{\sqrt{|u|}}{|u|} = \frac{1}{\sqrt{|u|}} \to \infty \quad \text{as } u \to 0.
-\]
-No finite $L$ can bound all these secant slopes, so $g$ is not Lipschitz on any interval containing $0$. The graph has a vertical tangent there. The same argument applies to $g(u) = u^{1/3}$, which will reappear as the villain of Section~\ref{sec:nonuniqueness}.
+  $g(u) = \sqrt{|u|}$ on $[-1, 1]$. Take $v = 0$: then
+  \[
+    \frac{|g(u) - g(0)|}{|u - 0|} = \frac{\sqrt{|u|}}{|u|} = \frac{1}{\sqrt{|u|}} \to \infty \quad \text{as } u \to 0.
+  \]
+  No finite $L$ can bound all these secant slopes, so $g$ is not Lipschitz on any interval containing $0$. The graph has a vertical tangent there. The same argument applies to $g(u) = u^{1/3}$, which will reappear as the villain of Section~\ref{sec:nonuniqueness}.
 \end{example}
 
 \begin{example}[Lipschitz locally but not globally]
-$g(u) = u^2$ on $\R$. On any bounded interval $[-M, M]$ we have $|g'(u)| = |2u| \leq 2M$, so $g$ is Lipschitz there with $L = 2M$. But on all of $\R$ the derivative is unbounded, and no single constant works. Many important right-hand sides in ODE theory (such as $f(y) = y^2$) are of this type: \emph{locally} Lipschitz but not globally. As we will see, this is exactly why the theorem's conclusion is local.
+  $g(u) = u^2$ on $\R$. On any bounded interval $[-M, M]$ we have $|g'(u)| = |2u| \leq 2M$, so $g$ is Lipschitz there with $L = 2M$. But on all of $\R$ the derivative is unbounded, and no single constant works. Many important right-hand sides in ODE theory (such as $f(y) = y^2$) are of this type: \emph{locally} Lipschitz but not globally. As we will see, this is exactly why the theorem's conclusion is local.
 \end{example}
 
 \subsection{Lipschitz in the second variable}
@@ -76,11 +76,11 @@ $g(u) = u^2$ on $\R$. On any bounded interval $[-M, M]$ we have $|g'(u)| = |2u| 
 In the initial value problem~\eqref{eq:ivp}, the right-hand side $f(x, y)$ is a function of two variables. The condition we need concerns only its behaviour in the $y$-direction:
 
 \begin{definition}[Lipschitz condition in $y$]
-Let $R$ be a rectangle $\{(x,y) : |x - x_0| \leq a,\ |y - y_0| \leq b\}$ around the initial point. We say $f(x,y)$ is \emph{Lipschitz in $y$ on $R$} if there exists $L \geq 0$ such that
-\[
-  |f(x, y_1) - f(x, y_2)| \leq L\,|y_1 - y_2|
-  \qquad \text{for all } (x, y_1), (x, y_2) \in R.
-\]
+  Let $R$ be a rectangle $\{(x,y) : |x - x_0| \leq a,\ |y - y_0| \leq b\}$ around the initial point. We say $f(x,y)$ is \emph{Lipschitz in $y$ on $R$} if there exists $L \geq 0$ such that
+  \[
+    |f(x, y_1) - f(x, y_2)| \leq L\,|y_1 - y_2|
+    \qquad \text{for all } (x, y_1), (x, y_2) \in R.
+  \]
 \end{definition}
 
 Note that $x$ is held fixed in the comparison: for each frozen $x$, the single-variable function $y \mapsto f(x, y)$ must be Lipschitz, with one constant $L$ working uniformly for all $x$ in the rectangle. The practical test carries over via the partial derivative: if $\partial f / \partial y$ is continuous on the closed rectangle $R$, then it is bounded there (a continuous function on a closed, bounded region attains a maximum), and the Mean Value Theorem in the $y$-variable gives the Lipschitz condition with
@@ -90,21 +90,21 @@ Note that $x$ is held fixed in the comparison: for each frozen $x$, the single-v
 This is the criterion to reach for first: \emph{continuous $\partial f/\partial y$ near the initial point implies the hypotheses of the theorem hold there}.
 
 \begin{example}
-$f(x, y) = x \sin y + y^2$ on the rectangle $|x| \leq 1$, $|y| \leq 2$. Here $\partial f/\partial y = x \cos y + 2y$, which is continuous, and on the rectangle $|x \cos y + 2y| \leq 1 + 4 = 5$. So $f$ is Lipschitz in $y$ with $L = 5$, and the theorem below will apply at any initial point inside this rectangle.
+  $f(x, y) = x \sin y + y^2$ on the rectangle $|x| \leq 1$, $|y| \leq 2$. Here $\partial f/\partial y = x \cos y + 2y$, which is continuous, and on the rectangle $|x \cos y + 2y| \leq 1 + 4 = 5$. So $f$ is Lipschitz in $y$ with $L = 5$, and the theorem below will apply at any initial point inside this rectangle.
 \end{example}
 
 \section{Statement of the Theorem}
 
 \begin{theorem}[Picard--Lindel\"of]
-Suppose $f(x, y)$ is continuous on a rectangle
-\[
-  R = \{(x, y) : |x - x_0| \leq a,\ |y - y_0| \leq b\}
-\]
-and satisfies a Lipschitz condition in $y$ on $R$. Then there exists an interval $|x - x_0| \leq h$ (with $0 < h \leq a$, possibly smaller than $a$) on which the initial value problem
-\[
-  y' = f(x, y), \qquad y(x_0) = y_0
-\]
-has exactly one solution.
+  Suppose $f(x, y)$ is continuous on a rectangle
+  \[
+    R = \{(x, y) : |x - x_0| \leq a,\ |y - y_0| \leq b\}
+  \]
+  and satisfies a Lipschitz condition in $y$ on $R$. Then there exists an interval $|x - x_0| \leq h$ (with $0 < h \leq a$, possibly smaller than $a$) on which the initial value problem
+  \[
+    y' = f(x, y), \qquad y(x_0) = y_0
+  \]
+  has exactly one solution.
 \end{theorem}
 
 Two features of the statement deserve emphasis.
@@ -194,24 +194,24 @@ The abstract convergence guaranteed by the theorem is here visible in complete d
 \section{A Nonlinear Example and the Meaning of ``Local''}
 
 \begin{example}[Blow-up in finite time]
-\label{ex:blowup}
-Consider
-\[
-  y' = y^2, \qquad y(0) = 1.
-\]
-Here $f(y) = y^2$ is locally but not globally Lipschitz (its derivative $2y$ is unbounded), so the theorem promises only a local solution. Separation of variables reveals why this caution is warranted: the exact solution is
-\[
-  y(x) = \frac{1}{1 - x},
-\]
-which exists on $(-\infty, 1)$ and satisfies $y(x) \to \infty$ as $x \to 1^{-}$. The solution does not merely become hard to compute at $x = 1$; it ceases to exist. No theorem could honestly promise a solution on all of $\R$, because there isn't one.
+  \label{ex:blowup}
+  Consider
+  \[
+    y' = y^2, \qquad y(0) = 1.
+  \]
+  Here $f(y) = y^2$ is locally but not globally Lipschitz (its derivative $2y$ is unbounded), so the theorem promises only a local solution. Separation of variables reveals why this caution is warranted: the exact solution is
+  \[
+    y(x) = \frac{1}{1 - x},
+  \]
+  which exists on $(-\infty, 1)$ and satisfies $y(x) \to \infty$ as $x \to 1^{-}$. The solution does not merely become hard to compute at $x = 1$; it ceases to exist. No theorem could honestly promise a solution on all of $\R$, because there isn't one.
 
-The first Picard iterates for this problem are
-\[
-  y_0 = 1, \qquad
-  y_1 = 1 + x, \qquad
-  y_2 = 1 + x + x^2 + \frac{x^3}{3}, \qquad \ldots
-\]
-and one can check that their initial terms build up the geometric series $1 + x + x^2 + x^3 + \cdots = \frac{1}{1-x}$, whose radius of convergence---exactly $1$---quietly encodes the blow-up time.
+  The first Picard iterates for this problem are
+  \[
+    y_0 = 1, \qquad
+    y_1 = 1 + x, \qquad
+    y_2 = 1 + x + x^2 + \frac{x^3}{3}, \qquad \ldots
+  \]
+  and one can check that their initial terms build up the geometric series $1 + x + x^2 + x^3 + \cdots = \frac{1}{1-x}$, whose radius of convergence---exactly $1$---quietly encodes the blow-up time.
 \end{example}
 
 The general lesson: for nonlinear equations, ``a solution exists'' and ``a solution exists for all $x$'' are very different claims. Picard--Lindel\"of delivers the first; the second requires additional structure (for instance, a global Lipschitz condition, which linear equations $y' = p(x)y + q(x)$ with continuous coefficients enjoy on any closed interval---this is why linear IVPs never blow up in the interior of the interval where their coefficients are continuous).
@@ -233,40 +233,64 @@ Why does this theorem occupy a foundational place in the subject?
 \begin{enumerate}[leftmargin=*, itemsep=8pt]
 
   \item State informally what the two conclusions of the Picard--Lindel\"of theorem are, and which hypothesis is responsible for each.
-  \begin{answer} Existence of a solution near the initial point, and its uniqueness. Continuity of $f$ suffices for existence (Peano); the Lipschitz condition in $y$ is what secures uniqueness (and gives a constructive proof of existence via iteration).\end{answer}
+    \begin{answer}
+      Existence of a solution near the initial point, and its uniqueness. Continuity of $f$ suffices for existence (Peano); the Lipschitz condition in $y$ is what secures uniqueness (and gives a constructive proof of existence via iteration).
+    \end{answer}
 
   \item Give the definition of ``$g$ is Lipschitz on $I$'' and its geometric meaning.
-  \begin{answer} There is a constant $L$ with $|g(u) - g(v)| \leq L|u-v|$ for all $u, v \in I$. Geometrically: every secant slope of the graph is bounded by $L$; the graph never becomes arbitrarily steep.\end{answer}
+    \begin{answer}
+      There is a constant $L$ with $|g(u) - g(v)| \leq L|u-v|$ for all $u, v \in I$. Geometrically: every secant slope of the graph is bounded by $L$; the graph never becomes arbitrarily steep.
+    \end{answer}
 
   \item Is $g(u) = |u|$ Lipschitz on $\R$? Is it differentiable? What does this tell you about the relationship between the two notions?
-  \begin{answer} Yes, Lipschitz with $L = 1$ (triangle inequality); no, not differentiable at $0$. So Lipschitz does not imply differentiable---corners are allowed, vertical tangents are not.\end{answer}
+    \begin{answer}
+      Yes, Lipschitz with $L = 1$ (triangle inequality); no, not differentiable at $0$. So Lipschitz does not imply differentiable---corners are allowed, vertical tangents are not.
+    \end{answer}
 
   \item What is the standard practical test for verifying that $f(x,y)$ is Lipschitz in $y$ on a rectangle, and why does it work?
-  \begin{answer} Check that $\partial f / \partial y$ is continuous on the closed rectangle; it is then bounded there by some $L$, and the Mean Value Theorem in the $y$-variable converts the bound $|\partial f/\partial y| \leq L$ into $|f(x,y_1) - f(x,y_2)| \leq L|y_1 - y_2|$.\end{answer}
+    \begin{answer}
+      Check that $\partial f / \partial y$ is continuous on the closed rectangle; it is then bounded there by some $L$, and the Mean Value Theorem in the $y$-variable converts the bound $|\partial f/\partial y| \leq L$ into $|f(x,y_1) - f(x,y_2)| \leq L|y_1 - y_2|$.
+    \end{answer}
 
   \item The IVP $y' = y^{1/3}$, $y(0) = 0$ has infinitely many solutions. Which hypothesis of the theorem fails, where, and why?
-  \begin{answer} The Lipschitz condition in $y$ fails at $y = 0$: secant slopes of $y^{1/3}$ through the origin equal $|y|^{-2/3}$, which is unbounded as $y \to 0$ (vertical tangent). Continuity holds, so existence survives; uniqueness does not.\end{answer}
+    \begin{answer}
+      The Lipschitz condition in $y$ fails at $y = 0$: secant slopes of $y^{1/3}$ through the origin equal $|y|^{-2/3}$, which is unbounded as $y \to 0$ (vertical tangent). Continuity holds, so existence survives; uniqueness does not.
+    \end{answer}
 
   \item Write down the Volterra integral equation equivalent to $y' = f(x,y)$, $y(x_0) = y_0$, and explain where the initial condition went.
-  \begin{answer} $y(x) = y_0 + \int_{x_0}^{x} f(t, y(t))\, dt$. The initial condition is absorbed into the equation as the constant term $y_0$ (set $x = x_0$: the integral vanishes and $y(x_0) = y_0$ automatically).\end{answer}
+    \begin{answer}
+      $y(x) = y_0 + \int_{x_0}^{x} f(t, y(t))\, dt$. The initial condition is absorbed into the equation as the constant term $y_0$ (set $x = x_0$: the integral vanishes and $y(x_0) = y_0$ automatically).
+    \end{answer}
 
   \item Describe the Picard iteration scheme and the role the Lipschitz condition plays in its convergence.
-  \begin{answer} $y_0(x) \equiv y_0$ and $y_{n+1}(x) = y_0 + \int_{x_0}^x f(t, y_n(t))\, dt$. The Lipschitz bound shows each iteration multiplies the maximal gap between successive approximations by at most $Lh$; choosing $h$ with $Lh < 1$ makes the operator a contraction, so the iterates converge and the fixed point (solution) is unique.\end{answer}
+    \begin{answer}
+      $y_0(x) \equiv y_0$ and $y_{n+1}(x) = y_0 + \int_{x_0}^x f(t, y_n(t))\, dt$. The Lipschitz bound shows each iteration multiplies the maximal gap between successive approximations by at most $Lh$; choosing $h$ with $Lh < 1$ makes the operator a contraction, so the iterates converge and the fixed point (solution) is unique.
+    \end{answer}
 
   \item For $y' = y$, $y(0) = 1$, what are the Picard iterates $y_1, y_2, y_3$, and what do they converge to?
-  \begin{answer} $y_1 = 1 + x$, \ $y_2 = 1 + x + x^2/2$, \ $y_3 = 1 + x + x^2/2 + x^3/6$: the Taylor polynomials of $e^x$, converging to $e^x$ for every $x$.\end{answer}
+    \begin{answer}
+      $y_1 = 1 + x$, \ $y_2 = 1 + x + x^2/2$, \ $y_3 = 1 + x + x^2/2 + x^3/6$: the Taylor polynomials of $e^x$, converging to $e^x$ for every $x$.
+    \end{answer}
 
   \item The theorem is ``local'': it guarantees a solution only on some interval $|x - x_0| \leq h$. Give a concrete example showing that a global guarantee would be false.
-  \begin{answer} $y' = y^2$, $y(0) = 1$ has the solution $y = 1/(1-x)$, which blows up as $x \to 1^-$. No solution exists past $x = 1$, so no theorem can promise one; $f(y) = y^2$ is only locally Lipschitz.\end{answer}
+    \begin{answer}
+      $y' = y^2$, $y(0) = 1$ has the solution $y = 1/(1-x)$, which blows up as $x \to 1^-$. No solution exists past $x = 1$, so no theorem can promise one; $f(y) = y^2$ is only locally Lipschitz.
+    \end{answer}
 
   \item Why do solutions of linear equations $y' = p(x)y + q(x)$ with continuous coefficients never exhibit this finite-time blow-up on the interval of continuity?
-  \begin{answer} There $f(x,y) = p(x)y + q(x)$ satisfies $|f(x,y_1) - f(x,y_2)| = |p(x)||y_1 - y_2| \leq L|y_1-y_2|$ with $L = \max |p|$ on any closed subinterval---a Lipschitz condition holding for \emph{all} $y$, not just bounded $y$. This global-in-$y$ Lipschitz property yields existence and uniqueness on the whole interval.\end{answer}
+    \begin{answer}
+      There $f(x,y) = p(x)y + q(x)$ satisfies $|f(x,y_1) - f(x,y_2)| = |p(x)||y_1 - y_2| \leq L|y_1-y_2|$ with $L = \max |p|$ on any closed subinterval---a Lipschitz condition holding for \emph{all} $y$, not just bounded $y$. This global-in-$y$ Lipschitz property yields existence and uniqueness on the whole interval.
+    \end{answer}
 
   \item Uniqueness has a geometric interpretation in terms of solution curves in the plane. What is it?
-  \begin{answer} Two distinct solution curves of $y' = f(x,y)$ can never pass through the same point (never cross or touch) in a region where the hypotheses hold. The plane is neatly partitioned into non-intersecting solution curves.\end{answer}
+    \begin{answer}
+      Two distinct solution curves of $y' = f(x,y)$ can never pass through the same point (never cross or touch) in a region where the hypotheses hold. The plane is neatly partitioned into non-intersecting solution curves.
+    \end{answer}
 
   \item (Slightly harder.) In the proof, why does the estimate $\max|y - \tilde{y}| \leq Lh \cdot \max|y - \tilde{y}|$ with $Lh < 1$ force two solutions $y$ and $\tilde{y}$ to coincide?
-  \begin{answer} Writing $M = \max|y - \tilde{y}| \geq 0$, the inequality reads $M \leq (Lh) M$ with $Lh < 1$. If $M > 0$ we could divide by $M$ to get $1 \leq Lh$, a contradiction. Hence $M = 0$, i.e., $y = \tilde{y}$ everywhere on the interval.\end{answer}
+    \begin{answer}
+      Writing $M = \max|y - \tilde{y}| \geq 0$, the inequality reads $M \leq (Lh) M$ with $Lh < 1$. If $M > 0$ we could divide by $M$ to get $1 \leq Lh$, a contradiction. Hence $M = 0$, i.e., $y = \tilde{y}$ everywhere on the interval.
+    \end{answer}
 
 \end{enumerate}
 
