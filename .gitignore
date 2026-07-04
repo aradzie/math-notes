@@ -1,6 +1,7 @@
 .idea/
 .vscode/
 tmp/
+build/
 __pycache__/
 *.pyc
 
