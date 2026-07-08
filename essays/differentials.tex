@@ -3,6 +3,7 @@
 \documentclass{essay}
 
 \newcommand{\ddx}[1]{\frac{\dd #1}{\dd x}}
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
 
 \title{Differentials, Demystified}
 \subtitle{Why you \emph{can} multiply by $\dd x$ in a separable ODE,
@@ -183,7 +184,144 @@ differentials at all: by the chain rule,
 which is exactly the integrand. The ``$\dd u$'' bookkeeping is just a
 fast way to organise this chain-rule check.
 
+\section{Exact equations: the same trick in two variables}
+
+Consider a curve defined implicitly by $F(x,y)=C$, describable locally as
+$y=y(x)$. Differentiating both sides looks, on its face, like more
+forbidden fraction algebra:
+\[
+  F_x + F_y\,\ddx{y} = 0
+  \qquad\Longrightarrow\qquad
+  F_x\,\dd x + F_y\,\dd y = 0,
+\]
+where $F_x=\pd{F}{x}$ and $F_y=\pd{F}{y}$ are evaluated along the curve.
+The right-hand equation is exactly the form
+\[
+  M\,\dd x + N\,\dd y = 0, \qquad M=F_x,\ N=F_y,
+\]
+that a differential-equations course calls an \textbf{exact equation}.
+The step from the implicit equation to this one again looks like
+cross-multiplying $\dd x$ into the indivisible symbol $\dfrac{\dd y}{\dd
+x}$. What actually licenses it?
+
+\subsection{The honest derivation}
+
+\begin{theorem}[Total derivative, i.e.\ the chain rule for two variables]
+  Let $F(x,y)$ have continuous partial derivatives, and let $y=y(x)$
+  be differentiable. Then
+  \[
+    \frac{\dd}{\dd x}F\bigl(x,y(x)\bigr) \;=\; F_x\bigl(x,y(x)\bigr) +
+    F_y\bigl(x,y(x)\bigr)\,y'(x).
+  \]
+\end{theorem}
+This is proved the same way the ordinary chain rule is --- by bounding
+the error in the linear approximation of $F$ near a point and taking a
+limit --- with no differential ever divided or multiplied on its
+own\footnote{The full $\varepsilon$--$\delta$ argument is carried out
+in the companion note \emph{Rigorous Derivation of the Total
+Derivative}.}. It is an honest statement about the single real-valued
+function $x\mapsto F(x,y(x))$.
+
+Now suppose $F(x,y(x))=C$ for all $x$ in some interval --- that is
+what ``$F(x,y)=C$ defines $y(x)$'' means. Differentiating the constant
+function gives $0$, so by the theorem,
+\[
+  F_x + F_y\,y'(x) = 0
+\]
+for every such $x$. This is Step~1 of the separable-ODE argument again,
+in the same disguise: one honest equation between functions of $x$,
+obtained with the chain rule and never by splitting $\dd y/\dd x$.
+
+\subsection{What ``$M\,\dd x+N\,\dd y=0$'' really packages}
+
+Run the logic forward to see what the compact notation stands for.
+Define, for a function of two variables, its \textbf{total
+differential}
+\[
+  \dd F \;:=\; F_x\,\dd x + F_y\,\dd y .
+\]
+Just as $\dd y = \ddx{y}\,\dd x$ is a genuine identity between
+$1$-forms (Section~\ref{sec:deeper}), $\dd F$ is not built by dividing
+anything --- it is a new object, a linear combination of the symbols
+$\dd x$ and $\dd y$, defined precisely so that its restriction to a
+curve $y=y(x)$ recovers the chain-rule expression above:
+\[
+  \dd F \big|_{y=y(x)} \;=\; \bigl(F_x + F_y\,y'(x)\bigr)\,\dd x .
+\]
+So the sentence ``$F_x\,\dd x+F_y\,\dd y=0$'' is shorthand for ``the
+total derivative of $F$ along the curve is zero,'' which by the
+theorem above and \emph{equal derivatives differ by a constant}
+(applied to the identically-zero derivative) means $F(x,y(x))$ is
+constant --- exactly the $C$ we started with. Nothing was
+cross-multiplied; the notation was engineered so that packaging the
+chain rule as ``$\dd F=0$'' and unpacking it back to ``$F=C$'' are
+inverse operations.
+
+\subsection{Running it the other way: recovering $F$ from $M$ and $N$}
+
+The differential-equations use of this idea starts from the other end.
+One is handed
+\[
+  M(x,y)\,\dd x + N(x,y)\,\dd y = 0
+\]
+with no $F$ in sight, and asked to solve it. The equation deserves to
+be called \emph{exact} precisely when some $F$ exists with $F_x=M$ and
+$F_y=N$ --- i.e., when $M\,\dd x+N\,\dd y$ really is $\dd F$ for some
+function $F$, so the argument above applies and the solution curves
+are the level sets $F(x,y)=C$.
+
+\begin{proposition}[Exactness test]
+  If $M=F_x$ and $N=F_y$ for some twice continuously differentiable
+  $F$, then
+  \[
+    \pd{M}{y} = F_{xy} = F_{yx} = \pd{N}{x},
+  \]
+  by equality of mixed partial derivatives. Conversely, if $M_y=N_x$
+  throughout a simply connected region, such an $F$ exists.
+\end{proposition}
+The forward direction is Clairaut's theorem in disguise --- another
+``obvious'' cancellation ($F_{xy}=F_{yx}$) that is really a
+nontrivial theorem about mixed partials, not a symbol-swap. The
+converse is the same existence fact behind Section~\ref{sec:deeper}'s
+$1$-forms: a $1$-form with zero exterior derivative is locally exact
+(the Poincar\'e lemma). The condition $M_y-N_x=0$ is precisely the
+statement that $\dd(M\,\dd x+N\,\dd y)=0$.
+
+\textbf{Worked example.} Solve $(2xy+3)\,\dd x+(x^2-1)\,\dd y=0$. Here
+$M_y=2x=N_x$, so the equation is exact. Integrate $M$ in $x$, holding
+$y$ fixed:
+\[
+  F(x,y) = \int (2xy+3)\,\dd x = x^2y+3x+g(y).
+\]
+Match $F_y$ against $N$ to pin down $g$:
+\[
+  F_y = x^2+g'(y) \overset{!}{=} x^2-1
+  \quad\Longrightarrow\quad
+  g'(y)=-1 \quad\Longrightarrow\quad g(y)=-y.
+\]
+So $F(x,y)=x^2y+3x-y$, and the implicit solution is
+\[
+  x^2y+3x-y=C.
+\]
+Differentiating this back with the ordinary and chain rules reproduces
+the original equation exactly --- confirming that ``cross-multiplying
+by $\dd x$'' and ``taking $\dd$ of both sides of $F=C$'' are the same
+theorem viewed from opposite ends.
+
+\medskip
+\textit{A caution.} Do not confuse this additive total differential
+with the multiplicative cyclic relation of
+Section~\ref{sec:fails}. $\dd F=F_x\,\dd x+F_y\,\dd y$ is a
+\emph{sum}, licensed by the chain rule for a function of two
+variables; $(\partial x/\partial y)(\partial y/\partial
+z)(\partial z/\partial x)=-1$ is a \emph{product} of three different
+partials of three different two-variable functions implicitly linked
+by one relation. No amount of total-differential bookkeeping turns one
+into the other. Keeping straight \emph{which} theorem is in play is,
+as always, the whole game.
+
 \section{Where the fraction picture genuinely fails}
+\label{sec:fails}
 
 The cancellation only works for a \emph{first} derivative of
 \emph{one} variable. Push it further and it bites back:
@@ -209,6 +347,7 @@ errors outside it. Knowing \emph{which theorem} you are using tells
 you precisely when the shortcut is safe.
 
 \section{The deeper resolution: differentials really are objects}
+\label{sec:deeper}
 
 There is a more advanced viewpoint in which $\dd x$ and $\dd y$ are
 not informal shorthand at all, but well-defined mathematical objects
@@ -233,11 +372,16 @@ $\dfrac{\dd y}{\dd x}$ is a limit, not a fraction --- so the
 warning is true. But every fraction-style manipulation in
 $u$-substitution and separable ODEs is a disguised application of
 the substitution rule (the chain rule backwards), together with
-``equal derivatives differ by a constant.'' Leibniz's notation is
+``equal derivatives differ by a constant.'' Exact equations run the
+same trick with the multivariable chain rule: $F_x\,\dd x+F_y\,\dd
+y=0$ is shorthand for $\dd F=0$, and $M_y=N_x$ is shorthand for
+``a potential function $F$ exists,'' which is Clairaut's theorem
+and the Poincar\'e lemma in disguise. Leibniz's notation is
 engineered so those theorems \emph{look} like cancellation, and at
 the level of differential $1$-forms the cancellation becomes
 literally true. Trust the shortcut for first derivatives in one
-variable; reach for the theorem the moment you hit higher or
-partial derivatives.
+variable, and for total differentials built additively from partial
+derivatives; reach for the theorem the moment you hit higher
+derivatives or naively cancelled partials.
 
 \end{document}
