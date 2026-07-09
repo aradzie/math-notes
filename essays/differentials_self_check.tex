@@ -20,11 +20,11 @@ The purpose of these questions is to test and deepen an intuitive and rigorous u
 
 \item What does it mean for a function to be differentiable at a point?
 \begin{answer}
-A function \(f\) defined near a point \(x\) is differentiable at \(x\) if there exists a linear map \(L\) (denoted \(df_x\), or in one variable, multiplication by \(f'(x)\)) such that
+A function \(f\) defined near a point \(x\) is differentiable at \(x\) if there exists a linear map \(L_x\) (denoted \(df_x\), or in one variable, multiplication by \(f'(x)\)) such that
 \[
-f(x+h) = f(x) + L(h) + o(\|h\|) \qquad \text{as } h\to0,
+f(x+h) = f(x) + L_x(h) + o(\|h\|) \qquad \text{as } h\to0,
 \]
-i.e.\ the error in approximating \(f(x+h)\) by \(f(x)+L(h)\) vanishes faster than \(\|h\|\) itself. In one variable this is equivalent to the existence of the limit \(f'(x)=\lim_{h\to0}(f(x+h)-f(x))/h\).
+i.e.\ the error in approximating \(f(x+h)\) by \(f(x)+L_x(h)\) vanishes faster than \(\|h\|\) itself. In one variable this is equivalent to the existence of the limit \(f'(x)=\lim_{h\to0}(f(x+h)-f(x))/h\).
 \end{answer}
 
 \item How is differentiability stronger than continuity?
@@ -54,7 +54,7 @@ The tangent line at \(x\) is exactly the graph of the affine function \(x'\mapst
 
 \item What changes when we move from one variable to several variables?
 \begin{answer}
-The definition of differentiability keeps the same form \(-\) a linear map \(L\) with \(f(x+h)-f(x)-L(h)=o(\|h\|)\) \(-\) but \(L\) can no longer be described by a single number, since \(h\) now ranges over \(\R^n\). Concretely, the difference quotient \((f(x+h)-f(x))/h\) no longer makes sense, because division by a vector is undefined; the definition must instead be phrased in terms of an approximating linear map (or, in coordinates, a full Jacobian matrix) rather than a single limiting ratio.
+The definition of differentiability keeps the same form \(-\) a linear map \(L_x\) with \(f(x+h)-f(x)-L_x(h)=o(\|h\|)\) \(-\) but \(L_x\) can no longer be described by a single number, since \(h\) now ranges over \(\R^n\). Concretely, the difference quotient \((f(x+h)-f(x))/h\) no longer makes sense, because division by a vector is undefined; the definition must instead be phrased in terms of an approximating linear map (or, in coordinates, a full Jacobian matrix) rather than a single limiting ratio.
 \end{answer}
 
 \item Why is the derivative of a multivariable function no longer a number?
@@ -69,9 +69,9 @@ The linear map \(df_x\) replaces the slope; once coordinates are fixed it is rep
 
 \item Why is the derivative considered the best linear approximation?
 \begin{answer}
-\(df_x\) is the unique linear map \(L\) for which
+\(df_x\) is the unique linear map \(L_x\) for which
 \[
-\lim_{h\to0}\frac{f(x+h)-f(x)-L(h)}{\|h\|}=0,
+\lim_{h\to0}\frac{f(x+h)-f(x)-L_x(h)}{\|h\|}=0,
 \]
 i.e.\ among all linear maps, \(df_x\) is the one whose error term vanishes strictly faster than \(\|h\|\); any other linear map leaves an error that stays comparable to \(\|h\|\) rather than becoming negligible relative to it.
 \end{answer}
@@ -591,7 +591,7 @@ Rigorous: the existence of \(df_x\) with error \(o(\|h\|)\); the chain rule as c
 
 \item How do differentials generalize to functions between arbitrary vector spaces?
 \begin{answer}
-For \(f:X\to Y\) between normed vector spaces, \(f\) is (Fr\'echet) differentiable at \(x\) if there is a bounded linear map \(L:X\to Y\) with \(\|f(x+h)-f(x)-L(h)\|_Y=o(\|h\|_X)\) as \(h\to0\) \(-\) exactly the same defining property as the finite-dimensional differential, phrased in general normed spaces.
+For \(f:X\to Y\) between normed vector spaces, \(f\) is (Fr\'echet) differentiable at \(x\) if there is a bounded linear map \(L_x:X\to Y\) with \(\|f(x+h)-f(x)-L_x(h)\|_Y=o(\|h\|_X)\) as \(h\to0\) \(-\) exactly the same defining property as the finite-dimensional differential, phrased in general normed spaces.
 \end{answer}
 
 \item What is the Fr\'echet derivative?
