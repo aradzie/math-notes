@@ -14,7 +14,10 @@ See the [notatki](https://github.com/aradzie/notatki) repository for more detail
 
 # Tips on writing flashcards
 
-- [Effective Spaced Repetition](https://borretti.me/article/effective-spaced-repetition)
+- [Effective learning: Twenty rules of formulating knowledge](https://www.supermemo.com/en/blog/twenty-rules-of-formulating-knowledge) by Piotr Wozniak
+- [Effective Spaced Repetition](https://borretti.me/article/effective-spaced-repetition) by Fernando Borretti
+- [How to write good prompts: using spaced repetition to create understanding](https://andymatuschak.org/prompts/) by Andy Matuschak
+- [Augmenting Long-term Memory](https://augmentingcognition.com/ltm.html) by Michael Nielsen
 
 # Free online resources for studying math
 
