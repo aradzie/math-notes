@@ -5,6 +5,7 @@
 !id: mJgyinNkgZ
 !front: Taylor series expansion of \( \frac{1}{1 - x} \)
 !back:
+For \( |x| < 1 \):
 \[
 \begin{align*}
     \frac{1}{1 - x}
@@ -12,13 +13,12 @@
     &= \sum_{n=0}^{\infty} x^n
 \end{align*}
 \]
-
-Valid for \( |x| < 1 \)
 ~~~
 
 !id: cCVrxmJddO
 !front: Taylor series expansion of \( \frac{1}{1 + x} \)
 !back:
+For \( |x| < 1 \):
 \[
 \begin{align*}
     \frac{1}{1 + x}
@@ -26,13 +26,12 @@ Valid for \( |x| < 1 \)
     &= \sum_{n=0}^{\infty} (-x)^n
 \end{align*}
 \]
-
-Valid for \( |x| < 1 \)
 ~~~
 
 !id: 2KXLVbrYaB
 !front: Taylor series expansion of \( e^x \)
 !back:
+For any \( x \in \mathbb{R} \):
 \[
 \begin{align*}
     e^x
@@ -45,6 +44,7 @@ Valid for \( |x| < 1 \)
 !id: awnKbaQV1a
 !front: Taylor series expansion of \( e^{-x} \)
 !back:
+For any \( x \in \mathbb{R} \):
 \[
 \begin{align*}
     e^{-x}
@@ -95,6 +95,7 @@ Valid for \( |x| < 1 \)
 !id: LXLge6uY2V
 !front: Taylor series expansion of \( \sin(x) \)
 !back:
+For any \( x \in \mathbb{R} \):
 \[
 \begin{align*}
     \sin(x)
@@ -107,6 +108,7 @@ Valid for \( |x| < 1 \)
 !id: dipfODxaSK
 !front: Taylor series expansion of \( \cos(x) \)
 !back:
+For any \( x \in \mathbb{R} \):
 \[
 \begin{align*}
     \cos(x)

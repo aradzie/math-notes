@@ -2,11 +2,6 @@
 !deck: Math::Algebra
 !tags: Math Algebra Inequality
 
-!id: tlofgjZ4Pc
-!front: Explain how $|x| \le c$, $c \ge 0$ is a stronger statement (gives more information) than $x \le c$, $c \ge 0$.
-!back: $|x| \le c$ means $-c \le x \le c$, that is lower and upper bounds, while $x \le c$ only means the upper bound.
-~~~
-
 !id: mkbLig7hww
 !front: Explain why if $|x| \le c$, $c \ge 0$ is true then $x \le c$ is true as well .
 !back:
@@ -40,6 +35,22 @@ If $x$ is negative, then $|x| = -x$, so $-|x| = x \le x \le -x = |x|$.
 !back:
 \[ x \le -c \text{ or } x \ge c \]
 \[ x \in \left( -\infty, -c \right] \cup \left[ c, \infty \right) \]
+~~~
+
+!id: B8fZ2E9XKm
+!front: Solve $|x - a| \le c$, $c \ge 0$.
+!back:
+\[ -c \le x - a \le c \]
+\[ a - c \le x \le a + c \]
+\[ x \in [a - c, a + c] \]
+~~~
+
+!id: H7Z0dQ5N2m
+!front: Solve $|x - a| \ge c$, $c \ge 0$.
+!back:
+\[ x - a \le -c \quad \text{or} \quad x - a \ge c \]
+\[ x \le a - c \quad \text{or} \quad x \ge a + c \]
+\[ x \in (-\infty, a-c] \cup [a+c, \infty) \]
 ~~~
 
 !id: HyckbDIJks
@@ -76,21 +87,30 @@ The solution is
 \[ x \in \left( -\infty, -\sqrt{c} \right] \cup \left[ \sqrt{c}, \infty \right) \]
 ~~~
 
-!id: YbMghQyaHH
-!front: Solve $x^2 =c$, $c \ge 0$.
+!id: eqpPfVf5Hl
+!front: True or false: From $(a + b)^2 \ge 0$ can we conclude that $a + b \ge 0$.
+!back: False. The correct conclusion is $|x + y| \ge 0$.
+~~~
+
+!id: WiB0PQAE77
+!front: True or false: If $a \le b$, then $a^2 \le b^2$
 !back:
-\[
-\begin{align*}
-    x^2 & = c \\
-    \sqrt{x^2} & = \sqrt{c} \\
-    |x| & = \sqrt{c}
-\end{align*}
-\]
+False in general.
 
-The solution is
+Counterexample: Let $a = -3$, $b = 2$, then $-3 \le 2$ but $9 \not \le 4$.
+~~~
 
-\[ x = -\sqrt{c} \text{ or } x = \sqrt{c} \]
-\[ x \in \left\{ -\sqrt{c}, \sqrt{c} \right\} \]
+!id: T8cM3K6n5A
+!front: True or false: If $|a| \le |b|$ then $a^2 \le b^2$.
+!back:
+True, because
+
+\[ |a| \le |b| \Rightarrow |a|^2 \le |b|^2 \Rightarrow a^2 \le b^2 \]
+~~~
+
+!id: kxxCWMfyuv
+!front: If $a^2 \le b^2$, what inequality does this imply about $|a|$ and $|b|$?
+!back: \[ |a| \le |b| \]
 ~~~
 
 !id: r6KWkBNdxO
@@ -99,12 +119,12 @@ The solution is
 ~~~
 
 !id: 1X6H3r9RBy
-!front: When solving an inequality $a \le b$, what happens with the inequality direction if we multiply both sides by a positive constant $c$?
+!front: When solving an inequality $a \le b$, what happens with the inequality direction if we multiply both sides by a positive constant $c > 0$?
 !back: Inequality direction stays the same.
 ~~~
 
 !id: sYtII2Ud8s
-!front: When solving an inequality $a \le b$, what happens with the inequality direction if we multiply both sides by a negative constant $c$?
+!front: When solving an inequality $a \le b$, what happens with the inequality direction if we multiply both sides by a negative constant $c < 0$?
 !back: Inequality direction flips.
 ~~~
 
@@ -146,35 +166,30 @@ Yes, for any $a$ and $b$
 
 \[ a > b \implies e^a > e^b \]
 
-because $\ln(x)$ is monotonic and strictly increasing.
+because $e^x$ is monotonic and strictly increasing.
 ~~~
 
-!id: eqpPfVf5Hl
-!front: True or false: From $(a + b)^2 \ge 0$ can we conclude that $a + b \ge 0$.
-!back: False. The correct conclusion is $|x + y| \ge 0$.
+!id: Z7P2A8W9YJ
+!front: True or false: If $a \le b$ then $a^3 \le b^3$.
+!back: True, because $f(x) = x^3$ is strictly increasing on $\mathbb{R}$.
 ~~~
 
-!id: FnF4hfaRLU
-!front: Solve: If $x^2 \le 9$, what range does $x$ lie in?
-!back: \[ -3 \le x \le 3 \]
-~~~
-
-!id: tNgN5UjNlQ
-!front: Solve: If $x^2 \ge 9$, what range does $x$ lie in?
-!back: \[ x \le -3 \text{ or } x \ge 3 \]
-~~~
-
-!id: WiB0PQAE77
-!front: True or false: If $a \le b$, then $a^2 \le b^2$
+!id: Kt1X3Lw8aQ
+!front: Prove that $|x| \ge 0$ for all real $x$.
 !back:
-False in general.
+By definition,
 
-Counterexample: Let $a = -3$, $b = 2$, then $-3 \le 2$ but $9 \not \le 4$.
-~~~
+\[
+|x| =
+\begin{cases}
+    x, & x \ge 0 \\
+    -x, & x < 0
+\end{cases}
+\]
 
-!id: kxxCWMfyuv
-!front: If $a^2 \le b^2$, what inequality does this imply about $|a|$ and $|b|$?
-!back: \[ |a| \le |b| \]
+In both cases the value is non-negative, hence
+
+\[ |x| \ge 0 \]
 ~~~
 
 !id: rPac9OHGod
@@ -186,15 +201,15 @@ Counterexample: Let $a = -3$, $b = 2$, then $-3 \le 2$ but $9 \not \le 4$.
 ~~~
 
 !id: QsX3w9Q5h0
-!front: What is the Triangle Inequality?
+!front: What is the triangle inequality?
 !back:
-The Tirangle Inequality states that for any real numbers \( a \) and \( b \):
+The triangle inequality states that for any real numbers \( a \) and \( b \):
 
 \[ |a + b| \leq |a| + |b| \]
 ~~~
 
 !id: kQcxFhsQHh
-!front: Prove the Triangle Inequality $|a + b| \leq |a| + |b|$.
+!front: Prove the triangle inequality $|a + b| \leq |a| + |b|$.
 !back:
 Let's square both sides:
 
@@ -219,171 +234,68 @@ so
 \end{align*}
 \]
 
-The last inequality is true for any $a$ and $b$, so the Triangle Inequality is true as well.
+The last inequality is true for any $a$ and $b$, so the triangle inequality is true as well.
 ~~~
 
-!type: Basic Math
-!deck: Math::Algebra
-!tags: Math Algebra Inequality
-
-!id: B8fZ2E9XKm
-!front: Solve $|x - a| \le c$, $c \ge 0$.
+!id: S9D2P7B8QX
+!front: What is the reverse triangle inequality?
 !back:
-\[
--c \le x - a \le c
-\]
+The reverse triangle inequality states that for any real numbers \( a \) and \( b \):
 
-\[
-a - c \le x \le a + c
-\]
-
-\[
-x \in [a - c, a + c]
-\]
-~~~
-
-!id: H7Z0dQ5N2m
-!front: Solve $|x - a| \ge c$, $c \ge 0$.
-!back:
-\[
-x - a \le -c \quad \text{or} \quad x - a \ge c
-\]
-
-\[
-x \le a - c \quad \text{or} \quad x \ge a + c
-\]
-
-\[
-x \in (-\infty, a-c] \cup [a+c, \infty)
-\]
-~~~
-
-!id: Kt1X3Lw8aQ
-!front: Prove that $|x| \ge 0$ for all real $x$.
-!back:
-By definition,
-
-\[
-|x| =
-\begin{cases}
-x, & x \ge 0 \\
--x, & x < 0
-\end{cases}
-\]
-
-In both cases the value is non-negative, hence
-
-\[
-|x| \ge 0
-\]
-~~~
-
-!id: Jp5Q8nKcZ2
-!front: When does equality hold in the triangle inequality $|a+b| \le |a| + |b|$?
-!back: Equality holds when $a$ and $b$ have the same sign or one of them is zero.
+\[ ||a| - |b|| \le |a - b| \]
 ~~~
 
 !id: 2C7nY6M5Fp
 !front: Prove the reverse triangle inequality.
 !back:
-The reverse triangle inequality states:
+Apply triangle inequality to $a = (a - b) + b$:
 
-\[
-\big||a| - |b|\big| \le |a - b|
-\]
-
-Proof:
-
-Apply triangle inequality to $(a - b) + b = a$:
-
-\[
-|a| = |(a-b)+b| \le |a-b| + |b|
-\]
+\[ |a| = |(a-b)+b| \le |a-b| + |b| \]
 
 Rearranging:
 
-\[
-|a| - |b| \le |a-b|
-\]
+\[ |a| - |b| \le |a-b| \]
 
 Swap $a,b$ to get:
 
-\[
-|b| - |a| \le |a-b|
-\]
+\[ |b| - |a| \le |a-b| \]
 
 Combining both gives:
 
-\[
-\big||a| - |b|\big| \le |a-b|
-\]
+\[ \big||a| - |b|\big| \le |a-b| \]
 ~~~
 
-!id: M0Jk8CwZ7N
-!front: If $|x| < \varepsilon$, what bound does this give on $x$?
+!id: F7Z3B5R2XQ
+!front: What is the AM–GM inequality?
 !back:
-\[
--\varepsilon < x < \varepsilon
-\]
+The AM–GM inequality states that for for any real number $a,b \ge 0$:
+
+\[ \frac{a+b}{2} \ge \sqrt{ab} \]
+
+Equality holds iff $a=b$.
 ~~~
 
-!id: Wk7B5LJ2Fd
-!front: If $|x-a| < \varepsilon$, what does this mean geometrically?
+!id: HoDhG80bGb
+!front: Prove the AM-GM inequality.
 !back:
-$x$ lies within distance $\varepsilon$ of $a$:
-
 \[
-a - \varepsilon < x < a + \varepsilon
-\]
-~~~
-
-!id: T8cM3K6n5A
-!front: True or false: If $|a| \le |b|$ then $a^2 \le b^2$.
-!back:
-True, because
-
-\[
-|a| \le |b| \Rightarrow |a|^2 \le |b|^2 \Rightarrow a^2 \le b^2
+\begin{align*}
+    (a-b)^2 & \ge 0 \\
+    a^2 - 2ab + b^2 & \ge 0 \\
+    a^2 - 2ab + 4ab + b^2 & \ge 4ab \\
+    a^2 + 2ab + b^2 & \ge 4ab \\
+    (a+b)^2 & \ge 4ab \\
+    \frac{a+b}{2} & \ge \sqrt{ab}
+\end{align*}
 \]
 ~~~
 
 !id: N9B8F6D2XW
 !front: If $0 \le a \le b$, what can we say about $a^n$ and $b^n$ for integer $n \ge 1$?
 !back:
-\[
-0 \le a^n \le b^n
-\]
+\[ 0 \le a^n \le b^n \]
 
 Powers preserve order for non-negative numbers.
-~~~
-
-!id: Z7P2A8W9YJ
-!front: True or false: If $a \le b$ then $a^3 \le b^3$.
-!back: True, because $f(x) = x^3$ is strictly increasing on $\mathbb{R}$.
-~~~
-
-!id: Q4L2A7C8PZ
-!front: True or false: If $a \le b$ then $a^4 \le b^4$.
-!back:
-False in general.
-
-Counterexample: $a = -2$, $b = -1$ gives $-2 \le -1$ but $16 \not\le 1$.
-~~~
-
-!type: Basic Math
-!deck: Math::Algebra
-!tags: Math Algebra Inequality
-
-!id: F7Z3B5R2XQ
-!front: State the AM–GM inequality for two non-negative numbers.
-!back:
-For $a,b \ge 0$:
-
-\[
-\frac{a+b}{2} \ge \sqrt{ab}
-\]
-
-Equality holds iff $a=b$.
 ~~~
 
 !id: KZP4F2M9A8
@@ -391,23 +303,16 @@ Equality holds iff $a=b$.
 !back:
 Rearrange:
 
-\[
-x^2 - 2x + 1 \ge 0
-\]
+\[ x^2 - 2x + 1 \ge 0 \]
 
-\[
-(x-1)^2 \ge 0
-\]
+\[ (x-1)^2 \ge 0 \]
 
 which is always true.
 ~~~
 
 !id: H8M4Q9A5RZ
 !front: Prove that $a^2 + b^2 \ge 2ab$.
-!back:
-\[
-a^2 + b^2 - 2ab = (a-b)^2 \ge 0
-\]
+!back: \[ a^2 + b^2 - 2ab = (a-b)^2 \ge 0 \]
 ~~~
 
 !id: E6RZ0M2P5A
@@ -415,23 +320,9 @@ a^2 + b^2 - 2ab = (a-b)^2 \ge 0
 !back:
 Expand:
 
-\[
-(a-b)^2 = a^2 - 2ab + b^2 \ge 0
-\]
+\[ (a-b)^2 = a^2 - 2ab + b^2 \ge 0 \]
 
 Rearrange:
 
-\[
-a^2 + b^2 \ge 2ab
-\]
-~~~
-
-!id: S9D2P7B8QX
-!front: Show that $|a-b| \ge ||a| - |b||$.
-!back:
-This is the reverse triangle inequality:
-
-\[
-||a| - |b|| \le |a - b|
-\]
+\[ a^2 + b^2 \ge 2ab \]
 ~~~
