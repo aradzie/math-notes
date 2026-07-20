@@ -159,14 +159,14 @@ then
 !back: \[ \frac{ab + bc + ca}{abc} \]
 ~~~
 
-!type: Basic (and reversed card)
+!type: Basic Math (and reversed card)
 
 !id: 2W9K3mN0LX
 !front: \[ (x - a)(x - b) \]
 !back: \[ x^2 - (a + b)x + ab \]
 ~~~
 
-!type: Basic (and reversed card)
+!type: Basic Math (and reversed card)
 
 !id: 8QK5T2YFZ9
 !front: \[ (x + a)(x + b) \]

@@ -85,7 +85,11 @@ Intuitively, if you can draw the graph of a function without lifting your pencil
 
 Differentiate both sides with respect to \( x \) using the chain rule:
 
-\[ \underbrace{ (f^{-1})'(f(x)) } \cdot \underbrace{ f'(x) } = 1 \]
+\[
+    \underbrace{ (f^{-1})'(f(x)) }_{dx/dy}
+    \cdot
+    \underbrace{ f'(x) }_{dy/dx} = 1
+\]
 
 which is the same as
 

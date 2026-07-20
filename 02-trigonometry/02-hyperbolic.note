@@ -3,73 +3,61 @@
 !tags: Math Trigonometric Hyperbolic Identity
 
 !id: 8voSey2Uah
-!front:
-\[ \sinh x \]
-The definition of
-!back: \[ \frac{e^{x} - e^{-x}}{2} \]
+!front: \[ \sinh x = \ldots \]
+!back: \[ \sinh x = \frac{e^{x} - e^{-x}}{2} \]
 ~~~
 
 !id: ad35P6eyOc
-!front:
-\[ \cosh x \]
-The definition of
-!back: \[ \frac{e^{x} + e^{-x}}{2} \]
+!front: \[ \cosh x = \ldots \]
+!back: \[ \cosh x = \frac{e^{x} + e^{-x}}{2} \]
 ~~~
 
 !id: uig6j7os9C
-!front:
-\[ \tanh x \]
-The definition of
-!back: \[ \frac{\sinh x}{\cosh x} = \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}} \]
+!front: \[ \tanh x = \ldots \]
+!back: \[ \tanh x = \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}} \]
 ~~~
 
 !id: sO3rs2mUnt
-!front:
-\[ e^{x} = \ldots \]
-Hyperbolic identity
-!back: \[ \cosh x + \sinh x \]
+!front: \[ e^{x} = \text{ in terms of } \sinh(x) \text{ and } \cosh(x) \]
+!back: \[ e^{x} = \cosh x + \sinh x \]
 ~~~
 
 !id: D7dSpHklNy
-!front:
-\[ e^{-x} = \ldots \]
-Hyperbolic identity
-!back: \[ \cosh x - \sinh x \]
+!front: \[ e^{-x} = \ldots \text{ in terms of } \sinh(x) \text{ and } \cosh(x) \]
+!back: \[ e^{-x} = \cosh x - \sinh x \]
 ~~~
 
 !id: hGdnrTqxwh
-!front:
-\[ 1 = \ldots \]
-Hyperbolic identity
-!back: \[ \cosh^2 x - \sinh^2 x \]
+!front: \[ 1 = \ldots \text{ in terms of } \sinh(x) \text{ and } \cosh(x) \]
+!back: \[ 1 = \cosh^2 x - \sinh^2 x \]
 ~~~
 
 !id: qYhRAq3NBi
 !front:
 \[ \sin x = \ldots \]
 Express as a hyperbolic function
-!back: \[ -i \sinh(ix) = \frac{e^{ix} - e^{-ix}}{2i} \]
+!back: \[ \sin x = -i \sinh(ix) = \frac{e^{ix} - e^{-ix}}{2i} \]
 ~~~
 
 !id: voH2IfCt8i
 !front:
 \[ \sinh x = \ldots \]
 Express as a trigonometric function
-!back: \[ -i \sin(ix) = \frac{e^{x} - e^{-x}}{2} \]
+!back: \[ \sinh x = -i \sin(ix) = \frac{e^{x} - e^{-x}}{2} \]
 ~~~
 
 !id: fZRa4zHtQP
 !front:
 \[ \cos x = \ldots \]
 Express as a hyperbolic function
-!back: \[ \cosh(ix) = \frac{e^{ix} + e^{-ix}}{2} \]
+!back: \[ \cos x = \cosh(ix) = \frac{e^{ix} + e^{-ix}}{2} \]
 ~~~
 
 !id: 6OO4usEe5B
 !front:
 \[ \cosh x = \ldots \]
 Express as a trigonometric function
-!back: \[ \cos(ix) = \frac{e^{x} + e^{-x}}{2} \]
+!back: \[ \cosh x = \cos(ix) = \frac{e^{x} + e^{-x}}{2} \]
 ~~~
 
 !type: Basic Math
@@ -78,34 +66,35 @@ Express as a trigonometric function
 
 !id: J9Zx0A7FqR
 !front: \[ \cosh^2 x + \sinh^2 x = \ldots \]
-!back:
-\[
-\cosh(2x)
-\]
+!back: \[ \cosh^2 x + \sinh^2 x = \cosh(2x) \]
 ~~~
 
 !id: A6K2N9bF7x
 !front: \[ 1 + \sinh^2 x = \ldots \]
-!back:
-\[
-\cosh^2 x
-\]
+!back: \[ 1 + \sinh^2 x = \cosh^2 x \]
 ~~~
 
 !id: T0XJZ5wqF3
 !front: \[ 1 - \tanh^2 x = \ldots \]
-!back:
-\[
-\operatorname{sech}^2 x
-\]
+!back: \[ 1 - \tanh^2 x = \operatorname{sech}^2 x \]
 ~~~
 
-!id: ZQJ8w7Y9Ka
-!front:
-\[ \operatorname{sech} x \]
-Definition
-!back:
-\[
-\frac{1}{\cosh x}
-\]
+!id: stZDV6T4Dx
+!front: \[ \operatorname{arcsinh}(x) = \ldots \]
+!back: \[ \operatorname{arcsinh}(x) = \ln\left(x + \sqrt{x^2 + 1}\right) \]
+~~~
+
+!id: ZYwuMHDjy8
+!front: \[ \operatorname{arccosh}(x) = \ldots \]
+!back: \[ \operatorname{arccosh}(x) = \ln\left(x + \sqrt{x^2 - 1}\right) \]
+~~~
+
+!id: 1uowf5g6OS
+!front: \[ \operatorname{arctanh}(x) = \ldots \]
+!back: \[ \operatorname{arctanh}(x) = \frac{1}{2}\ln\left(\frac{1 + x}{1 - x}\right), \quad |x| < 1 \]
+~~~
+
+!id: CAuc2adqQ4
+!front: \[ \operatorname{arccoth}(x) = \ldots \]
+!back: \[ \operatorname{arccoth}(x) = \frac{1}{2}\ln\left(\frac{x + 1}{x - 1}\right), \quad |x| > 1 \]
 ~~~

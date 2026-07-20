@@ -274,3 +274,15 @@
 \end{align*}
 \]
 ~~~
+
+!type: Basic Math
+
+!id: LZMWkazona
+!front: \[ \arcsin(x) + \arccos(x) = \ldots \]
+!back: \[ \arcsin(x) + \arccos(x) = \frac{\pi}{2} \quad x \in [-1, 1] \]
+~~~
+
+!id: Y5EsO5x2IB
+!front: \[ \arctan(x) + \text{arccot}(x) = \ldots \]
+!back: \[ \arctan(x) + \text{arccot}(x) = \frac{\pi}{2} \quad x \in \mathbb{R} \]
+~~~
