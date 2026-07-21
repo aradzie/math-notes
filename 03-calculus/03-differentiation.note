@@ -2,15 +2,6 @@
 !deck: Math::Calculus::Differentiation
 !tags: Math Calculus Differentiation Theory
 
-!id: zzKitpg6bx
-!front: The definition of the a critical point.
-!back:
-A critical point of a function \( f(x) \) is a point in the domain of \( f \) where either:
-
-- The derivative \( f'(x) \) is zero, or
-- The derivative \( f'(x) \) does not exist.
-~~~
-
 !id: ax8Frvkg1t
 !front: The definition of the **Extreme Value Theorem** (EVT).
 !back:

@@ -26,6 +26,7 @@ See the [notatki](https://github.com/aradzie/notatki) repository for more detail
 - [OpenStax Calculus Volume 2](https://openstax.org/books/calculus-volume-2/pages/preface)
 - [OpenStax Calculus Volume 3](https://openstax.org/books/calculus-volume-3/pages/preface)
 - [Active Calculus](https://activecalculus.org)
+- [APEX Calculus](https://opentext.uleth.ca/apex-calculus/apex-calculus.html)
 - [The Geometry Of Linear Algebra](https://books.physics.oregonstate.edu/LinAlg/book-1.html)
 - [The Geometry Of Vector Calculus](https://books.physics.oregonstate.edu/GVC/GVC.html)
 - [The Geometry Of Static Fields](https://books.physics.oregonstate.edu/GSF/GSF.html)
