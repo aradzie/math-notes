@@ -5,7 +5,7 @@
 !id: RwJhAfzXOP
 !front: Whatis a **Quadric Surface**?
 !back:
-A **Quadric Surface** is a surface in three-dimensional space whose equation is a second-degree polynomial in the variables $x$, $y$ and $z$.
+A **Quadric Surface** is a surface in three-dimensional space whose equation is a second-degree polynomial in the variables \( x \), \( y \) and \( z \).
 
 The most general **Quadric Surface** has the form
 
@@ -19,7 +19,7 @@ The most general **Quadric Surface** has the form
 \end{align*}
 \]
 
-where $A$, $B$, $C$,... are all constants.
+where \( A \), \( B \), \( C \),... are all constants.
 ~~~
 
 !id: RufVfJtOHL

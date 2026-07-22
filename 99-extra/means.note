@@ -83,12 +83,12 @@ The general formula is the **Kolmogorov–Nagumo (Quasi-Arithmetic) Mean**:
 \end{align*}
 \]
 
-where $f$ is any continuous strictly monotone function.
+where \( f \) is any continuous strictly monotone function.
 
-- If $f(x)=x$, we get the **Arithmetic Mean**.
-- If $f(x)=\ln x$, we get the **Geometric Mean** (requires $x_i > 0$).
-- If $f(x)=1/x$, we get the **Harmonic Mean** (requires $x_i \neq 0$).
-- If $f(x)=x^p$ (with $p \neq 0$), we get the **Power Mean**, with $p = 2$ being the **Quadratic Mean**.
+- If \( f(x)=x \), we get the **Arithmetic Mean**.
+- If \( f(x)=\ln x \), we get the **Geometric Mean** (requires \( x_i > 0 \)).
+- If \( f(x)=1/x \), we get the **Harmonic Mean** (requires \( x_i \neq 0 \)).
+- If \( f(x)=x^p \) (with \( p \neq 0 \)), we get the **Power Mean**, with \( p = 2 \) being the **Quadratic Mean**.
 
 So the **Quasi-Arithmetic Mean** is the most general form that unites all the classical means.
 ~~~

@@ -3,7 +3,7 @@
 !tags: Math Calculus Vectors
 
 !id: qG0LQsI4ZF
-!front: **Unit Tangent Vector** $T$ to a parameterized curve.
+!front: **Unit Tangent Vector** \( T \) to a parameterized curve.
 !back:
 The **Unit Tangent Vector** is the normalized velocity vector.
 
@@ -11,14 +11,14 @@ The **Unit Tangent Vector** is the normalized velocity vector.
 
 where:
 
-- $ \mathbf{r}(t) = \langle x(t), y(t), z(t) \rangle $ is a vector-valued function, and
-- $ \mathbf{r}'(t) = \langle x'(t), y'(t), z'(t) \rangle $ is the velocity vector.
+- \( \mathbf{r}(t) = \langle x(t), y(t), z(t) \rangle \) is a vector-valued function, and
+- \( \mathbf{r}'(t) = \langle x'(t), y'(t), z'(t) \rangle \) is the velocity vector.
 ~~~
 
 !id: 4pswS3yAU1
-!front: **Principal Normal Vector** $N$ to a parameterized curve.
+!front: **Principal Normal Vector** \( N \) to a parameterized curve.
 !back:
-The **Principal Normal Vector** to a curve $C$ is a unit vector that
+The **Principal Normal Vector** to a curve \( C \) is a unit vector that
 
 - is perpendicular to the **Unit Tangent Vector**, and
 - points in the direction that the curve is bending.
@@ -27,16 +27,16 @@ The **Principal Normal Vector** to a curve $C$ is a unit vector that
 
 where:
 
-- $\mathbf{T}(t)$ is the **Unit Tangeng Vector**.
+- \( \mathbf{T}(t) \) is the **Unit Tangeng Vector**.
 ~~~
 
 !id: 9DmVM2X1dc
-!front: **Binormal Vector** $B$ to a parameterized curve.
+!front: **Binormal Vector** \( B \) to a parameterized curve.
 !back:
 \[ \mathbf{B}(t) = \mathbf{T}(t) \times \mathbf{N}(t) \]
 
 where:
 
-- $\mathbf{T}(t)$ is the **Unit Tangeng Vector**, and
-- $\mathbf{N}(t)$ is the **Principal Normal Vector**.
+- \( \mathbf{T}(t) \) is the **Unit Tangeng Vector**, and
+- \( \mathbf{N}(t) \) is the **Principal Normal Vector**.
 ~~~

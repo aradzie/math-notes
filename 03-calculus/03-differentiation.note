@@ -73,7 +73,7 @@ Intuitively, if you can draw the graph of a function without lifting your pencil
 ~~~
 
 !id: meJCCut234
-!front: Prove that $\frac{dx}{dy} \cdot \frac{dy}{dx} = 1$
+!front: Prove that \( \frac{dx}{dy} \cdot \frac{dy}{dx} = 1 \)
 !back:
 \[
 \begin{align*}

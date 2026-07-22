@@ -32,9 +32,9 @@ Consider two vectors \( \mathbf{a} \) and \( \mathbf{b} \) in the 3-dimensional 
 
 The **Cross Product** \( \mathbf{a} \times \mathbf{b} \) is a vector that:
 
-- is perpendicular to both $\mathbf{a}$ and $\mathbf{b}$ (so orthogonal to the plane containing them),
-- has magnitude equal to the area of the parallelogram spanned by $\mathbf{a}$ and $\mathbf{b}$:
+- is perpendicular to both \( \mathbf{a} \) and \( \mathbf{b} \) (so orthogonal to the plane containing them),
+- has magnitude equal to the area of the parallelogram spanned by \( \mathbf{a} \) and \( \mathbf{b} \):
 \[ \|\mathbf{a} \times \mathbf{b}\| = \| \mathbf{a} \| \| \mathbf{b} \| \sin \theta \]
-where $\theta$ is the angle between $\mathbf{a}$ and $\mathbf{b}$, and
+where \( \theta \) is the angle between \( \mathbf{a} \) and \( \mathbf{b} \), and
 - has direction given by the right-hand rule.
 ~~~

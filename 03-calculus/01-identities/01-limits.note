@@ -8,7 +8,7 @@
 ~~~
 
 !id: 5tnHPoehhw
-!front: The definition of $e^x$ as a limit when \( n \to \infty \)
+!front: The definition of \( e^x \) as a limit when \( n \to \infty \)
 !back: \[ e^x = \lim_{n \to \infty} \left( 1 + \frac{x}{n} \right)^n \]
 ~~~
 
@@ -18,6 +18,6 @@
 ~~~
 
 !id: RsC1HP4Yhn
-!front: The definition of $e^x$ as a limit when \( n \to 0 \)
+!front: The definition of \( e^x \) as a limit when \( n \to 0 \)
 !back: \[ e^x = \lim_{n \to 0} \left( 1 + n \right)^{x / n} \]
 ~~~

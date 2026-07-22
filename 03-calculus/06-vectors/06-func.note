@@ -54,7 +54,7 @@ Vector-Valued Function of Several Variables: \( \mathbf{F} : D \sube \mathbb{R}^
 !id: NIW1agrY60
 !front: What is a **Vector-Valued Function of Several Variables** (VVFSV)?
 !back:
-A **Vector-Valued Function of Several Variables** (VVFSV)is a function where the input is a vector $\mathbf{x} \in \mathbb{R}^m$ and the output is a vector $\mathbf{y} \in \mathbb{R}^n$.
+A **Vector-Valued Function of Several Variables** (VVFSV)is a function where the input is a vector \( \mathbf{x} \in \mathbb{R}^m \) and the output is a vector \( \mathbf{y} \in \mathbb{R}^n \).
 
 \[ \mathbf{F} : D \sube \mathbb{R}^m \to \mathbb{R}^n \]
 
