@@ -2,6 +2,15 @@
 !deck: Math::Real-Numbers
 !tags: Math Real-Numbers Density Approximation
 
+!id: gFzlZo4Svr
+!front: What does it mean for a set \( D \subseteq \mathbb{R} \) to be dense in \( \mathbb{R} \)? Give the equivalent approximation statement.
+!back:
+- Every open interval \( (a,b) \), where \( a<b \), contains a point of \( D \).
+- Equivalently, for every \( x\in\mathbb{R} \) and \( \varepsilon>0 \), there is \( d\in D \) with \( |x-d|<\varepsilon \).
+
+For the converse, apply the approximation statement at \( x=(a+b)/2 \) with \( \varepsilon=(b-a)/2 \).
+~~~
+
 !id: rLc5kTW2u9
 !front: Prove that \( \mathbb{Q} \) is dense in \( \mathbb{R} \): for any \( a < b \), there exists a rational \( q \) with \( a < q < b \).
 !back:
@@ -11,11 +20,10 @@ Let:
 
 To prove: there exists \( q \in \mathbb{Q} \) with \( a < q < b \).
 
-- By the Archimedean property, choose \( n \in \mathbb{N} \) with \( n > 1/(b-a) \), i.e. \( 1/n < b - a \).
-- Let \( m \) be the least integer with \( m > na \); such \( m \) exists because the Archimedean property bounds \( na \) above by some integer, and the integers above any real number have a least element. Then \( m - 1 \le na < m \).
-- Dividing \( m > na \) by \( n \) gives \( m/n > a \).
-- Dividing \( m - 1 \le na \) by \( n \) gives \( m/n \le a + 1/n < a + (b - a) = b \).
-- So \( q = m/n \in \mathbb{Q} \) satisfies \( a < q < b \).
+- By the Archimedean property, choose \( n \in \mathbb{N} \) with \( 1/n < b-a \).
+- Let \( m \) be the least integer strictly greater than \( na \). Then \( m-1\le na<m \), so \( a<m/n\le a+1/n<b \).
+- Thus \( q=m/n \) is a rational number in \( (a,b) \).
+!extra: The Archimedean property guarantees the needed integer \( m \) exists; the integers above any real number have a least member.
 ~~~
 
 !id: d0Sdw91TMY
@@ -30,4 +38,27 @@ To prove: there exists an irrational \( x \) with \( a < x < b \).
 - Since \( a - \sqrt{2} < b - \sqrt{2} \), density of \( \mathbb{Q} \) in \( \mathbb{R} \) gives a rational \( q \) with \( a - \sqrt{2} < q < b - \sqrt{2} \).
 - Let \( x = q + \sqrt{2} \). Then \( a < x < b \).
 - \( x \) is irrational: if \( x \) were rational, then \( \sqrt{2} = x - q \) would be a difference of rationals, hence rational, contradicting that \( \sqrt{2} \) is irrational.
+~~~
+
+!id: mJOnFgVEE8
+!front: Why does every nonempty open interval contain infinitely many rational numbers and infinitely many irrational numbers?
+!back: Both \( \mathbb{Q} \) and \( \mathbb{R}\setminus\mathbb{Q} \) are dense in \( \mathbb{R} \). For either set \( D \), choose \( d_1\in D\cap(a,b) \). Density then gives \( d_2\in D\cap(d_1,b) \), and recursively \( d_{k+1}\in D\cap(d_k,b) \). The strictly increasing points \( d_k \) are all distinct and lie in \( (a,b) \).
+~~~
+
+!id: Oqzy3hS0Xs
+!front: Given \( x\in\mathbb{R} \) and \( \varepsilon>0 \), how can you approximate \( x \) from both sides by rational numbers within \( \varepsilon \)?
+!back:
+Rational density gives \( p\in\mathbb{Q}\cap(x-\varepsilon,x) \) and \( q\in\mathbb{Q}\cap(x,x+\varepsilon) \). Hence
+\[ x-\varepsilon<p<x<q<x+\varepsilon. \]
+This works whether \( x \) is rational or irrational.
+~~~
+
+!id: 3CVGr6hm5r
+!front: Why does no real number have an immediate successor or predecessor in \( \mathbb{R} \)?
+!back: For any \( a<b \), their midpoint \( (a+b)/2 \) is a real number strictly between them. Thus no \( b>a \) can be the first real number after \( a \), and no \( a<b \) can be the last before \( b \).
+~~~
+
+!id: pmUlypttTn
+!front: Why does density of \( \mathbb{Q} \) in \( \mathbb{R} \) not mean that \( \mathbb{Q} \) is complete?
+!back: Density says every real interval contains a rational; it does not say that every real number is rational. Rationals occur arbitrarily close to \( \sqrt{2} \), but \( \sqrt{2}\notin\mathbb{Q} \). The set \( A=\{q\in\mathbb{Q}:q<\sqrt{2}\} \) is nonempty and bounded above in \( \mathbb{Q} \). Every rational upper bound \( u \) of \( A \) exceeds \( \sqrt{2} \), and rational density supplies a smaller rational upper bound between \( \sqrt{2} \) and \( u \). Thus \( A \) has no supremum in \( \mathbb{Q} \).
 ~~~
