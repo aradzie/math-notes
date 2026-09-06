@@ -1,10 +1,14 @@
 !deck: Math Identities
 !tags: Math Calculus Identity Derivative
-!type: Basic Math
+!type: Cloze Math
 
-!id: QhXkwRjRei
-!front: \[ \frac{d}{dx} \left( f(x) g(x) \right) \]
-!back: \[ f'(x) g(x) + f(x) g'(x) \]
+!id: t5nrJzqDxs
+!text:
+\[
+\frac{d}{dx} ( {{c2::f(x) g(x)::\ldots}} )
+=
+{{c1::f'(x) g(x) + f(x) g'(x)::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
@@ -15,9 +19,13 @@
 \]
 ~~~
 
-!id: PBnZPuE2cw
-!front: \[ \frac{d}{dx} \frac{f(x)}{g(x)} \]
-!back: \[ \frac{f'(x) g(x) - f(x) g'(x)}{(g(x))^2} \]
+!id: 4LkQydoQNz
+!text:
+\[
+\frac{d}{dx} {{c2::\frac{f(x)}{g(x)}::\ldots}}
+=
+{{c1::\frac{f'(x) g(x) - f(x) g'(x)}{(g(x))^2}::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
@@ -28,9 +36,13 @@
 \]
 ~~~
 
-!id: kfG9FhejM4
-!front: \[ \frac{d}{dx} \frac{1}{f(x)} \]
-!back: \[ - \frac{f'(x)}{(f(x))^2} \]
+!id: 3TcbdCFNQp
+!text:
+\[
+\frac{d}{dx} {{c2::\frac{1}{f(x)}::\ldots}}
+=
+{{c1::-\frac{f'(x)}{(f(x))^2}::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
@@ -41,19 +53,31 @@
 \]
 ~~~
 
-!id: PjdHopZdYg
-!front: \[ \frac{d}{dx} x^n \]
-!back: \[ nx^{n-1} \]
+!id: uCWxRjBh1T
+!text:
+\[
+\frac{d}{dx} {{c2::x^n::\ldots}}
+=
+{{c1::nx^{n-1}::\ldots}}
+\]
 ~~~
 
-!id: 9oYvOTKXHM
-!front: \[ \frac{d}{dx} \sqrt{x} \]
-!back: \[ \frac{1}{2 \sqrt{x}} \]
+!id: 2bg3wYghWb
+!text:
+\[
+\frac{d}{dx} {{c2::\sqrt{x}::\ldots}}
+=
+{{c1::\frac{1}{ 2 \sqrt{x} }::\ldots}}
+\]
 ~~~
 
-!id: q0ytSwY5qI
-!front: \[ \frac{d}{dx} e^x \]
-!back: \[ e^x \]
+!id: VXuQLADXL9
+!text:
+\[
+\frac{d}{dx} {{c2::e^x::\ldots}}
+=
+{{c1::e^x::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
@@ -63,9 +87,13 @@
 \]
 ~~~
 
-!id: MHY6pvsziS
-!front: \[ \frac{d}{dx} a^x \]
-!back: \[ a^x \ln a \]
+!id: Rr5fOXUw9O
+!text:
+\[
+\frac{d}{dx} {{c2::a^x::\ldots}}
+=
+{{c1::a^x \ln a::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
@@ -75,9 +103,13 @@
 \]
 ~~~
 
-!id: 6znjaekIg8
-!front: \[ \frac{d}{dx} \ln x \]
-!back: \[ \frac{1}{x} \]
+!id: qa7HhtQgYV
+!text:
+\[
+\frac{d}{dx} {{c2::\ln x::\ldots}}
+=
+{{c1::\frac{1}{x}::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
@@ -87,9 +119,13 @@
 \]
 ~~~
 
-!id: Aer81Gm4Ta
-!front: \[ \frac{d}{dx} \log_b x \]
-!back: \[ \frac{1}{x \ln b} \]
+!id: ePdj1D19Kq
+!text:
+\[
+\frac{d}{dx} {{c2::\log_b x::\ldots}}
+=
+{{c1::\frac{1}{x \ln b}::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
@@ -101,93 +137,121 @@
 
 !tags: Math Calculus Derivative Trigonometric Identity
 
-!id: dZo3n2deUD
-!front: \[ \frac{d}{dx} \sin x \]
-!back: \[ \cos x \]
+!id: FZ7A022KJ2
+!text:
+\[
+\frac{d}{dx} {{c2::\sin x::\ldots}}
+=
+{{c1::\cos x::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
 \frac{d}{dx} \sin x &= \cos x \\
-\frac{d}{dx} \cos x &= - \sin x \\
+\frac{d}{dx} \cos x &= -\sin x \\
 \frac{d}{dx} \sinh x &= \cosh x \\
 \frac{d}{dx} \cosh x &= \sinh x
 \end{align*}
 \]
 ~~~
 
-!id: h8KflmsUb1
-!front: \[ \frac{d}{dx} \cos x \]
-!back: \[ - \sin x \]
+!id: Tgs9LnpPni
+!text:
+\[
+\frac{d}{dx} {{c2::\cos x::\ldots}}
+=
+{{c1::-\sin x::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
 \frac{d}{dx} \sin x &= \cos x \\
-\frac{d}{dx} \cos x &= - \sin x \\
+\frac{d}{dx} \cos x &= -\sin x \\
 \frac{d}{dx} \sinh x &= \cosh x \\
 \frac{d}{dx} \cosh x &= \sinh x
 \end{align*}
 \]
 ~~~
 
-!id: RVHZz1YzI7
-!front: \[ \frac{d}{dx} \tan x \]
-!back: \[ \sec^2 x \]
+!id: TpTuy8lSRy
+!text:
+\[
+\frac{d}{dx} {{c2::\tan x::\ldots}}
+=
+{{c1::\sec^2 x::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
 \frac{d}{dx} \tan x &= \sec^2 x \\
-\frac{d}{dx} \cot x &= - \csc^2 x \\
+\frac{d}{dx} \cot x &= -\csc^2 x \\
 \frac{d}{dx} \tanh x &= \operatorname{sech}^2 x \\
-\frac{d}{dx} \coth x &= - \operatorname{csch}^2 x
+\frac{d}{dx} \coth x &= -\operatorname{csch}^2 x
 \end{align*}
 \]
 ~~~
 
-!id: kE2cgA67q5
-!front: \[ \frac{d}{dx} \cot x \]
-!back: \[ - \csc^2 x \]
+!id: nfMUAAp0SF
+!text:
+\[
+\frac{d}{dx} {{c2::\cot x::\ldots}}
+=
+{{c1::-\csc^2 x::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
 \frac{d}{dx} \tan x &= \sec^2 x \\
-\frac{d}{dx} \cot x &= - \csc^2 x \\
+\frac{d}{dx} \cot x &= -\csc^2 x \\
 \frac{d}{dx} \tanh x &= \operatorname{sech}^2 x \\
-\frac{d}{dx} \coth x &= - \operatorname{csch}^2 x
+\frac{d}{dx} \coth x &= -\operatorname{csch}^2 x
 \end{align*}
 \]
 ~~~
 
-!id: pbIiBpzIAX
-!front: \[ \frac{d}{dx} \sec x \]
-!back: \[ \sec x \tan x \]
+!id: IaeOyR20YC
+!text:
+\[
+\frac{d}{dx} {{c2::\sec x::\ldots}}
+=
+{{c1::\sec x \tan x::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
 \frac{d}{dx} \sec x &= \sec x \tan x \\
-\frac{d}{dx} \csc x &= - \csc x \cot x \\
-\frac{d}{dx} \operatorname{sech} x &= - \operatorname{sech} x \tanh x \\
-\frac{d}{dx} \operatorname{csch} x &= - \operatorname{csch} x \coth x
+\frac{d}{dx} \csc x &= -\csc x \cot x \\
+\frac{d}{dx} \operatorname{sech} x &= -\operatorname{sech} x \tanh x \\
+\frac{d}{dx} \operatorname{csch} x &= -\operatorname{csch} x \coth x
 \end{align*}
 \]
 ~~~
 
-!id: pr9EizVbVP
-!front: \[ \frac{d}{dx} \csc x \]
-!back: \[ - \csc x \cot x \]
+!id: Sjs1XlwPsE
+!text:
+\[
+\frac{d}{dx} {{c2::\csc x::\ldots}}
+=
+{{c1::-\csc x \cot x::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
 \frac{d}{dx} \sec x &= \sec x \tan x \\
-\frac{d}{dx} \csc x &= - \csc x \cot x \\
-\frac{d}{dx} \operatorname{sech} x &= - \operatorname{sech} x \tanh x \\
-\frac{d}{dx} \operatorname{csch} x &= - \operatorname{csch} x \coth x
+\frac{d}{dx} \csc x &= -\csc x \cot x \\
+\frac{d}{dx} \operatorname{sech} x &= -\operatorname{sech} x \tanh x \\
+\frac{d}{dx} \operatorname{csch} x &= -\operatorname{csch} x \coth x
 \end{align*}
 \]
 ~~~
 
-!id: 9F87TrKW4O
-!front: \[ \frac{d}{dx} \sin^{-1} x \]
-!back: \[ \frac{1}{\sqrt{1 - x^2}} \]
+!id: 7zeaG6d155
+!text:
+\[
+\frac{d}{dx} {{c2::\sin^{-1} x::\ldots}}
+=
+{{c1::\frac{1}{ \sqrt{1 - x^2} }::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
@@ -199,9 +263,13 @@
 \]
 ~~~
 
-!id: 6inbyeofyZ
-!front: \[ \frac{d}{dx} \cos^{-1} x \]
-!back: \[ \frac{-1}{\sqrt{1 - x^2}} \]
+!id: K8dEzzGKlO
+!text:
+\[
+\frac{d}{dx} {{c2::\cos^{-1} x::\ldots}}
+=
+{{c1::\frac{-1}{ \sqrt{1 - x^2} }::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
@@ -213,9 +281,13 @@
 \]
 ~~~
 
-!id: vecrIpdDYu
-!front: \[ \frac{d}{dx} \tan^{-1} x \]
-!back: \[ \frac{1}{1 + x^2} \]
+!id: wiOugx4jUm
+!text:
+\[
+\frac{d}{dx} {{c2::\tan^{-1} x::\ldots}}
+=
+{{c1::\frac{1}{1 + x^2}::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
@@ -227,9 +299,13 @@
 \]
 ~~~
 
-!id: rbADQeQewZ
-!front: \[ \frac{d}{dx} \cot^{-1} x \]
-!back: \[ \frac{-1}{1 + x^2} \]
+!id: RNhVRNAfSu
+!text:
+\[
+\frac{d}{dx} {{c2::\cot^{-1} x::\ldots}}
+=
+{{c1::\frac{-1}{1 + x^2}::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
@@ -241,9 +317,13 @@
 \]
 ~~~
 
-!id: ayh94WrgD3
-!front: \[ \frac{d}{dx} \sec^{-1} x \]
-!back: \[ \frac{1}{|x| \sqrt{x^2 - 1}} \]
+!id: HqNvqfc8sK
+!text:
+\[
+\frac{d}{dx} {{c2::\sec^{-1} x::\ldots}}
+=
+{{c1::\frac{1}{ |x| \sqrt{x^2 - 1} }::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
@@ -255,9 +335,13 @@
 \]
 ~~~
 
-!id: dGRb1nRKhO
-!front: \[ \frac{d}{dx} \csc^{-1} x \]
-!back: \[ \frac{-1}{|x| \sqrt{x^2 - 1}} \]
+!id: pgYkMoL28Q
+!text:
+\[
+\frac{d}{dx} {{c2::\csc^{-1} x::\ldots}}
+=
+{{c1::\frac{-1}{ |x| \sqrt{x^2 - 1} }::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
@@ -271,93 +355,121 @@
 
 !tags: Math Calculus Derivative Hyperbolic Identity
 
-!id: sW3oLGdGGc
-!front: \[ \frac{d}{dx} \sinh x \]
-!back: \[ \cosh x \]
+!id: AXRxzoK39Q
+!text:
+\[
+\frac{d}{dx} {{c2::\sinh x::\ldots}}
+=
+{{c1::\cosh x::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
 \frac{d}{dx} \sin x &= \cos x \\
-\frac{d}{dx} \cos x &= - \sin x \\
+\frac{d}{dx} \cos x &= -\sin x \\
 \frac{d}{dx} \sinh x &= \cosh x \\
 \frac{d}{dx} \cosh x &= \sinh x
 \end{align*}
 \]
 ~~~
 
-!id: 8SR8Vx2N38
-!front: \[ \frac{d}{dx} \cosh x \]
-!back: \[ \sinh x \]
+!id: ULZT18IEsU
+!text:
+\[
+\frac{d}{dx} {{c2::\cosh x::\ldots}}
+=
+{{c1::\sinh x::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
 \frac{d}{dx} \sin x &= \cos x \\
-\frac{d}{dx} \cos x &= - \sin x \\
+\frac{d}{dx} \cos x &= -\sin x \\
 \frac{d}{dx} \sinh x &= \cosh x \\
 \frac{d}{dx} \cosh x &= \sinh x
 \end{align*}
 \]
 ~~~
 
-!id: vr8mQGKvvf
-!front: \[ \frac{d}{dx} \tanh x \]
-!back: \[ \operatorname{sech}^2 x \]
+!id: qb9uejuVx4
+!text:
+\[
+\frac{d}{dx} {{c2::\tanh x::\ldots}}
+=
+{{c1::\operatorname{sech}^2 x::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
 \frac{d}{dx} \tan x &= \sec^2 x \\
-\frac{d}{dx} \cot x &= - \csc^2 x \\
+\frac{d}{dx} \cot x &= -\csc^2 x \\
 \frac{d}{dx} \tanh x &= \operatorname{sech}^2 x \\
-\frac{d}{dx} \coth x &= - \operatorname{csch}^2 x
+\frac{d}{dx} \coth x &= -\operatorname{csch}^2 x
 \end{align*}
 \]
 ~~~
 
-!id: gpr53fTaO0
-!front: \[ \frac{d}{dx} \coth x \]
-!back: \[ - \operatorname{csch}^2 x \]
+!id: ttfO4G5sxl
+!text:
+\[
+\frac{d}{dx} {{c2::\coth x::\ldots}}
+=
+{{c1::-\operatorname{csch}^2 x::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
 \frac{d}{dx} \tan x &= \sec^2 x \\
-\frac{d}{dx} \cot x &= - \csc^2 x \\
+\frac{d}{dx} \cot x &= -\csc^2 x \\
 \frac{d}{dx} \tanh x &= \operatorname{sech}^2 x \\
-\frac{d}{dx} \coth x &= - \operatorname{csch}^2 x
+\frac{d}{dx} \coth x &= -\operatorname{csch}^2 x
 \end{align*}
 \]
 ~~~
 
-!id: FP6hil5TLC
-!front: \[ \frac{d}{dx} \operatorname{sech} x \]
-!back: \[ - \operatorname{sech} x \tanh x \]
+!id: HhVat8Mzfh
+!text:
+\[
+\frac{d}{dx} {{c2::\operatorname{sech} x::\ldots}}
+=
+{{c1::-\operatorname{sech} x \tanh x::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
 \frac{d}{dx} \sec x &= \sec x \tan x \\
-\frac{d}{dx} \csc x &= - \csc x \cot x \\
-\frac{d}{dx} \operatorname{sech} x &= - \operatorname{sech} x \tanh x \\
-\frac{d}{dx} \operatorname{csch} x &= - \operatorname{csch} x \coth x
+\frac{d}{dx} \csc x &= -\csc x \cot x \\
+\frac{d}{dx} \operatorname{sech} x &= -\operatorname{sech} x \tanh x \\
+\frac{d}{dx} \operatorname{csch} x &= -\operatorname{csch} x \coth x
 \end{align*}
 \]
 ~~~
 
-!id: h2HLdUpKAh
-!front: \[ \frac{d}{dx} \operatorname{csch} x \]
-!back: \[ - \operatorname{csch} x \coth x \]
+!id: P7fC3P4Mb6
+!text:
+\[
+\frac{d}{dx} {{c2::\operatorname{csch} x::\ldots}}
+=
+{{c1::-\operatorname{csch} x \coth x::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
 \frac{d}{dx} \sec x &= \sec x \tan x \\
-\frac{d}{dx} \csc x &= - \csc x \cot x \\
-\frac{d}{dx} \operatorname{sech} x &= - \operatorname{sech} x \tanh x \\
-\frac{d}{dx} \operatorname{csch} x &= - \operatorname{csch} x \coth x
+\frac{d}{dx} \csc x &= -\csc x \cot x \\
+\frac{d}{dx} \operatorname{sech} x &= -\operatorname{sech} x \tanh x \\
+\frac{d}{dx} \operatorname{csch} x &= -\operatorname{csch} x \coth x
 \end{align*}
 \]
 ~~~
 
-!id: diwiHdFdQn
-!front: \[ \frac{d}{dx} \sinh^{-1} x \]
-!back: \[ \frac{1}{\sqrt{x^2 + 1}} \]
+!id: 3Wz7tUpEXr
+!text:
+\[
+\frac{d}{dx} {{c2::\sinh^{-1} x::\ldots}}
+=
+{{c1::\frac{1}{ \sqrt{x^2 + 1} }::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
@@ -369,9 +481,13 @@
 \]
 ~~~
 
-!id: 9Ahcym3no2
-!front: \[ \frac{d}{dx} \cosh^{-1} x \]
-!back: \[ \frac{1}{\sqrt{x^2 - 1}} \]
+!id: eYVovCWipu
+!text:
+\[
+\frac{d}{dx} {{c2::\cosh^{-1} x::\ldots}}
+=
+{{c1::\frac{1}{ \sqrt{x^2 - 1} }::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
@@ -383,9 +499,13 @@
 \]
 ~~~
 
-!id: dJgOISLb7D
-!front: \[ \frac{d}{dx} \tanh^{-1} x \]
-!back: \[ \frac{1}{1 - x^2}, \quad |x| < 1 \]
+!id: r33sr5eOQn
+!text:
+\[
+\frac{d}{dx} {{c2::\tanh^{-1} x::\ldots}}
+=
+{{c1::\frac{1}{1 - x^2}, \quad |x| < 1::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
@@ -397,9 +517,13 @@
 \]
 ~~~
 
-!id: DhLYbyl0mh
-!front: \[ \frac{d}{dx} \coth^{-1} x \]
-!back: \[ \frac{1}{1 - x^2}, \quad |x| > 1 \]
+!id: lr9N09sidR
+!text:
+\[
+\frac{d}{dx} {{c2::\coth^{-1} x::\ldots}}
+=
+{{c1::\frac{1}{1 - x^2}, \quad |x| > 1::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
@@ -411,9 +535,13 @@
 \]
 ~~~
 
-!id: q3oNUtd5n5
-!front: \[ \frac{d}{dx} \operatorname{sech}^{-1} x \]
-!back: \[ \frac{-1}{x \sqrt{1 - x^2}} \]
+!id: tGEsRyzPvM
+!text:
+\[
+\frac{d}{dx} {{c2::\operatorname{sech}^{-1} x::\ldots}}
+=
+{{c1::\frac{-1}{ x \sqrt{1 - x^2} }::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
@@ -425,9 +553,13 @@
 \]
 ~~~
 
-!id: reP8gl2N4e
-!front: \[ \frac{d}{dx} \operatorname{csch}^{-1} x \]
-!back: \[ \frac{-1}{|x| \sqrt{1 + x^2}} \]
+!id: 5SSSvwA7yL
+!text:
+\[
+\frac{d}{dx} {{c2::\operatorname{csch}^{-1} x::\ldots}}
+=
+{{c1::\frac{-1}{ |x| \sqrt{1 + x^2} }::\ldots}}
+\]
 !related:
 \[
 \begin{align*}

@@ -1,10 +1,9 @@
 !deck: Math Identities
 !tags: Math Calculus Identity Laplace-Transform
-!type: Basic Math (and reversed card)
+!type: Cloze Math
 
-!id: NZYddeTg9i
-!front: \[ \mathscr{L} \{ 1 \} \]
-!back: \[ \frac{1}{s} \]
+!id: QTvuUZHeoc
+!text: \[ \mathscr{L} \{ {{c2::1::\ldots}} \} = {{c1::\frac{1}{s}::\ldots}} \]
 !related:
 \[
 \begin{align*}
@@ -14,9 +13,8 @@
 \]
 ~~~
 
-!id: 3KRahvnI04
-!front: \[ \mathscr{L} \{ t^n \}, \, n = 1, 2, 3, \ldots \]
-!back: \[ \frac{n!}{s^{n+1}} \]
+!id: iXsVLLDXns
+!text: \[ \mathscr{L} \{ {{c2::t^n::\ldots}} \}, \, {{c2::n = 1, 2, 3, \ldots::\ldots}} = {{c1::\frac{n!}{ s^{n + 1} }::\ldots}} \]
 !related:
 \[
 \begin{align*}
@@ -26,9 +24,8 @@
 \]
 ~~~
 
-!id: LNfz4L5hou
-!front: \[ \mathscr{L} \{ \sin(at) \} \]
-!back: \[ \frac{a}{s^2 + a^2} \]
+!id: PvgQ6jEvcc
+!text: \[ \mathscr{L} \{ {{c2::\sin(at)::\ldots}} \} = {{c1::\frac{a}{s^2 + a^2}::\ldots}} \]
 !related:
 \[
 \begin{align*}
@@ -40,9 +37,8 @@
 \]
 ~~~
 
-!id: tN7TTdycA6
-!front: \[ \mathscr{L} \{ \cos(at) \} \]
-!back: \[ \frac{s}{s^2 + a^2} \]
+!id: KxBr2RjOR9
+!text: \[ \mathscr{L} \{ {{c2::\cos(at)::\ldots}} \} = {{c1::\frac{s}{s^2 + a^2}::\ldots}} \]
 !related:
 \[
 \begin{align*}
@@ -54,9 +50,8 @@
 \]
 ~~~
 
-!id: McDbGiS3cb
-!front: \[ \mathscr{L} \{ \sin(at + b) \} \]
-!back: \[ \frac{s \sin(b) + a \cos(b)}{s^2 + a^2} \]
+!id: JbxidpgYmY
+!text: \[ \mathscr{L} \{ {{c2::\sin(at + b)::\ldots}} \} = {{c1::\frac{s \sin(b) + a \cos(b)}{s^2 + a^2}::\ldots}} \]
 !related:
 \[
 \begin{align*}
@@ -66,9 +61,8 @@
 \]
 ~~~
 
-!id: 6jEH3lz324
-!front: \[ \mathscr{L} \{ \cos(at + b) \} \]
-!back: \[ \frac{s \cos(b) - a \sin(b)}{s^2 + a^2} \]
+!id: 0m5XTDb891
+!text: \[ \mathscr{L} \{ {{c2::\cos(at + b)::\ldots}} \} = {{c1::\frac{s \cos(b) - a \sin(b)}{s^2 + a^2}::\ldots}} \]
 !related:
 \[
 \begin{align*}
@@ -78,9 +72,8 @@
 \]
 ~~~
 
-!id: UNkLsfMEZl
-!front: \[ \mathscr{L} \{ t \sin(at) \} \]
-!back: \[ \frac{2as}{(s^2 + a^2)^2} \]
+!id: pA5dGLSWi3
+!text: \[ \mathscr{L} \{ {{c2::t \sin(at)::\ldots}} \} = {{c1::\frac{2as}{(s^2 + a^2)^2}::\ldots}} \]
 !related:
 \[
 \begin{align*}
@@ -90,9 +83,8 @@
 \]
 ~~~
 
-!id: vZYd04OPDq
-!front: \[ \mathscr{L} \{ t \cos(at) \} \]
-!back: \[ \frac{s^2 - a^2}{(s^2 + a^2)^2} \]
+!id: BUJlGZQHIW
+!text: \[ \mathscr{L} \{ {{c2::t \cos(at)::\ldots}} \} = {{c1::\frac{s^2 - a^2}{(s^2 + a^2)^2}::\ldots}} \]
 !related:
 \[
 \begin{align*}
@@ -102,9 +94,8 @@
 \]
 ~~~
 
-!id: 6aPO3ZuPmQ
-!front: \[ \mathscr{L} \{ \sinh(at) \} \]
-!back: \[ \frac{a}{s^2 - a^2} \]
+!id: kne3zkT8gZ
+!text: \[ \mathscr{L} \{ {{c2::\sinh(at)::\ldots}} \} = {{c1::\frac{a}{s^2 - a^2}::\ldots}} \]
 !related:
 \[
 \begin{align*}
@@ -116,9 +107,8 @@
 \]
 ~~~
 
-!id: wDd9biq9eq
-!front: \[ \mathscr{L} \{ \cosh(at) \} \]
-!back: \[ \frac{s}{s^2 - a^2} \]
+!id: VdLnoL7O7p
+!text: \[ \mathscr{L} \{ {{c2::\cosh(at)::\ldots}} \} = {{c1::\frac{s}{s^2 - a^2}::\ldots}} \]
 !related:
 \[
 \begin{align*}
@@ -130,26 +120,26 @@
 \]
 ~~~
 
-!id: glAQ8aaVKP
-!front: \[ \mathscr{L} \{ e^{ct} f(t) \} \]
-!back: \[ F(s - c) \]
+!id: 5Yyk0c34WV
+!text: \[ \mathscr{L} \{ {{c2::e^{ct} f(t)::\ldots}} \} = {{c1::F(s - c)::\ldots}} \]
+!back extra: First shifting property.
 ~~~
 
-!id: APrkyWHpY9
-!front: \[ \mathscr{L} \{ e^{ct} \} \]
-!back: \[ \frac{1}{s - c} \]
+!id: fdOn6cVnzl
+!text: \[ \mathscr{L} \{ {{c2::e^{ct}::\ldots}} \} = {{c1::\frac{1}{s - c}::\ldots}} \]
+!back extra: First shifting property.
 !related: \[ \mathscr{L} \{ e^{ct} f(t) \} = F(s - c) \]
 ~~~
 
-!id: EhODildxyc
-!front: \[ \mathscr{L} \{ e^{ct} t^n \}, \, n = 1, 2, 3, \ldots \]
-!back: \[ \frac{n!}{(s - c)^{n + 1}} \]
+!id: w1LANadzEm
+!text: \[ \mathscr{L} \{ {{c2::e^{ct} t^n::\ldots}} \}, \, {{c2::n = 1, 2, 3, \ldots::\ldots}} = {{c1::\frac{n!}{ (s - c)^{n + 1} }::\ldots}} \]
+!back extra: First shifting property.
 !related: \[ \mathscr{L} \{ e^{ct} f(t) \} = F(s - c) \]
 ~~~
 
-!id: h2YfE3Kcfk
-!front: \[ \mathscr{L} \{ e^{ct} \sin(at) \} \]
-!back: \[ \frac{a}{(s - c)^2 + a^2} \]
+!id: 7o3R4MwOB9
+!text: \[ \mathscr{L} \{ {{c2::e^{ct} \sin(at)::\ldots}} \} = {{c1::\frac{a}{(s - c)^2 + a^2}::\ldots}} \]
+!back extra: First shifting property.
 !related:
 \[
 \newcommand{\eqrow}{\vphantom{\frac{s-c}{(s-c)^2-a^2}}}
@@ -163,9 +153,9 @@
 \]
 ~~~
 
-!id: Wb7fchDmCP
-!front: \[ \mathscr{L} \{ e^{ct} \cos(at) \} \]
-!back: \[ \frac{s - c}{(s - c)^2 + a^2} \]
+!id: xbx26KkwSa
+!text: \[ \mathscr{L} \{ {{c2::e^{ct} \cos(at)::\ldots}} \} = {{c1::\frac{s - c}{(s - c)^2 + a^2}::\ldots}} \]
+!back extra: First shifting property.
 !related:
 \[
 \newcommand{\eqrow}{\vphantom{\frac{s-c}{(s-c)^2-a^2}}}
@@ -179,9 +169,9 @@
 \]
 ~~~
 
-!id: JPst7GCP0E
-!front: \[ \mathscr{L} \{ e^{ct} \sinh(at) \} \]
-!back: \[ \frac{a}{(s - c)^2 - a^2} \]
+!id: O2F8QMgJ7A
+!text: \[ \mathscr{L} \{ {{c2::e^{ct} \sinh(at)::\ldots}} \} = {{c1::\frac{a}{(s - c)^2 - a^2}::\ldots}} \]
+!back extra: First shifting property.
 !related:
 \[
 \newcommand{\eqrow}{\vphantom{\frac{s-c}{(s-c)^2-a^2}}}
@@ -195,9 +185,9 @@
 \]
 ~~~
 
-!id: wyNWqYlFyq
-!front: \[ \mathscr{L} \{ e^{ct} \cosh(at) \} \]
-!back: \[ \frac{s - c}{(s - c)^2 - a^2} \]
+!id: eyfqRjb5lb
+!text: \[ \mathscr{L} \{ {{c2::e^{ct} \cosh(at)::\ldots}} \} = {{c1::\frac{s - c}{(s - c)^2 - a^2}::\ldots}} \]
+!back extra: First shifting property.
 !related:
 \[
 \newcommand{\eqrow}{\vphantom{\frac{s-c}{(s-c)^2-a^2}}}
@@ -211,9 +201,9 @@
 \]
 ~~~
 
-!id: gqdLJbeebN
-!front: \[ \mathscr{L} \{ \delta (t - c) \}, \quad c \ge 0 \]
-!back: \[ e^{-cs} \]
+!id: eWZVpXHZHT
+!text: \[ \mathscr{L} \{ {{c2::\delta (t - c)::\ldots}} \} = {{c1::e^{-cs}::\ldots}}, \quad c \ge 0 \]
+!back extra: Second shifting property.
 !related:
 \[
 \begin{align*}
@@ -223,9 +213,9 @@
 \]
 ~~~
 
-!id: y3ZWYAOBIR
-!front: \[ \mathscr{L} \{ u(t - c) \}, \quad c \ge 0 \]
-!back: \[ e^{-cs} \frac{1}{s} \]
+!id: zPCcs1lXNy
+!text: \[ \mathscr{L} \{ {{c2::u(t - c)::\ldots}} \} = {{c1::e^{-cs} \frac{1}{s}::\ldots}}, \quad c \ge 0 \]
+!back extra: Second shifting property.
 !related:
 \[
 \begin{align*}
@@ -235,9 +225,9 @@
 \]
 ~~~
 
-!id: jFPp0XWKuj
-!front: \[ \mathscr{L} \{ u(t - c) f(t - c) \}, \quad c \ge 0 \]
-!back: \[ e^{-cs} F(s) \]
+!id: adMtfr9qBK
+!text: \[ \mathscr{L} \{ {{c2::u(t - c) f(t - c)::\ldots}} \} = {{c1::e^{-cs} F(s)::\ldots}}, \quad c \ge 0 \]
+!back extra: Second shifting property.
 !related:
 \[
 \begin{align*}
@@ -247,9 +237,9 @@
 \]
 ~~~
 
-!id: jwx7yTQrI0
-!front: \[ \mathscr{L} \{ u(t - c) f(t) \}, \quad c \ge 0 \]
-!back: \[ e^{-cs} \mathscr{L} \{ f(t + c) \} \]
+!id: kIbJOsABVa
+!text: \[ \mathscr{L} \{ {{c2::u(t - c) f(t)::\ldots}} \} = {{c1::e^{-cs} \mathscr{L} \{ f(t + c) \}::\ldots}}, \quad c \ge 0 \]
+!back extra: Second shifting property.
 !related:
 \[
 \begin{align*}
@@ -259,9 +249,8 @@
 \]
 ~~~
 
-!id: DBrCzTevVh
-!front: \[ \mathscr{L} \left\{ \frac{f(t)}{t} \right\} \]
-!back: \[ \int_{s}^{\infty} F(u) \, du \]
+!id: B21mgFJd11
+!text: \[ \mathscr{L} \left\{ {{c2::\frac{f(t)}{t}::\ldots}} \right\} = {{c1::\int_{s}^{\infty} F(u) \, du::\ldots}} \]
 !related:
 \[
 \begin{align*}
@@ -271,9 +260,8 @@
 \]
 ~~~
 
-!id: h4Kgni8vFp
-!front: \[ \mathscr{L} \left\{ \int_{0}^{t} f(u) \, du \right\} \]
-!back: \[ \frac{F(s)}{s} \]
+!id: UFaxrl14aM
+!text: \[ \mathscr{L} \left\{ {{c2::\int_{0}^{t} f(u) \, du::\ldots}} \right\} = {{c1::\frac{F(s)}{s}::\ldots}} \]
 !related:
 \[
 \begin{align*}
@@ -283,9 +271,8 @@
 \]
 ~~~
 
-!id: f1zJutGe2P
-!front: \[ \mathscr{L} \{ f'(t) \} \]
-!back: \[ s F(s) - f(0) \]
+!id: J3EhdjUjZz
+!text: \[ \mathscr{L} \{ {{c2::f'(t)::\ldots}} \} = {{c1::s F(s) - f(0)::\ldots}} \]
 !related:
 \[
 \begin{align*}
@@ -295,9 +282,8 @@
 \]
 ~~~
 
-!id: jTbt1RuKOo
-!front: \[ \mathscr{L} \{ f''(t) \} \]
-!back: \[ s^2 F(s) - s f(0) - f'(0) \]
+!id: P2i1umjr8F
+!text: \[ \mathscr{L} \{ {{c2::f''(t)::\ldots}} \} = {{c1::s^2 F(s) - s f(0) - f'(0)::\ldots}} \]
 !related:
 \[
 \begin{align*}

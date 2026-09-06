@@ -1,11 +1,15 @@
 !deck: Math Identities
 !tags: Math Calculus Identity Limit
-!type: Basic Math
+!type: Cloze Math
 
-!id: vjtstp5RFK
-!front: \[ e = \lim_{n \to \infty} \ldots \]
-!back: \[ e = \lim_{n \to \infty} \left( 1 + \frac{1}{n} \right)^n \]
-!extra:
+!id: Y66TinmI3l
+!text:
+\[
+{{c2::e::\ldots}}
+=
+\lim_{n \to \infty} {{c1::\left( 1 + \frac{1}{n} \right)^n::\ldots}}
+\]
+!back extra:
 For positive integers \( n \), take logarithms to turn the power into a product:
 \[
 \begin{align*}
@@ -21,10 +25,14 @@ By continuity of the exponential function, exponentiating gives
 \[ \left(1 + \frac{1}{n}\right)^n = \exp\left( L_n \right) \to e^1 = e. \]
 ~~~
 
-!id: 5tnHPoehhw
-!front: \[ e^x = \lim_{n \to \infty} \ldots \]
-!back: \[ e^x = \lim_{n \to \infty} \left( 1 + \frac{x}{n} \right)^n \]
-!extra:
+!id: s3DJR4PMXP
+!text:
+\[
+{{c2::e^x::\ldots}}
+=
+\lim_{n \to \infty} {{c1::\left( 1 + \frac{x}{n} \right)^n::\ldots}}
+\]
+!back extra:
 Fix \( x \in \mathbb{R} \). For \( x = 0 \), both sides equal \( 1 \). Otherwise, for sufficiently large positive integers \( n \), we have \( 1 + x/n > 0 \), so take logarithms to turn the power into a product:
 \[
 \begin{align*}
@@ -40,10 +48,14 @@ By continuity of the exponential function, exponentiating gives
 \[ \left(1 + \frac{x}{n}\right)^n = \exp\left( L_n \right) \to e^x. \]
 ~~~
 
-!id: co0b8kRcJm
-!front: \[ e = \lim_{h \to 0} \ldots \]
-!back: \[ e = \lim_{h \to 0} \left( 1 + h \right)^{1 / h} \]
-!extra:
+!id: ctqWbhBToB
+!text:
+\[
+{{c2::e::\ldots}}
+=
+\lim_{h \to 0} {{c1::\left( 1 + h \right)^{1 / h}::\ldots}}
+\]
+!back extra:
 For \( 0 < |h| < 1 \), we have \( 1+h > 0 \), so take logarithms to turn the power into a product:
 \[
 \begin{align*}
@@ -59,10 +71,14 @@ By continuity of the exponential function, exponentiating gives
 \[ (1+h)^{1/h} = \exp\left( L_h \right) \to e^1 = e. \]
 ~~~
 
-!id: RsC1HP4Yhn
-!front: \[ e^x = \lim_{h \to 0} \ldots \]
-!back: \[ e^x = \lim_{h \to 0} \left( 1 + h \right)^{x / h} \]
-!extra:
+!id: kH3ZZfYUe1
+!text:
+\[
+{{c2::e^x::\ldots}}
+=
+\lim_{h \to 0} {{c1::\left( 1 + h \right)^{x / h}::\ldots}}
+\]
+!back extra:
 Fix \( x \in \mathbb{R} \). For \( 0 < |h| < 1 \), we have \( 1+h > 0 \), so take logarithms to turn the power into a product:
 \[
 \begin{align*}
@@ -78,10 +94,14 @@ By continuity of the exponential function, exponentiating gives
 \[ (1+h)^{x/h} = \exp\left( L_h \right) \to e^x. \]
 ~~~
 
-!id: zVX3ZAqxkr
-!front: \[ \ln a = \lim_{x \to \ldots} \ldots \]
-!back: \[ \ln a = \lim_{x \to 0} \frac{a^x - 1}{x} \]
-!extra:
+!id: xccjUZGTRa
+!text:
+\[
+{{c2::\ln a::\ldots}}
+=
+{{c1::\lim_{x \to 0} \frac{a^x - 1}{x}::\lim_{x \to \ldots} \ldots}}, \quad a > 0
+\]
+!back extra:
 Fix \( a > 0 \). For \( a = 1 \), the quotient is \( 0 \) for every \( x \ne 0 \), so the limit equals \( \ln 1 = 0 \). Otherwise, write the power in exponential form:
 \[
 \begin{align*}
@@ -99,27 +119,28 @@ The fraction is the difference quotient for \( \exp \) at \( 0 \), with step \( 
 The special case \( a = e \) gives \( \lim_{x \to 0} \dfrac{e^x - 1}{x} = 1 \).
 ~~~
 
-!id: eD2Z0zWOJ6
-!front: \[ \lim_{n \to \infty} n^{1/n} = \ldots \]
-!back: \[ \lim_{n \to \infty} n^{1/n} = 1 \]
-!extra:
+!id: 4gyUssEC4i
+!text:
+\[
+\lim_{n \to \infty} n^{1/n}
+=
+{{c1::1::\ldots}}
+\]
+!back extra:
 Write \( n^{1/n} = e^{\ln n / n} \). By L'Hôpital's rule applied to \( \ln x / x \) as \( x \to \infty \),
 \[ \lim_{x \to \infty} \frac{\ln x}{x} = \lim_{x \to \infty} \frac{1/x}{1} = 0, \]
 and since \( \exp \) is continuous,
 \[ n^{1/n} = e^{\ln n / n} \to e^0 = 1. \]
 ~~~
 
-!id: HFOtuFozwk
-!front: \[ \lim_{x \to \infty} \frac{x^n}{e^x} = \ldots \]
-!back: \[ \lim_{x \to \infty} \frac{x^n}{e^x} = 0 \]
+!id: hHI7p525Ms
+!text: \[ \lim_{x \to \infty} \frac{x^n}{e^x} = {{c1::0::\ldots}} \]
 ~~~
 
-!id: C7fRXFwhSJ
-!front: \[ \lim_{x \to \infty} \frac{\ln x}{x^a} = \ldots, \quad a > 0 \]
-!back: \[ \lim_{x \to \infty} \frac{\ln x}{x^a} = 0, \quad a > 0 \]
+!id: HoJDXwwlgd
+!text: \[ \lim_{x \to \infty} \frac{\ln x}{x^a} = {{c1::0::\ldots}}, \quad a > 0 \]
 ~~~
 
-!id: ZptgdpueDf
-!front: \[ \lim_{n \to \infty} \frac{x^n}{n!} = \ldots \]
-!back: \[ \lim_{n \to \infty} \frac{x^n}{n!} = 0 \]
+!id: AIxLlhWerJ
+!text: \[ \lim_{n \to \infty} \frac{x^n}{n!} = {{c1::0::\ldots}} \]
 ~~~

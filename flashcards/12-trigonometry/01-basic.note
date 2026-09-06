@@ -1,10 +1,71 @@
 !deck: Math Identities
 !tags: Math Trigonometric Identity
-!type: Basic Math (and reversed card)
+!type: Cloze Math
 
-!id: ZzS2lXt2He
-!front: \[ \sin (\alpha + \beta) \]
-!back: \[ \sin \alpha \cos \beta + \cos \alpha \sin \beta \]
+!id: 1Md8vTm3q0
+!text:
+\[
+{{c2::\sin^2 \theta +\cos^2 \theta::\sin, \cos}}
+=
+{{c1::1::\ldots}}
+\]
+
+Pythagorean Identity
+!related:
+\[
+\begin{align*}
+\sin^2 \theta +\cos^2 \theta &= 1 \\
+\sec^2 \theta -\tan^2 \theta &= 1 \\
+\csc^2 \theta -\cot^2 \theta &= 1
+\end{align*}
+\]
+~~~
+
+!id: HsMBeMRwdm
+!text:
+\[
+{{c2::\sec^2 \theta -\tan^2 \theta::\sec, \tan}}
+=
+{{c1::1::\ldots}}
+\]
+
+Pythagorean Identity
+!related:
+\[
+\begin{align*}
+\sin^2 \theta +\cos^2 \theta &= 1 \\
+\sec^2 \theta -\tan^2 \theta &= 1 \\
+\csc^2 \theta -\cot^2 \theta &= 1
+\end{align*}
+\]
+~~~
+
+!id: FtNRSmnqZ3
+!text:
+\[
+{{c2::\csc^2 \theta -\cot^2 \theta::\csc, \cot}}
+=
+{{c1::1::\ldots}}
+\]
+
+Pythagorean Identity
+!related:
+\[
+\begin{align*}
+\sin^2 \theta +\cos^2 \theta &= 1 \\
+\sec^2 \theta -\tan^2 \theta &= 1 \\
+\csc^2 \theta -\cot^2 \theta &= 1
+\end{align*}
+\]
+~~~
+
+!id: 1VKZovpKwv
+!text:
+\[
+{{c2::\sin (\alpha + \beta)::\ldots}}
+=
+{{c1::\sin \alpha \cos \beta + \cos \alpha \sin \beta::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
@@ -16,9 +77,13 @@
 \]
 ~~~
 
-!id: ADsfPGWz3f
-!front: \[ \sin (\alpha - \beta) \]
-!back: \[ \sin \alpha \cos \beta - \cos \alpha \sin \beta \]
+!id: 6RSQrFLxtk
+!text:
+\[
+{{c2::\sin (\alpha - \beta)::\ldots}}
+=
+{{c1::\sin \alpha \cos \beta - \cos \alpha \sin \beta::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
@@ -30,9 +95,13 @@
 \]
 ~~~
 
-!id: TeJoeef0hz
-!front: \[ \cos (\alpha + \beta) \]
-!back: \[ \cos \alpha \cos \beta - \sin \alpha \sin \beta \]
+!id: 6oEgRqbAXR
+!text:
+\[
+{{c2::\cos (\alpha + \beta)::\ldots}}
+=
+{{c1::\cos \alpha \cos \beta - \sin \alpha \sin \beta::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
@@ -44,9 +113,13 @@
 \]
 ~~~
 
-!id: PdaNlEVwCa
-!front: \[ \cos (\alpha - \beta) \]
-!back: \[ \cos \alpha \cos \beta + \sin \alpha \sin \beta \]
+!id: gWjR1r3wPV
+!text:
+\[
+{{c2::\cos (\alpha - \beta)::\ldots}}
+=
+{{c1::\cos \alpha \cos \beta + \sin \alpha \sin \beta::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
@@ -58,9 +131,13 @@
 \]
 ~~~
 
-!id: oOiCl13qR2
-!front: \[ \tan (\alpha + \beta) \]
-!back: \[ \frac{\tan \alpha + \tan \beta}{1 - \tan \alpha \tan \beta} \]
+!id: lMQweq1Xnv
+!text:
+\[
+{{c2::\tan (\alpha + \beta)::\ldots}}
+=
+{{c1::\dfrac{\tan \alpha + \tan \beta}{1 - \tan \alpha \tan \beta }::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
@@ -70,9 +147,13 @@
 \]
 ~~~
 
-!id: 91hZj24jjD
-!front: \[ \tan (\alpha - \beta) \]
-!back: \[ \frac{\tan \alpha - \tan \beta}{1 + \tan \alpha \tan \beta} \]
+!id: pa7rUEySaj
+!text:
+\[
+{{c2::\tan (\alpha - \beta)::\ldots}}
+=
+{{c1::\dfrac{\tan \alpha - \tan \beta}{1 + \tan \alpha \tan \beta }::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
@@ -82,9 +163,13 @@
 \]
 ~~~
 
-!id: t9KssxdSSc
-!front: \[ \sin (2 \theta) \]
-!back: \[ 2 \sin \theta \cos \theta \]
+!id: baim5FdaYh
+!text:
+\[
+{{c2::\sin (2 \theta)::\ldots}}
+=
+{{c1::2 \sin \theta \cos \theta::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
@@ -95,12 +180,19 @@
 \]
 ~~~
 
-!id: aeqXcKvao0
-!front: \[ \cos (2 \theta) \]
-!back:
-\[ \cos^2 \theta - \sin^2 \theta \]
-\[ 1 - 2 \sin^2 \theta \]
-\[ 2 \cos^2 \theta - 1 \]
+!id: sKATIcGYNW
+!text:
+\[
+\begin{align*}
+{{c4::\cos (2 \theta)::\ldots}}
+&=
+{{c1::\cos^2 \theta - \sin^2 \theta::\ldots}} \\
+&=
+{{c2::1 - 2 \sin^2 \theta::\ldots}} \\
+&=
+{{c3::2 \cos^2 \theta - 1::\ldots}}
+\end{align*}
+\]
 !related:
 \[
 \begin{align*}
@@ -111,11 +203,15 @@
 \]
 ~~~
 
-!id: 7WYmjBDTz0
-!front: \[ \tan (2 \theta) \]
-!back:
-\[ \frac{2 \tan \theta}{1 - \tan^2 \theta} \]
-\[ \frac{2}{\cot \theta - \tan \theta} \]
+!id: sZihjh7TJW
+!text:
+\[
+{{c3::\tan (2 \theta)::\ldots}}
+=
+{{c1::\dfrac{2 \tan \theta}{1 - \tan^2 \theta}::\ldots}}
+=
+{{c2::\frac{2}{\cot \theta - \tan \theta}::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
@@ -126,9 +222,13 @@
 \]
 ~~~
 
-!id: wB2mTXY2QO
-!front: \[ \sin^2 \theta \]
-!back: \[ \frac{1 - \cos (2 \theta)}{2} \]
+!id: Z6Fgz5Gg9I
+!text:
+\[
+{{c2::\sin^2 \theta::\ldots}}
+=
+{{c1::\frac{1 - \cos (2 \theta)}{2}::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
@@ -139,9 +239,13 @@
 \]
 ~~~
 
-!id: dPXtwF6cC0
-!front: \[ \cos^2 \theta \]
-!back: \[ \frac{1 + \cos (2 \theta)}{2} \]
+!id: xzljoH83Sq
+!text:
+\[
+{{c2::\cos^2 \theta::\ldots}}
+=
+{{c1::\frac{1 + \cos (2 \theta)}{2}::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
@@ -152,9 +256,13 @@
 \]
 ~~~
 
-!id: zyDdsX7qFP
-!front: \[ \tan^2 \theta \]
-!back: \[ \frac{1 - \cos (2 \theta)}{1 + \cos (2 \theta)} \]
+!id: fVirj08Oxi
+!text:
+\[
+{{c2::\tan^2 \theta::\ldots}}
+=
+{{c1::\frac{1 - \cos (2 \theta)}{1 + \cos (2 \theta)}::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
@@ -165,9 +273,13 @@
 \]
 ~~~
 
-!id: cZe0y3LxAE
-!front: \[ \sin \frac{\theta}{2} \]
-!back: \[ \pm \sqrt{ \frac{1 - \cos \theta}{2} } \]
+!id: UoDHOQAxNR
+!text:
+\[
+{{c2::\sin \frac{\theta}{2}::\ldots}}
+=
+{{c1::\pm \sqrt{ \frac{1 - \cos \theta}{2} }::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
@@ -178,9 +290,13 @@
 \]
 ~~~
 
-!id: iTWZ8IuTCO
-!front: \[ \cos \frac{\theta}{2} \]
-!back: \[ \pm \sqrt{ \frac{1 + \cos \theta}{2} } \]
+!id: hhCmPTUF0S
+!text:
+\[
+{{c2::\cos \frac{\theta}{2}::\ldots}}
+=
+{{c1::\pm \sqrt{ \frac{1 + \cos \theta}{2} }::\ldots}}
+\]
 !related:
 \[
 \begin{align*}
@@ -191,12 +307,19 @@
 \]
 ~~~
 
-!id: tK0W4ATKJd
-!front: \[ \tan \frac{\theta}{2} \]
-!back:
-\[ \pm \sqrt{ \frac{1 - \cos \theta}{1 + \cos \theta} } \]
-\[ \frac{\sin \theta}{1 + \cos \theta} \]
-\[ \frac{1 - \cos \theta}{\sin \theta} \]
+!id: mvtTtpk5BZ
+!text:
+\[
+\begin{align*}
+{{c4::\tan \frac{\theta}{2}::\ldots}}
+&=
+{{c1::\pm \sqrt{ \frac{1 - \cos \theta}{1 + \cos \theta} }::\ldots}} \\
+&=
+{{c2::\frac{\sin \theta}{1 + \cos \theta}::\ldots}} \\
+&=
+{{c3::\frac{1 - \cos \theta}{\sin \theta}::\ldots}}
+\end{align*}
+\]
 !related:
 \[
 \begin{align*}

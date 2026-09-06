@@ -1,4 +1,4 @@
-!deck: Math Identities (Cloze)
+!deck: Math Identities
 !tags: Math Trigonometric Hyperbolic Identity
 !type: Cloze Math
 
@@ -44,5 +44,9 @@ De Moivre's Formula
 \]
 
 \( n \)th Roots of Unity
-!back extra: Write \( z = re^{i\theta} \), so \( z^n = r^n e^{in\theta} \). Matching this to \( 1 = e^{i \cdot 2\pi k} \) forces \( r = 1 \) and \( n\theta = 2\pi k \) for some integer \( k \), i.e. \( \theta = 2\pi k / n \). Taking \( k = 0, 1, \ldots, n-1 \) gives all \( n \) distinct roots; larger \( k \) only repeats these by periodicity of \( e^{i\theta} \).
+!back extra:
+- Write \( z = re^{i\theta} \), so \( z^n = r^n e^{in\theta} \).
+- Note that \( 1 = e^{i \cdot 2\pi k} \) for any integer \( k \).
+- Matching moduli and arguments forces \( r = 1 \) and \( n\theta = 2\pi k \), i.e. \( \theta = 2\pi k / n \).
+- Taking \( k = 0, 1, \ldots, n-1 \) gives all \( n \) distinct roots; larger \( k \) only repeats these by the \( 2\pi \)-periodicity of \( e^{i\theta} \).
 ~~~
