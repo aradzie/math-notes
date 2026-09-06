@@ -33,6 +33,16 @@ Euler's Formula
 \]
 
 De Moivre's Formula
+!back extra:
+For \( x \in \mathbb{R} \) and \( n \in \mathbb{Z} \), Euler's formula and the exponential power law give
+\[
+\begin{align*}
+(\cos x + i\sin x)^n
+&= (e^{ix})^n \\
+&= e^{inx} \\
+&= \cos(nx) + i\sin(nx).
+\end{align*}
+\]
 ~~~
 
 !id: kBXzrvvubz
@@ -49,4 +59,33 @@ De Moivre's Formula
 - Note that \( 1 = e^{i \cdot 2\pi k} \) for any integer \( k \).
 - Matching moduli and arguments forces \( r = 1 \) and \( n\theta = 2\pi k \), i.e. \( \theta = 2\pi k / n \).
 - Taking \( k = 0, 1, \ldots, n-1 \) gives all \( n \) distinct roots; larger \( k \) only repeats these by the \( 2\pi \)-periodicity of \( e^{i\theta} \).
+~~~
+
+!id: HyyVM3fcRE
+!text:
+For \( r > 0 \) and \( \theta \in \mathbb{R} \), the **complex logarithm** (all values) is given by
+
+\[
+{{c2::\ln(re^{i\theta})::\ldots}}
+=
+{{c1::\left\{ \ln r + i(\theta + 2\pi k) : k \in \mathbb{Z} \right\}::\ldots}}
+\]
+
+When \( -\pi < \theta \le \pi \) the **principal value** is
+
+\[
+{{c4::\operatorname{Log}(re^{i\theta})::\ldots}}
+=
+{{c3::\ln r + i\theta::\ldots}}
+\]
+!back extra:
+\[
+\begin{align*}
+e^{\ln r + i(\theta + 2\pi k)}
+&= e^{\ln r}e^{i\theta}e^{2\pi ik} \\
+&= re^{i\theta}(\cos(2\pi k) + i \cdot \sin(2\pi k)) \\
+&= re^{i\theta}(1 + i \cdot 0) \\
+&= re^{i\theta}
+\end{align*}
+\]
 ~~~

@@ -1,0 +1,197 @@
+!deck: Math Identities
+!tags: Math Algebra Identity
+!type: Cloze Math
+
+!id: n8Ox3xz9Bw
+!text: \[ {{c2::a^m \cdot a^n::\ldots}} = {{c1::a^{m+n}::\ldots}} \]
+!related:
+\[
+\begin{align*}
+a^m \cdot a^n &= a^{m+n} \\
+\frac{a^m}{a^n} &= a^{m-n}
+\end{align*}
+\]
+~~~
+
+!id: DHiQYpwseb
+!text: \[ {{c2::\frac{a^m}{a^n}::\ldots}} = {{c1::a^{m-n}::\ldots}} \]
+!related:
+\[
+\begin{align*}
+a^m \cdot a^n &= a^{m+n} \\
+\frac{a^m}{a^n} &= a^{m-n}
+\end{align*}
+\]
+~~~
+
+!id: SXbmggkNYk
+!text: \[ {{c2::(a^m)^n::\ldots}} = {{c1::a^{mn}::\ldots}} \]
+!related:
+\[
+\begin{align*}
+(a^m)^n &= a^{mn} \\
+(ab)^n &= a^n b^n \\
+\left(\frac{a}{b}\right)^n &= \frac{a^n}{b^n}
+\end{align*}
+\]
+~~~
+
+!id: vojwDvR2Wo
+!text: \[ {{c2::(ab)^n::\ldots}} = {{c1::a^n b^n::\ldots}} \]
+!related:
+\[
+\begin{align*}
+(a^m)^n &= a^{mn} \\
+(ab)^n &= a^n b^n \\
+\left(\frac{a}{b}\right)^n &= \frac{a^n}{b^n}
+\end{align*}
+\]
+~~~
+
+!id: vv3GV7yy1w
+!text: \[ {{c2::\left(\frac{a}{b}\right)^n::\ldots}} = {{c1::\frac{a^n}{b^n}::\ldots}} \]
+!related:
+\[
+\begin{align*}
+(a^m)^n &= a^{mn} \\
+(ab)^n &= a^n b^n \\
+\left(\frac{a}{b}\right)^n &= \frac{a^n}{b^n}
+\end{align*}
+\]
+~~~
+
+!id: Kg65xgrVbH
+!text: \[ {{c2::a^{-n}::\ldots}} = {{c1::\frac{1}{a^n}::\ldots}} \]
+!related:
+\[
+\begin{align*}
+a^{-n} &= \frac{1}{a^n} \\
+\left( \frac{a}{b} \right)^{-n} &= \left( \frac{b}{a} \right)^n
+\end{align*}
+\]
+~~~
+
+!id: 7mgwdXmT6k
+!text: \[ {{c2::\left( \frac{a}{b} \right)^{-n}::\ldots}} = {{c1::\left( \frac{b}{a} \right)^n::\ldots}} \]
+!related:
+\[
+\begin{align*}
+a^{-n} &= \frac{1}{a^n} \\
+\left( \frac{a}{b} \right)^{-n} &= \left( \frac{b}{a} \right)^n
+\end{align*}
+\]
+~~~
+
+!id: eDqv99I9ao
+!text: \[ {{c2::a^{1/n}::\ldots}} = {{c1::\sqrt[n]{a}::\ldots}} \]
+!related:
+\[
+\begin{align*}
+a^{1/n} &= \sqrt[n]{a} \\
+a^{m/n} &= \sqrt[n]{a^m} = \left(\sqrt[n]{a}\right)^m
+\end{align*}
+\]
+~~~
+
+!id: CFSU2Ly4KM
+!text: \[ {{c2::a^{m/n}::\ldots}} = {{c1::\sqrt[n]{a^m}::\ldots}} \]
+!related:
+\[
+\begin{align*}
+a^{1/n} &= \sqrt[n]{a} \\
+a^{m/n} &= \sqrt[n]{a^m} = \left(\sqrt[n]{a}\right)^m
+\end{align*}
+\]
+~~~
+
+!id: Ulh62ggd5d
+!text: \[ {{c2::\log_b(xy)::\ldots}} = {{c1::\log_b x + \log_b y::\ldots}} \]
+!related:
+\[
+\begin{align*}
+\log_b(xy) &= \log_b x + \log_b y \\
+\log_b\left(\frac{x}{y}\right) &= \log_b x - \log_b y \\
+\log_b(x^n) &= n \log_b x
+\end{align*}
+\]
+!back extra: Assumes \( b > 0 \), \( b \ne 1 \), and \( x, y > 0 \).
+~~~
+
+!id: AO10iTLgj8
+!text: \[ {{c2::\log_b\left(\frac{x}{y}\right)::\ldots}} = {{c1::\log_b x - \log_b y::\ldots}} \]
+!related:
+\[
+\begin{align*}
+\log_b(xy) &= \log_b x + \log_b y \\
+\log_b\left(\frac{x}{y}\right) &= \log_b x - \log_b y \\
+\log_b(x^n) &= n \log_b x
+\end{align*}
+\]
+!back extra: Assumes \( b > 0 \), \( b \ne 1 \), and \( x, y > 0 \).
+~~~
+
+!id: 8962syrrWZ
+!text: \[ {{c2::\log_b(x^n)::\ldots}} = {{c1::n \log_b x::\ldots}} \]
+!related:
+\[
+\begin{align*}
+\log_b(xy) &= \log_b x + \log_b y \\
+\log_b\left(\frac{x}{y}\right) &= \log_b x - \log_b y \\
+\log_b(x^n) &= n \log_b x
+\end{align*}
+\]
+!back extra: Assumes \( b > 0 \), \( b \ne 1 \), \( x > 0 \); \( n \) may be any real number.
+~~~
+
+!id: OvrnD0cuID
+!text: \[ {{c2::\log_b x::\ldots}} = {{c1::\frac{\log_c x}{\log_c b}::\frac{\log\ldots}{\log\ldots} }} \]
+!back extra: Assumes \( b, c > 0 \), \( b, c \ne 1 \), and \( x > 0 \); lets a logarithm in any base \( b \) be computed from logarithms in a fixed base \( c \), such as the natural or common logarithm.
+~~~
+
+!id: mA3PqTfLh3
+!text: \[ {{c2::\log_b(1)::\log\ldots}} = {{c1::0::\ldots}} \]
+!related:
+\[
+\begin{align*}
+\log_b(1) &= 0 \\
+\log_b(b) &= 1
+\end{align*}
+\]
+!back extra: Assumes \( b > 0 \), \( b \ne 1 \).
+~~~
+
+!id: cbhJb8He8c
+!text: \[ {{c2::\log_b(b)::\log\ldots}} = {{c1::1::\ldots}} \]
+!related:
+\[
+\begin{align*}
+\log_b(1) &= 0 \\
+\log_b(b) &= 1
+\end{align*}
+\]
+!back extra: Assumes \( b > 0 \), \( b \ne 1 \).
+~~~
+
+!id: vZfdzQ2Vfh
+!text: \[ {{c2::b^{\log_b x}::\text{exponential of a log} }} = {{c1::x::\ldots}} \]
+!related:
+\[
+\begin{align*}
+b^{\log_b x} &= x \\
+\log_b(b^x) &= x
+\end{align*}
+\]
+!back extra: Assumes \( b > 0 \), \( b \ne 1 \), \( x > 0 \); expresses that \( \log_b \) and the exponential \( b^{(\cdot)} \) are inverse functions.
+~~~
+
+!id: YAUXXCJ3wH
+!text: \[ {{c2::\log_b(b^x)::\text{log of an exponential} }} = {{c1::x::\ldots}} \]
+!related:
+\[
+\begin{align*}
+b^{\log_b x} &= x \\
+\log_b(b^x) &= x
+\end{align*}
+\]
+!back extra: Assumes \( b > 0 \), \( b \ne 1 \); holds for all real \( x \), since \( b^x > 0 \) is always in the domain of \( \log_b \).
+~~~

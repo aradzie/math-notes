@@ -168,7 +168,7 @@ For \( x \in \mathbb{R} \):
 !id: v9fRBdxCXu
 !front: \[ \arctan(x) = \sum \ldots \]
 !back:
-For \( |x| < 1 \):
+For \( |x| \le 1 \):
 \[
 \begin{align*}
 \arctan(x)
@@ -176,6 +176,20 @@ For \( |x| < 1 \):
 &= \sum_{n=0}^{\infty} (-1)^{n} \frac{x^{2n + 1}}{2n + 1}
 \end{align*}
 \]
+~~~
+
+!id: csAVoaSizf
+!front: \[ (1+x)^\alpha = \sum \ldots \]
+!back:
+For \( |x| < 1 \) and \( \alpha \in \mathbb{R} \):
+\[
+\begin{align*}
+(1+x)^\alpha
+&= 1 + \alpha x + \frac{\alpha(\alpha-1)}{2!}x^2 + \frac{\alpha(\alpha-1)(\alpha-2)}{3!}x^3 + \cdots \\
+&= \sum_{n=0}^{\infty}\binom{\alpha}{n}x^n
+\end{align*}
+\]
+!extra: If \( \alpha \) is a nonnegative integer, the series terminates and the polynomial identity holds for every real \( x \). Otherwise, endpoints require separate checking.
 ~~~
 
 !tags: Math Calculus Taylor-Series Hyperbolic Identity

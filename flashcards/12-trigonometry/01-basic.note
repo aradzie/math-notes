@@ -2,6 +2,108 @@
 !tags: Math Trigonometric Identity
 !type: Cloze Math
 
+!id: rhmdbIP4Yr
+!text:
+\[
+{{c2::\sin(-\theta)::\ldots}}
+=
+{{c1::-\sin\theta::\ldots}}
+\]
+!back extra: Sine is odd.
+!related:
+\[
+\begin{align*}
+\sin(-\theta) &= -\sin\theta \\
+\cos(-\theta) &= \cos\theta
+\end{align*}
+\]
+~~~
+
+!id: uZE7VMz4GA
+!text:
+\[
+{{c2::\cos(-\theta)::\ldots}}
+=
+{{c1::\cos\theta::\ldots}}
+\]
+!back extra: Cosine is even.
+!related:
+\[
+\begin{align*}
+\sin(-\theta) &= -\sin\theta \\
+\cos(-\theta) &= \cos\theta
+\end{align*}
+\]
+~~~
+
+!id: Z0yOqkVLRT
+!text:
+\[
+{{c2::\tan(-\theta)::\ldots}}
+=
+{{c1::-\tan\theta::\ldots}}
+\]
+!back extra: Tangent is odd on its domain.
+!related:
+\[
+\begin{align*}
+\tan(-\theta) &= -\tan\theta \\
+\cot(-\theta) &= -\cot\theta
+\end{align*}
+\]
+~~~
+
+!id: 2YhqfmT6hF
+!text:
+\[
+{{c2::\cot(-\theta)::\ldots}}
+=
+{{c1::-\cot\theta::\ldots}}
+\]
+!back extra: Cotangent is odd on its domain.
+!related:
+\[
+\begin{align*}
+\tan(-\theta) &= -\tan\theta \\
+\cot(-\theta) &= -\cot\theta
+\end{align*}
+\]
+~~~
+
+!id: a0e3ISf1YH
+!text:
+\[
+{{c2::\sec(-\theta)::\ldots}}
+=
+{{c1::\sec\theta::\ldots}}
+\]
+!back extra: Secant is even on its domain.
+!related:
+\[
+\begin{align*}
+\sec(-\theta) &= \sec\theta \\
+\csc(-\theta) &= -\csc\theta
+\end{align*}
+\]
+~~~
+
+!id: zsc5Prr4bS
+!text:
+\[
+{{c2::\csc(-\theta)::\ldots}}
+=
+{{c1::-\csc\theta::\ldots}}
+\]
+!back extra: Cosecant is odd on its domain.
+!related:
+\[
+\begin{align*}
+\sec(-\theta) &= \sec\theta \\
+\csc(-\theta) &= -\csc\theta
+\end{align*}
+\]
+~~~
+
 !id: 1Md8vTm3q0
 !text:
 \[
