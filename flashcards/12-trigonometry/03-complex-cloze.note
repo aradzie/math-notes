@@ -35,13 +35,14 @@ Euler's Formula
 De Moivre's Formula
 ~~~
 
-!id: kYCiPlxK4A
+!id: kBXzrvvubz
 !text:
 \[
-{{c2::\left( \cosh(x) + i \sinh(x) \right)^n::\ldots}}
-=
-{{c1::\cosh(nx) + i \sinh(nx)::\ldots}}
+{{c2::z^n = 1::\ldots}}
+\iff
+{{c1::z = e^{2\pi i k / n}, \quad k = 0, 1, \ldots, n-1::\ldots}}
 \]
 
-De Moivre's Formula
+\( n \)th Roots of Unity
+!back extra: Write \( z = re^{i\theta} \), so \( z^n = r^n e^{in\theta} \). Matching this to \( 1 = e^{i \cdot 2\pi k} \) forces \( r = 1 \) and \( n\theta = 2\pi k \) for some integer \( k \), i.e. \( \theta = 2\pi k / n \). Taking \( k = 0, 1, \ldots, n-1 \) gives all \( n \) distinct roots; larger \( k \) only repeats these by periodicity of \( e^{i\theta} \).
 ~~~

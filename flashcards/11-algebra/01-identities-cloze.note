@@ -1,5 +1,33 @@
 !deck: Math Identities (Cloze)
 !tags: Math Algebra Identity
+!type: Basic Math
+
+!id: H7J2D5M0XZ
+!front: Discriminant
+!back:
+If
+
+\[ a x^2 + b x + c = 0 \]
+
+then
+
+\[ \Delta = b^2 - 4ac \]
+~~~
+
+!type: Basic Math
+
+!id: dn9wauQWAT
+!front: Quadratic Formula
+!back:
+If
+
+\[ a x^2 + b x + c = 0 \]
+
+then
+
+\[ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \]
+~~~
+
 !type: Cloze Math
 
 !id: 31vnnOar2N

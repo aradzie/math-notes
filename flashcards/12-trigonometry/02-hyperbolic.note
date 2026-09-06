@@ -10,6 +10,13 @@
 \[ \sinh : \mathbb{R} \to \mathbb{R} \]
 
 ![The graph of sinh x as the sum of two dashed gray exponential halves, e^x/2 and -e^{-x}/2; at a sample point x0, a labeled arrow shows the second half added onto the first landing exactly on sinh(x0)](img/sinh.svg)
+!related:
+\[
+\begin{align*}
+\sinh x &= \frac{e^{x} - e^{-x}}{2} \\
+\cosh x &= \frac{e^{x} + e^{-x}}{2}
+\end{align*}
+\]
 ~~~
 
 !id: ad35P6eyOc
@@ -20,6 +27,13 @@
 \[ \cosh : \mathbb{R} \to [1, \infty) \]
 
 ![The graph of cosh x as the sum of two dashed gray exponential halves, e^x/2 and e^{-x}/2; at a sample point x0, a labeled arrow shows the second half added onto the first landing exactly on cosh(x0)](img/cosh.svg)
+!related:
+\[
+\begin{align*}
+\sinh x &= \frac{e^{x} - e^{-x}}{2} \\
+\cosh x &= \frac{e^{x} + e^{-x}}{2}
+\end{align*}
+\]
 ~~~
 
 !id: uig6j7os9C
@@ -30,6 +44,13 @@
 \[ \tanh : \mathbb{R} \to (-1, 1) \]
 
 ![The graph of tanh x, an S-shaped curve through the origin bounded between the horizontal asymptotes y=1 and y=-1](img/tanh.svg)
+!related:
+\[
+\begin{align*}
+\tanh x &= \frac{\sinh x}{\cosh x} = \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}} \\
+\coth x &= \frac{\cosh x}{\sinh x} = \frac{e^{x} + e^{-x}}{e^{x} - e^{-x}}
+\end{align*}
+\]
 ~~~
 
 !id: xaYnsxDzCt
@@ -40,6 +61,13 @@
 \[ \coth : \mathbb{R} \setminus \{0\} \to (-\infty, -1) \cup (1, \infty) \]
 
 ![The graph of coth x, two branches separated by a vertical asymptote at x=0, each approaching a horizontal asymptote: y=1 on the right and y=-1 on the left](img/coth.svg)
+!related:
+\[
+\begin{align*}
+\tanh x &= \frac{\sinh x}{\cosh x} = \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}} \\
+\coth x &= \frac{\cosh x}{\sinh x} = \frac{e^{x} + e^{-x}}{e^{x} - e^{-x}}
+\end{align*}
+\]
 ~~~
 
 !id: KjKcykS0aD
@@ -50,6 +78,13 @@
 \[ \operatorname{sech} : \mathbb{R} \to (0, 1] \]
 
 ![The graph of sech x, a bell-shaped curve attaining its maximum value 1 at x=0 and approaching the horizontal asymptote y=0 as x tends to infinity](img/sech.svg)
+!related:
+\[
+\begin{align*}
+\operatorname{sech} x &= \frac{1}{\cosh x} = \frac{2}{e^{x} + e^{-x}} \\
+\operatorname{csch} x &= \frac{1}{\sinh x} = \frac{2}{e^{x} - e^{-x}}
+\end{align*}
+\]
 ~~~
 
 !id: 2m7og5wYNu
@@ -60,6 +95,13 @@
 \[ \operatorname{csch} : \mathbb{R} \setminus \{0\} \to \mathbb{R} \setminus \{0\} \]
 
 ![The graph of csch x, two branches separated by a vertical asymptote at x=0, each approaching the horizontal asymptote y=0](img/csch.svg)
+!related:
+\[
+\begin{align*}
+\operatorname{sech} x &= \frac{1}{\cosh x} = \frac{2}{e^{x} + e^{-x}} \\
+\operatorname{csch} x &= \frac{1}{\sinh x} = \frac{2}{e^{x} - e^{-x}}
+\end{align*}
+\]
 ~~~
 
 !id: qYhRAq3NBi
@@ -95,11 +137,25 @@ Express as a trigonometric function.
 !id: J9Zx0A7FqR
 !front: \[ \cosh^2 x + \sinh^2 x = \ldots \]
 !back: \[ \cosh^2 x + \sinh^2 x = \cosh(2x) \]
+!related:
+\[
+\begin{align*}
+\cosh^2 x + \sinh^2 x &= \cosh(2x) \\
+\cosh^2 x - \sinh^2 x &= 1
+\end{align*}
+\]
 ~~~
 
 !id: uUKupFRuYg
 !front: \[ \cosh^2 x - \sinh^2 x = \ldots \]
 !back: \[ \cosh^2 x - \sinh^2 x = 1 \]
+!related:
+\[
+\begin{align*}
+\cosh^2 x + \sinh^2 x &= \cosh(2x) \\
+\cosh^2 x - \sinh^2 x &= 1
+\end{align*}
+\]
 ~~~
 
 !id: stZDV6T4Dx
@@ -108,6 +164,13 @@ Express as a trigonometric function.
 \[ \operatorname{arcsinh}(x) = \ln\left(x + \sqrt{x^2 + 1}\right), \quad x \in \mathbb{R} \]
 
 \[ \operatorname{arcsinh} : \mathbb{R} \to \mathbb{R} \]
+!related:
+\[
+\begin{align*}
+\operatorname{arcsinh}(x) &= \ln\left(x + \sqrt{x^2 + 1}\right), \quad x \in \mathbb{R} \\
+\operatorname{arccosh}(x) &= \ln\left(x + \sqrt{x^2 - 1}\right), \quad x \ge 1
+\end{align*}
+\]
 ~~~
 
 !id: ZYwuMHDjy8
@@ -116,6 +179,13 @@ Express as a trigonometric function.
 \[ \operatorname{arccosh}(x) = \ln\left(x + \sqrt{x^2 - 1}\right), \quad x \ge 1 \]
 
 \[ \operatorname{arccosh} : [1, \infty) \to [0, \infty) \]
+!related:
+\[
+\begin{align*}
+\operatorname{arcsinh}(x) &= \ln\left(x + \sqrt{x^2 + 1}\right), \quad x \in \mathbb{R} \\
+\operatorname{arccosh}(x) &= \ln\left(x + \sqrt{x^2 - 1}\right), \quad x \ge 1
+\end{align*}
+\]
 ~~~
 
 !id: 1uowf5g6OS
@@ -124,6 +194,13 @@ Express as a trigonometric function.
 \[ \operatorname{arctanh}(x) = \frac{1}{2}\ln\left(\frac{1 + x}{1 - x}\right), \quad |x| < 1 \]
 
 \[ \operatorname{arctanh} : (-1, 1) \to \mathbb{R} \]
+!related:
+\[
+\begin{align*}
+\operatorname{arctanh}(x) &= \frac{1}{2}\ln\left(\frac{1 + x}{1 - x}\right), \quad |x| < 1 \\
+\operatorname{arccoth}(x) &= \frac{1}{2}\ln\left(\frac{x + 1}{x - 1}\right), \quad |x| > 1
+\end{align*}
+\]
 ~~~
 
 !id: CAuc2adqQ4
@@ -132,4 +209,11 @@ Express as a trigonometric function.
 \[ \operatorname{arccoth}(x) = \frac{1}{2}\ln\left(\frac{x + 1}{x - 1}\right), \quad |x| > 1 \]
 
 \[ \operatorname{arccoth} : (-\infty, -1) \cup (1, \infty) \to \mathbb{R} \setminus \{0\} \]
+!related:
+\[
+\begin{align*}
+\operatorname{arctanh}(x) &= \frac{1}{2}\ln\left(\frac{1 + x}{1 - x}\right), \quad |x| < 1 \\
+\operatorname{arccoth}(x) &= \frac{1}{2}\ln\left(\frac{x + 1}{x - 1}\right), \quad |x| > 1
+\end{align*}
+\]
 ~~~

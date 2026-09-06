@@ -11,8 +11,16 @@
 =
 {{c2::-i \sin(ix)::\ldots}}
 \]
-\[ {{c4::\sinh : \mathbb{R} \to \mathbb{R}::\ldots\text{domain range}\ldots }} \]
+\[ {{c4::\sinh : \mathbb{R} \to \mathbb{R}::\ldots\text{domain and range}\ldots }} \]
 !back extra: ![The graph of sinh x as the sum of two dashed gray exponential halves, e^x/2 and -e^{-x}/2; at a sample point x0, a labeled arrow shows the second half added onto the first landing exactly on sinh(x0)](img/sinh.svg)
+!related:
+\[
+\begin{align*}
+\sinh x &= \frac{e^{x} - e^{-x}}{2} = -i \sin(ix) \\
+\cosh x &= \frac{e^{x} + e^{-x}}{2} = \cos(ix) \\
+\tanh x &= \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}} = -i \tan(ix)
+\end{align*}
+\]
 ~~~
 
 !id: Bb9p3BteYW
@@ -23,6 +31,14 @@
 {{c1::\frac{ e^{ix} - e^{-ix} }{2i}::\ldots}}
 =
 {{c2::-i \sinh(ix)::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\sin x &= \frac{ e^{ix} - e^{-ix} }{2i} = -i \sinh(ix) \\
+\cos x &= \frac{ e^{ix} + e^{-ix} }{2} = \cosh(ix) \\
+\tan x &= \frac{ e^{ix} - e^{-ix} }{ i(e^{ix} + e^{-ix}) } = -i \tanh(ix)
+\end{align*}
 \]
 ~~~
 
@@ -35,8 +51,16 @@
 =
 {{c2::\cos(ix)::\ldots}}
 \]
-\[ {{c4::\cosh : \mathbb{R} \to [1, \infty)::\ldots\text{domain range}\ldots }} \]
+\[ {{c4::\cosh : \mathbb{R} \to [1, \infty)::\ldots\text{domain and range}\ldots }} \]
 !back extra: ![The graph of cosh x as the sum of two dashed gray exponential halves, e^x/2 and e^{-x}/2; at a sample point x0, a labeled arrow shows the second half added onto the first landing exactly on cosh(x0)](img/cosh.svg)
+!related:
+\[
+\begin{align*}
+\sinh x &= \frac{e^{x} - e^{-x}}{2} = -i \sin(ix) \\
+\cosh x &= \frac{e^{x} + e^{-x}}{2} = \cos(ix) \\
+\tanh x &= \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}} = -i \tan(ix)
+\end{align*}
+\]
 ~~~
 
 !id: S18j80rrx9
@@ -47,6 +71,14 @@
 {{c1::\frac{ e^{ix} + e^{-ix} }{2}::\ldots}}
 =
 {{c2::\cosh(ix)::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\sin x &= \frac{ e^{ix} - e^{-ix} }{2i} = -i \sinh(ix) \\
+\cos x &= \frac{ e^{ix} + e^{-ix} }{2} = \cosh(ix) \\
+\tan x &= \frac{ e^{ix} - e^{-ix} }{ i(e^{ix} + e^{-ix}) } = -i \tanh(ix)
+\end{align*}
 \]
 ~~~
 
@@ -59,8 +91,16 @@
 =
 {{c2::-i \tan(ix)::\ldots}}
 \]
-\[ {{c4::\tanh : \mathbb{R} \to (-1, 1)::\ldots\text{domain range}\ldots }} \]
+\[ {{c4::\tanh : \mathbb{R} \to (-1, 1)::\ldots\text{domain and range}\ldots }} \]
 !back extra: ![The graph of tanh x, an S-shaped curve through the origin bounded between the horizontal asymptotes y=1 and y=-1](img/tanh.svg)
+!related:
+\[
+\begin{align*}
+\sinh x &= \frac{e^{x} - e^{-x}}{2} = -i \sin(ix) \\
+\cosh x &= \frac{e^{x} + e^{-x}}{2} = \cos(ix) \\
+\tanh x &= \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}} = -i \tan(ix)
+\end{align*}
+\]
 ~~~
 
 !id: 2NuE6xEcZ6
@@ -72,6 +112,14 @@
 =
 {{c2::-i \tanh(ix)::\ldots}}
 \]
+!related:
+\[
+\begin{align*}
+\sin x &= \frac{ e^{ix} - e^{-ix} }{2i} = -i \sinh(ix) \\
+\cos x &= \frac{ e^{ix} + e^{-ix} }{2} = \cosh(ix) \\
+\tan x &= \frac{ e^{ix} - e^{-ix} }{ i(e^{ix} + e^{-ix}) } = -i \tanh(ix)
+\end{align*}
+\]
 ~~~
 
 !id: 3ihlJFKP2B
@@ -79,7 +127,15 @@
 \[
 {{c2::\sinh(2x)::\ldots}}
 =
-{{c1::2\sinh x \cosh x::\ldots}}
+{{c1::2 \sinh x \cosh x::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\sinh(2x) &= 2 \sinh x \cosh x \\
+\cosh(2x) &= \cosh^2 x + \sinh^2 x \\
+1 &= \cosh^2 x - \sinh^2 x
+\end{align*}
 \]
 ~~~
 
@@ -87,13 +143,34 @@
 !text:
 \[
 \begin{align*}
-{{c4::\cosh(2x)::\ldots}}
+{{c2::\cosh(2x)::\ldots}}
 &=
 {{c1::\cosh^2 x + \sinh^2 x::\ldots}} \\
-&=
-{{c2::2\cosh^2 x - 1::\ldots}} \\
-&=
-{{c3::1 + 2\sinh^2 x::\ldots}}
+\end{align*}
+\]
+!related:
+\[
+\begin{align*}
+\sinh(2x) &= 2 \sinh x \cosh x \\
+\cosh(2x) &= \cosh^2 x + \sinh^2 x \\
+1 &= \cosh^2 x - \sinh^2 x
+\end{align*}
+\]
+~~~
+
+!id: OAqqXLITTd
+!text:
+\[
+{{c2::\cosh^2 x - \sinh^2 x::\sinh, \cosh \ldots}}
+=
+{{c1::1::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\sinh(2x) &= 2 \sinh x \cosh x \\
+\cosh(2x) &= \cosh^2 x + \sinh^2 x \\
+1 &= \cosh^2 x - \sinh^2 x
 \end{align*}
 \]
 ~~~
@@ -101,27 +178,32 @@
 !id: 0wQw88djE2
 !text:
 \[
-{{c2::\cosh x + \sinh x::\sinh / \cosh \ldots}}
+{{c2::\cosh x + \sinh x::\sinh, \cosh \ldots}}
 =
 {{c1::e^{x}::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\cosh x + \sinh x &= e^x \\
+\cosh x - \sinh x &= e^{-x} \\
+\end{align*}
 \]
 ~~~
 
 !id: ZSy6WMfCAC
 !text:
 \[
-{{c2::\cosh x - \sinh x::\sinh / \cosh \ldots}}
+{{c2::\cosh x - \sinh x::\sinh, \cosh \ldots}}
 =
 {{c1::e^{-x}::\ldots}}
 \]
-~~~
-
-!id: OAqqXLITTd
-!text:
+!related:
 \[
-{{c2::\cosh^2 x - \sinh^2 x::\sinh / \cosh \ldots}}
-=
-{{c1::1::\ldots}}
+\begin{align*}
+\cosh x + \sinh x &= e^x \\
+\cosh x - \sinh x &= e^{-x} \\
+\end{align*}
 \]
 ~~~
 
@@ -133,6 +215,13 @@
 {{c1::\ln\left(x + \sqrt{x^2 + 1}\right), \quad x \in \mathbb{R}::\ldots}}
 \]
 !back extra: \[ \operatorname{arcsinh} : \mathbb{R} \to \mathbb{R} \]
+!related:
+\[
+\begin{align*}
+\operatorname{arcsinh}(x) &= \ln\left(x + \sqrt{x^2 + 1}\right), \quad x \in \mathbb{R} \\
+\operatorname{arccosh}(x) &= \ln\left(x + \sqrt{x^2 - 1}\right), \quad x \ge 1
+\end{align*}
+\]
 ~~~
 
 !id: A59J7iVA8C
@@ -143,6 +232,13 @@
 {{c1::\ln\left(x + \sqrt{x^2 - 1}\right), \quad x \ge 1::\ldots}}
 \]
 !back extra: \[ \operatorname{arccosh} : [1, \infty) \to [0, \infty) \]
+!related:
+\[
+\begin{align*}
+\operatorname{arcsinh}(x) &= \ln\left(x + \sqrt{x^2 + 1}\right), \quad x \in \mathbb{R} \\
+\operatorname{arccosh}(x) &= \ln\left(x + \sqrt{x^2 - 1}\right), \quad x \ge 1
+\end{align*}
+\]
 ~~~
 
 !id: CitnGmGe9P
@@ -153,6 +249,13 @@
 {{c1::\frac{1}{2}\ln\left(\frac{1 + x}{1 - x}\right), \quad |x| < 1::\ldots}}
 \]
 !back extra: \[ \operatorname{arctanh} : (-1, 1) \to \mathbb{R} \]
+!related:
+\[
+\begin{align*}
+\operatorname{arctanh}(x) &= \frac{1}{2}\ln\left(\frac{1 + x}{1 - x}\right), \quad |x| < 1 \\
+\operatorname{arccoth}(x) &= \frac{1}{2}\ln\left(\frac{x + 1}{x - 1}\right), \quad |x| > 1
+\end{align*}
+\]
 ~~~
 
 !id: UMwhqgvmXy
@@ -163,4 +266,11 @@
 {{c1::\frac{1}{2}\ln\left(\frac{x + 1}{x - 1}\right), \quad |x| > 1::\ldots}}
 \]
 !back extra: \[ \operatorname{arccoth} : (-\infty, -1) \cup (1, \infty) \to \mathbb{R} \setminus \{0\} \]
+!related:
+\[
+\begin{align*}
+\operatorname{arctanh}(x) &= \frac{1}{2}\ln\left(\frac{1 + x}{1 - x}\right), \quad |x| < 1 \\
+\operatorname{arccoth}(x) &= \frac{1}{2}\ln\left(\frac{x + 1}{x - 1}\right), \quad |x| > 1
+\end{align*}
+\]
 ~~~
