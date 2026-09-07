@@ -1,0 +1,118 @@
+!deck: Math Identities
+!tags: Math Trigonometric Hyperbolic Identity
+!type: Cloze Math
+
+!id: zvAyOSCTQW
+!text:
+\[
+{{c2::e^{ix}::\ldots}}
+=
+{{c1::\cos x + i \sin x::\ldots}}
+\]
+
+Euler's Formula
+!back extra:
+\[
+\begin{align*}
+e^{ix} &= 1 + ix + \frac{(ix)^2}{2!} + \frac{(ix)^3}{3!} + \frac{(ix)^4}{4!} + \frac{(ix)^5}{5!} + \ldots \\
+&= 1 + ix - \frac{x^2}{2!} - \frac{ix^3}{3!} + \frac{x^4}{4!} + \frac{ix^5}{5!} + \ldots \\
+&= \left( 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \ldots \right) + i \left( x - \frac{x^3}{3!} + \frac{x^5}{5!} - \ldots \right) \\
+&= \cos(x) + i \sin(x)
+\end{align*}
+\]
+~~~
+
+!id: Rjr9k6j6ba
+!text:
+\[
+{{c2::e^{-ix}::\ldots}}
+=
+{{c1::\cos x - i \sin x::\ldots}}
+\]
+
+Euler's Formula
+!back extra:
+\[
+\begin{align*}
+e^{-ix} &= 1 + (-ix) + \frac{(-ix)^2}{2!} + \frac{(-ix)^3}{3!} + \frac{(-ix)^4}{4!} + \frac{(-ix)^5}{5!} + \ldots \\
+&= 1 - ix - \frac{x^2}{2!} + \frac{ix^3}{3!} + \frac{x^4}{4!} - \frac{ix^5}{5!} + \ldots \\
+&= \left( 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \ldots \right) - i \left( x - \frac{x^3}{3!} + \frac{x^5}{5!} - \ldots \right) \\
+&= \cos(x) - i \sin(x)
+\end{align*}
+\]
+~~~
+
+!id: inJ6BD8ofs
+!text:
+\[
+{{c2::\left( \cos(x) + i \sin(x) \right)^n::\ldots}}
+=
+{{c1::\cos(nx) + i \sin(nx)::\ldots}}
+\]
+
+De Moivre's Formula
+!back extra:
+For \( x \in \mathbb{R} \) and \( n \in \mathbb{Z} \), Euler's formula and the exponential power law give
+\[
+\begin{align*}
+(\cos x + i\sin x)^n
+&= (e^{ix})^n \\
+&= e^{inx} \\
+&= \cos(nx) + i\sin(nx).
+\end{align*}
+\]
+~~~
+
+!id: kBXzrvvubz
+!text:
+\[
+{{c2::z^n = 1::\ldots}}
+\iff
+{{c1::z = e^{2\pi i k / n}, \quad k = 0, 1, \ldots, n-1::\ldots}}
+\]
+
+\( n \)th Roots of Unity
+!back extra:
+\[
+\begin{align*}
+z = re^{i\theta}, \ z^n = 1
+&\implies r^n e^{in\theta} = e^{i \cdot 2\pi k}, \quad k \in \mathbb{Z} \\
+&\implies r = 1, \quad n\theta = 2\pi k \\
+&\implies \theta = \frac{2\pi k}{n}
+\end{align*}
+\]
+Taking \( k = 0, 1, \ldots, n-1 \) gives all \( n \) distinct roots; larger \( k \) repeats these by \( 2\pi \)-periodicity.
+~~~
+
+!id: HyyVM3fcRE
+!text:
+For \( r > 0 \) and \( \theta \in \mathbb{R} \), the **complex logarithm** (all values) is given by
+
+\[
+{{c2::\ln(re^{i\theta})::\ldots}}
+=
+{{c1::\left\{ \ln r + i(\theta + 2\pi k) : k \in \mathbb{Z} \right\}::\ldots}}
+\]
+!back extra:
+\[
+\begin{align*}
+e^{\ln r + i(\theta + 2\pi k)}
+&= e^{\ln r}e^{i\theta}e^{2\pi ik} \\
+&= re^{i\theta}(\cos(2\pi k) + i \cdot \sin(2\pi k)) \\
+&= re^{i\theta}(1 + i \cdot 0) \\
+&= re^{i\theta}
+\end{align*}
+\]
+~~~
+
+!id: vqW0Jwvyk8
+!text:
+For \( r > 0 \) and \( \theta \in \mathbb{R} \) with \( {{c3::-\pi < \theta \le \pi::\text{domain restriction} }} \), the **principal value** of the complex logarithm is
+
+\[
+{{c2::\operatorname{Log}(re^{i\theta})::\ldots}}
+=
+{{c1::\ln r + i\theta::\ldots}}
+\]
+!back extra: Restricting \( \theta \) to \( (-\pi, \pi] \) picks out a single value of the complex logarithm, making \( \operatorname{Log} \) single-valued, unlike the general complex logarithm \( \ln \), which is multi-valued over all \( k \in \mathbb{Z} \).
+~~~
