@@ -2,7 +2,12 @@
   "name": "math-notes",
   "version": "0.0.0",
   "type": "module",
+  "scripts": {
+    "format": "npx prettier --plugin=prettier-plugin-latex --write \"essays/**/*.tex\" \"self-check/**/*.tex\""
+  },
   "dependencies": {
-    "@notatki/cli": "^0.6.0"
+    "@notatki/cli": "^0.6.0",
+    "prettier": "^3.9.6",
+    "prettier-plugin-latex": "^2.0.1"
   }
 }
