@@ -1,0 +1,258 @@
+Manual review corrections for this page's first pass.
+
+- Every vector variable ($\text{u}$, $\text{v}$, $\text{a}$, $\text{b}$,
+  $\text{c}$, $\text{i}$, $\text{j}$, $\text{k}$, $\text{w}$, $\text{q}$,
+  $\text{p}$, $\text{n}$, $\text{F}$ including $\text{F}_{1}$/$\text{F}_{2}$,
+  and $\text{r}$) had been converted to upright, non-bold \text{} instead of
+  boldface, matching the same defect already fixed for
+  vol3-2-1-vectors-in-the-plane.tex and unlike every other
+  vector-notation exercise file in this repo (vol3-3-2, vol3-3-3, vol3-3-4,
+  vol3-4-6, ...) and OpenStax's own boldface vector convention; changed
+  every such occurrence to \mathbf{}. Units ($\text{J}$, $\text{N}$,
+  $\text{m}$) and the compass-bearing letters ($\text{N}$, $\text{E}$) were
+  left as \text{}, since those are typeset upright by convention, not
+  vectors.
+- $\text{proj}_{\text{u}}\text{v}$ and $\text{comp}_{\text{u}}\text{v}$ (the
+  vector/scalar projection operators) rendered the operator name with plain
+  \text{} instead of an operator macro, losing the automatic operator
+  spacing around the subscript and following vector; changed to
+  \operatorname{proj} and \operatorname{comp}.
+- "vectors a, b, and c are given" / "vectors a and b are given" / "the angle
+  ... between a and b" / "vectors a orthogonal to vector..." / "Let F be the
+  resultant force..." / "the components of r are expressed..." left these
+  vector variables as bare, non-mathematical prose instead of the math-mode
+  form ($\mathbf{a}$ etc.) used for the same variables everywhere else in
+  the file; wrapped each occurrence in math mode.
+- "where x and y are nonzero real numbers" (two occurrences) left the
+  component variables x and y as bare prose although the same file always
+  math-wraps a bound variable introduced this way (e.g. "where $t$ is a real
+  number" in sibling files); changed to $x$ and $y$.
+- The methane-molecule item joined the last two points of a list into one
+  math span via \,\text{and}\,, matching the pattern this skill flags
+  against (\text{and} plus manual spacing instead of plain-text "and"
+  between separate math spans); split into "...$R(-1,1,1)$, and
+  $S(-1,-1,-1)$...".
+- The same item's figure description read "There are line segments from Q
+  to P, P to R and R to P" -- the third segment duplicates the second
+  (reversed), leaving the triangle over P, Q, R missing its third distinct
+  edge; corrected to "R to Q".
+- The compass-bearing exercise had "$\text{N3}0^\circ \text{E}$": the
+  digits of "30" were split across the \text{} group and the degree
+  superscript's base ("N3" grouped together, then a bare "0" as the
+  \circ's base), a MathML-conversion artifact that garbles "N30°E" into
+  "N3" + a lone raised "0°" + "E"; corrected to \text{N}30^\circ\text{E}.
+- "makes an angle of 25° with the horizontal" used a literal Unicode degree
+  sign in prose, inconsistent with this same file's own convention (the two
+  immediately adjacent items use $25^\circ$/$20^\circ$ for the identical
+  phrasing); changed to $25^\circ$.
+
+--- /tmp/raw.tex
++++ vol3-2-3-the-dot-product.tex
+@@ -12,63 +12,63 @@
+ \maketitle
+ 
+ 
+-For the following exercises, the vectors $\text{u}$ and $\text{v}$ are given. Calculate the dot product $\text{u}\cdot \text{v}$.
++For the following exercises, the vectors $\mathbf{u}$ and $\mathbf{v}$ are given. Calculate the dot product $\mathbf{u}\cdot \mathbf{v}$.
+ 
+ \begin{enumerate}[start=1]
+-\item $\text{u}=\langle3,0\rangle$, $\text{v}=\langle2,2\rangle$
+-\item $\text{u}=\langle3,-4\rangle$, $\text{v}=\langle4,3\rangle$
+-\item $\text{u}=\langle2,2,-1\rangle$, $\text{v}=\langle-1,2,2\rangle$
+-\item $\text{u}=\langle4,5,-6\rangle$, $\text{v}=\langle0,-2,-3\rangle$
++\item $\mathbf{u}=\langle3,0\rangle$, $\mathbf{v}=\langle2,2\rangle$
++\item $\mathbf{u}=\langle3,-4\rangle$, $\mathbf{v}=\langle4,3\rangle$
++\item $\mathbf{u}=\langle2,2,-1\rangle$, $\mathbf{v}=\langle-1,2,2\rangle$
++\item $\mathbf{u}=\langle4,5,-6\rangle$, $\mathbf{v}=\langle0,-2,-3\rangle$
+ \end{enumerate}
+ 
+-For the following exercises, the vectors a, b, and c are given. Determine the vectors $(\text{a}\cdot \text{b})\text{c}$ and $(\text{a}\cdot \text{c})\text{b}$. Express the vectors in component form.
++For the following exercises, the vectors $\mathbf{a}$, $\mathbf{b}$, and $\mathbf{c}$ are given. Determine the vectors $(\mathbf{a}\cdot \mathbf{b})\mathbf{c}$ and $(\mathbf{a}\cdot \mathbf{c})\mathbf{b}$. Express the vectors in component form.
+ 
+ \begin{enumerate}[resume]
+-\item $\text{a}=\langle2,0,-3\rangle$, $\text{b}=\langle-4,-7,1\rangle$, $\text{c}=\langle1,1,-1\rangle$
+-\item $\text{a}=\langle0,1,2\rangle$, $\text{b}=\langle-1,0,1\rangle$, $\text{c}=\langle1,0,-1\rangle$
+-\item $\text{a}=\text{i}+\text{j}$, $\text{b}=\text{i}-\text{k}$, $\text{c}=\text{i}-2\text{k}$
+-\item $\text{a}=\text{i}-\text{j}+\text{k}$, $\text{b}=\text{j}+3\text{k}$, $\text{c}=-\text{i}+2\text{j}-4\text{k}$
++\item $\mathbf{a}=\langle2,0,-3\rangle$, $\mathbf{b}=\langle-4,-7,1\rangle$, $\mathbf{c}=\langle1,1,-1\rangle$
++\item $\mathbf{a}=\langle0,1,2\rangle$, $\mathbf{b}=\langle-1,0,1\rangle$, $\mathbf{c}=\langle1,0,-1\rangle$
++\item $\mathbf{a}=\mathbf{i}+\mathbf{j}$, $\mathbf{b}=\mathbf{i}-\mathbf{k}$, $\mathbf{c}=\mathbf{i}-2\mathbf{k}$
++\item $\mathbf{a}=\mathbf{i}-\mathbf{j}+\mathbf{k}$, $\mathbf{b}=\mathbf{j}+3\mathbf{k}$, $\mathbf{c}=-\mathbf{i}+2\mathbf{j}-4\mathbf{k}$
+ \end{enumerate}
+ 
+-For the following exercises, the two-dimensional vectors a and b are given.
++For the following exercises, the two-dimensional vectors $\mathbf{a}$ and $\mathbf{b}$ are given.
+ 
+ 
+-(a) Find the measure of the angle $\theta$ between a and b. Express the answer in radians rounded to two decimal places, if it is not possible to express it exactly.
++(a) Find the measure of the angle $\theta$ between $\mathbf{a}$ and $\mathbf{b}$. Express the answer in radians rounded to two decimal places, if it is not possible to express it exactly.
+ 
+ 
+ (b) Is $\theta$ an acute angle?
+ 
+ \begin{enumerate}[resume]
+-\item \techrequired $\text{a}=\langle3,-1\rangle$, $\text{b}=\langle-4,0\rangle$
+-\item \techrequired $\text{a}=\langle2,1\rangle$, $\text{b}=\langle-1,3\rangle$
+-\item $\text{u}=3\text{i}$, $\text{v}=4\text{i}+4\text{j}$
+-\item $\text{u}=5\text{i}$, $\text{v}=-6\text{i}+6\text{j}$
++\item \techrequired $\mathbf{a}=\langle3,-1\rangle$, $\mathbf{b}=\langle-4,0\rangle$
++\item \techrequired $\mathbf{a}=\langle2,1\rangle$, $\mathbf{b}=\langle-1,3\rangle$
++\item $\mathbf{u}=3\mathbf{i}$, $\mathbf{v}=4\mathbf{i}+4\mathbf{j}$
++\item $\mathbf{u}=5\mathbf{i}$, $\mathbf{v}=-6\mathbf{i}+6\mathbf{j}$
+ \end{enumerate}
+ 
+-For the following exercises, find the measure of the angle between the three-dimensional vectors a and b. Express the answer in radians rounded to two decimal places, if it is not possible to express it exactly.
++For the following exercises, find the measure of the angle between the three-dimensional vectors $\mathbf{a}$ and $\mathbf{b}$. Express the answer in radians rounded to two decimal places, if it is not possible to express it exactly.
+ 
+ \begin{enumerate}[resume]
+-\item $\text{a}=\langle3,-1,2\rangle$, $\text{b}=\langle1,-1,-2\rangle$
+-\item $\text{a}=\langle0,-1,-3\rangle$, $\text{b}=\langle2,3,-1\rangle$
+-\item $\text{a}=\text{i}+\text{j}$, $\text{b}=\text{j}-\text{k}$
+-\item $\text{a}=\text{i}-2\text{j}+\text{k}$, $\text{b}=\text{i}+\text{j}-2\text{k}$
+-\item \techrequired $\text{a}=3\text{i}-\text{j}-2\text{k}$, $\text{b}=\text{v}+\text{w}$, where $\text{v}=-2\text{i}-3\text{j}+2\text{k}$ and $\text{w}=\text{i}+2\text{k}$
+-\item \techrequired $\text{a}=3\text{i}-\text{j}+2\text{k}$, $\text{b}=\text{v}-\text{w}$, where $\text{v}=2\text{i}+\text{j}+4\text{k}$ and $\text{w}=6\text{i}+\text{j}+2\text{k}$
++\item $\mathbf{a}=\langle3,-1,2\rangle$, $\mathbf{b}=\langle1,-1,-2\rangle$
++\item $\mathbf{a}=\langle0,-1,-3\rangle$, $\mathbf{b}=\langle2,3,-1\rangle$
++\item $\mathbf{a}=\mathbf{i}+\mathbf{j}$, $\mathbf{b}=\mathbf{j}-\mathbf{k}$
++\item $\mathbf{a}=\mathbf{i}-2\mathbf{j}+\mathbf{k}$, $\mathbf{b}=\mathbf{i}+\mathbf{j}-2\mathbf{k}$
++\item \techrequired $\mathbf{a}=3\mathbf{i}-\mathbf{j}-2\mathbf{k}$, $\mathbf{b}=\mathbf{v}+\mathbf{w}$, where $\mathbf{v}=-2\mathbf{i}-3\mathbf{j}+2\mathbf{k}$ and $\mathbf{w}=\mathbf{i}+2\mathbf{k}$
++\item \techrequired $\mathbf{a}=3\mathbf{i}-\mathbf{j}+2\mathbf{k}$, $\mathbf{b}=\mathbf{v}-\mathbf{w}$, where $\mathbf{v}=2\mathbf{i}+\mathbf{j}+4\mathbf{k}$ and $\mathbf{w}=6\mathbf{i}+\mathbf{j}+2\mathbf{k}$
+ \end{enumerate}
+ 
+ For the following exercises determine whether the given vectors are orthogonal.
+ 
+ \begin{enumerate}[resume]
+-\item $\text{a}=\langle x,y\rangle$, $\text{b}=\langle-y,x\rangle$, where x and y are nonzero real numbers
+-\item $\text{a}=\langle x,x\rangle$, $\text{b}=\langle-y,y\rangle$, where x and y are nonzero real numbers
+-\item $\text{a}=3\text{i}-\text{j}-2\text{k}$, $\text{b}=-2\text{i}-3\text{j}+\text{k}$
+-\item $\text{a}=\text{i}-\text{j}$, $\text{b}=7\text{i}+2\text{j}-\text{k}$
+-\item Find all two-dimensional vectors a orthogonal to vector $\text{b}=\langle3,4\rangle$. Express the answer in component form.
+-\item Find all two-dimensional vectors a orthogonal to vector $\text{b}=\langle5,-6\rangle$. Express the answer by using standard unit vectors.
+-\item Determine all three-dimensional vectors $\text{u}$ orthogonal to vector $\text{v}=\langle1,1,0\rangle$. Express the answer by using standard unit vectors.
+-\item Determine all three-dimensional vectors $\text{u}$ orthogonal to vector $\text{v}=\text{i}-\text{j}-\text{k}$. Express the answer in component form.
+-\item Determine the real number $\alpha$ such that vectors $\text{a}=2\text{i}+3\text{j}$ and $\text{b}=9\text{i}+\alpha \text{j}$ are orthogonal.
+-\item Determine the real number $\alpha$ such that vectors $\text{a}=-3\text{i}+2\text{j}$ and $\text{b}=2\text{i}+\alpha \text{j}$ are orthogonal.
++\item $\mathbf{a}=\langle x,y\rangle$, $\mathbf{b}=\langle-y,x\rangle$, where $x$ and $y$ are nonzero real numbers
++\item $\mathbf{a}=\langle x,x\rangle$, $\mathbf{b}=\langle-y,y\rangle$, where $x$ and $y$ are nonzero real numbers
++\item $\mathbf{a}=3\mathbf{i}-\mathbf{j}-2\mathbf{k}$, $\mathbf{b}=-2\mathbf{i}-3\mathbf{j}+\mathbf{k}$
++\item $\mathbf{a}=\mathbf{i}-\mathbf{j}$, $\mathbf{b}=7\mathbf{i}+2\mathbf{j}-\mathbf{k}$
++\item Find all two-dimensional vectors $\mathbf{a}$ orthogonal to vector $\mathbf{b}=\langle3,4\rangle$. Express the answer in component form.
++\item Find all two-dimensional vectors $\mathbf{a}$ orthogonal to vector $\mathbf{b}=\langle5,-6\rangle$. Express the answer by using standard unit vectors.
++\item Determine all three-dimensional vectors $\mathbf{u}$ orthogonal to vector $\mathbf{v}=\langle1,1,0\rangle$. Express the answer by using standard unit vectors.
++\item Determine all three-dimensional vectors $\mathbf{u}$ orthogonal to vector $\mathbf{v}=\mathbf{i}-\mathbf{j}-\mathbf{k}$. Express the answer in component form.
++\item Determine the real number $\alpha$ such that vectors $\mathbf{a}=2\mathbf{i}+3\mathbf{j}$ and $\mathbf{b}=9\mathbf{i}+\alpha \mathbf{j}$ are orthogonal.
++\item Determine the real number $\alpha$ such that vectors $\mathbf{a}=-3\mathbf{i}+2\mathbf{j}$ and $\mathbf{b}=2\mathbf{i}+\alpha \mathbf{j}$ are orthogonal.
+ \item \techrequired Consider the points $P(4,5)$ and $Q(5,-7)$.
+ \begin{enumerate}[label=(\alph*)]
+   \item Determine vectors $\overset{\to}{OP}$ and $\overset{\to}{OQ}$. Express the answer by using standard unit vectors.
+@@ -86,74 +86,74 @@
+ For the following exercises, determine which (if any) pairs of the following vectors are orthogonal.
+ 
+ \begin{enumerate}[resume]
+-\item $\text{u}=\langle3,7,-2\rangle$, $\text{v}=\langle5,-3,-3\rangle$, $\text{w}=\langle0,1,-1\rangle$
+-\item $\text{u}=\text{i}-\text{k}$, $\text{v}=5\text{j}-5\text{k}$, $\text{w}=10\text{j}$
++\item $\mathbf{u}=\langle3,7,-2\rangle$, $\mathbf{v}=\langle5,-3,-3\rangle$, $\mathbf{w}=\langle0,1,-1\rangle$
++\item $\mathbf{u}=\mathbf{i}-\mathbf{k}$, $\mathbf{v}=5\mathbf{j}-5\mathbf{k}$, $\mathbf{w}=10\mathbf{j}$
+ \item Use vectors to show that a parallelogram with equal diagonals is a rectangle.
+ \item Use vectors to show that the diagonals of a rhombus are perpendicular.
+-\item Show that $\text{u}\cdot(\text{v}+\text{w})=\text{u}\cdot \text{v}+\text{u}\cdot \text{w}$ is true for any vectors $\text{u}$, $\text{v}$, and $\text{w}$.
+-\item Verify the identity $\text{u}\cdot(\text{v}+\text{w})=\text{u}\cdot \text{v}+\text{u}\cdot \text{w}$ for vectors $\text{u}=\langle1,0,4\rangle$, $\text{v}=\langle-2,3,5\rangle$, and $\text{w}=\langle4,-2,6\rangle$.
++\item Show that $\mathbf{u}\cdot(\mathbf{v}+\mathbf{w})=\mathbf{u}\cdot \mathbf{v}+\mathbf{u}\cdot \mathbf{w}$ is true for any vectors $\mathbf{u}$, $\mathbf{v}$, and $\mathbf{w}$.
++\item Verify the identity $\mathbf{u}\cdot(\mathbf{v}+\mathbf{w})=\mathbf{u}\cdot \mathbf{v}+\mathbf{u}\cdot \mathbf{w}$ for vectors $\mathbf{u}=\langle1,0,4\rangle$, $\mathbf{v}=\langle-2,3,5\rangle$, and $\mathbf{w}=\langle4,-2,6\rangle$.
+ \end{enumerate}
+ 
+-For the following problems, the vector $\text{u}$ is given.
++For the following problems, the vector $\mathbf{u}$ is given.
+ 
+ 
+-(a) Find the direction cosines for the vector $\text{u}$.
++(a) Find the direction cosines for the vector $\mathbf{u}$.
+ 
+ 
+-(b) Find the direction angles for the vector $\text{u}$ expressed in degrees. (Round the answer to the nearest integer.)
++(b) Find the direction angles for the vector $\mathbf{u}$ expressed in degrees. (Round the answer to the nearest integer.)
+ 
+ \begin{enumerate}[resume]
+-\item $\text{u}=\langle2,2,1\rangle$
+-\item $\text{u}=\text{i}-2\text{j}+2\text{k}$
+-\item $\text{u}=\langle-1,5,2\rangle$
+-\item $\text{u}=\langle2,3,4\rangle$
+-\item Consider $\text{u}=\langle a,b,c\rangle$ a nonzero three-dimensional vector. Let $\cos \alpha$, $\cos \beta$, and $\cos \gamma$ be the direction cosines of $\text{u}$. Show that $\cos^{2}\alpha+\cos^{2}\beta+\cos^{2}\gamma=1$.
+-\item Determine the direction cosines of vector $\text{u}=\text{i}+2\text{j}+2\text{k}$ and show they satisfy $\cos^{2}\alpha+\cos^{2}\beta+\cos^{2}\gamma=1$.
++\item $\mathbf{u}=\langle2,2,1\rangle$
++\item $\mathbf{u}=\mathbf{i}-2\mathbf{j}+2\mathbf{k}$
++\item $\mathbf{u}=\langle-1,5,2\rangle$
++\item $\mathbf{u}=\langle2,3,4\rangle$
++\item Consider $\mathbf{u}=\langle a,b,c\rangle$ a nonzero three-dimensional vector. Let $\cos \alpha$, $\cos \beta$, and $\cos \gamma$ be the direction cosines of $\mathbf{u}$. Show that $\cos^{2}\alpha+\cos^{2}\beta+\cos^{2}\gamma=1$.
++\item Determine the direction cosines of vector $\mathbf{u}=\mathbf{i}+2\mathbf{j}+2\mathbf{k}$ and show they satisfy $\cos^{2}\alpha+\cos^{2}\beta+\cos^{2}\gamma=1$.
+ \end{enumerate}
+ 
+-For the following exercises, the vectors $\text{u}$ and $\text{v}$ are given.
++For the following exercises, the vectors $\mathbf{u}$ and $\mathbf{v}$ are given.
+ 
+ 
+-(a) Find the vector projection $\text{w}=\text{proj}_{\text{u}}\text{v}$ of vector $\text{v}$ onto vector $\text{u}$. Express your answer in component form.
++(a) Find the vector projection $\mathbf{w}=\operatorname{proj}_{\mathbf{u}}\mathbf{v}$ of vector $\mathbf{v}$ onto vector $\mathbf{u}$. Express your answer in component form.
+ 
+ 
+-(b) Find the scalar projection $\text{comp}_{\text{u}}\text{v}$ of vector $\text{v}$ onto vector u.
++(b) Find the scalar projection $\operatorname{comp}_{\mathbf{u}}\mathbf{v}$ of vector $\mathbf{v}$ onto vector $\mathbf{u}$.
+ 
+ \begin{enumerate}[resume]
+-\item $\text{u}=5\text{i}+2\text{j}$, $\text{v}=2\text{i}+3\text{j}$
+-\item $\text{u}=\langle-4,7\rangle$, $\text{v}=\langle3,5\rangle$
+-\item $\text{u}=3\text{i}+2\text{k}$, $\text{v}=2\text{j}+4\text{k}$
+-\item $\text{u}=\langle4,4,0\rangle$, $\text{v}=\langle0,4,1\rangle$
+-\item Consider the vectors $\text{u}=4\text{i}-3\text{j}$ and $\text{v}=3\text{i}+2\text{j}$.
++\item $\mathbf{u}=5\mathbf{i}+2\mathbf{j}$, $\mathbf{v}=2\mathbf{i}+3\mathbf{j}$
++\item $\mathbf{u}=\langle-4,7\rangle$, $\mathbf{v}=\langle3,5\rangle$
++\item $\mathbf{u}=3\mathbf{i}+2\mathbf{k}$, $\mathbf{v}=2\mathbf{j}+4\mathbf{k}$
++\item $\mathbf{u}=\langle4,4,0\rangle$, $\mathbf{v}=\langle0,4,1\rangle$
++\item Consider the vectors $\mathbf{u}=4\mathbf{i}-3\mathbf{j}$ and $\mathbf{v}=3\mathbf{i}+2\mathbf{j}$.
+ \begin{enumerate}[label=(\alph*)]
+-  \item Find the component form of vector $\text{w}=\text{proj}_{\text{u}}\text{v}$ that represents the projection of $\text{v}$ onto $\text{u}$.
+-  \item Write the decomposition $\text{v}=\text{w}+\text{q}$ of vector $\text{v}$ into the orthogonal components $\text{w}$ and $\text{q}$, where $\text{w}$ is the projection of $\text{v}$ onto $\text{u}$ and $\text{q}$ is a vector orthogonal to the direction of $\text{u}$.
++  \item Find the component form of vector $\mathbf{w}=\operatorname{proj}_{\mathbf{u}}\mathbf{v}$ that represents the projection of $\mathbf{v}$ onto $\mathbf{u}$.
++  \item Write the decomposition $\mathbf{v}=\mathbf{w}+\mathbf{q}$ of vector $\mathbf{v}$ into the orthogonal components $\mathbf{w}$ and $\mathbf{q}$, where $\mathbf{w}$ is the projection of $\mathbf{v}$ onto $\mathbf{u}$ and $\mathbf{q}$ is a vector orthogonal to the direction of $\mathbf{u}$.
+ \end{enumerate}
+-\item Consider vectors $\text{u}=2\text{i}+4\text{j}$ and $\text{v}=4\text{j}+2\text{k}$.
++\item Consider vectors $\mathbf{u}=2\mathbf{i}+4\mathbf{j}$ and $\mathbf{v}=4\mathbf{j}+2\mathbf{k}$.
+ \begin{enumerate}[label=(\alph*)]
+-  \item Find the component form of vector $\text{w}=\text{proj}_{\text{u}}\text{v}$ that represents the projection of $\text{v}$ onto $\text{u}$.
+-  \item Write the decomposition $\text{v}=\text{w}+\text{q}$ of vector $\text{v}$ into the orthogonal components $\text{w}$ and $\text{q}$, where $\text{w}$ is the projection of $\text{v}$ onto $\text{u}$ and $\text{q}$ is a vector orthogonal to the direction of $\text{u}$.
++  \item Find the component form of vector $\mathbf{w}=\operatorname{proj}_{\mathbf{u}}\mathbf{v}$ that represents the projection of $\mathbf{v}$ onto $\mathbf{u}$.
++  \item Write the decomposition $\mathbf{v}=\mathbf{w}+\mathbf{q}$ of vector $\mathbf{v}$ into the orthogonal components $\mathbf{w}$ and $\mathbf{q}$, where $\mathbf{w}$ is the projection of $\mathbf{v}$ onto $\mathbf{u}$ and $\mathbf{q}$ is a vector orthogonal to the direction of $\mathbf{u}$.
+ \end{enumerate}
+-\item A methane molecule has a carbon atom situated at the origin and four hydrogen atoms located at points $P(1,1,-1),Q(1,-1,1),R(-1,1,1),\,\text{and}\,S(-1,-1,-1)$ (see figure). \\ \textit{[Figure: This figure is the 3-dimensional coordinate system. There are four points plotted. The first point is labeled ``P(1, 1, -1),'' the second point is labeled ``Q(1, -1, 1),'' the third point is labeled ``R(-1, 1, 1),'' and the fourth point is labeled ``S(-1, -1, -1).'' There are line segments from Q to P, P to R and R to P. There are also two vectors in standard position. The first has terminal point of R and the second has terminal point of S. The angle between them is represented with an arc.]}
++\item A methane molecule has a carbon atom situated at the origin and four hydrogen atoms located at points $P(1,1,-1),Q(1,-1,1),R(-1,1,1)$, and $S(-1,-1,-1)$ (see figure). \\ \textit{[Figure: This figure is the 3-dimensional coordinate system. There are four points plotted. The first point is labeled ``P(1, 1, -1),'' the second point is labeled ``Q(1, -1, 1),'' the third point is labeled ``R(-1, 1, 1),'' and the fourth point is labeled ``S(-1, -1, -1).'' There are line segments from Q to P, P to R and R to Q. There are also two vectors in standard position. The first has terminal point of R and the second has terminal point of S. The angle between them is represented with an arc.]}
+ \begin{enumerate}[label=(\alph*)]
+   \item Find the distance between the hydrogen atoms located at P and R.
+   \item Find the angle between vectors $\overset{\to}{OS}$ and $\overset{\to}{OR}$ that connect the carbon atom with the hydrogen atoms located at S and R, which is also called the bond angle. Express the answer in degrees rounded to two decimal places.
+ \end{enumerate}
+ \item \techrequired Find the vectors that join the center of a clock to the hours 1:00, 2:00, and 3:00. Assume the clock is circular with a radius of 1 unit.
+-\item Find the work done by force $\text{F}=\langle5,6,-2\rangle$ (measured in Newtons) that moves a particle from point $P(3,-1,0)$ to point $Q(2,3,1)$ along a straight line (the distance is measured in meters).
++\item Find the work done by force $\mathbf{F}=\langle5,6,-2\rangle$ (measured in Newtons) that moves a particle from point $P(3,-1,0)$ to point $Q(2,3,1)$ along a straight line (the distance is measured in meters).
+ \item \techrequired A sled is pulled by exerting a force of 100 N on a rope that makes an angle of $25^\circ$ with the horizontal. Find the work done in pulling the sled 40 m. (Round the answer to one decimal place.)
+ \item \techrequired A father is pulling his son on a sled at an angle of $20^\circ$ with the horizontal with a force of 25 lb (see the following image). He pulls the sled in a straight path of 50 ft. How much work was done by the man pulling the sled? (Round the answer to the nearest integer.) \\ \textit{[Figure: This figure is an image of a person pulling a child on a sled. The rope for pulling the sled is represented by a vector and labeled ``25 lb.'' There is an angle between the rope vector and the horizontal ground of 20 degrees.]}
+-\item \techrequired A car is towed using a force of 1600 N. The rope used to pull the car makes an angle of 25° with the horizontal. Find the work done in towing the car 2 km. Express the answer in joules $(1\text{J}=1\text{N}\cdot \text{m})$ rounded to the nearest integer.
+-\item \techrequired A boat sails north aided by a wind blowing in a direction of $\text{N3}0^\circ \text{E}$ with a magnitude of 500 lb. How much work is performed by the wind as the boat moves 100 ft? (Round the answer to two decimal places.)
+-\item Vector $\text{p}=\langle150,225,375\rangle$ represents the price of certain models of bicycles sold by a bicycle shop. Vector $\text{n}=\langle10,7,9\rangle$ represents the number of bicycles sold of each model, respectively. Compute the dot product $\text{p}\cdot \text{n}$ and state its meaning.
+-\item \techrequired Two forces $\text{F}_{1}$ and $\text{F}_{2}$ are represented by vectors with initial points that are at the origin. The first force has a magnitude of 20 lb and the terminal point of the vector is point $P(1,1,0)$. The second force has a magnitude of 40 lb and the terminal point of its vector is point $Q(0,1,1)$. Let F be the resultant force of forces $\text{F}_{1}$ and $\text{F}_{2}$.
++\item \techrequired A car is towed using a force of 1600 N. The rope used to pull the car makes an angle of $25^\circ$ with the horizontal. Find the work done in towing the car 2 km. Express the answer in joules $(1\text{J}=1\text{N}\cdot \text{m})$ rounded to the nearest integer.
++\item \techrequired A boat sails north aided by a wind blowing in a direction of $\text{N}30^\circ\text{E}$ with a magnitude of 500 lb. How much work is performed by the wind as the boat moves 100 ft? (Round the answer to two decimal places.)
++\item Vector $\mathbf{p}=\langle150,225,375\rangle$ represents the price of certain models of bicycles sold by a bicycle shop. Vector $\mathbf{n}=\langle10,7,9\rangle$ represents the number of bicycles sold of each model, respectively. Compute the dot product $\mathbf{p}\cdot \mathbf{n}$ and state its meaning.
++\item \techrequired Two forces $\mathbf{F}_{1}$ and $\mathbf{F}_{2}$ are represented by vectors with initial points that are at the origin. The first force has a magnitude of 20 lb and the terminal point of the vector is point $P(1,1,0)$. The second force has a magnitude of 40 lb and the terminal point of its vector is point $Q(0,1,1)$. Let $\mathbf{F}$ be the resultant force of forces $\mathbf{F}_{1}$ and $\mathbf{F}_{2}$.
+ \begin{enumerate}[label=(\alph*)]
+-  \item Find the magnitude of F. (Round the answer to one decimal place.)
+-  \item Find the direction angles of F. (Express the answer in degrees rounded to one decimal place.)
++  \item Find the magnitude of $\mathbf{F}$. (Round the answer to one decimal place.)
++  \item Find the direction angles of $\mathbf{F}$. (Express the answer in degrees rounded to one decimal place.)
+ \end{enumerate}
+-\item \techrequired Consider $\text{r}(t)=\langle \cos t,\sin t,2t\rangle$ the position vector of a particle at time $t\in[0,30]$, where the components of r are expressed in centimeters and time in seconds. Let $\overset{\to}{OP}$ be the position vector of the particle after 1 sec.
++\item \techrequired Consider $\mathbf{r}(t)=\langle \cos t,\sin t,2t\rangle$ the position vector of a particle at time $t\in[0,30]$, where the components of $\mathbf{r}$ are expressed in centimeters and time in seconds. Let $\overset{\to}{OP}$ be the position vector of the particle after 1 sec.
+ \begin{enumerate}[label=(\alph*)]
+-  \item Show that all vectors $\overset{\to}{PQ}$, where $Q(x,y,z)$ is an arbitrary point, orthogonal to the instantaneous velocity vector $\text{v}(1)$ of the particle after 1 sec, can be expressed as $\overset{\to}{PQ}=\langle x-\cos 1,y-\sin 1,z-2\rangle$, where $x\sin 1-y\cos 1-2z+4=0$. The set of point Q describes a plane called the normal plane to the path of the particle at point P.
++  \item Show that all vectors $\overset{\to}{PQ}$, where $Q(x,y,z)$ is an arbitrary point, orthogonal to the instantaneous velocity vector $\mathbf{v}(1)$ of the particle after 1 sec, can be expressed as $\overset{\to}{PQ}=\langle x-\cos 1,y-\sin 1,z-2\rangle$, where $x\sin 1-y\cos 1-2z+4=0$. The set of point Q describes a plane called the normal plane to the path of the particle at point P.
+   \item Use a CAS to visualize the instantaneous velocity vector and the normal plane at point P along with the path of the particle.
+ \end{enumerate}
+ \end{enumerate}

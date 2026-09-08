@@ -1,0 +1,258 @@
+Manual review corrections for this page's first pass.
+
+- Every vector variable ($\text{u}$, $\text{v}$, $\text{w}$, $\text{i}$,
+  $\text{j}$, $\text{k}$, $\text{a}$, $\text{b}$, $\text{c}$, $\text{n}$,
+  $\text{p}$, $\text{r}$, $\text{s}$, $\text{F}$, and $\text{B}$) had been
+  converted to upright, non-bold \text{} instead of boldface, matching the
+  same defect already fixed for vol3-2-1-vectors-in-the-plane.tex,
+  vol3-2-2-vectors-in-three-dimensions.tex, and
+  vol3-2-3-the-dot-product.tex, and unlike every other
+  vector-notation exercise file in this repo and OpenStax's own boldface
+  vector convention; changed every such occurrence to \mathbf{}. The unit
+  symbols $\text{C}$ (coulombs) and $\text{T}$/$\text{N}$ (tesla/newtons)
+  were left as \text{}, since those are typeset upright by convention, not
+  vectors.
+- Sixteen occurrences across the file joined the last item of a
+  comma-separated list of vectors or points into the same math span as the
+  word "and" via \text{and} plus manual \, spacing (e.g.
+  "$\text{u},\text{v},\text{and}\,\text{w}$", "$O,A,B,\,\text{and}\,C$"),
+  the pattern this skill flags against (English glued into math mode
+  instead of plain-text "and" between separate math spans); split each into
+  separate math spans joined by plain-text "and" (e.g. "$\mathbf{u}$,
+  $\mathbf{v}$, and $\mathbf{w}$", "$O$, $A$, $B$, and $C$"). One of these
+  ("the velocity vector v is given by") also left the vector variable v as
+  bare, non-mathematical prose; wrapped it in math mode as $\mathbf{v}$.
+- "($\text{F}$ in $\text{N})$." trapped a sentence-level closing
+  parenthesis inside the math span for the unit N, matching the skill's
+  flagged pattern of sentence punctuation trapped inside math; moved the
+  closing parenthesis outside the math span, to "$\text{N}$)."
+- The wrench figure description for the torque item split "in." and "lb"
+  across a stray capital "I" and a stray space ("12 I n.", "10 l b."), a
+  conversion artifact inconsistent with the identical units spelled out
+  correctly elsewhere in the very same item and its sibling item; corrected
+  to "12 in." and "10 lb."
+- The determinant displays used the plain-bars notation
+  $|\begin{matrix}...\end{matrix}|$ instead of the dedicated LaTeX
+  environment for a determinant; changed them all to
+  \begin{vmatrix}...\end{vmatrix}.
+
+--- /tmp/raw.tex
++++ vol3-2-4-the-cross-product.tex
+@@ -12,53 +12,53 @@
+ \maketitle
+
+
+-For the following exercises, the vectors $\text{u}$ and $\text{v}$ are given.
++For the following exercises, the vectors $\mathbf{u}$ and $\mathbf{v}$ are given.
+
+
+-(a) Find the cross product $\text{u}\times \text{v}$ of the vectors $\text{u}$ and $\text{v}$. Express the answer in component form.
++(a) Find the cross product $\mathbf{u}\times \mathbf{v}$ of the vectors $\mathbf{u}$ and $\mathbf{v}$. Express the answer in component form.
+
+
+-(b) Sketch the vectors $\text{u},\text{v}$, and $\text{u}\times \text{v}$.
++(b) Sketch the vectors $\mathbf{u},\mathbf{v}$, and $\mathbf{u}\times \mathbf{v}$.
+
+ \begin{enumerate}[start=1]
+-\item $\text{u}=\langle2,0,0\rangle$, $\text{v}=\langle2,2,0\rangle$
+-\item $\text{u}=\langle3,2,-1\rangle$, $\text{v}=\langle1,1,0\rangle$
+-\item $\text{u}=2\text{i}+3\text{j}$, $\text{v}=\text{j}+2\text{k}$
+-\item $\text{u}=2\text{j}+3\text{k}$, $\text{v}=3\text{i}+\text{k}$
+-\item Simplify $(\text{i}\times \text{i}-2\text{i}\times \text{j}-4\text{i}\times \text{k}+3\text{j}\times \text{k})\times \text{i}$.
+-\item Simplify $\text{j}\times (\text{k}\times \text{j}+2\text{j}\times \text{i}-3\text{j}\times \text{j}+5\text{i}\times \text{k})$.
++\item $\mathbf{u}=\langle2,0,0\rangle$, $\mathbf{v}=\langle2,2,0\rangle$
++\item $\mathbf{u}=\langle3,2,-1\rangle$, $\mathbf{v}=\langle1,1,0\rangle$
++\item $\mathbf{u}=2\mathbf{i}+3\mathbf{j}$, $\mathbf{v}=\mathbf{j}+2\mathbf{k}$
++\item $\mathbf{u}=2\mathbf{j}+3\mathbf{k}$, $\mathbf{v}=3\mathbf{i}+\mathbf{k}$
++\item Simplify $(\mathbf{i}\times \mathbf{i}-2\mathbf{i}\times \mathbf{j}-4\mathbf{i}\times \mathbf{k}+3\mathbf{j}\times \mathbf{k})\times \mathbf{i}$.
++\item Simplify $\mathbf{j}\times (\mathbf{k}\times \mathbf{j}+2\mathbf{j}\times \mathbf{i}-3\mathbf{j}\times \mathbf{j}+5\mathbf{i}\times \mathbf{k})$.
+ \end{enumerate}
+
+-In the following exercises, vectors $\text{u}$ and $\text{v}$ are given. Find unit vector $\text{w}$ in the direction of the cross product vector $\text{u}\times \text{v}$. Express your answer using standard unit vectors.
++In the following exercises, vectors $\mathbf{u}$ and $\mathbf{v}$ are given. Find unit vector $\mathbf{w}$ in the direction of the cross product vector $\mathbf{u}\times \mathbf{v}$. Express your answer using standard unit vectors.
+
+ \begin{enumerate}[resume]
+-\item $\text{u}=\langle3,-1,2\rangle$, $\text{v}=\langle-2,0,1\rangle$
+-\item $\text{u}=\langle2,6,1\rangle$, $\text{v}=\langle3,0,1\rangle$
+-\item $\text{u}=\overset{\to}{AB}$, $\text{v}=\overset{\to}{AC}$, where $A(1,0,1)$, $B(1,-1,3)$, and $C(0,0,5)$
+-\item $\text{u}=\overset{\to}{OP}$, $\text{v}=\overset{\to}{PQ}$, where $P(-1,1,0)$ and $Q(0,2,1)$
+-\item Determine the real number $\alpha$ such that $\text{u}\times \text{v}$ and $\text{i}$ are orthogonal, where $\text{u}=3\text{i}+\text{j}-5\text{k}$ and $\text{v}=4\text{i}-2\text{j}+\alpha \text{k}$.
+-\item Show that $\text{u}\times \text{v}$ and $2\text{i}-14\text{j}+2\text{k}$ cannot be orthogonal for any $\alpha$ real number, where $\text{u}=\text{i}+7\text{j}-\text{k}$ and $\text{v}=\alpha \text{i}+5\text{j}+\text{k}$.
+-\item Show that $\text{u}\times \text{v}$ is orthogonal to $\text{u}+\text{v}$ and $\text{u}-\text{v}$, where $\text{u}$ and $\text{v}$ are nonzero vectors.
+-\item Show that $\text{v}\times \text{u}$ is orthogonal to $(\text{u}\cdot \text{v})(\text{u}+\text{v})+\text{u}$, where $\text{u}$ and $\text{v}$ are nonzero vectors.
+-\item Calculate the determinant $|\begin{matrix}\text{i} & \text{j} & \text{k} \\ 1 & -1 & 7 \\ 2 & 0 & 3\end{matrix}|$.
+-\item Calculate the determinant $|\begin{matrix}\text{i} & \text{j} & \text{k} \\ 0 & 3 & -4 \\ 1 & 6 & -1\end{matrix}|$.
++\item $\mathbf{u}=\langle3,-1,2\rangle$, $\mathbf{v}=\langle-2,0,1\rangle$
++\item $\mathbf{u}=\langle2,6,1\rangle$, $\mathbf{v}=\langle3,0,1\rangle$
++\item $\mathbf{u}=\overset{\to}{AB}$, $\mathbf{v}=\overset{\to}{AC}$, where $A(1,0,1)$, $B(1,-1,3)$, and $C(0,0,5)$
++\item $\mathbf{u}=\overset{\to}{OP}$, $\mathbf{v}=\overset{\to}{PQ}$, where $P(-1,1,0)$ and $Q(0,2,1)$
++\item Determine the real number $\alpha$ such that $\mathbf{u}\times \mathbf{v}$ and $\mathbf{i}$ are orthogonal, where $\mathbf{u}=3\mathbf{i}+\mathbf{j}-5\mathbf{k}$ and $\mathbf{v}=4\mathbf{i}-2\mathbf{j}+\alpha \mathbf{k}$.
++\item Show that $\mathbf{u}\times \mathbf{v}$ and $2\mathbf{i}-14\mathbf{j}+2\mathbf{k}$ cannot be orthogonal for any $\alpha$ real number, where $\mathbf{u}=\mathbf{i}+7\mathbf{j}-\mathbf{k}$ and $\mathbf{v}=\alpha \mathbf{i}+5\mathbf{j}+\mathbf{k}$.
++\item Show that $\mathbf{u}\times \mathbf{v}$ is orthogonal to $\mathbf{u}+\mathbf{v}$ and $\mathbf{u}-\mathbf{v}$, where $\mathbf{u}$ and $\mathbf{v}$ are nonzero vectors.
++\item Show that $\mathbf{v}\times \mathbf{u}$ is orthogonal to $(\mathbf{u}\cdot \mathbf{v})(\mathbf{u}+\mathbf{v})+\mathbf{u}$, where $\mathbf{u}$ and $\mathbf{v}$ are nonzero vectors.
++\item Calculate the determinant $\begin{vmatrix}\mathbf{i} & \mathbf{j} & \mathbf{k} \\ 1 & -1 & 7 \\ 2 & 0 & 3\end{vmatrix}$.
++\item Calculate the determinant $\begin{vmatrix}\mathbf{i} & \mathbf{j} & \mathbf{k} \\ 0 & 3 & -4 \\ 1 & 6 & -1\end{vmatrix}$.
+ \end{enumerate}
+
+-For the following exercises, the vectors $\text{u}$ and $\text{v}$ are given. Use determinant notation to find vector $\text{w}$ orthogonal to vectors $\text{u}$ and $\text{v}$.
++For the following exercises, the vectors $\mathbf{u}$ and $\mathbf{v}$ are given. Use determinant notation to find vector $\mathbf{w}$ orthogonal to vectors $\mathbf{u}$ and $\mathbf{v}$.
+
+ \begin{enumerate}[resume]
+-\item $\text{u}=\langle-1,0,e^{t}\rangle$, $\text{v}=\langle1,e^{-t},0\rangle$, where $t$ is a real number
+-\item $\text{u}=\langle1,0,x\rangle$, $\text{v}=\langle \frac{2}{x},1,0\rangle$, where $x$ is a nonzero real number
+-\item Find vector $(\text{a}-2\text{b})\times \text{c}$, where $\text{a}=|\begin{matrix}\text{i} & \text{j} & \text{k} \\ 2 & -1 & 5 \\ 0 & 1 & 8\end{matrix}|$, $\text{b}=|\begin{matrix}\text{i} & \text{j} & \text{k} \\ 0 & 1 & 1 \\ 2 & -1 & -2\end{matrix}|$, and $\text{c}=\text{i}+\text{j}+\text{k}$.
+-\item Find vector $\text{c}\times (\text{a}+3\text{b})$, where $\text{a}=|\begin{matrix}\text{i} & \text{j} & \text{k} \\ 5 & 0 & 9 \\ 0 & 1 & 0\end{matrix}|$, $\text{b}=|\begin{matrix}\text{i} & \text{j} & \text{k} \\ 0 & -1 & 1 \\ 7 & 1 & -1\end{matrix}|$, and $\text{c}=\text{i}-\text{k}$.
+-\item \techrequired Use the cross product $\text{u}\times \text{v}$ to find the acute angle between vectors $\text{u}$ and $\text{v}$, where $\text{u}=\text{i}+2\text{j}$ and $\text{v}=\text{i}+\text{k}$. Express the answer in degrees rounded to the nearest integer.
+-\item \techrequired Use the cross product $\text{u}\times \text{v}$ to find the obtuse angle between vectors $\text{u}$ and $\text{v}$, where $\text{u}=-\text{i}+3\text{j}+\text{k}$ and $\text{v}=\text{i}-2\text{j}$. Express the answer in degrees rounded to the nearest integer.
+-\item Use the sine and cosine of the angle between two nonzero vectors $\text{u}$ and $\text{v}$ to prove Lagrange's identity: ${\|\text{u}\times \text{v}\|}^{2}={\|\text{u}\|}^{2}{\|\text{v}\|}^{2}-{(\text{u}\cdot \text{v})}^{2}$.
+-\item Verify Lagrange's identity ${\|\text{u}\times \text{v}\|}^{2}={\|\text{u}\|}^{2}{\|\text{v}\|}^{2}-{(\text{u}\cdot \text{v})}^{2}$ for vectors $\text{u}=-\text{i}+\text{j}-2\text{k}$ and $\text{v}=2\text{i}-\text{j}$.
+-\item Nonzero vectors $\text{u}$ and $\text{v}$ are called collinear if there exists a nonzero scalar $\alpha$ such that $\text{v}=\alpha \text{u}$. Show that $\text{u}$ and $\text{v}$ are collinear if and only if $\text{u}\times \text{v}=0$.
+-\item Nonzero vectors $\text{u}$ and $\text{v}$ are called collinear if there exists a nonzero scalar $\alpha$ such that $\text{v}=\alpha \text{u}$. Show that vectors $\overset{\to}{AB}$ and $\overset{\to}{AC}$ are collinear, where $A(4,1,0)$, $B(6,5,-2)$, and $C(5,3,-1)$.
+-\item Find the area of the parallelogram with adjacent sides $\text{u}=\langle3,2,0\rangle$ and $\text{v}=\langle0,2,1\rangle$.
+-\item Find the area of the parallelogram with adjacent sides $\text{u}=\text{i}+\text{j}$ and $\text{v}=\text{i}+\text{k}$.
++\item $\mathbf{u}=\langle-1,0,e^{t}\rangle$, $\mathbf{v}=\langle1,e^{-t},0\rangle$, where $t$ is a real number
++\item $\mathbf{u}=\langle1,0,x\rangle$, $\mathbf{v}=\langle \frac{2}{x},1,0\rangle$, where $x$ is a nonzero real number
++\item Find vector $(\mathbf{a}-2\mathbf{b})\times \mathbf{c}$, where $\mathbf{a}=\begin{vmatrix}\mathbf{i} & \mathbf{j} & \mathbf{k} \\ 2 & -1 & 5 \\ 0 & 1 & 8\end{vmatrix}$, $\mathbf{b}=\begin{vmatrix}\mathbf{i} & \mathbf{j} & \mathbf{k} \\ 0 & 1 & 1 \\ 2 & -1 & -2\end{vmatrix}$, and $\mathbf{c}=\mathbf{i}+\mathbf{j}+\mathbf{k}$.
++\item Find vector $\mathbf{c}\times (\mathbf{a}+3\mathbf{b})$, where $\mathbf{a}=\begin{vmatrix}\mathbf{i} & \mathbf{j} & \mathbf{k} \\ 5 & 0 & 9 \\ 0 & 1 & 0\end{vmatrix}$, $\mathbf{b}=\begin{vmatrix}\mathbf{i} & \mathbf{j} & \mathbf{k} \\ 0 & -1 & 1 \\ 7 & 1 & -1\end{vmatrix}$, and $\mathbf{c}=\mathbf{i}-\mathbf{k}$.
++\item \techrequired Use the cross product $\mathbf{u}\times \mathbf{v}$ to find the acute angle between vectors $\mathbf{u}$ and $\mathbf{v}$, where $\mathbf{u}=\mathbf{i}+2\mathbf{j}$ and $\mathbf{v}=\mathbf{i}+\mathbf{k}$. Express the answer in degrees rounded to the nearest integer.
++\item \techrequired Use the cross product $\mathbf{u}\times \mathbf{v}$ to find the obtuse angle between vectors $\mathbf{u}$ and $\mathbf{v}$, where $\mathbf{u}=-\mathbf{i}+3\mathbf{j}+\mathbf{k}$ and $\mathbf{v}=\mathbf{i}-2\mathbf{j}$. Express the answer in degrees rounded to the nearest integer.
++\item Use the sine and cosine of the angle between two nonzero vectors $\mathbf{u}$ and $\mathbf{v}$ to prove Lagrange's identity: ${\|\mathbf{u}\times \mathbf{v}\|}^{2}={\|\mathbf{u}\|}^{2}{\|\mathbf{v}\|}^{2}-{(\mathbf{u}\cdot \mathbf{v})}^{2}$.
++\item Verify Lagrange's identity ${\|\mathbf{u}\times \mathbf{v}\|}^{2}={\|\mathbf{u}\|}^{2}{\|\mathbf{v}\|}^{2}-{(\mathbf{u}\cdot \mathbf{v})}^{2}$ for vectors $\mathbf{u}=-\mathbf{i}+\mathbf{j}-2\mathbf{k}$ and $\mathbf{v}=2\mathbf{i}-\mathbf{j}$.
++\item Nonzero vectors $\mathbf{u}$ and $\mathbf{v}$ are called collinear if there exists a nonzero scalar $\alpha$ such that $\mathbf{v}=\alpha \mathbf{u}$. Show that $\mathbf{u}$ and $\mathbf{v}$ are collinear if and only if $\mathbf{u}\times \mathbf{v}=0$.
++\item Nonzero vectors $\mathbf{u}$ and $\mathbf{v}$ are called collinear if there exists a nonzero scalar $\alpha$ such that $\mathbf{v}=\alpha \mathbf{u}$. Show that vectors $\overset{\to}{AB}$ and $\overset{\to}{AC}$ are collinear, where $A(4,1,0)$, $B(6,5,-2)$, and $C(5,3,-1)$.
++\item Find the area of the parallelogram with adjacent sides $\mathbf{u}=\langle3,2,0\rangle$ and $\mathbf{v}=\langle0,2,1\rangle$.
++\item Find the area of the parallelogram with adjacent sides $\mathbf{u}=\mathbf{i}+\mathbf{j}$ and $\mathbf{v}=\mathbf{i}+\mathbf{k}$.
+ \item Consider points $A(3,-1,2),B(2,1,5)$, and $C(1,-2,-2)$.
+ \begin{enumerate}[label=(\alph*)]
+   \item Find the area of parallelogram $ABCD$ with adjacent sides $\overset{\to}{AB}$ and $\overset{\to}{AC}$.
+@@ -73,21 +73,21 @@
+ \end{enumerate}
+ \end{enumerate}
+
+-In the following exercises, vectors $\text{u},\text{v},\text{and}\,\text{w}$ are given.
++In the following exercises, vectors $\mathbf{u}$, $\mathbf{v}$, and $\mathbf{w}$ are given.
+
+
+-(a) Find the triple scalar product $\text{u}\cdot(\text{v}\times \text{w})$.
++(a) Find the triple scalar product $\mathbf{u}\cdot(\mathbf{v}\times \mathbf{w})$.
+
+
+-(b) Find the volume of the parallelepiped with the adjacent edges $\text{u},\text{v},\text{and}\,\text{w}$.
++(b) Find the volume of the parallelepiped with the adjacent edges $\mathbf{u}$, $\mathbf{v}$, and $\mathbf{w}$.
+
+ \begin{enumerate}[resume]
+-\item $\text{u}=\text{i}+\text{j}$, $\text{v}=\text{j}+\text{k}$, and $\text{w}=\text{i}+\text{k}$
+-\item $\text{u}=\langle-3,5,-1\rangle$, $\text{v}=\langle0,2,-2\rangle$, and $\text{w}=\langle3,1,1\rangle$
+-\item Calculate the triple scalar products $\text{v}\cdot(\text{u}\times \text{w})$ and $\text{w}\cdot(\text{u}\times \text{v})$, where $\text{u}=\langle1,1,1\rangle$, $\text{v}=\langle7,6,9\rangle$, and $\text{w}=\langle4,2,7\rangle$.
+-\item Calculate the triple scalar products $\text{w}\cdot(\text{v}\times \text{u})$ and $\text{u}\cdot(\text{w}\times \text{v})$, where $\text{u}=\langle4,2,-1\rangle$, $\text{v}=\langle2,5,-3\rangle$, and $\text{w}=\langle9,5,-10\rangle$.
+-\item Find vectors $\text{a},\text{b},\,\text{and}\,\text{c}$ with a triple scalar product given by the determinant $|\begin{matrix}1 & 2 & 3 \\ 0 & 2 & 5 \\ 8 & 9 & 2\end{matrix}|$. Determine their triple scalar product.
+-\item The triple scalar product of vectors $\text{a},\text{b},\,\text{and}\,\text{c}$ is given by the determinant $|\begin{matrix}0 & -2 & 1 \\ 0 & 1 & 4 \\ 1 & -3 & 7\end{matrix}|$. Find vector $\text{a}-\text{b}+\text{c}$.
++\item $\mathbf{u}=\mathbf{i}+\mathbf{j}$, $\mathbf{v}=\mathbf{j}+\mathbf{k}$, and $\mathbf{w}=\mathbf{i}+\mathbf{k}$
++\item $\mathbf{u}=\langle-3,5,-1\rangle$, $\mathbf{v}=\langle0,2,-2\rangle$, and $\mathbf{w}=\langle3,1,1\rangle$
++\item Calculate the triple scalar products $\mathbf{v}\cdot(\mathbf{u}\times \mathbf{w})$ and $\mathbf{w}\cdot(\mathbf{u}\times \mathbf{v})$, where $\mathbf{u}=\langle1,1,1\rangle$, $\mathbf{v}=\langle7,6,9\rangle$, and $\mathbf{w}=\langle4,2,7\rangle$.
++\item Calculate the triple scalar products $\mathbf{w}\cdot(\mathbf{v}\times \mathbf{u})$ and $\mathbf{u}\cdot(\mathbf{w}\times \mathbf{v})$, where $\mathbf{u}=\langle4,2,-1\rangle$, $\mathbf{v}=\langle2,5,-3\rangle$, and $\mathbf{w}=\langle9,5,-10\rangle$.
++\item Find vectors $\mathbf{a}$, $\mathbf{b}$, and $\mathbf{c}$ with a triple scalar product given by the determinant $\begin{vmatrix}1 & 2 & 3 \\ 0 & 2 & 5 \\ 8 & 9 & 2\end{vmatrix}$. Determine their triple scalar product.
++\item The triple scalar product of vectors $\mathbf{a}$, $\mathbf{b}$, and $\mathbf{c}$ is given by the determinant $\begin{vmatrix}0 & -2 & 1 \\ 0 & 1 & 4 \\ 1 & -3 & 7\end{vmatrix}$. Find vector $\mathbf{a}-\mathbf{b}+\mathbf{c}$.
+ \item Consider the parallelepiped with edges $OA,OB$, and $OC$, where $A(2,1,0),B(1,2,0)$, and $C(0,1,\alpha)$.
+ \begin{enumerate}[label=(\alph*)]
+   \item Find the real number $\alpha>0$ such that the volume of the parallelepiped is $3$ units$^{3}$.
+@@ -96,65 +96,65 @@
+ \item Consider points $A(\alpha,0,0),B(0,\beta,0)$, and $C(0,0,\gamma)$, with $\alpha$, $\beta$, and $\gamma$ positive real numbers.
+ \begin{enumerate}[label=(\alph*)]
+   \item Determine the volume of the parallelepiped with adjacent sides $\overset{\to}{OA}$, $\overset{\to}{OB}$, and $\overset{\to}{OC}$.
+-  \item Find the volume of the tetrahedron with vertices $O,A,B,\,\text{and}\,C$. (Hint: The volume of the tetrahedron is $1/6$ of the volume of the parallelepiped.)
+-  \item Find the distance from the origin to the plane determined by $A,B,\,\text{and}\,C$. Sketch the parallelepiped and tetrahedron.
++  \item Find the volume of the tetrahedron with vertices $O$, $A$, $B$, and $C$. (Hint: The volume of the tetrahedron is $1/6$ of the volume of the parallelepiped.)
++  \item Find the distance from the origin to the plane determined by $A$, $B$, and $C$. Sketch the parallelepiped and tetrahedron.
+ \end{enumerate}
+-\item Let $\text{u},\text{v},\,\text{and}\,\text{w}$ be three-dimensional vectors and $c$ be a real number. Prove the following properties of the cross product.
++\item Let $\mathbf{u}$, $\mathbf{v}$, and $\mathbf{w}$ be three-dimensional vectors and $c$ be a real number. Prove the following properties of the cross product.
+ \begin{enumerate}[label=(\alph*)]
+-  \item $\text{u}\times \text{u}=0$
+-  \item $\text{u}\times (\text{v}+\text{w})=(\text{u}\times \text{v})+(\text{u}\times \text{w})$
+-  \item $c(\text{u}\times \text{v})=(c\text{u})\times \text{v}=\text{u}\times (c\text{v})$
+-  \item $\text{u}\cdot(\text{u}\times \text{v})=0$
++  \item $\mathbf{u}\times \mathbf{u}=0$
++  \item $\mathbf{u}\times (\mathbf{v}+\mathbf{w})=(\mathbf{u}\times \mathbf{v})+(\mathbf{u}\times \mathbf{w})$
++  \item $c(\mathbf{u}\times \mathbf{v})=(c\mathbf{u})\times \mathbf{v}=\mathbf{u}\times (c\mathbf{v})$
++  \item $\mathbf{u}\cdot(\mathbf{u}\times \mathbf{v})=0$
+ \end{enumerate}
+-\item Show that vectors $\text{u}=\langle1,0,-8\rangle$, $\text{v}=\langle0,1,6\rangle$, and $\text{w}=\langle-1,9,3\rangle$ satisfy the following properties of the cross product.
++\item Show that vectors $\mathbf{u}=\langle1,0,-8\rangle$, $\mathbf{v}=\langle0,1,6\rangle$, and $\mathbf{w}=\langle-1,9,3\rangle$ satisfy the following properties of the cross product.
+ \begin{enumerate}[label=(\alph*)]
+-  \item $\text{u}\times \text{u}=0$
+-  \item $\text{u}\times (\text{v}+\text{w})=(\text{u}\times \text{v})+(\text{u}\times \text{w})$
+-  \item $c(\text{u}\times \text{v})=(c\text{u})\times \text{v}=\text{u}\times (c\text{v})$
+-  \item $\text{u}\cdot(\text{u}\times \text{v})=0$
++  \item $\mathbf{u}\times \mathbf{u}=0$
++  \item $\mathbf{u}\times (\mathbf{v}+\mathbf{w})=(\mathbf{u}\times \mathbf{v})+(\mathbf{u}\times \mathbf{w})$
++  \item $c(\mathbf{u}\times \mathbf{v})=(c\mathbf{u})\times \mathbf{v}=\mathbf{u}\times (c\mathbf{v})$
++  \item $\mathbf{u}\cdot(\mathbf{u}\times \mathbf{v})=0$
+ \end{enumerate}
+-\item Nonzero vectors $\text{u},\text{v},\,\text{and}\,\text{w}$ are said to be linearly dependent if one of the vectors is a linear combination of the other two. For instance, there exist two nonzero real numbers $\alpha$ and $\beta$ such that $\text{w}=\alpha \text{u}+\beta \text{v}$. Otherwise, the vectors are called linearly independent. Show that $\text{u},\text{v},\,\text{and}\,\text{w}$ are coplanar if and only if they are linear dependent.
+-\item Consider vectors $\text{u}=\langle1,4,-7\rangle$, $\text{v}=\langle2,-1,4\rangle$, $\text{w}=\langle0,-9,18\rangle$, and $\text{p}=\langle0,-9,17\rangle$.
++\item Nonzero vectors $\mathbf{u}$, $\mathbf{v}$, and $\mathbf{w}$ are said to be linearly dependent if one of the vectors is a linear combination of the other two. For instance, there exist two nonzero real numbers $\alpha$ and $\beta$ such that $\mathbf{w}=\alpha \mathbf{u}+\beta \mathbf{v}$. Otherwise, the vectors are called linearly independent. Show that $\mathbf{u}$, $\mathbf{v}$, and $\mathbf{w}$ are coplanar if and only if they are linear dependent.
++\item Consider vectors $\mathbf{u}=\langle1,4,-7\rangle$, $\mathbf{v}=\langle2,-1,4\rangle$, $\mathbf{w}=\langle0,-9,18\rangle$, and $\mathbf{p}=\langle0,-9,17\rangle$.
+ \begin{enumerate}[label=(\alph*)]
+-  \item Show that $\text{u},\text{v},\,\text{and}\,\text{w}$ are coplanar by using their triple scalar product
+-  \item Show that $\text{u},\text{v},\,\text{and}\,\text{w}$ are coplanar, using the definition that there exist two nonzero real numbers $\alpha$ and $\beta$ such that $\text{w}=\alpha \text{u}+\beta \text{v}$.
+-  \item Show that $\text{u},\text{v},\,\text{and}\,\text{p}$ are linearly independent---that is, none of the vectors is a linear combination of the other two.
++  \item Show that $\mathbf{u}$, $\mathbf{v}$, and $\mathbf{w}$ are coplanar by using their triple scalar product
++  \item Show that $\mathbf{u}$, $\mathbf{v}$, and $\mathbf{w}$ are coplanar, using the definition that there exist two nonzero real numbers $\alpha$ and $\beta$ such that $\mathbf{w}=\alpha \mathbf{u}+\beta \mathbf{v}$.
++  \item Show that $\mathbf{u}$, $\mathbf{v}$, and $\mathbf{p}$ are linearly independent---that is, none of the vectors is a linear combination of the other two.
+ \end{enumerate}
+ \item Consider points $A(0,0,2)$, $B(1,0,2)$, $C(1,1,2)$, and $D(0,1,2)$. Are vectors $\overset{\to}{AB}$, $\overset{\to}{AC}$, and $\overset{\to}{AD}$ linearly dependent (that is, one of the vectors is a linear combination of the other two)?
+-\item Show that vectors $\text{i}+\text{j}$, $\text{i}-\text{j}$, and $\text{i}+\text{j}+\text{k}$ are linearly independent---that is, there do not exist two nonzero real numbers $\alpha$ and $\beta$ such that $\text{i}+\text{j}+\text{k}=\alpha(\text{i}+\text{j})+\beta(\text{i}-\text{j})$.
+-\item Let $\text{u}=\langle u_{1},u_{2}\rangle$ and $\text{v}=\langle v_{1},v_{2}\rangle$ be two-dimensional vectors. The cross product of vectors $\text{u}$ and $\text{v}$ is not defined. However, if the vectors are regarded as the three-dimensional vectors $\tilde{\text{u}}=\langle u_{1},u_{2},0\rangle$ and $\tilde{\text{v}}=\langle v_{1},v_{2},0\rangle$, respectively, then, in this case, we can define the cross product of $\tilde{\text{u}}$ and $\tilde{\text{v}}$. In particular, in determinant notation, the cross product of $\tilde{\text{u}}$ and $\tilde{\text{v}}$ is given by \[\tilde{\text{u}}\times \tilde{\text{v}}=|\begin{matrix}\text{i} & \text{j} & \text{k} \\ u_{1} & u_{2} & 0 \\ v_{1} & v_{2} & 0\end{matrix}|.\] Use this result to compute $(\text{i}\cos \theta+\text{j}\sin \theta)\times (\text{i}\sin \theta-\text{j}\cos \theta)$, where $\theta$ is a real number.
++\item Show that vectors $\mathbf{i}+\mathbf{j}$, $\mathbf{i}-\mathbf{j}$, and $\mathbf{i}+\mathbf{j}+\mathbf{k}$ are linearly independent---that is, there do not exist two nonzero real numbers $\alpha$ and $\beta$ such that $\mathbf{i}+\mathbf{j}+\mathbf{k}=\alpha(\mathbf{i}+\mathbf{j})+\beta(\mathbf{i}-\mathbf{j})$.
++\item Let $\mathbf{u}=\langle u_{1},u_{2}\rangle$ and $\mathbf{v}=\langle v_{1},v_{2}\rangle$ be two-dimensional vectors. The cross product of vectors $\mathbf{u}$ and $\mathbf{v}$ is not defined. However, if the vectors are regarded as the three-dimensional vectors $\tilde{\mathbf{u}}=\langle u_{1},u_{2},0\rangle$ and $\tilde{\mathbf{v}}=\langle v_{1},v_{2},0\rangle$, respectively, then, in this case, we can define the cross product of $\tilde{\mathbf{u}}$ and $\tilde{\mathbf{v}}$. In particular, in determinant notation, the cross product of $\tilde{\mathbf{u}}$ and $\tilde{\mathbf{v}}$ is given by \[\tilde{\mathbf{u}}\times \tilde{\mathbf{v}}=\begin{vmatrix}\mathbf{i} & \mathbf{j} & \mathbf{k} \\ u_{1} & u_{2} & 0 \\ v_{1} & v_{2} & 0\end{vmatrix}.\] Use this result to compute $(\mathbf{i}\cos \theta+\mathbf{j}\sin \theta)\times (\mathbf{i}\sin \theta-\mathbf{j}\cos \theta)$, where $\theta$ is a real number.
+ \item Consider points $P(2,1)$, $Q(4,2)$, and $R(1,2)$.
+ \begin{enumerate}[label=(\alph*)]
+-  \item Find the area of triangle $P,Q,\,\text{and}\,R$.
+-  \item Determine the distance from point $R$ to the line passing through $P\,\text{and}\,Q$.
++  \item Find the area of triangle $P$, $Q$, and $R$.
++  \item Determine the distance from point $R$ to the line passing through $P$ and $Q$.
+ \end{enumerate}
+ \item Determine a vector of magnitude $10$ perpendicular to the plane passing through the x-axis and point $P(1,2,4)$.
+ \item Determine a unit vector perpendicular to the plane passing through the z-axis and point $A(3,1,-2)$.
+-\item Consider $\text{u}$ and $\text{v}$ two three-dimensional vectors. If the magnitude of the cross product vector $\text{u}\times \text{v}$ is $k$ times larger than the magnitude of vector $\text{u}$, show that the magnitude of $\text{v}$ is greater than or equal to $k$, where $k$ is a natural number.
+-\item \techrequired Assume that the magnitudes of two nonzero vectors $\text{u}$ and $\text{v}$ are known. The function $f(\theta)=\|\text{u}\|\|\text{v}\|\sin \theta$ defines the magnitude of the cross product vector $\text{u}\times \text{v}$, where $\theta \in[0,\pi]$ is the angle between $\text{u}\,\text{and}\,\text{v}$.
++\item Consider $\mathbf{u}$ and $\mathbf{v}$ two three-dimensional vectors. If the magnitude of the cross product vector $\mathbf{u}\times \mathbf{v}$ is $k$ times larger than the magnitude of vector $\mathbf{u}$, show that the magnitude of $\mathbf{v}$ is greater than or equal to $k$, where $k$ is a natural number.
++\item \techrequired Assume that the magnitudes of two nonzero vectors $\mathbf{u}$ and $\mathbf{v}$ are known. The function $f(\theta)=\|\mathbf{u}\|\|\mathbf{v}\|\sin \theta$ defines the magnitude of the cross product vector $\mathbf{u}\times \mathbf{v}$, where $\theta \in[0,\pi]$ is the angle between $\mathbf{u}$ and $\mathbf{v}$.
+ \begin{enumerate}[label=(\alph*)]
+   \item Graph the function $f$.
+   \item Find the absolute minimum and maximum of function $f$. Interpret the results.
+-  \item If $\|\text{u}\|=5$ and $\|\text{v}\|=2$, find the angle between $\text{u}\,\text{and}\,\text{v}$ if the magnitude of their cross product vector is equal to $9$.
++  \item If $\|\mathbf{u}\|=5$ and $\|\mathbf{v}\|=2$, find the angle between $\mathbf{u}$ and $\mathbf{v}$ if the magnitude of their cross product vector is equal to $9$.
+ \end{enumerate}
+-\item Find all vectors $\text{w}=\langle w_{1},w_{2},w_{3}\rangle$ that satisfy the equation $\langle1,1,1\rangle \times \text{w}=\langle-1,-1,2\rangle$.
+-\item Solve the equation $\text{w}\times \langle1,0,-1\rangle=\langle3,0,3\rangle$, where $\text{w}=\langle w_{1},w_{2},w_{3}\rangle$ is a nonzero vector with a magnitude of $3$.
+-\item \techrequired A mechanic uses a 12-in. wrench to turn a bolt. The wrench makes a $30^\circ$ angle with the horizontal. If the mechanic applies a vertical force of $10$ lb on the wrench handle, what is the magnitude of the torque at point $P$ (see the following figure)? Express the answer in foot-pounds rounded to two decimal places. \\ \textit{[Figure: This figure is the image of an open-end wrench. The lower portion of the wrench is at point P. The wrench has a length of ``12 I n.'' The angle the wrench makes with a horizontal line from P is 30 degrees. At the top of the wrench is a downward vertical vector labeled ``10 l b.'']}
++\item Find all vectors $\mathbf{w}=\langle w_{1},w_{2},w_{3}\rangle$ that satisfy the equation $\langle1,1,1\rangle \times \mathbf{w}=\langle-1,-1,2\rangle$.
++\item Solve the equation $\mathbf{w}\times \langle1,0,-1\rangle=\langle3,0,3\rangle$, where $\mathbf{w}=\langle w_{1},w_{2},w_{3}\rangle$ is a nonzero vector with a magnitude of $3$.
++\item \techrequired A mechanic uses a 12-in. wrench to turn a bolt. The wrench makes a $30^\circ$ angle with the horizontal. If the mechanic applies a vertical force of $10$ lb on the wrench handle, what is the magnitude of the torque at point $P$ (see the following figure)? Express the answer in foot-pounds rounded to two decimal places. \\ \textit{[Figure: This figure is the image of an open-end wrench. The lower portion of the wrench is at point P. The wrench has a length of ``12 in.'' The angle the wrench makes with a horizontal line from P is 30 degrees. At the top of the wrench is a downward vertical vector labeled ``10 lb.'']}
+ \item \techrequired A boy applies the brakes on a bicycle by applying a downward force of $20$ lb on the pedal when the 6-in. crank makes a $40^\circ$ angle with the horizontal (see the following figure). Find the torque at point $P$. Express your answer in foot-pounds rounded to two decimal places. \\ \textit{[Figure: This figure shows the pedals, cranks, and chain of a bicycle. The distance along the crank to the top pedal is 6 in. The angle of the crank is 40 degrees with the horizontal, measured toward the rear. The top pedal has a downward vector labeled ``20 lb''.]}
+ \item \techrequired Find the magnitude of the force that needs to be applied to the end of a 20-cm wrench located on the positive direction of the y-axis if the force is applied in the direction $\langle0,1,-2\rangle$ and it produces a $100$ N·m torque to the bolt located at the origin.
+ \item \techrequired What is the magnitude of the force required to be applied to the end of a 1-ft wrench at an angle of $35^\circ$ to produce a torque of $20$ ft-lbs?
+-\item \techrequired The force vector $\text{F}$ acting on a proton with an electric charge of $1.6\times 10^{-19}\text{C}$ (in coulombs) moving in a magnetic field $\text{B}$ where the velocity vector $\text{v}$ is given by $\text{F}=1.6\times 10^{-19}(\text{v}\times \text{B})$ (here, $\text{v}$ is expressed in meters per second, $\text{B}$ is in tesla [T], and $\text{F}$ is in newtons [N]). Find the force that acts on a proton that moves in the xy-plane at velocity $\text{v}=10^{5}\text{i}+10^{5}\text{j}$ (in meters per second) in a magnetic field given by $\text{B}=0.3\text{j}$.
+-\item \techrequired The force vector $\text{F}$ acting on a proton with an electric charge of $1.6\times 10^{-19}\text{C}$ moving in a magnetic field $\text{B}$ where the velocity vector v is given by $\text{F}=1.6\times 10^{-19}(\text{v}\times \text{B})$ (here, $\text{v}$ is expressed in meters per second, $\text{B}$ in $\text{T}$, and $\text{F}$ in $\text{N})$. If the magnitude of force $\text{F}$ acting on a proton is $5.9\times 10^{-17}$ N and the proton is moving at the speed of 300 m/sec in magnetic field $\text{B}$ of magnitude 2.4 T, find the angle between velocity vector $\text{v}$ of the proton and magnetic field $\text{B}$. Express the answer in degrees rounded to the nearest integer.
+-\item \techrequired Consider $\text{r}(t)=\langle \cos t,\sin t,2t\rangle$ the position vector of a particle at time $t\in[0,30]$, where the components of $\text{r}$ are expressed in centimeters and time in seconds. Let $\overset{\to}{OP}$ be the position vector of the particle after $1$ sec.
++\item \techrequired The force vector $\mathbf{F}$ acting on a proton with an electric charge of $1.6\times 10^{-19}\text{C}$ (in coulombs) moving in a magnetic field $\mathbf{B}$ where the velocity vector $\mathbf{v}$ is given by $\mathbf{F}=1.6\times 10^{-19}(\mathbf{v}\times \mathbf{B})$ (here, $\mathbf{v}$ is expressed in meters per second, $\mathbf{B}$ is in tesla [T], and $\mathbf{F}$ is in newtons [N]). Find the force that acts on a proton that moves in the xy-plane at velocity $\mathbf{v}=10^{5}\mathbf{i}+10^{5}\mathbf{j}$ (in meters per second) in a magnetic field given by $\mathbf{B}=0.3\mathbf{j}$.
++\item \techrequired The force vector $\mathbf{F}$ acting on a proton with an electric charge of $1.6\times 10^{-19}\text{C}$ moving in a magnetic field $\mathbf{B}$ where the velocity vector $\mathbf{v}$ is given by $\mathbf{F}=1.6\times 10^{-19}(\mathbf{v}\times \mathbf{B})$ (here, $\mathbf{v}$ is expressed in meters per second, $\mathbf{B}$ in $\text{T}$, and $\mathbf{F}$ in $\text{N}$). If the magnitude of force $\mathbf{F}$ acting on a proton is $5.9\times 10^{-17}$ N and the proton is moving at the speed of 300 m/sec in magnetic field $\mathbf{B}$ of magnitude 2.4 T, find the angle between velocity vector $\mathbf{v}$ of the proton and magnetic field $\mathbf{B}$. Express the answer in degrees rounded to the nearest integer.
++\item \techrequired Consider $\mathbf{r}(t)=\langle \cos t,\sin t,2t\rangle$ the position vector of a particle at time $t\in[0,30]$, where the components of $\mathbf{r}$ are expressed in centimeters and time in seconds. Let $\overset{\to}{OP}$ be the position vector of the particle after $1$ sec.
+ \begin{enumerate}[label=(\alph*)]
+-  \item Determine unit vector $\text{B}(t)$ (called the binormal unit vector) that has the direction of cross product vector $\text{v}(t)\times \text{a}(t)$, where $\text{v}(t)$ and $\text{a}(t)$ are the instantaneous velocity vector and, respectively, the acceleration vector of the particle after $t$ seconds.
+-  \item Use a CAS to visualize vectors $\text{v}(1)$, $\text{a}(1)$, and $\text{B}(1)$ as vectors starting at point $P$ along with the path of the particle.
++  \item Determine unit vector $\mathbf{B}(t)$ (called the binormal unit vector) that has the direction of cross product vector $\mathbf{v}(t)\times \mathbf{a}(t)$, where $\mathbf{v}(t)$ and $\mathbf{a}(t)$ are the instantaneous velocity vector and, respectively, the acceleration vector of the particle after $t$ seconds.
++  \item Use a CAS to visualize vectors $\mathbf{v}(1)$, $\mathbf{a}(1)$, and $\mathbf{B}(1)$ as vectors starting at point $P$ along with the path of the particle.
+ \end{enumerate}
+ \item A solar panel is mounted on the roof of a house. The panel may be regarded as positioned at the points of coordinates (in meters) $A(8,0,0)$, $B(8,18,0)$, $C(0,18,8)$, and $D(0,0,8)$ (see the following figure). \\ \textit{[Figure: This figure shows a rectangular set of solar panels on a roof. The corners are labeled ``A, B, C, D.'' Also there is a vector drawn from A to D. There is another vector along the bottom of the rectangle from A to B.]}
+ \begin{enumerate}[label=(\alph*)]
+-  \item Find vector $\text{n}=\overset{\to}{AB}\times \overset{\to}{AD}$ perpendicular to the surface of the solar panels. Express the answer using standard unit vectors.
+-  \item Assume unit vector $\text{s}=\frac{1}{\sqrt{3}}\text{i}+\frac{1}{\sqrt{3}}\text{j}+\frac{1}{\sqrt{3}}\text{k}$ points toward the Sun at a particular time of the day and the flow of solar energy is $\text{F}=900\text{s}$ (in watts per square meter [$\text{W/m}^{2}$]). Find the predicted amount of electrical power the panel can produce, which is given by the dot product of vectors $\text{F}$ and $\text{n}$ (expressed in watts).
+-  \item Determine the angle of elevation of the Sun above the solar panel. Express the answer in degrees rounded to the nearest whole number. (Hint: The angle between vectors $\text{n}$ and $\text{s}$ and the angle of elevation are complementary.)
++  \item Find vector $\mathbf{n}=\overset{\to}{AB}\times \overset{\to}{AD}$ perpendicular to the surface of the solar panels. Express the answer using standard unit vectors.
++  \item Assume unit vector $\mathbf{s}=\frac{1}{\sqrt{3}}\mathbf{i}+\frac{1}{\sqrt{3}}\mathbf{j}+\frac{1}{\sqrt{3}}\mathbf{k}$ points toward the Sun at a particular time of the day and the flow of solar energy is $\mathbf{F}=900\mathbf{s}$ (in watts per square meter [$\text{W/m}^{2}$]). Find the predicted amount of electrical power the panel can produce, which is given by the dot product of vectors $\mathbf{F}$ and $\mathbf{n}$ (expressed in watts).
++  \item Determine the angle of elevation of the Sun above the solar panel. Express the answer in degrees rounded to the nearest whole number. (Hint: The angle between vectors $\mathbf{n}$ and $\mathbf{s}$ and the angle of elevation are complementary.)
+ \end{enumerate}
+ \end{enumerate}

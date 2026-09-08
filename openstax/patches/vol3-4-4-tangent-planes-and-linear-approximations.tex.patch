@@ -1,0 +1,96 @@
+Manual review corrections for this page's first pass.
+
+- Checked the "unit normal vector"/"normal line" exercises for the known
+  bold-mathvariant converter gap seen throughout the Chapter 3 vector
+  batch (r, T, N, etc. emitted as plain instead of \mathbf{...}). Verified
+  against the live OpenStax page that the normal-line intro's "a vector
+  n=<a,b,c>" is genuinely plain (non-bold) in the source MathML, unlike
+  the curve chapter's position/tangent vectors -- so no \mathbf fix
+  applies here.
+- The same intro sentence had a comma misplaced inside a subscript --
+  "$P_{0}(x_{0,}y_{0},z_{0})$" -- moved outside: "$P_{0}(x_{0},y_{0},z_{0})$".
+- Three instances of a sentence-ending period and closing parenthesis
+  trapped inside math mode: "$y.)$" (tangent-plane intro), "$ct.)$"
+  (normal-line intro), "$\frac{da}{a}.)$" and "$\frac{dV}{V}.)$" (the two
+  percentage-error recall notes). Moved the punctuation outside the math
+  span in each case.
+- Four "$N\,\text{to}\,M$" / "$N\%\,\text{and}\,M\%$" constructs (item 4's
+  and item 12's endpoint changes, and item 13's two percent errors) fused
+  an ad-hoc \text join with bare numeric math, the same pattern already
+  corrected in sibling files' reviews; unwrapped to plain prose with each
+  number in its own math span, e.g. "$10$ to $10.5$", "$4\%$ and $5\%$".
+- The figure description before the AC/BC/AB items left every coordinate
+  and expression as bare prose ("xyz plane", "(x0, y0, z0)", "z = f(x, y)",
+  "df(x0, y0)") apart from an oddly split "$\Delta$x"/"$\Delta$y". Put the
+  whole mathematical content in math mode with proper subscripts
+  ($x_{0}$, $y_{0}$, $z_{0}$, joined $\Delta x$/$\Delta y$, and the labeled
+  points $A$/$B$/$C$), and standardized "xyz plane"/"xy plane" to the
+  hyphenated "$xyz$-plane"/"$xy$-plane" compound-noun form used elsewhere
+  in this repo's reviews.
+- All 34 point/vector-equation exercises were checked by direct
+  substitution and are algebraically consistent with their stated points;
+  no mathematical corrections were needed.
+- One exercise ("$f(x,y)=e^{x}\cos y;P(0,0)$") used a semicolon to join
+  the function to its evaluation point inside one math span, unlike every
+  other point-exercise in this file, which uses either a comma inside one
+  span or a comma-joined two-span form. Split into "$f(x,y)=e^{x}\cos y$,
+  $P(0,0)$" to match the two-span convention used elsewhere in this same
+  list.
+---
+--- /tmp/raw.tex
++++ vol3-4-4-tangent-planes-and-linear-approximations.tex
+@@ -29,7 +29,7 @@
+ \item $ze^{x^{2}-y^{2}}-3=0$, $P(2,2,3)$
+ \end{enumerate}
+ 
+-For the following exercises, find the equation for the tangent plane to the surface at the indicated point. (Hint: Solve for $z$ in terms of $x$ and $y.)$
++For the following exercises, find the equation for the tangent plane to the surface at the indicated point. (Hint: Solve for $z$ in terms of $x$ and $y$.)
+ 
+ \begin{enumerate}[resume]
+ \item $-8x-3y-7z=-19,P(1,-1,2)$
+@@ -46,7 +46,7 @@
+ \item $z=x^{2}-2xy+y^{2},P(1,2,1)$
+ \end{enumerate}
+ 
+-For the following exercises, find parametric equations for the normal line to the surface at the indicated point. (Recall that to find the equation of a line in space, you need a point on the line, $P_{0}(x_{0,}y_{0},z_{0})$, and a vector $n=\langle a,b,c\rangle$ that is parallel to the line. Then the equation of the line is $x-x_{0}=at,y-y_{0}=bt,z-z_{0}=ct.)$
++For the following exercises, find parametric equations for the normal line to the surface at the indicated point. (Recall that to find the equation of a line in space, you need a point on the line, $P_{0}(x_{0},y_{0},z_{0})$, and a vector $n=\langle a,b,c\rangle$ that is parallel to the line. Then the equation of the line is $x-x_{0}=at,y-y_{0}=bt,z-z_{0}=ct$.)
+ 
+ \begin{enumerate}[resume]
+ \item $-3x+9y+4z=-4,P(1,-1,2)$
+@@ -60,7 +60,7 @@
+ For the following exercises, use the figure shown here.
+ 
+ 
+-\textit{[Figure: A surface in the xyz plane is marked as z = f(x, y). This surface has a tangent plane at (x0, y0, z0), with the corresponding point (x0, y0) marked on the xy plane. Also marked on the xy plane is the point (x0 + $\Delta$x, y0 + $\Delta$y). From this point, a line is drawn to the surface and three points are marked. The first point is C, which is (x0 + $\Delta$x, y0 + $\Delta$y, z0), then there is B, which is on the tangent plane, and then there is A, which is on the surface. The distance between B and C is marked df(x0, y0).]}
++\textit{[Figure: A surface in the $xyz$-plane is marked as $z=f(x,y)$. This surface has a tangent plane at $(x_{0},y_{0},z_{0})$, with the corresponding point $(x_{0},y_{0})$ marked on the $xy$-plane. Also marked on the $xy$-plane is the point $(x_{0}+\Delta x,y_{0}+\Delta y)$. From this point, a line is drawn to the surface and three points are marked. The first point is $C$, which is $(x_{0}+\Delta x,y_{0}+\Delta y,z_{0})$, then there is $B$, which is on the tangent plane, and then there is $A$, which is on the surface. The distance between $B$ and $C$ is marked $df(x_{0},y_{0})$.]}
+ 
+ \begin{enumerate}[resume]
+ \item The length of line segment $AC$ is equal to what mathematical expression?
+@@ -74,14 +74,14 @@
+ \item Show that $f(x,y)=e^{xy}x$ is differentiable at point $(1,0)$.
+ \item Find the total differential of the function $w=e^{y}\cos(x)+z^{2}$.
+ \item Show that $f(x,y)=x^{2}+3y$ is differentiable at every point. In other words, show that $\Delta z=f(x+\Delta x,y+\Delta y)-f(x,y)=f_{x}\Delta x+f_{y}\Delta y+\epsilon_{1}\Delta x+\epsilon_{2}\Delta y$, where both $\epsilon_{1}$ and $\epsilon_{2}$ approach zero as $(\Delta x,\Delta y)$ approaches $(0,0)$.
+-\item Find the total differential of the function $z=\frac{xy}{y+x}$ where $x$ changes from $10\,\text{to}\,10.5$ and $y$ changes from $15\,\text{to}\,13$.
++\item Find the total differential of the function $z=\frac{xy}{y+x}$ where $x$ changes from $10$ to $10.5$ and $y$ changes from $15$ to $13$.
+ \item Let $z=f(x,y)=xe^{y}$. Compute $\Delta z$ from $P(1,2)$ to $Q(1.05,2.1)$ and then find the approximate change in $z$ from point $P$ to point $Q$. Recall $\Delta z=f(x+\Delta x,y+\Delta y)-f(x,y)$, and $dz$ and $\Delta z$ are approximately equal.
+ \item The volume of a right circular cylinder is given by $V(r,h)=\pi r^{2}h$. Find the differential $dV$. Interpret the formula geometrically.
+ \item See the preceding problem. Use differentials to estimate the volume of aluminum in an enclosed aluminum can with diameter $8.0\,\text{cm}$ and height $12\,\text{cm}$ if the aluminum is $0.04$ cm thick.
+ \item Use the differential $dz$ to approximate the change in $z=\sqrt{4-x^{2}-y^{2}}$ as $(x,y)$ moves from point $(1,1)$ to point $(1.01,0.97)$. Compare this approximation with the actual change in the function.
+-\item Let $z=f(x,y)=x^{2}+3xy-y^{2}$. Find the exact change in the function and the approximate change in the function as $x$ changes from $2.00\,\text{to}\,2.05$ and $y$ changes from $3.00\,\text{to}\,2.96$.
+-\item The centripetal acceleration of a particle moving in a circle is given by $a(r,v)=\frac{v^{2}}{r}$, where $v$ is the velocity and $r$ is the radius of the circle. Approximate the maximum percent error in measuring the acceleration resulting from errors of $3\%$ in $v$ and $2\%$ in $r$. (Recall that the percentage error is the ratio of the amount of error over the original amount. So, in this case, the percentage error in $a$ is given by $\frac{da}{a}.)$
+-\item The radius $r$ and height $h$ of a right circular cylinder are measured with possible errors of $4\%\,\text{and}\,5\%$, respectively. Approximate the maximum possible percentage error in measuring the volume (Recall that the percentage error is the ratio of the amount of error over the original amount. So, in this case, the percentage error in $V$ is given by $\frac{dV}{V}.)$
++\item Let $z=f(x,y)=x^{2}+3xy-y^{2}$. Find the exact change in the function and the approximate change in the function as $x$ changes from $2.00$ to $2.05$ and $y$ changes from $3.00$ to $2.96$.
++\item The centripetal acceleration of a particle moving in a circle is given by $a(r,v)=\frac{v^{2}}{r}$, where $v$ is the velocity and $r$ is the radius of the circle. Approximate the maximum percent error in measuring the acceleration resulting from errors of $3\%$ in $v$ and $2\%$ in $r$. (Recall that the percentage error is the ratio of the amount of error over the original amount. So, in this case, the percentage error in $a$ is given by $\frac{da}{a}$.)
++\item The radius $r$ and height $h$ of a right circular cylinder are measured with possible errors of $4\%$ and $5\%$, respectively. Approximate the maximum possible percentage error in measuring the volume (Recall that the percentage error is the ratio of the amount of error over the original amount. So, in this case, the percentage error in $V$ is given by $\frac{dV}{V}$.)
+ \item The base radius and height of a right circular cone are measured as $10$ in. and $25$ in., respectively, with a possible error in measurement of as much as $0.1$ in. each. Use differentials to estimate the maximum error in the calculated volume of the cone.
+ \item The electrical resistance $R$ produced by wiring resistors $R_{1}$ and $R_{2}$ in parallel can be calculated from the formula $\frac{1}{R}=\frac{1}{R_{1}}+\frac{1}{R_{2}}$. If $R_{1}$ and $R_{2}$ are measured to be $7\Omega$ and $6\Omega$, respectively, and if these measurements are accurate to within $0.05\Omega$, estimate the maximum possible error in computing $R$. (The symbol $\Omega$ represents an ohm, the unit of electrical resistance.)
+ \item The area of an ellipse with axes of length $2a$ and $2b$ is given by the formula $A=\pi ab$. Approximate the percent change in the area when $a$ increases by $2\%$ and $b$ increases by $1.5\%$.
+@@ -93,7 +93,7 @@
+ 
+ \begin{enumerate}[resume]
+ \item $f(x,y)=x\sqrt{y},\,P(1,4)$
+-\item $f(x,y)=e^{x}\cos y;P(0,0)$
++\item $f(x,y)=e^{x}\cos y$, $P(0,0)$
+ \item $f(x,y)=\arctan(x+2y),P(1,0)$
+ \item $f(x,y)=\sqrt{20-x^{2}-7y^{2}},\,P(2,1)$
+ \item $f(x,y,z)=\sqrt{x^{2}+y^{2}+z^{2}},\,P(3,2,6)$

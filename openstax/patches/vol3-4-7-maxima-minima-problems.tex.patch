@@ -1,0 +1,59 @@
+Manual review corrections for this page's first pass.
+
+- "$f(x,y)=\sin(x)\sin(y),x\in(0,2\pi),y\in(0,2\pi)$" fused the function
+  and its two domain restrictions with bare commas into one math span,
+  with no prose spacing between clauses. Split into three separate math
+  spans joined by prose commas, matching the file's own convention
+  elsewhere in the repo (e.g. "$x=\cos(t)$, $y=\sin(t)$,
+  $t\in(0,2\pi]$" in the parametric-equations exercises).
+- "$(0,0),(0,4),\,\text{and}\,(5,0)$" used \text{and} with manual math
+  spacing to join a list of points instead of keeping "and" as ordinary
+  prose outside math mode; changed to "$(0,0)$, $(0,4)$, and $(5,0)$".
+- "$R=\{(x,y){:}\,-2\le x\le2,-2\le y\le2\}$" and the similar set
+  description two lines later used an empty-group-plus-colon "{:}"
+  artifact from the converter instead of a plain colon, and had no
+  space after the inner comma separating the two inequalities. Changed
+  both to "$R=\{(x,y):\ ...,\ ...\}$".
+- "$4$ ft$^{3}$" split the quantity and its unit across two math spans
+  instead of typesetting the unit as \text{} inside one span, unlike
+  the unit convention used throughout the rest of the repo (e.g.
+  "$2\,\text{g}/\text{cm}^{2}/\text{yr}$"); changed to
+  "$4\,\text{ft}^{3}$".
+- "Find the values of x and y to maximize the total revenue." left the
+  variables x and y as bare prose at the end of the sentence, even
+  though the same sentence uses "$x$" and "$y$" earlier; wrapped both
+  in math mode for consistency.
+
+--- /tmp/raw.tex
++++ vol3-4-7-maxima-minima-problems.tex
+@@ -63,24 +63,24 @@
+ \begin{enumerate}[resume]
+ \item \techrequired $f(x,y)=ye^{x}-e^{y}$
+ \item \techrequired $f(x,y)=x\sin(y)$
+-\item \techrequired $f(x,y)=\sin(x)\sin(y),x\in(0,2\pi),y\in(0,2\pi)$
++\item \techrequired $f(x,y)=\sin(x)\sin(y)$, $x\in(0,2\pi)$, $y\in(0,2\pi)$
+ \end{enumerate}
+ 
+ Find the absolute extrema of the given function on the indicated closed and bounded set $R$.
+ 
+ \begin{enumerate}[resume]
+-\item $f(x,y)=xy-x-3y$; $R$ is the triangular region with vertices $(0,0),(0,4),\,\text{and}\,(5,0)$.
++\item $f(x,y)=xy-x-3y$; $R$ is the triangular region with vertices $(0,0)$, $(0,4)$, and $(5,0)$.
+ \item Find the absolute maximum and minimum values of $f(x,y)=x^{2}+y^{2}-2y+1$ on the region $R=\{(x,y)|x^{2}+y^{2}\le4\}$.
+-\item $f(x,y)=x^{3}-3xy-y^{3}$ on $R=\{(x,y){:}\,-2\le x\le2,-2\le y\le2\}$
+-\item $f(x,y)=\frac{-2y}{x^{2}+y^{2}+1}$ on $R=\{(x,y){:}\,x^{2}+y^{2}\le4\}$
++\item $f(x,y)=x^{3}-3xy-y^{3}$ on $R=\{(x,y):\ -2\le x\le2,\ -2\le y\le2\}$
++\item $f(x,y)=\frac{-2y}{x^{2}+y^{2}+1}$ on $R=\{(x,y):\ x^{2}+y^{2}\le4\}$
+ \item Find three positive numbers the sum of which is $27$, such that the sum of their squares is as small as possible.
+ \item Find the points on the surface $x^{2}-yz=5$ that are closest to the origin.
+ \item Find the maximum volume of a rectangular box with three faces in the coordinate planes and a vertex in the first octant on the plane $x+y+z=1$.
+ \item The sum of the length and the girth (perimeter of a cross-section) of a package carried by a delivery service cannot exceed $108$ in. Find the dimensions of the rectangular package of largest volume that can be sent.
+-\item A cardboard box without a lid is to be made with a volume of $4$ ft$^{3}$. Find the dimensions of the box that requires the least amount of cardboard.
++\item A cardboard box without a lid is to be made with a volume of $4\,\text{ft}^{3}$. Find the dimensions of the box that requires the least amount of cardboard.
+ \item Find the point on the surface $f(x,y)=x^{2}+y^{2}+10$ nearest the plane $x+2y-z=0$. Identify the point on the plane.
+ \item Find the point in the plane $2x-y+2z=16$ that is closest to the origin.
+-\item A company manufactures two types of athletic shoes: jogging shoes and cross-trainers. The total revenue from $x$ jogging shoes and $y$ cross-trainers is given by $R(x,y)=-5x^{2}-8y^{2}-2xy+42x+102y$, where $x$ and $y$ are in thousands of units. Find the values of x and y to maximize the total revenue.
++\item A company manufactures two types of athletic shoes: jogging shoes and cross-trainers. The total revenue from $x$ jogging shoes and $y$ cross-trainers is given by $R(x,y)=-5x^{2}-8y^{2}-2xy+42x+102y$, where $x$ and $y$ are in thousands of units. Find the values of $x$ and $y$ to maximize the total revenue.
+ \item A shipping company handles rectangular boxes provided the sum of the length, width, and height of the box does not exceed $96$ in. Find the dimensions of the box that meets this condition and has the largest volume.
+ \item Find the maximum volume of a cylindrical soda can such that the sum of its height and circumference is $120$ cm.
+ \end{enumerate}

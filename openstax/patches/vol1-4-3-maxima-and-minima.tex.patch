@@ -1,0 +1,56 @@
+Manual review corrections for this page's first pass.
+
+- "assuming a is non-zero" and "given that $a>1$ and a is an integer."
+  left the variable "a" as bare prose outside math mode even though the
+  same sentences use "$a$" elsewhere; wrapped both in math mode.
+- "approximate the x-value" left the variable "x" as bare prose;
+  changed to "approximate the $x$-value", matching the repo's
+  $x$-axis/$x$-value convention.
+- The two piecewise functions in the "critical points, maxima, and
+  minima for the following piecewise functions" group used a raw
+  "\{\begin{matrix}...\end{matrix}" construct: a lone "\{" left
+  unmatched by any closing brace, so the piecewise definition rendered
+  without its enclosing bracket. Changed both to
+  "\begin{cases}...\end{cases}" with a "\text{if }" condition label on
+  each branch, matching the piecewise-function convention already used
+  elsewhere in the repo (e.g. vol2-3-7-improper-integrals.tex and
+  vol3-4-2-limits-and-continuity.tex).
+
+--- /tmp/raw.tex
++++ vol1-4-3-maxima-and-minima.tex
+@@ -17,14 +17,14 @@
+ \item If you are examining a function over an interval $(a,b)$, for $a$ and $b$ finite, is it possible not to have an absolute maximum or absolute minimum?
+ \item When you are checking for critical points, explain why you also need to determine points where $f'(x)$ is undefined. Draw a graph to support your explanation.
+ \item Can you have a finite absolute maximum for $y=ax^{2}+bx+c$ over $(-\infty,\infty)$? Explain why or why not using graphical arguments.
+-\item Can you have a finite absolute maximum for $y=ax^{3}+bx^{2}+cx+d$ over $(-\infty,\infty)$ assuming a is non-zero? Explain why or why not using graphical arguments.
++\item Can you have a finite absolute maximum for $y=ax^{3}+bx^{2}+cx+d$ over $(-\infty,\infty)$ assuming $a$ is non-zero? Explain why or why not using graphical arguments.
+ \item Let $m$ be the number of local minima and $M$ be the number of local maxima. Can you create a function where $M>m+2$? Draw a graph to support your explanation.
+ \item Is it possible to have more than one absolute maximum? Use a graphical argument to prove your hypothesis.
+ \item Is it possible to have no absolute minimum or maximum for a function? If so, construct such a function. If not, explain why this is not possible.
+ \item \techrequired Graph the function $y=e^{ax}$. For which values of $a$, on any infinite domain, will you have an absolute minimum and absolute maximum?
+ \end{enumerate}
+
+-For the following exercises, determine where the local and absolute maxima and minima occur on the graph given. Assume the graph represents the entirety of each function. For any extrema located at an endpoint, approximate the x-value.
++For the following exercises, determine where the local and absolute maxima and minima occur on the graph given. Assume the graph represents the entirety of each function. For any extrema located at an endpoint, approximate the $x$-value.
+
+ \begin{enumerate}[resume]
+ \item \textit{[Figure: The function graphed starts at (-4, 60), decreases rapidly to (-3, -40), increases to (-1, 10) before decreasing slowly to (2, 0), at which point it increases rapidly to (3, 30).]}
+@@ -109,15 +109,15 @@
+ Find the critical points, maxima, and minima for the following piecewise functions.
+
+ \begin{enumerate}[resume]
+-\item $y=\{\begin{matrix}x^{2}-4x & 0\le x\le1 \\ x^{2}-4 & 1<x\le2\end{matrix}$
+-\item $y=\{\begin{matrix}x^{2}+1 & x\le1 \\ x^{2}-4x+5 & x>1\end{matrix}$
++\item $y=\begin{cases}x^{2}-4x & \text{if }0\le x\le1 \\ x^{2}-4 & \text{if }1<x\le2\end{cases}$
++\item $y=\begin{cases}x^{2}+1 & \text{if }x\le1 \\ x^{2}-4x+5 & \text{if }x>1\end{cases}$
+ \end{enumerate}
+
+ For the following exercises, find the critical points of the following generic functions. Are they maxima, minima, or neither? State the necessary conditions.
+
+ \begin{enumerate}[resume]
+ \item $y=ax^{2}+bx+c$, given that $a>0$
+-\item $y={(x-1)}^{a}$, given that $a>1$ and a is an integer.
++\item $y={(x-1)}^{a}$, given that $a>1$ and $a$ is an integer.
+ \end{enumerate}
+
+ \end{document}

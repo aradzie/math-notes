@@ -1,0 +1,128 @@
+% OpenStax Calculus Volume 2 -- Section 5.6 Exercises: Ratio and Root Tests
+% Exercises reproduced from OpenStax, licensed under CC BY 4.0.
+% Source: https://openstax.org/books/calculus-volume-2/pages/5-6-ratio-and-root-tests
+\documentclass{exercises}
+\title{OpenStax Calculus Volume 2}
+\subtitle{Section 5.6 Exercises: Ratio and Root Tests}
+\sourceurl{https://openstax.org/books/calculus-volume-2/pages/5-6-ratio-and-root-tests}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+
+Use the ratio test to determine whether $\sum_{n=1}^{\infty}a_{n}$ converges, where $a_{n}$ is given in the following problems. State if the ratio test is inconclusive.
+
+\begin{enumerate}[start=1]
+\item $a_{n}=1/n!$
+\item $a_{n}=10^{n}/n!$
+\item $a_{n}=n^{2}/2^{n}$
+\item $a_{n}=n^{10}/2^{n}$
+\item $\sum_{n=1}^{\infty}\frac{{(n!)}^{3}}{(3n)!}$
+\item $\sum_{n=1}^{\infty}\frac{2^{3n}{(n!)}^{3}}{(3n)!}$
+\item $\sum_{n=1}^{\infty}\frac{(2n)!}{n^{2n}}$
+\item $\sum_{n=1}^{\infty}\frac{(2n)!}{{(2n)}^{n}}$
+\item $\sum_{n=1}^{\infty}\frac{n!}{{(n/e)}^{n}}$
+\item $\sum_{n=1}^{\infty}\frac{(2n)!}{{(n/e)}^{2n}}$
+\item $\sum_{n=1}^{\infty}\frac{{(2^{n}n!)}^{2}}{{(2n)}^{2n}}$
+\end{enumerate}
+
+Use the root test to determine whether $\sum_{n=1}^{\infty}a_{n}$ converges, where $a_{n}$ is as follows.
+
+\begin{enumerate}[resume]
+\item $a_{k}={(\frac{k-1}{2k+3})}^{k}$
+\item $a_{k}={(\frac{2k^{2}-1}{k^{2}+3})}^{k}$
+\item $a_{n}=\frac{{(\ln n)}^{2n}}{n^{n}}$
+\item $a_{n}=n/2^{n}$
+\item $a_{n}=n/e^{n}$
+\item $a_{k}=\frac{k^{e}}{e^{k}}$
+\item $a_{k}=\frac{\pi^{k}}{k^{\pi}}$
+\item $a_{n}={(\frac{1}{e}+\frac{1}{n})}^{n}$
+\item $a_{k}=\frac{1}{{(1+\ln k)}^{k}}$
+\end{enumerate}
+
+For this exercise, let $n$ start at $2$.
+
+\begin{enumerate}[resume]
+\item $a_{n}=\frac{{(\ln(1+\ln n))}^{n}}{{(\ln n)}^{n}}$
+\end{enumerate}
+
+In the following exercises, use either the ratio test or the root test as appropriate to determine whether the series $\sum_{k=1}^{\infty}a_{k}$ with given terms $a_{k}$ converges, or state if the test is inconclusive.
+
+\begin{enumerate}[resume]
+\item $a_{k}=\frac{k!}{1\cdot3\cdot5\cdots(2k-1)}$
+\item $a_{k}=\frac{2\cdot4\cdot6\cdots2k}{(2k)!}$
+\item $a_{k}=\frac{1\cdot4\cdot7\cdots(3k-2)}{3^{k}k!}$
+\item $a_{n}={(1-\frac{1}{n})}^{n^{2}}$
+\item $a_{k}=\left(\frac{1}{k+1}+\frac{1}{k+2}+\cdots+\frac{1}{2k}\right)^{k}$ (Hint: Compare $a_{k}^{1/k}$ to $\int_{k}^{2k}\frac{dt}{t}$.)
+\item $a_{k}={(\frac{1}{k+1}+\frac{1}{k+2}+\cdots+\frac{1}{3k})}^{k}$
+\item $a_{n}={(n^{1/n}-1)}^{n}$
+\end{enumerate}
+
+Use the ratio test to determine whether $\sum_{n=1}^{\infty}a_{n}$ converges, or state if the ratio test is inconclusive.
+
+\begin{enumerate}[resume]
+\item $\sum_{n=1}^{\infty}\frac{3^{n^{2}}}{2^{n^{3}}}$
+\item $\sum_{n=1}^{\infty}\frac{2^{n^{2}}}{n^{n}n!}$
+\end{enumerate}
+
+Use the root and limit comparison tests to determine whether $\sum_{n=1}^{\infty}a_{n}$ converges.
+
+\begin{enumerate}[resume]
+\item $a_{n}=1/x_{n}^{n}$, where $x_{n+1}=\frac{1}{2}x_{n}+\frac{1}{x_{n}}$ and $x_{1}=1$. (Hint: Find the limit of $\{x_{n}\}$.)
+\end{enumerate}
+
+In the following exercises, use an appropriate test to determine whether the series converges.
+
+\begin{enumerate}[resume]
+\item $\sum_{n=1}^{\infty}\frac{(n+1)}{n^{3}+n^{2}+n+1}$
+\item $\sum_{n=1}^{\infty}\frac{{(-1)}^{n+1}(n+1)}{n^{3}+3n^{2}+3n+1}$
+\item $\sum_{n=1}^{\infty}\frac{{(n+1)}^{2}}{n^{3}+{(1.1)}^{n}}$
+\item $\sum_{n=1}^{\infty}\frac{{(n-1)}^{n}}{{(n+1)}^{n}}$
+\item $a_{n}=\left(1+\frac{1}{n^{2}}\right)^{n}$ (Hint: $\left(1+\frac{1}{n^{2}}\right)^{n^{2}}\approx e$.)
+\item $a_{k}=1/2^{\sin^{2}k}$
+\item $a_{k}=2^{-\sin(1/k)}$
+\item $a_{n}=1/\binom{n+2}{n}$ where $\binom{n}{k}=\frac{n!}{k!(n-k)!}$
+\item $a_{k}=1/\binom{2k}{k}$
+\item $a_{k}=2^{k}/\binom{3k}{k}$
+\item $a_{k}=\left(\frac{k}{k+\ln k}\right)^{k}$ (Hint: $a_{k}=\left(1+\frac{\ln k}{k}\right)^{-(k/\ln k)\ln k}\approx e^{-\ln k}$.)
+\item $a_{k}=\left(\frac{k}{k+\ln k}\right)^{2k}$ (Hint: $a_{k}=\left(1+\frac{\ln k}{k}\right)^{-(k/\ln k)\ln(k^{2})}$.)
+\end{enumerate}
+
+The following series converge by the ratio test. Use summation by parts, $\sum_{k=1}^{n}a_{k}(b_{k+1}-b_{k})=[a_{n+1}b_{n+1}-a_{1}b_{1}]-\sum_{k=1}^{n}b_{k+1}(a_{k+1}-a_{k})$, to find the sum of the given series.
+
+\begin{enumerate}[resume]
+\item $\sum_{k=1}^{\infty}\frac{k}{2^{k}}$ (Hint: Take $a_{k}=k$ and $b_{k}=2^{1-k}$.)
+\item $\sum_{k=1}^{\infty}\frac{k}{c^{k}}$, where $c>1$ (Hint: Take $a_{k}=k$ and $b_{k}=c^{1-k}/(c-1)$.)
+\item $\sum_{n=1}^{\infty}\frac{n^{2}}{2^{n}}$
+\item $\sum_{n=1}^{\infty}\frac{{(n+1)}^{2}}{2^{n}}$
+\end{enumerate}
+
+The $k$th term of each of the following series has a factor $x^{k}$. Find the range of $x$ for which the ratio test implies that the series converges.
+
+\begin{enumerate}[resume]
+\item $\sum_{k=1}^{\infty}\frac{x^{k}}{k^{2}}$
+\item $\sum_{k=1}^{\infty}\frac{x^{2k}}{k^{2}}$
+\item $\sum_{k=1}^{\infty}\frac{x^{2k}}{3^{k}}$
+\item $\sum_{k=1}^{\infty}\frac{x^{k}}{k!}$
+\item Does there exist a number $p$ such that $\sum_{n=1}^{\infty}\frac{2^{n}}{n^{p}}$ converges?
+\item Let $0<r<1$. For which real numbers $p$ does $\sum_{n=1}^{\infty}n^{p}r^{n}$ converge?
+\item Suppose that $\lim_{n\to \infty}|\frac{a_{n+1}}{a_{n}}|=p$. For which values of $p$ must $\sum_{n=1}^{\infty}2^{n}a_{n}$ converge?
+\item Suppose that $\lim_{n\to \infty}|\frac{a_{n+1}}{a_{n}}|=p$. For which values of $r>0$ is $\sum_{n=1}^{\infty}r^{n}a_{n}$ guaranteed to converge?
+\item Suppose that $|\frac{a_{n+1}}{a_{n}}|\le{(n+1)}^{p}$ for all $n=1,2,\ldots$ where $p$ is a fixed real number. For which values of $p$ is $\sum_{n=1}^{\infty}n!\,a_{n}$ guaranteed to converge?
+\item For which values of $r>0$, if any, does $\sum_{n=1}^{\infty}r^{\sqrt{n}}$ converge?\\
+  (Hint: $\sum_{n=1}^{\infty}a_{n}=\sum_{k=1}^{\infty}\sum_{n=k^{2}}^{(k+1)^{2}-1}a_{n}$.)
+\item Suppose that $|\frac{a_{n+2}}{a_{n}}|\le r<1$ for all $n$. Can you conclude that $\sum_{n=1}^{\infty}a_{n}$ converges?
+\item Let $a_{n}=2^{-[n/2]}$ where $[x]$ is the greatest integer less than or equal to $x$. Determine whether $\sum_{n=1}^{\infty}a_{n}$ converges and justify your answer.
+\end{enumerate}
+
+The following advanced exercises use a generalized ratio test to determine convergence of some series that arise in particular applications when tests in this chapter, including the ratio and root tests, are not powerful enough to determine their convergence. The test states that if $\lim_{n\to \infty}\frac{a_{2n}}{a_{n}}<1/2$, then $\sum a_{n}$ converges, while if $\lim_{n\to \infty}\frac{a_{2n+1}}{a_{n}}>1/2$, then $\sum a_{n}$ diverges.
+
+\begin{enumerate}[resume]
+\item Let $a_{n}=\frac{1}{4}\,\frac{3}{6}\,\frac{5}{8}\cdots \frac{2n-1}{2n+2}=\frac{1\cdot3\cdot5\cdots(2n-1)}{2^{n}(n+1)!}$. Explain why the ratio test cannot determine convergence of $\sum_{n=1}^{\infty}a_{n}$. Use the fact that $1-1/(4k)$ is increasing in $k$ to estimate $\lim_{n\to \infty}\frac{a_{2n}}{a_{n}}$.
+\item Let $a_{n}=\frac{1}{1+x}\,\frac{2}{2+x}\cdots \frac{n}{n+x}\,\frac{1}{n}=\frac{(n-1)!}{(1+x)(2+x)\cdots(n+x)}$. Show that $a_{2n}/a_{n}\le e^{-x/2}/2$. For which $x>0$ does the generalized ratio test imply convergence of $\sum_{n=1}^{\infty}a_{n}$? (Hint: Write $2a_{2n}/a_{n}$ as a product of $n$ factors, each smaller than $1/(1+x/(2n))$.)
+\item Let $a_{n}=\frac{n^{\ln n}}{{(\ln n)}^{n}}$. Show that $\frac{a_{2n}}{a_{n}}\to0$ as $n\to \infty$.
+\end{enumerate}
+
+\end{document}

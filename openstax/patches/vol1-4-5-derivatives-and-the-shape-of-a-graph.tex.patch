@@ -1,0 +1,96 @@
+OpenStax's source MathML for exercise 23's domain specification uses a bare
+<mo>ϵ</mo> (U+03F5 GREEK LUNATE EPSILON SYMBOL) where "element of" (∈, U+2208)
+is clearly intended ("the domain x ∈ [-3,3]") -- confirmed against the raw
+fetched page content, appearing in both the presentation and content MathML
+for this one exercise and nowhere else on the page. This is a one-off
+mistake in OpenStax's own equation editor, not a MathML-tag/symbol-mapping
+gap (the converter faithfully reproduces \epsilon for that exact character
+elsewhere), so the fix is restored by hand here rather than in the
+converter.
+
+Manual review pass: the graphed-f' figure descriptions left bare-text
+"f'(x)", "x axis"/"x-axis", and coordinate pairs like "(-2, 0)" outside math
+mode; these are now typeset as $f'(x)$, $x$-axis, and $(-2,0)$ per this
+repo's established convention (see e.g. vol2-2-1-areas-between-curves.tex,
+vol2-3-1-integration-by-parts.tex). One figure description also mistyped
+$x^{3}$ as bare "x3". The sin(x)/x domain exercise had lost its minus sign
+in conversion -- $[2\pi,0)$ is not a valid interval (lower bound exceeds
+upper bound) -- and is restored to $[-2\pi,0)$, matching the well-known
+symmetric-about-the-origin domain for this exercise; the two adjacent math
+spans "$x=$ $[...]$" are also joined into one, matching the file's own
+convention elsewhere (e.g. "over $x=[-1,1]$"). Finally, "f,f',\,\text{and}\,
+f''" is rewritten as "$f$, $f'$, and $f''$" to keep the English "and"
+outside math mode rather than joined by \text and manual spacing.
+
+--- /tmp/raw.tex
++++ vol1-4-5-derivatives-and-the-shape-of-a-graph.tex
+@@ -24,11 +24,11 @@
+ For the following exercises, analyze the graphs of $f'$, then list all intervals where $f$ is increasing or decreasing.
+ 
+ \begin{enumerate}[resume]
+-\item \textit{[Figure: The function f'(x) is graphed. The function starts negative and crosses the x axis at (-2, 0). Then it continues increasing a little before decreasing and crossing the x axis at (-1, 0). It achieves a local minimum at (1, -6) before increasing and crossing the x axis at (2, 0).]}
+-\item \textit{[Figure: The function f'(x) is graphed. The function starts negative and crosses the x axis at (-2, 0). Then it continues increasing a little before decreasing and touching the x axis at (-1, 0). It then increases a little before decreasing and crossing the x axis at the origin. The function then decreases to a local minimum before increasing, crossing the x-axis at (1, 0), and continuing to increase.]}
+-\item \textit{[Figure: The function f'(x) is graphed. The function starts negative and touches the x axis at the origin. Then it decreases a little before increasing to cross the x axis at (1, 0) and continuing to increase.]}
+-\item \textit{[Figure: The function f'(x) is graphed. The function starts positive and decreases to touch the x axis at (-1, 0). Then it increases to (0, 4.5) before decreasing to touch the x axis at (1, 0). Then the function increases.]}
+-\item \textit{[Figure: The function f'(x) is graphed. The function starts at (-2, 0), decreases to (-1.5, -1.5), increases to (-1, 0), and continues increasing before decreasing to the origin. Then the other side is symmetric: that is, the function increases and then decreases to pass through (1, 0). It continues decreasing to (1.5, -1.5), and then increase to (2, 0).]}
++\item \textit{[Figure: The function $f'(x)$ is graphed. The function starts negative and crosses the $x$-axis at $(-2,0)$. Then it continues increasing a little before decreasing and crossing the $x$-axis at $(-1,0)$. It achieves a local minimum at $(1,-6)$ before increasing and crossing the $x$-axis at $(2,0)$.]}
++\item \textit{[Figure: The function $f'(x)$ is graphed. The function starts negative and crosses the $x$-axis at $(-2,0)$. Then it continues increasing a little before decreasing and touching the $x$-axis at $(-1,0)$. It then increases a little before decreasing and crossing the $x$-axis at the origin. The function then decreases to a local minimum before increasing, crossing the $x$-axis at $(1,0)$, and continuing to increase.]}
++\item \textit{[Figure: The function $f'(x)$ is graphed. The function starts negative and touches the $x$-axis at the origin. Then it decreases a little before increasing to cross the $x$-axis at $(1,0)$ and continuing to increase.]}
++\item \textit{[Figure: The function $f'(x)$ is graphed. The function starts positive and decreases to touch the $x$-axis at $(-1,0)$. Then it increases to $(0,4.5)$ before decreasing to touch the $x$-axis at $(1,0)$. Then the function increases.]}
++\item \textit{[Figure: The function $f'(x)$ is graphed. The function starts at $(-2,0)$, decreases to $(-1.5,-1.5)$, increases to $(-1,0)$, and continues increasing before decreasing to the origin. Then the other side is symmetric: that is, the function increases and then decreases to pass through $(1,0)$. It continues decreasing to $(1.5,-1.5)$, and then increase to $(2,0)$.]}
+ \end{enumerate}
+ 
+ For the following exercises, analyze the graphs of $f'$, then list all intervals where
+@@ -40,24 +40,24 @@
+ (b) the minima and maxima are located.
+ 
+ \begin{enumerate}[resume]
+-\item \textit{[Figure: The function f'(x) is graphed. The function starts at (-2, 0), decreases for a little and then increases to (-1, 0), continues increasing before decreasing to the origin, at which point it increases.]}
+-\item \textit{[Figure: The function f'(x) is graphed. The function starts at (-2, 0), increases and then decreases to (-1, 0), decreases and then increases to an inflection point at the origin. Then the function increases and decreases to cross (1, 0). It continues decreasing and then increases to (2, 0).]}
+-\item \textit{[Figure: The function f'(x) is graphed from x = -2 to x = 2. It starts near zero at x = -2, but then increases rapidly and remains positive for the entire length of the graph.]}
+-\item \textit{[Figure: The function f'(x) is graphed. The function starts negative and crosses the x axis at the origin, which is an inflection point. Then it continues increasing.]}
+-\item \textit{[Figure: The function f'(x) is graphed. The function starts negative and crosses the x axis at (-1, 0). Then it continues increasing a little before decreasing and touching the x axis at the origin. It increases again and then decreases to (1, 0). Then it increases.]}
++\item \textit{[Figure: The function $f'(x)$ is graphed. The function starts at $(-2,0)$, decreases for a little and then increases to $(-1,0)$, continues increasing before decreasing to the origin, at which point it increases.]}
++\item \textit{[Figure: The function $f'(x)$ is graphed. The function starts at $(-2,0)$, increases and then decreases to $(-1,0)$, decreases and then increases to an inflection point at the origin. Then the function increases and decreases to cross $(1,0)$. It continues decreasing and then increases to $(2,0)$.]}
++\item \textit{[Figure: The function $f'(x)$ is graphed from $x=-2$ to $x=2$. It starts near zero at $x=-2$, but then increases rapidly and remains positive for the entire length of the graph.]}
++\item \textit{[Figure: The function $f'(x)$ is graphed. The function starts negative and crosses the $x$-axis at the origin, which is an inflection point. Then it continues increasing.]}
++\item \textit{[Figure: The function $f'(x)$ is graphed. The function starts negative and crosses the $x$-axis at $(-1,0)$. Then it continues increasing a little before decreasing and touching the $x$-axis at the origin. It increases again and then decreases to $(1,0)$. Then it increases.]}
+ \end{enumerate}
+ 
+ For the following exercises, analyze the graphs of $f'$, then list all inflection points and intervals where $f$ is concave up and concave down.
+ 
+ \begin{enumerate}[resume]
+-\item \textit{[Figure: The function f'(x) is graphed. The function is linear and starts negative. It crosses the x axis at the origin.]}
+-\item \textit{[Figure: The function f'(x) is graphed. It is an upward-facing parabola with 0 as its local minimum.]}
+-\item \textit{[Figure: The function f'(x) is graphed. The function resembles the graph of x3: that is, it starts negative and crosses the x axis at the origin. Then it continues increasing.]}
+-\item \textit{[Figure: The function f'(x) is graphed. The function starts negative and crosses the x axis at (-0.5, 0). Then it continues increasing to (0, 1.5) before decreasing and touching the x axis at (1, 0). It then increases.]}
+-\item \textit{[Figure: The function f'(x) is graphed. The function starts negative and crosses the x axis at (-1, 0). Then it continues increasing to a local maximum at (0, 1), at which point it decreases and touches the x axis at (1, 0). It then increases.]}
++\item \textit{[Figure: The function $f'(x)$ is graphed. The function is linear and starts negative. It crosses the $x$-axis at the origin.]}
++\item \textit{[Figure: The function $f'(x)$ is graphed. It is an upward-facing parabola with $0$ as its local minimum.]}
++\item \textit{[Figure: The function $f'(x)$ is graphed. The function resembles the graph of $x^{3}$: that is, it starts negative and crosses the $x$-axis at the origin. Then it continues increasing.]}
++\item \textit{[Figure: The function $f'(x)$ is graphed. The function starts negative and crosses the $x$-axis at $(-0.5,0)$. Then it continues increasing to $(0,1.5)$ before decreasing and touching the $x$-axis at $(1,0)$. It then increases.]}
++\item \textit{[Figure: The function $f'(x)$ is graphed. The function starts negative and crosses the $x$-axis at $(-1,0)$. Then it continues increasing to a local maximum at $(0,1)$, at which point it decreases and touches the $x$-axis at $(1,0)$. It then increases.]}
+ \end{enumerate}
+ 
+-For the following exercises, draw a graph that satisfies the given specifications for the domain $x\epsilon[-3,3]$. The function does not have to be continuous or differentiable.
++For the following exercises, draw a graph that satisfies the given specifications for the domain $x\in[-3,3]$. The function does not have to be continuous or differentiable.
+ 
+ \begin{enumerate}[resume]
+ \item $f(x)>0,f'(x)>0$ over $x>1,-3<x<0,f'(x)=0$ over $0<x<1$
+@@ -133,14 +133,14 @@
+ \item \techrequired $f(x)=\sin x+\tan x$ over $(-\frac{\pi}{2},\frac{\pi}{2})$
+ \item \techrequired $f(x)={(x-2)}^{2}{(x-4)}^{2}$
+ \item \techrequired $f(x)=\frac{1}{1-x},x\ne1$
+-\item \techrequired $f(x)=\frac{\sin x}{x}$ over $x=$ $[2\pi,0)\cup(0,2\pi]$
++\item \techrequired $f(x)=\frac{\sin x}{x}$ over $x=[-2\pi,0)\cup(0,2\pi]$
+ \item $f(x)=\sin(x)e^{x}$ over $x=[-\pi,\pi]$
+ \item $f(x)=(\ln x)\sqrt{x},x>0$
+ \item $f(x)=\frac{1}{4}\sqrt{x}+\frac{1}{x},x>0$
+ \item $f(x)=\frac{e^{x}}{x},x\ne0$
+ \end{enumerate}
+ 
+-For the following exercises, interpret the sentences in terms of $f,f',\,\text{and}\,f''$.
++For the following exercises, interpret the sentences in terms of $f$, $f'$, and $f''$.
+ 
+ \begin{enumerate}[resume]
+ \item The population is growing more slowly. Here $f$ is the population.

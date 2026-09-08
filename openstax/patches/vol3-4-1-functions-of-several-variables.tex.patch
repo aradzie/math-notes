@@ -1,0 +1,139 @@
+Manual review corrections for this page's first pass.
+
+- Item 4 and the item on the iron plate's temperature both had "and"
+  joined into the surrounding math span via \text{and} with manual \,
+  spacing (e.g. "$x\,\text{and}\,y$"), instead of leaving the conjunction
+  as ordinary prose between two separate math spans. Rewrote as "$x$ and
+  $y$".
+- The level-curve item $g(x,y)=e_{}^{xy};c=\frac{1}{2},3$ carried a
+  redundant empty subscript "e_{}^{xy}", a converter artifact. Removed it
+  to give "e^{xy}".
+- The vertical-traces section intro left the second variable of "the
+  indicated values of $x$ and y" as bare prose outside math mode.
+  Wrapped it as "$y$".
+- The vertical trace item "$z=\cos \sqrt{x^{2}+y^{2}}$ $x=1$" fused two
+  math spans with no separating punctuation, unlike the sibling items in
+  the same list and the parallel level-curve items elsewhere in the file
+  (which use a comma between the function and the fixed-variable value).
+  Added the missing comma: "$z=\cos \sqrt{x^{2}+y^{2}}$, $x=1$".
+- The electric-field item wrote "the $z\text{-axis}$" instead of the
+  file's own established "$x$-axis"-style convention, and joined
+  "$E=10\,\text{and}\,E=100$" the same way as the $x\,\text{and}\,y$
+  defect above. Rewrote as "the $z$-axis" and "$E=10$ and $E=100$".
+- The iron-plate item wrote "$xy\text{-plane.}$", trapping the sentence's
+  period inside math mode alongside the plane label. Rewrote as
+  "$xy$-plane." with the period outside math.
+- The following item's "$P(1,2)\,is\,50^\circ \text{C}$" typeset the bare
+  English word "is" inside math mode without \text, so it would render in
+  math italics rather than as prose. Moved "is" outside the math span:
+  "$P(1,2)$ is $50^\circ \text{C}$".
+- The last item's "$T=40^\circ \text{C and}\,T=100^\circ \text{C}$" fused
+  the conjunction "and" into the first \text{C} unit and joined the two
+  equations into one math span. Split into "$T=40^\circ \text{C}$ and
+  $T=100^\circ \text{C}$".
+
+No mathematical content (formulas, domains, level-curve/level-surface
+constants, or exercise numbering) required correction in this pass.
+
+A later pass found twenty-two exercises across the level-curve, vertical-trace,
+level-surface, and level-curve-through-a-point lists where the parameter or
+point was fused to the function expression inside one math span, via either
+a semicolon (e.g. "$g(x,y)=x^{2}+y^{2};c=4,c=9$") or a comma (e.g.
+"$f(x,y)=3x+y^{3},x=1$", "$w(x,y,z)=x-2y+z,c=4$",
+"$f(x,y)=1-4x^{2}-y^{2},P(0,1)$"), inconsistent with the two-span comma form
+used by sibling items elsewhere in the file (e.g. "$z(x,y)=y^{2}-x^{2}$,
+$c=1$"). Split each into two comma-joined spans to match, e.g.
+"$g(x,y)=x^{2}+y^{2}$, $c=4,c=9$" and "$f(x,y)=1-4x^{2}-y^{2}$, $P(0,1)$".
+
+--- /tmp/raw.tex
++++ vol3-4-1-functions-of-several-variables.tex
+@@ -18,7 +18,7 @@
+ \item $W(x,y)=4x^{2}+y^{2}$. Find $W(2,-1)$, $W(-3,6)$.
+ \item $W(x,y)=4x^{2}+y^{2}$. Find $W(2+h,3+h)$.
+ \item The volume of a right circular cylinder is calculated by a function of two variables, $V(x,y)=\pi x^{2}y$, where $x$ is the radius of the right circular cylinder and $y$ represents the height of the cylinder. Evaluate $V(2,5)$ and explain what this means.
+-\item An oxygen tank is constructed of a right cylinder of height $y$ and radius $x$ with two hemispheres of radius $x$ mounted on the top and bottom of the cylinder. Express the volume of the tank as a function of two variables, $x\,\text{and}\,y$, find $V(10,2)$, and explain what this means.
++\item An oxygen tank is constructed of a right cylinder of height $y$ and radius $x$ with two hemispheres of radius $x$ mounted on the top and bottom of the cylinder. Express the volume of the tank as a function of two variables, $x$ and $y$, find $V(10,2)$, and explain what this means.
+ \end{enumerate}
+ 
+ For the following exercises, find the domain of the function.
+@@ -45,28 +45,28 @@
+ \begin{enumerate}[resume]
+ \item $z(x,y)=y^{2}-x^{2}$, $c=1$
+ \item $z(x,y)=y^{2}-x^{2}$, $c=4$
+-\item $g(x,y)=x^{2}+y^{2};c=4,c=9$
+-\item $g(x,y)=4-x-y;c=0,4$
+-\item $f(x,y)=xy;c=1;c=-1$
+-\item $h(x,y)=2x-y;c=0,-2,2$
+-\item $f(x,y)=x^{2}-y;c=1,2$
+-\item $g(x,y)=\frac{x}{x+y};c=-1,0,2$
+-\item $g(x,y)=x^{3}-y;c=-1,0,2$
+-\item $g(x,y)=e_{}^{xy};c=\frac{1}{2},3$
+-\item $f(x,y)=x^{2};c=4,9$
+-\item $f(x,y)=xy-x;c=-2,0,2$
+-\item $h(x,y)=\ln(x^{2}+y^{2});c=-1,0,1$
+-\item $g(x,y)=\ln(\frac{y}{x^{2}});c=-2,0,2$
++\item $g(x,y)=x^{2}+y^{2}$, $c=4,c=9$
++\item $g(x,y)=4-x-y$, $c=0,4$
++\item $f(x,y)=xy$, $c=1$, $c=-1$
++\item $h(x,y)=2x-y$, $c=0,-2,2$
++\item $f(x,y)=x^{2}-y$, $c=1,2$
++\item $g(x,y)=\frac{x}{x+y}$, $c=-1,0,2$
++\item $g(x,y)=x^{3}-y$, $c=-1,0,2$
++\item $g(x,y)=e^{xy}$, $c=\frac{1}{2},3$
++\item $f(x,y)=x^{2}$, $c=4,9$
++\item $f(x,y)=xy-x$, $c=-2,0,2$
++\item $h(x,y)=\ln(x^{2}+y^{2})$, $c=-1,0,1$
++\item $g(x,y)=\ln(\frac{y}{x^{2}})$, $c=-2,0,2$
+ \item $z=f(x,y)=\sqrt{x^{2}+y^{2}}$, $c=3$
+ \item $f(x,y)=\frac{y+2}{x^{2}}$, $c=$ any constant
+ \end{enumerate}
+ 
+-For the following exercises, find the vertical traces of the functions at the indicated values of $x$ and y, and plot the traces.
++For the following exercises, find the vertical traces of the functions at the indicated values of $x$ and $y$, and plot the traces.
+ 
+ \begin{enumerate}[resume]
+-\item $z=4-x-y;x=2$
+-\item $f(x,y)=3x+y^{3},x=1$
+-\item $z=\cos \sqrt{x^{2}+y^{2}}$ $x=1$
++\item $z=4-x-y$, $x=2$
++\item $f(x,y)=3x+y^{3}$, $x=1$
++\item $z=\cos \sqrt{x^{2}+y^{2}}$, $x=1$
+ \end{enumerate}
+ 
+ Find the domain of the following functions.
+@@ -102,23 +102,23 @@
+ Find the level surface for the functions of three variables and describe it.
+ 
+ \begin{enumerate}[resume]
+-\item $w(x,y,z)=x-2y+z,c=4$
+-\item $w(x,y,z)=x^{2}+y^{2}+z^{2},c=9$
+-\item $w(x,y,z)=x^{2}+y^{2}-z^{2},c=-4$
+-\item $w(x,y,z)=x^{2}+y^{2}-z^{2},c=4$
+-\item $w(x,y,z)=9x^{2}-4y^{2}+36z^{2},c=0$
++\item $w(x,y,z)=x-2y+z$, $c=4$
++\item $w(x,y,z)=x^{2}+y^{2}+z^{2}$, $c=9$
++\item $w(x,y,z)=x^{2}+y^{2}-z^{2}$, $c=-4$
++\item $w(x,y,z)=x^{2}+y^{2}-z^{2}$, $c=4$
++\item $w(x,y,z)=9x^{2}-4y^{2}+36z^{2}$, $c=0$
+ \end{enumerate}
+ 
+ For the following exercises, find an equation of the level curve of $f$ that contains the point $P$.
+ 
+ \begin{enumerate}[resume]
+-\item $f(x,y)=1-4x^{2}-y^{2},P(0,1)$
+-\item $g(x,y)=y^{2}\arctan x,P(1,2)$
+-\item $g(x,y)=e^{xy}(x^{2}+y^{2}),P(1,0)$
+-\item The strength $E$ of an electric field at point $(x,y,z)$ resulting from an infinitely long charged wire lying along the $z\text{-axis}$ is given by $E(x,y,z)=k/\sqrt{x^{2}+y^{2}}$, where $k$ is a positive constant. For simplicity, let $k=1$ and find the equations of the level surfaces for $E=10\,\text{and}\,E=100$.
+-\item A thin plate made of iron is located in the $xy\text{-plane.}$ The temperature $T$ in degrees Celsius at a point $P(x,y)$ is inversely proportional to the square of its distance from the origin. Express $T$ as a function of $x\,\text{and}\,y$.
+-\item Refer to the preceding problem. Using the temperature function found there, determine the proportionality constant if the temperature at point $P(1,2)\,is\,50^\circ \text{C}$. Use this constant to determine the temperature at point $Q(3,4)$.
+-\item Refer to the preceding problem. Find the level curves for $T=40^\circ \text{C and}\,T=100^\circ \text{C}$, and describe what the level curves represent.
++\item $f(x,y)=1-4x^{2}-y^{2}$, $P(0,1)$
++\item $g(x,y)=y^{2}\arctan x$, $P(1,2)$
++\item $g(x,y)=e^{xy}(x^{2}+y^{2})$, $P(1,0)$
++\item The strength $E$ of an electric field at point $(x,y,z)$ resulting from an infinitely long charged wire lying along the $z$-axis is given by $E(x,y,z)=k/\sqrt{x^{2}+y^{2}}$, where $k$ is a positive constant. For simplicity, let $k=1$ and find the equations of the level surfaces for $E=10$ and $E=100$.
++\item A thin plate made of iron is located in the $xy$-plane. The temperature $T$ in degrees Celsius at a point $P(x,y)$ is inversely proportional to the square of its distance from the origin. Express $T$ as a function of $x$ and $y$.
++\item Refer to the preceding problem. Using the temperature function found there, determine the proportionality constant if the temperature at point $P(1,2)$ is $50^\circ \text{C}$. Use this constant to determine the temperature at point $Q(3,4)$.
++\item Refer to the preceding problem. Find the level curves for $T=40^\circ \text{C}$ and $T=100^\circ \text{C}$, and describe what the level curves represent.
+ \end{enumerate}
+ 
+ \end{document}

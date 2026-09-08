@@ -1,0 +1,146 @@
+Manual review corrects math-mode boundaries in prose and figure descriptions, repairs a split decimal and a prose typo in accessibility text, uses the proper arcsine operator, clarifies integrand and factor grouping, and expands the ambiguous two-index summation into explicit nested sums. Existing empty and whitespace-only lines are preserved unchanged.
+
+--- /tmp/raw.tex
++++ vol3-5-1-double-integrals-over-rectangular-regions.tex
+@@ -24,7 +24,7 @@
+ \begin{enumerate}[resume]
+ \item $f(x,y)=\sin x-\cos y$, $R=[0,\pi]\times [0,\pi]$
+ \item $f(x,y)=\cos x+\cos y$, $R=[0,\pi]\times [0,\frac{\pi}{2}]$
+-\item Use the midpoint rule with $m=n=2$ to estimate $\underset{R}{\iint}f(x,y)\,dA$, where the values of the function f on $R=[8,10]\times [9,11]$ are given in the following table. \begin{center}
++\item Use the midpoint rule with $m=n=2$ to estimate $\underset{R}{\iint}f(x,y)\,dA$, where the values of the function $f$ on $R=[8,10]\times [9,11]$ are given in the following table. \begin{center}
+ \begin{tabular}{lccccc}
+ \hline
+  & \multicolumn{5}{c}{y} \\
+@@ -37,7 +37,7 @@
+ \hline
+ \end{tabular}
+ \end{center}
+-\item The values of the function f on the rectangle $R=[0,2]\times [7,9]$ are given in the following table. Estimate the double integral $\underset{R}{\iint}f(x,y)\,dA$ by using a Riemann sum with $m=n=2$. Select the sample points to be the upper right corners of the subsquares of R. \begin{center}
++\item The values of the function $f$ on the rectangle $R=[0,2]\times [7,9]$ are given in the following table. Estimate the double integral $\underset{R}{\iint}f(x,y)\,dA$ by using a Riemann sum with $m=n=2$. Select the sample points to be the upper right corners of the subsquares of $R$. \begin{center}
+ \begin{tabular}{lccc}
+ \hline
+  & $y_{0}=7$ & $y_{1}=8$ & $y_{2}=9$ \\
+@@ -54,21 +54,21 @@
+ \end{enumerate}
+ \item The depth of a 3-ft by 3-ft hole in the ground, measured at 1-ft intervals, is given in the following table.
+ \begin{enumerate}[label=(\alph*)]
+-  \item Estimate the volume of the hole by using a Riemann sum with $m=n=3$ and the sample points to be the upper left corners of the subsquares of R.
++  \item Estimate the volume of the hole by using a Riemann sum with $m=n=3$ and the sample points to be the upper left corners of the subsquares of $R$.
+   \item Approximate the average depth of the hole.\\ \begin{center} \begin{tabular}{lcccc} \hline  & \multicolumn{4}{c}{y} \\ x & 0 & 1 & 2 & 3 \\ 0 & 6 & 6.5 & 6.4 & 6 \\ 1 & 6.5 & 7 & 7.5 & 6.5 \\ 2 & 6.5 & 6.7 & 6.5 & 6 \\ 3 & 6 & 6.5 & 5 & 5.6 \\ \hline \end{tabular} \end{center}
+ \end{enumerate}
+-\item The level curves $f(x,y)=k$ of the function f are given in the following graph, where k is a constant.
++\item The level curves $f(x,y)=k$ of the function $f$ are given in the following graph, where $k$ is a constant.
+ \begin{enumerate}[label=(\alph*)]
+   \item Apply the midpoint rule with $m=n=2$ to estimate the double integral $\underset{R}{\iint}f(x,y)\,dA$, where $R=[0.2,1]\times [0,0.8]$.
+-  \item Estimate the average value of the function f on R.\\ \textit{[Figure: A series of curves marked k = negative 1, negative ½, negative ¼, negative 1/8, 0, 1/8, ¼, ½, and 1. The line marked k = 0 serves as an asymptote along the line y = x. The lines originate at (along the y axis) 1, 0.7, 0.5, 0.38, 0, (along the x axis) 0.38, 0.5, 0.7, and 1, with the further out lines curving less dramatically toward the asymptote.]}
++  \item Estimate the average value of the function $f$ on $R$.\\ \textit{[Figure: A series of curves marked $k=-1$, $-\frac{1}{2}$, $-\frac{1}{4}$, $-\frac{1}{8}$, $0$, $\frac{1}{8}$, $\frac{1}{4}$, $\frac{1}{2}$, and $1$. The line marked $k=0$ serves as an asymptote along the line $y=x$. The lines originate at $1$, $0.7$, $0.5$, $0.38$, and $0$ along the $y$-axis and at $0.38$, $0.5$, $0.7$, and $1$ along the $x$-axis, with the further-out lines curving less dramatically toward the asymptote.]}
+ \end{enumerate}
+-\item The level curves $f(x,y)=k$ of the function f are given in the following graph, where k is a constant.
++\item The level curves $f(x,y)=k$ of the function $f$ are given in the following graph, where $k$ is a constant.
+ \begin{enumerate}[label=(\alph*)]
+   \item Apply the midpoint rule with $m=n=2$ to estimate the double integral $\underset{R}{\iint}f(x,y)\,dA$, where $R=[0.1,0.5]\times [0.1,0.5]$.
+-  \item Estimate the average value of the function f on R.\\ \textit{[Figure: A series of quarter circles drawn in the first quadrant marked k = 1/32, 1/16, 1/8, ¼, ½, ¾, and 1. The quarter circles have radii 0. 17, 0.25, 0.35, 0.5, 0.71, 0.87, and 1, respectively.]}
++  \item Estimate the average value of the function $f$ on $R$.\\ \textit{[Figure: A series of quarter circles drawn in the first quadrant marked $k=\frac{1}{32}$, $\frac{1}{16}$, $\frac{1}{8}$, $\frac{1}{4}$, $\frac{1}{2}$, $\frac{3}{4}$, and $1$. The quarter circles have radii $0.17$, $0.25$, $0.35$, $0.5$, $0.71$, $0.87$, and $1$, respectively.]}
+ \end{enumerate}
+-\item The solid lying under the surface $z=\sqrt{4-y^{2}}$ and above the rectangular region $R=[0,2]\times [0,2]$ is illustrated in the following graph. Evaluate the double integral $\underset{R}{\iint}f(x,y)\,dA$, where $f(x,y)=\sqrt{4-y^{2}}$, by finding the volume of the corresponding solid. \\ \textit{[Figure: A quarter cylinder with center along the x axis and with radius 2. It has height 2 as shown.]}
+-\item The solid lying under the plane $z=y+4$ and above the rectangular region $R=[0,2]\times [0,4]$ is illustrated in the following graph. Evaluate the double integral $\underset{R}{\iint}f(x,y)\,dA$, where $f(x,y)=y+4$, by finding the volume of the corresponding solid. \\ \textit{[Figure: In xyz space, a shape is created with sides given by y = 0, x = 0, y = 4, x = 2, z = 0, and the plane the runs from z = 4 along the y axis to z = 8 along the plane formed by y = 4.]}
++\item The solid lying under the surface $z=\sqrt{4-y^{2}}$ and above the rectangular region $R=[0,2]\times [0,2]$ is illustrated in the following graph. Evaluate the double integral $\underset{R}{\iint}f(x,y)\,dA$, where $f(x,y)=\sqrt{4-y^{2}}$, by finding the volume of the corresponding solid. \\ \textit{[Figure: A quarter cylinder with center along the $x$-axis and with radius $2$. It has height $2$ as shown.]}
++\item The solid lying under the plane $z=y+4$ and above the rectangular region $R=[0,2]\times [0,4]$ is illustrated in the following graph. Evaluate the double integral $\underset{R}{\iint}f(x,y)\,dA$, where $f(x,y)=y+4$, by finding the volume of the corresponding solid. \\ \textit{[Figure: In $xyz$-space, a shape is created with sides given by $y=0$, $x=0$, $y=4$, $x=2$, $z=0$, and the plane that runs from $z=4$ along the $y$-axis to $z=8$ along the plane formed by $y=4$.]}
+ \end{enumerate}
+ 
+ In the following exercises, calculate the integrals by interchanging the order of integration.
+@@ -94,7 +94,7 @@
+ \item $\int_{1}^{2}\,\int_{1}^{2}(\frac{\ln y}{x}+\frac{x}{2y+1})\,dy\,dx$
+ \item $\int_{1}^{e}\,\int_{1}^{2}x^{2}\ln(x)\,dy\,dx$
+ \item $\int_{1}^{\sqrt{3}}\,\int_{1}^{2}y\arctan(\frac{1}{x})\,dy\,dx$
+-\item $\int_{0}^{1}\,\int_{0}^{1/2}(\text{arcsin}\,x+\text{arcsin}\,y)\,dy\,dx$
++\item $\int_{0}^{1}\,\int_{0}^{1/2}(\arcsin x+\arcsin y)\,dy\,dx$
+ \item $\int_{0}^{1}\,\int_{1}^{2}xe^{x+4y}\,dy\,dx$
+ \item $\int_{1}^{2}\,\int_{0}^{1}xe^{x-y}\,dy\,dx$
+ \item $\int_{1}^{e}\,\int_{1}^{e}(\frac{\ln y}{\sqrt{y}}+\frac{\ln x}{\sqrt{x}})\,dy\,dx$
+@@ -110,7 +110,7 @@
+ \item $f(x,y)=x^{4}+2y^{3}$, $R=[1,2]\times [2,3]$
+ \item $f(x,y)=\sinh x+\sinh y$, $R=[0,1]\times [0,2]$
+ \item $f(x,y)=\arctan(xy)$, $R=[0,1]\times [0,1]$
+-\item Let f and g be two continuous functions such that $0\le m_{1}\le f(x)\le M_{1}$ for any $x\in[a,b]$ and $0\le m_{2}\le g(y)\le M_{2}$ for any $y\in[c,d]$. Show that the following inequality is true: $m_{1}m_{2}(b-a)(d-c)\le \int_{a}^{b}\,\int_{c}^{d}f(x)g(y)\,dy\,dx\le M_{1}M_{2}(b-a)(d-c)$.
++\item Let $f$ and $g$ be two continuous functions such that $0\le m_{1}\le f(x)\le M_{1}$ for any $x\in[a,b]$ and $0\le m_{2}\le g(y)\le M_{2}$ for any $y\in[c,d]$. Show that the following inequality is true: $m_{1}m_{2}(b-a)(d-c)\le \int_{a}^{b}\,\int_{c}^{d}f(x)g(y)\,dy\,dx\le M_{1}M_{2}(b-a)(d-c)$.
+ \end{enumerate}
+ 
+ In the following exercises, use property v. of double integrals and the answer from the preceding exercise to show that the following inequalities are true.
+@@ -120,7 +120,7 @@
+ \item $\frac{\pi^{2}}{144}\le \underset{R}{\iint}\sin x\cos y\,dA\le \frac{\pi^{2}}{48}$, where $R=[\frac{\pi}{6},\frac{\pi}{3}]\times [\frac{\pi}{6},\frac{\pi}{3}]$
+ \item $0\le \underset{R}{\iint}e^{-y}\cos x\,dA\le \left( \frac{\pi}{2} \right)^{2}$, where $R=[0,\frac{\pi}{2}]\times [0,\frac{\pi}{2}]$
+ \item $0\le \underset{R}{\iint}(\ln x)(\ln y)\,dA\le{(e-1)}^{2}$, where $R=[1,e]\times [1,e]$
+-\item Let f and g be two continuous functions such that $0\le m_{1}\le f(x)\le M_{1}$ for any $x\in[a,b]$ and $0\le m_{2}\le g(y)\le M_{2}$ for any $y\in[c,d]$. Show that the following inequality is true: $(m_{1}+m_{2})(b-a)(d-c)\le \int_{a}^{b}\,\int_{c}^{d}[f(x)+g(y)]\,dy\,dx\le(M_{1}+M_{2})(b-a)(d-c)$.
++\item Let $f$ and $g$ be two continuous functions such that $0\le m_{1}\le f(x)\le M_{1}$ for any $x\in[a,b]$ and $0\le m_{2}\le g(y)\le M_{2}$ for any $y\in[c,d]$. Show that the following inequality is true: $(m_{1}+m_{2})(b-a)(d-c)\le \int_{a}^{b}\,\int_{c}^{d}[f(x)+g(y)]\,dy\,dx\le(M_{1}+M_{2})(b-a)(d-c)$.
+ \end{enumerate}
+ 
+ In the following exercises, use property v. of double integrals and the answer from the preceding exercise to show that the following inequalities are true.
+@@ -132,16 +132,16 @@
+ \item $0\le \underset{R}{\iint}(\ln x+\ln y)\,dA\le2\left( e-1 \right)^{2}$, where $R=[1,e]\times [1,e]$
+ \end{enumerate}
+ 
+-In the following exercises, the function f is given in terms of double integrals.
++In the following exercises, the function $f$ is given in terms of double integrals.
+ 
+ 
+-(a) Determine the explicit form of the function f.
++(a) Determine the explicit form of the function $f$.
+ 
+ 
+-(b) Find the volume of the solid under the surface $z=f(x,y)$ and above the region R.
++(b) Find the volume of the solid under the surface $z=f(x,y)$ and above the region $R$.
+ 
+ 
+-(c) Find the average value of the function f on R.
++(c) Find the average value of the function $f$ on $R$.
+ 
+ 
+ (d) Use a computer algebra system (CAS) to plot $z=f(x,y)$ and $z=f_{\text{ave}}$ in the same system of coordinates.
+@@ -149,18 +149,18 @@
+ \begin{enumerate}[resume]
+ \item \techrequired $f(x,y)=\int_{0}^{y}\,\int_{0}^{x}(xs+yt)\,ds\,dt$, where $(x,y)\in R=[0,1]\times [0,1]$
+ \item \techrequired $f(x,y)=\int_{0}^{x}\,\int_{0}^{y}[\cos(s)+\cos(t)]\,dt\,ds$, where $(x,y)\in R=[0,3]\times [0,3]$
+-\item Show that if f and g are continuous on $[a,b]$ and $[c,d]$, respectively, then $\int_{a}^{b}\,\int_{c}^{d}[f(x)+g(y)]\,dy\,dx=(d-c)\int_{a}^{b}f(x)\,dx$ $\,+\int_{a}^{b}\,\int_{c}^{d}g(y)\,dy\,dx=(b-a)\int_{c}^{d}g(y)\,dy+\int_{c}^{d}\,\int_{a}^{b}f(x)\,dx\,dy$.
+-\item Show that $\int_{a}^{b}\,\int_{c}^{d}yf(x)+xg(y)\,dy\,dx=\frac{1}{2}(d^{2}-c^{2})(\int_{a}^{b}f(x)\,dx)+\frac{1}{2}(b^{2}-a^{2})(\int_{c}^{d}g(y)\,dy)$.
++\item Show that if $f$ and $g$ are continuous on $[a,b]$ and $[c,d]$, respectively, then $\int_{a}^{b}\,\int_{c}^{d}[f(x)+g(y)]\,dy\,dx=(d-c)\int_{a}^{b}f(x)\,dx+\int_{a}^{b}\,\int_{c}^{d}g(y)\,dy\,dx=(b-a)\int_{c}^{d}g(y)\,dy+\int_{c}^{d}\,\int_{a}^{b}f(x)\,dx\,dy$.
++\item Show that $\int_{a}^{b}\,\int_{c}^{d}[yf(x)+xg(y)]\,dy\,dx=\frac{1}{2}(d^{2}-c^{2})\left(\int_{a}^{b}f(x)\,dx\right)+\frac{1}{2}(b^{2}-a^{2})\left(\int_{c}^{d}g(y)\,dy\right)$.
+ \item \techrequired Consider the function $f(x,y)=e^{-x^{2}-y^{2}}$, where $(x,y)\in R=[-1,1]\times [-1,1]$.
+ \begin{enumerate}[label=(\alph*)]
+   \item Use the midpoint rule with $m=n=2,4,\ldots,\,10$ to estimate the double integral $I=\underset{R}{\iint}e^{-x^{2}-y^{2}}\,dA$. Round your answers to the nearest hundredths.
+-  \item For $m=n=2$, find the average value of f over the region R. Round your answer to the nearest hundredths.
++  \item For $m=n=2$, find the average value of $f$ over the region $R$. Round your answer to the nearest hundredths.
+   \item Use a CAS to graph in the same coordinate system the solid whose volume is given by $\underset{R}{\iint}e^{-x^{2}-y^{2}}\,dA$ and the plane $z=f_{\text{ave}}$.
+ \end{enumerate}
+ \item \techrequired Consider the function $f(x,y)=\sin(x^{2})\cos(y^{2})$, where $(x,y)\in R=[-1,1]\times [-1,1]$.
+ \begin{enumerate}[label=(\alph*)]
+   \item Use the midpoint rule with $m=n=2,4,\ldots,\,10$ to estimate the double integral $I=\underset{R}{\iint}\sin(x^{2})\cos(y^{2})\,dA$. Round your answers to the nearest hundredths.
+-  \item For $m=n=2$, find the average value of f over the region R. Round your answer to the nearest hundredths.
++  \item For $m=n=2$, find the average value of $f$ over the region $R$. Round your answer to the nearest hundredths.
+   \item Use a CAS to graph in the same coordinate system the solid whose volume is given by $\underset{R}{\iint}\sin(x^{2})\cos(y^{2})\,dA$ and the plane $z=f_{\text{ave}}$.
+ \end{enumerate}
+ \end{enumerate}
+@@ -168,16 +168,16 @@
+ In the following exercises, the functions $f_{n}$ are given, where $n\ge1$ is a natural number.
+ 
+ 
+-(a) Find the volume of the solids $S_{n}$ under the surfaces $z=f_{n}(x,y)$ and above the region R.
++(a) Find the volume of the solids $S_{n}$ under the surfaces $z=f_{n}(x,y)$ and above the region $R$.
+ 
+ 
+-(b) Determine the limit of the volumes of the solids $S_{n}$ as n increases without bound.
++(b) Determine the limit of the volumes of the solids $S_{n}$ as $n$ increases without bound.
+ 
+ \begin{enumerate}[resume]
+-\item $f_{n}(x,y)=x^{n}+y^{n}+xy,(x,y)\in R=[0,1]\times [0,1]$
+-\item $f_{n}(x,y)=\frac{1}{x^{n}}+\frac{1}{y^{n}},(x,y)\in R=[1,2]\times [1,2]$
+-\item Show that the average value of a function f on a rectangular region $R=[a,b]\times [c,d]$ is $f_{\text{ave}}\approx \frac{1}{mn}\sum_{i=1}^{m}\sum_{j=1}^{n}f(x_{ij}^{*},y_{ij}^{*})$, where $(x_{ij}^{*},y_{ij}^{*})$ are the sample points of the partition of R, where $1\le i\le m$ and $1\le j\le n$.
+-\item Use the midpoint rule with $m=n$ to show that the average value of a function f on a rectangular region $R=[a,b]\times [c,d]$ is approximated by \[f_{\text{ave}}\approx \frac{1}{n^{2}}\sum_{i,j=1}^{n}f(\frac{1}{2}(x_{i-1}+x_{i}),\frac{1}{2}(y_{j-1}+y_{j})).\]
++\item $f_{n}(x,y)=x^{n}+y^{n}+xy$, $(x,y)\in R=[0,1]\times [0,1]$
++\item $f_{n}(x,y)=\frac{1}{x^{n}}+\frac{1}{y^{n}}$, $(x,y)\in R=[1,2]\times [1,2]$
++\item Show that the average value of a function $f$ on a rectangular region $R=[a,b]\times [c,d]$ is $f_{\text{ave}}\approx \frac{1}{mn}\sum_{i=1}^{m}\sum_{j=1}^{n}f(x_{ij}^{*},y_{ij}^{*})$, where $(x_{ij}^{*},y_{ij}^{*})$ are the sample points of the partition of $R$, where $1\le i\le m$ and $1\le j\le n$.
++\item Use the midpoint rule with $m=n$ to show that the average value of a function $f$ on a rectangular region $R=[a,b]\times [c,d]$ is approximated by \[f_{\text{ave}}\approx \frac{1}{n^{2}}\sum_{i=1}^{n}\sum_{j=1}^{n}f\left(\frac{x_{i-1}+x_{i}}{2},\frac{y_{j-1}+y_{j}}{2}\right).\]
+ \item An isotherm map is a chart connecting points having the same temperature at a given time for a given period of time. Use the preceding exercise and apply the midpoint rule with $m=n=2$ to find the average temperature over the region given in the following figure. \\ \textit{[Figure: A contour map showing surface temperature in degrees Fahrenheit. Given the map, the midpoint rule would give rectangles with values 71, 72, 40, and 43.]}
+ \end{enumerate}
+ 
+

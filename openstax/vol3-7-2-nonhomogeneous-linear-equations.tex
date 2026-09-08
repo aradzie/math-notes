@@ -1,0 +1,83 @@
+% OpenStax Calculus Volume 3 -- Section 7.2 Exercises: Nonhomogeneous Linear Equations
+% Exercises reproduced from OpenStax, licensed under CC BY 4.0.
+% Source: https://openstax.org/books/calculus-volume-3/pages/7-2-nonhomogeneous-linear-equations
+\documentclass{exercises}
+\title{OpenStax Calculus Volume 3}
+\subtitle{Section 7.2 Exercises: Nonhomogeneous Linear Equations}
+\sourceurl{https://openstax.org/books/calculus-volume-3/pages/7-2-nonhomogeneous-linear-equations}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+
+Solve the following equations using the method of undetermined coefficients.
+
+\begin{enumerate}[start=1]
+\item $2y''-5y'-12y=6$
+\item $3y''+y'-4y=8$
+\item $y''-6y'+5y=e^{-x}$
+\item $y''+16y=e^{-2x}$
+\item $y''-4y=x^{2}+1$
+\item $y''-4y'+4y=8x^{2}+4x$
+\item $y''-2y'-3y=\sin 2x$
+\item $y''+2y'+y=\sin x+\cos x$
+\item $y''+9y=e^{x}\cos x$
+\item $y''+y=3\sin 2x+x\cos 2x$
+\item $y''+3y'-28y=10e^{4x}$
+\item $y''+10y'+25y=xe^{-5x}+4$
+\end{enumerate}
+
+In each of the following problems,
+
+
+(a) Write the form for the particular solution $y_{p}(x)$ for the method of undetermined coefficients.
+
+
+(b) \techrequired Use a computer algebra system to find a particular solution to the given equation.
+
+\begin{enumerate}[resume]
+\item $y''-y'-y=x+e^{-x}$
+\item $y''-3y=x^{2}-4x+11$
+\item $y''-y'-4y=e^{x}\cos 3x$
+\item $2y''-y'+y=(x^{2}-5x)e^{-x}$
+\item $4y''+5y'-2y=e^{2x}+x\sin x$
+\item $y''-y'-2y=x^{2}e^{x}\sin x$
+\end{enumerate}
+
+Solve the differential equation using either the method of undetermined coefficients or the variation of parameters.
+
+\begin{enumerate}[resume]
+\item $y''+3y'-4y=2e^{x}$
+\item $y''+2y'=e^{3x}$
+\item $y''+6y'+9y=e^{-x}$
+\item $y''+2y'-8y=6e^{2x}$
+\end{enumerate}
+
+Solve the differential equation using the method of variation of parameters.
+
+\begin{enumerate}[resume]
+\item $4y''+y=2\sin x$
+\item $y''-9y=8x$
+\item $y''+y=\sec x$, $0<x<\pi/2$
+\item $y''+4y=3\csc 2x$, $0<x<\pi/2$
+\end{enumerate}
+
+Find the unique solution satisfying the differential equation and the initial conditions given, where $y_{p}(x)$ is the particular solution.
+
+\begin{enumerate}[resume]
+\item $y''-2y'+y=12e^{x}$, $y_{p}(x)=6x^{2}e^{x}$, $y(0)=6$, $y'(0)=0$
+\item $y''-7y'=4xe^{7x}$, $y_{p}(x)=\frac{2}{7}x^{2}e^{7x}-\frac{4}{49}xe^{7x}$, $y(0)=-1$, $y'(0)=0$
+\item $y''+y=\cos x-4\sin x$, $y_{p}(x)=2x\cos x+\frac{1}{2}x\sin x$, $y(0)=8$, $y'(0)=-4$
+\item $y''-5y'=e^{5x}+8e^{-5x}$, $y_{p}(x)=\frac{1}{5}xe^{5x}+\frac{4}{25}e^{-5x}$, $y(0)=-2$, $y'(0)=0$
+\end{enumerate}
+
+In each of the following problems, two linearly independent solutions---$y_{1}$ and $y_{2}$---are given that satisfy the corresponding homogeneous equation. Use the method of variation of parameters to find a particular solution to the given nonhomogeneous equation. Assume $x>0$ in each exercise.
+
+\begin{enumerate}[resume]
+\item $x^{2}y''+2xy'-2y=3x$, $y_{1}(x)=x$, $y_{2}(x)=x^{-2}$
+\item $x^{2}y''-2y=10x^{2}-1$, $y_{1}(x)=x^{2}$, $y_{2}(x)=x^{-1}$
+\end{enumerate}
+
+\end{document}

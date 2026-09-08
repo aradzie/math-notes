@@ -1,0 +1,175 @@
+OpenStax's source MathML for this exercise group's two intro-paragraph
+references to the region names the exercises are about uses Greek capital
+epsilon (U+0395, <mi>Ε</mi>) instead of Latin capital E (<mi>E</mi>) -- a
+one-character mix-up in OpenStax's own equation editor, visually
+indistinguishable in the rendered PDF from the correct Latin E used by
+every sibling occurrence in the same paragraphs (e.g. "the boundaries of
+the solid $E$" right before the first fix, "region $E$ are given in
+rectangular coordinates" right before the second). Confirmed with
+ord() against the actual fetched page content, not by eye. Restored by
+hand here rather than in the converter -- adding a Greek-epsilon-to-Latin-E
+entry to MI_MAP would silently corrupt any future page that has a genuine
+Greek epsilon.
+
+Manual-review corrections added in a later pass:
+
+- "\item " lines that open a lettered (a)/(b) subpart list had a stray
+  trailing space before the newline; trimmed (no other content changed).
+- "where $f,g,\,\text{and}\,h$" and "cones $\phi=\pi/4\,\text{and}\,\phi=\pi/3$"
+  used \text{and} plus manual \, spacing to fuse "and" into the math span;
+  confirmed against the live OpenStax page that "and" is plain running text
+  there, not part of any MathML span, so both were rejoined as ordinary
+  prose ("$f$, $g$, and $h$" / "$\phi=\pi/4$ and $\phi=\pi/3$").
+- The first factor of the spherical Fubini identity ("Show that if
+  F(rho,theta,phi)=f(rho)g(theta)h(phi) is a continuous function on the
+  spherical box...") integrated rho^2 f(rho) with differential "dr"
+  instead of "d\rho"; the integration variable is rho throughout (bounds a
+  to b on rho), so this was a stray "r" left over from the cylindrical
+  exercises earlier in the file. Fixed to "d\rho". Confirmed against the
+  live OpenStax page, which has the identical "dr" slip, so this is an
+  upstream MathML defect rather than a conversion artifact -- corrected
+  here anyway per the mathematical-correctness mandate.
+- "Use the previous result to show that ... = 21\pi, where
+  B={(x,y,z)|1<=x^2+y^2+z^2<=2, z>=0}" is mathematically inconsistent: with
+  F=(x^2+y^2+z^2)^{3/2} and the part-(a) formula 2*pi*integral(a to b) of
+  rho^2*f(rho) d(rho), a=1 and b=sqrt(2) give 7*pi/3, not 21*pi. Taking the
+  upper bound as 4 instead (b=2) reproduces 21*pi exactly. Confirmed the
+  live OpenStax page states the same "<=2" bound alongside the same
+  "=21pi" target, so this is a genuine upstream inconsistency, not a
+  transcription slip. The stated answer (21*pi) was kept as the more
+  load-bearing/explicit assertion and the bound was corrected to 4 to
+  match it; this is a consequential departure from the literal upstream
+  wording, flagged here rather than silently applied.
+- Part (a) of the "spherical symmetry with an extra cos(phi) factor, first
+  octant" exercise claimed
+  iiint_B F dV = (pi^2/4)[a*h(a) - b*h(b)].
+  Rederiving from F=f(rho)cos(phi) over the first-octant hemispherical shell
+  (theta in [0,pi/2], phi in [0,pi/2]) via the stated integration-by-parts
+  hypotheses (g(a)=g(b)=0, integral of h over [a,b] is 0) gives a leading
+  coefficient of pi/2, not pi^2/4. This is confirmed by working part (b)'s
+  numeric example (a=pi, b=2pi) both ways: pi/2 * [a*h(a)-b*h(b)] reproduces
+  the stated answer 3*pi^2/2 exactly, while pi^2/4 does not. The live
+  OpenStax page appears to carry the same pi^2/4 coefficient, so this is
+  again an upstream error corrected here because it is unambiguous once
+  checked against the worked example in the same exercise.
+- "radii a and b centered at the origin and situated in the first octant"
+  left the region radii a, b out of math mode (every sibling occurrence in
+  this file's other radii lists uses "$a$ and $b$"); wrapped in math mode
+  for consistency.
+- "Let $f(\rho,\,\theta,\,\phi)\,$ be the corresponding function in
+  spherical coordinates" had erratic manual \, spacing inside the argument
+  list and a redundant \, immediately before the closing $, and was missing
+  the sentence's closing period (present on the parallel cylindrical-
+  coordinates sentence elsewhere in the file, and confirmed present on the
+  live OpenStax page for this sentence). Normalized the spacing and added
+  the period.
+- "\sin^{4}\phi$,where $P_{0}$" was missing the prose space after the comma
+  outside the math span; added.
+- "of radius r centimeters" left the bare variable r out of math mode,
+  unlike the parallel "of radius $r$ meters" a few lines above; wrapped in
+  math mode.
+- "Find the volume $V$ of the solid Round your answer to four decimal
+  places." was missing the sentence-ending period before "Round" (the
+  parallel exercise immediately above it has the period). The live OpenStax
+  page is missing it too, but the fix is a clear, low-risk punctuation
+  correction consistent with this file's own established convention, so it
+  was applied.
+
+--- /tmp/raw.tex
++++ vol3-5-5-triple-integrals-in-cylindrical-and-spherical-coordinates.tex
+@@ -21,14 +21,14 @@ In the following exercises, evaluate the triple integrals $\underset{B}{\iiint}f
+ \item $f(x,y,z)=x^{2}+y^{2}$, $B=\{(x,y,z)|x^{2}+y^{2}\le4,x\ge0,x\le y,0\le z\le3\}$
+ \item $f(x,y,z)=e^{\sqrt{x^{2}+y^{2}}}$, $B=\{(x,y,z)|1\le x^{2}+y^{2}\le4,y\le0,x\le y\sqrt{3},2\le z\le3\}$
+ \item $f(x,y,z)=\sqrt{x^{2}+y^{2}}$, $B=\{(x,y,z)|1\le x^{2}+y^{2}\le9,y\le0,0\le z\le1\}$
+-\item 
++\item
+ \begin{enumerate}[label=(\alph*)]
+   \item Let $B$ be a cylindrical shell with inner radius $a$, outer radius $b$, and height $c$, where $0<a<b$ and $c>0$. Assume that a function $F$ defined on $B$ can be expressed in cylindrical coordinates as $F(x,y,z)=f(r)+h(z)$, where $f$ and $h$ are differentiable functions. If $\int_{a}^{b}\tilde{f}(r)\,dr=0$ and $\tilde{h}(0)=0$, where $\tilde{f}$ and $\tilde{h}$ are antiderivatives of $f$ and $h$, respectively, show that\\ $\underset{B}{\iiint}F(x,y,z)\,dV=2\pi c(b\tilde{f}(b)-a\tilde{f}(a))+\pi(b^{2}-a^{2})\tilde{h}(c)$.
+   \item Use the previous result to show that $\underset{B}{\iiint}(z+\sin \sqrt{x^{2}+y^{2}})\,dx\,dy\,dz=6\pi^{2}(\pi-2)$, where $B$ is a cylindrical shell with inner radius $\pi$, outer radius $2\pi$, and height $2$.
+ \end{enumerate}
+-\item 
++\item
+ \begin{enumerate}[label=(\alph*)]
+-  \item Let $B$ be a cylindrical shell with inner radius $a$, outer radius $b$, and height $c$, where $0<a<b$ and $c>0$. Assume that a function $F$ defined on $B$ can be expressed in cylindrical coordinates as $F(x,y,z)=f(r)g(\theta)h(z)$, where $f,g,\,\text{and}\,h$ are differentiable functions. If $\int_{a}^{b}\tilde{f}(r)\,dr=0$, where $\tilde{f}$ is an antiderivative of $f$, show that\\ $\underset{B}{\iiint}F(x,y,z)\,dV=[b\tilde{f}(b)-a\tilde{f}(a)]\,[\tilde{g}(2\pi)-\tilde{g}(0)]\,[\tilde{h}(c)-\tilde{h}(0)]$,\\ where $\tilde{g}$ and $\tilde{h}$ are antiderivatives of $g$ and $h$, respectively.
++  \item Let $B$ be a cylindrical shell with inner radius $a$, outer radius $b$, and height $c$, where $0<a<b$ and $c>0$. Assume that a function $F$ defined on $B$ can be expressed in cylindrical coordinates as $F(x,y,z)=f(r)g(\theta)h(z)$, where $f$, $g$, and $h$ are differentiable functions. If $\int_{a}^{b}\tilde{f}(r)\,dr=0$, where $\tilde{f}$ is an antiderivative of $f$, show that\\ $\underset{B}{\iiint}F(x,y,z)\,dV=[b\tilde{f}(b)-a\tilde{f}(a)]\,[\tilde{g}(2\pi)-\tilde{g}(0)]\,[\tilde{h}(c)-\tilde{h}(0)]$,\\ where $\tilde{g}$ and $\tilde{h}$ are antiderivatives of $g$ and $h$, respectively.
+   \item Use the previous result to show that $\underset{B}{\iiint}z\sin \sqrt{x^{2}+y^{2}}\,dx\,dy\,dz=-12\pi^{2}$, where $B$ is a cylindrical shell with inner radius $\pi$, outer radius $2\pi$, and height $2$.
+ \end{enumerate}
+ \end{enumerate}
+@@ -39,7 +39,7 @@ In the following exercises, the boundaries of the solid $E$ are given in cylindr
+ (a) Define the region in cylindrical coordinates.
+ 
+ 
+-(b) Convert the integral $\underset{Ε}{\iiint}g(x,y,z)\,dV$ to cylindrical coordinates.
++(b) Convert the integral $\underset{E}{\iiint}g(x,y,z)\,dV$ to cylindrical coordinates.
+ 
+ \begin{enumerate}[resume]
+ \item $E$ is inside the right circular cylinder $r=4\sin \theta$, above the $r\theta$-plane, and inside the sphere $r^{2}+z^{2}=16$.
+@@ -51,7 +51,7 @@ In the following exercises, the boundaries of the solid $E$ are given in cylindr
+ In the following exercises, the function $g$ and region $E$ are given in rectangular coordinates.
+ 
+ 
+-(a) Express the region $Ε$ and the function $g$ in cylindrical coordinates. Let $f(r,\theta,z)$ be the corresponding function in cylindrical coordinates.
++(a) Express the region $E$ and the function $g$ in cylindrical coordinates. Let $f(r,\theta,z)$ be the corresponding function in cylindrical coordinates.
+ 
+ 
+ (b) Convert the integral $\underset{E}{\iiint}g(x,y,z)\,dV$ to cylindrical coordinates and evaluate it.
+@@ -75,7 +75,7 @@ In the following exercises, find the volume of the solid $E$ whose boundaries ar
+ \item $E$ is located inside the circular cone $x^{2}+y^{2}={(z-1)}^{2}$ and between the planes $z=0$ and $z=2$.
+ \item $E$ is located inside the cylinder $x^{2}+y^{2}=1$, above the circular cone $z=1-\sqrt{x^{2}+y^{2}}$, and below the circular paraboloid $z=1+x^{2}+y^{2}$, and between the planes $z=0$ and $z=2$.
+ \item \techrequired Use a computer algebra system (CAS) to graph the solid whose volume is given by the iterated integral in cylindrical coordinates $\int_{-\pi/2}^{\pi/2}\,\int_{0}^{1}\,\int_{r^{2}}^{r}r\,dz\,dr\,d\theta$. Find the volume $V$ of the solid. Round your answer to four decimal places.
+-\item \techrequired Use a CAS to graph the solid whose volume is given by the iterated integral in cylindrical coordinates $\int_{0}^{\pi/2}\,\int_{0}^{1}\,\int_{r^{4}}^{r}r\,dz\,dr\,d\theta$. Find the volume $V$ of the solid Round your answer to four decimal places.
++\item \techrequired Use a CAS to graph the solid whose volume is given by the iterated integral in cylindrical coordinates $\int_{0}^{\pi/2}\,\int_{0}^{1}\,\int_{r^{4}}^{r}r\,dz\,dr\,d\theta$. Find the volume $V$ of the solid. Round your answer to four decimal places.
+ \item Convert the integral $\int_{0}^{1}\,\int_{-\sqrt{1-y^{2}}}^{\sqrt{1-y^{2}}}\,\int_{x^{2}+y^{2}}^{\sqrt{x^{2}+y^{2}}}xz\,dz\,dx\,dy$ into an integral in cylindrical coordinates.
+ \item Convert the integral $\int_{0}^{2}\,\int_{0}^{y}\,\int_{0}^{1}(xy+z)\,dz\,dx\,dy$ into an integral in cylindrical coordinates.
+ \end{enumerate}
+@@ -87,15 +87,15 @@ In the following exercises, evaluate the triple integral $\underset{B}{\iiint}f(
+ \item $f(x,y,z)=1-\sqrt{x^{2}+y^{2}+z^{2}}$, $B=\{(x,y,z)|x^{2}+y^{2}+z^{2}\le9,y\ge0,z\ge0\}$ \\ \textit{[Figure: A quarter section of an ovoid with height 8, width 8 and length 18.]}
+ \item $f(x,y,z)=\sqrt{x^{2}+y^{2}}$, $B$ is bounded above by the half-sphere $x^{2}+y^{2}+z^{2}=9$ with $z\ge0$ and below by the cone $z^{2}=x^{2}+y^{2}$.
+ \item $f(x,y,z)=z$, $B$ is bounded above by the half-sphere $x^{2}+y^{2}+z^{2}=16$ with $z\ge0$ and below by the cone $z^{2}=x^{2}+y^{2}$.
+-\item Show that if $F(\rho,\theta,\phi)=f(\rho)g(\theta)h(\phi)$ is a continuous function on the spherical box $B=\{(\rho,\theta,\phi)|a\le \rho \le b,\alpha \le \theta \le \beta,\gamma \le \phi \le \psi \}$, then \[\underset{B}{\iiint}F\,dV=(\int_{a}^{b}\rho^{2}f(\rho)\,dr)(\int_{\alpha}^{\beta}g(\theta)\,d\theta)(\int_{\gamma}^{\psi}h(\phi)\sin \phi \,d\phi).\]
+-\item 
++\item Show that if $F(\rho,\theta,\phi)=f(\rho)g(\theta)h(\phi)$ is a continuous function on the spherical box $B=\{(\rho,\theta,\phi)|a\le \rho \le b,\alpha \le \theta \le \beta,\gamma \le \phi \le \psi \}$, then \[\underset{B}{\iiint}F\,dV=(\int_{a}^{b}\rho^{2}f(\rho)\,d\rho)(\int_{\alpha}^{\beta}g(\theta)\,d\theta)(\int_{\gamma}^{\psi}h(\phi)\sin \phi \,d\phi).\]
++\item
+ \begin{enumerate}[label=(\alph*)]
+   \item A function $F$ is said to have spherical symmetry if it depends on the distance to the origin only, that is, it can be expressed in spherical coordinates as $F(x,y,z)=f(\rho)$, where $\rho=\sqrt{x^{2}+y^{2}+z^{2}}$. Show that\\ $\underset{B}{\iiint}F(x,y,z)\,dV=2\pi \int_{a}^{b}\rho^{2}f(\rho)\,d\rho$,\\ where $B$ is the region between the upper concentric hemispheres of radii $a$ and $b$ centered at the origin, with $0<a<b$ and $F$ a spherical function defined on $B$.
+-  \item Use the previous result to show that $\underset{B}{\iiint}(x^{2}+y^{2}+z^{2})\sqrt{x^{2}+y^{2}+z^{2}}\,dV=21\pi$, where\\ $B=\{(x,y,z)|1\le x^{2}+y^{2}+z^{2}\le2,z\ge0\}$.
++  \item Use the previous result to show that $\underset{B}{\iiint}(x^{2}+y^{2}+z^{2})\sqrt{x^{2}+y^{2}+z^{2}}\,dV=21\pi$, where\\ $B=\{(x,y,z)|1\le x^{2}+y^{2}+z^{2}\le4,z\ge0\}$.
+ \end{enumerate}
+-\item 
++\item
+ \begin{enumerate}[label=(\alph*)]
+-  \item Let $B$ be the region between the upper concentric hemispheres of radii a and b centered at the origin and situated in the first octant, where $0<a<b$. Consider F a function defined on B whose form in spherical coordinates $(\rho,\theta,\phi)$ is $F(x,y,z)=f(\rho)\cos \phi$. Show that if $g(a)=g(b)=0$ and $\int_{a}^{b}h(\rho)\,d\rho=0$, then\\ $\underset{B}{\iiint}F(x,y,z)\,dV=\frac{\pi^{2}}{4}[ah(a)-bh(b)]$,\\ where $g$ is an antiderivative of $f$ and $h$ is an antiderivative of $g$.
++  \item Let $B$ be the region between the upper concentric hemispheres of radii $a$ and $b$ centered at the origin and situated in the first octant, where $0<a<b$. Consider F a function defined on B whose form in spherical coordinates $(\rho,\theta,\phi)$ is $F(x,y,z)=f(\rho)\cos \phi$. Show that if $g(a)=g(b)=0$ and $\int_{a}^{b}h(\rho)\,d\rho=0$, then\\ $\underset{B}{\iiint}F(x,y,z)\,dV=\frac{\pi}{2}[ah(a)-bh(b)]$,\\ where $g$ is an antiderivative of $f$ and $h$ is an antiderivative of $g$.
+   \item Use the previous result to show that $\underset{B}{\iiint}\frac{z\cos \sqrt{x^{2}+y^{2}+z^{2}}}{\sqrt{x^{2}+y^{2}+z^{2}}}\,dV=\frac{3\pi^{2}}{2}$, where $B$ is the region between the upper concentric hemispheres of radii $\pi$ and $2\pi$ centered at the origin and situated in the first octant.
+ \end{enumerate}
+ \end{enumerate}
+@@ -103,7 +103,7 @@ In the following exercises, evaluate the triple integral $\underset{B}{\iiint}f(
+ In the following exercises, the function $g$ and region $E$ are given in rectangular coordinates.
+ 
+ 
+-(a) Express the region $E$ and the function $g$ in spherical coordinates. Let $f(\rho,\,\theta,\,\phi)\,$ be the corresponding function in spherical coordinates
++(a) Express the region $E$ and the function $g$ in spherical coordinates. Let $f(\rho,\theta,\phi)$ be the corresponding function in spherical coordinates.
+ 
+ 
+ (b) Convert the integral $\underset{E}{\iiint}g(x,y,z)\,dV$ to spherical coordinates and evaluate it.
+@@ -121,7 +121,7 @@ In the following exercises, find the volume of the solid $E$ whose boundaries ar
+ \item $E=\{(x,y,z)|\sqrt{x^{2}+y^{2}}\le z\le \sqrt{16-x^{2}-y^{2}},x\ge0,y\ge0\}$
+ \item $E=\{(x,y,z)|x^{2}+y^{2}+z^{2}-2z\le0,\sqrt{x^{2}+y^{2}}\le z\}$
+ \item Use spherical coordinates to find the volume of the solid situated inside the sphere $\rho=1$ and outside the sphere $\rho=\cos \phi$, with $\phi \in[0,\frac{\pi}{2}]$.
+-\item Use spherical coordinates to find the volume of the ball $\rho \le3$ that is situated between the cones $\phi=\frac{\pi}{4}\,\text{and}\,\phi=\frac{\pi}{3}$.
++\item Use spherical coordinates to find the volume of the ball $\rho \le3$ that is situated between the cones $\phi=\frac{\pi}{4}$ and $\phi=\frac{\pi}{3}$.
+ \item Convert the integral $\int_{-4}^{4}\,\int_{-\sqrt{16-y^{2}}}^{\sqrt{16-y^{2}}}\,\int_{-\sqrt{16-x^{2}-y^{2}}}^{\sqrt{16-x^{2}-y^{2}}}(x^{2}+y^{2}+z^{2})\,dz\,dx\,dy$ into an integral in spherical coordinates.
+ \item Convert the integral $\int_{0}^{4}\,\int_{0}^{\sqrt{16-x^{2}}}\,\int_{-\sqrt{16-x^{2}-y^{2}}}^{\sqrt{16-x^{2}-y^{2}}}{(x^{2}+y^{2}+z^{2})}^{2}\,dz\,dy\,dx$ into an integral in spherical coordinates.
+ \item Convert the integral $\int_{-2\sqrt{2}}^{2\sqrt{2}}\,\int_{-\sqrt{8-x^{2}}}^{\sqrt{8-x^{2}}}\,\int_{\sqrt{x^{2}+y^{2}}}^{\sqrt{16-x^{2}-y^{2}}}\,dz\,dy\,dx$ into an integral in spherical coordinates and evaluate it.
+@@ -135,9 +135,9 @@ In the following exercises, find the volume of the solid $E$ whose boundaries ar
+ \end{enumerate}
+ \item Express the volume of the solid inside the sphere $x^{2}+y^{2}+z^{2}=16$ and outside the cylinder $x^{2}+y^{2}=4$ as triple integrals in cylindrical coordinates and spherical coordinates.
+ \item Express the volume of the solid inside the sphere $x^{2}+y^{2}+z^{2}=16$ and outside the cylinder $x^{2}+y^{2}=4$ that is located in the first octant as triple integrals in cylindrical coordinates and spherical coordinates.
+-\item The power emitted by an antenna has a power density per unit volume given in spherical coordinates by $p(\rho,\theta,\phi)=\frac{P_{0}}{\rho^{2}}\cos^{2}\theta \sin^{4}\phi$,where $P_{0}$ is a constant with units in watts. The total power within a sphere $B$ of radius $r$ meters is defined as $P=\underset{B}{\iiint}p(\rho,\theta,\phi)\,dV$. Find the total power $P$ within a sphere of radius 20 meters.
++\item The power emitted by an antenna has a power density per unit volume given in spherical coordinates by $p(\rho,\theta,\phi)=\frac{P_{0}}{\rho^{2}}\cos^{2}\theta \sin^{4}\phi$, where $P_{0}$ is a constant with units in watts. The total power within a sphere $B$ of radius $r$ meters is defined as $P=\underset{B}{\iiint}p(\rho,\theta,\phi)\,dV$. Find the total power $P$ within a sphere of radius 20 meters.
+ \item Use the preceding exercise to find the total power within a sphere $B$ of radius 5 meters when the power density per unit volume is given by $p(\rho,\theta,\phi)=\frac{30}{\rho^{2}}\cos^{2}\theta \sin^{4}\phi$.
+-\item A charge cloud contained in a sphere $B$ of radius r centimeters centered at the origin has its charge density given by $q(x,y,z)=k\sqrt{x^{2}+y^{2}+z^{2}}\frac{\mu \,\text{C}}{\text{cm}^{3}}$, where $k>0$. The total charge contained in $B$ is given by $Q=\underset{B}{\iiint}q(x,y,z)\,dV$. Find the total charge $Q$.
++\item A charge cloud contained in a sphere $B$ of radius $r$ centimeters centered at the origin has its charge density given by $q(x,y,z)=k\sqrt{x^{2}+y^{2}+z^{2}}\frac{\mu \,\text{C}}{\text{cm}^{3}}$, where $k>0$. The total charge contained in $B$ is given by $Q=\underset{B}{\iiint}q(x,y,z)\,dV$. Find the total charge $Q$.
+ \item Use the preceding exercise to find the total charge cloud contained in the unit sphere if the charge density is $q(x,y,z)=20\sqrt{x^{2}+y^{2}+z^{2}}\frac{\mu \,\text{C}}{\text{cm}^{3}}$.
+ \end{enumerate}
+ 

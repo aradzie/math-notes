@@ -1,0 +1,70 @@
+Correct corrupted constants in the alternating zeta comparison, distinguish the
+finite plotted cosine partial sum from the divergent infinite series, repair the
+Euler-transform identity, and fix the random-series index. Also clean local
+math-mode punctuation, operator spacing, grammar, and prose punctuation.
+--- /tmp/raw.tex
++++ vol2-5-5-alternating-series.tex
+@@ -33,17 +33,17 @@
+ \item $\sum_{n=1}^{\infty}{(-1)}^{n+1}\frac{n^{e}}{1+n^{\pi}}$
+ \item $\sum_{n=1}^{\infty}{(-1)}^{n+1}2^{1/n}$
+ \item $\sum_{n=1}^{\infty}{(-1)}^{n+1}n^{1/n}$
+-\item $\sum_{n=1}^{\infty}{(-1)}^{n}(1-n^{1/n})$ (Hint: $n^{1/n}\approx1+\ln(n)/n$ for large $n.)$
+-\item $\sum_{n=1}^{\infty}{(-1)}^{n+1}n(1-\cos(\frac{1}{n}))$ (Hint: $\cos(1/n)\approx1-1/n^{2}$ for large $n.)$
++\item $\sum_{n=1}^{\infty}{(-1)}^{n}(1-n^{1/n})$ (Hint: $n^{1/n}\approx1+\ln(n)/n$ for large $n$.)
++\item $\sum_{n=1}^{\infty}{(-1)}^{n+1}n(1-\cos(\frac{1}{n}))$ (Hint: $\cos(1/n)\approx1-1/n^{2}$ for large $n$.)
+ \item $\sum_{n=1}^{\infty}{(-1)}^{n+1}(\sqrt{n+1}-\sqrt{n})$ (Hint: Rationalize the numerator.)
+ \item $\sum_{n=1}^{\infty}{(-1)}^{n+1}(\frac{1}{\sqrt{n}}-\frac{1}{\sqrt{n+1}})$ (Hint: Find common denominator then rationalize numerator.)
+ \item $\sum_{n=1}^{\infty}{(-1)}^{n+1}(\ln(n+1)-\ln n)$
+-\item $\sum_{n=1}^{\infty}{(-1)}^{n+1}n(\tan^{-1}(n+1)-\tan^{-1}n)$ (Hint: Use Mean Value Theorem.)
++\item $\sum_{n=1}^{\infty}{(-1)}^{n+1}n(\tan^{-1}(n+1)-\tan^{-1}n)$ (Hint: Use the Mean Value Theorem.)
+ \item $\sum_{n=1}^{\infty}{(-1)}^{n+1}({(n+1)}^{2}-n^{2})$
+ \item $\sum_{n=1}^{\infty}{(-1)}^{n+1}(\frac{1}{n}-\frac{1}{n+1})$
+ \item $\sum_{n=1}^{\infty}\frac{\cos(n\pi)}{n}$
+ \item $\sum_{n=1}^{\infty}\frac{\cos(n\pi)}{n^{1/n}}$
+-\item $\sum_{n=1}^{\infty}\frac{1}{n}\sin (\frac{n\pi}{2})$
++\item $\sum_{n=1}^{\infty}\frac{1}{n}\sin(\frac{n\pi}{2})$
+ \item $\sum_{n=1}^{\infty}\sin(n\pi/2)\sin(1/n)$
+ \end{enumerate}
+ 
+@@ -63,10 +63,10 @@
+ \begin{enumerate}[resume]
+ \item If $b_{n}\ge0$ is decreasing and $\lim_{n\to \infty}b_{n}=0$, then $\sum_{n=1}^{\infty}(b_{2n-1}-b_{2n})$ converges absolutely.
+ \item If $b_{n}\ge0$ is decreasing, then $\sum_{n=1}^{\infty}(b_{2n-1}-b_{2n})$ converges absolutely.
+-\item If $b_{n}\ge0$ and $\lim_{n\to \infty}b_{n}=0$ then $\sum_{n=1}^{\infty}(\frac{1}{2}(b_{3n-2}+b_{3n-1})-b_{3n})$ converges.
+-\item If $b_{n}\ge0$ is decreasing and $\sum_{n=1}^{\infty}(b_{3n-2}+b_{3n-1}-b_{3n})$ converges then $\sum_{n=1}^{\infty}b_{3n-2}$ converges.
++\item If $b_{n}\ge0$ and $\lim_{n\to \infty}b_{n}=0$, then $\sum_{n=1}^{\infty}(\frac{1}{2}(b_{3n-2}+b_{3n-1})-b_{3n})$ converges.
++\item If $b_{n}\ge0$ is decreasing and $\sum_{n=1}^{\infty}(b_{3n-2}+b_{3n-1}-b_{3n})$ converges, then $\sum_{n=1}^{\infty}b_{3n-2}$ converges.
+ \item If $b_{n}\ge0$ is decreasing and $\sum_{n=1}^{\infty}{(-1)}^{n-1}b_{n}$ converges conditionally but not absolutely, then $b_{n}$ does not tend to zero.
+-\item Let $a_{n}^{+}=a_{n}$ if $a_{n}\ge0$ and $a_{n}^{-}=-a_{n}$ if $a_{n}<0$. (Also, $a_{n}^{+}=0\,\text{if}\,a_{n}<0$ and $a_{n}^{-}=0\,\text{if}\,a_{n}\ge0.)$ If $\sum_{n=1}^{\infty}a_{n}$ converges conditionally but not absolutely, then neither $\sum_{n=1}^{\infty}a_{n}^{+}$ nor $\sum_{n=1}^{\infty}a_{n}^{-}$ converge.
++\item Let $a_{n}^{+}=a_{n}$ if $a_{n}\ge0$ and $a_{n}^{-}=-a_{n}$ if $a_{n}<0$. (Also, $a_{n}^{+}=0$ if $a_{n}<0$ and $a_{n}^{-}=0$ if $a_{n}\ge0$.) If $\sum_{n=1}^{\infty}a_{n}$ converges conditionally but not absolutely, then neither $\sum_{n=1}^{\infty}a_{n}^{+}$ nor $\sum_{n=1}^{\infty}a_{n}^{-}$ converges.
+ \item Suppose that $a_{n}$ is a sequence of positive real numbers and that $\sum_{n=1}^{\infty}a_{n}$ converges. Suppose that $b_{n}$ is an arbitrary sequence of ones and minus ones. Does $\sum_{n=1}^{\infty}a_{n}b_{n}$ necessarily converge?
+ \item Suppose that $a_{n}$ is a sequence such that $\sum_{n=1}^{\infty}a_{n}b_{n}$ converges for every possible sequence $b_{n}$ of zeros and ones. Does $\sum_{n=1}^{\infty}a_{n}$ converge absolutely?
+ \end{enumerate}
+@@ -88,22 +88,22 @@
+ \item The formula $\sin \theta=\theta-\frac{\theta^{3}}{3!}+\frac{\theta^{5}}{5!}-\frac{\theta^{7}}{7!}+\cdots$ will be derived in the next chapter. Use the remainder $|R_{N}|\le b_{N+1}$ to find a bound for the error in estimating $\sin \theta$ by the fifth partial sum $\theta-\theta^{3}/3!+\theta^{5}/5!-\theta^{7}/7!+\theta^{9}/9!$ for $\theta=1$, $\theta=\pi/6$, and $\theta=\pi$.
+ \item How many terms in $\cos \theta=1-\frac{\theta^{2}}{2!}+\frac{\theta^{4}}{4!}-\frac{\theta^{6}}{6!}+\cdots$ are needed to approximate $\cos 1$ accurate to an error of at most $0.00001$?
+ \item How many terms in $\sin \theta=\theta-\frac{\theta^{3}}{3!}+\frac{\theta^{5}}{5!}-\frac{\theta^{7}}{7!}+\cdots$ are needed to approximate $\sin 1$ accurate to an error of at most $0.00001$?
+-\item Sometimes the alternating series $\sum_{n=1}^{\infty}{(-1)}^{n-1}b_{n}$ converges to a certain fraction of an absolutely convergent series $\sum_{n=1}^{\infty}b_{n}$ at a faster rate. Given that $\sum_{n=1}^{\infty}\frac{1}{n^{2}}=\frac{\pi^{2}}{6}$, find $12=1-\frac{1}{2^{2}}+\frac{1}{3^{2}}-\frac{1}{4^{2}}+\cdots$. Which of the series $6\sum_{n=1}^{\infty}\frac{1}{n^{2}}$ and $S\sum_{n=1}^{\infty}\frac{{(-1)}^{n-1}}{n^{2}}$ gives a better estimation of $\pi^{2}$ using $1000$ terms?
++\item Sometimes the alternating series $\sum_{n=1}^{\infty}{(-1)}^{n-1}b_{n}$ converges to a certain fraction of an absolutely convergent series $\sum_{n=1}^{\infty}b_{n}$ at a faster rate. Given that $\sum_{n=1}^{\infty}\frac{1}{n^{2}}=\frac{\pi^{2}}{6}$, find $\frac{\pi^{2}}{12}=1-\frac{1}{2^{2}}+\frac{1}{3^{2}}-\frac{1}{4^{2}}+\cdots$. Which of the series $6\sum_{n=1}^{\infty}\frac{1}{n^{2}}$ and $12\sum_{n=1}^{\infty}\frac{{(-1)}^{n-1}}{n^{2}}$ gives a better estimation of $\pi^{2}$ using $1000$ terms?
+ \end{enumerate}
+ 
+-The following alternating series converge to given multiples of $\pi$. Find the value of $N$ predicted by the remainder estimate such that the $N\text{th}$ partial sum of the series accurately approximates the left-hand side to within the given error. Find the minimum $N$ for which the error bound holds, and give the desired approximate value in each case. Up to $15$ decimals places, $\pi=3.141592653589793\ldots$.
++The following alternating series converge to given multiples of $\pi$. Find the value of $N$ predicted by the remainder estimate such that the $N\text{th}$ partial sum of the series accurately approximates the left-hand side to within the given error. Find the minimum $N$ for which the error bound holds, and give the desired approximate value in each case. Up to $15$ decimal places, $\pi=3.141592653589793\ldots$.
+ 
+ \begin{enumerate}[resume]
+ \item \techrequired $\frac{\pi}{4}=\sum_{n=0}^{\infty}\frac{{(-1)}^{n}}{2n+1}$, error $<0.0001$
+ \item \techrequired $\frac{\pi}{\sqrt{12}}=\sum_{k=0}^{\infty}\frac{{(-3)}^{-k}}{2k+1}$, error $<0.0001$
+ \item \techrequired The series $\sum_{n=0}^{\infty}\frac{\sin(x+\pi n)}{x+\pi n}$ plays an important role in signal processing. Show that $\sum_{n=0}^{\infty}\frac{\sin(x+\pi n)}{x+\pi n}$ converges whenever $0<x<\pi$. (Hint: Use the formula for the sine of a sum of angles.)
+ \item \techrequired If $\sum_{n=1}^{N}{(-1)}^{n-1}\frac{1}{n}\to \ln 2$, what is $1+\frac{1}{3}+\frac{1}{5}-\frac{1}{2}-\frac{1}{4}-\frac{1}{6}+\frac{1}{7}+\frac{1}{9}+\frac{1}{11}-\frac{1}{8}-\frac{1}{10}-\frac{1}{12}+\cdots$?
+-\item \techrequired Plot the series $\sum_{n=1}^{100}\frac{\cos(2\pi nx)}{n}$ for $0\le x<1$. Explain why $\sum_{n=1}^{100}\frac{\cos(2\pi nx)}{n}$ diverges when $x=0,1$. How does the series behave for other $x$?
++\item \techrequired Plot the partial sum $\sum_{n=1}^{100}\frac{\cos(2\pi nx)}{n}$ for $0\le x<1$. Explain why $\sum_{n=1}^{\infty}\frac{\cos(2\pi nx)}{n}$ diverges when $x=0,1$. How does the series behave for other $x$?
+ \item \techrequired Plot the series $\sum_{n=1}^{100}\frac{\sin(2\pi nx)}{n}$ for $0\le x<1$ and comment on its behavior
+ \item \techrequired Plot the series $\sum_{n=1}^{100}\frac{\cos(2\pi nx)}{n^{2}}$ for $0\le x<1$ and describe its graph.
+-\item \techrequired The alternating harmonic series converges because of cancellation among its terms. Its sum is known because the cancellation can be described explicitly. A random harmonic series is one of the form $\sum_{n=1}^{\infty}\frac{S_{n}}{n}$, where $s_{n}$ is a randomly generated sequence of $\pm1\text{'s}$ in which the values $\pm1$ are equally likely to occur. Use a random number generator to produce $1000$ random $\pm1\text{s}$ and plot the partial sums $S_{N}=\sum_{n=1}^{N}\frac{s_{n}}{n}$ of your random harmonic sequence for $N=1$ to $1000$. Compare to a plot of the first $1000$ partial sums of the harmonic series.
++\item \techrequired The alternating harmonic series converges because of cancellation among its terms. Its sum is known because the cancellation can be described explicitly. A random harmonic series is one of the form $\sum_{n=1}^{\infty}\frac{s_{n}}{n}$, where $s_{n}$ is a randomly generated sequence of $\pm1$'s in which the values $\pm1$ are equally likely to occur. Use a random number generator to produce $1000$ random $\pm1$'s and plot the partial sums $S_{N}=\sum_{n=1}^{N}\frac{s_{n}}{n}$ of your random harmonic sequence for $N=1$ to $1000$. Compare to a plot of the first $1000$ partial sums of the harmonic series.
+ \item \techrequired Estimates of $\sum_{n=1}^{\infty}\frac{1}{n^{2}}$ can be accelerated by writing its partial sums as $\sum_{n=1}^{N}\frac{1}{n^{2}}=\sum_{n=1}^{N}\frac{1}{n(n+1)}+\sum_{n=1}^{N}\frac{1}{n^{2}(n+1)}$ and recalling that $\sum_{n=1}^{N}\frac{1}{n(n+1)}=1-\frac{1}{N+1}$ converges to one as $N\to \infty$. Compare the estimate of $\pi^{2}/6$ using the sums $\sum_{n=1}^{1000}\frac{1}{n^{2}}$ with the estimate using $1+\sum_{n=1}^{1000}\frac{1}{n^{2}(n+1)}$.
+-\item \techrequired The Euler transform rewrites $S=\sum_{n=0}^{\infty}{(-1)}^{n}b_{n}$ as $S=\sum_{n=0}^{\infty}{(-1)}^{n}2^{-n-1}\sum_{m=0}^{n}\binom{n}{m}b_{n-m}$. For the alternating harmonic series, it takes the form $\ln(2)=\sum_{n=1}^{\infty}\frac{{(-1)}^{n-1}}{n}=\sum_{n=1}^{\infty}\frac{1}{n2^{n}}$. Compute partial sums of $\sum_{n=1}^{\infty}\frac{1}{n2^{n}}$ until they approximate $\ln(2)$ accurate to within $0.0001$. How many terms are needed? Compare this answer to the number of terms of the alternating harmonic series are needed to estimate $\ln(2)$.
++\item \techrequired The Euler transform rewrites $S=\sum_{n=0}^{\infty}{(-1)}^{n}b_{n}$ as $S=\sum_{n=0}^{\infty}2^{-n-1}\sum_{m=0}^{n}{(-1)}^{m}\binom{n}{m}b_{m}$. For the alternating harmonic series, it takes the form $\ln(2)=\sum_{n=1}^{\infty}\frac{{(-1)}^{n-1}}{n}=\sum_{n=1}^{\infty}\frac{1}{n2^{n}}$. Compute partial sums of $\sum_{n=1}^{\infty}\frac{1}{n2^{n}}$ until they approximate $\ln(2)$ accurate to within $0.0001$. How many terms are needed? Compare this answer to the number of terms of the alternating harmonic series needed to estimate $\ln(2)$.
+ \item \techrequired In the text it was stated that a conditionally convergent series can be rearranged to converge to any number. Here is a slightly simpler, but similar, fact. If $a_{n}\ge0$ is such that $a_{n}\to0$ as $n\to \infty$ but $\sum_{n=1}^{\infty}a_{n}$ diverges, then, given any number $A$ there is a sequence $s_{n}$ of $\pm1\text{'s}$ such that $\sum_{n=1}^{\infty}a_{n}s_{n}\to A$. Show this for $A>0$ as follows.
+ \begin{enumerate}[label=(\alph*)]
+   \item Recursively define $s_{n}$ by $s_{n}=1$ if $S_{n-1}=\sum_{k=1}^{n-1}a_{k}s_{k}<A$ and $s_{n}=-1$ otherwise.

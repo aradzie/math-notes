@@ -1,0 +1,134 @@
+Manual review corrections for this page's first pass.
+
+- extract-exercises.py doesn't detect OpenStax's bold-mathvariant mstyle
+  wrapping vector quantities (r, i, j, k, T, N, B), so it emitted plain
+  \text{r}, \text{i}, etc. instead of \mathbf{...} for the position,
+  tangent, normal, and binormal vectors throughout this file (same
+  systemic gap already patched for vol3-3-1 and vol3-3-2). Converted every
+  such occurrence to \mathbf{...}.
+- Several bare prose variables and inequalities were left as plain text
+  instead of math mode: "y axis"/"x-axis" (inconsistently hyphenated) and
+  bare coordinate values in the figure descriptions for items 5, 18, and
+  28 (e.g. "x = 0.3", "y=20", "-4 and 4"); "Write r as a parameter of s."
+  in item 26; the repeated "arc-length parameter s" in items 27-28; the
+  plane curve "C" and "as t increases" in the paragraph/items introducing
+  the last group; "about the y-axis" and "as a function of x" in the cup
+  problem; and "the parameter t" / "the x-coordinate" in items 30 and 30
+  (curvature-of-1/x and the ellipse-curvature item). Wrapped each in math
+  mode ($x$-axis, $y$-axis, $y=20$, $-4$, $4$, $\mathbf{r}$, $s$, $C$,
+  $t$, $x$) to match the surrounding notation.
+
+--- /tmp/raw.tex
++++ vol3-3-3-arc-length-and-curvature.tex
+@@ -15,68 +15,68 @@
+ Find the arc length of the curve on the given interval.
+
+ \begin{enumerate}[start=1]
+-\item $\text{r}(t)=t^{2}\text{i}+14t\text{j},\,0\le t\le7$. This portion of the graph is shown here: \\ \textit{[Figure: This figure is the graph of a curve beginning at the origin and increasing.]}
+-\item $\text{r}(t)=t^{2}\text{i}+(2t^{2}+1)\text{j},\,1\le t\le3$
+-\item $\text{r}(t)=\langle2\sin t,5t,2\cos t\rangle,0\le t\le \pi$. This portion of the graph is shown here: \\ \textit{[Figure: This figure is the graph of a curve in 3 dimensions. It is inside of a box. The box represents an octant. The curve begins in the upper right corner of the box and bends through the box to the other side.]}
+-\item $\text{r}(t)=\langle t^{2}+1,4t^{3}+3\rangle,\,-1\le t\le0$
+-\item $\text{r}(t)=\langle e^{-t}\cos t,e^{-t}\sin t\rangle$ over the interval $[0,\frac{\pi}{2}]$. Here is the portion of the graph on the indicated interval: \\ \textit{[Figure: This figure is the graph of a curve in the first quadrant. It begins approximately at 0.20 on the y axis and increases to approximately where x = 0.3. Then the curve decreases, meeting the x-axis at 1.0.]}
+-\item Find the length of one turn of the helix given by $\text{r}(t)=\frac{1}{2}\cos t\text{i}+\frac{1}{2}\sin t\text{j}+\sqrt{\frac{3}{4}}\,t\,\text{k}$.
+-\item Find the arc length of the vector-valued function $\text{r}(t)=-t\text{i}+4t\text{j}+3t\text{k}$ over $[0,1]$.
+-\item A particle travels once around a circle with the equation of motion $\text{r}(t)=3\cos t\text{i}+3\sin t\text{j}+0\text{k}$. Find the distance traveled around the circle by the particle.
+-\item Set up an integral to find the circumference of the ellipse with the equation $\text{r}(t)=\cos t\text{i}+2\sin t\text{j}+0\text{k}$.
+-\item Find the length of the curve $\text{r}(t)=\langle \sqrt{2}t,e^{t},e^{-t}\rangle$ over the interval $0\le t\le1$. The graph is shown here: \\ \textit{[Figure: This figure is the graph of a curve in 3 dimensions. It is inside of a box. The box represents an octant. The curve begins in the upper left corner of the box and bends through the box to the bottom of the other side.]}
+-\item Find the length of the curve $\text{r}(t)=\langle2\sin t,5t,2\cos t\rangle$ for $t\in[-10,10]$.
+-\item The position function for a particle is $\text{r}(t)=a\cos(\omega t)\text{i}+b\sin(\omega t)\text{j}$. Find the unit tangent vector and the unit normal vector at $t=0$.
+-\item Given $\text{r}(t)=a\cos(\omega t)\text{i}+b\sin(\omega t)\text{j}$, find the binormal vector $\text{B}(0)$.
+-\item Given $\text{r}(t)=\langle2e^{t},e^{t}\cos t,e^{t}\sin t\rangle$, determine the tangent vector $\text{T}(t)$.
+-\item Given $\text{r}(t)=\langle2e^{t},e^{t}\cos t,e^{t}\sin t\rangle$, determine the unit tangent vector $\text{T}(t)$ evaluated at $t=0$.
+-\item Given $\text{r}(t)=\langle2e^{t},e^{t}\cos t,e^{t}\sin t\rangle$, find the unit normal vector $\text{N}(t)$ evaluated at $t=0$, $\text{N}(0)$.
+-\item Given $\text{r}(t)=\langle2e^{t},e^{t}\cos t,e^{t}\sin t\rangle$, find the unit binormal vector evaluated at $t=0$.
+-\item Given $\text{r}(t)=t\text{i}+t^{2}\text{j}+t\text{k}$, find the unit tangent vector $\text{T}(t)$. The graph is shown here: \\ \textit{[Figure: This figure is the graph of a curve in 3 dimensions. It is inside of a box. The box represents an octant. The curve begins in the bottom left corner of the box and bends through the box to the upper left side.]}
+-\item Find the unit tangent vector $\text{T}(t)$ and unit normal vector $\text{N}(t)$ at $t=0$ for the plane curve $\text{r}(t)=\langle t^{3}-4t,5t^{2}-2\rangle$. The graph is shown here: \\ \textit{[Figure: This figure is the graph of a curve above the x-axis. The curve decreases in the second quadrant, passes through the y-axis at y=20. Then it intersects the origin. The curve loops at the origin, increasing back through y=20 into the first quadrant.]}
+-\item Find the unit tangent vector $\text{T}(t)$ for $\text{r}(t)=3t\text{i}+5t^{2}\text{j}+2t\text{k}$
+-\item Find the principal normal vector to the curve $\text{r}(t)=\langle6\cos t,6\sin t\rangle$ at the point determined by $t=\pi/3$.
+-\item Find $\text{T}(t)$ for the curve $\text{r}(t)=(t^{3}-4t)\,\text{i}+(5t^{2}-2)\,\text{j}$.
+-\item Find $\text{N}(t)$ for the curve $\text{r}(t)=(t^{3}-4t)\,\text{i}+(5t^{2}-2)\,\text{j}$.
+-\item Find the unit normal vector $\text{N}(t)$ for $\text{r}(t)=\langle2\sin t,5t,2\cos t\rangle$.
+-\item Find the unit tangent vector $\text{T}(t)$ for $\text{r}(t)=\langle2\sin t,5t,2\cos t\rangle$.
+-\item Find the arc-length function $s(t)$ for the line segment given by $\text{r}(t)=\langle3-3t,4t\rangle$. Write r as a parameter of s.
+-\item Parameterize the helix $\text{r}(t)=\cos t\text{i}+\sin t\text{j}+t\text{k}$ using the arc-length parameter s, from $t=0$.
+-\item Parameterize the curve using the arc-length parameter s, at the point at which $t=0$ for $\text{r}(t)=e^{t}\sin t\text{i}+e^{t}\cos t\text{j}$.
+-\item Find the curvature of the curve $\text{r}(t)=5\cos t\text{i}+4\sin t\text{j}$ at $t=\pi/3$. (Note: The graph is an ellipse.) \\ \textit{[Figure: This figure is the graph of an ellipse. The ellipse is oval along the x-axis. It is centered at the origin and intersects the y-axis at -4 and 4.]}
+-\item Find the x-coordinate at which the curvature of the curve $y=1/x$ is a maximum value.
+-\item Find the curvature of the curve $\text{r}(t)=5\cos t\text{i}+5\sin t\text{j}$. Does the curvature depend upon the parameter t?
++\item $\mathbf{r}(t)=t^{2}\mathbf{i}+14t\mathbf{j},\,0\le t\le7$. This portion of the graph is shown here: \\ \textit{[Figure: This figure is the graph of a curve beginning at the origin and increasing.]}
++\item $\mathbf{r}(t)=t^{2}\mathbf{i}+(2t^{2}+1)\mathbf{j},\,1\le t\le3$
++\item $\mathbf{r}(t)=\langle2\sin t,5t,2\cos t\rangle,0\le t\le \pi$. This portion of the graph is shown here: \\ \textit{[Figure: This figure is the graph of a curve in 3 dimensions. It is inside of a box. The box represents an octant. The curve begins in the upper right corner of the box and bends through the box to the other side.]}
++\item $\mathbf{r}(t)=\langle t^{2}+1,4t^{3}+3\rangle,\,-1\le t\le0$
++\item $\mathbf{r}(t)=\langle e^{-t}\cos t,e^{-t}\sin t\rangle$ over the interval $[0,\frac{\pi}{2}]$. Here is the portion of the graph on the indicated interval: \\ \textit{[Figure: This figure is the graph of a curve in the first quadrant. It begins approximately at $0.20$ on the $y$-axis and increases to approximately where $x=0.3$. Then the curve decreases, meeting the $x$-axis at $1.0$.]}
++\item Find the length of one turn of the helix given by $\mathbf{r}(t)=\frac{1}{2}\cos t\mathbf{i}+\frac{1}{2}\sin t\mathbf{j}+\sqrt{\frac{3}{4}}\,t\,\mathbf{k}$.
++\item Find the arc length of the vector-valued function $\mathbf{r}(t)=-t\mathbf{i}+4t\mathbf{j}+3t\mathbf{k}$ over $[0,1]$.
++\item A particle travels once around a circle with the equation of motion $\mathbf{r}(t)=3\cos t\mathbf{i}+3\sin t\mathbf{j}+0\mathbf{k}$. Find the distance traveled around the circle by the particle.
++\item Set up an integral to find the circumference of the ellipse with the equation $\mathbf{r}(t)=\cos t\mathbf{i}+2\sin t\mathbf{j}+0\mathbf{k}$.
++\item Find the length of the curve $\mathbf{r}(t)=\langle \sqrt{2}t,e^{t},e^{-t}\rangle$ over the interval $0\le t\le1$. The graph is shown here: \\ \textit{[Figure: This figure is the graph of a curve in 3 dimensions. It is inside of a box. The box represents an octant. The curve begins in the upper left corner of the box and bends through the box to the bottom of the other side.]}
++\item Find the length of the curve $\mathbf{r}(t)=\langle2\sin t,5t,2\cos t\rangle$ for $t\in[-10,10]$.
++\item The position function for a particle is $\mathbf{r}(t)=a\cos(\omega t)\mathbf{i}+b\sin(\omega t)\mathbf{j}$. Find the unit tangent vector and the unit normal vector at $t=0$.
++\item Given $\mathbf{r}(t)=a\cos(\omega t)\mathbf{i}+b\sin(\omega t)\mathbf{j}$, find the binormal vector $\mathbf{B}(0)$.
++\item Given $\mathbf{r}(t)=\langle2e^{t},e^{t}\cos t,e^{t}\sin t\rangle$, determine the tangent vector $\mathbf{T}(t)$.
++\item Given $\mathbf{r}(t)=\langle2e^{t},e^{t}\cos t,e^{t}\sin t\rangle$, determine the unit tangent vector $\mathbf{T}(t)$ evaluated at $t=0$.
++\item Given $\mathbf{r}(t)=\langle2e^{t},e^{t}\cos t,e^{t}\sin t\rangle$, find the unit normal vector $\mathbf{N}(t)$ evaluated at $t=0$, $\mathbf{N}(0)$.
++\item Given $\mathbf{r}(t)=\langle2e^{t},e^{t}\cos t,e^{t}\sin t\rangle$, find the unit binormal vector evaluated at $t=0$.
++\item Given $\mathbf{r}(t)=t\mathbf{i}+t^{2}\mathbf{j}+t\mathbf{k}$, find the unit tangent vector $\mathbf{T}(t)$. The graph is shown here: \\ \textit{[Figure: This figure is the graph of a curve in 3 dimensions. It is inside of a box. The box represents an octant. The curve begins in the bottom left corner of the box and bends through the box to the upper left side.]}
++\item Find the unit tangent vector $\mathbf{T}(t)$ and unit normal vector $\mathbf{N}(t)$ at $t=0$ for the plane curve $\mathbf{r}(t)=\langle t^{3}-4t,5t^{2}-2\rangle$. The graph is shown here: \\ \textit{[Figure: This figure is the graph of a curve above the $x$-axis. The curve decreases in the second quadrant, passes through the $y$-axis at $y=20$. Then it intersects the origin. The curve loops at the origin, increasing back through $y=20$ into the first quadrant.]}
++\item Find the unit tangent vector $\mathbf{T}(t)$ for $\mathbf{r}(t)=3t\mathbf{i}+5t^{2}\mathbf{j}+2t\mathbf{k}$
++\item Find the principal normal vector to the curve $\mathbf{r}(t)=\langle6\cos t,6\sin t\rangle$ at the point determined by $t=\pi/3$.
++\item Find $\mathbf{T}(t)$ for the curve $\mathbf{r}(t)=(t^{3}-4t)\,\mathbf{i}+(5t^{2}-2)\,\mathbf{j}$.
++\item Find $\mathbf{N}(t)$ for the curve $\mathbf{r}(t)=(t^{3}-4t)\,\mathbf{i}+(5t^{2}-2)\,\mathbf{j}$.
++\item Find the unit normal vector $\mathbf{N}(t)$ for $\mathbf{r}(t)=\langle2\sin t,5t,2\cos t\rangle$.
++\item Find the unit tangent vector $\mathbf{T}(t)$ for $\mathbf{r}(t)=\langle2\sin t,5t,2\cos t\rangle$.
++\item Find the arc-length function $s(t)$ for the line segment given by $\mathbf{r}(t)=\langle3-3t,4t\rangle$. Write $\mathbf{r}$ as a parameter of $s$.
++\item Parameterize the helix $\mathbf{r}(t)=\cos t\mathbf{i}+\sin t\mathbf{j}+t\mathbf{k}$ using the arc-length parameter $s$, from $t=0$.
++\item Parameterize the curve using the arc-length parameter $s$, at the point at which $t=0$ for $\mathbf{r}(t)=e^{t}\sin t\mathbf{i}+e^{t}\cos t\mathbf{j}$.
++\item Find the curvature of the curve $\mathbf{r}(t)=5\cos t\mathbf{i}+4\sin t\mathbf{j}$ at $t=\pi/3$. (Note: The graph is an ellipse.) \\ \textit{[Figure: This figure is the graph of an ellipse. The ellipse is oval along the $x$-axis. It is centered at the origin and intersects the $y$-axis at $-4$ and $4$.]}
++\item Find the $x$-coordinate at which the curvature of the curve $y=1/x$ is a maximum value.
++\item Find the curvature of the curve $\mathbf{r}(t)=5\cos t\mathbf{i}+5\sin t\mathbf{j}$. Does the curvature depend upon the parameter $t$?
+ \item Find the curvature $\kappa$ for the curve $y=x-\frac{1}{4}x^{2}$ at the point $x=2$.
+ \item Find the curvature $\kappa$ for the curve $y=\frac{1}{3}x^{3}$ at the point $x=1$.
+-\item Find the curvature $\kappa$ of the curve $\text{r}(t)=t\text{i}+6t^{2}\text{j}+4t\,\text{k}$. The graph is shown here: \\ \textit{[Figure: This figure is the graph of a curve in 3 dimensions. It is inside of a box. The box represents an octant. The curve has a parabolic shape in the middle of the box.]}
+-\item Find the curvature of $\text{r}(t)=\langle2\sin t,5t,2\cos t\rangle$.
+-\item Find the curvature of $\text{r}(t)=\sqrt{2}t\text{i}+e^{t}\text{j}+e^{-t}\text{k}$ at point $P(0,1,1)$.
++\item Find the curvature $\kappa$ of the curve $\mathbf{r}(t)=t\mathbf{i}+6t^{2}\mathbf{j}+4t\,\mathbf{k}$. The graph is shown here: \\ \textit{[Figure: This figure is the graph of a curve in 3 dimensions. It is inside of a box. The box represents an octant. The curve has a parabolic shape in the middle of the box.]}
++\item Find the curvature of $\mathbf{r}(t)=\langle2\sin t,5t,2\cos t\rangle$.
++\item Find the curvature of $\mathbf{r}(t)=\sqrt{2}t\mathbf{i}+e^{t}\mathbf{j}+e^{-t}\mathbf{k}$ at point $P(0,1,1)$.
+ \item At what point does the curve $y=e^{x}$ have maximum curvature?
+ \item What happens to the curvature as $x\to \infty$ for the curve $y=e^{x}$?
+ \item Find the point of maximum curvature on the curve $y=\ln x$.
+-\item Find the equations of the normal plane and the osculating plane of the curve $\text{r}(t)=\langle2\sin(3t),t,2\cos(3t)\rangle$ at point $(0,\pi,-2)$.
++\item Find the equations of the normal plane and the osculating plane of the curve $\mathbf{r}(t)=\langle2\sin(3t),t,2\cos(3t)\rangle$ at point $(0,\pi,-2)$.
+ \item Find equations of the osculating circles of the ellipse $4y^{2}+9x^{2}=36$ at the points $(2,0)$ and $(0,3)$.
+-\item Find the equation for the osculating plane at point $t=\pi/4$ on the curve $\text{r}(t)=\cos(2t)\text{i}+\sin(2t)\text{j}+t\text{k}$.
++\item Find the equation for the osculating plane at point $t=\pi/4$ on the curve $\mathbf{r}(t)=\cos(2t)\mathbf{i}+\sin(2t)\mathbf{j}+t\mathbf{k}$.
+ \item Find the radius of curvature of $6y=x^{3}$ at the point $(2,\frac{4}{3})$.
+-\item Find the curvature at each point $(x,y)$ on the hyperbola $\text{r}(t)=\langle a\cosh(t),b\sinh(t)\rangle$.
+-\item Calculate the curvature of the circular helix $\text{r}(t)=r\sin(t)\text{i}+r\cos(t)\text{j}+t\,\text{k}$.
++\item Find the curvature at each point $(x,y)$ on the hyperbola $\mathbf{r}(t)=\langle a\cosh(t),b\sinh(t)\rangle$.
++\item Calculate the curvature of the circular helix $\mathbf{r}(t)=r\sin(t)\mathbf{i}+r\cos(t)\mathbf{j}+t\,\mathbf{k}$.
+ \item Find the radius of curvature of $y=\ln(x+1)$ at point $(2,\ln 3)$.
+ \item Find the radius of curvature of the hyperbola $xy=1$ at point $(1,1)$.
+ \end{enumerate}
+
+-A particle moves along the plane curve C described by $\text{r}(t)=t\text{i}+t^{2}\text{j}$. Solve the following problems.
++A particle moves along the plane curve $C$ described by $\mathbf{r}(t)=t\mathbf{i}+t^{2}\mathbf{j}$. Solve the following problems.
+
+ \begin{enumerate}[resume]
+ \item Find the length of the curve over the interval $[0,2]$.
+ \item Find the curvature of the plane curve at $t=0,1,2$.
+-\item Describe the curvature as t increases from $t=0$ to $t=2$.
++\item Describe the curvature as $t$ increases from $t=0$ to $t=2$.
+ \end{enumerate}
+
+-The surface of a large cup is formed by revolving the graph of the function $y=0.25x^{1.6}$ from $x=0$ to $x=5$ about the y-axis (measured in centimeters).
++The surface of a large cup is formed by revolving the graph of the function $y=0.25x^{1.6}$ from $x=0$ to $x=5$ about the $y$-axis (measured in centimeters).
+
+ \begin{enumerate}[resume]
+ \item \techrequired Use technology to graph the surface.
+-\item Find the curvature $\kappa$ of the generating curve as a function of x.
++\item Find the curvature $\kappa$ of the generating curve as a function of $x$.
+ \item \techrequired Use technology to graph the curvature function.
+ \end{enumerate}
+
+\end{document}

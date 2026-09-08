@@ -1,0 +1,128 @@
+The converted source malformed the coefficient definition in Exercise 47 as an
+equality between a sum and one term. Restore the intended power series followed
+by its coefficient definition. Also disambiguate the trigonometric coefficients,
+repair the mismatched partial-sum indices in the technology exercises, move
+mathematical variables into math mode, and correct malformed hint punctuation.
+
+A later pass found nine "expand about a center" exercises where the center
+followed the function expression via a semicolon fused inside one math span
+(e.g. "$f(x)=\frac{1}{1-x^{2}};a=0$"), unlike two already-correct items
+earlier in this same list that join the function and center as two separate
+$...$ spans with "; " between them ("$f(x)=\frac{1}{x}$; $a=1$." and
+"$f(x)=\frac{1}{1-2x}$; $a=0$." -- that two-span joiner is a different,
+unaffected construct). Split each of the nine into two comma-joined spans,
+e.g. "$f(x)=\frac{1}{1-x^{2}}$, $a=0$", to match this file's established
+single-span-parameter convention.
+
+--- /tmp/raw.tex
++++ vol2-6-1-power-series-and-functions.tex
+@@ -18,8 +18,8 @@
+ \item If $\sum_{n=1}^{\infty}a_{n}x^{n}$ converges, then $a_{n}x^{n}\to0$ as $n\to \infty$.
+ \item $\sum_{n=1}^{\infty}a_{n}x^{n}$ converges at $x=0$ for any real numbers $a_{n}$.
+ \item Given any sequence $a_{n}$, there is always some $R>0$, possibly very small, such that $\sum_{n=1}^{\infty}a_{n}x^{n}$ converges on $(-R,R)$.
+-\item If $\sum_{n=1}^{\infty}a_{n}x^{n}$ has radius of convergence $R>0$ and if $|b_{n}|\le|a_{n}|$ for all n, then the radius of convergence of $\sum_{n=1}^{\infty}b_{n}x^{n}$ is greater than or equal to R.
+-\item Suppose that $\sum_{n=0}^{\infty}a_{n}{(x-3)}^{n}$ converges at $x=6$. At which of the following points might the series diverge? Use the fact that if $\sum a_{n}{(x-c)}^{n}$ converges at x, then it converges at any point closer to c than x.
++\item If $\sum_{n=1}^{\infty}a_{n}x^{n}$ has radius of convergence $R>0$ and if $|b_{n}|\le|a_{n}|$ for all $n$, then the radius of convergence of $\sum_{n=1}^{\infty}b_{n}x^{n}$ is greater than or equal to $R$.
++\item Suppose that $\sum_{n=0}^{\infty}a_{n}{(x-3)}^{n}$ converges at $x=6$. At which of the following points might the series diverge? Use the fact that if $\sum a_{n}{(x-c)}^{n}$ converges at $x$, then it converges at any point closer to $c$ than $x$.
+ \begin{enumerate}[label=(\alph*)]
+   \item $x=1$
+   \item $x=2$
+@@ -28,7 +28,7 @@
+   \item $x=5.99$
+   \item $x=0.000001$
+ \end{enumerate}
+-\item Suppose that $\sum_{n=0}^{\infty}a_{n}{(x+1)}^{n}$ converges at $x=-2$. At which of the following points must the series also converge? Use the fact that if $\sum a_{n}{(x-c)}^{n}$ converges at x, then it converges at any point closer to c than x.
++\item Suppose that $\sum_{n=0}^{\infty}a_{n}{(x+1)}^{n}$ converges at $x=-2$. At which of the following points must the series also converge? Use the fact that if $\sum a_{n}{(x-c)}^{n}$ converges at $x$, then it converges at any point closer to $c$ than $x$.
+ \begin{enumerate}[label=(\alph*)]
+   \item $x=2$
+   \item $x=-1$
+@@ -50,7 +50,7 @@
+ \item $\sum_{n=0}^{\infty}a_{n}{(-4)}^{n}x^{2n}$
+ \end{enumerate}
+ 
+-In the following exercises, find the radius of convergence R and interval of convergence for $\sum a_{n}x^{n}$ with the given coefficients $a_{n}$.
++In the following exercises, find the radius of convergence $R$ and interval of convergence for $\sum a_{n}x^{n}$ with the given coefficients $a_{n}$.
+ 
+ \begin{enumerate}[resume]
+ \item $\sum_{n=1}^{\infty}\frac{{(2x)}^{n}}{n}$
+@@ -73,7 +73,7 @@
+ \item $\sum_{k=1}^{\infty}\frac{k!}{1\cdot3\cdot5\cdots(2k-1)}x^{k}$
+ \item $\sum_{k=1}^{\infty}\frac{2\cdot4\cdot6\cdots2k}{(2k)!}x^{k}$
+ \item $\sum_{n=1}^{\infty}\frac{x^{n}}{\binom{2n}{n}}$ where $\binom{n}{k}=\frac{n!}{k!(n-k)!}$
+-\item $\sum_{n=1}^{\infty}\sin^{2}nx^{n}$
++\item $\sum_{n=1}^{\infty}\sin^{2}(n)x^{n}$
+ \end{enumerate}
+ 
+ In the following exercises, use the ratio test to determine the radius of convergence of each series.
+@@ -85,19 +85,19 @@
+ \item $\sum_{n=1}^{\infty}\frac{(2n)!}{n^{2n}}x^{n}$
+ \end{enumerate}
+ 
+-In the following exercises, given that $\frac{1}{1-x}=\sum_{n=0}^{\infty}x^{n}$ with convergence in $(-1,1)$, find the power series for each function with the given center a, and identify its interval of convergence.
++In the following exercises, given that $\frac{1}{1-x}=\sum_{n=0}^{\infty}x^{n}$ with convergence in $(-1,1)$, find the power series for each function with the given center $a$, and identify its interval of convergence.
+ 
+ \begin{enumerate}[resume]
+-\item $f(x)=\frac{1}{x};a=1$ (Hint: $\frac{1}{x}=\frac{1}{1-(1-x)})$
+-\item $f(x)=\frac{1}{1-x^{2}};a=0$
+-\item $f(x)=\frac{x}{1-x^{2}};a=0$
+-\item $f(x)=\frac{1}{1+x^{2}};a=0$
+-\item $f(x)=\frac{x^{2}}{1+x^{2}};a=0$
+-\item $f(x)=\frac{1}{2-x};a=1$
+-\item $f(x)=\frac{1}{1-2x};a=0$.
+-\item $f(x)=\frac{1}{1-4x^{2}};a=0$
+-\item $f(x)=\frac{x^{2}}{1-4x^{2}};a=0$
+-\item $f(x)=\frac{x^{2}}{5-4x+x^{2}};a=2$
++\item $f(x)=\frac{1}{x}$; $a=1$. (Hint: $\frac{1}{x}=\frac{1}{1-(1-x)}$.)
++\item $f(x)=\frac{1}{1-x^{2}}$, $a=0$
++\item $f(x)=\frac{x}{1-x^{2}}$, $a=0$
++\item $f(x)=\frac{1}{1+x^{2}}$, $a=0$
++\item $f(x)=\frac{x^{2}}{1+x^{2}}$, $a=0$
++\item $f(x)=\frac{1}{2-x}$, $a=1$
++\item $f(x)=\frac{1}{1-2x}$; $a=0$.
++\item $f(x)=\frac{1}{1-4x^{2}}$, $a=0$
++\item $f(x)=\frac{x^{2}}{1-4x^{2}}$, $a=0$
++\item $f(x)=\frac{x^{2}}{5-4x+x^{2}}$, $a=2$
+ \end{enumerate}
+ 
+ Use the next exercise to find the radius of convergence of the given series in the subsequent exercises.
+@@ -107,27 +107,27 @@
+ \item $\sum_{n=1}^{\infty}\frac{x^{n}}{n^{n}}$
+ \item $\sum_{k=1}^{\infty}{(\frac{k-1}{2k+3})}^{k}x^{k}$
+ \item $\sum_{k=1}^{\infty}{(\frac{2k^{2}-1}{k^{2}+3})}^{k}x^{k}$
+-\item $\sum_{n=1}^{\infty}a_{n}={(n^{1/n}-1)}^{n}x^{n}$
+-\item Suppose that $p(x)=\sum_{n=0}^{\infty}a_{n}x^{n}$ such that $a_{n}=0$ if n is even. Explain why $p(x)=-p(-x)$.
+-\item Suppose that $p(x)=\sum_{n=0}^{\infty}a_{n}x^{n}$ such that $a_{n}=0$ if n is odd. Explain why $p(x)=p(-x)$.
++\item $\sum_{n=1}^{\infty}a_{n}x^{n}$, where $a_{n}={(n^{1/n}-1)}^{n}$
++\item Suppose that $p(x)=\sum_{n=0}^{\infty}a_{n}x^{n}$ such that $a_{n}=0$ if $n$ is even. Explain why $p(x)=-p(-x)$.
++\item Suppose that $p(x)=\sum_{n=0}^{\infty}a_{n}x^{n}$ such that $a_{n}=0$ if $n$ is odd. Explain why $p(x)=p(-x)$.
+ \item Suppose that $p(x)=\sum_{n=0}^{\infty}a_{n}x^{n}$ converges on $(-1,1]$. Find the interval of convergence of $p(Ax)$.
+ \item Suppose that $p(x)=\sum_{n=0}^{\infty}a_{n}x^{n}$ converges on $(-1,1]$. Find the interval of convergence of $p(2x-1)$.
+ \end{enumerate}
+ 
+-In the following exercises, suppose that $p(x)=\sum_{n=0}^{\infty}a_{n}x^{n}$ satisfies $\lim_{n\to \infty}\frac{a_{n+1}}{a_{n}}=1$ where $a_{n}\ge0$ for each n. State whether each series converges on the full interval $(-1,1)$, or if there is not enough information to draw a conclusion. Use the comparison test when appropriate.
++In the following exercises, suppose that $p(x)=\sum_{n=0}^{\infty}a_{n}x^{n}$ satisfies $\lim_{n\to \infty}\frac{a_{n+1}}{a_{n}}=1$ where $a_{n}\ge0$ for each $n$. State whether each series converges on the full interval $(-1,1)$, or if there is not enough information to draw a conclusion. Use the comparison test when appropriate.
+ 
+ \begin{enumerate}[resume]
+ \item $\sum_{n=0}^{\infty}a_{n}x^{2n}$
+ \item $\sum_{n=0}^{\infty}a_{2n}x^{2n}$
+-\item $\sum_{n=0}^{\infty}a_{2n}x^{n}\,(Hint{:}\,x=\pm \sqrt{x^{2}})$
+-\item $\sum_{n=0}^{\infty}a_{n^{2}}x^{n^{2}}$ (Hint: Let $b_{k}=a_{k}$ if $k=n^{2}$ for some n, otherwise $b_{k}=0.)$
+-\item Suppose that $p(x)$ is a polynomial of degree N. Find the radius and interval of convergence of $\sum_{n=1}^{\infty}p(n)x^{n}$.
+-\item \techrequired Plot the graphs of $\frac{1}{1-x}$ and of the partial sums $S_{N}=\sum_{n=0}^{N}x^{n}$ for $n=10,20,30$ on the interval $[-0.99,0.99]$. Comment on the approximation of $\frac{1}{1-x}$ by $S_{N}$ near $x=-1$ and near $x=1$ as N increases.
+-\item \techrequired Plot the graphs of $-\ln (1-x)$ and of the partial sums $S_{N}=\sum_{n=1}^{N}\frac{x^{n}}{n}$ for $n=10,50,100$ on the interval $[-0.99,0.99]$. Comment on the behavior of the sums near $x=-1$ and near $x=1$ as N increases.
+-\item \techrequired Plot the graphs of the partial sums $S_{n}=\sum_{n=1}^{N}\frac{x^{n}}{n^{2}}$ for $n=10,50,100$ on the interval $[-0.99,0.99]$. Comment on the behavior of the sums near $x=-1$ and near $x=1$ as N increases.
+-\item \techrequired Plot the graphs of the partial sums $S_{N}=\sum_{n=1}^{N}\sin nx^{n}$ for $n=10,50,100$ on the interval $[-0.99,0.99]$. Comment on the behavior of the sums near $x=-1$ and near $x=1$ as N increases.
+-\item \techrequired Plot the graphs of the partial sums $S_{N}=\sum_{n=0}^{N}{(-1)}^{n}\frac{x^{2n+1}}{(2n+1)!}$ for $n=3,5,10$ on the interval $[-2\pi,2\pi]$. Comment on how these plots approximate $\sin x$ as N increases.
+-\item \techrequired Plot the graphs of the partial sums $S_{N}=\sum_{n=0}^{N}{(-1)}^{n}\frac{x^{2n}}{(2n)!}$ for $n=3,5,10$ on the interval $[-2\pi,2\pi]$. Comment on how these plots approximate $\cos x$ as N increases.
++\item $\sum_{n=0}^{\infty}a_{2n}x^{n}$ (Hint: $x=\pm\sqrt{x^{2}}$.)
++\item $\sum_{n=0}^{\infty}a_{n^{2}}x^{n^{2}}$ (Hint: Let $b_{k}=a_{k}$ if $k=n^{2}$ for some $n$; otherwise, $b_{k}=0$.)
++\item Suppose that $p(x)$ is a polynomial of degree $N$. Find the radius and interval of convergence of $\sum_{n=1}^{\infty}p(n)x^{n}$.
++\item \techrequired Plot the graphs of $\frac{1}{1-x}$ and of the partial sums $S_{N}=\sum_{n=0}^{N}x^{n}$ for $N=10,20,30$ on the interval $[-0.99,0.99]$. Comment on the approximation of $\frac{1}{1-x}$ by $S_{N}$ near $x=-1$ and near $x=1$ as $N$ increases.
++\item \techrequired Plot the graphs of $-\ln (1-x)$ and of the partial sums $S_{N}=\sum_{n=1}^{N}\frac{x^{n}}{n}$ for $N=10,50,100$ on the interval $[-0.99,0.99]$. Comment on the behavior of the sums near $x=-1$ and near $x=1$ as $N$ increases.
++\item \techrequired Plot the graphs of the partial sums $S_{N}=\sum_{n=1}^{N}\frac{x^{n}}{n^{2}}$ for $N=10,50,100$ on the interval $[-0.99,0.99]$. Comment on the behavior of the sums near $x=-1$ and near $x=1$ as $N$ increases.
++\item \techrequired Plot the graphs of the partial sums $S_{N}=\sum_{n=1}^{N}\sin(n)x^{n}$ for $N=10,50,100$ on the interval $[-0.99,0.99]$. Comment on the behavior of the sums near $x=-1$ and near $x=1$ as $N$ increases.
++\item \techrequired Plot the graphs of the partial sums $S_{N}=\sum_{n=0}^{N}{(-1)}^{n}\frac{x^{2n+1}}{(2n+1)!}$ for $N=3,5,10$ on the interval $[-2\pi,2\pi]$. Comment on how these plots approximate $\sin x$ as $N$ increases.
++\item \techrequired Plot the graphs of the partial sums $S_{N}=\sum_{n=0}^{N}{(-1)}^{n}\frac{x^{2n}}{(2n)!}$ for $N=3,5,10$ on the interval $[-2\pi,2\pi]$. Comment on how these plots approximate $\cos x$ as $N$ increases.
+ \end{enumerate}
+ 
+ \end{document}

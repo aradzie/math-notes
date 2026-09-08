@@ -1,0 +1,169 @@
+% OpenStax Calculus Volume 3 -- Section 5.7 Exercises: Change of Variables in Multiple Integrals
+% Exercises reproduced from OpenStax, licensed under CC BY 4.0.
+% Source: https://openstax.org/books/calculus-volume-3/pages/5-7-change-of-variables-in-multiple-integrals
+\documentclass{exercises}
+\title{OpenStax Calculus Volume 3}
+\subtitle{Section 5.7 Exercises: Change of Variables in Multiple Integrals}
+\sourceurl{https://openstax.org/books/calculus-volume-3/pages/5-7-change-of-variables-in-multiple-integrals}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+
+In the following exercises, the function $T:S\to R,T(u,v)=(x,y)$ on the region $S=\{(u,v)|0\le u\le1,0\le v\le1\}$ bounded by the unit square is given, where $R\subset \mathbb{R}^{2}$ is the image of $S$ under $T$.
+
+
+(a) Justify that the function $T$ is a $C^{1}$ transformation.
+
+
+(b) Find the images of the vertices of the unit square $S$ through the function $T$.
+
+
+(c) Determine the image $R$ of the unit square $S$ and graph it.
+
+\begin{enumerate}[start=1]
+\item $x=2u,y=3v$
+\item $x=\frac{u}{2},y=\frac{v}{3}$
+\item $x=u-v,y=u+v$
+\item $x=2u-v,y=u+2v$
+\item $x=u^{2},y=v^{2}$
+\item $x=u^{3},y=v^{3}$
+\end{enumerate}
+
+In the following exercises, determine whether the transformations $T:S\to R$ are one-to-one or not.
+
+\begin{enumerate}[resume]
+\item $x=u^{2},y=v^{2}$, where $S$ is the rectangle of vertices $(-1,0),(1,0),(1,1),\text{and}\,(-1,1)$.
+\item $x=u^{4},y=u^{2}+v$, where $S$ is the triangle of vertices $(-2,0),(2,0),\text{and}\,(0,2)$.
+\item $x=2u,y=3v$, where $S$ is the square of vertices $(-1,1),(-1,-1),(1,-1),\text{and}\,(1,1)$.
+\item $T(u,v)=(2u-v,u)$, where $S$ is the triangle of vertices $(-1,1),(-1,-1),\text{and}\,(1,-1)$.
+\item $x=u+v+w,y=u+v,z=w$, where $S=R=\mathbb{R}^{3}$.
+\item $x=u^{2}+v+w,y=u^{2}+v,z=w$, where $S=R=\mathbb{R}^{3}$.
+\end{enumerate}
+
+In the following exercises, the transformations $T:S\to R$ are one-to-one. Find their related inverse transformations $T^{-1}:R\to S$.
+
+\begin{enumerate}[resume]
+\item $x=4u,y=5v$, where $S=R=\mathbb{R}^{2}$.
+\item $x=u+2v,y=-u+v$, where $S=R=\mathbb{R}^{2}$.
+\item $x=e^{2u+v},y=e^{u-v}$, where $S=\mathbb{R}^{2}$ and $R=\{(x,y)|x>0,y>0\}$
+\item $x=\ln u,y=\ln(uv)$, where $S=\{(u,v)|u>0,v>0\}$ and $R=\mathbb{R}^{2}$.
+\item $x=u+v+w,y=3v,z=2w$, where $S=R=\mathbb{R}^{3}$.
+\item $x=u+v,y=v+w,z=u+w$, where $S=R=\mathbb{R}^{3}$.
+\end{enumerate}
+
+In the following exercises, the transformation $T:S\to R,T(u,v)=(x,y)$ and the region $R\subset \mathbb{R}^{2}$ are given. Find the region $S\subset \mathbb{R}^{2}$.
+
+\begin{enumerate}[resume]
+\item $x=au,y=bv,R=\{(x,y)|x^{2}+y^{2}\le a^{2}b^{2}\}$, where $a,b>0$
+\item $x=au,y=bv,R=\{(x,y)|\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}\le1\}$, where $a,b>0$
+\item $x=\frac{u}{a},y=\frac{v}{b},z=\frac{w}{c}$, $R=\{(x,y,z)|x^{2}+y^{2}+z^{2}\le1\}$, where $a,b,c>0$
+\item $x=au,y=bv,z=cw,R=\{(x,y,z)|\frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}-\frac{z^{2}}{c^{2}}\le1,z>0\}$, where $a,b,c>0$
+\end{enumerate}
+
+In the following exercises, find the Jacobian $J$ of the transformation.
+
+\begin{enumerate}[resume]
+\item $x=u+2v,y=-u+v$
+\item $x=\frac{u^{3}}{2},y=\frac{v}{u^{2}}$
+\item $x=e^{2u-v},y=e^{u+v}$
+\item $x=ue^{v},y=e^{-v}$
+\item $x=u\cos(e^{v}),y=u\sin(e^{v})$
+\item $x=v\sin(u^{2}),y=v\cos(u^{2})$
+\item $x=u\cosh v,y=u\sinh v,z=w$
+\item $x=v\cosh(\frac{1}{u}),y=v\sinh(\frac{1}{u}),z=u+w^{2}$
+\item $x=u+v,y=v+w,z=u$
+\item $x=u-v,y=u+v,z=u+v+w$
+\item The triangular region $R$ with the vertices $(0,0),(1,1),\text{and}\,(1,2)$ is shown in the following figure. \\ \textit{[Figure: A triangle with corners at the origin, (1, 1), and (1, 2).]}
+\begin{enumerate}[label=(\alph*)]
+  \item Find a transformation $T:S\to R$, $T(u,v)=(x,y)=(au+bv,cu+dv)$, where $a,b,c$, and $d$ are real numbers with $ad-bc\ne0$ such that $T^{-1}(0,0)=(0,0),T^{-1}(1,1)=(1,0)$, and $T^{-1}(1,2)=(0,1)$.
+  \item Use the transformation $T$ to find the area $A(R)$ of the region $R$.
+\end{enumerate}
+\item The triangular region $R$ with the vertices $(0,0),(2,0),\text{and}\,(1,3)$ is shown in the following figure. \\ \textit{[Figure: A triangle with corners at the origin, (2, 0), and (1, 3).]}
+\begin{enumerate}[label=(\alph*)]
+  \item Find a transformation $T:S\to R$, $T(u,v)=(x,y)=(au+bv,cu+dv)$, where $a,b,c$ and $d$ are real numbers with $ad-bc\ne0$ such that $T^{-1}(0,0)=(0,0)$, $T^{-1}(2,0)=(1,0)$, and $T^{-1}(1,3)=(0,1)$.
+  \item Use the transformation $T$ to find the area $A(R)$ of the region $R$.
+\end{enumerate}
+\end{enumerate}
+
+In the following exercises, use the transformation $u=y-x,v=y$, to evaluate the integrals on the parallelogram $R$ of vertices $(0,0),(1,0),(2,1),\text{and}\,(1,1)$ shown in the following figure.
+
+
+\textit{[Figure: A parallelogram with corners at the origin, (1, 0), (1, 1), and (2, 1).]}
+
+\begin{enumerate}[resume]
+\item $\underset{R}{\iint}(y-x)\,dA$
+\item $\underset{R}{\iint}(y^{2}-xy)\,dA$
+\end{enumerate}
+
+In the following exercises, use the transformation $y-x=u,x+y=v$ to evaluate the integrals on the square $R$ determined by the lines $y=x,y=-x+2,y=x+2$, and $y=-x$ shown in the following figure.
+
+
+\textit{[Figure: A square with side lengths square root of 2 rotated 45 degrees with one corner at the origin and another at (1, 1).]}
+
+\begin{enumerate}[resume]
+\item $\underset{R}{\iint}e^{x+y}\,dA$
+\item $\underset{R}{\iint}\sin(x-y)\,dA$
+\end{enumerate}
+
+In the following exercises, use the transformation $x=u,5y=v$ to evaluate the integrals on the region $R$ bounded by the ellipse $x^{2}+25y^{2}=1$ shown in the following figure.
+
+
+\textit{[Figure: An ellipse with center at the origin, major axis 2, and minor 0.4.]}
+
+\begin{enumerate}[resume]
+\item $\underset{R}{\iint}\sqrt{x^{2}+25y^{2}}\,dA$
+\item $\underset{R}{\iint}{(x^{2}+25y^{2})}^{2}\,dA$
+\end{enumerate}
+
+In the following exercises, use the transformation $u=x+y,v=x-y$ to evaluate the integrals on the trapezoidal region $R$ determined by the points $(1,0),(2,0),(0,2),\text{and}\,(0,1)$ shown in the following figure.
+
+
+\textit{[Figure: A trapezoid with corners at (1, 0), (0, 1), (0, 2), and (2, 0).]}
+
+\begin{enumerate}[resume]
+\item $\underset{R}{\iint}(x^{2}-2xy+y^{2})e^{x+y}\,dA$
+\item $\underset{R}{\iint}(x^{3}+3x^{2}y+3xy^{2}+y^{3})\,dA$
+\item The circular annulus sector $R$ bounded by the circles $4x^{2}+4y^{2}=1$ and $9x^{2}+9y^{2}=64$, the line $x=y\sqrt{3}$, and the $y\text{-axis}$ is shown in the following figure. Find a transformation $T$ from a rectangular region $S$ in the $r\theta \text{-plane}$ to the region $R$ in the $xy\text{-plane.}$ Graph $S$. \\ \textit{[Figure: In the first quadrant, a section of an annulus described by an inner radius of 0.5, outer radius slightly more than 2.5, and center the origin. There is a line dividing this annulus that comes from approximately a 30 degree angle. The portion corresponding to 60 degrees is shaded.]}
+\item The solid $R$ bounded by the circular cylinder $x^{2}+y^{2}=9$ and the planes $z=0,z=1$, $x=0,\text{and}\,y=0$ is shown in the following figure. Find a transformation $T$ from a cylindrical box $S$ in $r\theta z\text{-space}$ to the solid $R$ in $xyz\text{-space}$. \\ \textit{[Figure: A quarter of a cylinder with height 1 and radius 3. The center axis is the z axis.]}
+\item Show that $\underset{R}{\iint}f(\sqrt{\frac{x^{2}}{3}+\frac{y^{2}}{5}})\,dA=2\pi \sqrt{15}\int_{0}^{1}f(\rho)\rho \,d\rho$, where $f$ is a continuous function on $[0,1]$ and $R$ is the region bounded by the ellipse $5x^{2}+3y^{2}=15$.
+\item Show that $\underset{R}{\iiint}f(\sqrt{16x^{2}+4y^{2}+z^{2}})\,dV=\frac{\pi}{2}\int_{0}^{1}f(\rho)\rho^{2}\,d\rho$, where $f$ is a continuous function on $[0,1]$ and $R$ is the region bounded by the ellipsoid $16x^{2}+4y^{2}+z^{2}=1$.
+\item \techrequired Find the area of the region bounded by the curves $xy=1,xy=3,y=2x$, and $y=3x$ by using the transformation $u=xy$ and $v=\frac{y}{x}$. Use a computer algebra system (CAS) to graph the boundary curves of the region $R$.
+\item \techrequired Find the area of the region bounded by the curves $xy=2,xy=3,y=x$, and $y=2x$ by using the transformation $u=xy$ and $v=\frac{y}{x}$.
+\item Evaluate the triple integral $\int_{0}^{1}\,\int_{1}^{2}\,\int_{z}^{z+1}(y+1)\,dx\,dy\,dz$ by using the transformation $u=x-z$, $v=3y,\text{and}\,w=\frac{z}{2}$.
+\item Evaluate the triple integral $\int_{0}^{2}\,\int_{4}^{6}\,\int_{3z}^{3z+2}(5-4y)\,dx\,dz\,dy$ by using the transformation $u=x-3z,v=4y,\text{and}\,w=z$.
+\item A transformation $T:\mathbb{R}^{2}\to \mathbb{R}^{2},T(u,v)=(x,y)$ of the form $x=au+bv,y=cu+dv$, where $a,b,c,\text{and}\,d$ are real numbers, is called linear. Show that a linear transformation for which $ad-bc\ne0$ maps parallelograms to parallelograms.
+\item The transformation $T_{\theta}:\mathbb{R}^{2}\to \mathbb{R}^{2},T_{\theta}(u,v)=(x,y)$, where $x=u\cos \theta-v\sin \theta$, $y=u\sin \theta+v\cos \theta$, is called a rotation of angle $\theta$. Show that the inverse transformation of $T_{\theta}$ satisfies $T_{\theta}{}^{-1}=T_{-\theta}$, where $T_{-\theta}$ is the rotation of angle $-\theta$.
+\item \techrequired Use the results of the previous exercise to find the region $S$ in the $uv\text{-plane}$ whose image through a rotation of angle $\frac{\pi}{4}$ is the region $R$ enclosed by the ellipse $x^{2}+4y^{2}=1$. Use a CAS to answer the following questions.
+\begin{enumerate}[label=(\alph*)]
+  \item Graph the region $S$.
+  \item Evaluate the integral $\underset{S}{\iint}e^{-2uv}\,du\,dv$. Round your answer to two decimal places.
+\end{enumerate}
+\item \techrequired The transformations $T_{i}:\mathbb{R}^{2}\to \mathbb{R}^{2}$, $i=1,\ldots,\,4$, defined by $T_{1}(u,v)=(u,-v)$, $T_{2}(u,v)=(-u,v),T_{3}(u,v)=(-u,-v)$, and $T_{4}(u,v)=(v,u)$ are called reflections about the $x\text{-axis},y\text{-axis}$, origin, and the line $y=x$, respectively.
+\begin{enumerate}[label=(\alph*)]
+  \item Find the image of the region $S=\{(u,v)|u^{2}+v^{2}-2u-4v+1\le0\}$ in the $xy\text{-plane}$ through the transformation $T_{1}\circ T_{2}\circ T_{3}\circ T_{4}$.
+  \item Use a CAS to graph the image of $S$.
+  \item Evaluate the integral $\underset{S}{\iint}\sin(u^{2})\,du\,dv$ by using a CAS. Round your answer to two decimal places.
+\end{enumerate}
+\item \techrequired The transformation $T_{k,1,1}:\mathbb{R}^{3}\to \mathbb{R}^{3},T_{k,1,1}(u,v,w)=(x,y,z)$ of the form $x=ku$, $y=v,z=w$, where $k\ne1$ is a positive real number, is called a stretch if $k>1$ and a compression if $0<k<1$ in the $x\text{-direction}$. Use a CAS to evaluate the integral $\underset{S}{\iiint}e^{-(4x^{2}+9y^{2}+25z^{2})}\,dx\,dy\,dz$ on the solid $S=\{(x,y,z)|4x^{2}+9y^{2}+25z^{2}\le1\}$ by considering the compression $T_{2,3,5}(u,v,w)=(x,y,z)$ defined by $x=\frac{u}{2},y=\frac{v}{3}$, and $z=\frac{w}{5}$. Round your answer to four decimal places.
+\item \techrequired The transformation $T_{a,0}:\mathbb{R}^{2}\to \mathbb{R}^{2},T_{a,0}(u,v)=(u+av,v)$, where $a\ne0$ is a real number, is called a shear in the $x\text{-direction}$. The transformation, $T_{0,b}:\mathbb{R}^{2}\to \mathbb{R}^{2},T_{0,b}(u,v)=(u,bu+v)$, where $b\ne0$ is a real number, is called a shear in the $y\text{-direction}$.
+\begin{enumerate}[label=(\alph*)]
+  \item Find transformations $T_{0,2}\circ T_{3,0}$.
+  \item Find the image $R$ of the trapezoidal region $S$ bounded by $u=0,v=0,v=1$, and $v=2-u$ through the transformation $T_{0,2}\circ T_{3,0}$.
+  \item Use a CAS to graph the image $R$ in the $xy\text{-plane}$.
+  \item Find the area of the region $R$ by using the area of region $S$.
+\end{enumerate}
+\item Use the transformation, $x=au,y=av,z=cw$ and spherical coordinates to show that the volume of a region bounded by the spheroid $\frac{x^{2}+y^{2}}{a^{2}}+\frac{z^{2}}{c^{2}}=1$ is $\frac{4\pi a^{2}c}{3}$.
+\item Find the volume of a football whose shape is a spheroid $\frac{x^{2}+y^{2}}{a^{2}}+\frac{z^{2}}{c^{2}}=1$ whose length from tip to tip is $11$ inches and circumference at the center is $22$ inches. Round your answer to two decimal places.
+\item \techrequired Lamé ovals (or superellipses) are plane curves of equations ${(\frac{x}{a})}^{n}+{(\frac{y}{b})}^{n}=1$, where $a,b,\text{and}\,n$ are positive real numbers.
+\begin{enumerate}[label=(\alph*)]
+  \item Use a CAS to graph the regions $R$ bounded by Lamé ovals for $a=1,b=2,n=4$ and $n=6$, respectively.
+  \item Find the transformations that map the region $R$ bounded by the Lamé oval $x^{4}+y^{4}=1$, also called a squircle and graphed in the following figure, into the unit disk.\\ \textit{[Figure: A square of side length 2 with rounded corners.]}
+  \item Use a CAS to find an approximation of the area $A(R)$ of the region $R$ bounded by $x^{4}+y^{4}=1$. Round your answer to two decimal places.
+\end{enumerate}
+\item \techrequired Lamé ovals have been consistently used by designers and architects. For instance, Gerald Robinson, a Canadian architect, has designed a parking garage in a shopping center in Peterborough, Ontario, in the shape of a superellipse of the equation ${(\frac{x}{a})}^{n}+{(\frac{y}{b})}^{n}=1$ with $\frac{a}{b}=\frac{9}{7}$ and $n=e$. Use a CAS to find an approximation of the area of the parking garage in the case $a=900$ yards, $b=700$ yards, and $n=2.72$.
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,53 @@
+Manual review corrections, all local typographic defects rather than
+upstream OpenStax mathematical content issues:
+
+- The suitcase exercise's source MathML fused a whole "+width+" fragment
+  (both plus signs and the word "width") into one <math> span alongside
+  plain-prose "length"/"height", converting to
+  `$+\text{width}+$` -- a Bin, Ord, Bin token sequence inside one formula.
+  Per TeX's math-spacing rules the leading `+` (first atom in the group)
+  demotes to Ord and gets no space before "width", while the trailing `+`
+  (following an Ord) keeps its Bin spacing, producing visibly asymmetric
+  "length +width + height" spacing. Split into three independent `$+$`
+  spans (each a lone atom, so each demotes to Ord and carries no forced
+  spacing of its own), relying on ordinary prose spacing between them:
+  "length $+$ width $+$ height".
+- The pizzeria intro sentence trapped a sentence-level semicolon plus
+  manual `\,` spacing inside math (`$;\,a\,>\,c$`), continuing straight
+  from prose "the number of pizzas". Moved the semicolon outside math and
+  dropped the redundant manual spacing around `>` (already an automatic
+  Rel-class gap): "the number of pizzas; $a>c$."
+- The apartment-rent exercise trapped a sentence comma inside two
+  `\text{month,}` spans (`$\$800/\text{month,}$`, `$\$25/\text{month,}$`),
+  the same pattern as the related-rates review. Moved each comma outside
+  its math span.
+
+--- /tmp/raw.tex
++++ vol1-4-7-applied-optimization-problems.tex
+@@ -24,7 +24,7 @@
+ For the following exercises, set up and evaluate each optimization problem.
+ 
+ \begin{enumerate}[resume]
+-\item To carry a suitcase on an airplane, the length $+\text{width}+$ height of the box must be less than or equal to $62\,\text{in}$. Assuming the base of the suitcase is square, show that the volume is $V=h{(31-(\frac{1}{2})\,h)}^{2}$. What height allows you to have the largest volume?
++\item To carry a suitcase on an airplane, the length $+$ width $+$ height of the box must be less than or equal to $62\,\text{in}$. Assuming the base of the suitcase is square, show that the volume is $V=h{(31-(\frac{1}{2})\,h)}^{2}$. What height allows you to have the largest volume?
+ \item You are constructing a cardboard box with the dimensions $\text{2 m by 4 m}$. You then cut equal-size squares from each corner so you may fold the edges. What are the dimensions of the box with the largest volume? \\ \textit{[Figure: A rectangle is drawn with height 2 and width 4. Each corner has a square with side length x marked on it.]}
+ \item Find the positive integer that minimizes the sum of the number and its reciprocal.
+ \item Find the two positive integers so that their sum is $10$ and the sum of their squares is as large as possible. Then find another two positive integers so that their sum is 10 and the sum of their squares is as small as possible.
+@@ -61,7 +61,7 @@
+ \item Find the cheapest driving speed.
+ \end{enumerate}
+ 
+-For the following exercises, consider a pizzeria that sell pizzas for a revenue of $R(x)=ax$ and costs $C(x)=b+cx+dx^{2}$, where $x$ represents the number of pizzas $;\,a\,>\,c$.
++For the following exercises, consider a pizzeria that sell pizzas for a revenue of $R(x)=ax$ and costs $C(x)=b+cx+dx^{2}$, where $x$ represents the number of pizzas; $a>c$.
+ 
+ \begin{enumerate}[resume]
+ \item Find the profit function for the number of pizzas. How many pizzas gives the largest profit per pizza?
+@@ -112,7 +112,7 @@
+ \item You have a garden row of $20$ watermelon plants that produce an average of $30$ watermelons apiece. For any additional watermelon plants planted, the output per watermelon plant drops by one watermelon. How many extra watermelon plants should you plant?
+ \item You are constructing a box for your cat to sleep in. The plush material for the square bottom of the box costs $\$5/\text{ft}^{2}$ and the material for the sides costs $\$2/\text{ft}^{2}$. You need a box with volume $4{\,\text{ft}}^{3}$. Find the dimensions of the box that minimize cost. Use $x$ to represent the length of the side of the box.
+ \item You are building five identical pens adjacent to each other with a total area of $1000{\,\text{m}}^{2}$, as shown in the following figure. What dimensions should you use to minimize the amount of fencing? \\ \textit{[Figure: A rectangle is divided into five sections, and each section has length y and width x.]}
+-\item You are the manager of an apartment complex with $50$ units. When you set rent at $\$800/\text{month,}$ all apartments are rented. As you increase rent by $\$25/\text{month,}$ one fewer apartment is rented. Maintenance costs run $\$50/\text{month}$ for each occupied unit. What is the rent that maximizes the total amount of profit?
++\item You are the manager of an apartment complex with $50$ units. When you set rent at $\$800/\text{month}$, all apartments are rented. As you increase rent by $\$25/\text{month}$, one fewer apartment is rented. Maintenance costs run $\$50/\text{month}$ for each occupied unit. What is the rent that maximizes the total amount of profit?
+ \end{enumerate}
+ 
+ \end{document}

@@ -1,0 +1,112 @@
+The conversion traps English conjunctions and interval phrases inside math
+mode, omits some lexical spaces in bounds, and fuses two adjacent equations.
+This patch restores prose/math boundaries, conventional spacing, and local
+punctuation without changing any exercise's mathematical substance.
+
+--- /tmp/raw.tex
++++ vol2-7-4-area-and-arc-length-in-polar-coordinates.tex
+@@ -25,9 +25,9 @@
+ \item Region enclosed by the inner loop of $r=2-3\sin \theta$
+ \item Region enclosed by the inner loop of $r=3-4\cos \theta$
+ \item Region enclosed by $r=1-2\cos \theta$ and outside the inner loop
+-\item Region common to $r=3\sin \theta \,\text{and}\,r=2-\sin \theta$
+-\item Region common to $r=2\,\text{and}\,r=4\cos \theta$
+-\item Region common to $r=3\cos \theta \,\text{and}\,r=3\sin \theta$
++\item Region common to $r=3\sin \theta$ and $r=2-\sin \theta$
++\item Region common to $r=2$ and $r=4\cos \theta$
++\item Region common to $r=3\cos \theta$ and $r=3\sin \theta$
+ \end{enumerate}
+ 
+ For the following exercises, find the area of the described region.
+@@ -41,57 +41,57 @@
+ \item Enclosed by $r=1+\sin \theta$
+ \item Enclosed by the inner loop of $r=3+6\cos \theta$
+ \item Enclosed by $r=2+4\cos \theta$ and outside the inner loop
+-\item Common interior of $r=4\sin(2\theta)\,\text{and}\,r=2$
+-\item Common interior of $r=3-2\sin \theta \,\text{and}\,r=-3+2\sin \theta$
+-\item Common interior of $r=6\sin \theta \,\text{and}\,r=3$
++\item Common interior of $r=4\sin(2\theta)$ and $r=2$
++\item Common interior of $r=3-2\sin \theta$ and $r=-3+2\sin \theta$
++\item Common interior of $r=6\sin \theta$ and $r=3$
+ \item Inside $r=1+\cos \theta$ and outside $r=\cos \theta$
+-\item Common interior of $r=2+2\cos \theta \,\text{and}\,r=2\sin \theta$
++\item Common interior of $r=2+2\cos \theta$ and $r=2\sin \theta$
+ \end{enumerate}
+ 
+ For the following exercises, find a definite integral that represents the arc length.
+ 
+ \begin{enumerate}[resume]
+-\item $r=4\cos \theta \,\text{on the interval}\,0\le \theta \le \frac{\pi}{2}$
+-\item $r=1+\sin \theta$ on the interval $0\le \theta \le2\pi$
+-\item $r=2\sec \theta \,\text{on the interval}\,0\le \theta \le \frac{\pi}{3}$
+-\item $r=e^{\theta}\text{on the interval}\,0\le \theta \le1$
++\item $r=4\cos \theta$ on the interval $0\le \theta \le \frac{\pi}{2}$
++\item $r=1+\sin \theta$ on the interval $0\le \theta \le 2\pi$
++\item $r=2\sec \theta$ on the interval $0\le \theta \le \frac{\pi}{3}$
++\item $r=e^{\theta}$ on the interval $0\le \theta \le 1$
+ \end{enumerate}
+ 
+ For the following exercises, find the length of the curve over the given interval.
+ 
+ \begin{enumerate}[resume]
+-\item $r=6\,\text{on the interval}\,0\le \theta \le \frac{\pi}{2}$
+-\item $r=e^{3\theta}\text{on the interval}\,0\le \theta \le2$
+-\item $r=6\cos \theta \,\text{on the interval}\,0\le \theta \le \frac{\pi}{2}$
+-\item $r=8+8\cos \theta \,\text{on the interval}\,0\le \theta \le \pi$
+-\item $r=1-\sin \theta \,\text{on the interval}\,0\le \theta \le2\pi$
++\item $r=6$ on the interval $0\le \theta \le \frac{\pi}{2}$
++\item $r=e^{3\theta}$ on the interval $0\le \theta \le 2$
++\item $r=6\cos \theta$ on the interval $0\le \theta \le \frac{\pi}{2}$
++\item $r=8+8\cos \theta$ on the interval $0\le \theta \le \pi$
++\item $r=1-\sin \theta$ on the interval $0\le \theta \le 2\pi$
+ \end{enumerate}
+ 
+ For the following exercises, use the integration capabilities of a calculator to approximate the length of the curve.
+ 
+ \begin{enumerate}[resume]
+-\item \techrequired $r=3\theta \,\text{on the interval}\,0\le \theta \le \frac{\pi}{2}$
+-\item \techrequired $r=\frac{2}{\theta}\,\text{on the interval}\,\pi \le \theta \le2\pi$
+-\item \techrequired $r=\sin^{2}(\frac{\theta}{2})\,\text{on the interval}\,0\le \theta \le \pi$
+-\item \techrequired $r=2\theta^{2}\,\text{on the interval}\,0\le \theta \le \pi$
+-\item \techrequired $r=\sin(3\cos \theta)\,\text{on the interval}\,0\le \theta \le \pi$
++\item \techrequired $r=3\theta$ on the interval $0\le \theta \le \frac{\pi}{2}$
++\item \techrequired $r=\frac{2}{\theta}$ on the interval $\pi \le \theta \le 2\pi$
++\item \techrequired $r=\sin^{2}(\frac{\theta}{2})$ on the interval $0\le \theta \le \pi$
++\item \techrequired $r=2\theta^{2}$ on the interval $0\le \theta \le \pi$
++\item \techrequired $r=\sin(3\cos \theta)$ on the interval $0\le \theta \le \pi$
+ \end{enumerate}
+ 
+ For the following exercises, use the familiar formula from geometry to find the area of the region described and then confirm by using the definite integral.
+ 
+ \begin{enumerate}[resume]
+-\item $r=3\sin \theta \,\text{on the interval}\,0\le \theta \le \pi$
+-\item $r=\sin \theta+\cos \theta \,\text{on the interval}\,0\le \theta \le \pi$
+-\item $r=6\sin \theta+8\cos \theta \,\text{on the interval}\,0\le \theta \le \pi$
++\item $r=3\sin \theta$ on the interval $0\le \theta \le \pi$
++\item $r=\sin \theta+\cos \theta$ on the interval $0\le \theta \le \pi$
++\item $r=6\sin \theta+8\cos \theta$ on the interval $0\le \theta \le \pi$
+ \end{enumerate}
+ 
+ For the following exercises, use the familiar formula from geometry to find the length of the curve and then confirm using the definite integral.
+ 
+ \begin{enumerate}[resume]
+-\item $r=3\sin \theta \,\text{on the interval}\,0\le \theta \le \pi$
+-\item $r=\sin \theta+\cos \theta \,\text{on the interval}\,0\le \theta \le \pi$
+-\item $r=6\sin \theta+8\cos \theta \,\text{on the interval}\,0\le \theta \le \pi$
+-\item Verify that if $y=r\sin \theta=f(\theta)\sin \theta$ then $\frac{dy}{d\theta}=f'(\theta)\sin \theta+f(\theta)\cos \theta$.
++\item $r=3\sin \theta$ on the interval $0\le \theta \le \pi$
++\item $r=\sin \theta+\cos \theta$ on the interval $0\le \theta \le \pi$
++\item $r=6\sin \theta+8\cos \theta$ on the interval $0\le \theta \le \pi$
++\item Verify that if $y=r\sin \theta=f(\theta)\sin \theta$, then $\frac{dy}{d\theta}=f'(\theta)\sin \theta+f(\theta)\cos \theta$.
+ \end{enumerate}
+ 
+ For the following exercises, find the slope of a tangent line to a polar curve $r=f(\theta)$. Let $x=r\cos \theta=f(\theta)\cos \theta$ and $y=r\sin \theta=f(\theta)\sin \theta$, so the polar equation $r=f(\theta)$ is now written in parametric form.
+@@ -113,7 +113,7 @@
+ For the following exercises, find the slope of the tangent line to the given polar curve at the point given by the value of $\theta$.
+ 
+ \begin{enumerate}[resume]
+-\item $r=3\cos \theta,\theta=\frac{\pi}{3}$
++\item $r=3\cos \theta$, $\theta=\frac{\pi}{3}$
+ \item $r=\theta$, $\theta=\frac{\pi}{2}$
+ \item $r=\ln \theta$, $\theta=e$
+ \item \techrequired Use technology: $r=2+4\cos \theta$ at $\theta=\frac{\pi}{6}$

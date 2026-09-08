@@ -1,0 +1,104 @@
+OpenStax's source MathML encodes the third "R_n" in this paragraph as two
+bare adjacent <mi> identifiers ("R" then "n", no <msub>) rather than the
+proper subscript used for the first two occurrences -- a converter can't
+tell that apart from an intentional bare "R" next to "n", so this is
+restored by hand to match its siblings.
+
+A manual review found additional mathematical, math-mode, punctuation, and whitespace defects in this generated exercise file. The cumulative diff below preserves all earlier file-specific corrections and adds the reviewed fixes so a future import reproduces the censored local version.
+
+--- /tmp/raw.tex
++++ vol2-6-3-taylor-and-maclaurin-series.tex
+@@ -25,35 +25,35 @@
+ \item $f(x)=e^{x}$ at $a=1$
+ \end{enumerate}
+ 
+-In the following exercises, verify that the given choice of n in the remainder estimate $|R_{n}|\le \frac{M}{(n+1)!}{(x-a)}^{n+1}$, where M is the maximum value of $|f^{(n+1)}(z)|$ on the interval between a and the indicated point, yields $|R_{n}|\le \frac{1}{1000}$. Find the value of the Taylor polynomial p$_{n}$ of $f$ at the indicated point. If $\left| Rn \right|$ is not less than $1/1000$, determine what it is.
++In the following exercises, verify that the given choice of $n$ in the remainder estimate $|R_{n}|\le \frac{M}{(n+1)!}(x-a)^{n+1}$, where $M$ is the maximum value of $|f^{(n+1)}(z)|$ on the interval between $a$ and the indicated point, yields $|R_{n}|\le \frac{1}{1000}$. Find the value of the Taylor polynomial $p_{n}$ of $f$ at the indicated point. If $|R_{n}|$ is not less than $1/1000$, determine what it is.
+ 
+ \begin{enumerate}[resume]
+-\item \techrequired $\sqrt{10};a=9,n=3$
+-\item \techrequired ${(28)}^{1/3};a=27,n=1$
+-\item \techrequired $\sin(6);a=2\pi,n=5$
+-\item \techrequired e$^{2}$; $a=0,n=9$
+-\item \techrequired $\cos(\frac{\pi}{5});a=0,n=4$
+-\item \techrequired $\ln (2);a=1,n=1000$
+-\item Integrate the approximation $\sin t\approx t-\frac{t^{3}}{6}+\frac{t^{5}}{120}-\frac{t^{7}}{5040}$ evaluated at $\pi$t to approximate $\int_{0}^{1}\frac{\sin \pi t}{\pi t}\,dt$.
+-\item Integrate the approximation $e^{x}\approx1+x+\frac{x^{2}}{2}+\cdots+\frac{x^{6}}{720}$ evaluated at -x$^{2}$ to approximate $\int_{0}^{1}e^{-x^{2}}\,dx$.
++\item \techrequired $\sqrt{10};\ a=9,\ n=3$
++\item \techrequired $28^{1/3};\ a=27,\ n=1$
++\item \techrequired $\sin(6);\ a=2\pi,\ n=5$
++\item \techrequired $e^{2};\ a=0,\ n=9$
++\item \techrequired $\cos\left(\frac{\pi}{5}\right);\ a=0,\ n=4$
++\item \techrequired $\ln(2);\ a=1,\ n=1000$
++\item Integrate the approximation $\sin t\approx t-\frac{t^{3}}{6}+\frac{t^{5}}{120}-\frac{t^{7}}{5040}$ evaluated at $\pi t$ to approximate $\int_{0}^{1}\frac{\sin(\pi t)}{\pi t}\,dt$.
++\item Integrate the approximation $e^{x}\approx1+x+\frac{x^{2}}{2}+\cdots+\frac{x^{6}}{720}$ evaluated at $-x^{2}$ to approximate $\int_{0}^{1}e^{-x^{2}}\,dx$.
+ \end{enumerate}
+ 
+-In the following exercises, find the smallest value of n such that the remainder estimate $|R_{n}|\le \frac{M}{(n+1)!}{(x-a)}^{n+1}$, where M is the maximum value of $|f^{(n+1)}(z)|$ on the interval between a and the indicated point, yields $|R_{n}|\le \frac{1}{1000}$ on the indicated interval.
++In the following exercises, find the smallest value of $n$ such that the remainder estimate $|R_{n}|\le \frac{M}{(n+1)!}(x-a)^{n+1}$, where $M$ is the maximum value of $|f^{(n+1)}(z)|$ on the interval between $a$ and the indicated point, yields $|R_{n}|\le \frac{1}{1000}$ on the indicated interval.
+ 
+ \begin{enumerate}[resume]
+-\item $f(x)=\sin x$ on $[-\pi,\pi],a=0$
+-\item $f(x)=\cos x$ on $[-\frac{\pi}{2},\frac{\pi}{2}],a=0$
+-\item $f(x)=e^{-2x}$ on $[-1,1],a=0$
+-\item $f(x)=e^{-x}$ on $[-3,3],a=0$
++\item $f(x)=\sin x$ on $[-\pi,\pi]$, $a=0$
++\item $f(x)=\cos x$ on $[-\frac{\pi}{2},\frac{\pi}{2}]$, $a=0$
++\item $f(x)=e^{-2x}$ on $[-1,1]$, $a=0$
++\item $f(x)=e^{-x}$ on $[-3,3]$, $a=0$
+ \end{enumerate}
+ 
+-In the following exercises, the maximum of the right-hand side of the remainder estimate $|R_{1}|\le \frac{\text{max}|f''(z)|}{2}R^{2}$ on $[a-R,a+R]$ occurs at a or $a\pm R$. Estimate the maximum value of R such that $\frac{\text{max}|f''(z)|}{2}R^{2}\le0.1$ on $[a-R,a+R]$ by plotting this maximum as a function of R.
++In the following exercises, the maximum of the right-hand side of the remainder estimate $|R_{1}|\le \frac{\max |f''(z)|}{2}R^{2}$ on $[a-R,a+R]$ occurs at $a$ or $a\pm R$. Estimate the maximum value of $R$ such that $\frac{\max |f''(z)|}{2}R^{2}\le 0.1$ on $[a-R,a+R]$ by plotting this maximum as a function of $R$.
+ 
+ \begin{enumerate}[resume]
+-\item \techrequired e$^{x}$ approximated by $1+x,a=0$
+-\item \techrequired $\sin x$ approximated by x, $a=0$
+-\item \techrequired $\ln x$ approximated by $x-1,a=1$
+-\item \techrequired $\cos x$ approximated by $1,a=0$
++\item \techrequired $e^{x}$ approximated by $1+x$, $a=0$
++\item \techrequired $\sin x$ approximated by $x$, $a=0$
++\item \techrequired $\ln x$ approximated by $x-1$, $a=1$
++\item \techrequired $\cos x$ approximated by $1$, $a=0$
+ \end{enumerate}
+ 
+ In the following exercises, find the Taylor series of the given function centered at the indicated point.
+@@ -67,9 +67,9 @@
+ \item $\cos x$ at $x=\frac{\pi}{2}$
+ \item $e^{x}$ at $a=-1$
+ \item $e^{x}$ at $a=1$
+-\item $\frac{1}{{(x-1)}^{2}}$ at $a=0$ (Hint: Differentiate $\frac{1}{1-x}.)$
+-\item $\frac{1}{{(x-1)}^{3}}$ at $a=0$
+-\item $F(x)=\int_{0}^{x}\cos(\sqrt{t})\,dt;f(t)=\sum_{n=0}^{\infty}{(-1)}^{n}\frac{t^{n}}{(2n)!}$ at $a=0$ (Note: $f$ is the Taylor series of $\cos(\sqrt{t}).)$
++\item $\frac{1}{(x-1)^{2}}$ at $a=0$ (Hint: Differentiate $\frac{1}{1-x}$.)
++\item $\frac{1}{(x-1)^{3}}$ at $a=0$
++\item $F(x)=\int_{0}^{x}\cos(\sqrt{t})\,dt$; $f(t)=\sum_{n=0}^{\infty}(-1)^{n}\frac{t^{n}}{(2n)!}$ at $a=0$ (Note: $f$ is the Taylor series of $\cos(\sqrt{t})$.)
+ \end{enumerate}
+ 
+ In the following exercises, compute the Taylor series of each function around $x=1$.
+@@ -86,7 +86,7 @@
+ \item $f(x)=e^{2x}$
+ \end{enumerate}
+ 
+-[T] In the following exercises, identify the value of x such that the given series $\sum_{n=0}^{\infty}a_{n}$ is the value of the Maclaurin series of $f(x)$ at $x$. Approximate the value of $f(x)$ using $S_{10}=\sum_{n=0}^{10}a_{n}$.
++\techrequired In the following exercises, identify the value of $x$ such that the given series $\sum_{n=0}^{\infty}a_{n}$ is the value of the Maclaurin series of $f$ at $x$. Approximate $f(x)$ using $S_{10}=\sum_{n=0}^{10}a_{n}$.
+ 
+ \begin{enumerate}[resume]
+ \item $\sum_{n=0}^{\infty}\frac{1}{n!}$
+@@ -105,13 +105,13 @@
+ \item \techrequired Plot $e^{x}-e_{4}(x)$ where $e_{4}(x)=1+x+\frac{x^{2}}{2}+\frac{x^{3}}{6}+\frac{x^{4}}{24}$ on $[0,2]$. Compare the maximum error with the Taylor remainder estimate.
+ \item (Taylor approximations and root finding.) Recall that Newton's method $x_{n+1}=x_{n}-\frac{f(x_{n})}{f'(x_{n})}$ approximates solutions of $f(x)=0$ near the input $x_{0}$.
+ \begin{enumerate}[label=(\alph*)]
+-  \item If $f$ and $g$ are inverse functions, explain why a solution of $g(x)=a$ is the value $f(a)\,\text{of}\,f$.
+-  \item Let $p_{N}(x)$ be the $N\,\text{th}$ degree Maclaurin polynomial of $e^{x}$. Use Newton's method to approximate solutions of $p_{N}(x)-2=0$ for $N=4,5,6$.
++  \item If $f$ and $g$ are inverse functions, explain why a solution of $g(x)=a$ is the value $f(a)$ of $f$.
++  \item Let $p_{N}(x)$ be the degree-$N$ Maclaurin polynomial of $e^{x}$. Use Newton's method to approximate solutions of $p_{N}(x)-2=0$ for $N=4,5,6$.
+   \item Explain why the approximate roots of $p_{N}(x)-2=0$ are approximate values of $\ln (2)$.
+ \end{enumerate}
+ \end{enumerate}
+ 
+-In the following exercises, use the fact that if $q(x)=\sum_{n=1}^{\infty}a_{n}{(x-c)}^{n}$ converges in an interval containing $c$, then $\lim_{x\to c}q(x)=a_{0}^{}$ to evaluate each limit using Taylor series.
++In the following exercises, use the fact that if $q(x)=\sum_{n=0}^{\infty}a_{n}(x-c)^{n}$ converges in an interval containing $c$, then $\lim_{x\to c}q(x)=a_{0}$ to evaluate each limit using Taylor series.
+ 
+ \begin{enumerate}[resume]
+ \item $\lim_{x\to0}\frac{\cos x-1}{x^{2}}$

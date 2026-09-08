@@ -1,0 +1,126 @@
+Correct malformed punctuation and math-mode boundaries, clarify summand scope
+in the first two telescoping series, and put units and symbolic content in the
+accessibility descriptions into appropriate math mode. Restore the Ramanujan
+identity's left-hand side from 9801/(2 pi) to 1/(2 pi), as required by the
+displayed series, and correct the accumulated-interest formula by subtracting
+1.01 so that it counts interest rather than an extra principal deposit. Set
+the long tail-limit equation as a display to prevent it from overflowing the
+text area.
+
+--- /tmp/raw.tex
++++ vol2-5-2-infinite-series.tex
+@@ -21,7 +21,7 @@
+ \item $\sin 1+\sin \frac{1}{2}+\sin \frac{1}{3}+\sin \frac{1}{4}+\cdots$
+ \end{enumerate}
+ 
+-Compute the first four partial sums $S_{1},\ldots,S_{4}$ for the series having $n\text{th}$ term $a_{n}$ starting with $n=1$ as follows.
++Compute the first four partial sums $S_{1},\ldots,S_{4}$ for the series having $n$th term $a_{n}$ starting with $n=1$ as follows.
+ 
+ \begin{enumerate}[resume]
+ \item $a_{n}=n$
+@@ -35,17 +35,17 @@
+ \begin{enumerate}[resume]
+ \item $S_{n}=1-\frac{1}{n}$, $n\ge2$
+ \item $S_{n}=\frac{n(n+1)}{2}$, $n\ge1$
+-\item $S_{n}=\sqrt{n},n\ge2$
+-\item $S_{n}=2-(n+2)/2^{n},n\ge1$
++\item $S_{n}=\sqrt{n}$, $n\ge2$
++\item $S_{n}=2-(n+2)/2^{n}$, $n\ge1$
+ \end{enumerate}
+ 
+ For each of the following series, use the sequence of partial sums to determine whether the series converges or diverges.
+ 
+ \begin{enumerate}[resume]
+ \item $\sum_{n=1}^{\infty}\frac{n}{n+2}$
+-\item $\sum_{n=1}^{\infty}(1-{(-1)}^{n}))$
+-\item $\sum_{n=1}^{\infty}\frac{1}{(n+1)(n+2)}$ (Hint: Use a partial fraction decomposition like that for $\sum_{n=1}^{\infty}\frac{1}{n(n+1)}.)$
+-\item $\sum_{n=1}^{\infty}\frac{1}{2n+1}$ (Hint: Follow the reasoning for $\sum_{n=1}^{\infty}\frac{1}{n}.)$
++\item $\sum_{n=1}^{\infty}(1-{(-1)}^{n})$
++\item $\sum_{n=1}^{\infty}\frac{1}{(n+1)(n+2)}$ (Hint: Use a partial fraction decomposition like that for $\sum_{n=1}^{\infty}\frac{1}{n(n+1)}$.)
++\item $\sum_{n=1}^{\infty}\frac{1}{2n+1}$ (Hint: Follow the reasoning for $\sum_{n=1}^{\infty}\frac{1}{n}$.)
+ \end{enumerate}
+ 
+ Suppose that $\sum_{n=1}^{\infty}a_{n}=1$, that $\sum_{n=1}^{\infty}b_{n}=-1$, that $a_{1}=2$, and $b_{1}=-3$. Find the sum of the indicated series.
+@@ -89,19 +89,19 @@
+ Evaluate the following telescoping series or state whether the series diverges.
+ 
+ \begin{enumerate}[resume]
+-\item $\sum_{n=1}^{\infty}2^{1/n}-2^{1/(n+1)}$
+-\item $\sum_{n=1}^{\infty}\frac{1}{n^{13}}-\frac{1}{{(n+1)}^{13}}$
++\item $\sum_{n=1}^{\infty}(2^{1/n}-2^{1/(n+1)})$
++\item $\sum_{n=1}^{\infty}(\frac{1}{n^{13}}-\frac{1}{{(n+1)}^{13}})$
+ \item $\sum_{n=1}^{\infty}(\sqrt{n}-\sqrt{n+1})$
+ \item $\sum_{n=1}^{\infty}(\sin n-\sin(n+1))$
+ \end{enumerate}
+ 
+-Express the following series as a telescoping sum and evaluate its nth partial sum.
++Express the following series as a telescoping sum and evaluate its $n$th partial sum.
+ 
+ \begin{enumerate}[resume]
+ \item $\sum_{n=1}^{\infty}\ln(\frac{n}{n+1})$
+ \item $\sum_{n=1}^{\infty}\frac{2n+1}{{(n^{2}+n)}^{2}}$ (Hint: Factor denominator and use partial fractions.)
+ \item $\sum_{n=2}^{\infty}\frac{\ln(1+\frac{1}{n})}{\ln n\ln(n+1)}$
+-\item $\sum_{n=1}^{\infty}\frac{(n+2)}{n(n+1)2^{n+1}}$ (Hint: Look at $1/(n2^{n}).)$
++\item $\sum_{n=1}^{\infty}\frac{n+2}{n(n+1)2^{n+1}}$ (Hint: Look at $1/(n2^{n})$.)
+ \end{enumerate}
+ 
+ A general telescoping series is one in which all but the first few terms cancel out after summing a given number of successive terms.
+@@ -110,22 +110,22 @@
+ \item Let $a_{n}=f(n)-2f(n+1)+f(n+2)$, in which $f(n)\to0$ as $n\to \infty$. Find $\sum_{n=1}^{\infty}a_{n}$.
+ \item $a_{n}=f(n)-f(n+1)-f(n+2)+f(n+3)$, in which $f(n)\to0$ as $n\to \infty$. Find $\sum_{n=1}^{\infty}a_{n}$.
+ \item Suppose that $a_{n}=c_{0}f(n)+c_{1}f(n+1)+c_{2}f(n+2)+c_{3}f(n+3)+c_{4}f(n+4)$, where $f(n)\to0$ as $n\to \infty$. Find a condition on the coefficients $c_{0},\ldots,c_{4}$ that make this a general telescoping series.
+-\item Evaluate $\sum_{n=1}^{\infty}\frac{1}{n(n+1)(n+2)}$ (Hint: $\frac{1}{n(n+1)(n+2)}=\frac{1}{2n}-\frac{1}{n+1}+\frac{1}{2(n+2)})$
++\item Evaluate $\sum_{n=1}^{\infty}\frac{1}{n(n+1)(n+2)}$ (Hint: $\frac{1}{n(n+1)(n+2)}=\frac{1}{2n}-\frac{1}{n+1}+\frac{1}{2(n+2)}$.)
+ \item Evaluate $\sum_{n=2}^{\infty}\frac{2}{n^{3}-n}$.
+ \item Find a formula for $\sum_{n=1}^{\infty}\frac{1}{n(n+N)}$ where $N$ is a positive integer.
+ \item \techrequired Define a sequence $t_{k}=\sum_{n=1}^{k-1}(1/n)-\ln k$. Use the graph of $1/x$ to verify that $t_{k}$ is increasing. Plot $t_{k}$ for $k=1\ldots100$ and state whether it appears that the sequence converges.
+-\item \techrequired Suppose that $N$ equal uniform rectangular blocks are stacked one on top of the other, allowing for some overhang. Archimedes' law of the lever implies that the stack of $N$ blocks is stable as long as the center of mass of the top $(N-1)$ blocks lies at the edge of the bottom block. Let $x$ denote the position of the edge of the bottom block, and think of its position as relative to the center of the next-to-bottom block. This implies that $(N-1)x=(\frac{1}{2}-x)$ or $x=1/(2N)$. Use this expression to compute the maximum overhang (the position of the edge of the top block over the edge of the bottom block.) See the following figure. \\ \textit{[Figure: This is a diagram of the edge of a table with several blocks stacked on the edge. Each block is pushed slightly to the right, and over the edge of the table. An arrow is drawn with arrowheads at both ends from the edge of the table to a line drawn down from the edge of the highest block.]}
++\item \techrequired Suppose that $N$ equal uniform rectangular blocks are stacked one on top of the other, allowing for some overhang. Archimedes' law of the lever implies that the stack of $N$ blocks is stable as long as the center of mass of the top $(N-1)$ blocks lies at the edge of the bottom block. Let $x$ denote the position of the edge of the bottom block, and think of its position as relative to the center of the next-to-bottom block. This implies that $(N-1)x=(\frac{1}{2}-x)$ or $x=1/(2N)$. Use this expression to compute the maximum overhang (the position of the edge of the top block over the edge of the bottom block). See the following figure. \\ \textit{[Figure: This is a diagram of the edge of a table with several blocks stacked on the edge. Each block is pushed slightly to the right, and over the edge of the table. An arrow is drawn with arrowheads at both ends from the edge of the table to a line drawn down from the edge of the highest block.]}
+ \end{enumerate}
+ 
+ Each of the following infinite series converges to the given multiple of $\pi$ or $1/\pi$.
+ 
+ 
+-In each case, find the minimum value of $N$ such that the $N\text{th}$ partial sum of the series accurately approximates the left-hand side to the given number of decimal places, and give the desired approximate value. Up to $15$ decimals place, $\pi=3.141592653589793...$.
++In each case, find the minimum value of $N$ such that the $N$th partial sum of the series accurately approximates the left-hand side to the given number of decimal places, and give the desired approximate value. Up to $15$ decimal places, $\pi=3.141592653589793\ldots$.
+ 
+ \begin{enumerate}[resume]
+ \item \techrequired $\pi=-3+\sum_{n=1}^{\infty}\frac{n2^{n}n!^{2}}{(2n)!}$, error $<0.0001$
+ \item \techrequired $\frac{\pi}{2}=\sum_{k=0}^{\infty}\frac{k!}{(2k+1)!!}=\sum_{k=0}^{\infty}\frac{2^{k}k!^{2}}{(2k+1)!}$, error $<10^{-4}$
+-\item \techrequired $\frac{9801}{2\pi}=\frac{\sqrt{2}}{9801}\sum_{k=0}^{\infty}\frac{(4k)!(1103+26390k)}{{(k!)}^{4}396^{4k}}$, error $<10^{-12}$
++\item \techrequired $\frac{1}{2\pi}=\frac{\sqrt{2}}{9801}\sum_{k=0}^{\infty}\frac{(4k)!(1103+26390k)}{{(k!)}^{4}396^{4k}}$, error $<10^{-12}$
+ \item \techrequired $\frac{1}{12\pi}=\sum_{k=0}^{\infty}\frac{{(-1)}^{k}(6k)!(13591409+545140134k)}{(3k)!{(k!)}^{3}640320^{3k+3/2}}$, error $<10^{-15}$
+ \item \techrequired A fair coin is one that has probability $1/2$ of coming up heads when flipped.
+ \begin{enumerate}[label=(\alph*)]
+@@ -138,21 +138,24 @@
+ \item \techrequired The expected number of times that a fair coin will come up heads is defined as the sum over $n=1,2,\ldots$ of $n$ times the probability that the coin will come up heads exactly $n$ times in a row, or $n/2^{n+1}$. Compute the expected number of consecutive times that a fair coin will come up heads.
+ \item \techrequired A person deposits $\$10$ at the beginning of each quarter into a bank account that earns $4\%$ annual interest compounded quarterly (four times a year).
+ \begin{enumerate}[label=(\alph*)]
+-  \item Show that the interest accumulated after $n$ quarters is $\$10(\frac{1.01^{n+1}-1}{0.01}-n)$.
++  \item Show that the interest accumulated after $n$ quarters is $\$10(\frac{1.01^{n+1}-1.01}{0.01}-n)$.
+   \item Find the first eight terms of the sequence.
+   \item How much interest has accumulated after $2$ years?
+ \end{enumerate}
+ \item \techrequired Suppose that the amount of a drug in a patient's system diminishes by a multiplicative factor $r<1$ each hour. Suppose that a new dose is administered every $N$ hours. Find an expression that gives the amount $A(n)$ in the patient's system after $n$ hours for each $n$ in terms of the dosage $d$ and the ratio $r$. (Hint: Write $n=mN+k$, where $0\le k<N$, and sum over values from the different doses administered.)
+-\item \techrequired A certain drug is effective for an average patient only if there is at least $1$ mg per kg in the patient's system, while it is safe only if there is at most $2$ mg per kg in an average patient's system. Suppose that the amount in a patient's system diminishes by a multiplicative factor of $0.9$ each hour after a dose is administered. Find the maximum interval $N$ of hours between doses, and corresponding dose range $d$ (in mg/kg) for this $N$ that will enable use of the drug to be both safe and effective in the long term.
++\item \techrequired A certain drug is effective for an average patient only if there is at least $1\,\text{mg}/\text{kg}$ in the patient's system, while it is safe only if there is at most $2\,\text{mg}/\text{kg}$ in an average patient's system. Suppose that the amount in a patient's system diminishes by a multiplicative factor of $0.9$ each hour after a dose is administered. Find the maximum interval $N$ of hours between doses, and corresponding dose range $d$ (in $\text{mg}/\text{kg}$) for this $N$ that will enable use of the drug to be both safe and effective in the long term.
+ \item Suppose that $a_{n}\ge0$ is a sequence of numbers. Explain why the sequence of partial sums of $a_{n}$ is increasing.
+ \item \techrequired Suppose that $a_{n}$ is a sequence of positive numbers and the sequence $S_{n}$ of partial sums of $a_{n}$ is bounded above. Explain why $\sum_{n=1}^{\infty}a_{n}$ converges. Does the conclusion remain true if we remove the hypothesis $a_{n}\ge0$?
+ \item \techrequired Suppose that $a_{1}=S_{1}=1$ and that, for given numbers $S>1$ and $0<k<1$, one defines $a_{n+1}=k(S-S_{n})$ and $S_{n+1}=a_{n+1}+S_{n}$. Does $S_{n}$ converge? If so, to what? (Hint: First argue that $S_{n}<S$ for all $n$ and $S_{n}$ is increasing.)
+ \item \techrequired A version of von Bertalanffy growth can be used to estimate the age of an individual in a homogeneous species from its length if the annual increase in year $n+1$ satisfies $a_{n+1}=k(S-S_{n})$, with $S_{n}$ as the length at year $n$, $S$ as a limiting length, and $k$ as a relative growth constant. If $S_{1}=3$, $S=9$, and $k=1/2$, numerically estimate the smallest value of $n$ such that $S_{n}\ge8$. Note that $S_{n+1}=S_{n}+a_{n+1}$. Find the corresponding $n$ when $k=1/4$.
+-\item \techrequired Suppose that $\sum_{n=1}^{\infty}a_{n}$ is a convergent series of positive terms. Explain why $\lim_{N\to \infty}\sum_{n=N+1}^{\infty}a_{n}=0$.
+-\item \techrequired Find the length of the dashed zig-zag path in the following figure. \\ \textit{[Figure: This is a triangle drawn in quadrant 1 with vertices at (1, 1), (0, 0), and (1, 0). The zigzag line is drawn starting at (1, 0) and goes to the middle of the hypotenuse at (0.5, 0.5), point (1, 0.5), up to point (0.75, 0.75), across to point (1, 0.75), and so on until it converges on the top vertex.]}
+-\item \techrequired Find the total length of the dashed path in the following figure. \\ \textit{[Figure: This is a triangle drawn in quadrant 1 with vertices at (1, 1), (0, 0), and (1, 0). The zigzag line is drawn starting at (0.5, 0) and goes to the middle of the hypotenuse, the midpoint between that point and the vertical leg, the midpoint of the upper half of the hypotenuse, the midpoint between that point and the vertical leg, and so on until it converges on the top vertex.]}
+-\item \techrequired The Sierpinski triangle is obtained from a triangle by deleting the middle fourth as indicated in the first step, by deleting the middle fourths of the remaining three congruent triangles in the second step, and in general deleting the middle fourths of the remaining triangles in each successive step. Assuming that the original triangle is shown in the figure, find the areas of the remaining parts of the original triangle after $N$ steps and find the total length of all of the boundary triangles after $N$ steps. \\ \textit{[Figure: A geometric fractal pattern, resembling a Sierpinski triangle, is shown within a right-angled triangle on an x-y coordinate plane. Shaded regions highlight the intricate self-similar design.]}
+-\item \techrequired The Sierpinski gasket is obtained by dividing the unit square into nine equal sub-squares, removing the middle square, then doing the same at each stage to the remaining sub-squares. The figure shows the remaining set after four iterations. Compute the total area removed after $N$ stages, and compute the length the total perimeter of the remaining set after $N$ stages. \\ \textit{[Figure: This is a black square with many smaller squares removed from it, leaving behind blank spaces in a pattern of squares. There are four iterations of the removal process. At the first, the central 1/9 square area is removed. Each side is 1/3 of that of the next larger square. Next, eight smaller squares are removed around this one. Eight smaller squares are removed from around each of those -- 64 in total. Eight even smaller ones are removed from around each of those 64.]}
++\item \techrequired Suppose that $\sum_{n=1}^{\infty}a_{n}$ is a convergent series of positive terms. Explain why
++\[
++\lim_{N\to\infty}\sum_{n=N+1}^{\infty}a_{n}=0.
++\]
++\item \techrequired Find the length of the dashed zig-zag path in the following figure. \\ \textit{[Figure: This is a triangle drawn in quadrant 1 with vertices at $(1,1)$, $(0,0)$, and $(1,0)$. The zigzag line is drawn starting at $(1,0)$ and goes to the middle of the hypotenuse at $(0.5,0.5)$, point $(1,0.5)$, up to point $(0.75,0.75)$, across to point $(1,0.75)$, and so on until it converges on the top vertex.]}
++\item \techrequired Find the total length of the dashed path in the following figure. \\ \textit{[Figure: This is a triangle drawn in quadrant 1 with vertices at $(1,1)$, $(0,0)$, and $(1,0)$. The zigzag line is drawn starting at $(0.5,0)$ and goes to the middle of the hypotenuse, the midpoint between that point and the vertical leg, the midpoint of the upper half of the hypotenuse, the midpoint between that point and the vertical leg, and so on until it converges on the top vertex.]}
++\item \techrequired The Sierpinski triangle is obtained from a triangle by deleting the middle fourth as indicated in the first step, by deleting the middle fourths of the remaining three congruent triangles in the second step, and in general deleting the middle fourths of the remaining triangles in each successive step. Assuming that the original triangle is shown in the figure, find the areas of the remaining parts of the original triangle after $N$ steps and find the total length of all of the boundary triangles after $N$ steps. \\ \textit{[Figure: A geometric fractal pattern, resembling a Sierpinski triangle, is shown within a right-angled triangle on an $x$-$y$ coordinate plane. Shaded regions highlight the intricate self-similar design.]}
++\item \techrequired The Sierpinski gasket is obtained by dividing the unit square into nine equal sub-squares, removing the middle square, then doing the same at each stage to the remaining sub-squares. The figure shows the remaining set after four iterations. Compute the total area removed after $N$ stages, and compute the total perimeter of the remaining set after $N$ stages. \\ \textit{[Figure: This is a black square with many smaller squares removed from it, leaving behind blank spaces in a pattern of squares. There are four iterations of the removal process. At the first, the central $1/9$ square area is removed. Each side is $1/3$ of that of the next larger square. Next, eight smaller squares are removed around this one. Eight smaller squares are removed from around each of those -- 64 in total. Eight even smaller ones are removed from around each of those 64.]}
+ \end{enumerate}
+ 
+ \end{document}

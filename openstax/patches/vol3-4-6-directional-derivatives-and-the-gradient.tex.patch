@@ -1,0 +1,129 @@
+Manual review corrections for this page's first pass.
+
+- Bold-vector converter gap (same as the Chapter 3 batch): the source
+  MathML wraps direction/basis-vector symbols in an
+  mathvariant="bold" mstyle, which extract-exercises.py doesn't detect --
+  it either drops the boldness silently (plain i, j, k, u, v) or, where
+  the source authored the letter as <mtext> instead of <mi>, emits an
+  ad-hoc \text{u}/\text{v}. Fetched the page's raw archive MathML
+  directly and confirmed exactly which u/v/i/j/k/E instances are bold in
+  the source (every direction vector u, v, unit vectors i, j, k, and the
+  electric-intensity vector E in the second-to-last exercise) versus
+  which are plain scalars (the velocity components u, v in the final
+  fluid-velocity exercise, which are not vectors and are not bold in the
+  source). Converted every confirmed-bold instance to \mathbf{...}.
+- "(the origin: $(0,0,0))$." trapped the sentence's own closing
+  parenthesis inside the math span; moved it back outside to
+  "(the origin: $(0,0,0)$)." -- confirmed against the source text, which
+  reads "(the origin: (0,0,0))." with the outer paren wrapping the whole
+  parenthetical, not just the point.
+- "xy-plane" and "x-direction"/"y-direction" were bare prose letters;
+  joined into math per this project's $xy$-plane / $x$-axis convention
+  used throughout the rest of openstax/.
+- "$\sin \pi x\sin 2\pi y$" is ambiguous (repeated "trig-function letter
+  letter" structure); disambiguated to $\sin(\pi x)\sin(2\pi y)$,
+  matching the parenthesized-argument convention used for \sin(\pi t)
+  etc. elsewhere in this project.
+- Removed one stray interior space before \end{matrix} in the $v=\langle
+  2,-1,2\rangle$ exercise (extractor artifact, no visible effect either
+  way but not matching the file's own established spacing).
+
+---
+--- /tmp/raw.tex
++++ vol3-4-6-directional-derivatives-and-the-gradient.tex
+@@ -15,28 +15,28 @@
+ For the following exercises, find the directional derivative using the limit definition only.
+ 
+ \begin{enumerate}[start=1]
+-\item $f(x,y)=5-2x^{2}-\frac{1}{2}y^{2}$ at point $P(3,4)$ in the direction of $\text{u}=(\cos \frac{\pi}{4})i+(\sin \frac{\pi}{4})j$
+-\item $f(x,y)=y^{2}\cos(2x)$ at point $P(\frac{\pi}{3},2)$ in the direction of $\text{u}=(\cos \frac{\pi}{4})i+(\sin \frac{\pi}{4})j$
+-\item Find the directional derivative of $f(x,y)=y^{2}\sin(2x)$ at point $P(\frac{\pi}{4},2)$ in the direction of $u=5i+12j$.
++\item $f(x,y)=5-2x^{2}-\frac{1}{2}y^{2}$ at point $P(3,4)$ in the direction of $\mathbf{u}=(\cos \frac{\pi}{4})\mathbf{i}+(\sin \frac{\pi}{4})\mathbf{j}$
++\item $f(x,y)=y^{2}\cos(2x)$ at point $P(\frac{\pi}{3},2)$ in the direction of $\mathbf{u}=(\cos \frac{\pi}{4})\mathbf{i}+(\sin \frac{\pi}{4})\mathbf{j}$
++\item Find the directional derivative of $f(x,y)=y^{2}\sin(2x)$ at point $P(\frac{\pi}{4},2)$ in the direction of $\mathbf{u}=5\mathbf{i}+12\mathbf{j}$.
+ \end{enumerate}
+ 
+-For the following exercises, find the directional derivative of the function at point $P$ in the direction of $u$ or $v$ as appropriate.
++For the following exercises, find the directional derivative of the function at point $P$ in the direction of $\mathbf{u}$ or $\mathbf{v}$ as appropriate.
+ 
+ \begin{enumerate}[resume]
+-\item $f(x,y)=xy$, $P(0,-2)$, $v=\frac{1}{2}i+\frac{\sqrt{3}}{2}j$
+-\item $h(x,y)=e^{x}\sin y,P(1,\frac{\pi}{2}),v=-i$
+-\item $h(x,y,z)=xyz,P(2,1,1),v=2i+j-k$
+-\item $f(x,y)=xy,P(1,1),u=\langle \frac{\sqrt{2}}{2},\frac{\sqrt{2}}{2}\rangle$
+-\item $f(x,y)=x^{2}-y^{2},\begin{matrix}u=\langle \frac{\sqrt{3}}{2},\frac{1}{2}\rangle, & P(1,0)\end{matrix}$
+-\item $f(x,y)=3x+4y+7,\begin{matrix}u=\langle \frac{3}{5},\frac{4}{5}\rangle, & P(0,\frac{\pi}{2})\end{matrix}$
+-\item $\begin{matrix}f(x,y)=e^{x}\cos y, & u=\langle0,1\rangle, & P=(0,\frac{\pi}{2})\end{matrix}$
+-\item $\begin{matrix}f(x,y)=y^{10}, & u=\langle0,-1\rangle, & P=(1,-1)\end{matrix}$
+-\item $f(x,y)=\ln(x^{2}+y^{2}),\begin{matrix}u=\langle \frac{3}{5},\frac{4}{5}\rangle, & P(1,2)\end{matrix}$
+-\item $f(x,y)=x^{2}y,\begin{matrix}P(-5,5), & v=3i-4j\end{matrix}$
+-\item $f(x,y,z)=y^{2}+xz,\begin{matrix}P(1,2,2), & v=\langle2,-1,2\rangle \end{matrix}$
++\item $f(x,y)=xy$, $P(0,-2)$, $\mathbf{v}=\frac{1}{2}\mathbf{i}+\frac{\sqrt{3}}{2}\mathbf{j}$
++\item $h(x,y)=e^{x}\sin y,P(1,\frac{\pi}{2}),\mathbf{v}=-\mathbf{i}$
++\item $h(x,y,z)=xyz,P(2,1,1),\mathbf{v}=2\mathbf{i}+\mathbf{j}-\mathbf{k}$
++\item $f(x,y)=xy,P(1,1),\mathbf{u}=\langle \frac{\sqrt{2}}{2},\frac{\sqrt{2}}{2}\rangle$
++\item $f(x,y)=x^{2}-y^{2},\begin{matrix}\mathbf{u}=\langle \frac{\sqrt{3}}{2},\frac{1}{2}\rangle, & P(1,0)\end{matrix}$
++\item $f(x,y)=3x+4y+7,\begin{matrix}\mathbf{u}=\langle \frac{3}{5},\frac{4}{5}\rangle, & P(0,\frac{\pi}{2})\end{matrix}$
++\item $\begin{matrix}f(x,y)=e^{x}\cos y, & \mathbf{u}=\langle0,1\rangle, & P=(0,\frac{\pi}{2})\end{matrix}$
++\item $\begin{matrix}f(x,y)=y^{10}, & \mathbf{u}=\langle0,-1\rangle, & P=(1,-1)\end{matrix}$
++\item $f(x,y)=\ln(x^{2}+y^{2}),\begin{matrix}\mathbf{u}=\langle \frac{3}{5},\frac{4}{5}\rangle, & P(1,2)\end{matrix}$
++\item $f(x,y)=x^{2}y,\begin{matrix}P(-5,5), & \mathbf{v}=3\mathbf{i}-4\mathbf{j}\end{matrix}$
++\item $f(x,y,z)=y^{2}+xz,\begin{matrix}P(1,2,2), & \mathbf{v}=\langle2,-1,2\rangle\end{matrix}$
+ \end{enumerate}
+ 
+-For the following exercises, find the directional derivative of the function in the direction of the unit vector $u=\cos \theta i+\sin \theta j$.
++For the following exercises, find the directional derivative of the function in the direction of the unit vector $\mathbf{u}=\cos \theta \mathbf{i}+\sin \theta \mathbf{j}$.
+ 
+ \begin{enumerate}[resume]
+ \item $f(x,y)=x^{2}+2y^{2},\theta=\frac{\pi}{6}$
+@@ -52,8 +52,8 @@
+ \begin{enumerate}[resume]
+ \item Find the gradient of $f(x,y)=\frac{14-x^{2}-y^{2}}{3}$. Then, find the gradient at point $P(1,2)$.
+ \item Find the gradient of $f(x,y,z)=xy+yz+xz$ at point $P(1,2,3)$.
+-\item Find the gradient of $f(x,y,z)$ at $P$ and the directional derivative in the direction of $u$: $f(x,y,z)=\ln(x^{2}+2y^{2}+3z^{2}),\begin{matrix}P(2,1,4), & u=\frac{-3}{13}i-\frac{4}{13}j-\frac{12}{13}k\end{matrix}$.
+-\item $f(x,y,z)=4x^{5}y^{2}z^{3},\begin{matrix}P(2,-1,1), & u=\frac{1}{3}i+\frac{2}{3}j-\frac{2}{3}k\end{matrix}$
++\item Find the gradient of $f(x,y,z)$ at $P$ and the directional derivative in the direction of $\mathbf{u}$: $f(x,y,z)=\ln(x^{2}+2y^{2}+3z^{2}),\begin{matrix}P(2,1,4), & \mathbf{u}=\frac{-3}{13}\mathbf{i}-\frac{4}{13}\mathbf{j}-\frac{12}{13}\mathbf{k}\end{matrix}$.
++\item $f(x,y,z)=4x^{5}y^{2}z^{3},\begin{matrix}P(2,-1,1), & \mathbf{u}=\frac{1}{3}\mathbf{i}+\frac{2}{3}\mathbf{j}-\frac{2}{3}\mathbf{k}\end{matrix}$
+ \end{enumerate}
+ 
+ For the following exercises, find the directional derivative of the function at point $P$ in the direction of $Q$.
+@@ -63,11 +63,11 @@
+ \item $f(x,y,z)=\frac{y}{x+z},\begin{matrix}P(2,1,-1), & Q(-1,2,0)\end{matrix}$
+ \end{enumerate}
+ 
+-For the following exercises, find the derivative of the function at $P$ in the direction of $u$.
++For the following exercises, find the derivative of the function at $P$ in the direction of $\mathbf{u}$.
+ 
+ \begin{enumerate}[resume]
+-\item $f(x,y)=-7x+2y,\begin{matrix}P(2,-4), & u=4i-3j\end{matrix}$
+-\item $f(x,y)=\ln(5x+4y),\begin{matrix}P(3,9), & u=6i+8j\end{matrix}$
++\item $f(x,y)=-7x+2y,\begin{matrix}P(2,-4), & \mathbf{u}=4\mathbf{i}-3\mathbf{j}\end{matrix}$
++\item $f(x,y)=\ln(5x+4y),\begin{matrix}P(3,9), & \mathbf{u}=6\mathbf{i}+8\mathbf{j}\end{matrix}$
+ \item \techrequired Use technology to sketch the level curve of $f(x,y)=4x-2y+3$ that passes through $P(1,2)$ and draw the gradient vector at $P$.
+ \item \techrequired Use technology to sketch the level curve of $f(x,y)=x^{2}+4y^{2}$ that passes through $P(-2,0)$ and draw the gradient vector at $P$.
+ \end{enumerate}
+@@ -117,7 +117,7 @@
+ For the following exercises, solve the problem.
+ 
+ \begin{enumerate}[resume]
+-\item The temperature $T$ in a metal sphere is inversely proportional to the distance from the center of the sphere (the origin: $(0,0,0))$. The temperature at point $(1,2,2)$ is $120^\circ \text{C}$.
++\item The temperature $T$ in a metal sphere is inversely proportional to the distance from the center of the sphere (the origin: $(0,0,0)$). The temperature at point $(1,2,2)$ is $120^\circ \text{C}$.
+ \begin{enumerate}[label=(\alph*)]
+   \item Find the rate of change of the temperature at point $(1,2,2)$ in the direction toward point $(2,1,3)$.
+   \item Show that, at any point in the sphere, the direction of greatest increase in temperature is given by a vector that points toward the origin.
+@@ -128,12 +128,12 @@
+   \item In which direction does the voltage change most rapidly at point $(3,4,5)$?
+   \item What is the maximum rate of change of the voltage at point $(3,4,5)$?
+ \end{enumerate}
+-\item If the electric potential at a point $(x,y)$ in the xy-plane is $V(x,y)=e^{-2x}\cos(2y)$, then the electric intensity vector at $(x,y)$ is $E=-\nabla V(x,y)$.
++\item If the electric potential at a point $(x,y)$ in the $xy$-plane is $V(x,y)=e^{-2x}\cos(2y)$, then the electric intensity vector at $(x,y)$ is $\mathbf{E}=-\nabla V(x,y)$.
+ \begin{enumerate}[label=(\alph*)]
+   \item Find the electric intensity vector at $(\frac{\pi}{4},0)$.
+-  \item Show that, at each point in the plane, the electric potential decreases most rapidly in the direction of the vector $E$.
++  \item Show that, at each point in the plane, the electric potential decreases most rapidly in the direction of the vector $\mathbf{E}$.
+ \end{enumerate}
+-\item In two dimensions, the motion of an ideal fluid is governed by a velocity potential $\phi$. The velocity components of the fluid $u$ in the x-direction and $v$ in the y-direction, are given by $\langle u,v\rangle=\nabla \phi$. Find the velocity components associated with the velocity potential $\phi(x,y)=\sin \pi x\sin 2\pi y$.
++\item In two dimensions, the motion of an ideal fluid is governed by a velocity potential $\phi$. The velocity components of the fluid $u$ in the $x$-direction and $v$ in the $y$-direction, are given by $\langle u,v\rangle=\nabla \phi$. Find the velocity components associated with the velocity potential $\phi(x,y)=\sin(\pi x)\sin(2\pi y)$.
+ \end{enumerate}
+ 
+ \end{document}

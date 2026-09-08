@@ -1,0 +1,75 @@
+Three equations inconsistently mix x and t as their independent variables;
+use t throughout each equation. Separate each initial condition from its
+differential equation into its own math span, preserve the source's blank lines,
+and typeset acceleration with the dimensionally correct unit m/s^2.
+
+--- /tmp/raw.tex
++++ vol2-4-5-first-order-linear-equations.tex
+@@ -11,13 +11,13 @@
+ \begin{document}
+ \maketitle
+ 
+ 
+ Are the following differential equations linear? Explain your reasoning.
+ 
+ \begin{enumerate}[start=1]
+ \item $\frac{dy}{dx}=x^{2}y+\sin x$
+ \item $\frac{dy}{dt}=ty$
+-\item $\frac{dy}{dt}+y^{2}=x$
++\item $\frac{dy}{dt}+y^{2}=t$
+ \item $y'=x^{3}+e^{x}$
+ \item $y'=y+e^{y}$
+ \end{enumerate}
+@@ -29,7 +29,7 @@
+ \item $y'+3y-\ln x=0$
+ \item $-xy'=(3x+2)y+xe^{x}$
+ \item $\frac{dy}{dt}=4y+ty+\tan t$
+-\item $\frac{dy}{dt}=yx(x+1)$
++\item $\frac{dy}{dt}=yt(t+1)$
+ \end{enumerate}
+ 
+ What are the integrating factors for the following differential equations?
+@@ -62,7 +62,7 @@
+ \begin{enumerate}[resume]
+ \item \techrequired $(x+2)y'=2y-1$
+ \item \techrequired $y'=3e^{t/3}-2y$
+-\item \techrequired $xy'+\frac{y}{2}=\sin(3t)$
++\item \techrequired $ty'+\frac{y}{2}=\sin(3t)$
+ \item \techrequired $xy'=2\frac{\cos x}{x}-3y$
+ \item \techrequired $(x+1)y'=3y+x^{2}+2x+1$
+ \item \techrequired $\sin(x)y'+\cos(x)y=2x$
+@@ -73,22 +73,22 @@
+ Solve the following initial-value problems by using integrating factors.
+ 
+ \begin{enumerate}[resume]
+-\item $y'+y=x,y(0)=3$
+-\item $y'=y+2x^{2},y(0)=0$
+-\item $xy'=y-3x^{3},y(1)=0$
+-\item $x^{2}y'=xy-\ln x,y(1)=1$
+-\item $(1+x^{2})y'=y-1,y(0)=0$
+-\item $xy'=y+2x\ln x,y(1)=5$
+-\item $(2+x)y'=y+2+x,y(0)=0$
+-\item $y'=xy+2xe^{\frac{1}{2}x^{2}},y(0)=2$
+-\item $\sqrt{x}y'=y+2x,y(0)=1$
+-\item $y'=2y+xe^{x},y(0)=-1$
++\item $y'+y=x$, $y(0)=3$
++\item $y'=y+2x^{2}$, $y(0)=0$
++\item $xy'=y-3x^{3}$, $y(1)=0$
++\item $x^{2}y'=xy-\ln x$, $y(1)=1$
++\item $(1+x^{2})y'=y-1$, $y(0)=0$
++\item $xy'=y+2x\ln x$, $y(1)=5$
++\item $(2+x)y'=y+2+x$, $y(0)=0$
++\item $y'=xy+2xe^{\frac{1}{2}x^{2}}$, $y(0)=2$
++\item $\sqrt{x}y'=y+2x$, $y(0)=1$
++\item $y'=2y+xe^{x}$, $y(0)=-1$
+ \item A falling object of mass $m$ can reach terminal velocity when the drag force is proportional to its velocity, with proportionality constant $k$. Set up the differential equation and solve for the velocity given an initial velocity of $0$.
+ \item Using your expression from the preceding problem, what is the terminal velocity? (Hint: Examine the limiting behavior; does the velocity approach a value?)
+-\item \techrequired Using your equation for terminal velocity, solve for the distance fallen. How long does it take to fall $5000$ meters if the mass is $100$ kilograms, the acceleration due to gravity is $9.8$ m/s$^{2}$ and the proportionality constant is $4$?
++\item \techrequired Using your equation for terminal velocity, solve for the distance fallen. How long does it take to fall $5000$ meters if the mass is $100$ kilograms, the acceleration due to gravity is $9.8\,\text{m}/\text{s}^{2}$ and the proportionality constant is $4$?
+ \item A more accurate way to describe terminal velocity is that the drag force is proportional to the square of velocity, with a proportionality constant $k$. Set up the differential equation and solve for the velocity.
+ \item Using your expression from the preceding problem, what is the terminal velocity? (Hint: Examine the limiting behavior: Does the velocity approach a value?)
+-\item \techrequired Using your equation for terminal velocity, solve for the distance fallen. How long does it take to fall $5000$ meters if the mass is $100$ kilograms, the acceleration due to gravity is $9.8{\,\text{m/s}}^{2}$ and the proportionality constant is $4$? Does it take more or less time than your initial estimate?
++\item \techrequired Using your equation for terminal velocity, solve for the distance fallen. How long does it take to fall $5000$ meters if the mass is $100$ kilograms, the acceleration due to gravity is $9.8\,\text{m}/\text{s}^{2}$ and the proportionality constant is $4$? Does it take more or less time than your initial estimate?
+ \end{enumerate}
+ 
+ For the following problems, determine how parameter $a$ affects the solution.

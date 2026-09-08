@@ -28,6 +28,16 @@ Essays are standalone `.tex` files in the `essays` directory, one per topic, eac
 
 A `Makefile` in the `essays` directory builds every essay to its own PDF. It compiles each `.tex` file with `latexmk` via `texlive.sh` (see "TeX Live via `texlive.sh`" below).
 
+## OpenStax Exercise Imports
+
+`openstax/` holds standalone `.tex` reproductions of the end-of-section "Exercises" from OpenStax textbook pages (e.g. `5-1-sequences-exercises.tex`) — reference/practice material licensed from OpenStax under CC BY 4.0, not one of the three self-authored artifact types above. `openstax/extract-exercises.py` (run via `uv run`) fetches a given OpenStax page URL and converts its exercises to LaTeX; full workflow, the OpenStax content API it relies on, and known MathML-to-LaTeX conversion gotchas are documented in `.agents/skills/import-openstax-exercises/SKILL.md` — follow that skill when importing exercises from a new page.
+
+For manual mathematical and typographic audits of exercise files already under `openstax/`, follow `.agents/skills/review-openstax-exercises/SKILL.md`. It covers selecting unreviewed files, correcting mathematical and LaTeX defects, compiling and visually checking PDFs, preserving corrections as cumulative patches, and updating the review ledger without re-importing.
+
+### Build OpenStax Exercise Imports
+
+The `openstax/Makefile` builds every `.tex` file in the directory to its own PDF, compiling with `latexmk` via `texlive.sh` (see "TeX Live via `texlive.sh`" below).
+
 ## TeX Live via `texlive.sh`
 
 All compilation and rendering runs through `texlive.sh` at the repo root, a runner script each `Makefile` calls instead of invoking `podman` directly. It runs every command inside a custom image (`localhost/texlive-gl:latest`, overridable via `TEXLIVE_IMAGE`) built locally from `texlive-gl.Containerfile`. See `texlive.sh`'s own header comment for the rationale behind its GL/Xvfb setup, `SOURCE_DATE_EPOCH` handling, and `--userns keep-id`.

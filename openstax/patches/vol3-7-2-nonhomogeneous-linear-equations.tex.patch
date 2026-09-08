@@ -1,0 +1,57 @@
+OpenStax's source MathML for exercise 27 (numbered 80 in OpenStax's own
+scheme) wraps the "y" in "y_p(x)" as <mtext>y</mtext> instead of <mi>y</mi>
+-- every other occurrence of y_p on this page (all ~70 of them, including
+the three sibling exercises 28-30 in the same "Find the unique solution..."
+group) uses the proper <mi>y</mi><mi>p</mi> structure. The converter
+faithfully reproduces the source's own mistake as $\text{y}_{p}(x)$ (upright
+roman y), which renders inconsistently with every other $y_p(x)$ on the
+page. Fixed by hand here rather than in the converter, since the source
+data is simply wrong for this one exercise.
+
+A manual review found additional mathematical, math-mode, punctuation, and whitespace defects in this generated exercise file. The cumulative diff below preserves all earlier file-specific corrections and adds the reviewed fixes so a future import reproduces the censored local version.
+
+--- /tmp/raw.tex
++++ vol3-7-2-nonhomogeneous-linear-equations.tex
+@@ -35,7 +35,7 @@
+ (a) Write the form for the particular solution $y_{p}(x)$ for the method of undetermined coefficients.
+ 
+ 
+-(b) [T] Use a computer algebra system to find a particular solution to the given equation.
++(b) \techrequired Use a computer algebra system to find a particular solution to the given equation.
+ 
+ \begin{enumerate}[resume]
+ \item $y''-y'-y=x+e^{-x}$
+@@ -60,24 +60,24 @@
+ \begin{enumerate}[resume]
+ \item $4y''+y=2\sin x$
+ \item $y''-9y=8x$
+-\item $y''+y=\sec x,\,0<x<\pi/2$
+-\item $y''+4y=3\csc 2x,\,0<x<\pi/2$
++\item $y''+y=\sec x$, $0<x<\pi/2$
++\item $y''+4y=3\csc 2x$, $0<x<\pi/2$
+ \end{enumerate}
+ 
+ Find the unique solution satisfying the differential equation and the initial conditions given, where $y_{p}(x)$ is the particular solution.
+ 
+ \begin{enumerate}[resume]
+-\item $y''-2y'+y=12e^{x}$, $\text{y}_{p}(x)=6x^{2}e^{x}$, $y(0)=6,\,\,y'(0)=0$
+-\item $y''-7y'=4xe^{7x}$, $y_{p}(x)=\frac{2}{7}x^{2}e^{7x}-\frac{4}{49}xe^{7x}$, $y(0)=-1,\,\,y'(0)=0$
+-\item $y''+y=\cos x-4\sin x$, $y_{p}(x)=2x\cos x+\frac{1}{2}x\sin x$, $y(0)=8,\,\,y'(0)=-4$
+-\item $y''-5y'=e^{5x}+8e^{-5x}$, $y_{p}(x)=\frac{1}{5}xe^{5x}+\frac{4}{25}e^{-5x}$, $y(0)=-2,\,\,y'(0)=0$
++\item $y''-2y'+y=12e^{x}$, $y_{p}(x)=6x^{2}e^{x}$, $y(0)=6$, $y'(0)=0$
++\item $y''-7y'=4xe^{7x}$, $y_{p}(x)=\frac{2}{7}x^{2}e^{7x}-\frac{4}{49}xe^{7x}$, $y(0)=-1$, $y'(0)=0$
++\item $y''+y=\cos x-4\sin x$, $y_{p}(x)=2x\cos x+\frac{1}{2}x\sin x$, $y(0)=8$, $y'(0)=-4$
++\item $y''-5y'=e^{5x}+8e^{-5x}$, $y_{p}(x)=\frac{1}{5}xe^{5x}+\frac{4}{25}e^{-5x}$, $y(0)=-2$, $y'(0)=0$
+ \end{enumerate}
+ 
+-In each of the following problems, two linearly independent solutions---$y_{1}$ and $y_{2}$---are given that satisfy the corresponding homogeneous equation. Use the method of variation of parameters to find a particular solution to the given nonhomogeneous equation. Assume x > 0 in each exercise.
++In each of the following problems, two linearly independent solutions---$y_{1}$ and $y_{2}$---are given that satisfy the corresponding homogeneous equation. Use the method of variation of parameters to find a particular solution to the given nonhomogeneous equation. Assume $x>0$ in each exercise.
+ 
+ \begin{enumerate}[resume]
+-\item $x^{2}y''+2xy'-2y=3x$, $y_{1}(x)=x,\,y_{2}(x)=x^{-2}$
+-\item $x^{2}y''-2y=10x^{2}-1$, $y_{1}(x)=x^{2},\,y_{2}(x)=x^{-1}$
++\item $x^{2}y''+2xy'-2y=3x$, $y_{1}(x)=x$, $y_{2}(x)=x^{-2}$
++\item $x^{2}y''-2y=10x^{2}-1$, $y_{1}(x)=x^{2}$, $y_{2}(x)=x^{-1}$
+ \end{enumerate}
+ 
+ \end{document}

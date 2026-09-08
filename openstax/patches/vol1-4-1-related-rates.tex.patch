@@ -1,0 +1,42 @@
+Manual review corrections, all local typographic defects rather than
+upstream OpenStax content issues:
+
+- The resistors exercise trapped the closing parenthesis of "(measured in
+  ohms, ..., $\Omega)$" inside math mode; moved it outside to
+  "$\Omega$)". The same exercise also wrapped the second resistor's rate
+  in a doubly-nested `$1.1\text{$\Omega$/min}$` construct instead of
+  matching the first resistor's own `$0.5\,\Omega/\text{min}$` form;
+  rewrote it to match.
+- The 25-ft-ladder exercise used the built-in LaTeX trig operator `\sec`
+  to abbreviate "5 sec", rendering it as a secant invocation rather than
+  a time unit. Replaced with `$5\,\text{sec}$`, matching this file's own
+  `$20\,\text{ft}$` convention two words earlier in the same sentence.
+- Two exercises (bikes to a restaurant; parallel freeways) trapped a
+  sentence comma inside the math span itself
+  (`$4\,\text{mi,}$`, `$55\,\text{mph,}$`). Moved each comma outside the
+  math span.
+- The lamppost-shadow figure description left the variable expressions
+  "10 + x" and "x" as bare prose instead of math. Wrapped them as
+  `$10 + x$` and `$x$`.
+
+--- /tmp/raw.tex
++++ vol1-4-1-related-rates.tex
+@@ -23,13 +23,13 @@
+ For the following exercises, sketch the situation if necessary and used related rates to solve for the quantities.
+ 
+ \begin{enumerate}[resume]
+-\item \techrequired If two electrical resistors are connected in parallel, the total resistance (measured in ohms, denoted by the Greek capital letter omega, $\Omega)$ is given by the equation $\frac{1}{R}=\frac{1}{R_{1}}+\frac{1}{R_{2}}$. If $R_{1}$ is increasing at a rate of $0.5\,\Omega/\text{min}$ and $R_{2}$ decreases at a rate of $1.1\text{$\Omega$/min}$, at what rate does the total resistance change when $R_{1}=20\Omega$ and $R_{2}=50\Omega$?
++\item \techrequired If two electrical resistors are connected in parallel, the total resistance (measured in ohms, denoted by the Greek capital letter omega, $\Omega$) is given by the equation $\frac{1}{R}=\frac{1}{R_{1}}+\frac{1}{R_{2}}$. If $R_{1}$ is increasing at a rate of $0.5\,\Omega/\text{min}$ and $R_{2}$ decreases at a rate of $1.1\,\Omega/\text{min}$, at what rate does the total resistance change when $R_{1}=20\Omega$ and $R_{2}=50\Omega$?
+ \item A 10-ft ladder is leaning against a wall. If the top of the ladder slides down the wall at a rate of 2 ft/sec, how fast is the bottom moving along the ground when the bottom of the ladder is 5 ft from the wall? \\ \textit{[Figure: A right triangle is formed by a ladder leaning up against a brick wall. The ladder forms the hypotenuse and is 10 ft long.]}
+-\item A 25-ft ladder is leaning against a wall. If we push the ladder toward the wall at a rate of 1 ft/sec, and the bottom of the ladder is initially $20\,\text{ft}$ away from the wall, how fast does the ladder move up the wall $5\sec$ after we start pushing?
++\item A 25-ft ladder is leaning against a wall. If we push the ladder toward the wall at a rate of 1 ft/sec, and the bottom of the ladder is initially $20\,\text{ft}$ away from the wall, how fast does the ladder move up the wall $5\,\text{sec}$ after we start pushing?
+ \item Two airplanes are flying in the air at the same height: airplane A is flying east at 250 mi/h and airplane B is flying north at $300\,\text{mi/h}$. If they are both heading to the same airport, located 30 miles east of airplane A and 40 miles north of airplane B, at what rate is the distance between the airplanes changing? \\ \textit{[Figure: A right triangle is formed by two airplanes A and B moving perpendicularly to each other. The hypotenuse is the distance between planes A and B. The other sides are extensions of each plane's path until they meet.]}
+-\item You and a friend are riding your bikes to a restaurant that you think is east; your friend thinks the restaurant is north. You both leave from the same point, with you riding at 16 mph east and your friend riding $12\,\text{mph}$ north. After you traveled $4\,\text{mi,}$ at what rate is the distance between you changing?
+-\item Two buses are driving along parallel freeways that are $5\,\text{mi}$ apart, one heading east and the other heading west. Assuming that each bus drives a constant $55\,\text{mph,}$ find the rate at which the distance between the buses is changing when they are $13\,\text{mi}$ apart, heading toward each other.
+-\item A 6-ft-tall person walks away from a 10-ft lamppost at a constant rate of $3\,\text{ft/sec}$. What is the rate that the tip of the shadow moves away from the pole when the person is $10\,\text{ft}$ away from the pole? \\ \textit{[Figure: A lamppost is shown that is 10 ft high. To its right, there is a person who is 6 ft tall. There is a line from the top of the lamppost that touches the top of the person's head and then continues to the ground. The length from the end of this line to where the lamppost touches the ground is 10 + x. The distance from the lamppost to the person on the ground is 10, and the distance from the person to the end of the line is x.]}
++\item You and a friend are riding your bikes to a restaurant that you think is east; your friend thinks the restaurant is north. You both leave from the same point, with you riding at 16 mph east and your friend riding $12\,\text{mph}$ north. After you traveled $4\,\text{mi}$, at what rate is the distance between you changing?
++\item Two buses are driving along parallel freeways that are $5\,\text{mi}$ apart, one heading east and the other heading west. Assuming that each bus drives a constant $55\,\text{mph}$, find the rate at which the distance between the buses is changing when they are $13\,\text{mi}$ apart, heading toward each other.
++\item A 6-ft-tall person walks away from a 10-ft lamppost at a constant rate of $3\,\text{ft/sec}$. What is the rate that the tip of the shadow moves away from the pole when the person is $10\,\text{ft}$ away from the pole? \\ \textit{[Figure: A lamppost is shown that is 10 ft high. To its right, there is a person who is 6 ft tall. There is a line from the top of the lamppost that touches the top of the person's head and then continues to the ground. The length from the end of this line to where the lamppost touches the ground is $10 + x$. The distance from the lamppost to the person on the ground is 10, and the distance from the person to the end of the line is $x$.]}
+ \item Using the previous problem, what is the rate at which the tip of the shadow moves away from the person when the person is 10 ft from the pole?
+ \item A 5-ft-tall person walks toward a wall at a rate of 2 ft/sec. A spotlight is located on the ground 40 ft from the wall. How fast does the height of the person's shadow on the wall change when the person is 10 ft from the wall?
+ \item Using the previous problem, what is the rate at which the shadow changes when the person is 10 ft from the wall, if the person is walking away from the wall at a rate of 2 ft/sec?

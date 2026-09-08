@@ -1,0 +1,131 @@
+% OpenStax Calculus Volume 3 -- Section 5.6 Exercises: Calculating Centers of Mass and Moments of Inertia
+% Exercises reproduced from OpenStax, licensed under CC BY 4.0.
+% Source: https://openstax.org/books/calculus-volume-3/pages/5-6-calculating-centers-of-mass-and-moments-of-inertia
+\documentclass{exercises}
+\title{OpenStax Calculus Volume 3}
+\subtitle{Section 5.6 Exercises: Calculating Centers of Mass and Moments of Inertia}
+\sourceurl{https://openstax.org/books/calculus-volume-3/pages/5-6-calculating-centers-of-mass-and-moments-of-inertia}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+
+In the following exercises, the region $R$ occupied by a lamina is shown in a graph. Find the mass of $R$ with the density function $\rho$.
+
+\begin{enumerate}[start=1]
+\item $R$ is the triangular region with vertices $(0,0),(0,3)$, and $(6,0);\rho(x,y)=xy$. \\ \textit{[Figure: A right triangle bounded by the x and y axes and the line y = negative x/2 + 3.]}
+\item $R$ is the triangular region with vertices $(0,0),(1,1)$, $(0,5);\rho(x,y)=x+y$. \\ \textit{[Figure: A triangle bounded by the y axis, the line x = y, and the line y = negative 4x + 5.]}
+\item $R$ is the rectangular region with vertices $(0,0),(0,3),(6,3)$, and $(6,0)$; $\rho(x,y)=\sqrt{xy}$. \\ \textit{[Figure: A rectangle bounded by the x and y axes and the lines x = 6 and y = 3.]}
+\item $R$ is the rectangular region with vertices $(0,1),(0,3),(3,3)$, and $(3,1)$; $\rho(x,y)=x^{2}y$. \\ \textit{[Figure: A rectangle bounded by the y axis, the lines y = 1 and 3, and the line x = 3.]}
+\item $R$ is the trapezoidal region determined by the lines $y=-\frac{1}{4}x+\frac{5}{2},y=0,y=2$, and $x=0$; $\rho(x,y)=3xy$. \\ \textit{[Figure: A trapezoid bounded by the x and y axes, the line y = 2, and the line y = negative x/4 + 2.5.]}
+\item $R$ is the trapezoidal region determined by the lines $y=0,y=1,y=x$, and $y=-x+3;\rho(x,y)=2x+y$. \\ \textit{[Figure: A trapezoid bounded by the x axis, the line y = 1, the line y = x, and the line y = negative x + 3.]}
+\item $R$ is the disk of radius $2$ centered at $(1,2)$; $\rho(x,y)=x^{2}+y^{2}-2x-4y+5$. \\ \textit{[Figure: A circle with radius 2 centered at (1, 2), which is tangent to the x axis at (1, 0).]}
+\item $R$ is the unit disk; $\rho(x,y)=3x^{4}+6x^{2}y^{2}+3y^{4}$. \\ \textit{[Figure: A circle with radius 1 and center the origin.]}
+\item $R$ is the region enclosed by the ellipse $x^{2}+4y^{2}=1;\rho(x,y)=1$. \\ \textit{[Figure: An ellipse with center the origin, major axis 2, and minor axis 1.]}
+\item $R=\{(x,y)|9x^{2}+y^{2}\le1,x\ge0,y\ge0\}$; $\rho(x,y)=\sqrt{9x^{2}+y^{2}}$. \\ \textit{[Figure: The quarter section of an ellipse in the first quadrant with center the origin, major axis 2, and minor axis roughly 0.64.]}
+\item $R$ is the region bounded by $y=x,y=-x,y=x+2,y=-x+2$; $\rho(x,y)=1$. \\ \textit{[Figure: A square with side length square root of 2 rotated 45 degrees, with corners at the origin, (0, 2), (1, 1), and (negative 1, 1).]}
+\item $R$ is the region bounded by $y=\frac{1}{x},y=\frac{2}{x},y=1$, and $y=2;\rho(x,y)=4(x+y)$. \\ \textit{[Figure: A complex region between 2 and 1 that sweeps down and to the right with boundaries y = 1/x and y = 2/x.]}
+\end{enumerate}
+
+In the following exercises, consider a lamina occupying the region $R$ and having the density function $\rho$ given in the preceding group of exercises. Use a computer algebra system (CAS) to answer the following questions.
+
+
+(a) Find the moments $M_{x}$ and $M_{y}$ about the $x\text{-axis}$ and $y\text{-axis,}$ respectively.
+
+
+(b) Calculate and plot the center of mass of the lamina.
+
+
+(c) \techrequired Use a CAS to locate the center of mass on the graph of $R$.
+
+\begin{enumerate}[resume]
+\item \techrequired $R$ is the triangular region with vertices $(0,0),(0,3)$, and $(6,0);\rho(x,y)=xy$.
+\item \techrequired $R$ is the triangular region with vertices $(0,0),(1,1),\text{and}\,(0,5);\rho(x,y)=x+y$.
+\item \techrequired $R$ is the rectangular region with vertices $(0,0),(0,3),(6,3),\text{and}\,(6,0)$; $\rho(x,y)=\sqrt{xy}$.
+\item \techrequired $R$ is the rectangular region with vertices $(0,1),(0,3),(3,3),\text{and}\,(3,1)$; $\rho(x,y)=x^{2}y$.
+\item \techrequired $R$ is the trapezoidal region determined by the lines $y=-\frac{1}{4}x+\frac{5}{2},y=0$, $y=2,\text{and}\,x=0$; $\rho(x,y)=3xy$.
+\item \techrequired $R$ is the trapezoidal region determined by the lines $y=0,y=1,y=x$, and $y=-x+3;\rho(x,y)=2x+y$.
+\item \techrequired $R$ is the disk of radius $2$ centered at $(1,2)$; $\rho(x,y)=x^{2}+y^{2}-2x-4y+5$.
+\item \techrequired $R$ is the unit disk; $\rho(x,y)=3x^{4}+6x^{2}y^{2}+3y^{4}$.
+\item \techrequired $R$ is the region enclosed by the ellipse $x^{2}+4y^{2}=1;\rho(x,y)=1$.
+\item \techrequired $R=\{(x,y)|9x^{2}+y^{2}\le1,x\ge0,y\ge0\}$; $\rho(x,y)=\sqrt{9x^{2}+y^{2}}$.
+\item \techrequired $R$ is the region bounded by $y=x,y=-x,y=x+2$, and $y=-x+2$; $\rho(x,y)=1$.
+\item \techrequired $R$ is the region bounded by $y=\frac{1}{x}$, $y=\frac{2}{x},y=1,\text{and}\,y=2$; $\rho(x,y)=4(x+y)$.
+\end{enumerate}
+
+In the following exercises, consider a lamina occupying the region $R$ and having the density function $\rho$ given in the first two groups of Exercises.
+
+
+(a) Find the moments of inertia $I_{x},I_{y}$, and $I_{0}$ about the $x\text{-axis}$, $y\text{-axis}$, and origin, respectively.
+
+
+(b) Find the radii of gyration with respect to the $x\text{-axis}$, $y\text{-axis}$, and origin, respectively.
+
+\begin{enumerate}[resume]
+\item $R$ is the triangular region with vertices $(0,0),(0,3)$, and $(6,0);\rho(x,y)=xy$.
+\item $R$ is the triangular region with vertices $(0,0),(1,1)$, and $(0,5);\rho(x,y)=x+y$.
+\item $R$ is the rectangular region with vertices $(0,0),(0,3),(6,3)$, and $(6,0);\rho(x,y)=\sqrt{xy}$.
+\item $R$ is the rectangular region with vertices $(0,1),(0,3),(3,3)$, and $(3,1);\rho(x,y)=x^{2}y$.
+\item $R$ is the trapezoidal region determined by the lines $y=-\frac{1}{4}x+\frac{5}{2},y=0,y=2$, and $x=0;\rho(x,y)=3xy$.
+\item $R$ is the trapezoidal region determined by the lines $y=0,y=1,y=x$, and $y=-x+3;\rho(x,y)=2x+y$.
+\item $R$ is the disk of radius $2$ centered at $(1,2)$; $\rho(x,y)=x^{2}+y^{2}-2x-4y+5$.
+\item $R$ is the unit disk; $\rho(x,y)=3x^{4}+6x^{2}y^{2}+3y^{4}$.
+\item $R$ is the region enclosed by the ellipse $x^{2}+4y^{2}=1;\rho(x,y)=1$.
+\item $R=\{(x,y)|9x^{2}+y^{2}\le1,x\ge0,y\ge0\};\rho(x,y)=\sqrt{9x^{2}+y^{2}}$.
+\item $R$ is the region bounded by $y=x,y=-x,y=x+2,\text{and}\,y=-x+2$; $\rho(x,y)=1$.
+\item $R$ is the region bounded by $y=\frac{1}{x},y=\frac{2}{x},y=1,\text{and}\,y=2;\rho(x,y)=4(x+y)$.
+\item Let $Q$ be the solid unit cube. Find the mass of the solid if its density $\rho$ is equal to the square of the distance of an arbitrary point of $Q$ to the $xy\text{-plane}$.
+\item Let $Q$ be the solid unit hemisphere. Find the mass of the solid if its density $\rho$ is equal to the distance of an arbitrary point of $Q$ to the origin.
+\item The solid $Q$ of constant density $1$ is situated inside the sphere $x^{2}+y^{2}+z^{2}=16$ and outside the sphere $x^{2}+y^{2}+z^{2}=1$. Show that the center of mass of the solid is not located within the solid.
+\item Find the mass of the solid $Q=\{(x,y,z)|1\le x^{2}+z^{2}\le25,y\le1-x^{2}-z^{2}\}$ whose density is $\rho(x,y,z)=k$, where $k>0$.
+\item \techrequired The solid $Q=\{(x,y,z)|x^{2}+y^{2}\le9,0\le z\le1,x\ge0,y\ge0\}$ has density equal to the distance to the $xy\text{-plane}$. Use a CAS to answer the following questions.
+\begin{enumerate}[label=(\alph*)]
+  \item Find the mass of $Q$.
+  \item Find the moments $M_{xy},M_{xz},\text{and}\,M_{yz}$ about the $xy\text{-plane,}$ $xz\text{-plane,}$ and $yz\text{-plane,}$ respectively.
+  \item Find the center of mass of $Q$.
+  \item Graph $Q$ and locate its center of mass.
+\end{enumerate}
+\item Consider the solid $Q=\{(x,y,z)|0\le x\le1,0\le y\le2,0\le z\le3\}$ with the density function $\rho(x,y,z)=x+y+1$.
+\begin{enumerate}[label=(\alph*)]
+  \item Find the mass of $Q$.
+  \item Find the moments $M_{xy},M_{xz},\text{and}\,M_{yz}$ about the $xy\text{-plane,}$ $xz\text{-plane,}$ and $yz\text{-plane,}$ respectively.
+  \item Find the center of mass of $Q$.
+\end{enumerate}
+\item \techrequired The solid $Q$ has the mass given by the triple integral $\int_{-1}^{1}\,\int_{0}^{\frac{\pi}{4}}\,\int_{0}^{1}r^{2}\,dr\,d\theta \,dz$. Use a CAS to answer the following questions.
+\begin{enumerate}[label=(\alph*)]
+  \item Show that the center of mass of $Q$ is located in the $xy\text{-plane.}$
+  \item Graph $Q$ and locate its center of mass.
+\end{enumerate}
+\item The solid $Q$ is bounded by the planes $x+4y+z=8,x=0,y=0,\text{and}\,z=0$. Its density at any point is equal to the distance to the $xz\text{-plane}$. Find the moment of inertia $I_{y}$ of the solid about the $xz\text{-plane}$.
+\item The solid $Q$ is bounded by the planes $x+y+z=3$, $x=0,y=0$, and $z=0$. Its density is $\rho(x,y,z)=x+ay$, where $a>0$. Show that the center of mass of the solid is located in the plane $z=\frac{3}{5}$ for any value of $a$.
+\item Let $Q$ be the solid situated outside the sphere $x^{2}+y^{2}+z^{2}=z$ and inside the upper hemisphere $x^{2}+y^{2}+z^{2}=R^{2}$, where $R>1$. If the density of the solid is $\rho(x,y,z)=\frac{1}{\sqrt{x^{2}+y^{2}+z^{2}}}$, find $R$ such that the mass of the solid is $\frac{7\pi}{2}$.
+\item The mass of a solid $Q$ is given by $\int_{0}^{2\sqrt{2}}\,\int_{0}^{\sqrt{8-x^{2}}}\,\int_{\sqrt{x^{2}+y^{2}}}^{\sqrt{16-x^{2}-y^{2}}}{(x^{2}+y^{2}+z^{2})}^{n}\,dz\,dy\,dx$, where $n$ is an integer. Determine $n$ such that the mass of the solid is $(2-\sqrt{2})\pi$.
+\item Let $Q$ be the solid above the cone $x^{2}+y^{2}=z^{2}$ and below the sphere $x^{2}+y^{2}+z^{2}-4kz=0$. Its density is a constant $k>0$. Find $k$ such that the center of mass of the solid is situated $7$ units from the origin.
+\item The solid $Q=\{(x,y,z)|0\le x^{2}+y^{2}\le16,x\ge0,y\ge0,0\le z\le x\}$ has the density $\rho(x,y,z)=k$. Show that the moment $M_{xy}$ about the $xy\text{-plane}$ is half of the moment $M_{yz}$ about the $yz\text{-plane}$.
+\item The solid $Q$ is bounded by the cylinder $x^{2}+y^{2}=a^{2}$, the paraboloid $b^{2}-z=x^{2}+y^{2}$, and the $xy\text{-plane,}$ where $0<a<b$. Find the mass of the solid if its density is given by $\rho(x,y,z)=\sqrt{x^{2}+y^{2}}$.
+\item Let $Q$ be a solid of constant density $k$, where $k>0$, that is located in the first octant, inside the circular cone $x^{2}+y^{2}=9{(z-1)}^{2}$, and above the plane $z=0$. Show that the moment $M_{xy}$ about the $xy\text{-plane}$ is the same as the moment $M_{yz}$ about the $yz\text{-plane}$.
+\item The solid $Q$ has the mass given by the triple integral $\int_{0}^{1}\,\int_{0}^{\pi/2}\,\int_{0}^{r^{2}}(r^{4}+r)\,dz\,d\theta \,dr$.
+\begin{enumerate}[label=(\alph*)]
+  \item Find the density of the solid in rectangular coordinates.
+  \item Find the moment $M_{xy}$ about the $xy\text{-plane}$.
+\end{enumerate}
+\item The solid $Q$ has the moment of inertia $I_{x}$ about the $yz\text{-plane}$ given by the triple integral $\int_{0}^{2}\,\int_{-\sqrt{4-y^{2}}}^{\sqrt{4-y^{2}}}\,\int_{\frac{1}{2}(x^{2}+y^{2})}^{\sqrt{x^{2}+y^{2}}}(y^{2}+z^{2})(x^{2}+y^{2})\,dz\,dx\,dy$.
+\begin{enumerate}[label=(\alph*)]
+  \item Find the density of $Q$.
+  \item Find the moment of inertia $I_{z}$ about the $xy\text{-plane.}$
+\end{enumerate}
+\item The solid $Q$ has the mass given by the triple integral $\int_{0}^{\pi/4}\,\int_{0}^{2\sec \theta}\,\int_{0}^{1}(r^{3}\cos \theta \sin \theta+2r)\,dz\,dr\,d\theta$.
+\begin{enumerate}[label=(\alph*)]
+  \item Find the density of the solid in rectangular coordinates.
+  \item Find the moment $M_{xz}$ about the $xz\text{-plane.}$
+\end{enumerate}
+\item Let $Q$ be the solid bounded by the $xy\text{-plane}$, the cylinder $x^{2}+y^{2}=a^{2}$, and the plane $z=1$, where $a>1$ is a real number. Find the moment $M_{xy}$ of the solid about the $xy\text{-plane}$ if its density given in cylindrical coordinates is $\rho(r,\theta,z)=\frac{d^{2}f}{dr^{2}}(r)$, where $f$ is a differentiable function with the first and second derivatives continuous and differentiable on $(0,a)$.
+\item A solid $Q$ has a volume given by $\underset{D}{\iint}\int_{a}^{b}dz\,dA$, where $D$ is the projection of the solid onto the $xy\text{-plane}$ and $a<b$ are real numbers, and its density does not depend on the variable $z$. Show that its center of mass lies in the plane $z=\frac{a+b}{2}$.
+\item Consider the solid enclosed by the cylinder $x^{2}+z^{2}=a^{2}$ and the planes $y=b$ and $y=c$, where $a>0$ and $b<c$ are real numbers. The density of $Q$ is given by $\rho(x,y,z)=f'(y)$, where $f$ is a differential function whose derivative is continuous on $(b,c)$. Show that if $f(b)=f(c)$, then the moment of inertia about the $xz\text{-plane}$ of $Q$ is null.
+\item \techrequired The average density of a solid $Q$ is defined as $\rho_{ave}=\frac{1}{V(Q)}\underset{Q}{\iiint}\rho(x,y,z)\,dV=\frac{m}{V(Q)}$, where $V(Q)$ and $m$ are the volume and the mass of $Q$, respectively. If the density of the unit ball centered at the origin is $\rho(x,y,z)=e^{-x^{2}-y^{2}-z^{2}}$, use a CAS to find its average density. Round your answer to three decimal places.
+\item Show that the moments of inertia $I_{x},I_{y},\text{and}\,I_{z}$ about the $yz\text{-plane,}$ $xz\text{-plane,}$ and $xy\text{-plane,}$ respectively, of the unit ball centered at the origin whose density is $\rho(x,y,z)=e^{-x^{2}-y^{2}-z^{2}}$ are the same. Round your answer to two decimal places.
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,194 @@
+Manual review corrections for this page's first pass.
+
+- Every vector variable ($\text{v}$, $\text{n}$, $\text{i}$, $\text{j}$,
+  $\text{k}$, $\text{r}$, and $\text{s}$) had been converted to upright,
+  non-bold \text{} instead of boldface, matching the same defect already
+  fixed for vol3-2-1-vectors-in-the-plane.tex,
+  vol3-2-2-vectors-in-three-dimensions.tex,
+  vol3-2-3-the-dot-product.tex, and
+  vol3-2-4-the-cross-product.tex, and unlike every other
+  vector-notation exercise file in this repo and OpenStax's own boldface
+  vector convention; changed every such occurrence to \mathbf{}.
+- Five occurrences joined the last item of a comma-separated list of
+  points into the same math span as the word "and" via \text{and} plus
+  manual \, spacing (e.g. "$P,Q,\,\text{and}\,R$", "$a,b,\,\text{and}\,c$"),
+  the pattern this skill flags against (English glued into math mode
+  instead of plain-text "and" between separate math spans); split each
+  into separate math spans joined by plain-text "and" (e.g. "$P$, $Q$,
+  and $R$").
+- Bare "x-axis" and "xy-plane" appeared as plain prose instead of the
+  file's own convention of typesetting axis/plane names with the variable
+  in math mode (matching the convention already established across
+  reviewed files, e.g. "$x$-axis", "$xy$-plane"); corrected the three
+  occurrences.
+- "Find point P of tangency." and "the components of r are expressed in
+  centimeters" left the variables P and r as bare, non-mathematical prose
+  instead of the math-mode variables used consistently for the same
+  quantities elsewhere in the same file and sentence; wrapped them in math
+  mode as $P$ and $\mathbf{r}$.
+- "$x\,=\,3\,+\,3t,\,y\,=\,1\,+\,8t,\,z\,=\,6t$" used erratic manual \,
+  spacing around every operator, unlike every sibling parametric-equation
+  triple in the file (e.g. "$x=1+t,y=3+t,z=5+4t$"); removed the stray \,
+  to match.
+- "$P(4,0,5),Q(2,3,1)$" was missing the comma-and-space separator used
+  between every other P/Q coordinate pair in the same list; corrected to
+  "$P(4,0,5)$, $Q(2,3,1)$".
+
+--- /tmp/raw.tex
++++ vol3-2-5-equations-of-lines-and-planes-in-space.tex
+@@ -28,12 +28,12 @@
+
+ \begin{enumerate}[start=1]
+ \item $P(-3,5,9)$, $Q(4,-7,2)$
+-\item $P(4,0,5),Q(2,3,1)$
++\item $P(4,0,5)$, $Q(2,3,1)$
+ \item $P(-1,0,5)$, $Q(4,0,3)$
+ \item $P(7,-2,6)$, $Q(-3,0,6)$
+ \end{enumerate}
+
+-For the following exercises, point $P$ and vector $\text{v}$ are given. Let $L$ be the line passing through point $P$ with direction $\text{v}$.
++For the following exercises, point $P$ and vector $\mathbf{v}$ are given. Let $L$ be the line passing through point $P$ with direction $\mathbf{v}$.
+
+
+ (a) Find parametric equations of line $L$.
+@@ -42,19 +42,19 @@
+ (b) Find symmetric equations of line $L$.
+
+
+-(c) Find the intersection of the line with the xy-plane.
++(c) Find the intersection of the line with the $xy$-plane.
+
+ \begin{enumerate}[resume]
+-\item $P(1,-2,3)$, $\text{v}=\langle1,2,3\rangle$
+-\item $P(3,1,5)$, $\text{v}=\langle1,1,1\rangle$
+-\item $P(3,1,5)$, $\text{v}=\overset{\to}{QR}$, where $Q(2,2,3)$ and $R(3,2,3)$
+-\item $P(2,3,0)$, $\text{v}=\overset{\to}{QR}$, where $Q(0,4,5)$ and $R(0,4,6)$
++\item $P(1,-2,3)$, $\mathbf{v}=\langle1,2,3\rangle$
++\item $P(3,1,5)$, $\mathbf{v}=\langle1,1,1\rangle$
++\item $P(3,1,5)$, $\mathbf{v}=\overset{\to}{QR}$, where $Q(2,2,3)$ and $R(3,2,3)$
++\item $P(2,3,0)$, $\mathbf{v}=\overset{\to}{QR}$, where $Q(0,4,5)$ and $R(0,4,6)$
+ \end{enumerate}
+
+ For the following exercises, line $L$ is given.
+
+
+-(a) Find point $P$ that belongs to the line and direction vector $\text{v}$ of the line. Express $\text{v}$ in component form.
++(a) Find point $P$ that belongs to the line and direction vector $\mathbf{v}$ of the line. Express $\mathbf{v}$ in component form.
+
+
+ (b) Find the distance from the origin to line $L$.
+@@ -77,10 +77,10 @@
+ \begin{enumerate}[resume]
+ \item $L_{1}:x=1+t,y=t,z=2+t$, $t\in \mathbb{R}$, $L_{2}:x-3=y-1=z-3$
+ \item $L_{1}:x=2,y=1,z=t$, $L_{2}:x=1,y=1,z=2-3t$, $t\in \mathbb{R}$
+-\item Show that the line passing through points $P(3,1,0)$ and $Q(1,4,-3)$ is perpendicular to the line with equations $x\,=\,3\,+\,3t,\,y\,=\,1\,+\,8t,\,z\,=\,6t$, $t\in \mathbb{R}$.
++\item Show that the line passing through points $P(3,1,0)$ and $Q(1,4,-3)$ is perpendicular to the line with equations $x=3+3t,y=1+8t,z=6t$, $t\in \mathbb{R}$.
+ \item Are the lines of equations $x=-2+2t,y=-6,z=2+6t$ and $x=-1+t,y=1+t,z=t$, $t\in \mathbb{R}$, perpendicular to each other?
+ \item Find the point of intersection of the lines of equations $x=-2y=3z$ and $x=-5-t,y=-1+t,z=t-11$, $t\in \mathbb{R}$.
+-\item Find the intersection point of the x-axis with the line of parametric equations $x=10+t,y=2-2t,z=-3+3t$, $t\in \mathbb{R}$.
++\item Find the intersection point of the $x$-axis with the line of parametric equations $x=10+t,y=2-2t,z=-3+3t$, $t\in \mathbb{R}$.
+ \end{enumerate}
+
+ For the following exercises, lines $L_{1}$ and $L_{2}$ are given. Determine whether the lines are equal, parallel but not equal, skew, or intersecting.
+@@ -104,25 +104,25 @@
+ \end{enumerate}
+ \end{enumerate}
+
+-For the following exercises, point $P$ and vector $\text{n}$ are given.
++For the following exercises, point $P$ and vector $\mathbf{n}$ are given.
+
+
+-(a) Find the scalar equation of the plane that passes through $P$ and has normal vector $\text{n}$.
++(a) Find the scalar equation of the plane that passes through $P$ and has normal vector $\mathbf{n}$.
+
+
+-(b) Find the general form of the equation of the plane that passes through $P$ and has normal vector $\text{n}$.
++(b) Find the general form of the equation of the plane that passes through $P$ and has normal vector $\mathbf{n}$.
+
+ \begin{enumerate}[resume]
+-\item $P(0,0,0)$, $\text{n}=3\text{i}-2\text{j}+4\text{k}$
+-\item $P(3,2,2)$, $\text{n}=2\text{i}+3\text{j}-\text{k}$
+-\item $P(1,2,3)$, $\text{n}=\langle1,2,3\rangle$
+-\item $P(0,0,0)$, $\text{n}=\langle-3,2,-1\rangle$
++\item $P(0,0,0)$, $\mathbf{n}=3\mathbf{i}-2\mathbf{j}+4\mathbf{k}$
++\item $P(3,2,2)$, $\mathbf{n}=2\mathbf{i}+3\mathbf{j}-\mathbf{k}$
++\item $P(1,2,3)$, $\mathbf{n}=\langle1,2,3\rangle$
++\item $P(0,0,0)$, $\mathbf{n}=\langle-3,2,-1\rangle$
+ \end{enumerate}
+
+ For the following exercises, the equation of a plane is given.
+
+
+-(a) Find normal vector $\text{n}$ to the plane. Express $\text{n}$ using standard unit vectors.
++(a) Find normal vector $\mathbf{n}$ to the plane. Express $\mathbf{n}$ using standard unit vectors.
+
+
+ (b) Find the intersections of the plane with the coordinate axes.
+@@ -135,24 +135,24 @@
+ \item $3x+4y-12=0$
+ \item $3x-2y+4z=0$
+ \item $x+z=0$
+-\item Given point $P(1,2,3)$ and vector $\text{n}=\text{i}+\text{j}$, find point $Q$ on the x-axis such that $\overset{\to}{PQ}$ and $\text{n}$ are orthogonal.
+-\item Show there is no plane perpendicular to $\text{n}=\text{i}+\text{j}$ that passes through points $P(1,2,3)$ and $Q(2,3,4)$.
++\item Given point $P(1,2,3)$ and vector $\mathbf{n}=\mathbf{i}+\mathbf{j}$, find point $Q$ on the $x$-axis such that $\overset{\to}{PQ}$ and $\mathbf{n}$ are orthogonal.
++\item Show there is no plane perpendicular to $\mathbf{n}=\mathbf{i}+\mathbf{j}$ that passes through points $P(1,2,3)$ and $Q(2,3,4)$.
+ \item Find parametric equations of the line passing through point $P(-2,1,3)$ that is perpendicular to the plane of equation $2x-3y+z=7$.
+ \item Find symmetric equations of the line passing through point $P(2,5,4)$ that is perpendicular to the plane of equation $2x+3y-5z=0$.
+ \item Show that line $\frac{x-1}{2}=\frac{y+1}{3}=\frac{z-2}{4}$ is parallel to plane $x-2y+z=6$.
+ \item Find the real number $\alpha$ such that the line of parametric equations $x=t,y=2-t,z=3+t$, $t\in \mathbb{R}$ is parallel to the plane of equation $\alpha x+5y+z-10=0$.
+ \end{enumerate}
+
+-For the following exercises, points $P,Q,\,\text{and}\,R$ are given.
++For the following exercises, points $P$, $Q$, and $R$ are given.
+
+
+-(a) Find the general equation of the plane passing through $P,Q,\,\text{and}\,R$.
++(a) Find the general equation of the plane passing through $P$, $Q$, and $R$.
+
+
+-(b) Write the vector equation $\text{n}\cdot \overset{\to}{PS}=0$ of the plane at a., where $S(x,y,z)$ is an arbitrary point of the plane.
++(b) Write the vector equation $\mathbf{n}\cdot \overset{\to}{PS}=0$ of the plane at a., where $S(x,y,z)$ is an arbitrary point of the plane.
+
+
+-(c) Find parametric equations of the line passing through the origin that is perpendicular to the plane passing through $P,Q,\,\text{and}\,R$.
++(c) Find parametric equations of the line passing through the origin that is perpendicular to the plane passing through $P$, $Q$, and $R$.
+
+ \begin{enumerate}[resume]
+ \item $P(1,1,1),Q(2,4,3)$, and $R(-1,-2,-1)$
+@@ -193,7 +193,7 @@
+ \item Consider point $C(-3,2,4)$ and the plane of equation $2x+4y-3z=8$.
+ \begin{enumerate}[label=(\alph*)]
+   \item Find the radius of the sphere with center $C$ tangent to the given plane.
+-  \item Find point P of tangency.
++  \item Find point $P$ of tangency.
+ \end{enumerate}
+ \item Consider the plane of equation $x-y-z-8=0$.
+ \begin{enumerate}[label=(\alph*)]
+@@ -201,21 +201,21 @@
+   \item Find parametric equations of the line passing through the origin and the point of tangency.
+ \end{enumerate}
+ \item Two children are playing with a ball. The girl throws the ball to the boy. The ball travels in the air, curves $3$ ft to the right, and falls $5$ ft away from the girl (see the following figure). If the plane that contains the trajectory of the ball is perpendicular to the ground, find its equation. \\ \textit{[Figure: This figure is the image of two children throwing a ball. The path of the ball is represented with an arc. The distance from the child throwing the ball to the point where the ball hits is 5 feet. The distance from the second child to where the ball hits is 3 feet.]}
+-\item \techrequired John allocates $d$ dollars to consume monthly three goods of prices $a,b,\,\text{and}\,c$. In this context, the budget equation is defined as $ax+by+cz=d$, where $x\ge0,y\ge0$, and $z\ge0$ represent the number of items bought from each of the goods. The budget set is given by $\{(x,y,z)|ax+by+cz\le d,x\ge0,y\ge0,z\ge0\}$, and the budget plane is the part of the plane of equation $ax+by+cz=d$ for which $x\ge0,y\ge0$, and $z\ge0$. Consider $a=\$8$, $b=\$5$, $c=\$10$, and $d=\$500$.
++\item \techrequired John allocates $d$ dollars to consume monthly three goods of prices $a$, $b$, and $c$. In this context, the budget equation is defined as $ax+by+cz=d$, where $x\ge0,y\ge0$, and $z\ge0$ represent the number of items bought from each of the goods. The budget set is given by $\{(x,y,z)|ax+by+cz\le d,x\ge0,y\ge0,z\ge0\}$, and the budget plane is the part of the plane of equation $ax+by+cz=d$ for which $x\ge0,y\ge0$, and $z\ge0$. Consider $a=\$8$, $b=\$5$, $c=\$10$, and $d=\$500$.
+ \begin{enumerate}[label=(\alph*)]
+   \item Use a CAS to graph the budget set and budget plane.
+   \item For $z=25$, find the new budget equation and graph the budget set in the same system of coordinates.
+ \end{enumerate}
+-\item \techrequired Consider $\text{r}(t)=\langle \sin t,\cos t,2t\rangle$ the position vector of a particle at time $t\in[0,3]$, where the components of r are expressed in centimeters and time is measured in seconds. Let $\overset{\to}{OP}$ be the position vector of the particle after $1$ sec.
++\item \techrequired Consider $\mathbf{r}(t)=\langle \sin t,\cos t,2t\rangle$ the position vector of a particle at time $t\in[0,3]$, where the components of $\mathbf{r}$ are expressed in centimeters and time is measured in seconds. Let $\overset{\to}{OP}$ be the position vector of the particle after $1$ sec.
+ \begin{enumerate}[label=(\alph*)]
+-  \item Determine the velocity vector $\text{v}(1)$ of the particle after $1$ sec.
+-  \item Find the scalar equation of the plane that is perpendicular to $\text{v}(1)$ and passes through point $P$. This plane is called the normal plane to the path of the particle at point $P$.
++  \item Determine the velocity vector $\mathbf{v}(1)$ of the particle after $1$ sec.
++  \item Find the scalar equation of the plane that is perpendicular to $\mathbf{v}(1)$ and passes through point $P$. This plane is called the normal plane to the path of the particle at point $P$.
+   \item Use a CAS to visualize the path of the particle along with the velocity vector and normal plane at point $P$.
+ \end{enumerate}
+ \item \techrequired A solar panel is mounted on the roof of a house. The panel may be regarded as positioned at the points of coordinates (in meters) $A(8,0,0)$, $B(8,18,0)$, $C(0,18,8)$, and $D(0,0,8)$ (see the following figure). \\ \textit{[Figure: This figure is a picture of a rectangular solar grid on a roof. The corners of the rectangle are labeled A, B, C, D. There are two vectors, the first is from A to D. The second is from A to B.]}
+ \begin{enumerate}[label=(\alph*)]
+-  \item Find the general form of the equation of the plane that contains the solar panel by using points $A,B,\,\text{and}\,C$, and show that its normal vector is equivalent to $\overset{\to}{AB}\times \overset{\to}{AD}$.
+-  \item Find parametric equations of line $L_{1}$ that passes through the center of the solar panel and has direction vector $\text{s}=\frac{1}{\sqrt{3}}\text{i}+\frac{1}{\sqrt{3}}\text{j}+\frac{1}{\sqrt{3}}\text{k}$, which points toward the position of the Sun at a particular time of day.
++  \item Find the general form of the equation of the plane that contains the solar panel by using points $A$, $B$, and $C$, and show that its normal vector is equivalent to $\overset{\to}{AB}\times \overset{\to}{AD}$.
++  \item Find parametric equations of line $L_{1}$ that passes through the center of the solar panel and has direction vector $\mathbf{s}=\frac{1}{\sqrt{3}}\mathbf{i}+\frac{1}{\sqrt{3}}\mathbf{j}+\frac{1}{\sqrt{3}}\mathbf{k}$, which points toward the position of the Sun at a particular time of day.
+   \item Find symmetric equations of line $L_{2}$ that passes through the center of the solar panel and is perpendicular to it.
+   \item Determine the angle of elevation of the Sun above the solar panel by using the angle between lines $L_{1}$ and $L_{2}$.
+ \end{enumerate}

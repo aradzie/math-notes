@@ -1,0 +1,44 @@
+OpenStax's own source MathML for the floor-function hint in this exercise
+folds two pieces of trailing sentence punctuation into the final inline
+math span: <mi>x</mi><mo>.</mo><mo stretchy="false">)</mo> -- both the
+sentence period AND the closing parenthesis of the surrounding "(Hint:
+...)" aside are inside the <math> element, not just one trailing token.
+trailing_prose_punctuation() in extract-exercises.py only recognizes a
+single terminal punctuation token, so it left both characters glued
+inside math mode ("$x.)$"), when the closing parenthesis of the Hint
+aside should read as ordinary prose immediately after the sentence-ending
+period, matching every other parenthetical in this file. This is a
+source-authoring quirk (the same one documented for other stray trailing
+tokens), not a systematic converter gap -- fixed by hand here.
+
+Manual review also removed redundant outer braces from the two power
+bases in the "no c such" exercise block: the converter emitted
+$f(x)={(x-1)}^{10}$ and $f(x)={(x-1)}^{9}$, wrapping the already-
+parenthesized base in an extra math group. TeX's exponent operator
+attaches to the single preceding token/group regardless, so the extra
+braces render identically to $f(x)=(x-1)^{10}$ and $f(x)=(x-1)^{9}$;
+the braces are dropped as noise, matching the plain parenthesized-base
+style used elsewhere in this file.
+
+--- /tmp/raw.tex
++++ vol1-4-4-the-mean-value-theorem.tex
+@@ -44,8 +44,8 @@
+ \item $f(x)=\sin(\pi x)$
+ \item $f(x)=\cos(2\pi x)$
+ \item $f(x)=1+x+x^{2}$
+-\item $f(x)={(x-1)}^{10}$
+-\item $f(x)={(x-1)}^{9}$
++\item $f(x)=(x-1)^{10}$
++\item $f(x)=(x-1)^{9}$
+ \end{enumerate}
+
+ For the following exercises, show there is no $c$ such that $f(1)-f(-1)=f'(c)(2)$. Explain why the Mean Value Theorem does not apply over the interval $[-1,1]$.
+@@ -54,7 +54,7 @@
+ \item $f(x)=|x-\frac{1}{2}|$
+ \item $f(x)=\frac{1}{x^{2}}$
+ \item $f(x)=\sqrt{|x|}$
+-\item $f(x)=\lfloor x\rfloor$ (Hint: This is called the floor function and it is defined so that $f(x)$ is the largest integer less than or equal to $x.)$
++\item $f(x)=\lfloor x\rfloor$ (Hint: This is called the floor function and it is defined so that $f(x)$ is the largest integer less than or equal to $x$.)
+ \end{enumerate}
+
+ For the following exercises, determine whether the Mean Value Theorem applies for the functions over the given interval $[a,b]$. Justify your answer.

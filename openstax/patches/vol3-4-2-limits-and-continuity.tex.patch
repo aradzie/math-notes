@@ -1,0 +1,65 @@
+Manual review corrections (first review pass), none upstream-source-specific --
+these are typographic/LaTeX-quality fixes to the converter's otherwise
+faithful transcription:
+
+- Exercise 3: a sentence comma was trapped inside the closing math span
+  (`$x\text{-axis,}$`), producing OpenStax's default over-wide "Relation"-
+  style spacing before the comma; moved outside to `$x\text{-axis}$,`.
+- Two instances of "$x\,\text{and}\,y$" (the indicated-values intro and the
+  hint before exercise 35) manually glued two variables and the word "and"
+  into one math span with ad-hoc `\,` spacing; unwrapped to plain prose
+  "$x$ and $y$", consistent with this repo's convention of keeping English
+  outside math mode.
+- Exercise 21's (a)/(b) sub-list wrote "Along the x-axis"/"Along the y-axis"
+  as bare prose variables, inconsistent with the parallel sub-list under
+  exercise 18 in the same file, which correctly uses `$x\text{-axis}$`/
+  `$y\text{-axis}$`; brought into line with that sibling exercise.
+- Exercise 37's piecewise continuity definition used a non-stretchy
+  `\{\begin{matrix}...\end{matrix}\}` — plain-height braces around a
+  multi-line case split, with a stray unmatched trailing `\}` besides. Since
+  amsmath is already loaded by exercises.cls and this repo's own convention
+  for piecewise functions (see vol2-3-7-improper-integrals.tex and
+  vol3-5-2-double-integrals-over-general-regions.tex) is
+  `\begin{cases}...\end{cases}`, switched to that: automatic height-matched
+  single left brace, left-aligned cases, no orphaned closing brace.
+
+--- /tmp/raw.tex
++++ vol3-4-2-limits-and-continuity.tex
+@@ -17,10 +17,10 @@
+ \begin{enumerate}[start=1]
+ \item $\lim_{(x,y)\to(1,2)}x$
+ \item $\lim_{(x,y)\to(1,2)}\frac{5x^{2}y}{x^{2}+y^{2}}$
+-\item Show that the limit $\lim_{(x,y)\to(0,0)}\frac{5x^{2}y}{x^{2}+y^{2}}$ exists and is the same along the paths: $y\text{-axis}$ and $x\text{-axis,}$ and along $y=x$.
++\item Show that the limit $\lim_{(x,y)\to(0,0)}\frac{5x^{2}y}{x^{2}+y^{2}}$ exists and is the same along the paths: $y\text{-axis}$ and $x\text{-axis}$, and along $y=x$.
+ \end{enumerate}
+ 
+-For the following exercises, evaluate the limits at the indicated values of $x\,\text{and}\,y$. If the limit does not exist, state this and explain why the limit does not exist.
++For the following exercises, evaluate the limits at the indicated values of $x$ and $y$. If the limit does not exist, state this and explain why the limit does not exist.
+ 
+ \begin{enumerate}[resume]
+ \item $\lim_{(x,y)\to(0,0)}\frac{4x^{2}+10y^{2}+4}{4x^{2}-10y^{2}+6}$
+@@ -75,8 +75,8 @@
+ \item Evaluate $\lim_{(x,y)\to(0,0)}\frac{xy+y^{3}}{x^{2}+y^{2}}$ using the results of previous problem.
+ \item $\lim_{(x,y)\to(0,0)}\frac{x^{2}y}{x^{4}+y^{2}}$
+ \begin{enumerate}[label=(\alph*)]
+-  \item Along the x-axis $(y=0)$
+-  \item Along the y-axis $(x=0)$
++  \item Along the $x\text{-axis}$ $(y=0)$
++  \item Along the $y\text{-axis}$ $(x=0)$
+   \item Along the path $y=x^{2}$
+ \end{enumerate}
+ \item Evaluate $\lim_{(x,y)\to(0,0)}\frac{x^{2}y}{x^{4}+y^{2}}$ using the results of previous problem.
+@@ -96,11 +96,11 @@
+ \begin{enumerate}[resume]
+ \item $f(x,y)=\frac{x^{2}y}{x^{2}+y^{2}}$
+ \item $f(x,y)=\frac{\sin(x^{2}+y^{2})}{x^{2}+y^{2}}$
+-\item Determine whether $f\left( x,y \right)$ is continuous at $\left( 0,0 \right)$. $f(x,y)=\{\begin{matrix}\frac{x^{2}y}{x^{2}+y^{2}} & \text{if}\,(x,y)\ne(0,0) \\ 0 & \text{if}\,(x,y)=(0,0)\end{matrix}\}$
++\item Determine whether $f\left( x,y \right)$ is continuous at $\left( 0,0 \right)$. $f(x,y)=\begin{cases}\dfrac{x^{2}y}{x^{2}+y^{2}} & \text{if }(x,y)\ne(0,0) \\ 0 & \text{if }(x,y)=(0,0)\end{cases}$
+ \item Determine whether $g(x,y)=\frac{x^{2}-y^{2}}{x^{2}+y^{2}}$ is continuous at $(0,0)$.
+ \item Create a plot using graphing software to determine where the limit does not exist. Find where in the coordinate plane $f(x,y)=\frac{1}{x^{2}-y}$ is continuous.
+ \item Determine the region of the $xy\text{-plane}$ in which the function $g(x,y)=\arctan(\frac{xy^{2}}{x+y})$ is continuous. Use technology to support your conclusion.
+-\item Determine the region of the $xy\text{-plane}$ in which $f(x,y)=\ln(x^{2}+y^{2}-1)$ is continuous. Use technology to support your conclusion. (Hint: Choose the range of values for $x\,\text{and}\,y$ carefully!)
++\item Determine the region of the $xy\text{-plane}$ in which $f(x,y)=\ln(x^{2}+y^{2}-1)$ is continuous. Use technology to support your conclusion. (Hint: Choose the range of values for $x$ and $y$ carefully!)
+ \item At what points in space is $g(x,y,z)=x^{2}+y^{2}-2z^{2}$ continuous?
+ \item At what points in space is $g(x,y,z)=\frac{1}{x^{2}+z^{2}-1}$ continuous?
+ \item Show that $\lim_{(x,y)\to(0,0)}\frac{1}{x^{2}+y^{2}}$ does not exist at $(0,0)$ by plotting the graph of the function.

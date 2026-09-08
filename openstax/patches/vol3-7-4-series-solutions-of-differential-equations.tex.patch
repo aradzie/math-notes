@@ -1,0 +1,19 @@
+Separate the equations and initial conditions in Exercises 11 and 12 into
+individual math spans with prose conjunctions, and typeset the Bessel order
+as mathematics in Exercise 13.
+
+--- /tmp/raw.tex
++++ vol3-7-4-series-solutions-of-differential-equations.tex
+@@ -25,9 +25,9 @@
+ \item $y''-xy'-y=0$
+ \item $(1+x^{2})y''-4xy'+6y=0$
+ \item $x^{2}y''-xy'-3y=0$
+-\item $y''-8y'=0,\,y(0)=-2,\,\,y'(0)=10$
+-\item $y''-2xy=0,\,y(0)=1,\,\,y'(0)=-3$
+-\item The differential equation $x^{2}y''+xy'+(x^{2}-1)y=0$ is a Bessel equation of order 1. Use a power series of the form $y=\sum_{n=0}^{\infty}a_{n}x^{n}$ to find the solution.
++\item $y''-8y'=0$, $y(0)=-2$, and $y'(0)=10$
++\item $y''-2xy=0$, $y(0)=1$, and $y'(0)=-3$
++\item The differential equation $x^{2}y''+xy'+(x^{2}-1)y=0$ is a Bessel equation of order $1$. Use a power series of the form $y=\sum_{n=0}^{\infty}a_{n}x^{n}$ to find the solution.
+ \end{enumerate}
+ 
+ \end{document}

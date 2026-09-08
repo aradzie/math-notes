@@ -1,0 +1,17 @@
+One exercise ("$x=e^{t},\,y=e^{2t}+1$") was the only item in this list left
+as a fused, comma-only math span; every sibling item is either
+\begin{matrix}-formatted or, like the very next item, split into two
+comma-joined spans ("$x=6\sin(2\theta)$, $y=4\cos(2\theta)$"). Split to
+match: "$x=e^{t}$, $y=e^{2t}+1$".
+
+--- /tmp/raw.tex
++++ vol3-1-1-parametric-equations.tex
+@@ -39,7 +39,7 @@
+ For the following exercises, sketch the parametric equations by eliminating the parameter. Indicate any asymptotes of the graph.
+
+ \begin{enumerate}[resume]
+-\item $x=e^{t},\,y=e^{2t}+1$
++\item $x=e^{t}$, $y=e^{2t}+1$
+ \item $x=6\sin(2\theta)$, $y=4\cos(2\theta)$
+ \item $\begin{matrix}x=\cos \theta, & y=2\sin(2\theta)\end{matrix}$
+ \item $\begin{matrix}x=3-2\cos \theta, & y=-5+3\sin \theta \end{matrix}$

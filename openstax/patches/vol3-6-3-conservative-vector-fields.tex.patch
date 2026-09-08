@@ -1,0 +1,146 @@
+Manual review pass. Corrections:
+
+- Bare single-letter variable names in ordinary prose (exercise 1's "F" and
+  "D", and "F"/"G" naming the two named vector fields in the C1/C2 problem
+  group) were left as plain upright text by the converter instead of math
+  mode. Hand-fixed to wrap each in $...$.
+
+- Exercise 2 joined "a" and "b" across a single math span with
+  \text{to} and manual \, spacing ($\mathbf{a}\,\text{to}\,\mathbf{b}$)
+  instead of keeping "to" as ordinary prose between two separate math spans.
+  Hand-fixed to "$\mathbf{a}$ to $\mathbf{b}$".
+
+- Exercises 6 and 7 carried an empty superscript on the integral's lower
+  limit ($\int_{C}^{}$), a redundant leftover from the MathML conversion.
+  Hand-removed.
+
+- Two curve labels with subscripts (C1/C2 introduced before exercise 27's
+  group, and again where exercises 37-38 refer to F/G "over C1"/"over C2")
+  were left as fragmented prose-plus-math, e.g. "C$_{1}$", instead of one
+  math span. Hand-joined into $C_{1}$/$C_{2}$, matching how the file
+  otherwise treats subscripted symbols (e.g. C$_{1}$'s own r$_1$/r$_2$
+  neighbors elsewhere are figure-description labels, not math, and are
+  left alone).
+
+- Exercise 12 ("2y dx + 2x dy") and the differential in exercise 13's second
+  term omitted the \, spacing before "dy" that the file uses consistently
+  elsewhere ("2y\,dx" but "2xdy"; "]dy" instead of "]\,dy"). Hand-added the
+  missing \,.
+
+- Exercise 14's potential function had an extra brace around the last
+  term's coefficient, {10y}^{2}, which changes the typeset meaning to
+  (10y)^2 = 100y^2 rather than the intended 10y^2. Hand-removed the
+  erroneous braces.
+
+- Exercises 44 and 45 ("Calculate the line integral of F over C1", etc.)
+  wrote both the field name and curve label in bare prose; joined with the
+  F/G and C1/C2 fixes above.
+
+- Exercises 44-45's two \dr integrals used unbolded "dr" ($\cdot\,dr$)
+  instead of the file's consistent $d\mathbf{r}$ for the differential of a
+  vector-valued position function. Hand-fixed both.
+
+- Exercise 47's denominator carried a redundant outer brace pair around an
+  already-parenthesized, already-superscripted group:
+  \frac{...}{{(y^{2}+1)}^{2}}. A superscript attaches to the immediately
+  preceding atom regardless of grouping, so "(y^{2}+1)^{2}" and
+  "{(y^{2}+1)}^{2}" typeset identically, and the extra braces are noisier
+  than the matching exponentiated-parenthetical elsewhere in this file.
+  Hand-simplified to the braceless form.
+
+- Exercise 49 (Earth/Sun gravitation problem) omitted the \, spacing before
+  units ("10^{27}\text{g}", "10^{-8}\text{cm}", "10^{12}\text{cm}") that the
+  same exercise's own last sentence ("$1\,\text{cm}$") and this file's unit
+  conventions elsewhere use consistently. Hand-added the missing \,.
+
+- Exercise 56 ("cos x cos y dx - sin x sin y dy") omitted the \, spacing
+  before its second differential ("sin ydy" ran the variable and
+  differential together), inconsistent with the \, before the first
+  differential in the same integral. Hand-added the missing \,.
+
+All corrections are typographic/notational; no exercise's mathematical
+content, numbering, or intended answer was changed. Verified several fields
+in this section by hand (conservative vs. not) against the stated exercise
+type; found no cases where the stated field disagreed with its own
+exactness/curl condition beyond the deliberately mixed conservative/non-
+conservative examples the source already contains.
+
+---
+--- /tmp/raw.tex
++++ vol3-6-3-conservative-vector-fields.tex
+@@ -12,13 +12,13 @@
+ \maketitle
+ 
+ \begin{enumerate}[start=1]
+-\item True or False? If vector field F is conservative on the open and connected region D, then line integrals of F are path independent on D, regardless of the shape of D.
+-\item True or False? Function $\mathbf{r}(t)=\mathbf{a}+t(\mathbf{b}-\mathbf{a})$, where $0\le t\le1$, parameterizes the straight-line segment from $\mathbf{a}\,\text{to}\,\mathbf{b}$.
++\item True or False? If vector field $\mathbf{F}$ is conservative on the open and connected region $D$, then line integrals of $\mathbf{F}$ are path independent on $D$, regardless of the shape of $D$.
++\item True or False? Function $\mathbf{r}(t)=\mathbf{a}+t(\mathbf{b}-\mathbf{a})$, where $0\le t\le1$, parameterizes the straight-line segment from $\mathbf{a}$ to $\mathbf{b}$.
+ \item True or False? Vector field $\mathbf{F}(x,y,z)=(y\sin z)\mathbf{i}+(x\sin z)\mathbf{j}+(xy\cos z)\mathbf{k}$ is conservative.
+ \item True or False? Vector field $\mathbf{F}(x,y,z)=y\mathbf{i}+(x+z)\mathbf{j}-y\mathbf{k}$ is conservative.
+ \item Verify the Fundamental Theorem of Line Integrals for $\int_{C}\mathbf{F}\cdot d\mathbf{r}$ by computing the integral using a parameterization and, separately, by finding a potential function for the case when $\mathbf{F}(x,y)=(2x+2y)\mathbf{i}+(2x+2y)\mathbf{j}$ and C is a portion of circle $x^{2}+y^{2}=25$ oriented counterclockwise from (5, 0) to (3, 4).
+-\item \techrequired Find $\int_{C}^{}\mathbf{F}\cdot d\mathbf{r}$, where $\mathbf{F}(x,y)=(ye^{xy}+\cos x)\mathbf{i}+(xe^{xy}+\frac{1}{y^{2}+1})\mathbf{j}$ and C is a portion of curve $y=\sin x$ from $x=0$ to $x=\frac{\pi}{2}$.
+-\item \techrequired Evaluate line integral $\int_{C}^{}\mathbf{F}\cdot d\mathbf{r}$, where $\mathbf{F}(x,y)=(e^{x}\sin y-y)\mathbf{i}+(e^{x}\cos y-x-2)\mathbf{j}$, and C is the path given by $\mathbf{r}(t)=[t^{3}\sin \frac{\pi t}{2}]\mathbf{i}-[\frac{\pi}{2}\cos(\frac{\pi t}{2}+\frac{\pi}{2})]\mathbf{j}$ for $0\le t\le1$.
++\item \techrequired Find $\int_{C}\mathbf{F}\cdot d\mathbf{r}$, where $\mathbf{F}(x,y)=(ye^{xy}+\cos x)\mathbf{i}+(xe^{xy}+\frac{1}{y^{2}+1})\mathbf{j}$ and C is a portion of curve $y=\sin x$ from $x=0$ to $x=\frac{\pi}{2}$.
++\item \techrequired Evaluate line integral $\int_{C}\mathbf{F}\cdot d\mathbf{r}$, where $\mathbf{F}(x,y)=(e^{x}\sin y-y)\mathbf{i}+(e^{x}\cos y-x-2)\mathbf{j}$, and C is the path given by $\mathbf{r}(t)=[t^{3}\sin \frac{\pi t}{2}]\mathbf{i}-[\frac{\pi}{2}\cos(\frac{\pi t}{2}+\frac{\pi}{2})]\mathbf{j}$ for $0\le t\le1$.
+ \end{enumerate}
+ 
+ For the following exercises, determine whether the vector field is conservative and, if it is, find the potential function.
+@@ -36,9 +36,9 @@
+ 
+ \begin{enumerate}[resume]
+ \item $\int_{C}(y\mathbf{i}+x\mathbf{j})\cdot d\mathbf{r}$, where C is any path from (0, 0) to (2, 4)
+-\item $\int_{C}(2y\,dx+2xdy)$, where C is the line segment from (0, 0) to (4, 4)
+-\item \techrequired $\int_{C}[\arctan \frac{y}{x}-\frac{xy}{x^{2}+y^{2}}]\,dx+[\frac{x^{2}}{x^{2}+y^{2}}+e^{-y}(1-y)]dy$, where C is any smooth curve from (1, 1) to $(-1,2)$
+-\item Find the conservative vector field for the potential function \[f(x,y)=5x^{2}+3xy+{10y}^{2}.\]
++\item $\int_{C}(2y\,dx+2x\,dy)$, where C is the line segment from (0, 0) to (4, 4)
++\item \techrequired $\int_{C}[\arctan \frac{y}{x}-\frac{xy}{x^{2}+y^{2}}]\,dx+[\frac{x^{2}}{x^{2}+y^{2}}+e^{-y}(1-y)]\,dy$, where C is any smooth curve from (1, 1) to $(-1,2)$
++\item Find the conservative vector field for the potential function \[f(x,y)=5x^{2}+3xy+10y^{2}.\]
+ \end{enumerate}
+ 
+ For the following exercises, determine whether the vector field is conservative and, if so, find a potential function.
+@@ -65,7 +65,7 @@
+ \item Evaluate $\int_{C}\nabla f\cdot d\mathbf{r}$, where $f(x,y,\,z)=xyz^{2}-yz$ and C has initial point (1, 2, 3) and terminal point (3, 5, 1).
+ \end{enumerate}
+ 
+-For the following exercises, let $\mathbf{F}(x,y)=2xy^{2}\mathbf{i}+(2yx^{2}+2y)\mathbf{j}$ and $\mathbf{G}(x,y)=(y+x)\mathbf{i}+(y-x)\mathbf{j}$, and let C$_{1}$ be the curve consisting of the circle of radius 2, centered at the origin and oriented counterclockwise, and C$_{2}$ be the curve consisting of a line segment from (0, 0) to (1, 1) followed by a line segment from (1, 1) to (3, 1).
++For the following exercises, let $\mathbf{F}(x,y)=2xy^{2}\mathbf{i}+(2yx^{2}+2y)\mathbf{j}$ and $\mathbf{G}(x,y)=(y+x)\mathbf{i}+(y-x)\mathbf{j}$, and let $C_{1}$ be the curve consisting of the circle of radius 2, centered at the origin and oriented counterclockwise, and $C_{2}$ be the curve consisting of a line segment from (0, 0) to (1, 1) followed by a line segment from (1, 1) to (3, 1).
+ 
+ 
+ \textit{[Figure: A vector fields in two dimensions is shown. It has short arrows close to the origin. Longer arrows are in the upper right corner of quadrant 1 and somewhat in the bottom right of quadrant 4, upper left of quadrant 2, and lower left of quadrant 3. The arrows all point away from the origin at about 90-degrees in their respective quadrants. A unit circle with center at the origin is drawn as C\_1. Curve C\_2 connects the origin, (1,1), and (3,1) with arrowheads pointing in that order.]}
+@@ -74,26 +74,26 @@
+ \textit{[Figure: A vector field has the same curves C\_1 and C\_2. However, the arrows are different. Here, the arrows spiral out from the origin in a clockwise manner. The further away they are from the origin, the longer they become. They are largely horizontal in quadrants 1 and 3 and largely vertical in quadrants 2 and 4.]}
+ 
+ \begin{enumerate}[resume]
+-\item Calculate the line integral of F over C$_{1}$.
+-\item Calculate the line integral of G over C$_{1}$.
+-\item Calculate the line integral of F over C$_{2}$.
+-\item Calculate the line integral of G over C$_{2}$.
+-\item \techrequired Let $\mathbf{F}(x,y,z)=x^{2}\mathbf{i}+z\sin(yz)\mathbf{j}+y\sin(yz)\mathbf{k}$. Calculate $\int_{C}\mathbf{F}\cdot \,dr$, where C is a path from $A=(0,0,1)$ to $B=(3,1,2)$.
+-\item \techrequired Find line integral $\int_{C}\mathbf{F}\cdot \,dr$ of vector field $\mathbf{F}(x,y,z)=3x^{2}z\mathbf{i}+z^{2}\mathbf{j}+(x^{3}+2yz)\mathbf{k}$ along curve C parameterized by $\mathbf{r}(t)=(\frac{\ln t}{\ln 2})\mathbf{i}+t^{3/2}\mathbf{j}+t\cos(\pi t)\mathbf{k},\,1\le t\le4$.
++\item Calculate the line integral of $\mathbf{F}$ over $C_{1}$.
++\item Calculate the line integral of $\mathbf{G}$ over $C_{1}$.
++\item Calculate the line integral of $\mathbf{F}$ over $C_{2}$.
++\item Calculate the line integral of $\mathbf{G}$ over $C_{2}$.
++\item \techrequired Let $\mathbf{F}(x,y,z)=x^{2}\mathbf{i}+z\sin(yz)\mathbf{j}+y\sin(yz)\mathbf{k}$. Calculate $\int_{C}\mathbf{F}\cdot \,d\mathbf{r}$, where C is a path from $A=(0,0,1)$ to $B=(3,1,2)$.
++\item \techrequired Find line integral $\int_{C}\mathbf{F}\cdot \,d\mathbf{r}$ of vector field $\mathbf{F}(x,y,z)=3x^{2}z\mathbf{i}+z^{2}\mathbf{j}+(x^{3}+2yz)\mathbf{k}$ along curve C parameterized by $\mathbf{r}(t)=(\frac{\ln t}{\ln 2})\mathbf{i}+t^{3/2}\mathbf{j}+t\cos(\pi t)\mathbf{k},\,1\le t\le4$.
+ \end{enumerate}
+ 
+ For the following exercises, show that the following vector fields are conservative by using a computer. Calculate $\int_{C}\mathbf{F}\cdot d\mathbf{r}$ for the given curve.
+ 
+ \begin{enumerate}[resume]
+ \item $\mathbf{F}=(xy^{2}+3x^{2}y)\mathbf{i}+(x+y)x^{2}\mathbf{j}$; C is the curve consisting of line segments from $(1,1)$ to $(0,2)$ to $(3,0)$.
+-\item $\mathbf{F}=\frac{2x}{y^{2}+1}\mathbf{i}-\frac{2y(x^{2}+1)}{{(y^{2}+1)}^{2}}\mathbf{j}$; C is parameterized by $x=t^{3}-1,y=t^{6}-t,0\le t\le1$.
++\item $\mathbf{F}=\frac{2x}{y^{2}+1}\mathbf{i}-\frac{2y(x^{2}+1)}{(y^{2}+1)^{2}}\mathbf{j}$; C is parameterized by $x=t^{3}-1,y=t^{6}-t,0\le t\le1$.
+ \item \techrequired $\mathbf{F}=[\cos(xy^{2})-xy^{2}\sin(xy^{2})]\mathbf{i}-2x^{2}y\sin(xy^{2})\mathbf{j}$; C is curve $\mathbf{r}(t)=\left\langle e^{t},e^{t+1} \right\rangle,-1\le t\le0$.
+-\item The mass of Earth is approximately $6\times 10^{27}\text{g}$ and that of the Sun is 330,000 times as much. The gravitational constant is $6.7\times 10^{-8}\text{cm}^{3}/(\text{s}^{2}\cdot \text{g})$. The distance of Earth from the Sun is about $1.5\times 10^{12}\text{cm}$. Compute, approximately, the work necessary to increase the distance of Earth from the Sun by $1\,\text{cm}$.
++\item The mass of Earth is approximately $6\times 10^{27}\,\text{g}$ and that of the Sun is 330,000 times as much. The gravitational constant is $6.7\times 10^{-8}\,\text{cm}^{3}/(\text{s}^{2}\cdot \text{g})$. The distance of Earth from the Sun is about $1.5\times 10^{12}\,\text{cm}$. Compute, approximately, the work necessary to increase the distance of Earth from the Sun by $1\,\text{cm}$.
+ \item \techrequired Let $\mathbf{F}=(e^{x}\sin y)\mathbf{i}+(e^{x}\cos y)\mathbf{j}+z^{2}\mathbf{k}$. Evaluate the integral $\int_{C}\mathbf{F}\cdot \,d\mathbf{r}$, where $C$ is the curve $\mathbf{r}(t)=\left\langle \sqrt{t},t^{3},e^{\sqrt{t}} \right\rangle,0\le t\le1$.
+ \item \techrequired Let $\mathbf{r}:[1,2]\to \mathbb{R}^{2}$ be given by $x=e^{t-1},y=\sin(\frac{\pi}{t})$. Use a computer to compute the integral $\int_{C}\mathbf{F}\cdot d\mathbf{r}=\int_{C}2x\cos y\,dx-x^{2}\sin y\,dy$, where $\mathbf{F}=(2x\cos y)\mathbf{i}-(x^{2}\sin y)\mathbf{j}$.
+ \item \techrequired Use a computer algebra system to find the mass of a wire that lies along curve $\mathbf{r}(t)=(t^{2}-1)\mathbf{j}+2t\mathbf{k},0\le t\le1$, if the density is $\frac{3}{2}t$.
+ \item Find the circulation and flux of field $\mathbf{F}=-y\mathbf{i}+x\mathbf{j}$ around and across the closed semicircular path that consists of semicircular arch $\mathbf{r}_{1}(t)=(a\cos t)\mathbf{i}+(a\sin t)\mathbf{j},0\le t\le \pi$, followed by line segment $\mathbf{r}_{2}(t)=t\mathbf{i},-a\le t\le a$. \\ \textit{[Figure: A vector field in two dimensions. The arrows are shorter the closer they are to the origin. They surround the origin in a counterclockwise radial pattern. The outline of the circle has counterclockwise arrows. The upper half of a circle with radius 2 and center at the origin is drawn. (-2,0) and (2,0) are labeled as --a and a, respectively, and the curve is labeled r\_1.]}
+-\item Compute $\int_{C}\cos x\cos y\,dx-\sin x\sin ydy$, where $\mathbf{c}(t)=\left\langle t,t^{2} \right\rangle,0\le t\le1$.
++\item Compute $\int_{C}\cos x\cos y\,dx-\sin x\sin y\,dy$, where $\mathbf{c}(t)=\left\langle t,t^{2} \right\rangle,0\le t\le1$.
+ \item Complete the proof of The Path Independence Test for Conservative Fields by showing that $f_{y}=Q(x,y)$.
+ \end{enumerate}
+ 

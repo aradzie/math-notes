@@ -1,0 +1,95 @@
+% OpenStax Calculus Volume 3 -- Section 6.4 Exercises: Green’s Theorem
+% Exercises reproduced from OpenStax, licensed under CC BY 4.0.
+% Source: https://openstax.org/books/calculus-volume-3/pages/6-4-greens-theorem
+\documentclass{exercises}
+\title{OpenStax Calculus Volume 3}
+\subtitle{Section 6.4 Exercises: Green’s Theorem}
+\sourceurl{https://openstax.org/books/calculus-volume-3/pages/6-4-greens-theorem}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+
+For the following exercises, evaluate the line integrals by applying Green's theorem.
+
+\begin{enumerate}[start=1]
+\item $\int_{C}^{}2xy\,dx+(x+y)dy$, where C is the path from (0, 0) to (1, 1) along the graph of $y=x^{3}$ and from (1, 1) to (0, 0) along the graph of $y=x$ oriented in the counterclockwise direction
+\item $\int_{C}^{}2xy\,dx+(x+y)dy$, where C is the boundary of the region lying between the graphs of $y=0$ and $y=4-x^{2}$ oriented in the counterclockwise direction
+\item $\int_{C}^{}2\arctan(\frac{y}{x})\,dx+\ln(x^{2}+y^{2})dy$, where C is defined by $x=4+2\cos \theta,y=4\sin \theta$ oriented in the counterclockwise direction
+\item $\int_{C}^{}\sin x\cos y\,dx+(xy+\cos x\sin y)dy$, where C is the boundary of the region lying between the graphs of $y=x$ and $y=\sqrt{x}$ oriented in the counterclockwise direction
+\item $\int_{C}^{}xy\,dx+(x+y)dy$, where C is the boundary of the region lying between the graphs of $x^{2}+y^{2}=1$ and $x^{2}+y^{2}=9$ oriented in the counterclockwise direction
+\item $\int_{C}(-y\,dx+xdy)$, where C consists of line segment C$_{1}$ from $(-1,0)$ to (1, 0), followed by the semicircular arc C$_{2}$ from (1, 0) back to (--1, 0)
+\end{enumerate}
+
+For the following exercises, use Green's theorem.
+
+\begin{enumerate}[resume]
+\item Let C be the curve consisting of line segments from (0, 0) to (1, 1) to (0, 1) and back to (0, 0). Find the value of $\int_{C}xy\,dx+\sqrt{y^{2}+1}dy$.
+\item Evaluate line integral $\int_{C}xe^{-2x}\,dx+(x^{4}+2x^{2}y^{2})dy$, where C is the boundary of the region between circles $x^{2}+y^{2}=1$ and $x^{2}+y^{2}=4$, and is a positively oriented curve.
+\item Find the counterclockwise circulation of field $\mathbf{F}(x,y)=xy\mathbf{i}+y^{2}\mathbf{j}$ around and over the boundary of the region enclosed by curves $y=x^{2}$ and $y=x$ in the first quadrant and oriented in the counterclockwise direction. \\ \textit{[Figure: A vector field with focus on quadrant 1. A line is drawn from (0,0) to (1,1) according to function y=x, and a curve is also drawn according to the function y=x\textasciicircum{}2. The region enclosed between the two functions is shaded. The arrows closer to the origin are much smaller than those further away, particularly vertically. The arrows point up and away from the origin to the right in the part of quadrant 1 shown.]}
+\item Evaluate $\int_{C}y^{3}\,dx-x^{3}y^{2}dy$, where C is the positively oriented circle of radius 2 centered at the origin.
+\item Evaluate $\int_{C}y^{3}\,dx-x^{3}dy$, where C includes the two circles of radius 2 and radius 1 centered at the origin, both with positive orientation. \\ \textit{[Figure: A vector field in two dimensions. The arrows surround the origin in a clockwise circular motion. Those close to the origin are much smaller than those further away. A circle of radius 2 and a circle of radius 1 with centers at the origin is drawn in, and the region between the two is shaded.]}
+\item Calculate $\int_{C}-x^{2}y\,dx+xy^{2}dy$, where C is a circle of radius 2 centered at the origin and oriented in the counterclockwise direction.
+\item Calculate integral $\int_{C}2[y+x\sin(y)]\,dx+[x^{2}\cos(y)-3y^{2}]dy$ along triangle C with vertices (0, 0), (1, 0) and (1, 1), oriented counterclockwise, using Green's theorem.
+\item Evaluate integral $\int_{C}(x^{2}+y^{2})\,dx+2xydy$, where C is the curve that follows parabola $y=x^{2}\,\text{from}\,(0,0)\,\text{to}\,(2,4)$, then the line from (2, 4) to (2, 0), and finally the line from (2, 0) to (0, 0). \\ \textit{[Figure: A vector field in quadrant 1. The arrows are much smaller closer to the origin. They point up and away from the origin, with increasing slope the further they are to the right. The curve follows the parabola y=x\textasciicircum{}2 from the origin to (2,4), the line from (2,4) to (2,0), and the line from (2,0) to (0,0). The area under y=x\textasciicircum{}2 and below the parabola is shaded.]}
+\item Evaluate line integral $\int_{C}(y-\sin(y)\cos(y))\,dx+2x\sin^{2}(y)dy$, where C is oriented in a counterclockwise path around the region bounded by $x=-1,x=2,y=4-x^{2}$, and $y=x-2$. \\ \textit{[Figure: A vector field in two dimensions. The arrows are smaller the closer they are to the origin, particular vertically. Curve C follows a counterclockwise path around the region bounded by x=-1, x=2, y = 4-x\textasciicircum{}2, and y = x-2. The region is shaded.]}
+\end{enumerate}
+
+For the following exercises, use Green's theorem to find the area.
+
+\begin{enumerate}[resume]
+\item Find the area between ellipse $\frac{x^{2}}{9}+\frac{y^{2}}{4}=1$ and circle $x^{2}+y^{2}=25$.
+\item Find the area of the region enclosed by parametric equation \[p(\theta)=(\cos(\theta)-\cos^{2}(\theta))\mathbf{i}+(\sin(\theta)-\cos(\theta)\sin(\theta))\mathbf{j}\,\text{for}\,0\le \theta \le2\pi.\] \\ \textit{[Figure: A cardioid beginning at the origin, going through (0,1), (-2,0), (0,-1), and back to the origin.]}
+\item Find the area of the region bounded by hypocycloid $\mathbf{r}(t)=\cos^{3}(t)\mathbf{i}+\sin^{3}(t)\mathbf{j}$. The curve is parameterized by $t\in[0,2\pi]$.
+\item Find the area of a pentagon with vertices $(0,4),(4,1),(3,0),(-1,-1)$, and $(-2,2)$.
+\item Use Green's theorem to evaluate $\int_{C^{+}}(y^{2}+x^{3})\,dx+x^{4}dy$, where $C^{+}$ is the perimeter of square $[0,1]\times [0,1]$ oriented counterclockwise.
+\item Use Green's theorem to prove the area of a disk with radius $a$ is $A=\pi a^{2}$.
+\item Use Green's theorem to find the area of one loop of a four-leaf rose $r=3\sin 2\theta$. (Hint: $xdy-ydx=r^{2}d\theta$.)
+\item Use Green's theorem to find the area under one arch of the cycloid given by parametric plane $x=t-\sin t,y=1-\cos t,t\ge0$.
+\item Use Green's theorem to find the area of the region enclosed by curve \[\mathbf{r}(t)=t^{2}\mathbf{i}+(\frac{t^{3}}{3}-t)\mathbf{j},\,-\sqrt{3}\le t\le \sqrt{3}.\] \\ \textit{[Figure: A horizontal teardrop-shaped region symmetric about the x axis and a-intercepts at the origin and (3,0). The larger, curved end is at the origin, and the pointed end is at (3,0).]}
+\item \techrequired Verify Green's theorem by using a computer algebra system to evaluate the integral $\int_{C}xe^{y}\,dx+e^{x}dy$, where C is the circle given by $x^{2}+y^{2}=4$ and is oriented in the counterclockwise direction.
+\item Evaluate $\int_{C}(x^{2}y-2xy+y^{2})\,ds$, where C is the boundary of the unit square $0\le x\le1,\,0\le y\le1$, traversed counterclockwise. Use $ds\,=\,dx\,+\,dy$ for this exercise.
+\item Evaluate $\int_{C}^{}\frac{-(y+2)\,dx+(x-1)dy}{{(x-1)}^{2}+{(y+2)}^{2}}$, where C is any simple closed curve with an interior that does not contain point $(1,-2)$ traversed counterclockwise.
+\item Evaluate $\int_{C}^{}\frac{x\,dx+ydy}{x^{2}+y^{2}}$, where C is any piecewise, smooth simple closed curve enclosing the origin, traversed counterclockwise.
+\end{enumerate}
+
+For the following exercises, use Green's theorem to calculate the work done by force F on a particle that is moving counterclockwise around closed path C.
+
+\begin{enumerate}[resume]
+\item $\mathbf{F}(x,y)=xy\mathbf{i}+(x+y)\mathbf{j}$, $C:x^{2}+y^{2}=4$
+\item $\mathbf{F}(x,y)=(x^{3/2}-3y)\mathbf{i}+(6x+5\sqrt{y})\mathbf{j}$, C : boundary of a triangle with vertices (0, 0), (5, 0), and (0, 5)
+\item Evaluate $\int_{C}(2x^{3}-y^{3})\,dx+(x^{3}+y^{3})dy$, where C is a unit circle oriented in the counterclockwise direction.
+\item A particle starts at point $(-2,0)$, moves along the x-axis to (2, 0), and then travels along semicircle $y=\sqrt{4-x^{2}}$ to the starting point. Use Green's theorem to find the work done on this particle by force field $\mathbf{F}(x,y)=x\mathbf{i}+(x^{3}+3xy^{2})\mathbf{j}$.
+\item David and Sandra are skating on a frictionless pond in the wind. David skates on the inside, going along a circle of radius 2 in a counterclockwise direction. Sandra skates once around a circle of radius 3, also in the counterclockwise direction. Suppose the force of the wind at point $(x,y)$ is $\mathbf{F}(x,y)=(x^{2}y+10y)\mathbf{i}+(x^{3}+2xy^{2})\mathbf{j}$. Use Green's theorem to determine who does more work.
+\item Use Green's theorem to find the work done by force field $\mathbf{F}(x,y)=(3y-4x)\mathbf{i}+(4x-y)\mathbf{j}$ when an object moves once counterclockwise around ellipse $4x^{2}+y^{2}=4$.
+\item Use Green's theorem to evaluate line integral $\int_{C}e^{2x}\sin 2y\,dx+e^{2x}\cos 2ydy$, where C is ellipse $9{(x-1)}^{2}+4{(y-3)}^{2}=36$ oriented counterclockwise.
+\item Evaluate line integral $\int_{C}y^{2}\,dx+x^{2}dy$, where C is the boundary of a triangle with vertices $(0,0),(1,1),\,\text{and}\,(1,0)$, with the counterclockwise orientation.
+\item Use Green's theorem to evaluate line integral $\int_{C}\mathbf{h}\cdot d\mathbf{r}$ if $\mathbf{h}(x,y)=e^{y}\mathbf{i}-\sin \pi x\mathbf{j}$, where C is a triangle with vertices (1, 0), (0, 1), and (--1, 0) traversed counterclockwise.
+\item Use Green's theorem to evaluate line integral $\int_{C}^{}\sqrt{1+x^{3}}\,dx+2xydy$ where C is a triangle with vertices (0, 0), (1, 0), and (1, 3) oriented clockwise.
+\item Use Green's theorem to evaluate line integral $\int_{C}^{}x^{2}y\,dx-xy^{2}dy$ where C is a circle $x^{2}+y^{2}=4$ oriented counterclockwise.
+\item Use Green's theorem to evaluate line integral $\int_{C}^{}(3y-e^{\sin x})\,dx+(7x+\sqrt{y^{4}+1})dy$ where C is circle $x^{2}+y^{2}=9$ oriented in the counterclockwise direction.
+\item Use Green's theorem to evaluate line integral $\int_{C}^{}(3x-5y)\,dx+(x-6y)dy$, where C is ellipse $\frac{x^{2}}{4}+y^{2}=1$ and is oriented in the counterclockwise direction. \\ \textit{[Figure: A horizontal oval oriented counterclockwise with vertices at (-2,0), (0,-1), (2,0), and (0,1). The region enclosed is shaded.]}
+\item Let C be a triangular closed curve from (0, 0) to (1, 0) to (1, 1) and finally back to (0, 0). Let $\mathbf{F}(x,y)=4y\mathbf{i}+6x^{2}\mathbf{j}$. Use Green's theorem to evaluate $\int_{C}\mathbf{F}\cdot d\mathbf{r}$.
+\item Use Green's theorem to evaluate line integral $\int_{C}y\,dx-xdy$, where C is circle $x^{2}+y^{2}=a^{2}$ oriented in the clockwise direction.
+\item Use Green's theorem to evaluate line integral $\int_{C}(y+x)\,dx+(x+\sin y)dy$, where C is any smooth simple closed curve joining the origin to itself oriented in the counterclockwise direction.
+\item Use Green's theorem to evaluate line integral $\int_{C}(y-\ln(x^{2}+y^{2}))\,dx+(2\arctan \frac{y}{x})dy$, where C is the positively oriented circle ${(x-2)}^{2}+{(y-3)}^{2}=1$.
+\item Use Green's theorem to evaluate $\int_{C}xy\,dx+x^{3}y^{3}dy$, where C is a triangle with vertices (0, 0), (1, 0), and (1, 2) with positive orientation.
+\item Use Green's theorem to evaluate line integral $\int_{C}^{}\sin y\,dx+x\cos ydy$, where C is ellipse $x^{2}+xy+y^{2}=1$ oriented in the counterclockwise direction.
+\item Let $\mathbf{F}(x,y)=\left(\cos(x^{5})-\frac{1}{3}y^{3}\right)\mathbf{i}+\frac{1}{3}x^{3}\mathbf{j}$. Find the counterclockwise circulation $\int_{C}\mathbf{F}\cdot d\mathbf{r}$, where C is a curve consisting of the line segment joining $(-2,0)\,\text{and}\,(-1,0)$, half circle $y=\sqrt{1-x^{2}}$, the line segment joining (1, 0) and (2, 0), and half circle $y=\sqrt{4-x^{2}}$.
+\item Use Green's theorem to evaluate line integral $\int_{C}^{}\sin(x^{3})\,dx+2ye^{x^{2}}dy$, where C is a triangular closed curve that connects the points (0, 0), (2, 2), and (0, 2) counterclockwise.
+\item Let C be the boundary of square $0\le x\le \pi,\,0\le y\le \pi$, traversed counterclockwise. Use Green's theorem to find $\int_{C}^{}\sin(x+y)\,dx+\cos(x+y)dy$.
+\item Use Green's theorem to evaluate line integral $\int_{C}^{}\mathbf{F}\cdot d\mathbf{r}$, where $\mathbf{F}(x,y)=(y^{2}-x^{2})\mathbf{i}+(x^{2}+y^{2})\mathbf{j}$, and C is a triangle bounded by $y=0,\,x=3,\,\text{and}\,y=x$, oriented counterclockwise.
+\item Use Green's Theorem to evaluate integral $\int_{C}^{}\mathbf{F}\cdot d\mathbf{r}$, where $\mathbf{F}(x,y)=(xy^{2})\mathbf{i}+x\mathbf{j}$, and C is a unit circle oriented in the counterclockwise direction.
+\item Use Green's theorem in a plane to evaluate line integral $\int_{C}(xy+y^{2})\,dx+x^{2}dy$, where C is a closed curve of a region bounded by $y=x\,\text{and}\,y=x^{2}$ oriented in the counterclockwise direction.
+\item Calculate the outward flux of $\mathbf{F}=-x\mathbf{i}+2y\mathbf{j}$ over a square with corners $(\pm1,\pm1)$, where the unit normal is outward pointing and oriented in the counterclockwise direction.
+\item \techrequired Let C be circle $x^{2}+y^{2}=4$ oriented in the counterclockwise direction. Evaluate $\int_{C}[(3y-e^{\tan^{-1}x})\,dx+(7x+\sqrt{y^{4}+1})dy]$ using a computer algebra system.
+\item Find the flux of field $\mathbf{F}=-x\mathbf{i}+y\mathbf{j}$ across $x^{2}+y^{2}=16$ oriented in the counterclockwise direction.
+\item Let $\mathbf{F}=(y^{2}-x^{2})\mathbf{i}+(x^{2}+y^{2})\mathbf{j}$, and let C be a triangle bounded by $y=0,x=3$, and $y=x$ oriented in the counterclockwise direction. Find the outward flux of F through C.
+\item \techrequired Let C be unit circle $x^{2}+y^{2}=1$ traversed once counterclockwise. Evaluate $\int_{C}[-y^{3}+\sin(xy)+xy\cos(xy)]\,dx+[x^{3}+x^{2}\cos(xy)]dy$ by using a computer algebra system.
+\item \techrequired Find the outward flux of vector field $\mathbf{F}=xy^{2}\mathbf{i}+x^{2}y\mathbf{j}$ across the boundary of annulus $R=\{(x,y):1\le x^{2}+y^{2}\le4\}=\{(r,\theta):1\le r\le2,0\le \theta \le2\pi \}$ using a computer algebra system.
+\item Consider region R bounded by parabolas $y=x^{2}\,\text{and}\,x=y^{2}$. Let C be the boundary of R oriented counterclockwise. Use Green's theorem to evaluate $\int_{C}(y+e^{\sqrt{x}})\,dx+(2x+\cos(y^{2}))dy$.
+\end{enumerate}
+
+\end{document}

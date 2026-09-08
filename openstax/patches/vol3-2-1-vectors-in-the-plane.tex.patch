@@ -1,0 +1,191 @@
+Manual review corrections for this page's first pass.
+
+- Every vector variable ($\text{a}$, $\text{b}$, $\text{c}$, $\text{i}$,
+  $\text{j}$, $\text{u}$, $\text{v}$, and the boat-weight components
+  $\text{v}_{1}$, $\text{v}_{2}$) had been converted to upright,
+  non-bold \text{} instead of boldface, unlike every other vector-notation
+  exercise file in this repo (e.g. vol3-3-2, vol3-3-3, vol3-3-4,
+  vol3-4-6, which all use \mathbf{a}, \mathbf{i}, \mathbf{j}, \mathbf{u},
+  \mathbf{v}, ...) and unlike OpenStax's own boldface vector convention;
+  changed every such occurrence to \mathbf{}.
+- The scalar tension magnitudes $\text{T}_{1}$ and $\text{T}_{2}$ (not
+  vectors) had been given the same upright \text{} treatment; changed to
+  plain italic $T_{1}$, $T_{2}$, matching how other named scalar variables
+  are typeset elsewhere in the repo (e.g. $T_{1}$, $T_{2}$, ... in
+  vol3-5-7-change-of-variables-in-multiple-integrals.tex).
+- "and c = 0 Determine the scalars" left the zero vector $\text{c}$ as
+  bare, non-mathematical prose with no sentence-ending punctuation before
+  the next sentence; changed to "and $\mathbf{c}=\langle0,0\rangle$.
+  Determine the scalars", matching the component-form notation used for
+  $\mathbf{a}$ and $\mathbf{b}$ earlier in the same sentence.
+- "in the direction of vector $PQ$" referred to the vector between named
+  points $P$ and $Q$ without the arrow notation ($\overset{\to}{PQ}$)
+  this file otherwise uses for such vectors (e.g. items 1-8, and the
+  $\overset{\to}{AD}$ item later in this file); changed to
+  $\overset{\to}{PQ}$.
+- "point $Q(2,z_{0})$ s situated on the line" was missing the "i" of
+  "is situated" (the parallel item just above ends "...is situated on
+  the line tangent..."); corrected to "is situated".
+- "remains constant for any real number $x$" was missing the sentence's
+  closing period, unlike the parallel item just above ("...for any real
+  number $t$."); added the period.
+- "two vectors below the line formina a triangle" had a typo for
+  "forming"; corrected.
+- "(also abbreviated as $\text{N}43\text{E})$" closed the parenthesis
+  inside math mode even though the matching "(" opens in ordinary prose;
+  moved the ")" outside the math span, to "$\text{N}43\text{E}$)".
+
+--- /tmp/raw.tex
++++ vol3-2-1-vectors-in-the-plane.tex
+@@ -25,88 +25,88 @@
+ \item $2\overset{\to}{PQ}+\frac{1}{2}\overset{\to}{PR}$
+ \item The unit vector in the direction of $\overset{\to}{PQ}$
+ \item The unit vector in the direction of $\overset{\to}{PR}$
+-\item A vector $\text{v}$ has initial point $(-1,-3)$ and terminal point $(2,1)$. Find the unit vector in the direction of $\text{v}$. Express the answer in component form.
+-\item A vector $\text{v}$ has initial point $(-2,5)$ and terminal point $(3,-1)$. Find the unit vector in the direction of $\text{v}$. Express the answer in component form.
+-\item The vector $\text{v}$ has initial point $P(1,0)$ and terminal point $Q$ that is on the y-axis and above the initial point. Find the coordinates of terminal point $Q$ such that the magnitude of the vector $\text{v}$ is $\sqrt{5}$.
+-\item The vector $\text{v}$ has initial point $P(1,1)$ and terminal point $Q$ that is on the x-axis and left of the initial point. Find the coordinates of terminal point $Q$ such that the magnitude of the vector $\text{v}$ is $\sqrt{10}$.
++\item A vector $\mathbf{v}$ has initial point $(-1,-3)$ and terminal point $(2,1)$. Find the unit vector in the direction of $\mathbf{v}$. Express the answer in component form.
++\item A vector $\mathbf{v}$ has initial point $(-2,5)$ and terminal point $(3,-1)$. Find the unit vector in the direction of $\mathbf{v}$. Express the answer in component form.
++\item The vector $\mathbf{v}$ has initial point $P(1,0)$ and terminal point $Q$ that is on the y-axis and above the initial point. Find the coordinates of terminal point $Q$ such that the magnitude of the vector $\mathbf{v}$ is $\sqrt{5}$.
++\item The vector $\mathbf{v}$ has initial point $P(1,1)$ and terminal point $Q$ that is on the x-axis and left of the initial point. Find the coordinates of terminal point $Q$ such that the magnitude of the vector $\mathbf{v}$ is $\sqrt{10}$.
+ \end{enumerate}
+
+-For the following exercises, use the given vectors $\text{a}$ and $\text{b}$.
++For the following exercises, use the given vectors $\mathbf{a}$ and $\mathbf{b}$.
+
+
+-(a) Determine the vector sum $\text{a}+\text{b}$ and express it in both the component form and by using the standard unit vectors.
++(a) Determine the vector sum $\mathbf{a}+\mathbf{b}$ and express it in both the component form and by using the standard unit vectors.
+
+
+-(b) Find the vector difference $\text{a}-\text{b}$ and express it in both the component form and by using the standard unit vectors.
++(b) Find the vector difference $\mathbf{a}-\mathbf{b}$ and express it in both the component form and by using the standard unit vectors.
+
+
+-(c) Verify that the vectors $\text{a}$, $\text{b}$, and $\text{a}+\text{b}$, and, respectively, $\text{a}$, $\text{b}$, and $\text{a}-\text{b}$ satisfy the triangle inequality.
++(c) Verify that the vectors $\mathbf{a}$, $\mathbf{b}$, and $\mathbf{a}+\mathbf{b}$, and, respectively, $\mathbf{a}$, $\mathbf{b}$, and $\mathbf{a}-\mathbf{b}$ satisfy the triangle inequality.
+
+
+-(d) Determine the vectors $2\text{a}$, $-\text{b}$, and $2\text{a}-\text{b}$. Express the vectors in both the component form and by using standard unit vectors.
++(d) Determine the vectors $2\mathbf{a}$, $-\mathbf{b}$, and $2\mathbf{a}-\mathbf{b}$. Express the vectors in both the component form and by using standard unit vectors.
+
+ \begin{enumerate}[resume]
+-\item $\text{a}=2\text{i}+\text{j}$, $\text{b}=\text{i}+3\text{j}$
+-\item $\text{a}=2\text{i}$, $\text{b}=-2\text{i}+2\text{j}$
+-\item Let $\text{a}$ be a standard-position vector with terminal point $(-2,-4)$. Let $\text{b}$ be a vector with initial point $(1,2)$ and terminal point $(-1,4)$. Find the magnitude of vector $-3\text{a}+\text{b}-4\text{i}+\text{j}$.
+-\item Let $\text{a}$ be a standard-position vector with terminal point at $(2,5)$. Let $\text{b}$ be a vector with initial point $(-1,3)$ and terminal point $(1,0)$. Find the magnitude of vector $\text{a}-3\text{b}+14\text{i}-14\text{j}$.
+-\item Let $\text{u}$ and $\text{v}$ be two nonzero vectors that are nonequivalent. Consider the vectors $\text{a}=4\text{u}+5\text{v}$ and $\text{b}=\text{u}+2\text{v}$ defined in terms of $\text{u}$ and $\text{v}$. Find the scalar $\lambda$ such that vectors $\text{a}+\lambda \text{b}$ and $\text{u}-\text{v}$ are equivalent.
+-\item Let $\text{u}$ and $\text{v}$ be two nonzero vectors that are nonequivalent. Consider the vectors $\text{a}=2\text{u}-4\text{v}$ and $\text{b}=3\text{u}-7\text{v}$ defined in terms of $\text{u}$ and $\text{v}$. Find the scalars $\alpha$ and $\beta$ such that vectors $\alpha \text{a}+\beta \text{b}$ and $\text{u}-\text{v}$ are equivalent.
+-\item Consider the vector $\text{a}(t)=\langle \cos t,\sin t\rangle$ with components that depend on a real number $t$. As the number $t$ varies, the components of $\text{a}(t)$ change as well, depending on the functions that define them.
++\item $\mathbf{a}=2\mathbf{i}+\mathbf{j}$, $\mathbf{b}=\mathbf{i}+3\mathbf{j}$
++\item $\mathbf{a}=2\mathbf{i}$, $\mathbf{b}=-2\mathbf{i}+2\mathbf{j}$
++\item Let $\mathbf{a}$ be a standard-position vector with terminal point $(-2,-4)$. Let $\mathbf{b}$ be a vector with initial point $(1,2)$ and terminal point $(-1,4)$. Find the magnitude of vector $-3\mathbf{a}+\mathbf{b}-4\mathbf{i}+\mathbf{j}$.
++\item Let $\mathbf{a}$ be a standard-position vector with terminal point at $(2,5)$. Let $\mathbf{b}$ be a vector with initial point $(-1,3)$ and terminal point $(1,0)$. Find the magnitude of vector $\mathbf{a}-3\mathbf{b}+14\mathbf{i}-14\mathbf{j}$.
++\item Let $\mathbf{u}$ and $\mathbf{v}$ be two nonzero vectors that are nonequivalent. Consider the vectors $\mathbf{a}=4\mathbf{u}+5\mathbf{v}$ and $\mathbf{b}=\mathbf{u}+2\mathbf{v}$ defined in terms of $\mathbf{u}$ and $\mathbf{v}$. Find the scalar $\lambda$ such that vectors $\mathbf{a}+\lambda \mathbf{b}$ and $\mathbf{u}-\mathbf{v}$ are equivalent.
++\item Let $\mathbf{u}$ and $\mathbf{v}$ be two nonzero vectors that are nonequivalent. Consider the vectors $\mathbf{a}=2\mathbf{u}-4\mathbf{v}$ and $\mathbf{b}=3\mathbf{u}-7\mathbf{v}$ defined in terms of $\mathbf{u}$ and $\mathbf{v}$. Find the scalars $\alpha$ and $\beta$ such that vectors $\alpha \mathbf{a}+\beta \mathbf{b}$ and $\mathbf{u}-\mathbf{v}$ are equivalent.
++\item Consider the vector $\mathbf{a}(t)=\langle \cos t,\sin t\rangle$ with components that depend on a real number $t$. As the number $t$ varies, the components of $\mathbf{a}(t)$ change as well, depending on the functions that define them.
+ \begin{enumerate}[label=(\alph*)]
+-  \item Write the vectors $\text{a}(0)$ and $\text{a}(\pi)$ in component form.
+-  \item Show that the magnitude $\|\text{a}(t)\|$ of vector $\text{a}(t)$ remains constant for any real number $t$.
+-  \item As $t$ varies, show that the terminal point of vector $\text{a}(t)$ describes a circle centered at the origin of radius $1$.
++  \item Write the vectors $\mathbf{a}(0)$ and $\mathbf{a}(\pi)$ in component form.
++  \item Show that the magnitude $\|\mathbf{a}(t)\|$ of vector $\mathbf{a}(t)$ remains constant for any real number $t$.
++  \item As $t$ varies, show that the terminal point of vector $\mathbf{a}(t)$ describes a circle centered at the origin of radius $1$.
+ \end{enumerate}
+-\item Consider vector $\text{a}(x)=\langle x,\sqrt{1-x^{2}}\rangle$ with components that depend on a real number $x\in[-1,1]$. As the number $x$ varies, the components of $\text{a}(x)$ change as well, depending on the functions that define them.
++\item Consider vector $\mathbf{a}(x)=\langle x,\sqrt{1-x^{2}}\rangle$ with components that depend on a real number $x\in[-1,1]$. As the number $x$ varies, the components of $\mathbf{a}(x)$ change as well, depending on the functions that define them.
+ \begin{enumerate}[label=(\alph*)]
+-  \item Write the vectors $\text{a}(0)$ and $\text{a}(1)$ in component form.
+-  \item Show that the magnitude $\|\text{a}(x)\|$ of vector $\text{a}(x)$ remains constant for any real number $x$
+-  \item As $x$ varies, show that if $\text{a}(x)$ is in standard position, then its terminal point describes a semicircle. Why is it only a semicircle?
++  \item Write the vectors $\mathbf{a}(0)$ and $\mathbf{a}(1)$ in component form.
++  \item Show that the magnitude $\|\mathbf{a}(x)\|$ of vector $\mathbf{a}(x)$ remains constant for any real number $x$.
++  \item As $x$ varies, show that if $\mathbf{a}(x)$ is in standard position, then its terminal point describes a semicircle. Why is it only a semicircle?
+ \end{enumerate}
+-\item Show that vectors $\text{a}(t)=\langle \cos t,\sin t\rangle$ and $\text{a}(x)=\langle x,\sqrt{1-x^{2}}\rangle$ are equivalent for $x=1$ and $t=2k\pi$, where $k$ is an integer.
+-\item Show that vectors $\text{a}(t)=\langle \cos t,\sin t\rangle$ and $\text{a}(x)=\langle x,\sqrt{1-x^{2}}\rangle$ are opposite for $x=1$ and $t=\pi+2k\pi$, where $k$ is an integer.
++\item Show that vectors $\mathbf{a}(t)=\langle \cos t,\sin t\rangle$ and $\mathbf{a}(x)=\langle x,\sqrt{1-x^{2}}\rangle$ are equivalent for $x=1$ and $t=2k\pi$, where $k$ is an integer.
++\item Show that vectors $\mathbf{a}(t)=\langle \cos t,\sin t\rangle$ and $\mathbf{a}(x)=\langle x,\sqrt{1-x^{2}}\rangle$ are opposite for $x=1$ and $t=\pi+2k\pi$, where $k$ is an integer.
+ \end{enumerate}
+
+-For the following exercises, find vector $\text{v}$ with the given magnitude and in the same direction as vector $\text{u}$.
++For the following exercises, find vector $\mathbf{v}$ with the given magnitude and in the same direction as vector $\mathbf{u}$.
+
+ \begin{enumerate}[resume]
+-\item $\|\text{v}\|=7,\text{u}=\langle3,4\rangle$
+-\item $\|\text{v}\|=3,\text{u}=\langle-2,5\rangle$
+-\item $\|\text{v}\|=7,\text{u}=\langle3,-5\rangle$
+-\item $\|\text{v}\|=10,\text{u}=\langle2,-1\rangle$
++\item $\|\mathbf{v}\|=7,\mathbf{u}=\langle3,4\rangle$
++\item $\|\mathbf{v}\|=3,\mathbf{u}=\langle-2,5\rangle$
++\item $\|\mathbf{v}\|=7,\mathbf{u}=\langle3,-5\rangle$
++\item $\|\mathbf{v}\|=10,\mathbf{u}=\langle2,-1\rangle$
+ \end{enumerate}
+
+-For the following exercises, find the component form of vector $\text{u}$, given its magnitude and the angle the vector makes with the positive x-axis. Give exact answers when possible.
++For the following exercises, find the component form of vector $\mathbf{u}$, given its magnitude and the angle the vector makes with the positive x-axis. Give exact answers when possible.
+
+ \begin{enumerate}[resume]
+-\item $\|\text{u}\|=2$, $\theta=30^\circ$
+-\item $\|\text{u}\|=6$, $\theta=60^\circ$
+-\item $\|\text{u}\|=5$, $\theta=\frac{\pi}{2}$
+-\item $\|\text{u}\|=8$, $\theta=\pi$
+-\item $\|\text{u}\|=10$, $\theta=\frac{5\pi}{6}$
+-\item $\|\text{u}\|=50$, $\theta=\frac{3\pi}{4}$
++\item $\|\mathbf{u}\|=2$, $\theta=30^\circ$
++\item $\|\mathbf{u}\|=6$, $\theta=60^\circ$
++\item $\|\mathbf{u}\|=5$, $\theta=\frac{\pi}{2}$
++\item $\|\mathbf{u}\|=8$, $\theta=\pi$
++\item $\|\mathbf{u}\|=10$, $\theta=\frac{5\pi}{6}$
++\item $\|\mathbf{u}\|=50$, $\theta=\frac{3\pi}{4}$
+ \end{enumerate}
+
+-For the following exercises, vector $\text{u}$ is given. Find the angle $\theta \in[0,2\pi)$ that vector $\text{u}$ makes with the positive direction of the x-axis, in a counter-clockwise direction.
++For the following exercises, vector $\mathbf{u}$ is given. Find the angle $\theta \in[0,2\pi)$ that vector $\mathbf{u}$ makes with the positive direction of the x-axis, in a counter-clockwise direction.
+
+ \begin{enumerate}[resume]
+-\item $\text{u}=5\sqrt{2}\text{i}-5\sqrt{2}\text{j}$
+-\item $\text{u}=-\sqrt{3}\text{i}-\text{j}$
+-\item Let $\text{a}=\langle a_{1},a_{2}\rangle$, $\text{b}=\langle b_{1},b_{2}\rangle$, and $\text{c}=\langle c_{1},c_{2}\rangle$ be three nonzero vectors. If $a_{1}b_{2}-a_{2}b_{1}\ne0$, then show there are two scalars, $\alpha$ and $\beta$, such that $\text{c}=\alpha \text{a}+\beta \text{b}$.
+-\item Consider vectors $\text{a}=\langle2,-4\rangle$, $\text{b}=\langle-1,2\rangle$, and c = 0 Determine the scalars $\alpha$ and $\beta$ such that $\text{c}=\alpha \text{a}+\beta \text{b}$.
++\item $\mathbf{u}=5\sqrt{2}\mathbf{i}-5\sqrt{2}\mathbf{j}$
++\item $\mathbf{u}=-\sqrt{3}\mathbf{i}-\mathbf{j}$
++\item Let $\mathbf{a}=\langle a_{1},a_{2}\rangle$, $\mathbf{b}=\langle b_{1},b_{2}\rangle$, and $\mathbf{c}=\langle c_{1},c_{2}\rangle$ be three nonzero vectors. If $a_{1}b_{2}-a_{2}b_{1}\ne0$, then show there are two scalars, $\alpha$ and $\beta$, such that $\mathbf{c}=\alpha \mathbf{a}+\beta \mathbf{b}$.
++\item Consider vectors $\mathbf{a}=\langle2,-4\rangle$, $\mathbf{b}=\langle-1,2\rangle$, and $\mathbf{c}=\langle0,0\rangle$. Determine the scalars $\alpha$ and $\beta$ such that $\mathbf{c}=\alpha \mathbf{a}+\beta \mathbf{b}$.
+ \item Let $P(x_{0},f(x_{0}))$ be a fixed point on the graph of the differentiable function $f$ with a domain that is the set of real numbers.
+ \begin{enumerate}[label=(\alph*)]
+   \item Determine the real number $z_{0}$ such that point $Q(x_{0}+1,z_{0})$ is situated on the line tangent to the graph of $f$ at point $P$.
+-  \item Determine the unit vector $\text{u}$ with initial point $P$ in the direction of vector $PQ$.
++  \item Determine the unit vector $\mathbf{u}$ with initial point $P$ in the direction of vector $\overset{\to}{PQ}$.
+ \end{enumerate}
+ \item Consider the function $f(x)=x^{4}$, where $x\in \mathbb{R}$.
+ \begin{enumerate}[label=(\alph*)]
+-  \item Determine the real number $z_{0}$ such that point $Q(2,z_{0})$ s situated on the line tangent to the graph of $f$ at point $P(1,1)$.
+-  \item Determine the unit vector $\text{u}$ with initial point $P$ and terminal point $Q$.
++  \item Determine the real number $z_{0}$ such that point $Q(2,z_{0})$ is situated on the line tangent to the graph of $f$ at point $P(1,1)$.
++  \item Determine the unit vector $\mathbf{u}$ with initial point $P$ and terminal point $Q$.
+ \end{enumerate}
+-\item Consider $f$ and $g$ two functions defined on the same set of real numbers $D$. Let $\text{a}=\langle x,f(x)\rangle$ and $\text{b}=\langle x,g(x)\rangle$ be two vectors that describe the graphs of the functions, where $x\in D$. Show that if the graphs of the functions $f$ and $g$ do not intersect, then the vectors $\text{a}$ and $\text{b}$ are not equivalent.
+-\item Find $x\in \mathbb{R}$ such that vectors $\text{a}=\langle x,\sin x\rangle$ and $\text{b}=\langle x,\cos x\rangle$ are equivalent.
++\item Consider $f$ and $g$ two functions defined on the same set of real numbers $D$. Let $\mathbf{a}=\langle x,f(x)\rangle$ and $\mathbf{b}=\langle x,g(x)\rangle$ be two vectors that describe the graphs of the functions, where $x\in D$. Show that if the graphs of the functions $f$ and $g$ do not intersect, then the vectors $\mathbf{a}$ and $\mathbf{b}$ are not equivalent.
++\item Find $x\in \mathbb{R}$ such that vectors $\mathbf{a}=\langle x,\sin x\rangle$ and $\mathbf{b}=\langle x,\cos x\rangle$ are equivalent.
+ \item Calculate the coordinates of point $D$ such that $ABCD$ is a parallelogram, with $A(1,1)$, $B(2,4)$, and $C(7,4)$.
+ \item Consider the points $A(2,1)$, $B(10,6)$, $C(13,4)$, and $D(16,-2)$. Determine the component form of vector $\overset{\to}{AD}$.
+ \item The speed of an object is the magnitude of its related velocity vector. A football thrown by a quarterback has an initial speed of $70$ mph and an angle of elevation of $30^\circ$. Determine the velocity vector in mph and express it in component form. (Round to two decimal places.) \\ \textit{[Figure: This figure shows a football being thrown. The path of the football is represented by an arcing curve. At the beginning of the curve is a vector indicating the initial velocity.]}
+@@ -117,11 +117,11 @@
+ \item \techrequired Two forces, a vertical force of $26$ lb and another of $45$ lb, act on the same object. The angle between these forces is $55^\circ$. Find the magnitude and direction angle from the positive x-axis of the resultant force that acts on the object. (Round to two decimal places.)
+ \item \techrequired Three forces act on object. Two of the forces have the magnitudes $58$ N and $27$ N, and make angles $53^\circ$ and $152^\circ$, respectively, with the positive x-axis. Find the magnitude and the direction angle from the positive x-axis of the third force such that the resultant force acting on the object is zero. (Round to two decimal places.)
+ \item Three forces with magnitudes $80$ lb, $120$ lb, and $60$ lb act on an object at angles of $45^\circ$, $60^\circ$ and $30^\circ$, respectively, with the positive x-axis. Find the magnitude and direction angle from the positive x-axis of the resultant force. (Round to two decimal places.) \\ \textit{[Figure: This figure is the first quadrant of a coordinate system. There are three vectors, all with the origin as the initial point. The first vector is labeled ``60 lb'' and makes an angle of 30 degrees with the x-axis. The second vector is labeled ``80 lb'' and makes an angle of 45 degrees with the x-axis. The third vector is labeled ``120 lb'' and makes a 60 degree angle with the x-axis.]}
+-\item \techrequired An airplane is flying in the direction of $43^\circ$ east of north (also abbreviated as $\text{N}43\text{E})$ at a speed of $550$ mph. A wind with speed $25$ mph comes from the southwest at a bearing of $\text{N}15\text{E}$. What are the ground speed and new direction of the airplane? \\ \textit{[Figure: This figure is the first quadrant of a coordinate system. There are two vectors both of which have the origin as the initial point. The first vector is labeled ``550 miles per hour'' and has an angle of 43 degrees from the y-axis. There is also an image of an airplane at the end of the vector. The second vector is labeled ``25 miles per hour'' and has an angle of 15 degrees from the y-axis.]}
++\item \techrequired An airplane is flying in the direction of $43^\circ$ east of north (also abbreviated as $\text{N}43\text{E}$) at a speed of $550$ mph. A wind with speed $25$ mph comes from the southwest at a bearing of $\text{N}15\text{E}$. What are the ground speed and new direction of the airplane? \\ \textit{[Figure: This figure is the first quadrant of a coordinate system. There are two vectors both of which have the origin as the initial point. The first vector is labeled ``550 miles per hour'' and has an angle of 43 degrees from the y-axis. There is also an image of an airplane at the end of the vector. The second vector is labeled ``25 miles per hour'' and has an angle of 15 degrees from the y-axis.]}
+ \item \techrequired A boat is traveling in the water at $30$ mph in a direction of $\text{N}20\text{E}$ (that is, $20^\circ$ east of north). A strong current is moving at $15$ mph in a direction of $\text{N}45\text{E}$. What are the new speed and direction of the boat? \\ \textit{[Figure: This figure is the first quadrant of a coordinate system. There are two vectors both of which have the origin as the initial point. The first vector is labeled ``15'' and has an angle of 45 degrees from the y-axis. The second vector is labeled ``30'' and has an angle of 20 degrees from the y-axis. There is also an image of a boat at the end of the vector.]}
+-\item \techrequired A 50-lb weight is hung by a cable so that the two portions of the cable make angles of $40^\circ$ and $53^\circ$, respectively, with the horizontal. Find the magnitudes of the forces of tension $\text{T}_{1}$ and $\text{T}_{2}$ in the cables if the resultant force acting on the object is zero. (Round to two decimal places.) \\ \textit{[Figure: This figure is a horizontal line with two vectors below the line formina a triangle with the line. The vectors point toward the ends of the line. The angle between the horizontal line and the first vector is 40 degrees. The angle between the horizontal line and the second vector is 53 degrees. At the point where the two vectors meet is a rectangle labeled ``50 lb.'']}
+-\item \techrequired A 62-lb weight hangs from a rope that makes the angles of $29^\circ$ and $61^\circ$, respectively, with the horizontal. Find the magnitudes of the forces of tension $\text{T}_{1}$ and $\text{T}_{2}$ in the cables if the resultant force acting on the object is zero. (Round to two decimal places.)
+-\item \techrequired A 1500-lb boat is parked on a ramp that makes an angle of $30^\circ$ with the horizontal. The boat's weight vector points downward and is a sum of two vectors: a horizontal vector $\text{v}_{1}$ that is parallel to the ramp and a vertical vector $\text{v}_{2}$ that is perpendicular to the inclined surface. The magnitudes of vectors $\text{v}_{1}$ and $\text{v}_{2}$ are the horizontal and vertical component, respectively, of the boat's weight vector. Find the magnitudes of $\text{v}_{1}$ and $\text{v}_{2}$. (Round to the nearest integer.) \\ \textit{[Figure: This figure shows a right triangle. The angle between the horizontal base and the hypotenuse is 30 degrees. On the hypotenuse is the image of a boat. From center of the boat there are three vectors. Two of the vectors are orthogonal with one in the direction of the boat and the other below the boat. The third vector is down, perpendicular to the vertical side.]}
++\item \techrequired A 50-lb weight is hung by a cable so that the two portions of the cable make angles of $40^\circ$ and $53^\circ$, respectively, with the horizontal. Find the magnitudes of the forces of tension $T_{1}$ and $T_{2}$ in the cables if the resultant force acting on the object is zero. (Round to two decimal places.) \\ \textit{[Figure: This figure is a horizontal line with two vectors below the line forming a triangle with the line. The vectors point toward the ends of the line. The angle between the horizontal line and the first vector is 40 degrees. The angle between the horizontal line and the second vector is 53 degrees. At the point where the two vectors meet is a rectangle labeled ``50 lb.'']}
++\item \techrequired A 62-lb weight hangs from a rope that makes the angles of $29^\circ$ and $61^\circ$, respectively, with the horizontal. Find the magnitudes of the forces of tension $T_{1}$ and $T_{2}$ in the cables if the resultant force acting on the object is zero. (Round to two decimal places.)
++\item \techrequired A 1500-lb boat is parked on a ramp that makes an angle of $30^\circ$ with the horizontal. The boat's weight vector points downward and is a sum of two vectors: a horizontal vector $\mathbf{v}_{1}$ that is parallel to the ramp and a vertical vector $\mathbf{v}_{2}$ that is perpendicular to the inclined surface. The magnitudes of vectors $\mathbf{v}_{1}$ and $\mathbf{v}_{2}$ are the horizontal and vertical component, respectively, of the boat's weight vector. Find the magnitudes of $\mathbf{v}_{1}$ and $\mathbf{v}_{2}$. (Round to the nearest integer.) \\ \textit{[Figure: This figure shows a right triangle. The angle between the horizontal base and the hypotenuse is 30 degrees. On the hypotenuse is the image of a boat. From center of the boat there are three vectors. Two of the vectors are orthogonal with one in the direction of the boat and the other below the boat. The third vector is down, perpendicular to the vertical side.]}
+ \item \techrequired An 85-lb box is at rest on a $26^\circ$ incline. Determine the magnitude of the force parallel to the incline necessary to keep the box from sliding. (Round to the nearest integer.)
+ \item A guy-wire supports a pole that is \\ $75$ ft high. One end of the wire is attached to the top of the pole and the other end is anchored to the ground $50$ ft from the base of the pole. Determine the horizontal and vertical components of the force of tension in the wire if its magnitude is $50$ lb. (Round to the nearest integer.) \\ \textit{[Figure: This figure is a tower with a guy wire from the top to the ground. The tower, guy wire, and the ground form a right triangle. The base is labeled ``50 feet'' and is horizontal. The other side is labeled ``75 feet'' and is vertical. This side is the tower.]}
+ \item A telephone pole guy-wire has an angle of elevation of $35^\circ$ with respect to the ground. The force of tension in the guy-wire is $120$ lb. Find the horizontal and vertical components of the force of tension. (Round to the nearest integer.)

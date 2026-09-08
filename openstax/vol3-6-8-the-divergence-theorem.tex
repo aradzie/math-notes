@@ -1,0 +1,86 @@
+% OpenStax Calculus Volume 3 -- Section 6.8 Exercises: The Divergence Theorem
+% Exercises reproduced from OpenStax, licensed under CC BY 4.0.
+% Source: https://openstax.org/books/calculus-volume-3/pages/6-8-the-divergence-theorem
+\documentclass{exercises}
+\title{OpenStax Calculus Volume 3}
+\subtitle{Section 6.8 Exercises: The Divergence Theorem}
+\sourceurl{https://openstax.org/books/calculus-volume-3/pages/6-8-the-divergence-theorem}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+
+For the following exercises, use a computer algebraic system (CAS) and the divergence theorem to evaluate surface integral $\iint_{S}^{}\mathbf{F}\cdot \mathbf{N}\,ds$ for the given choice of F and the boundary surface S. For each closed surface, assume N is the outward unit normal vector.
+
+\begin{enumerate}[start=1]
+\item \techrequired $\mathbf{F}(x,y,z)=x\mathbf{i}+y\mathbf{j}+z\mathbf{k}$; S is the surface of cube $0\le x\le1,0\le y\le1,0<z\le1$.
+\item \techrequired $\mathbf{F}(x,y,z)=(\cos yz)\mathbf{i}+e^{xz}\mathbf{j}+3z^{2}\mathbf{k}$; S is the surface of hemisphere $z=\sqrt{4-x^{2}-y^{2}}$ together with disk $x^{2}+y^{2}\le4$ in the xy-plane.
+\item \techrequired $\mathbf{F}(x,y,z)=(x^{2}+y^{2}-x^{2})\mathbf{i}+x^{2}y\mathbf{j}+3z\mathbf{k}$; S is the surface of the unit cube $0\le x\le1,0\le y\le1,0\le z\le1$ excluding the face $z=0$.
+\item \techrequired $\mathbf{F}(x,y,z)=x\mathbf{i}+y\mathbf{j}+z\mathbf{k}$; S is the surface of the solid bounded by the parabola $z=x^{2}+y^{2}\,$ and the plane $z=9$.
+\item \techrequired $\mathbf{F}(x,y,z)=x^{2}\mathbf{i}+y^{2}\mathbf{j}+z^{2}\mathbf{k}$; S is the surface of sphere $x^{2}+y^{2}+z^{2}=4$.
+\item \techrequired $\mathbf{F}(x,y,z)=x\mathbf{i}+y\mathbf{j}+(z^{2}-1)\mathbf{k}$; S is the surface of the solid bounded by cylinder $x^{2}+y^{2}=4$ and planes $z=0\,\text{and}\,z=1$.
+\item \techrequired $\mathbf{F}(x,y,z)=xy^{2}\mathbf{i}+yz^{2}\mathbf{j}+x^{2}z\mathbf{k}$; S is the surface of the solid bounded above by sphere $\rho=2$ and below by cone $\phi=\frac{\pi}{4}$ in spherical coordinates. (Think of S as the surface of an ``ice cream cone.'')
+\item \techrequired $\mathbf{F}(x,y,z)=x^{3}\mathbf{i}+y^{3}\mathbf{j}+3a^{2}z\mathbf{k}\text{ (constant }a>0\text{)}$; S is the surface of the solid bounded by cylinder $x^{2}+y^{2}=a^{2}$ and planes $z=0\,\text{and}\,z=1$.
+\item \techrequired Surface integral $\iint_{S}\mathbf{F}\cdot d\mathbf{S}$, where S is the surface of the solid bounded by paraboloid $z=x^{2}+y^{2}$ and plane $z=4$, and $\mathbf{F}(x,y,z)=(x+y^{2}z^{2})\mathbf{i}+(y+z^{2}x^{2})\mathbf{j}+(z+x^{2}y^{2})\mathbf{k}$
+\item Use the divergence theorem to calculate surface integral $\iint_{S}\mathbf{F}\cdot d\mathbf{S}$, where $\mathbf{F}(x,y,z)=(e^{y^{2}})\mathbf{i}+(y+\sin(z^{2}))\mathbf{j}+(z-1)\mathbf{k}$ and S is the surface of the solid bounded by the sphere $x^{2}+y^{2}+z^{2}=1$, and below by the plane $z=0$.
+\item Use the divergence theorem to calculate surface integral $\iint_{S}\mathbf{F}\cdot \,ds$, where $\mathbf{F}(x,y,z)=x^{4}\mathbf{i}-x^{3}z^{2}\mathbf{j}+4xy^{2}z\mathbf{k}$ and $S$ is the surface bounded by cylinder $x^{2}+y^{2}=1$ and planes $z=x+2$ and $z=0$.
+\item Use the divergence theorem to calculate surface integral $\iint_{S}\mathbf{F}\cdot d\mathbf{S}$ when $\mathbf{F}(x,y,z)=x^{2}z^{3}\mathbf{i}+2xyz^{3}\mathbf{j}+xz^{4}\mathbf{k}$ and S is the surface of the box with vertices $(\pm1,\pm2,\pm3)$.
+\item Use the divergence theorem to calculate surface integral $\iint_{S}\mathbf{F}\cdot d\mathbf{S}$ when $\mathbf{F}(x,y,z)=z\tan^{-1}(y^{2})\mathbf{i}+z^{3}\ln(x^{2}+1)\mathbf{j}+z\mathbf{k}$ and S is the surface of the solid bounded by the paraboloid $x^{2}+y^{2}+z=2$ and the plane $z=1$.
+\item \techrequired Use a CAS and the divergence theorem to calculate flux $\iint_{S}\mathbf{F}\cdot d\mathbf{S}$, where $\mathbf{F}(x,y,z)=(x^{3}+y^{3})\mathbf{i}+(y^{3}+z^{3})\mathbf{j}+(z^{3}+x^{3})\mathbf{k}$ and S is a sphere with center (0, 0, 0) and radius 2.
+\item Use the divergence theorem to compute the value of flux integral $\iint_{S}\mathbf{F}\cdot d\mathbf{S}$, where $\mathbf{F}(x,y,z)=(y^{3}+3x)\mathbf{i}+(xz+y)\mathbf{j}+[z+x^{4}\cos(x^{2}y)]\mathbf{k}$ and S is the surface of the solid bounded by $x^{2}+y^{2}=1,x\ge0,y\ge0,\,\text{and}\,0\le z\le1$. \\ \textit{[Figure: A vector field in three dimensions, with focus on the area with x > 0, y>0, and z>0. A quarter of a cylinder is drawn with center on the z axis. The arrows have positive x, y, and z components; they point away from the origin.]}
+\item Use the divergence theorem to compute flux integral $\iint_{S}\mathbf{F}\cdot d\mathbf{S}$, where $\mathbf{F}(x,y,z)=y\mathbf{j}-z\mathbf{k}$ and S consists of the union of paraboloid $y=x^{2}+z^{2},0\le y\le1$, and disk $x^{2}+z^{2}\le1,y=1$, oriented outward. What is the flux through just the paraboloid?
+\item Use the divergence theorem to compute flux integral $\iint_{S}\mathbf{F}\cdot d\mathbf{S}$, where $\mathbf{F}(x,y,z)=x+y\mathbf{j}+z^{4}\mathbf{k}$ and S is a part of cone $z=\sqrt{x^{2}+y^{2}}$ beneath top plane $z=1$, oriented downward.
+\item Use the divergence theorem to calculate surface integral $\iint_{S}\mathbf{F}\cdot d\mathbf{S}$ for $\mathbf{F}(x,y,z)=x^{4}\mathbf{i}-x^{3}z^{2}\mathbf{j}+4xy^{2}z\mathbf{k}$, where S is the surface inside the cylinder $x^{2}+y^{2}=1$ between the planes $z=x+2\,\text{and}\,z=0$.
+\item Consider $\mathbf{F}(x,y,z)=x^{2}\mathbf{i}+xy\mathbf{j}+(z+1)\mathbf{k}$. Let E be the solid enclosed by paraboloid $z=4-x^{2}-y^{2}$ and plane $z=0$ with normal vectors pointing outside E. Compute flux F across the boundary of E using the divergence theorem.
+\end{enumerate}
+
+For the following exercises, use a CAS along with the divergence theorem to compute the net outward flux for the fields across the given surfaces S.
+
+\begin{enumerate}[resume]
+\item \techrequired $\mathbf{F}=\langle x,-2y,3z\rangle$; S is sphere $\{(x,y,z):x^{2}+y^{2}+z^{2}=6\}$.
+\item \techrequired $\mathbf{F}=\langle x,2y,z\rangle$; S is the boundary of the tetrahedron in the first octant formed by plane $x+y+z=1$.
+\item \techrequired $\mathbf{F}=\langle y-2x,x^{3}-y,y^{2}-z\rangle$; S is sphere $\{(x,y,z):x^{2}+y^{2}+z^{2}=4\}$.
+\item \techrequired $\mathbf{F}=\langle x,y,z\rangle$; S is the surface of paraboloid $z=4-x^{2}-y^{2}$, for $z\ge0$, plus its base in the xy-plane.
+\end{enumerate}
+
+For the following exercises, use a CAS and the divergence theorem to compute the net outward flux for the vector fields across the boundary of the given regions D.
+
+\begin{enumerate}[resume]
+\item \techrequired $\mathbf{F}=\langle z-x,x-y,2y-z\rangle$; D is the region between spheres of radius 2 and 4 centered at the origin.
+\item \techrequired $\mathbf{F}=\frac{\mathbf{r}}{\|\mathbf{r}\|}=\frac{\langle x,y,z\rangle}{\sqrt{x^{2}+y^{2}+z^{2}}}$; D is the region between spheres of radius 1 and 2 centered at the origin.
+\item \techrequired $\mathbf{F}=\langle x^{2},-y^{2},z^{2}\rangle$; D is the region in the first octant between planes $z=4-x-y$ and $z=2-x-y$.
+\item Let $\mathbf{F}(x,y,z)=2x\mathbf{i}-3xy\mathbf{j}+xz^{2}\mathbf{k}$. Use the divergence theorem to calculate $\iint_{S}\mathbf{F}\cdot d\mathbf{S}$, where S is the surface of the cube with corners at $(0,0,0),(1,0,0),(0,1,0)$, $(1,1,0),(0,0,1),(1,0,1),(0,1,1),\,\text{and}\,(1,1,1)$, oriented outward.
+\item Use the divergence theorem to find the outward flux of field $\mathbf{F}(x,y,z)=(x^{3}-3y)\mathbf{i}+(2yz+1)\mathbf{j}+xyz\mathbf{k}$ through the cube bounded by planes $x=\pm1,y=\pm1,\,\text{and}\,z=\pm1$.
+\item Let $\mathbf{F}(x,y,z)=2x\mathbf{i}-3y\mathbf{j}+5z\mathbf{k}$ and let S be hemisphere $z=\sqrt{9-x^{2}-y^{2}}$ together with disk $x^{2}+y^{2}\le9$ in the xy-plane. Use the divergence theorem to calculate $\iint_{S}\,\mathbf{F}\,\cdot \,d\mathbf{S}$.
+\item Evaluate $\iint_{S}\mathbf{F}\cdot \mathbf{N}\,dS$, where $\mathbf{F}(x,y,z)=x^{2}\mathbf{i}+xy\mathbf{j}+x^{3}y^{3}\mathbf{k}$ and S is the surface consisting of all faces of the tetrahedron bounded by plane $x+y+z=1$ and the coordinate planes, with outward unit normal vector N. \\ \textit{[Figure: A vector field in three dimensions, with arrows becoming larger the further away from the origin they are, especially in their x components. S is the surface consisting of all faces of the tetrahedron bounded by the plane x + y + z = 1. As such, a portion of the given plane, the (x, y) plane, the (x, z) plane, and the (y, z) plane are shown. The arrows point towards the origin for negative x components, away from the origin for positive x components, down for positive x and negative y components, as well as positive y and negative x components, and for positive x and y components, as well as negative x and negative y components.]}
+\item Find the net outward flux of field $\mathbf{F}=\langle bz-cy,cx-az,ay-bx\rangle$ across any smooth closed surface in $\mathbf{R}^{3}$, where a, b, and c are constants.
+\item Use the divergence theorem to evaluate $\iint_{S}\|\mathbf{R}\|\mathbf{R}\cdot \mathbf{n}\,dS$, where $\mathbf{R}(x,y,z)=x\mathbf{i}+y\mathbf{j}+z\mathbf{k}$ and S is sphere $x^{2}+y^{2}+z^{2}=a^{2}$, with constant $a>0$.
+\item Use the divergence theorem to evaluate $\iint_{S}\mathbf{F}\cdot d\mathbf{S}$, where $\mathbf{F}(x,y,z)=y^{2}z\mathbf{i}+y^{3}\mathbf{j}+xz\mathbf{k}$ and S is the boundary of the cube defined by $-1\le x\le1,-1\le y\le1,\,\text{and}\,0\le z\le2$.
+\item Let R be the region defined by $x^{2}+y^{2}+z^{2}\le1$. Use the divergence theorem to find $\iiint_{R}z^{2}\,dV$.
+\item Let E be the solid bounded by the xy-plane and paraboloid $z=4-x^{2}-y^{2}$ so that S is the surface of the paraboloid piece together with the disk in the xy-plane that forms its bottom. If $\mathbf{F}(x,y,z)=(xz\sin(yz)+x^{3})\mathbf{i}+\cos(yz)\mathbf{j}+(3zy^{2}-e^{x^{2}+y^{2}})\mathbf{k}$, find $\iint_{S}\mathbf{F}\cdot d\mathbf{S}$ using the divergence theorem. \\ \textit{[Figure: A vector field in three dimensions with all of the arrows pointing down. They seem to follow the path of the paraboloid drawn opening down with vertex at the origin. S is the surface of this paraboloid and the disk in the (x, y) plane that forms its bottom.]}
+\item Let E be the solid unit cube with diagonally opposite corners at the origin and (1, 1, 1), and faces parallel to the coordinate planes. Let S be the surface of E, oriented with the outward-pointing normal. Use a CAS to find $\iint_{S}\mathbf{F}\cdot d\mathbf{S}$ using the divergence theorem if $\mathbf{F}(x,y,z)=2xy\mathbf{i}+3ye^{z}\mathbf{j}+x\sin z\mathbf{k}$.
+\item Use the divergence theorem to calculate the flux of $\mathbf{F}(x,y,z)=x^{3}\mathbf{i}+y^{3}\mathbf{j}+z^{3}\mathbf{k}$ through sphere $x^{2}+y^{2}+z^{2}=1$.
+\item Find $\iint_{S}\mathbf{F}\cdot d\mathbf{S}$, where $\mathbf{F}(x,y,z)=x\mathbf{i}+y\mathbf{j}+z\mathbf{k}$ and S is the outwardly oriented surface obtained by removing cube $[1,2]\times [1,2]\times [1,2]$ from cube $[0,2]\times [0,2]\times [0,2]$.
+\item Consider radial vector field $\mathbf{F}=\frac{\mathbf{r}}{|\mathbf{r}|}=\frac{\langle x,y,z\rangle}{{(x^{2}+y^{2}+z^{2})}^{1/2}}$. Compute the surface integral, where S is the surface of a sphere of radius a centered at the origin.
+\item Compute the flux of water through parabolic cylinder $S:y=x^{2}$, from $0\le x\le2,0\le z\le3$, if the velocity vector is $\mathbf{F}(x,y,z)=3z^{2}\mathbf{i}+6\mathbf{j}+6xz\mathbf{k}$.
+\item \techrequired Use a CAS to find the flux of vector field $\mathbf{F}(x,y,z)=z\mathbf{i}+z\mathbf{j}+\sqrt{x^{2}+y^{2}}\mathbf{k}$ across the portion of hyperboloid $x^{2}+y^{2}=z^{2}+1$ between planes $z=0$ and $z=\frac{\sqrt{3}}{3}$, oriented so the unit normal vector points away from the z-axis.
+\item \techrequired Use a CAS to find the flux of vector field $\mathbf{F}(x,y,z)=(e^{y}+x)\mathbf{i}+(3\cos(xz)-y)\mathbf{j}+z\mathbf{k}$ through surface S, where S is given by $z^{2}=4x^{2}+4y^{2}$ from $0\le z\le4$, oriented so the unit normal vector points downward.
+\item \techrequired Use a CAS to compute $\iint_{S}\mathbf{F}\cdot d\mathbf{S}$, where $\mathbf{F}(x,y,z)=x\mathbf{i}+y\mathbf{j}+2z\mathbf{k}$ and S is the boundary of a part of solid sphere $x^{2}+y^{2}+z^{2}\le2$ with $0\le z\le1$.
+\item Evaluate $\iint_{S}\mathbf{F}\cdot d\mathbf{S}$, where $\mathbf{F}(x,y,z)=bxy^{2}\mathbf{i}+bx^{2}y\mathbf{j}+(x^{2}+y^{2})z^{2}\mathbf{k}$ and S is the boundary of the solid cylinder $x^{2}+y^{2}\le a^{2}$ and $0\le z\le b$.
+\item \techrequired Use a CAS to calculate the flux of $\mathbf{F}(x,y,z)=(x^{3}+y\sin z)\mathbf{i}+(y^{3}+z\sin x)\mathbf{j}+3z\mathbf{k}$ across surface S, where S is the boundary of the solid bounded by hemispheres $z=\sqrt{4-x^{2}-y^{2}}$ and $z=\sqrt{1-x^{2}-y^{2}}$, and plane $z=0$.
+\item Use the divergence theorem to evaluate $\iint_{S}\mathbf{F}\cdot d\mathbf{S}$, where $\mathbf{F}(x,y,z)=xy\mathbf{i}-\frac{1}{2}y^{2}\mathbf{j}+z\mathbf{k}$ and S is the surface consisting of three pieces: $z=4-3x^{2}-3y^{2},1\le z\le4$ on the top; $x^{2}+y^{2}=1,0\le z\le1$ on the sides; and $z=0$ on the bottom.
+\item \techrequired Use a CAS and the divergence theorem to evaluate $\iint_{S}\mathbf{F}\cdot d\mathbf{S}$, where $\mathbf{F}(x,y,z)=(2x+y\cos z)\mathbf{i}+(x^{2}-y)\mathbf{j}+y^{2}z\mathbf{k}$ and S is sphere $x^{2}+y^{2}+z^{2}=4$ orientated outward.
+\item Use the divergence theorem to evaluate $\iint_{S}\mathbf{F}\cdot d\mathbf{S}$, where $\mathbf{F}(x,y,z)=x\mathbf{i}+y\mathbf{j}+z\mathbf{k}$ and S is the boundary of the solid enclosed by paraboloid $y=x^{2}+z^{2}-2$, cylinder $x^{2}+z^{2}=1$, and plane $x+y=2$, and S is oriented outward.
+\end{enumerate}
+
+For the following exercises, Fourier's law of heat transfer states that the heat flow vector F at a point is proportional to the negative gradient of the temperature; that is, $\mathbf{F}=-k\nabla T$, which means that heat energy flows hot regions to cold regions. The constant $k>0$ is called the conductivity, which has metric units of joules per meter per second-kelvin or watts per meter-kelvin. A temperature function for region D is given. Use the divergence theorem to find net outward heat flux $\iint_{S}\mathbf{F}\cdot \mathbf{N}\,dS=-k\iint_{S}\nabla T\cdot \mathbf{N}\,dS$ across the boundary S of D, where $k=1$.
+
+\begin{enumerate}[resume]
+\item $T(x,y,z)=100+x+2y+z$; $D=\{(x,y,z):0\le x\le1,0\le y\le1,0\le z\le1\}$
+\item $T(x,y,z)=100+e^{-z}$; $D=\{(x,y,z):0\le x\le1,0\le y\le1,0\le z\le1\}$
+\item $T(x,y,z)=100e^{-x^{2}-y^{2}-z^{2}}$; D is the sphere of radius a centered at the origin.
+\end{enumerate}
+
+\end{document}

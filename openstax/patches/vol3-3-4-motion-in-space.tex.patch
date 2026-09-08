@@ -1,0 +1,147 @@
+Manual review corrections for this page's first pass.
+
+- extract-exercises.py doesn't detect OpenStax's bold-mathvariant mstyle
+  wrapping vector quantities (r, i, j, k, a, v, f, F), so it emitted plain
+  \text{r}, \text{i}, etc. instead of \mathbf{...} for the position,
+  velocity, acceleration, and force vectors throughout this file (same
+  systemic gap already patched for vol3-3-1, vol3-3-2, and vol3-3-3).
+  Converted every such occurrence to \mathbf{...}. The scalar radius
+  coefficient "r" in item 9's $r\cosh(\omega t)$/$r\sinh(\omega t)$ was
+  already typeset as a plain (non-\text) italic variable in the source and
+  is left alone, since it is distinct from the bold position vector
+  $\mathbf{r}(t)$ in the same expression.
+- Item 42's closing sentence "(Recall, $\text{F}=m\cdot \text{a}.)$" trapped
+  the sentence-ending period and closing parenthesis inside math mode.
+  Moved them outside: "(Recall, $\mathbf{F}=m\cdot \mathbf{a}$.)"
+- Several bare prose variables were left as plain text instead of math
+  mode: "the parameter t" in the lead-in before item 3, "mass m" and
+  "mass M" in items 42 and 44. Wrapped as $t$, $m$, $M$.
+- Figure descriptions had bare prose that should be math: "xy plane",
+  "y-axis" (twice), and "x axis" in item 1's figure, and "x axis" plus the
+  unwrapped "4pi"/"8pi" (with a stray comma) in the cycloid figure.
+  Wrapped as $xy$-plane, $y$-axis, $x$-axis, $4\pi$, $8\pi$, and dropped
+  the spurious comma before "and".
+- The projectile-motion figure description (before item 21) had absorbed
+  the following instruction sentence "Answer the following questions."
+  inside the \textit{[Figure: ...]} bracket, apparently a converter
+  merge of adjacent text nodes. Moved that sentence back out as ordinary
+  prose following the figure description.
+--- /tmp/raw.tex
++++ vol3-3-4-motion-in-space.tex
+@@ -12,38 +12,38 @@
+ \maketitle
+ 
+ \begin{enumerate}[start=1]
+-\item Given $\text{r}(t)=(3t^{2}-2)\text{i}+(2t-\sin(t))\text{j}$, find the velocity of a particle moving along this curve. \\ \textit{[Figure: This figure is a curve in the xy plane. The curve begins in the fourth quadrant towards the y-axis, intersects below 0 to the x axis, then bends around to intersect the positive y-axis and increasing through the first quadrant.]}
+-\item Given $\text{r}(t)=(3t^{2}-2)\text{i}+(2t-\sin(t))\text{j}$, find the acceleration vector of a particle moving along the curve in the preceding exercise.
++\item Given $\mathbf{r}(t)=(3t^{2}-2)\mathbf{i}+(2t-\sin(t))\mathbf{j}$, find the velocity of a particle moving along this curve. \\ \textit{[Figure: This figure is a curve in the $xy$-plane. The curve begins in the fourth quadrant towards the $y$-axis, intersects below 0 to the $x$-axis, then bends around to intersect the positive $y$-axis and increasing through the first quadrant.]}
++\item Given $\mathbf{r}(t)=(3t^{2}-2)\mathbf{i}+(2t-\sin(t))\mathbf{j}$, find the acceleration vector of a particle moving along the curve in the preceding exercise.
+ \end{enumerate}
+ 
+-Given the following position functions, find the velocity, acceleration, and speed in terms of the parameter t.
++Given the following position functions, find the velocity, acceleration, and speed in terms of the parameter $t$.
+ 
+ \begin{enumerate}[resume]
+-\item $\text{r}(t)=\langle3\cos t,3\sin t,t^{2}\rangle$
+-\item $\text{r}(t)=e^{-t}\text{i}+t^{2}\text{j}+\tan t\,\text{k}$
+-\item $\text{r}(t)=2\cos t\,\text{j}+3\sin t\,\text{k}$.
++\item $\mathbf{r}(t)=\langle3\cos t,3\sin t,t^{2}\rangle$
++\item $\mathbf{r}(t)=e^{-t}\mathbf{i}+t^{2}\mathbf{j}+\tan t\,\mathbf{k}$
++\item $\mathbf{r}(t)=2\cos t\,\mathbf{j}+3\sin t\,\mathbf{k}$.
+ \end{enumerate}
+ 
+ Find the velocity, acceleration, and speed of a particle with the given position function.
+ 
+ \begin{enumerate}[resume]
+-\item $\text{r}(t)=\langle t^{2}-1,t\rangle$
+-\item $\text{r}(t)=\langle e^{t},e^{-t}\rangle$. The graph is shown here: \\ \textit{[Figure: This figure is a curve in 3 dimensions. It is inside of a box. The box represents an octant. The curve begins in the bottom of the box, from the lower left, and bends through the box to the other side, in the lower right.]}
+-\item $\text{r}(t)=\langle \sin t,t,\cos t\rangle$.
+-\item The position function of an object is given by $\text{r}(t)=\langle t^{2},5t,t^{2}-16t\rangle$. At what time is the speed a minimum?
+-\item Let $\text{r}(t)=r\cosh(\omega t)\text{i}+r\sinh(\omega t)\text{j}$. Find the velocity and acceleration vectors and show that the acceleration is proportional to $\text{r}(t)$.
++\item $\mathbf{r}(t)=\langle t^{2}-1,t\rangle$
++\item $\mathbf{r}(t)=\langle e^{t},e^{-t}\rangle$. The graph is shown here: \\ \textit{[Figure: This figure is a curve in 3 dimensions. It is inside of a box. The box represents an octant. The curve begins in the bottom of the box, from the lower left, and bends through the box to the other side, in the lower right.]}
++\item $\mathbf{r}(t)=\langle \sin t,t,\cos t\rangle$.
++\item The position function of an object is given by $\mathbf{r}(t)=\langle t^{2},5t,t^{2}-16t\rangle$. At what time is the speed a minimum?
++\item Let $\mathbf{r}(t)=r\cosh(\omega t)\mathbf{i}+r\sinh(\omega t)\mathbf{j}$. Find the velocity and acceleration vectors and show that the acceleration is proportional to $\mathbf{r}(t)$.
+ \end{enumerate}
+ 
+-Consider the motion of a point on the circumference of a rolling circle. As the circle rolls, it generates the cycloid $\text{r}(t)=(\omega t-\sin(\omega t))\,\text{i}+(1-\cos(\omega t))\,\text{j}$, where $\omega$ is the angular velocity of the circle:
++Consider the motion of a point on the circumference of a rolling circle. As the circle rolls, it generates the cycloid $\mathbf{r}(t)=(\omega t-\sin(\omega t))\,\mathbf{i}+(1-\cos(\omega t))\,\mathbf{j}$, where $\omega$ is the angular velocity of the circle:
+ 
+ 
+-\textit{[Figure: This figure is a curve in the first octant. It is semicircles connected representing humps. It begins at the origin and touches the x axis at 4pi, and 8pi.]}
++\textit{[Figure: This figure is a curve in the first octant. It is semicircles connected representing humps. It begins at the origin and touches the $x$-axis at $4\pi$ and $8\pi$.]}
+ 
+ \begin{enumerate}[resume]
+ \item Find the equations for the velocity, acceleration, and speed of the particle at any time.
+ \end{enumerate}
+ 
+-A person on a hang glider is spiraling upward as a result of the rapidly rising air on a path having position vector $\text{r}(t)=(3\cos t)\text{i}+(3\sin t)\text{j}+t^{2}\text{k}$. The path is similar to that of a helix, although it is not a helix. The graph is shown here:
++A person on a hang glider is spiraling upward as a result of the rapidly rising air on a path having position vector $\mathbf{r}(t)=(3\cos t)\mathbf{i}+(3\sin t)\mathbf{j}+t^{2}\mathbf{k}$. The path is similar to that of a helix, although it is not a helix. The graph is shown here:
+ 
+ 
+ \textit{[Figure: This figure is a curve in 3 dimensions. It is inside of a box. The box represents an octant. The curve is connected in the box, from the lower left, and bends through the box to the upper right.]}
+@@ -57,7 +57,7 @@
+ \item The times, if any, at which the glider's acceleration is orthogonal to its velocity
+ \end{enumerate}
+ 
+-Given that $\text{r}(t)=\langle e^{-5t}\sin t,e^{-5t}\cos t,4e^{-5t}\rangle$ is the position vector of a moving particle, find the following quantities:
++Given that $\mathbf{r}(t)=\langle e^{-5t}\sin t,e^{-5t}\cos t,4e^{-5t}\rangle$ is the position vector of a moving particle, find the following quantities:
+ 
+ \begin{enumerate}[resume]
+ \item The velocity of the particle
+@@ -69,7 +69,7 @@
+ A projectile is shot in the air from ground level with an initial velocity of 500 m/sec at an angle of 60° with the horizontal. The graph is shown here:
+ 
+ 
+-\textit{[Figure: This figure is a curve in the fourth quadrant. The curve is decreasing. It begins at the origin and decreases into the fourth quadrant. Answer the following questions.]}
++\textit{[Figure: This figure is a curve in the fourth quadrant. The curve is decreasing. It begins at the origin and decreases into the fourth quadrant.]} Answer the following questions.
+ 
+ \begin{enumerate}[resume]
+ \item At what time does the projectile reach maximum height?
+@@ -87,30 +87,30 @@
+ \item A golf ball is hit in a horizontal direction off the top edge of a building that is 100 ft tall. How fast must the ball be launched to land 450 ft away?
+ \item A projectile is fired from ground level at an angle of 8° with the horizontal. The projectile is to have a range of 50 m. Find the minimum velocity necessary to achieve this range.
+ \item Prove that an object moving in a straight line at a constant speed has an acceleration of zero.
+-\item The acceleration of an object is given by $\text{a}(t)=t\,\text{j}+t\,\text{k}$. The velocity at $t=1$ sec is $\text{v}(1)=5\text{j}$ and the position of the object at $t=1$ sec is $\text{r}(1)=0\text{i}+0\text{j}+0\text{k}$. Find the object's position at any time.
+-\item Find $\text{r}(t)$ given that $\text{a}(t)=-32\text{j}$, $\text{v}(0)=600\sqrt{3}\text{i}+600\text{j}$, and $\text{r}(0)=0$.
+-\item Find the tangential and normal components of acceleration for $\text{r}(t)=a\cos(\omega t)\text{i}+a\sin(\omega t)\text{j}$ at $t=0$.
+-\item Given $\text{r}(t)=t^{2}\text{i}+2t\,\text{j}$ and $t=1$, find the tangential and normal components of acceleration.
++\item The acceleration of an object is given by $\mathbf{a}(t)=t\,\mathbf{j}+t\,\mathbf{k}$. The velocity at $t=1$ sec is $\mathbf{v}(1)=5\mathbf{j}$ and the position of the object at $t=1$ sec is $\mathbf{r}(1)=0\mathbf{i}+0\mathbf{j}+0\mathbf{k}$. Find the object's position at any time.
++\item Find $\mathbf{r}(t)$ given that $\mathbf{a}(t)=-32\mathbf{j}$, $\mathbf{v}(0)=600\sqrt{3}\mathbf{i}+600\mathbf{j}$, and $\mathbf{r}(0)=0$.
++\item Find the tangential and normal components of acceleration for $\mathbf{r}(t)=a\cos(\omega t)\mathbf{i}+a\sin(\omega t)\mathbf{j}$ at $t=0$.
++\item Given $\mathbf{r}(t)=t^{2}\mathbf{i}+2t\,\mathbf{j}$ and $t=1$, find the tangential and normal components of acceleration.
+ \end{enumerate}
+ 
+ For each of the following problems, find the tangential and normal components of acceleration.
+ 
+ \begin{enumerate}[resume]
+-\item $\text{r}(t)=\langle e^{t}\cos t,e^{t}\sin t,e^{t}\rangle$. The graph is shown here: \\ \textit{[Figure: This figure is a curve in 3 dimensions. It is inside of a box. The box represents an octant. The curve begins in the bottom of the box, from the lower left, and bends through the box to the other side, in the upper left.]}
+-\item $\text{r}(t)=\langle \cos(2t),\sin(2t),1\rangle$
+-\item $\text{r}(t)=\langle2t,t^{2},\frac{t^{3}}{3}\rangle$
+-\item $\text{r}(t)=\langle \frac{2}{3}{(1+t)}^{3/2},\frac{2}{3}{(1-t)}^{3/2},\sqrt{2}t\rangle$
+-\item $\text{r}(t)=\langle6t,3t^{2},2t^{3}\rangle$
+-\item $\text{r}(t)=t^{2}\text{i}+t^{2}\text{j}+t^{3}\text{k}$
+-\item $\text{r}(t)=3\cos(2\pi t)\,\text{i}+3\sin(2\pi t)\,\text{j}$
+-\item Find the position vector-valued function $\text{r}(t)$, given that $\text{a}(t)=\text{i}+e^{t}\text{j}$, $\text{v}(0)=2\text{j}$, and $\text{r}(0)=2\text{i}$.
+-\item The force on a particle is given by $\text{f}(t)=(\cos t)\,\text{i}+(\sin t)\,\text{j}$. The particle is located at point $(c,0)$ at $t=0$. The initial velocity of the particle is given by $\text{v}(0)=v_{0}\text{j}$. Find the path of the particle of mass m. (Recall, $\text{F}=m\cdot \text{a}.)$
++\item $\mathbf{r}(t)=\langle e^{t}\cos t,e^{t}\sin t,e^{t}\rangle$. The graph is shown here: \\ \textit{[Figure: This figure is a curve in 3 dimensions. It is inside of a box. The box represents an octant. The curve begins in the bottom of the box, from the lower left, and bends through the box to the other side, in the upper left.]}
++\item $\mathbf{r}(t)=\langle \cos(2t),\sin(2t),1\rangle$
++\item $\mathbf{r}(t)=\langle2t,t^{2},\frac{t^{3}}{3}\rangle$
++\item $\mathbf{r}(t)=\langle \frac{2}{3}{(1+t)}^{3/2},\frac{2}{3}{(1-t)}^{3/2},\sqrt{2}t\rangle$
++\item $\mathbf{r}(t)=\langle6t,3t^{2},2t^{3}\rangle$
++\item $\mathbf{r}(t)=t^{2}\mathbf{i}+t^{2}\mathbf{j}+t^{3}\mathbf{k}$
++\item $\mathbf{r}(t)=3\cos(2\pi t)\,\mathbf{i}+3\sin(2\pi t)\,\mathbf{j}$
++\item Find the position vector-valued function $\mathbf{r}(t)$, given that $\mathbf{a}(t)=\mathbf{i}+e^{t}\mathbf{j}$, $\mathbf{v}(0)=2\mathbf{j}$, and $\mathbf{r}(0)=2\mathbf{i}$.
++\item The force on a particle is given by $\mathbf{f}(t)=(\cos t)\,\mathbf{i}+(\sin t)\,\mathbf{j}$. The particle is located at point $(c,0)$ at $t=0$. The initial velocity of the particle is given by $\mathbf{v}(0)=v_{0}\mathbf{j}$. Find the path of the particle of mass $m$. (Recall, $\mathbf{F}=m\cdot \mathbf{a}$.)
+ \item An automobile that weighs 2700 lb makes a turn on a flat road while traveling at 56 ft/sec. If the radius of the turn is 70 ft, what is the required frictional force to keep the car from skidding?
+-\item Using Kepler's laws, it can be shown that $v_{0}=\sqrt{\frac{2GM}{r_{0}}}$ is the minimum speed needed when $\theta=0$ so that an object will escape from the pull of a central force resulting from mass M. Use this result to find the minimum speed when $\theta=0$ for a space capsule to escape from the gravitational pull of Earth if the probe is at an altitude of 300 km above Earth's surface.
++\item Using Kepler's laws, it can be shown that $v_{0}=\sqrt{\frac{2GM}{r_{0}}}$ is the minimum speed needed when $\theta=0$ so that an object will escape from the pull of a central force resulting from mass $M$. Use this result to find the minimum speed when $\theta=0$ for a space capsule to escape from the gravitational pull of Earth if the probe is at an altitude of 300 km above Earth's surface.
+ \item Find the time in years it takes the dwarf planet Pluto to make one orbit about the Sun given that $a=39.5$ A.U.
+ \end{enumerate}
+ 
+-Suppose that the position function for an object in three dimensions is given by the equation $\text{r}(t)=t\cos(t)\text{i}+t\sin(t)\text{j}+3t\,\text{k}$.
++Suppose that the position function for an object in three dimensions is given by the equation $\mathbf{r}(t)=t\cos(t)\mathbf{i}+t\sin(t)\mathbf{j}+3t\,\mathbf{k}$.
+ 
+ \begin{enumerate}[resume]
+ \item Show that the particle moves on a circular cone.

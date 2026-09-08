@@ -1,0 +1,125 @@
+% OpenStax Calculus Volume 3 -- Section 5.3 Exercises: Double Integrals in Polar Coordinates
+% Exercises reproduced from OpenStax, licensed under CC BY 4.0.
+% Source: https://openstax.org/books/calculus-volume-3/pages/5-3-double-integrals-in-polar-coordinates
+\documentclass{exercises}
+\title{OpenStax Calculus Volume 3}
+\subtitle{Section 5.3 Exercises: Double Integrals in Polar Coordinates}
+\sourceurl{https://openstax.org/books/calculus-volume-3/pages/5-3-double-integrals-in-polar-coordinates}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+
+In the following exercises, express the region $D$ in polar coordinates.
+
+\begin{enumerate}[start=1]
+\item $D$ is the region of the disk of radius $2$ centered at the origin that lies in the first quadrant.
+\item $D$ is the region between the circles of radius $4$ and radius $5$ centered at the origin that lies in the second quadrant.
+\item $D$ is the region bounded by the $y$-axis and $x=\sqrt{1-y^{2}}$.
+\item $D$ is the region bounded by the $x$-axis and $y=\sqrt{2-x^{2}}$.
+\item $D=\{(x,y)|x^{2}+y^{2}\le4x\}$
+\item $D=\{(x,y)|x^{2}+y^{2}\le4y\}$
+\end{enumerate}
+
+In the following exercises, the graph of the polar rectangular region $D$ is given. Express $D$ in polar coordinates.
+
+\begin{enumerate}[resume]
+\item \textit{[Figure: Half an annulus $D$ is drawn in the first and second quadrants with inner radius $3$ and outer radius $5$.]}
+\item \textit{[Figure: A sector of an annulus $D$ is drawn between $\theta=\pi/4$ and $\theta=\pi/2$ with inner radius $3$ and outer radius $5$.]}
+\item \textit{[Figure: Half of an annulus $D$ is drawn between $\theta=\pi/4$ and $\theta=5\pi/4$ with inner radius $3$ and outer radius $5$.]}
+\item \textit{[Figure: A sector of an annulus $D$ is drawn between $\theta=3\pi/4$ and $\theta=5\pi/4$ with inner radius $3$ and outer radius $5$.]}
+\item In the following graph, the region $D$ is situated below $y=x$ and is bounded by $x=1$, $x=5$, and $y=0$. \\ \textit{[Figure: A region $D$ is given that is bounded by $y=0$, $x=1$, $x=5$, and $y=x$; that is, a right triangle with a corner cut off.]}
+\item In the following graph, the region $D$ is bounded by $y=x$ and $y=x^{2}$. \\ \textit{[Figure: A region $D$ is drawn between $y=x$ and $y=x^{2}$, which looks like a deformed lens, with the bulbous part below the straight part.]}
+\end{enumerate}
+
+In the following exercises, evaluate the double integral $\underset{R}{\iint}f(x,y)\,dA$ over the polar rectangular region $D$.
+
+\begin{enumerate}[resume]
+\item $f(x,y)=x^{2}+y^{2}$, $D=\{(r,\theta)|3\le r\le5,0\le \theta \le2\pi \}$
+\item $f(x,y)=x+y$, $D=\{(r,\theta)|3\le r\le5,0\le \theta \le2\pi \}$
+\item $f(x,y)=x^{2}+xy$, $D=\{(r,\theta)|1\le r\le2,\pi \le \theta \le2\pi \}$
+\item $f(x,y)=x^{4}+y^{4}$, $D=\{(r,\theta)|1\le r\le2,\frac{3\pi}{2}\le \theta \le2\pi \}$
+\item $f(x,y)=\sqrt[3]{x^{2}+y^{2}}$, where $D=\{(r,\theta)|0\le r\le1,\frac{\pi}{2}\le \theta \le \pi \}$.
+\item $f(x,y)=x^{4}+2x^{2}y^{2}+y^{4}$, where $D=\{(r,\theta)|3\le r\le4,\frac{\pi}{3}\le \theta \le \frac{2\pi}{3}\}$.
+\item $f(x,y)=\sin(\arctan \frac{y}{x})$, where $D=\{(r,\theta)|1\le r\le2,\frac{\pi}{6}\le \theta \le \frac{\pi}{3}\}$
+\item $f(x,y)=\arctan(\frac{y}{x})$, where $D=\{(r,\theta)|2\le r\le3,\frac{\pi}{4}\le \theta \le \frac{\pi}{3}\}$
+\item $\underset{D}{\iint}e^{x^{2}+y^{2}}[1+2\arctan(\frac{y}{x})]\,dA,\,D=\{(r,\theta)|1\le r\le2,\frac{\pi}{6}\le \theta \le \frac{\pi}{3}\}$
+\item $\underset{D}{\iint}(e^{x^{2}+y^{2}}+x^{4}+2x^{2}y^{2}+y^{4})\arctan(\frac{y}{x})\,dA,\,D=\{(r,\theta)|1\le r\le2,\frac{\pi}{4}\le \theta \le \frac{\pi}{3}\}$
+\end{enumerate}
+
+In the following exercises, the integrals have been converted to polar coordinates. Verify that the identities are true and choose the easiest way to evaluate the integrals, in rectangular or polar coordinates.
+
+\begin{enumerate}[resume]
+\item $\int_{1}^{2}\,\int_{0}^{x}(x^{2}+y^{2})\,dy\,dx=\int_{0}^{\frac{\pi}{4}}\,\int_{\sec \theta}^{2\sec \theta}r^{3}\,dr\,d\theta$
+\item $\int_{2}^{3}\,\int_{0}^{x}\frac{x}{\sqrt{x^{2}+y^{2}}}\,dy\,dx=\int_{0}^{\pi/4}\,\int_{2\sec \theta}^{3\sec \theta}r\cos \theta \,dr\,d\theta$
+\item $\int_{0}^{1}\,\int_{x^{2}}^{x}\frac{1}{\sqrt{x^{2}+y^{2}}}\,dy\,dx=\int_{0}^{\pi/4}\,\int_{0}^{\tan \theta \sec \theta}dr\,d\theta$
+\item $\int_{0}^{1}\,\int_{x^{2}}^{x}\frac{y}{\sqrt{x^{2}+y^{2}}}\,dy\,dx=\int_{0}^{\pi/4}\,\int_{0}^{\tan \theta \sec \theta}r\sin \theta \,dr\,d\theta$
+\end{enumerate}
+
+In the following exercises, convert the integrals to polar coordinates and evaluate them.
+
+\begin{enumerate}[resume]
+\item $\int_{0}^{3}\,\int_{0}^{\sqrt{9-y^{2}}}(x^{2}+y^{2})\,dx\,dy$
+\item $\int_{0}^{2}\,\int_{-\sqrt{4-y^{2}}}^{\sqrt{4-y^{2}}}{(x^{2}+y^{2})}^{2}\,dx\,dy$
+\item $\int_{0}^{1}\,\int_{0}^{\sqrt{1-x^{2}}}(x+y)\,dy\,dx$
+\item $\int_{0}^{4}\,\int_{-\sqrt{16-x^{2}}}^{\sqrt{16-x^{2}}}\sin(x^{2}+y^{2})\,dy\,dx$
+\item Evaluate the integral $\underset{D}{\iint}r\,dA$ where $D$ is the region bounded by the polar axis and the upper half of the cardioid $r=1+\cos \theta$.
+\item Find the area of the region $D$ bounded by the polar axis and the upper half of the cardioid $r=1+\cos \theta$.
+\item Evaluate the integral $\underset{D}{\iint}\,dA$, where $D$ is the region bounded by the part of the four-leaved rose $r=\sin 2\theta$ situated in the first quadrant (see the following figure). \\ \textit{[Figure: A region $D$ is drawn in the first-quadrant petal of the four-petal rose given by $r=\sin(2\theta)$.]}
+\item Find the total area of the region enclosed by the four-leaved rose $r=\sin 2\theta$ (see the figure in the previous exercise).
+\item Find the area of the region $D$, which is the region bounded by $y=\sqrt{4-x^{2}}$, $x=\sqrt{3}$, $x=2$, and $y=0$.
+\item Find the area of the region $D$, which is the region inside the disk $x^{2}+y^{2}\le4$ and to the right of the line $x=1$.
+\item Determine the average value of the function $f(x,y)=x^{2}+y^{2}$ over the region $D$ bounded by the polar curve $r=\cos 2\theta$, where $-\frac{\pi}{4}\le \theta \le \frac{\pi}{4}$ (see the following graph). \\ \textit{[Figure: The first/fourth-quadrant petal of the four-petal rose given by $r=\cos(2\theta)$ is shown.]}
+\item Determine the average value of the function $f(x,y)=\sqrt{x^{2}+y^{2}}$ over the region $D$ bounded by the polar curve $r=3\sin 2\theta$, where $0\le \theta \le \frac{\pi}{2}$ (see the following graph). \\ \textit{[Figure: The first-quadrant petal of the four-petal rose given by $r=3\sin(2\theta)$ is shown.]}
+\item Find the volume of the solid situated in the first octant and bounded by the paraboloid $z=1-4x^{2}-4y^{2}$ and the planes $x=0,y=0$, and $z=0$.
+\item Find the volume of the solid bounded by the paraboloid $z=2-9x^{2}-9y^{2}$ and the plane $z=1$.
+\item 
+\begin{enumerate}[label=(\alph*)]
+  \item Find the volume of the solid $S_{1}$ bounded by the cylinder $x^{2}+y^{2}=1$ and the planes $z=0$ and $z=1$.
+  \item Find the volume of the solid $S_{2}$ outside the double cone $z^{2}=x^{2}+y^{2}$, inside the cylinder $x^{2}+y^{2}=1$, and above the plane $z=0$.
+  \item Find the volume of the solid inside the cone $z^{2}=x^{2}+y^{2}$ and below the plane $z=1$ by subtracting the volumes of the solids $S_{1}$ and $S_{2}$.
+\end{enumerate}
+\item 
+\begin{enumerate}[label=(\alph*)]
+  \item Find the volume of the solid $S_{1}$ inside the unit sphere $x^{2}+y^{2}+z^{2}=1$ and above the plane $z=0$.
+  \item Find the volume of the solid $S_{2}$ inside the double cone $(z-1)^{2}=x^{2}+y^{2}$ and above the plane $z=0$.
+  \item Find the volume of the solid outside the double cone $(z-1)^{2}=x^{2}+y^{2}$ and inside the sphere $x^{2}+y^{2}+z^{2}=1$.
+\end{enumerate}
+\end{enumerate}
+
+For the following two exercises, consider a spherical ring, which is a sphere with a cylindrical hole cut so that the axis of the cylinder passes through the center of the sphere (see the following figure).
+
+
+\textit{[Figure: A spherical ring is shown, that is, a sphere with a cylindrical hole going all the way through it.]}
+
+\begin{enumerate}[resume]
+\item If the sphere has radius $4$ and the cylinder has radius $2$, find the volume of the spherical ring.
+\item A cylindrical hole of diameter $6$ cm is bored through a sphere of radius $5$ cm such that the axis of the cylinder passes through the center of the sphere. Find the volume of the resulting spherical ring.
+\item Find the volume of the solid that lies under the double cone $z^{2}=4x^{2}+4y^{2}$, inside the cylinder $x^{2}+y^{2}=x$, and above the plane $z=0$.
+\item Find the volume of the solid that lies under the paraboloid $z=x^{2}+y^{2}$, inside the cylinder $x^{2}+y^{2}=x$, and above the plane $z=0$.
+\item Find the volume of the solid that lies under the plane $x+y+z=10$ and above the disk $x^{2}+y^{2}=4x$.
+\item Find the volume of the solid that lies under the plane $2x+y+2z=8$ and above the unit disk $x^{2}+y^{2}=1$.
+\item A radial function $f$ is a function whose value at each point depends only on the distance between that point and the origin of the system of coordinates; that is, $f(x,y)=g(r)$, where $r=\sqrt{x^{2}+y^{2}}$. Show that if $f$ is a continuous radial function, then $\underset{D}{\iint}f(x,y)\,dA=(\theta_{2}-\theta_{1})[G(R_{2})-G(R_{1})]$, where $G'(r)=rg(r)$ and $(x,y)\in D=\{(r,\theta)|R_{1}\le r\le R_{2},\theta_{1}\le \theta \le \theta_{2}\}$, with $0\le R_{1}<R_{2}$ and $0\le \theta_{1}<\theta_{2}\le2\pi$.
+\item Use the information from the preceding exercise to calculate the integral $\underset{D}{\iint}{(x^{2}+y^{2})}^{3}\,dA$, where $D$ is the unit disk.
+\item Let $f(x,y)=\frac{F'(r)}{r}$ be a continuous radial function defined on the annular region $D=\{(r,\theta)|R_{1}\le r\le R_{2},0\le \theta \le2\pi \}$, where $r=\sqrt{x^{2}+y^{2}}$, $0<R_{1}<R_{2}$, and $F$ is a differentiable function. Show that $\underset{D}{\iint}f(x,y)\,dA=2\pi[F(R_{2})-F(R_{1})]$.
+\item Apply the preceding exercise to calculate the integral $\underset{D}{\iint}\frac{e^{\sqrt{x^{2}+y^{2}}}}{\sqrt{x^{2}+y^{2}}}\,dx\,dy$, where $D$ is the annular region between the circles of radii $1$ and $2$ situated in the third quadrant.
+\item Let $f$ be a continuous function that can be expressed in polar coordinates as a function of $\theta$ only; that is, $f(x,y)=h(\theta)$, where $(x,y)\in D=\{(r,\theta)|R_{1}\le r\le R_{2},\theta_{1}\le \theta \le \theta_{2}\}$, with $0\le R_{1}<R_{2}$ and $0\le \theta_{1}<\theta_{2}\le2\pi$. Show that $\underset{D}{\iint}f(x,y)\,dA=\frac{1}{2}(R_{2}^{2}-R_{1}^{2})[H(\theta_{2})-H(\theta_{1})]$, where $H$ is an antiderivative of $h$.
+\item Apply the preceding exercise to calculate the integral $\underset{D}{\iint}\frac{y^{2}}{x^{2}}\,dA$, where $D=\{(r,\theta)|1\le r\le2,\frac{\pi}{6}\le \theta \le \frac{\pi}{3}\}$.
+\item Let $f$ be a continuous function that can be expressed in polar coordinates as a product of a function of $r$ only and a function of $\theta$ only; that is, $f(x,y)=g(r)h(\theta)$, where $(x,y)\in D=\{(r,\theta)|R_{1}\le r\le R_{2},\theta_{1}\le \theta \le \theta_{2}\}$, with $0\le R_{1}<R_{2}$ and $0\le \theta_{1}<\theta_{2}\le2\pi$. Show that $\underset{D}{\iint}f(x,y)\,dA=[G(R_{2})-G(R_{1})]\,[H(\theta_{2})-H(\theta_{1})]$, where $G(r)$ and $H(\theta)$ are antiderivatives of $rg(r)$ and $h(\theta)$, respectively.
+\item Evaluate $\underset{D}{\iint}\arctan(\frac{y}{x})\sqrt{x^{2}+y^{2}}\,dA$, where $D=\{(r,\theta)|2\le r\le3,\frac{\pi}{4}\le \theta \le \frac{\pi}{3}\}$.
+\item A spherical cap is the region of a sphere that lies above or below a given plane.
+\begin{enumerate}[label=(\alph*)]
+  \item Show that the volume of the spherical cap in the figure below is $\frac{1}{6}\pi h(3a^{2}+h^{2})$.\\ \textit{[Figure: A sphere of radius $R$ has a circle inside it $h$ units from the top of the sphere. This circle has radius $a$, which is less than $R$.]}
+  \item A spherical segment is the solid defined by intersecting a sphere with two parallel planes. If the distance between the planes is $h$, show that the volume of the spherical segment in the figure below is $\frac{1}{6}\pi h(3a^{2}+3b^{2}+h^{2})$.\\ \textit{[Figure: A sphere has two parallel circles inside it $h$ units apart. The upper circle has radius $b$, and the lower circle has radius $a$. Note that $a>b$.]}
+\end{enumerate}
+\item In statistics, the joint density for two independent, normally distributed events with a mean $\mu=0$ and a standard distribution $\sigma$ is defined by $p(x,y)=\frac{1}{2\pi \sigma^{2}}e^{-\frac{x^{2}+y^{2}}{2\sigma^{2}}}$. Consider $(X,Y)$, the Cartesian coordinates of a ball in the resting position after it was released from a position on the z-axis toward the $xy$-plane. Assume that the coordinates of the ball are independently normally distributed with a mean $\mu=0$ and a standard deviation of $\sigma$ (in feet). The probability that the ball will stop no more than $a$ feet from the origin is given by $P[X^{2}+Y^{2}\le a^{2}]=\underset{D}{\iint}p(x,y)\,dy\,dx$, where $D$ is the disk of radius a centered at the origin. Show that $P[X^{2}+Y^{2}\le a^{2}]=1-e^{-a^{2}/2\sigma^{2}}$.
+\item The double improper integral $\int_{-\infty}^{\infty}\,\int_{-\infty}^{\infty}e^{-(x^{2}+y^{2})/2}\,dy\,dx$ may be defined as the limit value of the double integrals $\underset{D_{a}}{\iint}e^{-(x^{2}+y^{2})/2}\,dA$ over disks $D_{a}$ of radii a centered at the origin, as a increases without bound; that is, $\int_{-\infty}^{\infty}\,\int_{-\infty}^{\infty}e^{-(x^{2}+y^{2})/2}\,dy\,dx=\lim_{a\to \infty}\underset{D_{a}}{\iint}e^{-(x^{2}+y^{2})/2}\,dA$.
+\begin{enumerate}[label=(\alph*)]
+  \item Use polar coordinates to show that $\int_{-\infty}^{\infty}\,\int_{-\infty}^{\infty}e^{-(x^{2}+y^{2})/2}\,dy\,dx=2\pi$.
+  \item Show that $\int_{-\infty}^{\infty}e^{-x^{2}/2}\,dx=\sqrt{2\pi}$, by using the relation $\int_{-\infty}^{\infty}\,\int_{-\infty}^{\infty}e^{-(x^{2}+y^{2})/2}\,dy\,dx=(\int_{-\infty}^{\infty}e^{-x^{2}/2}\,dx)(\int_{-\infty}^{\infty}e^{-y^{2}/2}\,dy)$.
+\end{enumerate}
+\end{enumerate}
+
+\end{document}

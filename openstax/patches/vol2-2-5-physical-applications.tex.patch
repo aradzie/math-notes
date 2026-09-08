@@ -1,0 +1,84 @@
+OpenStax's own source HTML has no space between the word "of" and the
+immediately following inline math span containing $1$ (the exercise's
+"...a mass of<math>1</math> kg weighs $9.8$ N near the surface of the Earth.)
+-- a single missing whitespace text node in the source, not a converter bug
+(no other math span in this page's exercises abuts adjacent text with no
+separating space). Restored by hand as a literal space between "of" and
+"$1$".
+
+Manual review corrections (math-mode boundaries, redundant delimiters, and
+one upstream mathematical error):
+
+- Five one-dimensional-density exercises trapped the closing parenthesis of
+  "(starting at x=...)" inside the adjacent math span (e.g. "$x=0)$"). Moved
+  the parenthesis outside the math span in each case ("$x=0$)").
+- Simplified the oversized `\left( 1/2 \right)` delimiters around the trivial
+  exponent `1/2` in the metal-rod density function to plain parentheses,
+  matching the plain `(1/2)x^{2}` notation already used two exercises later.
+- In the rocket/gravity exercise, removed a redundant outer parenthesis pair
+  around the already-parenthesized numerator in `F=-((GMm)/x^{2})`, matching
+  the file's established single-parenthesized-numerator convention (compare
+  the cone-tank exercise's `A=(\pi r^{2}h^{2})/H^{2}`), and moved the
+  sentence-ending period out of the trailing math span
+  `\text{kg}.)$` -> `\text{kg}$.)` so the closing parenthesis of the "(Note:
+  ...)" aside is not glued to math.
+- Corrected an upstream mathematical error in the final cone-shaped-tank
+  exercise: the cross-sectional-area formula was printed as
+  `A=(\pi r^{2}h^{2})/H^{3}` (confirmed against the live OpenStax page and
+  its LibreTexts mirror, both of which independently print `H^{3}`), but the
+  exercise's own claim -- "the work to empty it is half the work for a
+  cylinder with the same height and base" -- only holds with `H^{2}`.
+  Dimensional/physical consistency requires it too: evaluating the area at
+  the tank's full depth, A(H), must reduce to a fixed base area independent
+  of H (matching the comparison cylinder's constant base); that holds only
+  when the H exponent equals the h exponent (2), not 3. Direct integration
+  of the pumping work with `H^{2}` reproduces the stated 1:2 work ratio
+  exactly; `H^{3}` does not. Corrected to `H^{2}`.
+
+---
+--- /tmp/raw.tex
++++ vol2-2-5-physical-applications.tex
+@@ -17,7 +17,7 @@
+ \begin{enumerate}[start=1]
+ \item Find the work done when a constant force $F=12$ lb moves a chair from $x=0.9$ to $x=1.1$ ft.
+ \item How much work is done when a person lifts a $50$ lb box of comics onto a truck that is $3$ ft off the ground?
+-\item What is the work done lifting a $20$ kg child from the floor to a height of $2$ m? (Note that a mass of$1$ kg weighs $9.8$ N near the surface of the Earth.)
++\item What is the work done lifting a $20$ kg child from the floor to a height of $2$ m? (Note that a mass of $1$ kg weighs $9.8$ N near the surface of the Earth.)
+ \item Find the work done when you push a box along the floor $2$ m, when you apply a constant force of $F=100\,\text{N}$.
+ \item Compute the work done for a force $F=12/x^{2}$ N from $x=1$ to $x=2$ m.
+ \item What is the work done moving a particle from $x=0$ to $x=1$ m if the force acting on it is $F=3x^{2}$ N?
+@@ -26,11 +26,11 @@
+ For the following exercises, find the mass of the one-dimensional object.
+ 
+ \begin{enumerate}[resume]
+-\item A wire that is $2$ ft long (starting at $x=0)$ and has a density function of $\rho(x)=x^{2}+2x$ lb/ft
+-\item A car antenna that is $3$ ft long (starting at $x=0)$ and has a density function of $\rho(x)=3x+2$ lb/ft
+-\item A metal rod that is $8$ in. long (starting at $x=0)$ and has a density function of $\rho(x)=e^{\left( 1/2 \right)x}$ lb/in.
+-\item A pencil that is $4$ in. long (starting at $x=2)$ and has a density function of $\rho(x)=5/x$ oz/in.
+-\item A ruler that is $12$ in. long (starting at $x=5)$ and has a density function of $\rho(x)=\ln(x)+(1/2)x^{2}$ oz/in.
++\item A wire that is $2$ ft long (starting at $x=0$) and has a density function of $\rho(x)=x^{2}+2x$ lb/ft
++\item A car antenna that is $3$ ft long (starting at $x=0$) and has a density function of $\rho(x)=3x+2$ lb/ft
++\item A metal rod that is $8$ in. long (starting at $x=0$) and has a density function of $\rho(x)=e^{(1/2)x}$ lb/in.
++\item A pencil that is $4$ in. long (starting at $x=2$) and has a density function of $\rho(x)=5/x$ oz/in.
++\item A ruler that is $12$ in. long (starting at $x=5$) and has a density function of $\rho(x)=\ln(x)+(1/2)x^{2}$ oz/in.
+ \end{enumerate}
+ 
+ For the following exercises, find the mass of the two-dimensional object that is centered at the origin.
+@@ -52,7 +52,7 @@
+ \item For the cable in the preceding exercise, how much additional work is done by hanging a $200$ lb weight at the end of the cable?
+ \item \techrequired A pyramid of height $500$ ft has a square base $800$ ft by $800$ ft. Find the area $A$ at height $h$. If the rock used to build the pyramid weighs approximately $w=100\,\text{lb/ft}^{3}$, how much work did it take to lift all the rock?
+ \item \techrequired For the pyramid in the preceding exercise, assume there were $1000$ workers each working $10$ hours a day, $5$ days a week, $50$ weeks a year. If the workers, on average, lifted 10 100 lb rocks $2$ ft/hr, how long did it take to build the pyramid?
+-\item \techrequired The force of gravity on a mass $m$ is $F=-((GMm)/x^{2})$ newtons. For a rocket of mass $m=1000\,\text{kg}$, compute the work to lift the rocket from $x=6400$ to $x=6500$ km. State your answers with three significant figures. (Note: $G=6.67\times 10^{-11}\,\text{N m}^{2}/\text{kg}^{2}$ and $M=6\times 10^{24}\,\text{kg}.)$
++\item \techrequired The force of gravity on a mass $m$ is $F=-(GMm)/x^{2}$ newtons. For a rocket of mass $m=1000\,\text{kg}$, compute the work to lift the rocket from $x=6400$ to $x=6500$ km. State your answers with three significant figures. (Note: $G=6.67\times 10^{-11}\,\text{N m}^{2}/\text{kg}^{2}$ and $M=6\times 10^{24}\,\text{kg}$.)
+ \item \techrequired For the rocket in the preceding exercise, find the work to lift the rocket from $x=6400$ to $x=\infty$.
+ \item \techrequired A rectangular dam is $40$ ft high and $60$ ft wide. Assume the weight density of water is 62.5 lbs/ft$^{3}$. Compute the total force $F$ on the dam when
+ \begin{enumerate}[label=(\alph*)]
+@@ -64,7 +64,7 @@
+ \item \techrequired How much work is required to pump out a swimming pool if the area of the base is $800$ ft$^{2}$, the water is $4$ ft deep, and the top is $1$ ft above the water level? Assume that the density of water is $62$ lb/ft$^{3}$.
+ \item A cylinder of depth $H$ and cross-sectional area $A$ stands full of water at density $\rho$. Compute the work to pump all the water to the top.
+ \item For the cylinder in the preceding exercise, compute the work to pump all the water to the top if the cylinder is only half full.
+-\item A cone-shaped tank has a cross-sectional area that increases with its depth: $A=(\pi r^{2}h^{2})/H^{3}$. Show that the work to empty it is half the work for a cylinder with the same height and base.
++\item A cone-shaped tank has a cross-sectional area that increases with its depth: $A=(\pi r^{2}h^{2})/H^{2}$. Show that the work to empty it is half the work for a cylinder with the same height and base.
+ \end{enumerate}
+ 
+ \end{document}

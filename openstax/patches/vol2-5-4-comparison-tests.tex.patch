@@ -1,0 +1,104 @@
+OpenStax's source MathML for the summation exercise omits the summation
+operator itself (an empty <mrow/> where <mo>∑</mo> belongs, in both the
+presentation and content MathML), so the operator is restored here.
+
+The converted source also starts two logarithmic series at n=1 even though
+their first terms are undefined; they are changed to start at n=2. Further
+corrections restore the intended grouping in sin(n+6), repair malformed
+subscripts and powers, use proper operator notation, move sentence
+punctuation outside math mode, repair the h(d) subpart, and normalize local
+LaTeX and unit typography.
+
+--- /tmp/raw.tex
++++ vol2-5-4-comparison-tests.tex
+@@ -18,7 +18,7 @@
+ \item $\sum_{n=1}^{\infty}a_{n}$ where $a_{n}=\frac{2}{n(n+1)}$
+ \item $\sum_{n=1}^{\infty}a_{n}$ where $a_{n}=\frac{1}{n(n+1/2)}$
+ \item $\sum_{n=1}^{\infty}\frac{1}{2(n+1)}$
+-\item $\sum_{n=2}^{\infty}\frac{1}{2\left( n-1 \right)}$
++\item $\sum_{n=2}^{\infty}\frac{1}{2(n-1)}$
+ \item $\sum_{n=2}^{\infty}\frac{1}{{(n\ln n)}^{2}}$
+ \item $\sum_{n=1}^{\infty}\frac{n!}{(n+2)!}$
+ \item $\sum_{n=1}^{\infty}\frac{1}{n!}$
+@@ -33,8 +33,8 @@
+ Use the limit comparison test to determine whether each of the following series converges or diverges.
+ 
+ \begin{enumerate}[resume]
+-\item $\sum_{n=1}^{\infty}{(\frac{\ln n}{n})}^{2}$
+-\item $\sum_{n=1}^{\infty}{(\frac{\ln n}{n^{0.6}})}^{2}$
++\item $\sum_{n=1}^{\infty}\left(\frac{\ln n}{n}\right)^{2}$
++\item $\sum_{n=1}^{\infty}\left(\frac{\ln n}{n^{0.6}}\right)^{2}$
+ \item $\sum_{n=1}^{\infty}\frac{\ln(1+\frac{1}{n})}{n}$
+ \item $\sum_{n=1}^{\infty}\ln(1+\frac{1}{n^{2}})$
+ \item $\sum_{n=1}^{\infty}\frac{1}{4^{n}-3^{n}}$
+@@ -43,11 +43,11 @@
+ \item $\sum_{n=1}^{\infty}\frac{1}{e^{(1.01)n}-3^{n}}$
+ \item $\sum_{n=1}^{\infty}\frac{1}{n^{1+1/n}}$
+ \item $\sum_{n=1}^{\infty}\frac{1}{2^{1+1/n}n^{1+1/n}}$
+-\item $\sum_{n=1}^{\infty}(\frac{1}{n}-\sin(\frac{1}{n}))$
+-\item $\sum_{n=1}^{\infty}(1-\cos(\frac{1}{n}))$
+-\item $\sum_{n=1}^{\infty}\frac{1}{n}(\frac{\pi}{2}-\tan^{-1}n)$
+-\item $\sum_{n=1}^{\infty}{(1-\frac{1}{n})}^{n}$ (Hint:${(1-\frac{1}{n})}^{n}\to1/e.)$
+-\item $\sum_{n=1}^{\infty}(1-e^{-1/n})$ (Hint:$1/e\approx{(1-1/n)}^{n}$, so $1-e^{-1/n}\approx1/n.)$
++\item $\sum_{n=1}^{\infty}\left(\frac{1}{n}-\sin\left(\frac{1}{n}\right)\right)$
++\item $\sum_{n=1}^{\infty}\left(1-\cos\left(\frac{1}{n}\right)\right)$
++\item $\sum_{n=1}^{\infty}\frac{1}{n}\left(\frac{\pi}{2}-\arctan n\right)$
++\item $\sum_{n=1}^{\infty}\left(1-\frac{1}{n}\right)^{n}$ (Hint: $\left(1-\frac{1}{n}\right)^{n}\to 1/e$.)
++\item $\sum_{n=1}^{\infty}(1-e^{-1/n})$ (Hint: $1/e\approx(1-1/n)^{n}$, so $1-e^{-1/n}\approx 1/n$.)
+ \item Does $\sum_{n=2}^{\infty}\frac{1}{{(\ln n)}^{p}}$ converge if $p$ is large enough? If so, for which $p$?
+ \item Does $\sum_{n=1}^{\infty}{(\frac{(\ln n)}{n})}^{p}$ converge if $p$ is large enough? If so, for which $p$?
+ \item For which $p$ does the series $\sum_{n=1}^{\infty}2^{pn}/3^{n}$ converge?
+@@ -55,34 +55,34 @@
+ \item For which $r>0$ does the series $\sum_{n=1}^{\infty}\frac{r^{n^{2}}}{2^{n}}$ converge?
+ \item For which $r>0$ does the series $\sum_{n=1}^{\infty}\frac{2^{n}}{r^{n^{2}}}$ converge?
+ \item Find all values of $p$ and $q$ such that $\sum_{n=1}^{\infty}\frac{n^{p}}{{(n!)}^{q}}$ converges.
+-\item Does ${}_{n=1}^{\infty}\left( \frac{n\pi}{2} \right)$ converge or diverge? Explain.
+-\item Explain why, for each $n$, at least one of $\{|\sin n|,|\sin(n+1)|,...,|\sin n+6|\}$ is larger than $1/2$. Use this relation to test convergence of $\sum_{n=1}^{\infty}\frac{|\sin n|}{\sqrt{n}}$.
+-\item Suppose that $a_{n}\ge0$ and $b_{n}\ge0$ and that $\sum_{n=1}^{\infty}a^{2}{}_{n}$ and $\sum_{n=1}^{\infty}b^{2}{}_{n}$ converge. Prove that $\sum_{n=1}^{\infty}a_{n}b_{n}$ converges and $\sum_{n=1}^{\infty}a_{n}\,b_{n}\le \frac{1}{2}(\sum_{n=1}^{\infty}a_{n}^{2}+\sum_{n=1}^{\infty}b_{n}^{2})$.
+-\item Does $\sum_{n=1}^{\infty}2^{-\ln \ln n}$ converge? (Hint: Write $2^{\ln \ln n}$ as a power of $\ln n.)$
+-\item Does $\sum_{n=1}^{\infty}{(\ln n)}^{-\ln n}$ converge? (Hint: Use $n=e^{\ln(n)}$ to compare to a $p-\text{series}.)$
+-\item Does $\sum_{n=2}^{\infty}{(\ln n)}^{-\ln \ln n}$ converge? (Hint: Compare $a_{n}$ to $1/n.)$
+-\item Show that if $a_{n}\ge0$ and $\sum_{n=1}^{\infty}a_{n}$ converges, then $\sum_{n=1}^{\infty}a^{2}{}_{n}$ converges. If $\sum_{n=1}^{\infty}a^{2}{}_{n}$ converges, does $\sum_{n=1}^{\infty}a_{n}$ necessarily converge?
++\item Does $\sum_{n=1}^{\infty}\frac{n\pi}{2}$ converge or diverge? Explain.
++\item Explain why, for each $n$, at least one of $\{|\sin n|,|\sin(n+1)|,\ldots,|\sin(n+6)|\}$ is larger than $1/2$. Use this relation to test convergence of $\sum_{n=1}^{\infty}\frac{|\sin n|}{\sqrt{n}}$.
++\item Suppose that $a_{n}\ge 0$ and $b_{n}\ge 0$ and that $\sum_{n=1}^{\infty}a_{n}^{2}$ and $\sum_{n=1}^{\infty}b_{n}^{2}$ converge. Prove that $\sum_{n=1}^{\infty}a_{n}b_{n}$ converges and $\sum_{n=1}^{\infty}a_{n}b_{n}\le \frac{1}{2}\left(\sum_{n=1}^{\infty}a_{n}^{2}+\sum_{n=1}^{\infty}b_{n}^{2}\right)$.
++\item Does $\sum_{n=2}^{\infty}2^{-\ln \ln n}$ converge? (Hint: Write $2^{\ln \ln n}$ as a power of $\ln n$.)
++\item Does $\sum_{n=2}^{\infty}(\ln n)^{-\ln n}$ converge? (Hint: Use $n=e^{\ln n}$ to compare to a $p$-series.)
++\item Does $\sum_{n=2}^{\infty}(\ln n)^{-\ln \ln n}$ converge? (Hint: Compare $a_{n}$ to $1/n$.)
++\item Show that if $a_{n}\ge 0$ and $\sum_{n=1}^{\infty}a_{n}$ converges, then $\sum_{n=1}^{\infty}a_{n}^{2}$ converges. If $\sum_{n=1}^{\infty}a_{n}^{2}$ converges, does $\sum_{n=1}^{\infty}a_{n}$ necessarily converge?
+ \item Suppose that $a_{n}>0$ for all $n$ and that $\sum_{n=1}^{\infty}a_{n}$ converges. Suppose that $b_{n}$ is an arbitrary sequence of zeros and ones. Does $\sum_{n=1}^{\infty}a_{n}b_{n}$ necessarily converge?
+ \item Suppose that $a_{n}>0$ for all $n$ and that $\sum_{n=1}^{\infty}a_{n}$ diverges. Suppose that $b_{n}$ is an arbitrary sequence of zeros and ones with infinitely many terms equal to one. Does $\sum_{n=1}^{\infty}a_{n}b_{n}$ necessarily diverge?
+ \item Complete the details of the following argument: If $\sum_{n=1}^{\infty}\frac{1}{n}$ converges to a finite sum $s$, then $\frac{1}{2}s=\frac{1}{2}+\frac{1}{4}+\frac{1}{6}+\cdots$ and $s-\frac{1}{2}s=1+\frac{1}{3}+\frac{1}{5}+\cdots$. Why does this lead to a contradiction?
+-\item Show that if $a_{n}\ge0$ and $\sum_{n=1}^{\infty}a^{2}{}_{n}$ converges, then $\sum_{n=1}^{\infty}\sin^{2}(a_{n})$ converges.
+-\item Suppose that $a_{n}/b_{n}\to0$ in the comparison test, where $a_{n}\ge0$ and $b_{n}\ge0$. Prove that if $\sum b_{n}$ converges, then $\sum a_{n}$ converges.
+-\item Let $b_{n}$ be an infinite sequence of zeros and ones. What is the largest possible value of $x=\sum_{n=1}^{\infty}b_{n}/2^{n}$?
+-\item Let $d_{n}$ be an infinite sequence of digits, meaning $d_{n}$ takes values in $\{0,\,1,\ldots,9\}$. What is the largest possible value of $x=\sum_{n=1}^{\infty}d_{n}/10^{n}$ that converges?
+-\item Explain why, if $x>1/2$, then $x$ cannot be written $x=\sum_{n=2}^{\infty}\frac{b_{n}}{2^{n}}(b_{n}=0\,\text{or}\,1,\,b_{1}=0)$.
+-\item \techrequired Evelyn has a perfect balancing scale, an unlimited number of $1\,\text{-kg}$ weights, and one each of $1/2\,\text{-kg},\,1/4\,\text{-kg},\,1/8\,\text{-kg}$, and so on weights. She wishes to weigh a meteorite of unspecified origin to arbitrary precision. Assuming the scale is big enough, can she do it? What does this have to do with infinite series?
+-\item \techrequired Robert wants to know his body mass to arbitrary precision. He has a big balancing scale that works perfectly, an unlimited collection of $1\,\text{-kg}$ weights, and nine each of $0.1\,\text{-kg,}$ $0.01\,\text{-kg},\,0.001\,\text{-kg,}$ and so on weights. Assuming the scale is big enough, can he do this? What does this have to do with infinite series?
++\item Show that if $a_{n}\ge 0$ and $\sum_{n=1}^{\infty}a_{n}^{2}$ converges, then $\sum_{n=1}^{\infty}\sin^{2}(a_{n})$ converges.
++\item Suppose that $a_{n}/b_{n}\to 0$ in the comparison test, where $a_{n}\ge 0$ and $b_{n}\ge 0$. Prove that if $\sum b_{n}$ converges, then $\sum a_{n}$ converges.
++\item Let $b_{n}$ be an infinite sequence of zeros and ones. What is the largest possible value of $x=\sum_{n=1}^{\infty}\frac{b_{n}}{2^{n}}$?
++\item Let $d_{n}$ be an infinite sequence of digits, meaning $d_{n}$ takes values in $\{0,1,\ldots,9\}$. What is the largest possible value of $x=\sum_{n=1}^{\infty}\frac{d_{n}}{10^{n}}$ that converges?
++\item Explain why, if $x>1/2$, then $x$ cannot be written as $x=\sum_{n=2}^{\infty}\frac{b_{n}}{2^{n}}$, where $b_{n}=0$ or $1$ (and $b_{1}=0$).
++\item \techrequired Evelyn has a perfect balancing scale, an unlimited number of $1\,\text{kg}$ weights, and one each of $1/2\,\text{kg}$, $1/4\,\text{kg}$, $1/8\,\text{kg}$, and so on. She wishes to weigh a meteorite of unspecified origin to arbitrary precision. Assuming the scale is big enough, can she do it? What does this have to do with infinite series?
++\item \techrequired Robert wants to know his body mass to arbitrary precision. He has a big balancing scale that works perfectly, an unlimited collection of $1\,\text{kg}$ weights, and nine each of $0.1\,\text{kg}$, $0.01\,\text{kg}$, $0.001\,\text{kg}$, and so on. Assuming the scale is big enough, can he do this? What does this have to do with infinite series?
+ \item The series $\sum_{n=1}^{\infty}\frac{1}{2n}$ is half the harmonic series and hence diverges. It is obtained from the harmonic series by deleting all terms in which $n$ is odd. Let $m>1$ be fixed. Show, more generally, that deleting all terms $1/n$ where $n=mk$ for some integer $k$ also results in a divergent series.
+ \item In view of the previous exercise, it may be surprising that a subseries of the harmonic series in which about one in every five terms is deleted might converge. A depleted harmonic series is a series obtained from $\sum_{n=1}^{\infty}\frac{1}{n}$ by removing any term $1/n$ if a given digit, say $9$, appears in the decimal expansion of $n$. Argue that this depleted harmonic series converges by answering the following questions.
+ \begin{enumerate}[label=(\alph*)]
+   \item How many whole numbers $n$ have $d$ digits?
+-  \item How many $d\text{-digit}$ whole numbers $h(d)$. do not contain $9$ as one or more of their digits?
+-  \item What is the smallest $d\text{-digit}$ number $m(d)$?
+-  \item Explain why the deleted harmonic series is bounded by $\sum_{d=1}^{\infty}\frac{h(d)}{m(d)}$.
++  \item How many $d$-digit whole numbers, denoted by $h(d)$, do not contain $9$ as one or more of their digits?
++  \item What is the smallest $d$-digit number $m(d)$?
++  \item Explain why the depleted harmonic series is bounded by $\sum_{d=1}^{\infty}\frac{h(d)}{m(d)}$.
+   \item Show that $\sum_{d=1}^{\infty}\frac{h(d)}{m(d)}$ converges.
+ \end{enumerate}
+ \item Suppose that a sequence of numbers $a_{n}>0$ has the property that $a_{1}=1$ and $a_{n+1}=\frac{1}{n+1}S_{n}$, where $S_{n}=a_{1}+\cdots+a_{n}$. Can you determine whether $\sum_{n=1}^{\infty}a_{n}$ converges? (Hint: $S_{n}$ is monotone.)
+-\item Suppose that a sequence of numbers $a_{n}>0$ has the property that $a_{1}=1$ and $a_{n+1}=\frac{1}{{(n+1)}^{2}}S_{n}$, where $S_{n}=a_{1}+\cdots+a_{n}$. Can you determine whether $\sum_{n=1}^{\infty}a_{n}$ converges? (Hint: $S_{2}=a_{2}+a_{1}=a_{2}+S_{1}=a_{2}+1=1+1/4=(1+1/4)S_{1}$, $S_{3}=\frac{1}{3^{2}}S_{2}+S_{2}=(1+1/9)S_{2}=(1+1/9)(1+1/4)S_{1}$, etc. Look at $\ln(S_{n})$, and use $\ln(1+t)\le t$, $t>0.)$
++\item Suppose that a sequence of numbers $a_{n}>0$ has the property that $a_{1}=1$ and $a_{n+1}=\frac{1}{(n+1)^{2}}S_{n}$, where $S_{n}=a_{1}+\cdots+a_{n}$. Can you determine whether $\sum_{n=1}^{\infty}a_{n}$ converges? (Hint: $S_{2}=a_{2}+a_{1}=a_{2}+S_{1}=a_{2}+1=1+1/4=(1+1/4)S_{1}$, $S_{3}=\frac{1}{3^{2}}S_{2}+S_{2}=(1+1/9)S_{2}=(1+1/9)(1+1/4)S_{1}$, etc. Look at $\ln(S_{n})$, and use $\ln(1+t)\le t$ for $t>0$.)
+ \end{enumerate}
+ 
+ \end{document}
+

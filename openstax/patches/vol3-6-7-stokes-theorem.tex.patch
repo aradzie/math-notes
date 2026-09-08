@@ -1,0 +1,76 @@
+Manual review corrections, none tied to a MathML/converter gap -- all three are
+plain prose defects in OpenStax's own text, verbatim-reproduced by the
+extractor:
+
+- "computer algebraic system (CAS)" -> "computer algebra system (CAS)": every
+  other occurrence of this phrase across the whole openstax/ corpus (18+
+  instances) reads "computer algebra system"; this exercise's "algebraic" is
+  an isolated wording slip.
+- "a sylinder" -> "a cylinder" in an accessibility figure description: plain
+  typo, unambiguous from context (the exercise itself says "cylinder"
+  $x^{2}+y^{2}=4$).
+- "S is the surface parametrically by ... " -> "S is the surface defined
+  parametrically by ...": a dropped word breaks the sentence grammatically;
+  restored to match the established idiom used elsewhere in this same
+  section's exercises ("the surface defined parametrically by", "the surface
+  defined parametrically by ... $\mathbf{r}(u,v)$", vol3-6-6).
+- One exercise's curve description ("$x=\cos t,y=\sin t,z=1;0\le
+  t\le2\pi$") used a semicolon inside one math span to separate the
+  parametrization from the parameter's range, unlike the comma used for
+  the same construct elsewhere; changed to "$x=\cos t,y=\sin
+  t,z=1$, $0\le t\le2\pi$" (split into two comma-joined spans).
+
+A fifth change is an added editorial note, not a text correction: exercise
+372 ("Velocity field v=<0,1-x^2,0> ... Compute the curl of v in a clockwise
+rotation.") was verified against the live OpenStax archive JSON to be exactly
+what the source says -- no MathML/converter content loss, no adjacent figure
+that could clarify it. The final clause is nonetheless not a well-formed
+mathematical instruction as written (curl doesn't take a "rotation" argument,
+and no rotation is otherwise specified), and rewriting or guessing a fix would
+put words in OpenStax's mouth that aren't in the source. Since the defect is
+upstream and not ours to silently paper over, a bracketed \textit{[Note: ...]}
+warning is prepended to the exercise's own \item text (there is no way to
+place free text between \item lines inside an enumerate environment) so a
+reader of the compiled PDF is warned before attempting the problem, while the
+underlying exercise text itself stays an unmodified, verbatim transcription.
+
+--- /tmp/raw.tex
++++ vol3-6-7-stokes-theorem.tex
+@@ -30,7 +30,7 @@
+ \item $\mathbf{F}(x,y,z)=xy\mathbf{i}+x^{2}\mathbf{j}+z^{2}\mathbf{k}$; and S is the part of paraboloid $z=x^{2}+y^{2}$ below plane $z=y$, and using the outward normal vector.
+ \item $\mathbf{F}(x,y,z)=4y\mathbf{i}+z\mathbf{j}+2y\mathbf{k}$ and S is the part of sphere $x^{2}+y^{2}+z^{2}=4$ above plane $z=0$, and using the outward normal vector
+ \item Use Stokes' theorem to evaluate $\underset{C}{\int}[2xy^{2}z\,dx+2x^{2}yzdy+(x^{2}y^{2}-2z)dz]$, where C is the curve given by $x=\cos t,y=\sin t,z=\sin t,0\le t\le2\pi$, traversed in the direction of increasing t. \\ \textit{[Figure: A vector field in three dimensional space. The arrows are larger the further they are from the x, y plane. The arrows curve up from below the x, y plane and slightly above it. The rest tend to curve down and horizontally. An oval-shaped curve is drawn through the middle of the space.]}
+-\item \techrequired Use a computer algebraic system (CAS) and Stokes' theorem to approximate line integral $\underset{C}{\int}(y\,dx+zdy+xdz)$, where C is the intersection of plane $x+y=2$ and surface $x^{2}+y^{2}+z^{2}=2(x+y)$, traversed counterclockwise viewed from the origin.
++\item \techrequired Use a computer algebra system (CAS) and Stokes' theorem to approximate line integral $\underset{C}{\int}(y\,dx+zdy+xdz)$, where C is the intersection of plane $x+y=2$ and surface $x^{2}+y^{2}+z^{2}=2(x+y)$, traversed counterclockwise viewed from the origin.
+ \item \techrequired Use a CAS and Stokes' theorem to approximate line integral $\underset{C}{\int}(3y\,dx+2zdy-5xdz)$, where C is the intersection of the xy-plane and hemisphere $z=\sqrt{1-x^{2}-y^{2}}$, traversed counterclockwise viewed from the top---that is, from the positive z-axis toward the xy-plane.
+ \item \techrequired Use a CAS and Stokes' theorem to approximate line integral $\underset{C}{\int}[(1+y)z\,dx+(1+z)xdy+(1+x)ydz]$, where C is a triangle with vertices $(1,0,0)$, $(0,1,0)$, and $(0,0,1)$ oriented counterclockwise.
+ \item Use Stokes' theorem to evaluate $\iint_{S}\text{curl}\,\mathbf{F}\cdot d\mathbf{S}$, where $\mathbf{F}(x,y,z)=e^{xy}\cos z\mathbf{i}+x^{2}z\mathbf{j}+xy\mathbf{k}$, and S is half of sphere $x=\sqrt{1-y^{2}-z^{2}}$, oriented out toward the positive x-axis.
+@@ -48,16 +48,16 @@
+ \item Let S be hemisphere $x^{2}+y^{2}+z^{2}=4$ with $z\ge0$, oriented upward. Let $\mathbf{F}(x,y,z)=x^{2}e^{yz}\mathbf{i}+y^{2}e^{xz}\mathbf{j}+z^{2}e^{xy}\mathbf{k}$ be a vector field. Use Stokes' theorem to evaluate $\iint_{S}\text{curl}\,\mathbf{F}\cdot d\mathbf{S}$.
+ \item Let $\mathbf{F}(x,y,z)=xy\mathbf{i}+(e^{z^{2}}+y)\mathbf{j}+(x+y)\mathbf{k}$ and let S be the graph of function $y=\frac{x^{2}}{9}+\frac{z^{2}}{9}-1$ with $y\le0$ oriented so that the normal vector of S has a positive j component. Use Stokes' theorem to compute integral $\iint_{S}\text{curl}\,\mathbf{F}\cdot d\mathbf{S}$.
+ \item Use Stokes' theorem to evaluate $\int_{C}\mathbf{F}\cdot \,d\mathbf{r}$ where $\mathbf{F}(x,y,z)=y\mathbf{i}+z\mathbf{j}+x\mathbf{k}$ and C is a triangle with vertices (0, 0, 0), (2, 0, 0) and $(0,-2,2)$ oriented counterclockwise when viewed from above.
+-\item Use the surface integral in Stokes' theorem to calculate the circulation of field F, $\mathbf{F}(x,y,z)=x^{2}y^{3}\mathbf{i}+\mathbf{j}+z\mathbf{k}$ around C, which is the intersection of cylinder $x^{2}+y^{2}=4$ and hemisphere $x^{2}+y^{2}+z^{2}=16,z\ge0$, oriented counterclockwise when viewed from above. \\ \textit{[Figure: A diagram in three dimensions of a vector field and the intersection of a sylinder and hemisphere. The arrows are horizontal and have negative x components for negative y components and have positive x components for positive y components. The curve of intersection between the hemisphere and cylinder is drawn in blue.]}
++\item Use the surface integral in Stokes' theorem to calculate the circulation of field F, $\mathbf{F}(x,y,z)=x^{2}y^{3}\mathbf{i}+\mathbf{j}+z\mathbf{k}$ around C, which is the intersection of cylinder $x^{2}+y^{2}=4$ and hemisphere $x^{2}+y^{2}+z^{2}=16,z\ge0$, oriented counterclockwise when viewed from above. \\ \textit{[Figure: A diagram in three dimensions of a vector field and the intersection of a cylinder and hemisphere. The arrows are horizontal and have negative x components for negative y components and have positive x components for positive y components. The curve of intersection between the hemisphere and cylinder is drawn in blue.]}
+ \item Use Stokes' theorem to compute $\iint_{S}\text{curl}\,\mathbf{F}\cdot d\mathbf{S}$, where $\mathbf{F}(x,y,z)=\mathbf{i}+xy^{2}\mathbf{j}+xy^{2}\mathbf{k}$ and S is a part of plane $y+z=2$ inside cylinder $x^{2}+y^{2}=1$ and oriented upward. \\ \textit{[Figure: A diagram of a vector field in three dimensional space showing the intersection of a plane and a cylinder. The curve where the plane and cylinder intersect is drawn in blue.]}
+ \item Use Stokes' theorem to evaluate $\iint_{S}\text{curl}\,\mathbf{F}\cdot d\mathbf{S}$, where $\mathbf{F}(x,y,z)=-y^{2}\mathbf{i}+x\mathbf{j}+z^{2}\mathbf{k}$ and S is the part of plane $x+y+z=1$ in the first octant and oriented upward $x\ge0,\,y\ge0,\,z\ge0$.
+ \item Let $\mathbf{F}(x,y,z)=xy\mathbf{i}+2z\mathbf{j}-2y\mathbf{k}$ and let C be the intersection of plane $x+z=5$ and cylinder $x^{2}+y^{2}=9$, which is oriented counterclockwise when viewed from the top. Compute the line integral of F over C using Stokes' theorem.
+ \item \techrequired Use a CAS and let $\mathbf{F}(x,y,z)=xy^{2}\mathbf{i}+(yz-x)\mathbf{j}+e^{yxz}\mathbf{k}$. Use Stokes' theorem to compute the surface integral of curl F over surface S with inward orientation consisting of cube $[0,1]\times [0,1]\times [0,1]$ with the right side missing.
+ \item Let S be ellipsoid $\frac{x^{2}}{4}+\frac{y^{2}}{9}+z^{2}=1$ oriented outward and let F be a vector field with component functions that have continuous partial derivatives. Compute $\iint_{s}\text{curl}\,\mathbf{F}\cdot \,d\mathbf{S}$
+ \item Let S be the part of paraboloid $z=9-x^{2}-y^{2}$ with $z\ge0$ oriented upward. Verify Stokes' theorem for vector field $\mathbf{F}(x,y,z)=3z\mathbf{i}+4x\mathbf{j}+2y\mathbf{k}$.
+-\item \techrequired Use a CAS and Stokes' theorem to evaluate $\int_{C}\mathbf{F}\cdot \,d\mathbf{r}$ if $\mathbf{F}(x,y,z)=(3z-\sin x)\mathbf{i}+(x^{2}+e^{y})\mathbf{j}+(y^{3}-\cos z)\mathbf{k}$, where C is the curve given by $x=\cos t,y=\sin t,z=1;0\le t\le2\pi$.
++\item \techrequired Use a CAS and Stokes' theorem to evaluate $\int_{C}\mathbf{F}\cdot \,d\mathbf{r}$ if $\mathbf{F}(x,y,z)=(3z-\sin x)\mathbf{i}+(x^{2}+e^{y})\mathbf{j}+(y^{3}-\cos z)\mathbf{k}$, where C is the curve given by $x=\cos t,y=\sin t,z=1$, $0\le t\le2\pi$.
+ \item \techrequired Use a CAS and Stokes' theorem to evaluate $\iint_{S}\text{curl}\mathbf{F}\cdot d\mathbf{S}$, where $\mathbf{F}(x,y,z)=2y\mathbf{i}+e^{z}\mathbf{j}-\arctan x\mathbf{k}$ with S as a portion of paraboloid $z=4-x^{2}-y^{2}$ cut off by the xy-plane oriented upward.
+-\item \techrequired Use a CAS to evaluate $\iint_{S}\text{curl}\mathbf{F}\cdot d\mathbf{S}$, where $\mathbf{F}(x,y,z)=2z\mathbf{i}+3x\mathbf{j}+5y\mathbf{k}$ and S is the surface parametrically by $\mathbf{r}(r,\theta)=r\cos \theta \mathbf{i}+r\sin \theta \mathbf{j}+(4-r^{2})\mathbf{k}$ $(0\le \theta \le2\pi,\,0\le r\le3)$.
++\item \techrequired Use a CAS to evaluate $\iint_{S}\text{curl}\mathbf{F}\cdot d\mathbf{S}$, where $\mathbf{F}(x,y,z)=2z\mathbf{i}+3x\mathbf{j}+5y\mathbf{k}$ and S is the surface defined parametrically by $\mathbf{r}(r,\theta)=r\cos \theta \mathbf{i}+r\sin \theta \mathbf{j}+(4-r^{2})\mathbf{k}$ $(0\le \theta \le2\pi,\,0\le r\le3)$.
+ \item Let S be paraboloid $z=a(1-x^{2}-y^{2})$, for $z\ge0$, where $a>0$ is a real number. Let $\mathbf{F}=\langle x-y,y+z,z-x\rangle$. For what value(s) of a (if any) does $\iint_{S}\text{curl}\,\mathbf{F}\cdot \,d\mathbf{S}$ have its maximum value?
+ \end{enumerate}
+ 
+@@ -79,7 +79,7 @@
+ \item What is the circulation of C of vector field $\mathbf{F}=\langle-y,-z,x\rangle$ as a function of $\phi$?
+ \item For what value of $\phi$ is the circulation a maximum?
+ \item Circle C in plane $x+y+z=8$ has radius 4 and center (2, 3, 3). Evaluate $\int_{C}\mathbf{F}\cdot d\mathbf{r}$ for $\mathbf{F}=\langle0,-z,2y\rangle$, where C has a counterclockwise orientation when viewed from above.
+-\item Velocity field $\mathbf{v}=\langle0,1-x^{2},0\rangle$, for $|x|\le1\,\text{and}\,|z|\le1$, represents a horizontal flow in the y-direction. Compute the curl of v in a clockwise rotation.
++\item \textit{[Note: this exercise is reproduced verbatim from OpenStax; the closing instruction ``compute the curl of $\mathbf{v}$ in a clockwise rotation'' does not read as a well-formed mathematical task and may reflect an incomplete or malformed exercise in the source itself.]} Velocity field $\mathbf{v}=\langle0,1-x^{2},0\rangle$, for $|x|\le1\,\text{and}\,|z|\le1$, represents a horizontal flow in the y-direction. Compute the curl of v in a clockwise rotation.
+ \item Evaluate integral $\iint_{S}\text{curl}\,\mathbf{F}\cdot \,d\mathbf{S}$ where $\mathbf{F}=-xz\mathbf{i}+yz\mathbf{j}+xye^{z}\mathbf{k}$ and S is the cap of paraboloid $z=5-x^{2}-y^{2}$ above plane $z=3$, and n points in the positive z-direction on S.
+ \end{enumerate}
+ 

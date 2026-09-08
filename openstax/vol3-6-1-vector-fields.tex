@@ -1,0 +1,107 @@
+% OpenStax Calculus Volume 3 -- Section 6.1 Exercises: Vector Fields
+% Exercises reproduced from OpenStax, licensed under CC BY 4.0.
+% Source: https://openstax.org/books/calculus-volume-3/pages/6-1-vector-fields
+\documentclass{exercises}
+\title{OpenStax Calculus Volume 3}
+\subtitle{Section 6.1 Exercises: Vector Fields}
+\sourceurl{https://openstax.org/books/calculus-volume-3/pages/6-1-vector-fields}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{enumerate}[start=1]
+\item The domain of vector field $\mathbf{F}=\mathbf{F}(x,y)$ is a set of points $(x,y)$ in a plane, and the range of $\mathbf{F}$ is a set of what in the plane?
+\end{enumerate}
+
+For the following exercises, determine whether the statement is true or false.
+
+\begin{enumerate}[resume]
+\item Vector field $\mathbf{F}=\langle3x^{2},1\rangle$ is a gradient field for both $\phi_{1}(x,y)=x^{3}+y$ and $\phi_{2}(x,y)=y+x^{3}+100$.
+\item Vector field $\mathbf{F}=\frac{\langle y,x\rangle}{\sqrt{x^{2}+y^{2}}}$ is constant in direction and magnitude on a unit circle.
+\item Vector field $\mathbf{F}=\frac{\langle y,x\rangle}{\sqrt{x^{2}+y^{2}}}$ is neither a radial field nor a rotation.
+\end{enumerate}
+
+For the following exercises, describe each vector field by drawing some of its vectors.
+
+\begin{enumerate}[resume]
+\item \techrequired $\mathbf{F}(x,y)=x\mathbf{i}+y\mathbf{j}$
+\item \techrequired $\mathbf{F}(x,y)=-y\mathbf{i}+x\mathbf{j}$
+\item \techrequired $\mathbf{F}(x,y)=x\mathbf{i}-y\mathbf{j}$
+\item \techrequired $\mathbf{F}(x,y)=\mathbf{i}+\mathbf{j}$
+\item \techrequired $\mathbf{F}(x,y)=2x\mathbf{i}+3y\mathbf{j}$
+\item \techrequired $\mathbf{F}(x,y)=3\mathbf{i}+x\mathbf{j}$
+\item \techrequired $\mathbf{F}(x,y)=y\mathbf{i}+\sin x\mathbf{j}$
+\item \techrequired $\mathbf{F}(x,y,z)=x\mathbf{i}+y\mathbf{j}+z\mathbf{k}$
+\item \techrequired $\mathbf{F}(x,y,z)=2x\mathbf{i}-2y\mathbf{j}-2z\mathbf{k}$
+\item \techrequired $\mathbf{F}(x,y,z)=\frac{y}{z}\,\mathbf{i}-\frac{x}{z}\,\mathbf{j}$
+\end{enumerate}
+
+For the following exercises, find the gradient vector field of each function $f$.
+
+\begin{enumerate}[resume]
+\item $f(x,y)=x\sin y+\cos y$
+\item $f(x,y,z)=ze^{-xy}$
+\item $f(x,y,z)=x^{2}y+xy+y^{2}z$
+\item $f(x,y)=x^{2}\sin(5y)$
+\item $f(x,y)=\ln(1+x^{2}+2y^{2})$
+\item $f(x,y,z)=x\cos(\frac{y}{z})$
+\item What is vector field $\mathbf{F}(x,y)$ with a value at $(x,y)$ that is of unit length and points toward $(1,0)$?
+\end{enumerate}
+
+For the following exercises, write formulas for the vector fields with the given properties.
+
+\begin{enumerate}[resume]
+\item All vectors are parallel to the $x$-axis and all vectors on a vertical line have the same magnitude.
+\item All vectors point toward the origin and have constant length.
+\item All vectors are of unit length and are perpendicular to the position vector at that point.
+\item Give a formula $\mathbf{F}(x,y)=M(x,y)\mathbf{i}+N(x,y)\mathbf{j}$ for the vector field in a plane that has the properties that $\mathbf{F}=0$ at $(0,0)$ and that at any other point $(a,b)$, $\mathbf{F}$ is tangent to circle $x^{2}+y^{2}=a^{2}+b^{2}$ and points in the clockwise direction with magnitude $\left\| \mathbf{F} \right\|=\sqrt{a^{2}+b^{2}}$.
+\item Is vector field $\mathbf{F}(x,y)=\left\langle P(x,y),Q(x,y) \right\rangle=(\sin x+y)\mathbf{i}+(\cos y+x)\mathbf{j}$ a gradient field?
+\item Find a formula for vector field $\mathbf{F}(x,y)=M(x,y)\mathbf{i}+N(x,y)\mathbf{j}$ given the fact that for all points $(x,y)$, $\mathbf{F}$ points toward the origin and $\left\| \mathbf{F} \right\|=\frac{10}{x^{2}+y^{2}}$.
+\end{enumerate}
+
+For the following exercises, assume that an electric field in the $xy$-plane caused by an infinite line of charge along the $x$-axis is a gradient field with potential function $V(x,y)=c\ln(\frac{r_{0}}{\sqrt{x^{2}+y^{2}}})$, where $c>0$ is a constant and $r_{0}$ is a reference distance at which the potential is assumed to be zero.
+
+\begin{enumerate}[resume]
+\item Find the components of the electric field in the $x$- and $y$-directions, where $\mathbf{E}(x,y)=-\nabla V(x,y)$.
+\item Show that the electric field at a point in the $xy$-plane is directed outward from the origin and has magnitude $\left\| \mathbf{E} \right\|=\frac{c}{r}$, where $r=\sqrt{x^{2}+y^{2}}$.
+\end{enumerate}
+
+A flow line (or streamline) of a vector field $\mathbf{F}$ is a curve $\mathbf{r}(t)$ such that $d\mathbf{r}/dt=\mathbf{F}(\mathbf{r}(t))$. If $\mathbf{F}$ represents the velocity field of a moving particle, then the flow lines are paths taken by the particle. Therefore, flow lines are tangent to the vector field. For the following exercises, show that the given curve $\mathbf{c}(t)$ is a flow line of the given velocity vector field $\mathbf{F}(x,y,z)$.
+
+\begin{enumerate}[resume]
+\item $\mathbf{c}(t)=\left\langle e^{2t},\ln|t|,\frac{1}{t} \right\rangle,t\ne0;\mathbf{F}(x,y,z)=\langle2x,z,-z^{2}\rangle$
+\item $\mathbf{c}(t)=\left\langle \sin t,\cos t,e^{t} \right\rangle;\mathbf{F}(x,y,z)=\langle y,-x,z\rangle$
+\end{enumerate}
+
+For the following exercises, let $\mathbf{F}=x\mathbf{i}+y\mathbf{j}$, $\mathbf{G}=-y\mathbf{i}+x\mathbf{j}$, and $\mathbf{H}=x\mathbf{i}-y\mathbf{j}$. Match $\mathbf{F}$, $\mathbf{G}$, and $\mathbf{H}$ with their graphs.
+
+\begin{enumerate}[resume]
+\item \textit{[Figure: A visual representation of a vector field in two dimensions. The arrows circle the origin in a counterclockwise manner. The arrows are larger the further they are from the origin.]}
+\item \textit{[Figure: A visual representation of a vector field in two dimensions. The arrows are larger the further away from the origin they are, particularly to the left and right of the y axis. They point to the left and to the right on the left and right sides of the y axis, respectively. They point down above the x axis and up below the x axis. The closer to the x axis, the flatter they are. The closer to the y axis they are, the more vertical they are.]}
+\item \textit{[Figure: A visual representation of a vector field in two dimensions. The arrows are larger the further away from the origin they are. They stretch out and away from the origin in a radial pattern.]}
+\end{enumerate}
+
+For the following exercises, let $\mathbf{F}=x\mathbf{i}+y\mathbf{j}$, $\mathbf{G}=-y\mathbf{i}+x\mathbf{j}$, and $\mathbf{H}=x\mathbf{i}-y\mathbf{j}$. Match the vector fields in a through d with their graphs.
+
+
+(a) $\mathbf{F}+\mathbf{G}$
+
+
+(b) $\mathbf{F}+\mathbf{H}$
+
+
+(c) $\mathbf{G}+\mathbf{H}$
+
+
+(d) $-\mathbf{F}+\mathbf{G}$
+
+\begin{enumerate}[resume]
+\item \textit{[Figure: A visual representation of a vector field in two dimensions. The arrows are larger the further away they are from the y axis. They curve in towards the orgin in a spiral pattern, with the arrows curving in from the right to the right of the y axis and curving in from the left to the left of the y axis. The arrows in quadrants 1 and 3 are flatter, and the arrows in quadrants 2 and 4 are more vertical.]}
+\item \textit{[Figure: A visual representation of a vector field in two dimensions. The arrows are larger the further away from the y axis they are. They are completely flat and point to the right on the right side of the y axis and point to the left on the left side of the y axis.]}
+\item \textit{[Figure: A visual representation of a vector field in two dimensions. The arrows are larger the further away from y axis they are. The arrows are pointing out from the origin in a spiral shape. In quadrant 1, the arrows are more vertical and curve up. In quadrant 2, the arrows are more horizontal and curve down. In quadrant 3, the arrows are more vertical and curve down. In quadrant 4, the arrows are more horizontal and curve up. Each quadrant's arrows merge into the two on either side of it.]}
+\item \textit{[Figure: A visual representation of a vector field in two dimensions. The arrows are larger the further away they are from the x axis and y axis in quadrants 2 and 4. The arrows are all at a roughly 90-degree angle. They point up on the right side of the y axis and down on the left side of the y axis.]}
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,73 @@
+Manual review corrections (no re-import):
+
+- `\text{sech}` -> `\operatorname{sech}` (sech has no built-in LaTeX macro,
+  unlike sin/cos/tanh/etc., so it needs `\operatorname{}` to get correct
+  operator spacing/font -- matches the convention already used in
+  vol2-4-3-separable-equations.tex's `\operatorname{sech}`), and
+  `\text{coth}` -> `\coth` (coth is already a predefined LaTeX operator
+  macro, as used in vol2-4-1-basics-of-differential-equations.tex).
+- `${(\cosh(x)+\sinh(x))}^{n}$` -> `$(\cosh(x)+\sinh(x))^{n}$`: the outer
+  braces around the already-parenthesized base are redundant -- a
+  superscript after a single visible ")" token needs no extra grouping.
+- Added a missing `\,` before a bare `dx` following a closing `\frac{}{}`
+  in the last two antiderivative integrals, matching the thin-space
+  convention already used on every other differential in this file and in
+  the extractor's own integral-differential spacing rule.
+
+--- /tmp/raw.tex
++++ vol2-2-9-calculus-of-the-hyperbolic-functions.tex
+@@ -15,7 +15,7 @@
+ \item \techrequired Find expressions for $\cosh x+\sinh x$ and $\cosh x-\sinh x$. Use a calculator to graph these functions and ensure your expression is correct.
+ \item From the definitions of $\cosh(x)$ and $\sinh(x)$, find their antiderivatives.
+ \item Show that $\cosh(x)$ and $\sinh(x)$ satisfy $y''=y$.
+-\item Use the quotient rule to verify that $\tanh(x)'=\text{sech}^{2}(x)$.
++\item Use the quotient rule to verify that $\tanh(x)'=\operatorname{sech}^{2}(x)$.
+ \item Derive $\cosh^{2}(x)+\sinh^{2}(x)=\cosh(2x)$ from the definition.
+ \item Take the derivative of the previous expression to find an expression for $\sinh(2x)$.
+ \item Prove $\sinh(x+y)=\sinh(x)\cosh(y)+\cosh(x)\sinh(y)$ by changing the expression to exponentials.
+@@ -34,7 +34,7 @@
+ \item \techrequired $\tanh(\sqrt{x^{2}+1})$
+ \item \techrequired $\frac{1+\tanh(x)}{1-\tanh(x)}$
+ \item \techrequired $\sinh^{6}(x)$
+-\item \techrequired $\ln(\text{sech}(x)+\tanh(x))$
++\item \techrequired $\ln(\operatorname{sech}(x)+\tanh(x))$
+ \end{enumerate}
+ 
+ For the following exercises, find the antiderivatives for the given functions.
+@@ -45,11 +45,11 @@
+ \item $x\cosh(x^{2})$
+ \item $3x^{3}\tanh(x^{4})$
+ \item $\cosh^{2}(x)\sinh(x)$
+-\item $\tanh^{2}(x)\text{sech}^{2}(x)$
++\item $\tanh^{2}(x)\operatorname{sech}^{2}(x)$
+ \item $\frac{\sinh(x)}{1+\cosh(x)}$
+-\item $\text{coth}(x)$
++\item $\coth(x)$
+ \item $\cosh(x)+\sinh(x)$
+-\item ${(\cosh(x)+\sinh(x))}^{n}$
++\item $(\cosh(x)+\sinh(x))^{n}$
+ \end{enumerate}
+ 
+ For the following exercises, find the derivatives for the functions.
+@@ -72,8 +72,8 @@
+ \item $\int \frac{dx}{\sqrt{x^{2}+1}}$
+ \item $\int \frac{x\,dx}{\sqrt{x^{2}+1}}$
+ \item $\int-\frac{dx}{x\sqrt{1-x^{2}}}$
+-\item $\int \frac{e^{x}}{\sqrt{e^{2x}-1}}dx$
+-\item $\int-\frac{2x}{x^{4}-1}dx$
++\item $\int \frac{e^{x}}{\sqrt{e^{2x}-1}}\,dx$
++\item $\int-\frac{2x}{x^{4}-1}\,dx$
+ \end{enumerate}
+ 
+ For the following exercises, use the fact that a falling body with friction equal to velocity squared obeys the equation $dv/dt=g-v^{2}$.
+@@ -101,8 +101,8 @@
+ \item A telephone line is a catenary described by $y=a\cosh(x/a)$. Find the ratio of the area under the catenary to its arc length. Does this confirm your answer for the previous question?
+ \item Prove the formula for the derivative of $y=\sinh^{-1}(x)$ by differentiating $x=\sinh(y)$. (Hint: Use hyperbolic trigonometric identities.)
+ \item Prove the formula for the derivative of $y=\cosh^{-1}(x)$ by differentiating $x=\cosh(y)$. (Hint: Use hyperbolic trigonometric identities.)
+-\item Prove the formula for the derivative of $y=\text{sech}^{-1}(x)$ by differentiating $x=\text{sech}(y)$. (Hint: Use hyperbolic trigonometric identities.)
+-\item Prove that ${(\cosh(x)+\sinh(x))}^{n}=\cosh(nx)+\sinh(nx)$.
++\item Prove the formula for the derivative of $y=\operatorname{sech}^{-1}(x)$ by differentiating $x=\operatorname{sech}(y)$. (Hint: Use hyperbolic trigonometric identities.)
++\item Prove that $(\cosh(x)+\sinh(x))^{n}=\cosh(nx)+\sinh(nx)$.
+ \item Prove the expression for $\sinh^{-1}(x)$. Multiply $x=\sinh(y)=(1/2)(e^{y}-e^{-y})$ by $2e^{y}$ and solve for $y$. Does your expression match the textbook?
+ \item Prove the expression for $\cosh^{-1}(x)$. Multiply $x=\cosh(y)=(1/2)(e^{y}+e^{-y})$ by $2e^{y}$ and solve for $y$. Does your expression match the textbook?
+ \end{enumerate}

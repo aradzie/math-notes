@@ -1,0 +1,128 @@
+% OpenStax Calculus Volume 3 -- Section 5.2 Exercises: Double Integrals over General Regions
+% Exercises reproduced from OpenStax, licensed under CC BY 4.0.
+% Source: https://openstax.org/books/calculus-volume-3/pages/5-2-double-integrals-over-general-regions
+\documentclass{exercises}
+\title{OpenStax Calculus Volume 3}
+\subtitle{Section 5.2 Exercises: Double Integrals over General Regions}
+\sourceurl{https://openstax.org/books/calculus-volume-3/pages/5-2-double-integrals-over-general-regions}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+
+In the following exercises, specify whether the region is of Type I or Type II.
+
+\begin{enumerate}[start=1]
+\item The region $D$ bounded by $y=x^{3}$, $y=x^{3}+1$, $x=0$, and $x=1$ as given in the following figure. \\ \textit{[Figure: A region is bounded by $y=1+x^3$, $y=x^3$, $x=0$, and $x=1$.]}
+\item Find the average value of the function $f(x,y)=3xy$ on the region graphed in the previous exercise.
+\item Find the area of the region $D$ given in the previous exercise.
+\item The region $D$ bounded by $y=\sin x$, $y=1+\sin x$, $x=0$, and $x=\frac{\pi}{2}$ as given in the following figure. \\ \textit{[Figure: A region is bounded by $y=1+\sin x$, $y=\sin x$, $x=0$, and $x=\frac{\pi}{2}$.]}
+\item Find the average value of the function $f(x,y)=\cos x$ on the region graphed in the previous exercise.
+\item Find the area of the region $D$ given in the previous exercise.
+\item The region $D$ bounded by $x=y^{2}-1$ and $x=\sqrt{1-y^{2}}$ as given in the following figure. \\ \textit{[Figure: A region is bounded by $x=-1+y^2$ and $x=\sqrt{1-y^2}$.]}
+\item Find the volume of the solid under the graph of the function $f(x,y)=xy+1$ and above the region in the figure in the previous exercise.
+\item The region $D$ bounded by $y=0$, $x=-10+y$, and $x=10-y$ as given in the following figure. \\ \textit{[Figure: A region is bounded by $x=-10+y$, $x=10-y$, and $y=0$.]}
+\item Find the signed volume of the solid under the graph of the function $f(x,y)=x+y$ and above the region in the figure from the previous exercise.
+\item The region $D$ bounded by $y=0$, $x=y-1$, and $x=\frac{\pi}{2}$ as given in the following figure. \\ \textit{[Figure: A region is bounded by $x=\frac{\pi}{2}$, $y=0$, and $x=-1+y$.]}
+\item The region $D$ bounded by $y=0$ and $y=x^{2}-1$ as given in the following figure. \\ \textit{[Figure: A region is bounded by $y=0$ and $y=-1+x^2$.]}
+\item Let $D$ be the region bounded by the curve $y=2-x^{2}$ and below the equations $y=x$ and $y=-x$. Explain why $D$ is neither of Type I nor Type II.
+\item Let $D$ be the region bounded above by the curve of the equation $y=4-x^{2}$ and below by $y=\cos x$ and the $x$-axis. Explain why $D$ is neither of Type I nor Type II.
+\end{enumerate}
+
+In the following exercises, evaluate the double integral $\underset{D}{\iint}f(x,y)\,dA$ over the region $D$.
+
+\begin{enumerate}[resume]
+\item $f(x,y)=2x+5y$ and $D=\{(x,y)\mid 0\le x\le 1,\ x^{3}\le y\le x^{3}+1\}$.
+\item $f(x,y)=1$ and $D=\{(x,y)\mid 0\le x\le \frac{\pi}{2},\ \sin x\le y\le 1+\sin x\}$.
+\item $f(x,y)=2$ and $D=\{(x,y)\mid 0\le y\le 1,\ y-1\le x\le \arccos y\}$.
+\item $f(x,y)=xy$ and $D=\{(x,y)\mid -1\le y\le 1,\ y^{2}-1\le x\le \sqrt{1-y^{2}}\}$.
+\item $f(x,y)=\sin y$ and $D$ is the triangular region with vertices $(0,0)$, $(0,3)$, and $(3,0)$.
+\item $f(x,y)=-x+1$ and $D$ is the triangular region with vertices $(0,0)$, $(0,2)$, and $(2,2)$.
+\end{enumerate}
+
+Evaluate the iterated integrals.
+
+\begin{enumerate}[resume]
+\item $\int_{0}^{1}\,\int_{2x}^{3x}(x+y^{2})\,dy\,dx$.
+\item $\int_{0}^{1}\,\int_{2\sqrt{x}}^{2\sqrt{x}+1}(xy+1)\,dy\,dx$.
+\item $\int_{e}^{e^{2}}\,\int_{\ln u}^{2}(v+\ln u)\,dv\,du$.
+\item $\int_{1}^{2}\,\int_{-u^{2}-1}^{-u}(8uv)\,dv\,du$.
+\item $\int_{0}^{1}\,\int_{-\sqrt{1-y^{2}}}^{\sqrt{1-y^{2}}}(2x+4x^{3})\,dx\,dy$.
+\item $\int_{0}^{1/2}\,\int_{-\sqrt{1-4y^{2}}}^{\sqrt{1-4y^{2}}}4\,dx\,dy$.
+\item Let $D$ be the region in the first quadrant bounded by $y=1-x^{2},y=4-x^{2}$, and the $x$- and $y$-axes.
+\begin{enumerate}[label=(\alph*)]
+  \item Show that $\underset{D}{\iint}x\,dA=\int_{0}^{1}\,\int_{1-x^{2}}^{4-x^{2}}x\,dy\,dx+\int_{1}^{2}\,\int_{0}^{4-x^{2}}x\,dy\,dx$ by dividing the region $D$ into two regions of Type I.
+  \item Evaluate the integral $\underset{D}{\iint}x\,dA$.
+\end{enumerate}
+\item Let $D$ be the region bounded by $y=1$, $y=x$, $y=\ln x$, and the $x$-axis.
+\begin{enumerate}[label=(\alph*)]
+  \item Show that $\underset{D}{\iint}y\,dA=\int_{0}^{1}\,\int_{0}^{x}y\,dy\,dx+\int_{1}^{e}\,\int_{\ln x}^{1}y\,dy\,dx$ by dividing $D$ into two regions of Type I.
+  \item Evaluate the integral $\underset{D}{\iint}y\,dA$.
+\end{enumerate}
+\item
+\begin{enumerate}[label=(\alph*)]
+  \item Show that $\underset{D}{\iint}y^{2}\,dA=\int_{-1}^{0}\,\int_{-x}^{2-x^{2}}y^{2}\,dy\,dx+\int_{0}^{1}\,\int_{x}^{2-x^{2}}y^{2}\,dy\,dx$ by dividing the region $D$ into two regions of Type I, where $D=\{(x,y)\mid y\ge x,\ y\ge -x,\ y\le 2-x^{2}\}$.
+  \item Evaluate the integral $\underset{D}{\iint}y^{2}\,dA$.
+\end{enumerate}
+\item Let $D$ be the region bounded by $y=x^{2}$, $y=x+2$, and $y=-x$.
+\begin{enumerate}[label=(\alph*)]
+  \item Show that $\underset{D}{\iint}x\,dA=\int_{0}^{1}\,\int_{-y}^{\sqrt{y}}x\,dx\,dy+\int_{1}^{4}\,\int_{y-2}^{\sqrt{y}}x\,dx\,dy$ by dividing the region $D$ into two regions of Type II, where $D=\{(x,y)\mid y\ge x^{2},\ y\ge -x,\ y\le x+2\}$.
+  \item Evaluate the integral $\underset{D}{\iint}x\,dA$.
+\end{enumerate}
+\item The region $D$ bounded by $x=0$, $y=x^{5}+1$, and $y=3-x^{2}$ is shown in the following figure. Find the area $A(D)$ of the region $D$. \\ \textit{[Figure: A region is bounded by $y=1+x^5$, $y=3-x^2$, and $x=0$.]}
+\item The region $D$ bounded by $y=\cos x$, $y=4+\cos x$, and $x=\pm \frac{\pi}{3}$ is shown in the following figure. Find the area $A(D)$ of the region $D$. \\ \textit{[Figure: A region is bounded by $y=\cos x$, $y=4+\cos x$, $x=-\frac{\pi}{3}$, and $x=\frac{\pi}{3}$.]}
+\item Find the area $A(D)$ of the region $D=\{(x,y)\mid y\ge 1-x^{2},\ y\le 4-x^{2},\ y\ge 0,\ x\ge 0\}$.
+\item Let $D$ be the region bounded by $y=1$, $y=x$, $y=\ln x$, and the $x$-axis. Find the area $A(D)$ of the region $D$.
+\item Find the average value of the function $f(x,y)=\sin y$ on the triangular region with vertices $(0,0)$, $(0,3)$, and $(3,0)$.
+\item Find the average value of the function $f(x,y)=-x+1$ on the triangular region with vertices $(0,0)$, $(0,2)$, and $(2,2)$.
+\end{enumerate}
+
+In the following exercises, change the order of integration and evaluate the integral.
+
+\begin{enumerate}[resume]
+\item $\int_{-1}^{\pi/2}\,\int_{0}^{x+1}\sin x\,dy\,dx$.
+\item $\int_{0}^{1}\,\int_{x-1}^{1-x}x\,dy\,dx$.
+\item $\int_{-1}^{0}\,\int_{-\sqrt{y+1}}^{\sqrt{y+1}}y^{2}\,dx\,dy$.
+\item $\int_{-1}^{1}\,\int_{-\sqrt{1-y^{2}}}^{\sqrt{1-y^{2}}}y\,dx\,dy$.
+\item The region $D$ is shown in the following figure. Evaluate the double integral $\underset{D}{\iint}(x^{2}+y)\,dA$ by using the easier order of integration. \\ \textit{[Figure: A region is bounded by $y=-4+x^2$ and $y=4-x^2$.]}
+\item The region $D$ is given in the following figure. Evaluate the double integral $\underset{D}{\iint}(x^{2}-y^{2})\,dA$ by using the easier order of integration. \\ \textit{[Figure: A region is bounded by $y^4=1-x$ and $y^4=1+x$.]}
+\item Find the volume of the solid under the surface $z=2x+y^{2}$ and above the region bounded by $y=x^{5}$ and $y=x$.
+\item Find the volume in the first octant of the solid under the plane $z=3x+y$ and above the region determined by $y=x^{7}$ and $y=x$.
+\item Find the volume of the solid under the plane $z=x-y$ and above the region bounded by $x=\tan y$, $x=-\tan y$, and $x=1$.
+\item Find the volume of the solid under the surface $z=x^{3}$ and above the plane region bounded by $x=\sin y$, $x=-\sin y$, and $x=1$ for values of $y$ between $y=-\frac{\pi}{2}$ and $y=\frac{\pi}{2}$.
+\item Let $g$ be a positive, increasing, and differentiable function on the interval $[a,b]$. Show that the volume of the solid under the surface $z=g'(x)$ and above the region bounded by $y=0$, $y=g(x)$, $x=a$, and $x=b$ is given by $\frac{1}{2}\bigl(g^{2}(b)-g^{2}(a)\bigr)$.
+\item Let $g$ be a positive, increasing, and differentiable function on the interval $[a,b]$, and let $k$ be a positive real number. Show that the volume of the solid under the surface $z=g'(x)$ and above the region bounded by $y=g(x)$, $y=g(x)+k$, $x=a$, and $x=b$ is given by $k\bigl(g(b)-g(a)\bigr)$.
+\item Find the volume of the solid situated in the first octant and determined by the planes $z=2$, $z=0$, $x+y=1$, $x=0$, and $y=0$.
+\item Find the volume of the solid situated in the first octant and bounded by the planes $x+2y=1$, $x=0$, $y=0$, $z=4$, and $z=0$.
+\item Find the volume of the solid bounded by the planes $x+y=1$, $x-y=1$, $x=0$, $z=0$, and $z=10$.
+\item Find the volume of the solid bounded by the planes $x+y=1$, $x-y=1$, $x+y=-1$, $x-y=-1$, $z=1$, and $z=0$.
+\item Let $S_{1}$ and $S_{2}$ be the solids situated in the first octant under the planes $x+y+z=1$ and $x+y+2z=1$, respectively, and let $S$ be the solid situated between $S_{1}$, $S_{2}$, $x=0$, and $y=0$.
+\begin{enumerate}[label=(\alph*)]
+  \item Find the volume of the solid $S_{1}$.
+  \item Find the volume of the solid $S_{2}$.
+  \item Find the volume of the solid $S$ by subtracting the volumes of the solids $S_{1}$ and $S_{2}$.
+\end{enumerate}
+\item Let $S_{1}$ and $S_{2}$ be the solids situated in the first octant under the planes $2x+2y+z=2$ and $x+y+z=1$, respectively, and let $S$ be the solid situated between $S_{1}$, $S_{2}$, $x=0$, and $y=0$.
+\begin{enumerate}[label=(\alph*)]
+  \item Find the volume of the solid $S_{1}$.
+  \item Find the volume of the solid $S_{2}$.
+  \item Find the volume of the solid $S$ by subtracting the volumes of the solids $S_{1}$ and $S_{2}$.
+\end{enumerate}
+\item Let $S_{1}$ and $S_{2}$ be the solids situated in the first octant under the plane $x+y+z=2$ and under the sphere $x^{2}+y^{2}+z^{2}=4$, respectively. If the volume of the solid $S_{2}$ is $\frac{4\pi}{3}$, determine the volume of the solid $S$ situated between $S_{1}$ and $S_{2}$ by subtracting the volumes of these solids.
+\item Consider the plane $x+y+z=2$ and the cylinder $x^{2}+y^{2}=4$ in the first octant.
+\begin{enumerate}[label=(\alph*)]
+  \item Find the volume under the plane.
+  \item Find the volume inside the cylinder under the plane $z=2$.
+  \item Find the volume above the plane, inside the cylinder, and below the plane $z=2$.
+\end{enumerate}
+\item \techrequired The following figure shows the region $D$ bounded by the curves $y=\sin x$, $x=0$, and $y=x^{4}$. Use a graphing calculator or CAS to find the $x$-coordinates of the intersection points of the curves and to determine the area of the region $D$. Round your answers to six decimal places. \\ \textit{[Figure: A region is bounded by $y=\sin x$, $y=x^4$, and $x=0$.]}
+\item \techrequired The region $D$ bounded by the curves $y=\cos x$, $x=0$, and $y=x^{3}$ is shown in the following figure. Use a graphing calculator or CAS to find the $x$-coordinates of the intersection points of the curves and to determine the area of the region $D$. Round your answers to six decimal places. \\ \textit{[Figure: A region is bounded by $y=\cos x$, $y=x^3$, and $x=0$.]}
+\item Suppose that $(X,Y)$ is the outcome of an experiment that must occur in a particular region $S$ in the $xy$-plane. In this context, the region $S$ is called the sample space of the experiment, and $X$ and $Y$ are random variables. If $D$ is a region included in $S$, then the probability of $(X,Y)$ being in $D$ is defined as $P[(X,Y)\in D]=\underset{D}{\iint}p(x,y)\,dx\,dy$, where $p(x,y)$ is the joint probability density of the experiment. Here, $p(x,y)$ is a nonnegative function for which $\underset{S}{\iint}p(x,y)\,dx\,dy=1$. Assume that a point $(X,Y)$ is chosen arbitrarily in the square $[0,3]\times [0,3]$ with probability density $p(x,y)=\begin{cases}\frac{1}{9}, & (x,y)\in[0,3]\times [0,3], \\ 0, & \text{otherwise}.\end{cases}$ Find the probability that the point $(X,Y)$ is inside the unit square and interpret the result.
+\item Consider $X$ and $Y$, two random variables with probability densities $p_{1}(x)$ and $p_{2}(y)$, respectively. The random variables $X$ and $Y$ are said to be independent if their joint density function is given by $p(x,y)=p_{1}(x)p_{2}(y)$. At a drive-thru restaurant, customers spend, on average, $3$ minutes placing their orders and an additional $5$ minutes paying for and picking up their meals. Assume that placing the order and paying for/picking up the meal are two independent events $X$ and $Y$. If the waiting times are modeled by the exponential probability densities $p_{1}(x)=\begin{cases}\frac{1}{3}e^{-x/3}, & x\ge 0, \\ 0, & \text{otherwise},\end{cases}$ and $p_{2}(y)=\begin{cases}\frac{1}{5}e^{-y/5}, & y\ge 0, \\ 0, & \text{otherwise},\end{cases}$ respectively, the probability that a customer will spend less than $6$ minutes in the drive-thru line is given by $P[X+Y\le 6]=\underset{D}{\iint}p(x,y)\,dx\,dy$, where $D=\{(x,y)\mid x\ge 0,\ y\ge 0,\ x+y\le 6\}$. Find $P[X+Y\le 6]$ and interpret the result.
+\item \techrequired The Reuleaux triangle consists of an equilateral triangle and three regions, each of them bounded by a side of the triangle and an arc of a circle of radius $s$ centered at the opposite vertex of the triangle. Show that the area of the Reuleaux triangle in the following figure of side length $s$ is $\frac{s^{2}}{2}(\pi-\sqrt{3})$. \\ \textit{[Figure: An equilateral triangle with additional regions consisting of three arcs of a circle with radius equal to the length of the side of the triangle. These arcs connect two adjacent vertices, and the radius is taken from the opposite vertex.]}
+\item \techrequired Show that the area of the lunes of Alhazen, the two blue lunes in the following figure, is the same as the area of the right triangle $ABC$. The outer boundaries of the lunes are semicircles of diameters $AB$ and $BC$, respectively, and the inner boundaries are formed by the circumcircle of the triangle $ABC$. \\ \textit{[Figure: A right triangle with points $A$, $B$, and $C$. Point $B$ has the right angle. There are two lunes drawn from $A$ to $B$ and from $B$ to $C$ with outer diameters $AB$ and $BC$, respectively, and with the inner boundaries formed by the circumcircle of the triangle $ABC$.]}
+\end{enumerate}
+
+\end{document}

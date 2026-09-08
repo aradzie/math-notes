@@ -1,0 +1,73 @@
+Manual review corrections for this page's first pass, all local
+typographic and mathematical-notation defects rather than upstream
+OpenStax content issues:
+
+- "What is the value of $\text{``}c\text{''}$" wrapped literal quotation
+  marks inside math mode around the variable name; changed to
+  "``$c$''" with the quotes as ordinary text and only the variable
+  itself in math mode.
+- Three iterated-map exercises used a stray empty group before a
+  superscript, `x_{n}{}^{2}` / `x_{n}{}^{3}`, a converter artifact with
+  no effect other than obscuring the source; simplified to `x_{n}^{2}`
+  / `x_{n}^{3}`.
+- "$x^{3}+{(x+1)}^{3}=10^{3}$" wrapped an already-parenthesized term in
+  a redundant brace group; removed the extra braces.
+- "$\tan(x)$ on $x=(\frac{\pi}{2},\frac{3\pi}{2})$" asserted $x$ equals
+  an interval rather than ranging over it; changed to
+  "$x\in(\frac{\pi}{2},\frac{3\pi}{2})$", matching this file's own
+  "choose $x_{0}\in(-\frac{\pi}{2},\frac{\pi}{2})$" a few exercises
+  earlier.
+
+--- /tmp/raw.tex
++++ vol1-4-9-newtons-method.tex
+@@ -27,7 +27,7 @@
+ \begin{enumerate}[resume]
+ \item $f(x)=x^{2}-4$, with $x_{0}=0$
+ \item $f(x)=x^{2}-4x+3$, with $x_{0}=2$
+-\item What is the value of $\text{``}c\text{''}$ for Newton's method?
++\item What is the value of ``$c$'' for Newton's method?
+ \end{enumerate}
+ 
+ For the following exercises, start at
+@@ -42,12 +42,12 @@
+ Compute $x_{1}$ and $x_{2}$ using the specified iterative method.
+ 
+ \begin{enumerate}[resume]
+-\item $x_{n+1}=x_{n}{}^{2}-\frac{1}{2}$
++\item $x_{n+1}=x_{n}^{2}-\frac{1}{2}$
+ \item $x_{n+1}=2x_{n}(1-x_{n})$
+ \item $x_{n+1}=\sqrt{x_{n}}$
+ \item $x_{n+1}=\frac{1}{\sqrt{x_{n}}}$
+ \item $x_{n+1}=3x_{n}(1-x_{n})$
+-\item $x_{n+1}=x_{n}{}^{2}+x_{n}-2$
++\item $x_{n+1}=x_{n}^{2}+x_{n}-2$
+ \item $x_{n+1}=\frac{1}{2}x_{n}-1$
+ \item $x_{n+1}=|x_{n}|$
+ \end{enumerate}
+@@ -63,7 +63,7 @@
+ \item $x+\tan(x)=0$, choose $x_{0}\in(-\frac{\pi}{2},\frac{\pi}{2})$
+ \item $\frac{1}{1-x}=2$
+ \item $1+x+x^{2}+x^{3}+x^{4}=2$
+-\item $x^{3}+{(x+1)}^{3}=10^{3}$
++\item $x^{3}+(x+1)^{3}=10^{3}$
+ \item $x=\sin^{2}(x)$
+ \end{enumerate}
+ 
+@@ -71,7 +71,7 @@
+ 
+ \begin{enumerate}[resume]
+ \item $\sin x$
+-\item $\tan(x)$ on $x=(\frac{\pi}{2},\frac{3\pi}{2})$
++\item $\tan(x)$ on $x\in(\frac{\pi}{2},\frac{3\pi}{2})$
+ \item $e^{x}-2$
+ \item $\ln(x)+2$
+ \end{enumerate}
+@@ -102,7 +102,7 @@
+ \item Newton's method, $x^{2}+2=0$
+ \item Newton's method, $0=e^{x}$
+ \item Newton's method, $0=1+x^{2}$ starting at $x_{0}=0$
+-\item Solving $x_{n+1}=-x_{n}{}^{3}$ starting at $x_{0}=-1$
++\item Solving $x_{n+1}=-x_{n}^{3}$ starting at $x_{0}=-1$
+ \end{enumerate}
+ 
+ For the following exercises, use the secant method, an alternative iterative method to Newton's method. The formula is given by

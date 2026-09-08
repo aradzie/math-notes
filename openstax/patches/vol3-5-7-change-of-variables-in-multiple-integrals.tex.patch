@@ -1,0 +1,111 @@
+Exercises 7-9 fused the connective "where" into the transformation's math
+span with the following variable ("$x=u^{2},y=v^{2},\text{where}\,S$ is the
+rectangle..."), unlike exercise 10 a few lines later ("...$T(u,v)=(2u-v,u)$,
+where $S$ is the triangle...") and the "where $a,b>0$"-style constructions
+used throughout the rest of the file. Hand-fixed to close the math span
+before "where" and open a fresh one for $S$, matching the file's own
+established convention.
+
+Exercises 21 and 22 (transformations into R^3, with x=u/a,y=v/b,z=w/c and
+x=au,y=bv,z=cw respectively) defined the target region as
+$R=\{(x,y)|...\}$ even though the set-builder condition involves x, y, and
+z. Hand-fixed both to $R=\{(x,y,z)|...\}$. Confirmed against the live
+OpenStax page that both instances of the two-variable set-builder header
+are present verbatim in OpenStax's own source, not introduced by
+conversion.
+
+The figure caption before exercises 35-36 described the parallelogram R
+(vertices (0,0),(1,0),(2,1),(1,1)) as a "rhombus." Its side lengths are 1,
+sqrt(2), 1, sqrt(2) -- not equal, so it is a parallelogram but not a
+rhombus, consistent with how the surrounding prose already names it.
+Confirmed this mislabeling is present verbatim in OpenStax's own figure
+caption. Hand-fixed to "parallelogram."
+
+Exercise 40 wrapped the entire $\underset{R}{\iint}(x^{2}+25y^{2})$
+construct in braces before applying the outer exponent 2
+("${\underset{R}{\iint}(x^{2}+25y^{2})}^{2}\,dA$"), squaring the integral
+sign itself rather than the integrand. Confirmed against the live OpenStax
+page that the intended integrand is $(x^{2}+25y^{2})^{2}$. Hand-fixed to
+$\underset{R}{\iint}{(x^{2}+25y^{2})}^{2}\,dA$, matching the
+brace-then-exponent convention used elsewhere in the file for exponentiated
+parenthetical quantities.
+
+Exercise 45 asked to show
+$\iint_R f(\sqrt{x^{2}/3+y^{2}/3})\,dA=2\pi\sqrt{15}\int_0^1 f(\rho)\rho\,d\rho$
+for R bounded by the ellipse $5x^{2}+3y^{2}=15$ (i.e. $x^{2}/3+y^{2}/5=1$).
+Substituting $x=\sqrt3\,\rho\cos\theta,y=\sqrt5\,\rho\sin\theta$ (Jacobian
+$\sqrt{15}\,\rho$) only reduces the integrand to $f(\rho)$ and reproduces
+the stated result when the second denominator is 5, not 3; with two
+denominators of 3 the claimed identity does not hold. Confirmed against the
+live OpenStax page that the source integrand is
+$\sqrt{x^{2}/3+y^{2}/5}$. Hand-fixed the second denominator from 3 to 5.
+
+Exercise 59's introductory sentence for Lamé ovals gave the variable list
+"where a, b, and n are positive real numbers" in plain prose, unlike every
+other "where <vars> are/is ..." construction in this file, which keeps the
+variables in math mode (e.g. exercise 21's "where $a,b,c>0$"). Hand-fixed
+to "where $a,b,\text{and}\,n$ are positive real numbers", matching the
+file's own $\text{and}\,$ convention for a math-mode variable list ending
+in "and".
+--- /tmp/raw.tex
++++ vol3-5-7-change-of-variables-in-multiple-integrals.tex
+@@ -35,9 +35,9 @@ In the following exercises, the function $T:S\to R,T(u,v)=(x,y)$ on the region $
+ In the following exercises, determine whether the transformations $T:S\to R$ are one-to-one or not.
+ 
+ \begin{enumerate}[resume]
+-\item $x=u^{2},y=v^{2},\text{where}\,S$ is the rectangle of vertices $(-1,0),(1,0),(1,1),\text{and}\,(-1,1)$.
+-\item $x=u^{4},y=u^{2}+v,\text{where}\,S$ is the triangle of vertices $(-2,0),(2,0),\text{and}\,(0,2)$.
+-\item $x=2u,y=3v,\text{where}\,S$ is the square of vertices $(-1,1),(-1,-1),(1,-1),\text{and}\,(1,1)$.
++\item $x=u^{2},y=v^{2}$, where $S$ is the rectangle of vertices $(-1,0),(1,0),(1,1),\text{and}\,(-1,1)$.
++\item $x=u^{4},y=u^{2}+v$, where $S$ is the triangle of vertices $(-2,0),(2,0),\text{and}\,(0,2)$.
++\item $x=2u,y=3v$, where $S$ is the square of vertices $(-1,1),(-1,-1),(1,-1),\text{and}\,(1,1)$.
+ \item $T(u,v)=(2u-v,u)$, where $S$ is the triangle of vertices $(-1,1),(-1,-1),\text{and}\,(1,-1)$.
+ \item $x=u+v+w,y=u+v,z=w$, where $S=R=\mathbb{R}^{3}$.
+ \item $x=u^{2}+v+w,y=u^{2}+v,z=w$, where $S=R=\mathbb{R}^{3}$.
+@@ -59,8 +59,8 @@ In the following exercises, the transformation $T:S\to R,T(u,v)=(x,y)$ and the r
+ \begin{enumerate}[resume]
+ \item $x=au,y=bv,R=\{(x,y)|x^{2}+y^{2}\le a^{2}b^{2}\}$, where $a,b>0$
+ \item $x=au,y=bv,R=\{(x,y)|\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}\le1\}$, where $a,b>0$
+-\item $x=\frac{u}{a},y=\frac{v}{b},z=\frac{w}{c}$, $R=\{(x,y)|x^{2}+y^{2}+z^{2}\le1\}$, where $a,b,c>0$
+-\item $x=au,y=bv,z=cw,R=\{(x,y)|\frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}-\frac{z^{2}}{c^{2}}\le1,z>0\}$, where $a,b,c>0$
++\item $x=\frac{u}{a},y=\frac{v}{b},z=\frac{w}{c}$, $R=\{(x,y,z)|x^{2}+y^{2}+z^{2}\le1\}$, where $a,b,c>0$
++\item $x=au,y=bv,z=cw,R=\{(x,y,z)|\frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}-\frac{z^{2}}{c^{2}}\le1,z>0\}$, where $a,b,c>0$
+ \end{enumerate}
+ 
+ In the following exercises, find the Jacobian $J$ of the transformation.
+@@ -91,7 +91,7 @@ In the following exercises, find the Jacobian $J$ of the transformation.
+ In the following exercises, use the transformation $u=y-x,v=y$, to evaluate the integrals on the parallelogram $R$ of vertices $(0,0),(1,0),(2,1),\text{and}\,(1,1)$ shown in the following figure.
+ 
+ 
+-\textit{[Figure: A rhombus with corners at the origin, (1, 0), (1, 1), and (2, 1).]}
++\textit{[Figure: A parallelogram with corners at the origin, (1, 0), (1, 1), and (2, 1).]}
+ 
+ \begin{enumerate}[resume]
+ \item $\underset{R}{\iint}(y-x)\,dA$
+@@ -115,7 +115,7 @@ In the following exercises, use the transformation $x=u,5y=v$ to evaluate the in
+ 
+ \begin{enumerate}[resume]
+ \item $\underset{R}{\iint}\sqrt{x^{2}+25y^{2}}\,dA$
+-\item ${\underset{R}{\iint}(x^{2}+25y^{2})}^{2}\,dA$
++\item $\underset{R}{\iint}{(x^{2}+25y^{2})}^{2}\,dA$
+ \end{enumerate}
+ 
+ In the following exercises, use the transformation $u=x+y,v=x-y$ to evaluate the integrals on the trapezoidal region $R$ determined by the points $(1,0),(2,0),(0,2),\text{and}\,(0,1)$ shown in the following figure.
+@@ -128,7 +128,7 @@ In the following exercises, use the transformation $u=x+y,v=x-y$ to evaluate the
+ \item $\underset{R}{\iint}(x^{3}+3x^{2}y+3xy^{2}+y^{3})\,dA$
+ \item The circular annulus sector $R$ bounded by the circles $4x^{2}+4y^{2}=1$ and $9x^{2}+9y^{2}=64$, the line $x=y\sqrt{3}$, and the $y\text{-axis}$ is shown in the following figure. Find a transformation $T$ from a rectangular region $S$ in the $r\theta \text{-plane}$ to the region $R$ in the $xy\text{-plane.}$ Graph $S$. \\ \textit{[Figure: In the first quadrant, a section of an annulus described by an inner radius of 0.5, outer radius slightly more than 2.5, and center the origin. There is a line dividing this annulus that comes from approximately a 30 degree angle. The portion corresponding to 60 degrees is shaded.]}
+ \item The solid $R$ bounded by the circular cylinder $x^{2}+y^{2}=9$ and the planes $z=0,z=1$, $x=0,\text{and}\,y=0$ is shown in the following figure. Find a transformation $T$ from a cylindrical box $S$ in $r\theta z\text{-space}$ to the solid $R$ in $xyz\text{-space}$. \\ \textit{[Figure: A quarter of a cylinder with height 1 and radius 3. The center axis is the z axis.]}
+-\item Show that $\underset{R}{\iint}f(\sqrt{\frac{x^{2}}{3}+\frac{y^{2}}{3}})\,dA=2\pi \sqrt{15}\int_{0}^{1}f(\rho)\rho \,d\rho$, where $f$ is a continuous function on $[0,1]$ and $R$ is the region bounded by the ellipse $5x^{2}+3y^{2}=15$.
++\item Show that $\underset{R}{\iint}f(\sqrt{\frac{x^{2}}{3}+\frac{y^{2}}{5}})\,dA=2\pi \sqrt{15}\int_{0}^{1}f(\rho)\rho \,d\rho$, where $f$ is a continuous function on $[0,1]$ and $R$ is the region bounded by the ellipse $5x^{2}+3y^{2}=15$.
+ \item Show that $\underset{R}{\iiint}f(\sqrt{16x^{2}+4y^{2}+z^{2}})\,dV=\frac{\pi}{2}\int_{0}^{1}f(\rho)\rho^{2}\,d\rho$, where $f$ is a continuous function on $[0,1]$ and $R$ is the region bounded by the ellipsoid $16x^{2}+4y^{2}+z^{2}=1$.
+ \item \techrequired Find the area of the region bounded by the curves $xy=1,xy=3,y=2x$, and $y=3x$ by using the transformation $u=xy$ and $v=\frac{y}{x}$. Use a computer algebra system (CAS) to graph the boundary curves of the region $R$.
+ \item \techrequired Find the area of the region bounded by the curves $xy=2,xy=3,y=x$, and $y=2x$ by using the transformation $u=xy$ and $v=\frac{y}{x}$.
+@@ -157,7 +157,7 @@ In the following exercises, use the transformation $u=x+y,v=x-y$ to evaluate the
+ \end{enumerate}
+ \item Use the transformation, $x=au,y=av,z=cw$ and spherical coordinates to show that the volume of a region bounded by the spheroid $\frac{x^{2}+y^{2}}{a^{2}}+\frac{z^{2}}{c^{2}}=1$ is $\frac{4\pi a^{2}c}{3}$.
+ \item Find the volume of a football whose shape is a spheroid $\frac{x^{2}+y^{2}}{a^{2}}+\frac{z^{2}}{c^{2}}=1$ whose length from tip to tip is $11$ inches and circumference at the center is $22$ inches. Round your answer to two decimal places.
+-\item \techrequired Lamé ovals (or superellipses) are plane curves of equations ${(\frac{x}{a})}^{n}+{(\frac{y}{b})}^{n}=1$, where a, b, and n are positive real numbers.
++\item \techrequired Lamé ovals (or superellipses) are plane curves of equations ${(\frac{x}{a})}^{n}+{(\frac{y}{b})}^{n}=1$, where $a,b,\text{and}\,n$ are positive real numbers.
+ \begin{enumerate}[label=(\alph*)]
+   \item Use a CAS to graph the regions $R$ bounded by Lamé ovals for $a=1,b=2,n=4$ and $n=6$, respectively.
+   \item Find the transformations that map the region $R$ bounded by the Lamé oval $x^{4}+y^{4}=1$, also called a squircle and graphed in the following figure, into the unit disk.\\ \textit{[Figure: A square of side length 2 with rounded corners.]}

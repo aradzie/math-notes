@@ -1,0 +1,112 @@
+% OpenStax Calculus Volume 3 -- Section 6.2 Exercises: Line Integrals
+% Exercises reproduced from OpenStax, licensed under CC BY 4.0.
+% Source: https://openstax.org/books/calculus-volume-3/pages/6-2-line-integrals
+\documentclass{exercises}
+\title{OpenStax Calculus Volume 3}
+\subtitle{Section 6.2 Exercises: Line Integrals}
+\sourceurl{https://openstax.org/books/calculus-volume-3/pages/6-2-line-integrals}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{enumerate}[start=1]
+\item True or False? Line integral $\int_{C}^{}f(x,y)\,ds$ is equal to a definite integral if C is a smooth curve defined on $[a,b]$ and if function $f$ is continuous on some region that contains curve C.
+\item True or False? Vector functions $\mathbf{r}_{1}=t\mathbf{i}+t^{2}\mathbf{j}$, $0\le t\le1$, and $\mathbf{r}_{2}=(1-t)\mathbf{i}+{(1-t)}^{2}\mathbf{j}$, $0\le t\le1$, define the same oriented curve.
+\item True or False? $\int_{-C}^{}(P\,dx+Qdy)=\int_{C}^{}(P\,dx-Qdy)$
+\item True or False? A piecewise smooth curve C consists of a finite number of smooth curves that are joined together end to end.
+\item True or False? If C is given by $x(t)=t,\,y(t)=t,\,0\le t\le1$, then $\int_{C}^{}xy\,ds=\int_{0}^{1}t^{2}\,dt$.
+\end{enumerate}
+
+For the following exercises, use a computer algebra system (CAS) to evaluate the line integrals over the indicated path.
+
+\begin{enumerate}[resume]
+\item \techrequired $\int_{C}^{}(x+y)\,ds$ $C{:}\,x=t,\,y=(1-t),\,z=0$ from (0, 1, 0) to (1, 0, 0)
+\item \techrequired $\int_{C}^{}(x-y)\,ds$ $C{:}\,\mathbf{r}(t)=4t\mathbf{i}+3t\mathbf{j}$ when $0\le t\le2$
+\item \techrequired $\int_{C}^{}(x^{2}+y^{2}+z^{2})\,ds$ $C{:}\,\mathbf{r}(t)=\sin t\mathbf{i}+\cos t\mathbf{j}+8t\mathbf{k}$ when $0\le t\le \frac{\pi}{2}$
+\item \techrequired Evaluate $\int_{C}^{}xy^{4}\,ds$, where C is the right half of circle $x^{2}+y^{2}=16$ and is traversed in the clockwise direction.
+\item \techrequired Evaluate $\int_{C}^{}4x^{3}\,ds$, where C is the line segment from $(-2,-1)$ to (1, 2).
+\end{enumerate}
+
+For the following exercises, find the work done.
+
+\begin{enumerate}[resume]
+\item Find the work done by vector field $\mathbf{F}(x,y,z)=x\mathbf{i}+3xy\mathbf{j}-(x+z)\mathbf{k}$ on a particle moving along a line segment that goes from $(1,4,2)$ to $(0,5,1)$.
+\item Find the work done by a person weighing 150 lb walking exactly one revolution up a circular, spiral staircase of radius 3 ft if the person rises 10 ft.
+\item Find the work done by force field $\mathbf{F}(x,y,z)=-\frac{1}{2}x\mathbf{i}-\frac{1}{2}y\mathbf{j}+\frac{1}{4}\mathbf{k}$ on a particle as it moves along the helix $\mathbf{r}(t)=\cos t\mathbf{i}+\sin t\mathbf{j}+t\mathbf{k}$ from point $(1,0,0)$ to point $(-1,0,3\pi)$.
+\item Find the work done by vector field $\mathbf{F}(x,y)=y\mathbf{i}+2x\mathbf{j}$ in moving an object along path C, the straight line which joins points (1, 0) and (0, 1).
+\item Find the work done by force $\mathbf{F}(x,y)=2y\mathbf{i}+3x\mathbf{j}+(x+y)\mathbf{k}$ in moving an object along curve $\mathbf{r}(t)=\cos(t)\mathbf{i}+\sin(t)\mathbf{j}+\frac{1}{6}\mathbf{k}$, where $0\le t\le2\pi$.
+\item Find the mass of a wire in the shape of a circle of radius 2 centered at (3, 4) with linear mass density $\rho(x,y)=y^{2}$.
+\end{enumerate}
+
+For the following exercises, evaluate the line integrals.
+
+\begin{enumerate}[resume]
+\item Evaluate $\int_{C}\mathbf{F}\cdot d\mathbf{r}$, where $\mathbf{F}(x,y)=-1\mathbf{j}$, and C is the part of the graph of $y=\frac{1}{2}x^{3}-x$ from $(2,2)$ to $(-2,-2)$.
+\item Evaluate $\int_{\gamma}^{}{(x^{2}+y^{2}+z^{2})}^{-1}\,ds$, where $\gamma$ is the helix $x=\cos t,y=\sin t,z=t,\,0\le t\le T$.
+\item Evaluate $\int_{C}^{}yz\,dx+xz\,dy+xy\,dz$ over the line segment from $(1,1,1)$ to $(3,2,0)$.
+\item Let C be the line segment from point (0, 1, 1) to point (2, 2, 3). Evaluate line integral $\int_{C}^{}y\,ds$.
+\item \techrequired Use a computer algebra system to evaluate the line integral $\int_{C}y^{2}\,dx+xdy$, where C is the arc of the parabola $x=4-y^{2}$ from (-5, -3) to (0, 2).
+\item \techrequired Use a computer algebra system to evaluate the line integral $\int_{C}^{}(x+3y^{2})\,dy$ over the path C given by $x=2t,\,y=10t$, where $0\le t\le1$.
+\item \techrequired Use a CAS to evaluate line integral $\int_{C}^{}xy\,dx+ydy$ over path C given by $x=2t,\,y=10t$, where $0\le t\le1$.
+\item Evaluate line integral $\int_{C}^{}(2x-y)\,dx+(x+3y)dy$, where C lies along the $x$-axis from $x=0$ to $x=5$.
+\item \techrequired Use a CAS to evaluate $\int_{C}^{}\frac{y}{2x^{2}-y^{2}}\,ds$, where C is $x=t,\,y=t,\,1\le t\le5$.
+\item \techrequired Use a CAS to evaluate $\int_{C}xy\,ds$, where C is $x=t^{2},y=4t,0\le t\le1$.
+\end{enumerate}
+
+In the following exercises, find the work done by force field F on an object moving along the indicated path.
+
+\begin{enumerate}[resume]
+\item $\mathbf{F}(x,y)=-x\mathbf{i}-2y\mathbf{j}$ $C{:}\,y=x^{3}$ from (0, 0) to (2, 8)
+\item $\mathbf{F}(x,\,y)=2x\mathbf{i}+y\mathbf{j}$ C: counterclockwise around the triangle with vertices (0, 0), (1, 0), and (1, 1)
+\item $\mathbf{F}(x,\,y,\,z)=x\mathbf{i}+y\mathbf{j}-5z\mathbf{k}$ $C{:}\,\mathbf{r}(t)=2\cos t\mathbf{i}+2\sin t\mathbf{j}+t\mathbf{k},\,0\le t\le2\pi$
+\item Let F be vector field $\mathbf{F}(x,y)=(y^{2}+2xe^{y}+1)\mathbf{i}+(2xy+x^{2}e^{y}+2y)\mathbf{j}$. Compute the work of integral $\int_{C}^{}\mathbf{F}\cdot d\mathbf{r}$, where C is the path $\mathbf{r}(t)=\sin t\mathbf{i}+\cos t\mathbf{j},\,0\le t\le \frac{\pi}{2}$.
+\item Compute the work done by force $\mathbf{F}(x,y,z)=2x\mathbf{i}+3y\mathbf{j}-z\mathbf{k}$ along path $\mathbf{r}(t)=t\mathbf{i}+t^{2}\mathbf{j}+t^{3}\mathbf{k}$, where $0\le t\le1$.
+\item Evaluate $\int_{C}^{}\mathbf{F}\cdot d\mathbf{r}$, where $\mathbf{F}(x,y)=\frac{1}{x+y}\mathbf{i}+\frac{1}{x+y}\mathbf{j}$ and C is the segment of the unit circle going counterclockwise from $(1,0)$ to (0, 1).
+\item Force $\mathbf{F}(x,y,z)=zy\mathbf{i}+x\mathbf{j}+z^{2}x\mathbf{k}$ acts on a particle that travels from the origin to point (1, 2, 3). Calculate the work done if the particle travels:
+\begin{enumerate}[label=(\alph*)]
+  \item along the path $(0,0,0)\to(1,0,0)\to(1,2,0)\to(1,2,3)$ along straight-line segments joining each pair of endpoints;
+  \item along the straight line joining the initial and final points.
+  \item Is the work the same along the two paths?\\ \textit{[Figure: A curve and vector field in three dimensions. The curve segments go from (1,2,3) to (0,0,0) to (1,0,0) to (1,2,0), and the arrowheads point to (0,0,0), (1,0,0), and (1,2,0). The surrounding vectors are larger the more the z component increases.]}
+\end{enumerate}
+\item Find the work done by vector field $\mathbf{F}(x,y,z)=x\mathbf{i}+3xy\mathbf{j}-(x+z)\mathbf{k}$ on a particle moving along a line segment that goes from (1, 4, 2) to (0, 5, 1).
+\item How much work is required to move an object in vector field $\mathbf{F}(x,y)=y\mathbf{i}+3x\mathbf{j}$ along the upper part of ellipse $\frac{x^{2}}{4}+y^{2}=1$ from (2, 0) to $(-2,0)$?
+\item A vector field is given by $\mathbf{F}(x,y)=(2x+3y)\mathbf{i}+(3x+2y)\mathbf{j}$. Evaluate the line integral of the field around a circle of unit radius traversed in a clockwise fashion.
+\item Evaluate the line integral of scalar function $xy$ along parabolic path $y=x^{2}$ connecting the origin to point (1, 1).
+\item Find $\int_{C}^{}y^{2}\,dx+(xy-x^{2})dy$ along C: $y=3x$ from (0, 0) to (1, 3).
+\item Find $\int_{C}^{}y^{2}\,dx+(xy-x^{2})dy$ along C: $y^{2}=9x$ from (0, 0) to (1, 3).
+\end{enumerate}
+
+For the following exercises, use a CAS to evaluate the given line integrals.
+
+\begin{enumerate}[resume]
+\item \techrequired Evaluate $\int_{C}^{}\mathbf{F}\cdot d\mathbf{r}$, where $\mathbf{F}(x,y,z)=x^{2}z\mathbf{i}+6y\mathbf{j}+yz^{2}\mathbf{k}$ and C is represented by $\mathbf{r}(t)=t\mathbf{i}+t^{2}\mathbf{j}+\ln t\mathbf{k},\,1\le t\le3$.
+\item \techrequired Evaluate line integral $\int_{\gamma}^{}xe^{y}\,ds$ where, $\gamma$ is the arc of curve $x=e^{y}$ from $(1,0)$ to $(e,1)$.
+\item \techrequired Evaluate the integral $\int_{\gamma}^{}xy^{2}\,ds$, where $\gamma$ is a triangle with vertices (0, 1, 2), (1, 0, 3), and $(0,-1,0)$.
+\item \techrequired Evaluate line integral $\int_{\gamma}^{}(y^{2}-xy)\,ds$, where $\gamma$ is curve $y=\ln x$ from (1, 0) toward $(e,\,1)$.
+\item \techrequired Evaluate line integral $\int_{\gamma}^{}xy^{4}\,ds$, where $\gamma$ is the right half of circle $x^{2}+y^{2}=16$.
+\item \techrequired Evaluate $\int_{C}^{}\mathbf{F}\cdot d\mathbf{r}$, where $\mathbf{F}(x,y,z)=x^{2}y\mathbf{i}+(x-z)\mathbf{j}+xyz\mathbf{k}$ and C: $\mathbf{r}(t)=t\mathbf{i}+t^{2}\mathbf{j}+2\mathbf{k},\,0\le t\le1$.
+\item Evaluate $\int_{C}^{}\mathbf{F}\cdot d\mathbf{r}$, where $\mathbf{F}(x,y)=2x\sin(y)\mathbf{i}+(x^{2}\cos(y)-3y^{2})\mathbf{j}$ and C is any path from $(-1,0)$ to (5, 1).
+\item Find the line integral of $\mathbf{F}(x,y,z)=12x^{2}\mathbf{i}-5xy\mathbf{j}+xz\mathbf{k}$ over path C defined by $y=x^{2}$, $z=x^{3}$ from point (0, 0, 0) to point (2, 4, 8).
+\item Find the line integral of $\int_{C}^{}(1+x^{2}y)\,ds$, where C is ellipse $\mathbf{r}(t)=2\cos t\mathbf{i}+3\sin t\mathbf{j}$ from $0\le t\le \pi$.
+\end{enumerate}
+
+For the following exercises, find the flux.
+
+\begin{enumerate}[resume]
+\item Compute the flux of $\mathbf{F}=x^{2}\mathbf{i}+y\mathbf{j}$ across a line segment from (0, 0) to (1, 2).
+\item Let $\mathbf{F}=5\mathbf{i}$ and let C be curve $y=0,0\le x\le4$. Find the flux across C.
+\item Let $\mathbf{F}=5\mathbf{j}$ and let C be curve $y=0,0\le x\le4$. Find the flux across C.
+\item Let $\mathbf{F}=-y\mathbf{i}+x\mathbf{j}$ and let C: $\mathbf{r}(t)=\cos t\mathbf{i}+\sin t\mathbf{j}$ $(0\le t\le2\pi)$. Calculate the flux across C.
+\item Let $\mathbf{F}=(x^{2}+y^{3})\mathbf{i}+(2xy)\mathbf{j}$. Calculate the flux of $\mathbf{F}$, oriented counterclockwise, across curve C: $x^{2}+y^{2}=9$.
+\item Find the line integral of $\int_{C}^{}z^{2}\,dx+ydy+2ydz$, where C consists of two parts: $C_{1}$ and $C_{2}$. $C_{1}$ is the intersection of cylinder $x^{2}+y^{2}=16$ and plane $z=3$ from (0, 4, 3) to $(-4,0,3)$. $C_{2}$ is a line segment from $(-4,0,3)$ to (0, 1, 5).
+\item A spring is made of a thin wire twisted into the shape of a circular helix $x=2\cos t,\,y=2\sin t,\,z=t$. Find the mass of two turns of the spring if the wire has constant mass density.
+\item A thin wire is bent into the shape of a semicircle of radius a. If the linear mass density at point P is directly proportional to its distance from the line through the endpoints, find the mass of the wire.
+\item An object moves in force field $\mathbf{F}(x,y,z)=y^{2}\mathbf{i}+2(x+1)y\mathbf{j}$ counterclockwise from point (2, 0) along elliptical path $x^{2}+4y^{2}=4$ to $(-2,0)$, and back to point (2, 0) along the $x$-axis. How much work is done by the force field on the object?
+\item Find the work done when an object moves in force field $\mathbf{F}(x,y,z)=2x\mathbf{i}-(x+z)\mathbf{j}+(y-x)\mathbf{k}$ along the path given by $\mathbf{r}(t)=t^{2}\mathbf{i}+(t^{2}-t)\mathbf{j}+3\mathbf{k}$, $0\le t\le1$.
+\item If an inverse force field $\mathbf{F}$ is given by $\mathbf{F}(x,y,z)=\frac{k}{\|\mathbf{r}\|^{3}}\mathbf{r}$, where $k$ is a constant, find the work done by $\mathbf{F}$ as its point of application moves along the $x$-axis from $A(1,0,0)$ to $B(2,0,0)$.
+\item David and Sandra plan to evaluate line integral $\int_{C}^{}\mathbf{F}\cdot d\mathbf{r}$ along a path in the $xy$-plane from (0, 0) to (1, 1). The force field is $\mathbf{F}(x,y)=(x+2y)\mathbf{i}+(-x+y^{2})\mathbf{j}$. David chooses the path that runs along the $x$-axis from (0, 0) to (1, 0) and then runs along the vertical line $x=1$ from (1, 0) to the final point (1, 1). Sandra chooses the direct path along the diagonal line $y=x$ from (0, 0) to (1, 1). Whose line integral is larger and by how much?
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,41 @@
+This review uses the coth operator macro, regularizes physical units, and corrects the repeated Mars-gravity value in the height-comparison exercise from Earth's -9.8 m/s^2 to Mars's -3.711 m/s^2.
+
+The review also adds an explicit paragraph break where the next instruction block otherwise ran onto the final line of the preceding exercise in the rendered PDF.
+
+--- /tmp/raw.tex
++++ vol2-4-1-basics-of-differential-equations.tex
+@@ -54,6 +54,7 @@
+ \item Find the particular solution to the differential equation $y'(1-x^{2})=1+y$ that passes through $(0,-2)$, given that $y=C\frac{\sqrt{x+1}}{\sqrt{1-x}}-1$ is a general solution.
+ \end{enumerate}
+ 
++\par\medskip
+ For the following problems, find the general solution to the differential equation.
+ 
+ \begin{enumerate}[resume]
+@@ -63,7 +64,7 @@
+ \item $y'=4^{x}$
+ \item $y'=\sin^{-1}(2x)$
+ \item $y'=2t\sqrt{t^{2}+16}$
+-\item $x'=\text{coth}\,t+\ln t+3t^{2}$
++\item $x'=\coth t+\ln t+3t^{2}$
+ \item $x'=t\sqrt{4+t}$
+ \item $y'=y$
+ \item $y'=\frac{y}{x}$
+@@ -97,11 +98,11 @@
+ \item \techrequired $y'=t^{3}$
+ \item \techrequired $y'=x+y$ (Hint: $y=Ce^{x}-x-1$ is the general solution)
+ \item \techrequired $y'=x\ln x+\sin x$
+-\item Find the general solution to describe the velocity of a ball of mass $1\,\text{lb}$ that is thrown upward at a rate $a$ ft/sec.
+-\item In the preceding problem, if the initial velocity of the ball thrown into the air is $a=25$ ft/s, write the particular solution to the velocity of the ball. Solve to find the time when the ball hits the ground.
+-\item You throw two objects with differing masses $m_{1}$ and $m_{2}$ upward into the air with the same initial velocity $a$ ft/s. What is the difference in their velocity after $1$ second?
+-\item \techrequired You throw a ball of mass $1$ kilogram upward with a velocity of $a=25$ m/s on Mars, where the acceleration of gravity is $g=-3.711$ m/s$^{2}$. Use your calculator to approximate how much longer the ball is in the air on Mars than on Earth, where $g=-9.8m/s^{2}$.
+-\item \techrequired For the previous problem, use your calculator to approximate how much higher the ball went on Mars, where $g=-9.8m/s^{2}$.
++\item Find the general solution to describe the velocity of a ball of mass $1\,\text{lb}$ that is thrown upward at a rate $a\,\text{ft}/\text{sec}$.
++\item In the preceding problem, if the initial velocity of the ball thrown into the air is $a=25\,\text{ft}/\text{s}$, write the particular solution to the velocity of the ball. Solve to find the time when the ball hits the ground.
++\item You throw two objects with differing masses $m_{1}$ and $m_{2}$ upward into the air with the same initial velocity $a\,\text{ft}/\text{s}$. What is the difference in their velocity after $1$ second?
++\item \techrequired You throw a ball of mass $1$ kilogram upward with a velocity of $a=25\,\text{m}/\text{s}$ on Mars, where the acceleration of gravity is $g=-3.711\,\text{m}/\text{s}^{2}$. Use your calculator to approximate how much longer the ball is in the air on Mars than on Earth, where $g=-9.8\,\text{m}/\text{s}^{2}$.
++\item \techrequired For the previous problem, use your calculator to approximate how much higher the ball went on Mars, where $g=-3.711\,\text{m}/\text{s}^{2}$.
+ \item \techrequired A car on the freeway accelerates according to $a=15\cos(\pi t)$, where $t$ is measured in hours. Set up and solve the differential equation to determine the velocity of the car if it has an initial speed of $50$ mph. After $40$ minutes of driving, what is the driver's velocity?
+ \item \techrequired For the car in the preceding problem, find the expression for the distance the car has traveled in time $t$, assuming an initial distance of $0$. How long does it take the car to travel $100$ miles? Round your answer to hours and minutes.
+ \item \techrequired For the previous problem, find the total distance traveled in the first hour.
+

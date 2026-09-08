@@ -1,0 +1,69 @@
+Manual review corrections:
+
+- Exercise on points A(alpha,0,0), B(0,beta,0), C(alpha,beta,beta): the
+  converted source used \overrightarrow{...} for the vector arrows while
+  every other exercise in this file uses \overset{\to}{...}; normalized to
+  the file's established notation. It also joined two separate equations
+  (||OA+OB||=sqrt2 and ||OC||=sqrt3) into one math span via
+  \sqrt{2}\,\text{and}\,\|...; split into two math spans with plain-text
+  "and" between them, matching the skill's guidance against \text{and}
+  joins.
+
+- Disco-ball gravity exercise: $\|\text{g}\|=9.8$ $\text{N/kg}$ split the
+  quantity and its unit into two adjacent math spans; joined into one
+  quantity $\|\text{g}\|=9.8\,\text{N/kg}$, consistent with this file's
+  other quantity+unit spans (e.g. $50\,\text{N}$).
+
+- Suspended-block figure description: the accessibility label for point S
+  read "-2squareroots of 3", the only sibling label using the plural
+  "squareroots" instead of "squareroot" used by every other point label in
+  the same figure (P, R, Q); corrected to "squareroot" for consistency.
+  Also corrected "30 k g" to "30 kg" in the same figure description (the
+  mass label's unit had been split by a stray space).
+
+- Final exercise (r(t)=<t,2t^2,4t^2>, techrequired): the exercise's own
+  domain is declared as $t\in[0,10]$, but part (b) asked to visualize the
+  path over $t\in[0,60]$, contradicting that stated domain (unlike the
+  preceding analogous exercise, which restates the same domain in both the
+  setup and part (b)). Corrected part (b) to $t\in[0,10]$ to match the
+  domain given for r(t) itself.
+
+---
+--- /tmp/raw.tex
++++ vol3-2-2-vectors-in-three-dimensions.tex
+@@ -107,7 +107,7 @@
+ \item Determine a vector of magnitude $5$ in the direction of vector $\overset{\to}{AB}$, where $A(2,1,5)$ and $B(3,4,-7)$.
+ \item Find a vector of magnitude $2$ that points in the opposite direction than vector $\overset{\to}{AB}$, where $A(-1,-1,1)$ and $B(0,1,1)$. Express the answer in component form.
+ \item Consider the points $A(2,\alpha,0),B(0,1,\beta)$, and $C(1,1,\beta)$, where $\alpha$ and $\beta$ are negative real numbers. Find $\alpha$ and $\beta$ such that $\|\overset{\to}{OA}-\overset{\to}{OB}+\overset{\to}{OC}\|=\|\overset{\to}{OB}\|=4$.
+-\item Consider points $A(\alpha,0,0),B(0,\beta,0)$, and $C(\alpha,\beta,\beta)$, where $\alpha$ and $\beta$ are positive real numbers. Find $\alpha$ and $\beta$ such that $\|\overrightarrow{OA}+\overrightarrow{OB}\|=\sqrt{2}\,\text{and}\,\|\overrightarrow{OC}\|=\sqrt{3}$.
++\item Consider points $A(\alpha,0,0),B(0,\beta,0)$, and $C(\alpha,\beta,\beta)$, where $\alpha$ and $\beta$ are positive real numbers. Find $\alpha$ and $\beta$ such that $\|\overset{\to}{OA}+\overset{\to}{OB}\|=\sqrt{2}$ and $\|\overset{\to}{OC}\|=\sqrt{3}$.
+ \item Let $P(x,y,z)$ be a point situated at an equal distance from points $A(1,-1,0)$ and $B(-1,2,1)$. Show that point $P$ lies on the plane of equation $-2x+3y+z=2$.
+ \item Let $P(x,y,z)$ be a point situated at an equal distance from the origin and point $A(4,1,2)$. Show that the coordinates of point $P$ satisfy the equation $8x+2y+4z=21$.
+ \item The points $A,B$, and $C$ are collinear (in this order) if the relation $\|\overset{\to}{AB}\|+\|\overset{\to}{BC}\|=\|\overset{\to}{AC}\|$ is satisfied. Show that $A(5,3,-1)$, $B(-5,-3,1)$, and $C(-15,-9,3)$ are collinear points.
+@@ -130,7 +130,7 @@
+   \item Find the net force $\text{F}=\sum_{k=1}^{n}F_{k}$. Express the answer using standard unit vectors.
+   \item Use a computer algebra system (CAS) to find n such that $\|\text{F}\|<100$.
+ \end{enumerate}
+-\item The force of gravity $\text{F}$ acting on an object is given by $\text{F}=m\text{g}$, where m is the mass of the object (expressed in kilograms) and $\text{g}$ is acceleration resulting from gravity, with $\|\text{g}\|=9.8$ $\text{N/kg}$. A 2-kg disco ball hangs by a chain from the ceiling of a room.
++\item The force of gravity $\text{F}$ acting on an object is given by $\text{F}=m\text{g}$, where m is the mass of the object (expressed in kilograms) and $\text{g}$ is acceleration resulting from gravity, with $\|\text{g}\|=9.8\,\text{N/kg}$. A 2-kg disco ball hangs by a chain from the ceiling of a room.
+ \begin{enumerate}[label=(\alph*)]
+   \item Find the force of gravity $\text{F}$ acting on the disco ball and find its magnitude.
+   \item Find the force of tension $\text{T}$ in the chain and its magnitude.\\ Express the answers using standard unit vectors.
+@@ -140,7 +140,7 @@
+   \item Find the magnitude of the force of gravity acting on the chandelier.
+   \item Find the magnitudes of the forces of tension for each of the four chains (assume chains are essentially vertical).
+ \end{enumerate}
+-\item \techrequired A 30-kg block of cement is suspended by three cables of equal length that are anchored at points $P(-2,0,0)$, $Q(1,\sqrt{3},0)$, and $R(1,-\sqrt{3},0)$. The load is located at $S(0,0,-2\sqrt{3})$, as shown in the following figure. Let $\text{F}_{1}$, $\text{F}_{2}$, and $\text{F}_{3}$ be the forces of tension resulting from the load in cables $RS,QS$, and $PS$, respectively. \\ \textit{[Figure: This figure is the 3-dimensional coordinate system. It has 4 points drawn. The first point is labeled ``P(-2, 0, 0).'' The second point is labeled ``R(1, -squareroot of 3, 0).'' The third point is labeled ``S(0, 0, -2squareroots of 3).'' The fourth point is labeled ``Q(1, squareroot of 3, 0).'' There are line segments from P to S, from R to S, and from Q to S. At point S there is a box labeled ``30 k g.'']}
++\item \techrequired A 30-kg block of cement is suspended by three cables of equal length that are anchored at points $P(-2,0,0)$, $Q(1,\sqrt{3},0)$, and $R(1,-\sqrt{3},0)$. The load is located at $S(0,0,-2\sqrt{3})$, as shown in the following figure. Let $\text{F}_{1}$, $\text{F}_{2}$, and $\text{F}_{3}$ be the forces of tension resulting from the load in cables $RS,QS$, and $PS$, respectively. \\ \textit{[Figure: This figure is the 3-dimensional coordinate system. It has 4 points drawn. The first point is labeled ``P(-2, 0, 0).'' The second point is labeled ``R(1, -squareroot of 3, 0).'' The third point is labeled ``S(0, 0, -2squareroot of 3).'' The fourth point is labeled ``Q(1, squareroot of 3, 0).'' There are line segments from P to S, from R to S, and from Q to S. At point S there is a box labeled ``30 kg.'']}
+ \begin{enumerate}[label=(\alph*)]
+   \item Find the gravitational force $\text{F}$ acting on the block of cement that counterbalances the sum $\text{F}_{1}+\text{F}_{2}+\text{F}_{3}$ of the forces of tension in the cables.
+   \item Find forces $\text{F}_{1}$, $\text{F}_{2}$, and $\text{F}_{3}$. Express the answer in component form.
+@@ -154,7 +154,7 @@
+ \item \techrequired Let $\text{r}(t)=\langle t,2t^{2},4t^{2}\rangle$ be the position vector of a particle at time $t$ (in seconds), where $t\in[0,10]$ (here the components of $\text{r}$ are expressed in centimeters).
+ \begin{enumerate}[label=(\alph*)]
+   \item Find the instantaneous velocity, speed, and acceleration of the particle after the first two seconds. Round your answer to two decimal places.
+-  \item Use a CAS to visualize the path of the particle defined by the points $(t,2t^{2},4t^{2})$, where $t\in[0,60]$.
++  \item Use a CAS to visualize the path of the particle defined by the points $(t,2t^{2},4t^{2})$, where $t\in[0,10]$.
+ \end{enumerate}
+ \end{enumerate}
+ 

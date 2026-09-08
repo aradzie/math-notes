@@ -1,0 +1,64 @@
+Correct omitted/awkward focus wording in the hyperbola data, including restoring
+the missing ``Foci located at'' label for the coordinates in exercise 24.
+Keep numerical eccentricities and orbit data in math mode, move directrix labels
+and punctuation into prose, and remove a redundant one-row array wrapper.
+--- /tmp/raw.tex
++++ vol2-7-5-conic-sections.tex
+@@ -43,12 +43,12 @@
+ \begin{enumerate}[resume]
+ \item Vertices located at $(5,0),(-5,0)$ and foci located at $(6,0),(-6,0)$
+ \item Vertices located at $(0,2),(0,-2)$ and foci located at $(0,3),(0,-3)$
+-\item Endpoints of the conjugate axis located at $(0,3),(0,-3)$ and foci located $(4,0),(-4,0)$
+-\item Vertices located at $(0,1),(6,1)$ and focus located at $(8,1)$
+-\item Vertices located at $(-2,0),(-2,-4)$ and focus located at $(-2,-8)$
+-\item Endpoints of the conjugate axis located at $(3,2),(3,4)$ and focus located at $(3,7)$
+-\item Foci located at $(-6,0),(6,0)$ and eccentricity of 3
+-\item $(0,10),(0,-10)$ and eccentricity of 2.5
++\item Endpoints of the conjugate axis located at $(0,3),(0,-3)$ and foci located at $(4,0),(-4,0)$
++\item Vertices located at $(0,1),(6,1)$ and a focus located at $(8,1)$
++\item Vertices located at $(-2,0),(-2,-4)$ and a focus located at $(-2,-8)$
++\item Endpoints of the conjugate axis located at $(3,2),(3,4)$ and a focus located at $(3,7)$
++\item Foci located at $(-6,0),(6,0)$ and eccentricity of $3$
++\item Foci located at $(0,10),(0,-10)$ and eccentricity of $2.5$
+ \end{enumerate}
+ 
+ For the following exercises, consider the following polar equations of conics. Determine the eccentricity and identify the conic.
+@@ -65,10 +65,10 @@
+ For the following exercises, find a polar equation of the conic with focus at the origin and eccentricity and directrix as given.
+ 
+ \begin{enumerate}[resume]
+-\item $\text{Directrix:}\,x=4;e=\frac{1}{5}$
+-\item $\text{Directrix:}\,x=-4;e=5$
+-\item $\text{Directrix: y}=2;e=2$
+-\item $\text{Directrix: y}=-2;e=\frac{1}{2}$
++\item Directrix: $x=4$; $e=\frac{1}{5}$
++\item Directrix: $x=-4$; $e=5$
++\item Directrix: $y=2$; $e=2$
++\item Directrix: $y=-2$; $e=\frac{1}{2}$
+ \end{enumerate}
+ 
+ For the following exercises, sketch the graph of each conic.
+@@ -83,7 +83,7 @@
+ \item $r(2+\sin \theta)=4$
+ \item $r=\frac{3}{2+6\sin \theta}$
+ \item $r=\frac{3}{-4+2\sin \theta}$
+-\item $\begin{array}{l}\frac{x^{2}}{9}+\frac{y^{2}}{4}=1 \\ \end{array}$
++\item $\frac{x^{2}}{9}+\frac{y^{2}}{4}=1$
+ \item $\frac{x^{2}}{4}+\frac{y^{2}}{16}=1$
+ \item $4x^{2}+9y^{2}=36$
+ \item $25x^{2}-4y^{2}=100$
+@@ -113,10 +113,10 @@
+ For the following exercises, determine the polar equation form of the orbit given the length of the major axis and eccentricity for the orbits of the comets or planets. Distance is given in astronomical units (AU).
+ 
+ \begin{enumerate}[resume]
+-\item Halley's Comet: length of major axis = 35.88, eccentricity = 0.967
+-\item Hale-Bopp Comet: length of major axis = 525.91, eccentricity = 0.995
+-\item Mars: length of major axis = 3.049, eccentricity = 0.0934
+-\item Jupiter: length of major axis = 10.408, eccentricity = 0.0484
++\item Halley's Comet: length of major axis $=35.88$, eccentricity $=0.967$
++\item Hale-Bopp Comet: length of major axis $=525.91$, eccentricity $=0.995$
++\item Mars: length of major axis $=3.049$, eccentricity $=0.0934$
++\item Jupiter: length of major axis $=10.408$, eccentricity $=0.0484$
+ \end{enumerate}
+ 
+ \end{document}

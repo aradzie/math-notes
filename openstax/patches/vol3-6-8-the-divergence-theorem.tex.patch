@@ -1,0 +1,47 @@
+Manual review corrections, verified against the live OpenStax page (upstream
+oddities such as "0<z<=1" on the cube surface, the self-cancelling
+x^2+y^2-x^2 term, and "orientated" for "oriented" were all confirmed to be
+faithful transcriptions of the source text and left untouched):
+
+- Item 3 (line 20): the math span closed one character too late, trapping
+  the following semicolon and "S" inside math mode ($...\mathbf{k};S$ is...)
+  instead of the ";" S is..." pattern used by every sibling item in this
+  file. Moved the closing $ to immediately after \mathbf{k}.
+- Item 8 (line 25): the parenthetical "(constant a>0)" was split so that
+  "(constant" rendered in \text{} (upright) while "a>0)" fell back to raw
+  math mode (italic), producing inconsistent fonts across one phrase and a
+  stray closing paren left in math mode. Rewrapped as
+  \text{ (constant }a>0\text{)} so the parentheses and word "constant" are
+  upright text and only the variable expression is math italic.
+- Item near line 52 (radial field between spheres of radius 1 and 2): the
+  norm was written with raw ASCII double pipes (||\mathbf{r}||) instead of
+  the \|...\| delimiter macro; normalized to \|\mathbf{r}\|, matching the
+  \|\mathbf{R}\| notation already used for the same kind of norm elsewhere
+  in this file.
+
+--- /tmp/raw.tex
++++ vol3-6-8-the-divergence-theorem.tex
+@@ -17,12 +17,12 @@
+ \begin{enumerate}[start=1]
+ \item \techrequired $\mathbf{F}(x,y,z)=x\mathbf{i}+y\mathbf{j}+z\mathbf{k}$; S is the surface of cube $0\le x\le1,0\le y\le1,0<z\le1$.
+ \item \techrequired $\mathbf{F}(x,y,z)=(\cos yz)\mathbf{i}+e^{xz}\mathbf{j}+3z^{2}\mathbf{k}$; S is the surface of hemisphere $z=\sqrt{4-x^{2}-y^{2}}$ together with disk $x^{2}+y^{2}\le4$ in the xy-plane.
+-\item \techrequired $\mathbf{F}(x,y,z)=(x^{2}+y^{2}-x^{2})\mathbf{i}+x^{2}y\mathbf{j}+3z\mathbf{k};S$ is the surface of the unit cube $0\le x\le1,0\le y\le1,0\le z\le1$ excluding the face $z=0$.
++\item \techrequired $\mathbf{F}(x,y,z)=(x^{2}+y^{2}-x^{2})\mathbf{i}+x^{2}y\mathbf{j}+3z\mathbf{k}$; S is the surface of the unit cube $0\le x\le1,0\le y\le1,0\le z\le1$ excluding the face $z=0$.
+ \item \techrequired $\mathbf{F}(x,y,z)=x\mathbf{i}+y\mathbf{j}+z\mathbf{k}$; S is the surface of the solid bounded by the parabola $z=x^{2}+y^{2}\,$ and the plane $z=9$.
+ \item \techrequired $\mathbf{F}(x,y,z)=x^{2}\mathbf{i}+y^{2}\mathbf{j}+z^{2}\mathbf{k}$; S is the surface of sphere $x^{2}+y^{2}+z^{2}=4$.
+ \item \techrequired $\mathbf{F}(x,y,z)=x\mathbf{i}+y\mathbf{j}+(z^{2}-1)\mathbf{k}$; S is the surface of the solid bounded by cylinder $x^{2}+y^{2}=4$ and planes $z=0\,\text{and}\,z=1$.
+ \item \techrequired $\mathbf{F}(x,y,z)=xy^{2}\mathbf{i}+yz^{2}\mathbf{j}+x^{2}z\mathbf{k}$; S is the surface of the solid bounded above by sphere $\rho=2$ and below by cone $\phi=\frac{\pi}{4}$ in spherical coordinates. (Think of S as the surface of an ``ice cream cone.'')
+-\item \techrequired $\mathbf{F}(x,y,z)=x^{3}\mathbf{i}+y^{3}\mathbf{j}+3a^{2}z\mathbf{k}\,\text{(constant}\,a>0)$; S is the surface of the solid bounded by cylinder $x^{2}+y^{2}=a^{2}$ and planes $z=0\,\text{and}\,z=1$.
++\item \techrequired $\mathbf{F}(x,y,z)=x^{3}\mathbf{i}+y^{3}\mathbf{j}+3a^{2}z\mathbf{k}\text{ (constant }a>0\text{)}$; S is the surface of the solid bounded by cylinder $x^{2}+y^{2}=a^{2}$ and planes $z=0\,\text{and}\,z=1$.
+ \item \techrequired Surface integral $\iint_{S}\mathbf{F}\cdot d\mathbf{S}$, where S is the surface of the solid bounded by paraboloid $z=x^{2}+y^{2}$ and plane $z=4$, and $\mathbf{F}(x,y,z)=(x+y^{2}z^{2})\mathbf{i}+(y+z^{2}x^{2})\mathbf{j}+(z+x^{2}y^{2})\mathbf{k}$
+ \item Use the divergence theorem to calculate surface integral $\iint_{S}\mathbf{F}\cdot d\mathbf{S}$, where $\mathbf{F}(x,y,z)=(e^{y^{2}})\mathbf{i}+(y+\sin(z^{2}))\mathbf{j}+(z-1)\mathbf{k}$ and S is the surface of the solid bounded by the sphere $x^{2}+y^{2}+z^{2}=1$, and below by the plane $z=0$.
+ \item Use the divergence theorem to calculate surface integral $\iint_{S}\mathbf{F}\cdot \,ds$, where $\mathbf{F}(x,y,z)=x^{4}\mathbf{i}-x^{3}z^{2}\mathbf{j}+4xy^{2}z\mathbf{k}$ and $S$ is the surface bounded by cylinder $x^{2}+y^{2}=1$ and planes $z=x+2$ and $z=0$.
+@@ -49,7 +49,7 @@
+
+ \begin{enumerate}[resume]
+ \item \techrequired $\mathbf{F}=\langle z-x,x-y,2y-z\rangle$; D is the region between spheres of radius 2 and 4 centered at the origin.
+-\item \techrequired $\mathbf{F}=\frac{\mathbf{r}}{||\mathbf{r}||}=\frac{\langle x,y,z\rangle}{\sqrt{x^{2}+y^{2}+z^{2}}}$; D is the region between spheres of radius 1 and 2 centered at the origin.
++\item \techrequired $\mathbf{F}=\frac{\mathbf{r}}{\|\mathbf{r}\|}=\frac{\langle x,y,z\rangle}{\sqrt{x^{2}+y^{2}+z^{2}}}$; D is the region between spheres of radius 1 and 2 centered at the origin.
+ \item \techrequired $\mathbf{F}=\langle x^{2},-y^{2},z^{2}\rangle$; D is the region in the first octant between planes $z=4-x-y$ and $z=2-x-y$.
+ \item Let $\mathbf{F}(x,y,z)=2x\mathbf{i}-3xy\mathbf{j}+xz^{2}\mathbf{k}$. Use the divergence theorem to calculate $\iint_{S}\mathbf{F}\cdot d\mathbf{S}$, where S is the surface of the cube with corners at $(0,0,0),(1,0,0),(0,1,0)$, $(1,1,0),(0,0,1),(1,0,1),(0,1,1),\,\text{and}\,(1,1,1)$, oriented outward.
+ \item Use the divergence theorem to find the outward flux of field $\mathbf{F}(x,y,z)=(x^{3}-3y)\mathbf{i}+(2yz+1)\mathbf{j}+xyz\mathbf{k}$ through the cube bounded by planes $x=\pm1,y=\pm1,\,\text{and}\,z=\pm1$.

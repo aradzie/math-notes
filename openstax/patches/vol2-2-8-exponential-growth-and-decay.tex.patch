@@ -1,0 +1,18 @@
+The plutonium-239 half-life exercise mixes unit typesetting mid-sentence:
+the barrel's mass uses the correct `\text{kg}` unit macro ($10\,\text{kg}$)
+but the remaining-mass quantity a few words later was left as bare `$10g$`,
+which typesets "g" as an italic math variable multiplying 10 rather than as
+the unit "grams". Fixed to `$10\,\text{g}$` to match the sibling quantity's
+convention in the same sentence.
+
+--- /tmp/raw.tex
++++ vol2-2-8-exponential-growth-and-decay.tex
+@@ -41,7 +41,7 @@
+ \item You are cooling a turkey that was taken out of the oven with an internal temperature of $165^\circ \text{F}$. After $10$ minutes of resting the turkey in a $70^\circ \text{F}$ apartment, the temperature has reached $155^\circ \text{F}$. What is the temperature of the turkey $20$ minutes after taking it out of the oven?
+ \item You are trying to thaw some vegetables that are at a temperature of $1^\circ \text{F}$. To thaw vegetables safely, you must put them in the refrigerator, which has an ambient temperature of $44^\circ \text{F}$. You check on your vegetables $2$ hours after putting them in the refrigerator to find that they are now $12^\circ \text{F}$. Plot the resulting temperature curve and use it to determine when the vegetables reach $33^\circ \text{F}$.
+ \item You are an archaeologist and are given a bone that is claimed to be from a Tyrannosaurus Rex. You know these dinosaurs lived during the Cretaceous Era $(146$ million years to $65$ million years ago), and you find by radiocarbon dating that there is $0.000001\%$ the amount of radiocarbon. Is this bone from the Cretaceous?
+-\item The spent fuel of a nuclear reactor contains plutonium-239, which has a half-life of $24{,}000$ years. If $1$ barrel containing $10\,\text{kg}$ of plutonium-239 is sealed, how many years must pass until only $10g$ of plutonium-239 is left?
++\item The spent fuel of a nuclear reactor contains plutonium-239, which has a half-life of $24{,}000$ years. If $1$ barrel containing $10\,\text{kg}$ of plutonium-239 is sealed, how many years must pass until only $10\,\text{g}$ of plutonium-239 is left?
+ \end{enumerate}
+ 
+ For the next set of exercises, use the following table, which features the world population by decade.

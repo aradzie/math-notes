@@ -1,0 +1,25 @@
+Clarify the arguments of the sine functions in the forcing terms, keep the
+associated units inside the mathematical quantities, typeset the RLC values
+consistently with their units, and put the final time variables in math mode.
+
+--- /tmp/raw.tex
++++ vol3-7-3-applications.tex
+@@ -56,12 +56,12 @@
+   \item Determine whether the motion is overdamped, critically damped, or underdamped.
+ \end{enumerate}
+ \item A 64-lb weight is attached to a vertical spring with a spring constant of 4.625 lb/ft. The resistance in the spring-mass system is equal to the instantaneous velocity. The weight is set in motion from a position 1 ft below its equilibrium position with an upward velocity of 2 ft/sec. Is the mass above or below the equilibrium position at the end of $\pi$ sec? By what distance?
+-\item A mass that weighs 8 lb stretches a spring 6 inches. The system is acted on by an external force of $8\sin 8t$ lb. If the mass is pulled down 3 inches and then released, determine the position of the mass at any time.
+-\item A mass that weighs 6 lb stretches a spring 3 in. The system is acted on by an external force of $8\sin (4t)$ lb. If the mass is pulled down 1 inch and then released, determine the position of the mass at any time.
+-\item Find the charge on the capacitor in an RLC series circuit where $L=40$ H, $R=30\Omega$, $C=1/200$ F, and $E(t)=200$ V. Assume the initial charge on the capacitor is 7 C and the initial current is 0 A.
+-\item Find the charge on the capacitor in an RLC series circuit where $L=2$ H, $R=24\Omega$, $C=0.005$ F, and $E(t)=12\sin 10t$ V. Assume the initial charge on the capacitor is 0.001 C and the initial current is 0 A.
+-\item A series circuit consists of a device where $L=1$ H, $R=20\Omega$, $C=0.002$ F, and $E(t)=12$ V. If the initial charge and current are both zero, find the charge and current at time t.
+-\item A series circuit consists of a device where $L=\frac{1}{2}$ H, $R=10\Omega$, $C=\frac{1}{50}$ F, and $E(t)=250$ V. If the initial charge on the capacitor is 0 C and the initial current is 18 A, find the charge and current at time t.
++\item A mass that weighs 8 lb stretches a spring 6 inches. The system is acted on by an external force of $8\sin(8t)\,\text{lb}$. If the mass is pulled down 3 inches and then released, determine the position of the mass at any time.
++\item A mass that weighs 6 lb stretches a spring 3 in. The system is acted on by an external force of $8\sin(4t)\,\text{lb}$. If the mass is pulled down 1 inch and then released, determine the position of the mass at any time.
++\item Find the charge on the capacitor in an RLC series circuit where $L=40\,\text{H}$, $R=30\,\Omega$, $C=1/200\,\text{F}$, and $E(t)=200\,\text{V}$. Assume the initial charge on the capacitor is $7\,\text{C}$ and the initial current is $0\,\text{A}$.
++\item Find the charge on the capacitor in an RLC series circuit where $L=2\,\text{H}$, $R=24\,\Omega$, $C=0.005\,\text{F}$, and $E(t)=12\sin(10t)\,\text{V}$. Assume the initial charge on the capacitor is $0.001\,\text{C}$ and the initial current is $0\,\text{A}$.
++\item A series circuit consists of a device where $L=1\,\text{H}$, $R=20\,\Omega$, $C=0.002\,\text{F}$, and $E(t)=12\,\text{V}$. If the initial charge and current are both zero, find the charge and current at time $t$.
++\item A series circuit consists of a device where $L=\frac{1}{2}\,\text{H}$, $R=10\,\Omega$, $C=\frac{1}{50}\,\text{F}$, and $E(t)=250\,\text{V}$. If the initial charge on the capacitor is $0\,\text{C}$ and the initial current is $18\,\text{A}$, find the charge and current at time $t$.
+ \end{enumerate}
+ 
+ \end{document}

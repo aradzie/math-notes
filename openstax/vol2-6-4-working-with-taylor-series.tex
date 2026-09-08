@@ -1,0 +1,155 @@
+% OpenStax Calculus Volume 2 -- Section 6.4 Exercises: Working with Taylor Series
+% Exercises reproduced from OpenStax, licensed under CC BY 4.0.
+% Source: https://openstax.org/books/calculus-volume-2/pages/6-4-working-with-taylor-series
+\documentclass{exercises}
+\title{OpenStax Calculus Volume 2}
+\subtitle{Section 6.4 Exercises: Working with Taylor Series}
+\sourceurl{https://openstax.org/books/calculus-volume-2/pages/6-4-working-with-taylor-series}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+
+In the following exercises, use appropriate substitutions to write down the Maclaurin series for the given binomial.
+
+\begin{enumerate}[start=1]
+\item ${(1-x)}^{1/3}$
+\item ${(1+x^{2})}^{-1/3}$
+\item ${(1-x)}^{1.01}$
+\item ${(1-2x)}^{2/3}$
+\end{enumerate}
+
+In the following exercises, use the substitution ${(b+x)}^{r}={(b+a)}^{r}{(1+\frac{x-a}{b+a})}^{r}$ in the binomial expansion to find the Taylor series of each function with the given center.
+
+\begin{enumerate}[resume]
+\item $\sqrt{x+2}$ at $a=0$
+\item $\sqrt{x^{2}+2}$ at $a=0$
+\item $\sqrt{x+2}$ at $a=1$
+\item $\sqrt{2x-x^{2}}$ at $a=1$ (Hint: $2x-x^{2}=1-{(x-1)}^{2})$
+\item ${(x-8)}^{1/3}$ at $a=9$
+\item $\sqrt{x}$ at $a=4$
+\item $x^{1/3}$ at $a=27$
+\item $\sqrt{x}$ at $a=9$
+\end{enumerate}
+
+In the following exercises, use the binomial theorem to estimate each number, computing enough terms to obtain an estimate accurate to an error of at most $1/1000$.
+
+\begin{enumerate}[resume]
+\item \techrequired ${(15)}^{1/4}$ using ${(16-x)}^{1/4}$
+\item \techrequired ${(1001)}^{1/3}$ using ${(1000+x)}^{1/3}$
+\end{enumerate}
+
+In the following exercises, use the binomial approximation $\sqrt{1-x}\approx1-\frac{x}{2}-\frac{x^{2}}{8}-\frac{x^{3}}{16}-\frac{5x^{4}}{128}-\frac{7x^{5}}{256}$ for $|x|<1$ to approximate each number. Compare this value to the value given by a scientific calculator.
+
+\begin{enumerate}[resume]
+\item \techrequired $\frac{1}{\sqrt{2}}$ using $x=\frac{1}{2}$ in ${(1-x)}^{1/2}$
+\item \techrequired $\sqrt{5}=5\times \frac{1}{\sqrt{5}}$ using $x=\frac{4}{5}$ in ${(1-x)}^{1/2}$
+\item \techrequired $\sqrt{3}=\frac{3}{\sqrt{3}}$ using $x=\frac{2}{3}$ in ${(1-x)}^{1/2}$
+\item \techrequired $\sqrt{6}$ using $x=\frac{5}{6}$ in ${(1-x)}^{1/2}$
+\item Integrate the binomial approximation of $\sqrt{1-x}$ to find an approximation of $\int_{0}^{x}\sqrt{1-t}\,dt$.
+\item \techrequired Recall that the graph of $\sqrt{1-x^{2}}$ is an upper semicircle of radius $1$. Integrate the binomial approximation of $\sqrt{1-x^{2}}$ up to order $8$ from $x=-1$ to $x=1$ to estimate $\frac{\pi}{2}$.
+\end{enumerate}
+
+In the following exercises, use the expansion ${(1+x)}^{1/3}=1+\frac{1}{3}x-\frac{1}{9}x^{2}+\frac{5}{81}x^{3}-\frac{10}{243}x^{4}+\cdots$ to write the first five terms (not necessarily a quartic polynomial) of each expression.
+
+\begin{enumerate}[resume]
+\item ${(1+4x)}^{1/3}$; $a=0$
+\item ${(1+4x)}^{4/3}$; $a=0$
+\item ${(3+2x)}^{1/3}$; $a=-1$
+\item ${(x^{2}+6x+10)}^{1/3}$; $a=-3$
+\item Use ${(1+x)}^{1/3}=1+\frac{1}{3}x-\frac{1}{9}x^{2}+\frac{5}{81}x^{3}-\frac{10}{243}x^{4}+\cdots$ with $x=1$ to approximate $2^{1/3}$.
+\item Use the approximation ${(1-x)}^{2/3}=1-\frac{2x}{3}-\frac{x^{2}}{9}-\frac{4x^{3}}{81}-\frac{7x^{4}}{243}-\frac{14x^{5}}{729}+\cdots$ for $|x|<1$ to approximate $2^{1/3}=2\cdot 2^{-2/3}$.
+\item Find the 25th derivative of $f(x)={(1+x^{2})}^{13}$ at $x=0$.
+\item Find the 99th derivative at $x=0$ of $f(x)={(1+x^{4})}^{25}$.
+\end{enumerate}
+
+In the following exercises, find the Maclaurin series of each function.
+
+\begin{enumerate}[resume]
+\item $f(x)=xe^{2x}$
+\item $f(x)=2^{x}$
+\item $f(x)=\frac{\sin x}{x}$
+\item $f(x)=\frac{\sin(\sqrt{x})}{\sqrt{x}}$, where $x>0$.
+\item $f(x)=\sin(x^{2})$
+\item $f(x)=e^{x^{3}}$
+\item $f(x)=\cos^{2}x$ using the identity $\cos^{2}x=\frac{1}{2}+\frac{1}{2}\cos (2x)$
+\item $f(x)=\sin^{2}x$ using the identity $\sin^{2}x=\frac{1}{2}-\frac{1}{2}\cos (2x)$
+\end{enumerate}
+
+In the following exercises, find the Maclaurin series of $F(x)=\int_{0}^{x}f(t)\,dt$ by integrating the Maclaurin series of $f$ term by term. If $f$ is not strictly defined at zero, you may substitute the value of the Maclaurin series at zero.
+
+\begin{enumerate}[resume]
+\item $F(x)=\int_{0}^{x}e^{-t^{2}}\,dt$; $f(t)=e^{-t^{2}}=\sum_{n=0}^{\infty}{(-1)}^{n}\frac{t^{2n}}{n!}$
+\item $F(x)=\tan^{-1}x;\quad f(t)=\frac{1}{1+t^{2}}=\sum_{n=0}^{\infty}{(-1)}^{n}t^{2n}$
+\item $F(x)=\tanh^{-1}x;\quad f(t)=\frac{1}{1-t^{2}}=\sum_{n=0}^{\infty}t^{2n}$
+\item $F(x)=\sin^{-1}x;\quad f(t)=\frac{1}{\sqrt{1-t^{2}}}=\sum_{k=0}^{\infty}\frac{(2k)!}{4^{k}(k!)^{2}}t^{2k}$
+\item $F(x)=\int_{0}^{x}\frac{\sin t}{t}\,dt;\quad f(t)=\frac{\sin t}{t}=\sum_{n=0}^{\infty}{(-1)}^{n}\frac{t^{2n}}{(2n+1)!}$
+\item $F(x)=\int_{0}^{x}\cos(\sqrt{t})\,dt;\quad f(t)=\sum_{n=0}^{\infty}{(-1)}^{n}\frac{t^{n}}{(2n)!}$
+\item $F(x)=\int_{0}^{x}\frac{1-\cos t}{t^{2}}\,dt;\quad f(t)=\frac{1-\cos t}{t^{2}}=\sum_{n=0}^{\infty}{(-1)}^{n}\frac{t^{2n}}{(2n+2)!}$
+\item $F(x)=\int_{0}^{x}\frac{\ln (1+t)}{t}\,dt;\quad f(t)=\sum_{n=0}^{\infty}{(-1)}^{n}\frac{t^{n}}{n+1}$
+\end{enumerate}
+
+In the following exercises, compute at least the first three nonzero terms (not necessarily a quadratic polynomial) of the Maclaurin series of $f$.
+
+\begin{enumerate}[resume]
+\item $f(x)=\sin(x+\frac{\pi}{4})=\sin x\cos(\frac{\pi}{4})+\cos x\sin(\frac{\pi}{4})$
+\item $f(x)=\tan x$
+\item $f(x)=\ln (\cos x)$
+\item $f(x)=e^{x}\cos x$
+\item $f(x)=e^{\sin x}$
+\item $f(x)=\sec^{2}x$
+\item $f(x)=\tanh x$
+\item $f(x)=\frac{\tan \sqrt{x}}{\sqrt{x}}$ (see expansion for $\tan x)$
+\end{enumerate}
+
+In the following exercises, find the radius of convergence of the Maclaurin series of each function.
+
+\begin{enumerate}[resume]
+\item $\ln (1+x)$
+\item $\frac{1}{1+x^{2}}$
+\item $\tan^{-1}x$
+\item $\ln (1+x^{2})$
+\item Find the Maclaurin series of $\sinh x=\frac{e^{x}-e^{-x}}{2}$.
+\item Find the Maclaurin series of $\cosh x=\frac{e^{x}+e^{-x}}{2}$.
+\item Differentiate term by term the Maclaurin series of $\sinh x$ and compare the result with the Maclaurin series of $\cosh x$.
+\item \techrequired Let $S_{n}(x)=\sum_{k=0}^{n}{(-1)}^{k}\frac{x^{2k+1}}{(2k+1)!}$ and $C_{n}(x)=\sum_{k=0}^{n}{(-1)}^{k}\frac{x^{2k}}{(2k)!}$ denote the respective Maclaurin polynomials of degree $2n+1$ of $\sin x$ and degree $2n$ of $\cos x$. Plot the errors $\frac{S_{n}(x)}{C_{n}(x)}-\tan x$ for $n=1,\ldots,5$ and compare them to $x+\frac{x^{3}}{3}+\frac{2x^{5}}{15}+\frac{17x^{7}}{315}-\tan x$ on $(-\frac{\pi}{4},\frac{\pi}{4})$.
+\item Use the identity $2\sin x\cos x=\sin(2x)$ to find the power series expansion of $\sin^{2}x$ at $x=0$. (Hint: Integrate the Maclaurin series of $\sin(2x)$ term by term.)
+\item If $y=\sum_{n=0}^{\infty}a_{n}x^{n}$, find the power series expansions of $xy'$ and $x^{2}y''$.
+\item \techrequired Suppose that $y=\sum_{k=0}^{\infty}a_{k}x^{k}$ satisfies $y'=-2xy$ and $y(0)=1$. Show that $a_{2k+1}=0$ for all $k$ and that $a_{2k+2}=\frac{-a_{2k}}{k+1}$. Plot the partial sum $S_{20}$ of $y$ on the interval $[-4,4]$.
+\item \techrequired Suppose that a set of standardized test scores is normally distributed with mean $\mu=100$ and standard deviation $\sigma=10$. Set up an integral that represents the probability that a test score will be between $90$ and $110$ and use the integral of the degree $10$ Maclaurin polynomial of $\frac{1}{\sqrt{2\pi}}e^{-x^{2}/2}$ to estimate this probability.
+\item \techrequired Suppose that a set of standardized test scores is normally distributed with mean $\mu=100$ and standard deviation $\sigma=10$. Set up an integral that represents the probability that a test score will be between $70$ and $130$ and use the integral of the degree $50$ Maclaurin polynomial of $\frac{1}{\sqrt{2\pi}}e^{-x^{2}/2}$ to estimate this probability.
+\item \techrequired Suppose that $\sum_{n=0}^{\infty}a_{n}x^{n}$ converges to a function $f(x)$ such that $f(0)=1,f'(0)=0$, and $f''(x)=-f(x)$. Find a formula for $a_{n}$ and plot the partial sum $S_{N}$ for $N=20$ on $[-5,5]$.
+\item \techrequired Suppose that $\sum_{n=0}^{\infty}a_{n}x^{n}$ converges to a function $f(x)$ such that $f(0)=0,\quad f'(0)=1$, and $f''(x)=-f(x)$. Find a formula for $a_{n}$ and plot the partial sum $S_{N}$ for $N=10$ on $[-5,5]$.
+\item Suppose that $\sum_{n=0}^{\infty}a_{n}x^{n}$ converges to a function $y$ such that $y''-y'+y=0$ where $y(0)=1$ and $y'(0)=0$. Find a formula that relates $a_{n+2},a_{n+1}$, and $a_{n}$ and compute $a_{0},...,a_{5}$.
+\item Suppose that $\sum_{n=0}^{\infty}a_{n}x^{n}$ converges to a function $y$ such that $y''-y'+y=0$ where $y(0)=0$ and $y'(0)=1$. Find a formula that relates $a_{n+2},a_{n+1}$, and $a_{n}$ and compute $a_{1},...,a_{5}$.
+\end{enumerate}
+
+The error in approximating the integral $\int_{a}^{b}f(t)\,dt$ by that of a Taylor approximation $\int_{a}^{b}P_{n}(t)\,dt$ is at most $\int_{a}^{b}|R_{n}(t)|\,dt$. In the following exercises, the Taylor remainder estimate $|R_{n}(x)|\le \frac{M}{(n+1)!}{|x-a|}^{n+1}$ guarantees that the integral of the Taylor polynomial of the given order approximates the integral of $f$ with an error less than $\frac{1}{10}$.
+
+
+(a) Evaluate the integral of the appropriate Taylor polynomial and verify that it approximates the CAS value with an error less than $\frac{1}{100}$.
+
+
+(b) Compare the accuracy of the polynomial integral estimate with the remainder estimate.
+
+\begin{enumerate}[resume]
+\item \techrequired $\int_{0}^{\pi}\frac{\sin t}{t}\,dt$; $P_{8}(t)=1-\frac{t^{2}}{3!}+\frac{t^{4}}{5!}-\frac{t^{6}}{7!}+\frac{t^{8}}{9!}$ (You may assume that the absolute value of the ninth derivative of $\frac{\sin t}{t}$ is bounded by $0.1$.)
+\item \techrequired $\int_{0}^{2}e^{-x^{2}}\,dx$; $P_{22}(x)=1-x^{2}+\frac{x^{4}}{2}-\frac{x^{6}}{3!}+\cdots-\frac{x^{22}}{11!}$ (You may assume that the absolute value of the 23rd derivative of $e^{-x^{2}}$ is less than $2\times 10^{14}$.)
+\end{enumerate}
+
+The following exercises deal with Fresnel integrals.
+
+\begin{enumerate}[resume]
+\item The Fresnel integrals are defined by $C(x)=\int_{0}^{x}\cos(t^{2})\,dt$ and $S(x)=\int_{0}^{x}\sin(t^{2})\,dt$. Compute the power series of $C(x)$ and $S(x)$ and plot the sums $C_{N}(x)$ and $S_{N}(x)$ of the first $N=50$ nonzero terms on $[0,2\pi]$.
+\item \techrequired The Fresnel integrals are used in design applications for roadways and railways and other applications because of the curvature properties of the curve with coordinates $(C(t),S(t))$. Plot the curve $(C_{50},S_{50})$ for $0\le t\le2\pi$, the coordinates of which were computed in the previous exercise.
+\item Estimate $\int_{0}^{1/4}\sqrt{x-x^{2}}\,dx$ by approximating $\sqrt{1-x}$ using the binomial approximation $1-\frac{x}{2}-\frac{x^{2}}{8}-\frac{x^{3}}{16}-\frac{5x^{4}}{128}-\frac{7x^{5}}{256}$.
+\item \techrequired Use Newton's approximation of the binomial $\sqrt{1-x^{2}}$ to approximate $\pi$ as follows. The circle centered at $(\frac{1}{2},0)$ with radius $\frac{1}{2}$ has upper semicircle $y=\sqrt{x}\sqrt{1-x}$. The sector of this circle bounded by the $x$-axis between $x=0$ and $x=\frac{1}{2}$ and by the line joining $(\frac{1}{4},\frac{\sqrt{3}}{4})$ corresponds to $\frac{1}{6}$ of the circle and has area $\frac{\pi}{24}$. This sector is the union of a right triangle with height $\frac{\sqrt{3}}{4}$ and base $\frac{1}{4}$ and the region below the graph between $x=0$ and $x=\frac{1}{4}$. To find the area of this region you can write $y=\sqrt{x}\sqrt{1-x}=\sqrt{x}\times (\text{binomial expansion of}\sqrt{1-x})$ and integrate term by term. Use this approach with the binomial approximation from the previous exercise to estimate $\pi$.
+\item Use the approximation $T\approx2\pi \sqrt{\frac{L}{g}}(1+\frac{k^{2}}{4})$ to approximate the period of a pendulum having length $10$ meters and maximum angle $\theta_{\text{max}}=\frac{\pi}{6}$ where $k=\sin(\frac{\theta_{\text{max}}}{2})$. Compare this with the small angle estimate $T\approx2\pi \sqrt{\frac{L}{g}}$.
+\item Suppose that a pendulum is to have a period of $2$ seconds and a maximum angle of $\theta_{\text{max}}=\frac{\pi}{6}$. Use $T\approx2\pi \sqrt{\frac{L}{g}}(1+\frac{k^{2}}{4})$ to approximate the desired length of the pendulum. What length is predicted by the small angle estimate $T\approx2\pi \sqrt{\frac{L}{g}}$?
+\item Evaluate $\int_{0}^{\pi/2}\sin^{4}\theta \,d\theta$ in the approximation $T=4\sqrt{\frac{L}{g}}\int_{0}^{\pi/2}(1+\frac{1}{2}k^{2}\sin^{2}\theta+\frac{3}{8}k^{4}\sin^{4}\theta+\cdots)\,d\theta$ to obtain an improved estimate for $T$.
+\item \techrequired An equivalent formula for the period of a pendulum with amplitude $\theta_{\text{max}}$ is $T(\theta_{\text{max}})=2\sqrt{2}\sqrt{\frac{L}{g}}\int_{0}^{\theta_{\text{max}}}\frac{d\theta}{\sqrt{\cos \theta-\cos(\theta_{\text{max}})}}$ where $L$ is the pendulum length and $g$ is the gravitational acceleration constant. When $\theta_{\text{max}}=\frac{\pi}{3}$ we get $\frac{1}{\sqrt{\cos t-1/2}}\approx \sqrt{2}(1+\frac{t^{2}}{2}+\frac{t^{4}}{3}+\frac{181t^{6}}{720})$. Integrate this approximation to estimate $T(\frac{\pi}{3})$ in terms of $L$ and $g$. Assuming $g=9.806$ meters per second squared, find an approximate length $L$ such that $T(\frac{\pi}{3})=2$ seconds.
+\end{enumerate}
+
+\end{document}

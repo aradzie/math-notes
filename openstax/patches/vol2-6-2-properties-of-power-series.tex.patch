@@ -1,0 +1,117 @@
+This cumulative review patch corrects several errors in the exercise statements: the expansion of 2x/(1+x^2)^2 had the opposite sign; three geometric-series evaluations omitted the factors needed to identify them with f' or f''; evaluating the logarithm series at x=-1/2 gives -ln(2), not ln(2); and the requested convergence set is a domain rather than a radius for the non-power-series substitutions. It also repairs fragmented math, math-mode boundaries, punctuation, and notation while preserving the exercises' substance.
+
+--- /tmp/raw.tex
++++ vol2-6-2-properties-of-power-series.tex
+@@ -37,59 +37,59 @@
+ The following exercises explore applications of annuities.
+ 
+ \begin{enumerate}[resume]
+-\item Calculate the present values P of an annuity in which \$10,000 is to be paid out annually for a period of 20 years, assuming interest rates of $r=0.03,r=0.05$, and $r=0.07$.
+-\item Calculate the present values P of annuities in which \$9,000 is to be paid out annually perpetually, assuming interest rates of $r=0.03,r=0.05$ and $r=0.07$.
+-\item Calculate the annual payouts C to be given for 20 years on annuities having present value \$100,000 assuming respective interest rates of $r=0.03,r=0.05$, and $r=0.07$.
+-\item Calculate the annual payouts C to be given perpetually on annuities having present value \$100,000 assuming respective interest rates of $r=0.03,r=0.05$, and $r=0.07$.
+-\item Suppose that an annuity has a present value $P=1\,\text{million dollars}$. What interest rate r would allow for perpetual annual payouts of \$50,000?
+-\item Suppose that an annuity has a present value $P=10\,\text{million dollars}$. What interest rate r would allow for perpetual annual payouts of \$100,000?
++\item Calculate the present values $P$ of an annuity in which \$10,000 is to be paid out annually for a period of 20 years, assuming interest rates of $r=0.03$, $r=0.05$, and $r=0.07$.
++\item Calculate the present values $P$ of annuities in which \$9,000 is to be paid out annually perpetually, assuming interest rates of $r=0.03$, $r=0.05$, and $r=0.07$.
++\item Calculate the annual payouts $C$ to be given for 20 years on annuities having present value \$100,000, assuming respective interest rates of $r=0.03$, $r=0.05$, and $r=0.07$.
++\item Calculate the annual payouts $C$ to be given perpetually on annuities having present value \$100,000, assuming respective interest rates of $r=0.03$, $r=0.05$, and $r=0.07$.
++\item Suppose that an annuity has a present value $P=1\,\text{million dollars}$. What interest rate $r$ would allow for perpetual annual payouts of \$50,000?
++\item Suppose that an annuity has a present value $P=10\,\text{million dollars}$. What interest rate $r$ would allow for perpetual annual payouts of \$100,000?
+ \end{enumerate}
+ 
+ In the following exercises, express the sum of each power series in terms of geometric series, and then express the sum as a rational function.
+ 
+ \begin{enumerate}[resume]
+-\item $x+x^{2}-x^{3}+x^{4}+x^{5}-x^{6}+\cdots$ (Hint: Group powers x$^{3k}$, $x^{3k-1}$, and $x^{3k-2}.)$
+-\item $x+x^{2}-x^{3}-x^{4}+x^{5}+x^{6}-x^{7}-x^{8}+\cdots$ (Hint: Group powers x$^{4k}$, $x^{4k-1}$, etc.)
+-\item $x-x^{2}-x^{3}+x^{4}-x^{5}-x^{6}+x^{7}-\cdots$ (Hint: Group powers x$^{3k}$, $x^{3k-1}$, and $x^{3k-2}.)$
+-\item $\frac{x}{2}+\frac{x^{2}}{4}-\frac{x^{3}}{8}+\frac{x^{4}}{16}+\frac{x^{5}}{32}-\frac{x^{6}}{64}+\cdots$ (Hint: Group powers ${(\frac{x}{2})}^{3k},{(\frac{x}{2})}^{3k-1}$, and ${(\frac{x}{2})}^{3k-2}.)$
++\item $x+x^{2}-x^{3}+x^{4}+x^{5}-x^{6}+\cdots$ (Hint: Group powers $x^{3k}$, $x^{3k-1}$, and $x^{3k-2}$.)
++\item $x+x^{2}-x^{3}-x^{4}+x^{5}+x^{6}-x^{7}-x^{8}+\cdots$ (Hint: Group powers $x^{4k}$, $x^{4k-1}$, etc.)
++\item $x-x^{2}-x^{3}+x^{4}-x^{5}-x^{6}+x^{7}-\cdots$ (Hint: Group powers $x^{3k}$, $x^{3k-1}$, and $x^{3k-2}$.)
++\item $\frac{x}{2}+\frac{x^{2}}{4}-\frac{x^{3}}{8}+\frac{x^{4}}{16}+\frac{x^{5}}{32}-\frac{x^{6}}{64}+\cdots$ (Hint: Group powers ${(\frac{x}{2})}^{3k}$, ${(\frac{x}{2})}^{3k-1}$, and ${(\frac{x}{2})}^{3k-2}$.)
+ \end{enumerate}
+ 
+-In the following exercises, find the power series of $f(x)g(x)$ given f and g as defined.
++In the following exercises, find the power series of $f(x)g(x)$ given $f$ and $g$ as defined.
+ 
+ \begin{enumerate}[resume]
+-\item $f(x)=2\sum_{n=0}^{\infty}x^{n},g(x)=\sum_{n=0}^{\infty}nx^{n}$
++\item $f(x)=2\sum_{n=0}^{\infty}x^{n}$, $g(x)=\sum_{n=0}^{\infty}nx^{n}$
+ \item $f(x)=\sum_{n=1}^{\infty}x^{n},g(x)=\sum_{n=1}^{\infty}\frac{1}{n}x^{n}$. Express the coefficients of $f(x)g(x)$ in terms of $H_{n}=\sum_{k=1}^{n}\frac{1}{k}$.
+ \item $f(x)=g(x)=\sum_{n=1}^{\infty}{(\frac{x}{2})}^{n}$
+ \item $f(x)=g(x)=\sum_{n=1}^{\infty}nx^{n}$
+ \end{enumerate}
+ 
+-In the following exercises, differentiate the given series expansion of f term-by-term to obtain the corresponding series expansion for the derivative of f.
++In the following exercises, differentiate the given series expansion of $f$ term-by-term to obtain the corresponding series expansion for the derivative of $f$.
+ 
+ \begin{enumerate}[resume]
+ \item $f(x)=\frac{1}{1+x}=\sum_{n=0}^{\infty}{(-1)}^{n}x^{n}$
+ \item $f(x)=\frac{1}{1-x^{2}}=\sum_{n=0}^{\infty}x^{2n}$
+ \end{enumerate}
+ 
+-In the following exercises, integrate the given series expansion of $f$ term-by-term from zero to x to obtain the corresponding series expansion for the indefinite integral of $f$.
++In the following exercises, integrate the given series expansion of $f$ term-by-term from zero to $x$ to obtain the corresponding series expansion for the integral of $f$.
+ 
+ \begin{enumerate}[resume]
+-\item $f(x)=\frac{2x}{{(1+x^{2})}^{2}}=\sum_{n=1}^{\infty}{(-1)}^{n}(2n)x^{2n-1}$
++\item $f(x)=\frac{2x}{{(1+x^{2})}^{2}}=\sum_{n=1}^{\infty}{(-1)}^{n-1}(2n)x^{2n-1}$
+ \item $f(x)=\frac{2x}{1+x^{2}}=2\sum_{n=0}^{\infty}{(-1)}^{n}x^{2n+1}$
+ \end{enumerate}
+ 
+ In the following exercises, evaluate each infinite series by identifying it as the value of a derivative or integral of geometric series.
+ 
+ \begin{enumerate}[resume]
+-\item Evaluate $\sum_{n=1}^{\infty}\frac{n}{2^{n}}$ as $f'(\frac{1}{2})$ where $f(x)=\sum_{n=0}^{\infty}x^{n}$.
+-\item Evaluate $\sum_{n=1}^{\infty}\frac{n}{3^{n}}$ as $f'(\frac{1}{3})$ where $f(x)=\sum_{n=0}^{\infty}x^{n}$.
+-\item Evaluate $\sum_{n=2}^{\infty}\frac{n(n-1)}{2^{n}}$ as $f''(\frac{1}{2})$ where $f(x)=\sum_{n=0}^{\infty}x^{n}$.
++\item Evaluate $\sum_{n=1}^{\infty}\frac{n}{2^{n}}$ as $\frac{1}{2}f'(\frac{1}{2})$, where $f(x)=\sum_{n=0}^{\infty}x^{n}$.
++\item Evaluate $\sum_{n=1}^{\infty}\frac{n}{3^{n}}$ as $\frac{1}{3}f'(\frac{1}{3})$, where $f(x)=\sum_{n=0}^{\infty}x^{n}$.
++\item Evaluate $\sum_{n=2}^{\infty}\frac{n(n-1)}{2^{n}}$ as $\frac{1}{4}f''(\frac{1}{2})$, where $f(x)=\sum_{n=0}^{\infty}x^{n}$.
+ \item Evaluate $\sum_{n=0}^{\infty}\frac{{(-1)}^{n}}{2n+1}$ as $\int_{0}^{1}f(t)\,dt$ where $f(x)=\sum_{n=0}^{\infty}{(-1)}^{n}x^{2n}=\frac{1}{1+x^{2}}$.
+ \end{enumerate}
+ 
+ In the following exercises, given that $\frac{1}{1-x}=\sum_{n=0}^{\infty}x^{n}$, use term-by-term differentiation or integration to find power series for each function centered at the given point.
+ 
+ \begin{enumerate}[resume]
+-\item $f(x)=\ln x$ centered at $x=1$ (Hint: $x=1-(1-x))$
++\item $f(x)=\ln x$ centered at $x=1$ (Hint: $x=1-(1-x)$.)
+ \item $\ln (1-x)$ at $x=0$
+ \item $\ln (1-x^{2})$ at $x=0$
+ \item $f(x)=\frac{2x}{{(1-x^{2})}^{2}}$ at $x=0$
+@@ -97,24 +97,24 @@
+ \item $f(x)=\ln (1+x^{2})$ at $x=0$
+ \item $f(x)=\int_{0}^{x}\ln t\,dt$ where $\ln (x)=\sum_{n=1}^{\infty}{(-1)}^{n-1}\frac{{(x-1)}^{n}}{n}$
+ \item \techrequired Evaluate the power series expansion $\ln (1+x)=\sum_{n=1}^{\infty}{(-1)}^{n-1}\frac{x^{n}}{n}$ at $x=1$ to show that $\ln (2)$ is the sum of the alternating harmonic series. Use the alternating series test to determine how many terms of the sum are needed to estimate $\ln (2)$ accurate to within 0.001, and find such an approximation.
+-\item \techrequired Subtract the infinite series of $\ln (1-x)$ from $\ln (1+x)$ to get a power series for $\ln (\frac{1+x}{1-x})$. Evaluate at $x=\frac{1}{3}$. What is the smallest N such that the Nth partial sum of this series approximates $\ln (2)$ with an error less than 0.001?
++\item \techrequired Subtract the infinite series of $\ln (1-x)$ from $\ln (1+x)$ to get a power series for $\ln (\frac{1+x}{1-x})$. Evaluate at $x=\frac{1}{3}$. What is the smallest $N$ such that the $N$th partial sum of this series approximates $\ln (2)$ with an error less than 0.001?
+ \end{enumerate}
+ 
+-In the following exercises, using a substitution if indicated, express each series in terms of elementary functions and find the radius of convergence of the sum.
++In the following exercises, using a substitution if indicated, express each series in terms of elementary functions and find the domain of convergence of the sum.
+ 
+ \begin{enumerate}[resume]
+ \item $\sum_{k=0}^{\infty}(x^{k}-x^{2k+1})$
+ \item $\sum_{k=1}^{\infty}\frac{x^{3k}}{6k}$
+ \item $\sum_{k=1}^{\infty}{(1+x^{2})}^{-k}$ using $y=\frac{1}{1+x^{2}}$
+ \item $\sum_{k=1}^{\infty}2^{-kx}$ using $y=2^{-x}$
+-\item Show that, up to powers x$^{3}$ and y$^{3}$, $E(x)=\sum_{n=0}^{\infty}\frac{x^{n}}{n!}$ satisfies $E(x+y)=E(x)E(y)$.
++\item Show that, up to powers $x^{3}$ and $y^{3}$, $E(x)=\sum_{n=0}^{\infty}\frac{x^{n}}{n!}$ satisfies $E(x+y)=E(x)E(y)$.
+ \item Differentiate the series $E(x)=\sum_{n=0}^{\infty}\frac{x^{n}}{n!}$ term-by-term to show that $E(x)$ is equal to its derivative.
+-\item Show that if $f(x)=\sum_{n=0}^{\infty}a_{n}x^{n}$ is a sum of even powers, that is, $a_{n}=0$ if n is odd, then $F=\int_{0}^{x}f(t)\,dt$ is a sum of odd powers, while if f is a sum of odd powers, then F is a sum of even powers.
+-\item \techrequired Suppose that the coefficients a$_{n}$ of the series $\sum_{n=0}^{\infty}a_{n}x^{n}$ are defined by the recurrence relation $a_{n}=\frac{a_{n-1}}{n}+\frac{a_{n-2}}{n(n-1)}$. For $a_{0}=0$ and $a_{1}=1$, compute and plot the sums $S_{N}=\sum_{n=0}^{N}a_{n}x^{n}$ for $N=2,3,4,5$ on $[-1,1]$.
+-\item \techrequired Suppose that the coefficients a$_{n}$ of the series $\sum_{n=0}^{\infty}a_{n}x^{n}$ are defined by the recurrence relation $a_{n}=\frac{a_{n-1}}{\sqrt{n}}-\frac{a_{n-2}}{\sqrt{n(n-1)}}$. For $a_{0}=1$ and $a_{1}=0$, compute and plot the sums $S_{N}=\sum_{n=0}^{N}a_{n}x^{n}$ for $N=2,3,4,5$ on $[-1,1]$.
+-\item \techrequired Given the power series expansion $\ln (1+x)=\sum_{n=1}^{\infty}{(-1)}^{n-1}\frac{x^{n}}{n}$, determine how many terms N of the sum evaluated at $x=-1/2$ are needed to approximate $\ln (2)$ accurate to within 1/1000. Evaluate the corresponding partial sum $\sum_{n=1}^{N}{(-1)}^{n-1}\frac{x^{n}}{n}$.
+-\item \techrequired Given the power series expansion $\tan^{-1}(x)=\sum_{k=0}^{\infty}{(-1)}^{k}\frac{x^{2k+1}}{2k+1}$, use the alternating series test to determine how many terms N of the sum evaluated at $x=1$ are needed to approximate $\tan^{-1}(1)=\frac{\pi}{4}$ accurate to within 1/1000. Evaluate the corresponding partial sum $\sum_{k=0}^{N}{(-1)}^{k}\frac{x^{2k+1}}{2k+1}$.
+-\item \techrequired Recall that $\tan^{-1}(\frac{1}{\sqrt{3}})=\frac{\pi}{6}$. Assuming an exact value of $(\frac{1}{\sqrt{3}})$, estimate $\frac{\pi}{6}$ by evaluating partial sums $S_{N}(\frac{1}{\sqrt{3}})$ of the power series expansion $\tan^{-1}(x)=\sum_{k=0}^{\infty}{(-1)}^{k}\frac{x^{2k+1}}{2k+1}$ at $x=\frac{1}{\sqrt{3}}$. What is the smallest number N such that $6S_{N}(\frac{1}{\sqrt{3}})$ approximates $\pi$ accurately to within 0.001? How many terms are needed for accuracy to within 0.00001?
++\item Show that if $f(x)=\sum_{n=0}^{\infty}a_{n}x^{n}$ is a sum of even powers, that is, $a_{n}=0$ if $n$ is odd, then $F(x)=\int_{0}^{x}f(t)\,dt$ is a sum of odd powers, while if $f$ is a sum of odd powers, then $F$ is a sum of even powers.
++\item \techrequired Suppose that the coefficients $a_{n}$ of the series $\sum_{n=0}^{\infty}a_{n}x^{n}$ are defined by the recurrence relation $a_{n}=\frac{a_{n-1}}{n}+\frac{a_{n-2}}{n(n-1)}$. For $a_{0}=0$ and $a_{1}=1$, compute and plot the sums $S_{N}=\sum_{n=0}^{N}a_{n}x^{n}$ for $N=2,3,4,5$ on $[-1,1]$.
++\item \techrequired Suppose that the coefficients $a_{n}$ of the series $\sum_{n=0}^{\infty}a_{n}x^{n}$ are defined by the recurrence relation $a_{n}=\frac{a_{n-1}}{\sqrt{n}}-\frac{a_{n-2}}{\sqrt{n(n-1)}}$. For $a_{0}=1$ and $a_{1}=0$, compute and plot the sums $S_{N}=\sum_{n=0}^{N}a_{n}x^{n}$ for $N=2,3,4,5$ on $[-1,1]$.
++\item \techrequired Given the power series expansion $\ln (1+x)=\sum_{n=1}^{\infty}{(-1)}^{n-1}\frac{x^{n}}{n}$, determine how many terms $N$ of the sum evaluated at $x=-1/2$ are needed to approximate $-\ln (2)$ accurately to within $1/1000$. Evaluate the corresponding partial sum $\sum_{n=1}^{N}{(-1)}^{n-1}\frac{x^{n}}{n}$.
++\item \techrequired Given the power series expansion $\tan^{-1}(x)=\sum_{k=0}^{\infty}{(-1)}^{k}\frac{x^{2k+1}}{2k+1}$, use the alternating series test to determine how many terms $N$ of the sum evaluated at $x=1$ are needed to approximate $\tan^{-1}(1)=\frac{\pi}{4}$ accurately to within $1/1000$. Evaluate the corresponding partial sum $\sum_{k=0}^{N}{(-1)}^{k}\frac{x^{2k+1}}{2k+1}$.
++\item \techrequired Recall that $\tan^{-1}(\frac{1}{\sqrt{3}})=\frac{\pi}{6}$. Assuming an exact value of $\frac{1}{\sqrt{3}}$, estimate $\frac{\pi}{6}$ by evaluating partial sums $S_{N}(\frac{1}{\sqrt{3}})$ of the power series expansion $\tan^{-1}(x)=\sum_{k=0}^{\infty}{(-1)}^{k}\frac{x^{2k+1}}{2k+1}$ at $x=\frac{1}{\sqrt{3}}$. What is the smallest number $N$ such that $6S_{N}(\frac{1}{\sqrt{3}})$ approximates $\pi$ accurately to within 0.001? How many terms are needed for accuracy to within 0.00001?
+ \end{enumerate}
+ 
+ \end{document}

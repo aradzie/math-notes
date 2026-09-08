@@ -1,0 +1,65 @@
+Correct two recurrence definitions so that their stated initial values determine
+the requested terms: the two-term averaging recurrence starts at n=3, and the
+three-term geometric mean uses a cube root. Repair the binary-expansion state
+variable and digit indices, and restore multiplication signs that OpenStax's
+source represents as periods in the affine recurrence and pi approximation.
+Also correct the modular-generator division wording, distinguish a sequence
+from a series, move punctuation out of a unit, typeset an ellipsis properly,
+and prevent a following outer item from running into a nested list's last line.
+
+--- /tmp/raw.tex
++++ vol2-5-1-sequences.tex
+@@ -48,10 +48,10 @@
+ Plot the first $N$ terms of each sequence. State whether the graphical evidence suggests that the sequence converges or diverges.
+ 
+ \begin{enumerate}[resume]
+-\item \techrequired $a_{1}=1$, $a_{2}=2$, and for $n\ge2$, $a_{n}=\frac{1}{2}(a_{n-1}+a_{n-2})$; $N=30$
++\item \techrequired $a_{1}=1$, $a_{2}=2$, and for $n\ge3$, $a_{n}=\frac{1}{2}(a_{n-1}+a_{n-2})$; $N=30$
+ \item \techrequired $a_{1}=1$, $a_{2}=2$, $a_{3}=3$ and for $n\ge4$, $a_{n}=\frac{1}{3}(a_{n-1}+a_{n-2}+a_{n-3})$, $N=30$
+ \item \techrequired $a_{1}=1$, $a_{2}=2$, and for $n\ge3$, $a_{n}=\sqrt{a_{n-1}a_{n-2}}$; $N=30$
+-\item \techrequired $a_{1}=1$, $a_{2}=2$, $a_{3}=3$, and for $n\ge4$, $a_{n}=\sqrt{a_{n-1}a_{n-2}a_{n-3}}$; $N=30$
++\item \techrequired $a_{1}=1$, $a_{2}=2$, $a_{3}=3$, and for $n\ge4$, $a_{n}=\sqrt[3]{a_{n-1}a_{n-2}a_{n-3}}$; $N=30$
+ \end{enumerate}
+ 
+ Suppose that $\lim_{n\to \infty}a_{n}=1$, $\lim_{n\to \infty}b_{n}=-1$, and $0<-b_{n}<a_{n}$ for all $n$. Evaluate each of the following limits, or state that the limit does not exist, or state that there is not enough information to determine whether the limit exists.
+@@ -122,7 +122,7 @@
+ \item \techrequired $f(x)={(x-1)}^{2}-2$, $x_{0}=2$
+ \item \techrequired $f(x)=e^{x}-2$, $x_{0}=1$
+ \item \techrequired $f(x)=\ln x-1$, $x_{0}=2$
+-\item \techrequired Suppose you start with one liter of vinegar and repeatedly remove $0.1\,\text{L,}$ replace with water, mix, and repeat.
++\item \techrequired Suppose you start with one liter of vinegar and repeatedly remove $0.1\,\text{L}$, replace with water, mix, and repeat.
+ \begin{enumerate}[label=(\alph*)]
+   \item Find a formula for the concentration after $n$ steps.
+   \item After how many steps does the mixture contain less than $10\%$ vinegar?
+@@ -130,8 +130,8 @@
+ \item \techrequired A lake initially contains $2000$ fish. Suppose that in the absence of predators or other causes of removal, the fish population increases by $6\%$ each month. However, factoring in all causes, $150$ fish are lost each month.
+ \begin{enumerate}[label=(\alph*)]
+   \item Explain why the fish population after $n$ months is modeled by $P_{n}=1.06P_{n-1}-150$ with $P_{0}=2000$.
+   \item How many fish will be in the pond after one year?
+-\end{enumerate}
++\end{enumerate}\par
+ \item \techrequired A bank account earns $5\%$ interest compounded monthly. Suppose that $\$1000$ is initially deposited into the account, but that $\$10$ is withdrawn each month.
+ \begin{enumerate}[label=(\alph*)]
+   \item Show that the amount in the account after $n$ months is $A_{n}=(1+.05/12)A_{n-1}-10$; $A_{0}=1000$.
+@@ -145,16 +145,16 @@
+   \item If the student makes payments of $\$100$ per month, how much does the student owe after $12$ months?
+   \item After how many months will the loan be paid off?
+ \end{enumerate}
+-\item \techrequired Consider a series combining geometric growth and arithmetic decrease. Let $a_{1}=1$. Fix $a>1$ and $0<b<a$. Set $a_{n+1}=a.a_{n}-b$. Find a formula for $a_{n+1}$ in terms of $a^{n}$, $a$, and $b$ and a relationship between $a$ and $b$ such that $a_{n}$ converges.
+-\item \techrequired The binary representation $x=0.b_{1}b_{2}b_{3}\ldots$ of a number $x$ between $0$ and $1$ can be defined as follows. Let $b_{1}=0$ if $x<1/2$ and $b_{1}=1$ if $1/2\le x<1$. Let $x_{1}=2x-b_{1}$. Let $b_{2}=0$ if $x_{1}<1/2$ and $b_{2}=1$ if $1/2\le x<1$. Let $x_{2}=2x_{1}-b_{2}$ and in general, $x_{n}=2x_{n-1}-b_{n}$ and $b_{n-1}=0$ if $x_{n}<1/2$ and $b_{n-1}=1$ if $1/2\le x_{n}<1$. Find the binary expansion of $1/3$.
+-\item \techrequired To find an approximation for $\pi$, set $a_{0}=\sqrt{2+1}$, $a_{1}=\sqrt{2+a_{0}}$, and, in general, $a_{n+1}=\sqrt{2+a_{n}}$. Finally, set $p_{n}=3.2^{n+1}\sqrt{2-a_{n}}$. Find the first ten terms of $p_{n}$ and compare the values to $\pi$.
++\item \techrequired Consider a sequence combining geometric growth and arithmetic decrease. Let $a_{1}=1$. Fix $a>1$ and $0<b<a$. Set $a_{n+1}=a a_{n}-b$. Find a formula for $a_{n+1}$ in terms of $a^{n}$, $a$, and $b$ and a relationship between $a$ and $b$ such that $a_{n}$ converges.
++\item \techrequired The binary representation $x=0.b_{1}b_{2}b_{3}\ldots$ of a number $x$ between $0$ and $1$ can be defined as follows. Let $b_{1}=0$ if $x<1/2$ and $b_{1}=1$ if $1/2\le x<1$. Let $x_{1}=2x-b_{1}$. Let $b_{2}=0$ if $x_{1}<1/2$ and $b_{2}=1$ if $1/2\le x_{1}<1$. Let $x_{2}=2x_{1}-b_{2}$ and, in general, $x_{n}=2x_{n-1}-b_{n}$ and $b_{n+1}=0$ if $x_{n}<1/2$ and $b_{n+1}=1$ if $1/2\le x_{n}<1$. Find the binary expansion of $1/3$.
++\item \techrequired To find an approximation for $\pi$, set $a_{0}=\sqrt{2+1}$, $a_{1}=\sqrt{2+a_{0}}$, and, in general, $a_{n+1}=\sqrt{2+a_{n}}$. Finally, set $p_{n}=3\cdot 2^{n+1}\sqrt{2-a_{n}}$. Find the first ten terms of $p_{n}$ and compare the values to $\pi$.
+ \end{enumerate}
+ 
+-For the following two exercises, assume that you have access to a computer program or Internet source that can generate a list of zeros and ones of any desired length. Pseudorandom number generators (PRNGs) play an important role in simulating random noise in physical systems by creating sequences of zeros and ones that appear like the result of flipping a coin repeatedly. One of the simplest types of PRNGs recursively defines a random-looking sequence of $N$ integers $a_{1},a_{2},\ldots,a_{N}$ by fixing two special integers $K$ and $M$ and letting $a_{n+1}$ be the remainder after dividing $K.a_{n}$ into $M$, then creates a bit sequence of zeros and ones whose $n\text{th}$ term $b_{n}$ is equal to one if $a_{n}$ is odd and equal to zero if $a_{n}$ is even. If the bits $b_{n}$ are pseudorandom, then the behavior of their average $(b_{1}+b_{2}+\cdots+b_{N})/N$ should be similar to behavior of averages of truly randomly generated bits.
++For the following two exercises, assume that you have access to a computer program or Internet source that can generate a list of zeros and ones of any desired length. Pseudorandom number generators (PRNGs) play an important role in simulating random noise in physical systems by creating sequences of zeros and ones that appear like the result of flipping a coin repeatedly. One of the simplest types of PRNGs recursively defines a random-looking sequence of $N$ integers $a_{1},a_{2},\ldots,a_{N}$ by fixing two special integers $K$ and $M$ and letting $a_{n+1}$ be the remainder after dividing $K a_{n}$ by $M$, then creates a bit sequence of zeros and ones whose $n\text{th}$ term $b_{n}$ is equal to one if $a_{n}$ is odd and equal to zero if $a_{n}$ is even. If the bits $b_{n}$ are pseudorandom, then the behavior of their average $(b_{1}+b_{2}+\cdots+b_{N})/N$ should be similar to behavior of averages of truly randomly generated bits.
+ 
+ \begin{enumerate}[resume]
+ \item \techrequired Starting with $K=16{,}807$ and $M=2{,}147{,}483{,}647$, using ten different starting values of $a_{1}$, compute sequences of bits $b_{n}$ up to $n=1000$, and compare their averages to ten such sequences generated by a random bit generator.
+-\item \techrequired Find the first $1000$ digits of $\pi$ using either a computer program or Internet resource. Create a bit sequence $b_{n}$ by letting $b_{n}=1$ if the $n\text{th}$ digit of $\pi$ is odd and $b_{n}=0$ if the $n\text{th}$ digit of $\pi$ is even. Compute the average value of $b_{n}$ and the average value of $d_{n}=|b_{n+1}-b_{n}|$, $n=1,...,999$. Does the sequence $b_{n}$ appear random? Do the differences between successive elements of $b_{n}$ appear random?
++\item \techrequired Find the first $1000$ digits of $\pi$ using either a computer program or Internet resource. Create a bit sequence $b_{n}$ by letting $b_{n}=1$ if the $n\text{th}$ digit of $\pi$ is odd and $b_{n}=0$ if the $n\text{th}$ digit of $\pi$ is even. Compute the average value of $b_{n}$ and the average value of $d_{n}=|b_{n+1}-b_{n}|$, $n=1,\ldots,999$. Does the sequence $b_{n}$ appear random? Do the differences between successive elements of $b_{n}$ appear random?
+ \end{enumerate}
+ 
+ \end{document}

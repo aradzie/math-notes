@@ -1,0 +1,92 @@
+% OpenStax Calculus Volume 2 -- Section 4.4 Exercises: The Logistic Equation
+% Exercises reproduced from OpenStax, licensed under CC BY 4.0.
+% Source: https://openstax.org/books/calculus-volume-2/pages/4-4-the-logistic-equation
+\documentclass{exercises}
+\title{OpenStax Calculus Volume 2}
+\subtitle{Section 4.4 Exercises: The Logistic Equation}
+\sourceurl{https://openstax.org/books/calculus-volume-2/pages/4-4-the-logistic-equation}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+
+For the following problems, consider the logistic equation in the form $P'=CP-P^{2}$. Draw the directional field and find the stability of the equilibria.
+
+\begin{enumerate}[start=1]
+\item $C=3$
+\item $C=0$
+\item $C=-3$
+\item Solve the logistic equation for $C=10$ and an initial condition of $P(0)=2$.
+\item Solve the logistic equation for $C=-10$ and an initial condition of $P(0)=2$.
+\item A population of deer inside a park has a carrying capacity of $200$ and a growth rate of $2\%$. If the initial population is $50$ deer, what is the population of deer at any given time?
+\item A population of frogs in a pond has a growth rate of $5\%$. If the initial population is $1000$ frogs and the carrying capacity is $6000$, what is the population of frogs at any given time?
+\item \techrequired Bacteria grow at a rate of $20\%$ per hour in a petri dish. If there is initially one bacterium and a carrying capacity of $1$ million cells, how long does it take to reach $500{,}000$ cells?
+\item \techrequired Rabbits in a park have an initial population of $10$ and grow at a rate of $4\%$ per year. If the carrying capacity is $500$, at what time does the population reach $100$ rabbits?
+\item \techrequired Two monkeys are placed on an island. After $5$ years, there are $8$ monkeys, and the estimated carrying capacity is $25$ monkeys. When does the population of monkeys reach $16$ monkeys?
+\item \techrequired A butterfly sanctuary is built that can hold $2000$ butterflies, and $400$ butterflies are initially moved in. If after $2$ months there are now $800$ butterflies, when does the population get to $1500$ butterflies?
+\end{enumerate}
+
+The following problems consider the logistic equation with an added term $f$ for depletion, either through death or emigration:
+
+\[
+P'=0.4P\left(1-\frac{P}{10000}\right)-f.
+\]
+
+\begin{enumerate}[resume]
+\item \techrequired The population of trout in a pond is given by $P'=0.4P(1-\frac{P}{10000})-400$, where $400$ trout are caught per year. Use your calculator or computer software to draw a directional field and draw a few sample solutions. What do you expect for the behavior?
+\item In the preceding problem, what are the stabilities of the equilibria $0<P_{1}<P_{2}$?
+\item \techrequired For the preceding problem, use software to generate a directional field for the value $f=400$. What are the stabilities of the equilibria?
+\item \techrequired For the preceding problems, use software to generate a directional field for the value $f=600$. What are the stabilities of the equilibria?
+\item \techrequired For the preceding problems, consider the case where a certain number of fish are added to the pond, or $f=-200$. What are the nonnegative equilibria and their stabilities?
+\end{enumerate}
+
+It is more likely that the amount of fishing is governed by the current number of fish present, so instead of a constant number of fish being caught, the rate is proportional to the current number of fish present, with proportionality constant $k$, as
+
+
+$P'=0.4P(1-\frac{P}{10000})-kP$.
+
+\begin{enumerate}[resume]
+\item \techrequired For the previous fishing problem, draw a directional field assuming $k=0.1$. Draw some solutions that exhibit this behavior. What are the equilibria and what are their stabilities?
+\item \techrequired Use software or a calculator to draw directional fields for $k=0.4$. What are the nonnegative equilibria and their stabilities?
+\item \techrequired Use software or a calculator to draw directional fields for $k=0.6$. What are the equilibria and their stabilities?
+\item Solve this equation, assuming a value of $k=0.05$ and an initial condition of $2000$ fish.
+\item Solve this equation, assuming a value of $k=0.05$ and an initial condition of $5000$ fish.
+\end{enumerate}
+
+The following problems add in a minimal threshold value for the species to survive, $T$, which changes the differential equation to $P'(t)=rP(1-\frac{P}{K})(1-\frac{T}{P})$.
+
+\begin{enumerate}[resume]
+\item Draw the directional field of the threshold logistic equation, assuming $K=10$, $r=0.1$, and $T=2$. When does the population survive? When does it go extinct?
+\item For the preceding problem, solve the logistic threshold equation, assuming the initial condition $P(0)=P_{0}$.
+\item Bengal tigers in a conservation park have a carrying capacity of $100$ and need a minimum of $10$ to survive. If they grow in population at a rate of $1\%$ per year, with an initial population of $15$ tigers, solve for the number of tigers present.
+\item A forest containing ring-tailed lemurs in Madagascar has the potential to support $5000$ individuals, and the lemur population grows at a rate of $5\%$ per year. A minimum of $500$ individuals is needed for the lemurs to survive. Given an initial population of $600$ lemurs, solve for the population of lemurs.
+\item The population of Florida panthers in the southwestern tip of Florida has an estimated carrying capacity of $250$ and grows at a rate of $0.25\%$ per year, and there must be $25$ for the population to survive. With an initial population of $30$ Florida panthers, how many years will it take to get the Florida panthers off the endangered species list (at least $100$)?
+\end{enumerate}
+
+The following questions consider the Gompertz equation, a modification for logistic growth, which is often used for modeling cancer growth, specifically the number of tumor cells.
+
+\begin{enumerate}[resume]
+\item The Gompertz equation is given by $P'(t)=\alpha \ln(\frac{K}{P(t)})P(t)$. Draw the directional fields for this equation assuming all parameters are positive, and given that $K=1$.
+\item Assume that for a population, $K=1000$ and $\alpha=0.05$. Draw the directional field associated with this differential equation and draw a few solutions. What is the behavior of the population?
+\item Solve the Gompertz equation for generic $\alpha$ and $K$ and $P(0)=P_{0}$.
+\item \techrequired The Gompertz equation has been used to model tumor growth in the human body. Starting from one tumor cell on day $1$ and assuming $\alpha=0.1$ and a carrying capacity of $10$ million cells, how long does it take to reach ``detection'' stage at $5$ million cells?
+\item \techrequired It is estimated that the world human population reached $3$ billion people in $1959$ and $6$ billion in $1999$. Assuming a carrying capacity of $16$ billion humans, write and solve the differential equation for logistic growth, and determine what year the population reached $7$ billion.
+\item \techrequired It is estimated that the world human population reached $3$ billion people in $1959$ and $6$ billion in $1999$. Assuming a carrying capacity of $16$ billion humans, write and solve the differential equation for Gompertz growth, and determine what year the population reached $7$ billion. Was logistic growth or Gompertz growth more accurate, considering world population reached $7$ billion on October 31, 2011?
+\item Show that the population grows fastest when it reaches half the carrying capacity for the logistic equation $P'=rP(1-\frac{P}{K})$.
+\item When does population increase the fastest in the threshold logistic equation $P'(t)=rP(1-\frac{P}{K})(1-\frac{T}{P})$?
+\item When does population increase the fastest for the Gompertz equation $P'(t)=\alpha \ln(\frac{K}{P(t)})P(t)$?
+\end{enumerate}
+
+Below is a table of the populations of whooping cranes in the wild from $1940$ to $2000$. The population rebounded from near extinction after conservation efforts began. The following problems consider applying population models to fit the data. Assume a carrying capacity of $10{,}000$ cranes. Fit the data assuming years since $1940$ (so your initial population at time $0$ would be $22$ cranes).
+
+\begin{enumerate}[resume]
+\item Find the equation and parameter $r$ that best fit the data for the logistic equation.
+\item Find the equation and parameters $r$ and $T$ that best fit the data for the threshold logistic equation.
+\item Find the equation and parameter $\alpha$ that best fit the data for the Gompertz equation.
+\item Graph all three solutions and the data on the same graph. Which model appears to be most accurate?
+\item Using the three equations found in the previous problems, estimate the population in $2010$ (year $70$ after conservation). The real population measured at that time was $437$. Which model is most accurate?
+\end{enumerate}
+
+\end{document}

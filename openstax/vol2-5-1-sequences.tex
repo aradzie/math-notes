@@ -1,0 +1,160 @@
+% OpenStax Calculus Volume 2 -- Section 5.1 Exercises: Sequences
+% Exercises reproduced from OpenStax, licensed under CC BY 4.0.
+% Source: https://openstax.org/books/calculus-volume-2/pages/5-1-sequences
+\documentclass{exercises}
+\title{OpenStax Calculus Volume 2}
+\subtitle{Section 5.1 Exercises: Sequences}
+\sourceurl{https://openstax.org/books/calculus-volume-2/pages/5-1-sequences}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+
+Find the first six terms of each of the following sequences, starting with $n=1$.
+
+\begin{enumerate}[start=1]
+\item $a_{n}=1+{(-1)}^{n}$ for $n\ge1$
+\item $a_{n}=n^{2}-1$ for $n\ge1$
+\item $a_{1}=1$ and $a_{n}=a_{n-1}+n$ for $n\ge2$
+\item $a_{1}=1$, $a_{2}=1$ and $a_{n+2}=a_{n}+a_{n+1}$ for $n\ge1$
+\item Find an explicit formula for $a_{n}$ where $a_{1}=1$ and $a_{n}=a_{n-1}+n$ for $n\ge2$.
+\item Find a formula $a_{n}$ for the $n\text{th}$ term of the arithmetic sequence whose first term is $a_{1}=1$ such that $a_{n+1}-a_{n}=17$ for $n\ge1$.
+\item Find a formula $a_{n}$ for the $n\text{th}$ term of the arithmetic sequence whose first term is $a_{1}=-3$ such that $a_{n+1}-a_{n}=4$ for $n\ge1$.
+\item Find a formula $a_{n}$ for the $n\text{th}$ term of the geometric sequence whose first term is $a_{1}=1$ such that $\frac{a_{n+1}}{a_{n}}=10$ for $n\ge1$.
+\item Find a formula $a_{n}$ for the $n\text{th}$ term of the geometric sequence whose first term is $a_{1}=3$ such that $\frac{a_{n+1}}{a_{n}}=1/10$ for $n\ge1$.
+\item Find an explicit formula for the $n\text{th}$ term of the sequence whose first several terms are $\{0,3,8,15,24,35,48,63,80,99,\ldots \}$. (Hint: First add one to each term.)
+\item Find an explicit formula for the $n\text{th}$ term of the sequence satisfying $a_{1}=0$ and $a_{n}=2a_{n-1}+1$ for $n\ge2$.
+\end{enumerate}
+
+Find a formula for the general term $a_{n}$ of each of the following sequences.
+
+\begin{enumerate}[resume]
+\item $\{1,0,-1,0,1,0,-1,0,\ldots \}$ (Hint: Find where $\sin x$ takes these values)
+\item $\{1,-1/3,1/5,-1/7,\ldots \}$
+\end{enumerate}
+
+Find a function $f(n)$ that identifies the $n\text{th}$ term $a_{n}$ of the following recursively defined sequences, as $a_{n}=f(n)$.
+
+\begin{enumerate}[resume]
+\item $a_{1}=1$ and $a_{n+1}=-a_{n}$ for $n\ge1$
+\item $a_{1}=2$ and $a_{n+1}=2a_{n}$ for $n\ge1$
+\item $a_{1}=1$ and $a_{n+1}=(n+1)a_{n}$ for $n\ge1$
+\item $a_{1}=2$ and $a_{n+1}=(n+1)a_{n}/2$ for $n\ge1$
+\item $a_{1}=1$ and $a_{n+1}=a_{n}/2^{n}$ for $n\ge1$
+\end{enumerate}
+
+Plot the first $N$ terms of each sequence. State whether the graphical evidence suggests that the sequence converges or diverges.
+
+\begin{enumerate}[resume]
+\item \techrequired $a_{1}=1$, $a_{2}=2$, and for $n\ge3$, $a_{n}=\frac{1}{2}(a_{n-1}+a_{n-2})$; $N=30$
+\item \techrequired $a_{1}=1$, $a_{2}=2$, $a_{3}=3$ and for $n\ge4$, $a_{n}=\frac{1}{3}(a_{n-1}+a_{n-2}+a_{n-3})$, $N=30$
+\item \techrequired $a_{1}=1$, $a_{2}=2$, and for $n\ge3$, $a_{n}=\sqrt{a_{n-1}a_{n-2}}$; $N=30$
+\item \techrequired $a_{1}=1$, $a_{2}=2$, $a_{3}=3$, and for $n\ge4$, $a_{n}=\sqrt[3]{a_{n-1}a_{n-2}a_{n-3}}$; $N=30$
+\end{enumerate}
+
+Suppose that $\lim_{n\to \infty}a_{n}=1$, $\lim_{n\to \infty}b_{n}=-1$, and $0<-b_{n}<a_{n}$ for all $n$. Evaluate each of the following limits, or state that the limit does not exist, or state that there is not enough information to determine whether the limit exists.
+
+\begin{enumerate}[resume]
+\item $\lim_{n\to \infty}(3a_{n}-4b_{n})$
+\item $\lim_{n\to \infty}(\frac{1}{2}b_{n}-\frac{1}{2}a_{n})$
+\item $\lim_{n\to \infty}\frac{a_{n}+b_{n}}{a_{n}-b_{n}}$
+\item $\lim_{n\to \infty}\frac{a_{n}-b_{n}}{a_{n}+b_{n}}$
+\end{enumerate}
+
+Find the limit of each of the following sequences, using L'Hôpital's rule when appropriate.
+
+\begin{enumerate}[resume]
+\item $\frac{n^{2}}{2^{n}}$
+\item $\frac{{(n-1)}^{2}}{{(n+1)}^{2}}$
+\item $\frac{\sqrt{n}}{\sqrt{n+1}}$
+\item $n^{1/n}$ (Hint: $n^{1/n}=e^{\frac{1}{n}\ln n})$
+\end{enumerate}
+
+For each of the following sequences, whose $n\text{th}$ terms are indicated, state whether the sequence is bounded and whether it is eventually monotone, increasing, or decreasing.
+
+\begin{enumerate}[resume]
+\item $n/2^{n}$, $n\ge2$
+\item $\ln(1+\frac{1}{n})$
+\item $\sin n$
+\item $\cos(n^{2})$
+\item $n^{1/n}$, $n\ge3$
+\item $n^{-1/n}$, $n\ge3$
+\item $\tan n$
+\item Determine whether the sequence defined as follows has a limit. If it does, find the limit. $a_{1}=\sqrt{2}$, $a_{2}=\sqrt{2\sqrt{2}}$, $a_{3}=\sqrt{2\sqrt{2\sqrt{2}}}$ etc.
+\item Determine whether the sequence defined as follows has a limit. If it does, find the limit. $a_{1}=3$, $a_{n}=\sqrt{2a_{n-1}}$, $n=2,3,\ldots$.
+\end{enumerate}
+
+Use the Squeeze Theorem to find the limit of each of the following sequences.
+
+\begin{enumerate}[resume]
+\item $n\sin(1/n)$
+\item $\frac{\cos(1/n)-1}{1/n}$
+\item $a_{n}=\frac{n!}{n^{n}}$
+\item $a_{n}=\sin n\sin(1/n)$
+\end{enumerate}
+
+For the following sequences, plot the first $25$ terms of the sequence and state whether the graphical evidence suggests that the sequence converges or diverges.
+
+\begin{enumerate}[resume]
+\item \techrequired $a_{n}=\sin n$
+\item \techrequired $a_{n}=\cos n$
+\end{enumerate}
+
+Determine the limit of the sequence or show that the sequence diverges. If it converges, find its limit.
+
+\begin{enumerate}[resume]
+\item $a_{n}=\tan^{-1}(n^{2})$
+\item $a_{n}={(2n)}^{1/n}-n^{1/n}$
+\item $a_{n}=\frac{\ln(n^{2})}{\ln(2n)}$
+\item $a_{n}={(1-\frac{2}{n})}^{n}$
+\item $a_{n}=\ln(\frac{n+2}{n^{2}-3})$
+\item $a_{n}=\frac{2^{n}+3^{n}}{4^{n}}$
+\item $a_{n}=\frac{{(1000)}^{n}}{n!}$
+\item $a_{n}=\frac{{(n!)}^{2}}{(2n)!}$
+\end{enumerate}
+
+Newton's method seeks to approximate a solution $f(x)=0$ that starts with an initial approximation $x_{0}$ and successively defines a sequence $x_{n+1}=x_{n}-\frac{f(x_{n})}{f'(x_{n})}$. For the given choice of $f$ and $x_{0}$, write out the formula for $x_{n+1}$. If the sequence appears to converge, give an exact formula for the solution $x$, then identify the limit $x$ accurate to four decimal places and the smallest $n$ such that $x_{n}$ agrees with $x$ up to four decimal places.
+
+\begin{enumerate}[resume]
+\item \techrequired $f(x)=x^{2}-2$, $x_{0}=1$
+\item \techrequired $f(x)={(x-1)}^{2}-2$, $x_{0}=2$
+\item \techrequired $f(x)=e^{x}-2$, $x_{0}=1$
+\item \techrequired $f(x)=\ln x-1$, $x_{0}=2$
+\item \techrequired Suppose you start with one liter of vinegar and repeatedly remove $0.1\,\text{L}$, replace with water, mix, and repeat.
+\begin{enumerate}[label=(\alph*)]
+  \item Find a formula for the concentration after $n$ steps.
+  \item After how many steps does the mixture contain less than $10\%$ vinegar?
+\end{enumerate}
+\item \techrequired A lake initially contains $2000$ fish. Suppose that in the absence of predators or other causes of removal, the fish population increases by $6\%$ each month. However, factoring in all causes, $150$ fish are lost each month.
+\begin{enumerate}[label=(\alph*)]
+  \item Explain why the fish population after $n$ months is modeled by $P_{n}=1.06P_{n-1}-150$ with $P_{0}=2000$.
+  \item How many fish will be in the pond after one year?
+\end{enumerate}\par
+\item \techrequired A bank account earns $5\%$ interest compounded monthly. Suppose that $\$1000$ is initially deposited into the account, but that $\$10$ is withdrawn each month.
+\begin{enumerate}[label=(\alph*)]
+  \item Show that the amount in the account after $n$ months is $A_{n}=(1+.05/12)A_{n-1}-10$; $A_{0}=1000$.
+  \item How much money will be in the account after $1$ year?
+  \item Is the amount increasing or decreasing?
+  \item Suppose that instead of $\$10$, a fixed amount $d$ dollars is withdrawn each month. Find a value of $d$ such that the amount in the account after each month remains $\$1000$.
+  \item What happens if $d$ is greater than this amount?
+\end{enumerate}
+\item \techrequired A student takes out a college loan of $\$10{,}000$ at an annual percentage rate of $6\%$, compounded monthly.
+\begin{enumerate}[label=(\alph*)]
+  \item If the student makes payments of $\$100$ per month, how much does the student owe after $12$ months?
+  \item After how many months will the loan be paid off?
+\end{enumerate}
+\item \techrequired Consider a sequence combining geometric growth and arithmetic decrease. Let $a_{1}=1$. Fix $a>1$ and $0<b<a$. Set $a_{n+1}=a a_{n}-b$. Find a formula for $a_{n+1}$ in terms of $a^{n}$, $a$, and $b$ and a relationship between $a$ and $b$ such that $a_{n}$ converges.
+\item \techrequired The binary representation $x=0.b_{1}b_{2}b_{3}\ldots$ of a number $x$ between $0$ and $1$ can be defined as follows. Let $b_{1}=0$ if $x<1/2$ and $b_{1}=1$ if $1/2\le x<1$. Let $x_{1}=2x-b_{1}$. Let $b_{2}=0$ if $x_{1}<1/2$ and $b_{2}=1$ if $1/2\le x_{1}<1$. Let $x_{2}=2x_{1}-b_{2}$ and, in general, $x_{n}=2x_{n-1}-b_{n}$ and $b_{n+1}=0$ if $x_{n}<1/2$ and $b_{n+1}=1$ if $1/2\le x_{n}<1$. Find the binary expansion of $1/3$.
+\item \techrequired To find an approximation for $\pi$, set $a_{0}=\sqrt{2+1}$, $a_{1}=\sqrt{2+a_{0}}$, and, in general, $a_{n+1}=\sqrt{2+a_{n}}$. Finally, set $p_{n}=3\cdot 2^{n+1}\sqrt{2-a_{n}}$. Find the first ten terms of $p_{n}$ and compare the values to $\pi$.
+\end{enumerate}
+
+For the following two exercises, assume that you have access to a computer program or Internet source that can generate a list of zeros and ones of any desired length. Pseudorandom number generators (PRNGs) play an important role in simulating random noise in physical systems by creating sequences of zeros and ones that appear like the result of flipping a coin repeatedly. One of the simplest types of PRNGs recursively defines a random-looking sequence of $N$ integers $a_{1},a_{2},\ldots,a_{N}$ by fixing two special integers $K$ and $M$ and letting $a_{n+1}$ be the remainder after dividing $K a_{n}$ by $M$, then creates a bit sequence of zeros and ones whose $n\text{th}$ term $b_{n}$ is equal to one if $a_{n}$ is odd and equal to zero if $a_{n}$ is even. If the bits $b_{n}$ are pseudorandom, then the behavior of their average $(b_{1}+b_{2}+\cdots+b_{N})/N$ should be similar to behavior of averages of truly randomly generated bits.
+
+\begin{enumerate}[resume]
+\item \techrequired Starting with $K=16{,}807$ and $M=2{,}147{,}483{,}647$, using ten different starting values of $a_{1}$, compute sequences of bits $b_{n}$ up to $n=1000$, and compare their averages to ten such sequences generated by a random bit generator.
+\item \techrequired Find the first $1000$ digits of $\pi$ using either a computer program or Internet resource. Create a bit sequence $b_{n}$ by letting $b_{n}=1$ if the $n\text{th}$ digit of $\pi$ is odd and $b_{n}=0$ if the $n\text{th}$ digit of $\pi$ is even. Compute the average value of $b_{n}$ and the average value of $d_{n}=|b_{n+1}-b_{n}|$, $n=1,\ldots,999$. Does the sequence $b_{n}$ appear random? Do the differences between successive elements of $b_{n}$ appear random?
+\end{enumerate}
+
+\end{document}

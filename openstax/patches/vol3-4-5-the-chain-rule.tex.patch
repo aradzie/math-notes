@@ -1,0 +1,92 @@
+Manual review corrections for this page's first pass.
+
+- $z=\text{arcsin}\,t$ used an ad-hoc \text macro for an inverse
+  trigonometric function; replaced with the standard \arcsin operator:
+  $z=\arcsin t$.
+- "$x=-ln2t$" was missing the backslash on \ln and had no grouping,
+  reading as the concatenation "l n 2 t"; corrected to $x=-\ln(2t)$.
+  Verified against the given check values ($x=\ln 2$, $y=\pi/4$ when
+  $t=1/4$) that this is the intended expression.
+- Bare prose variables that should be math: "y is the cylinder height"
+  and "the y resistance is $200\Omega$" -> $y$ in both places.
+- Several "$a\,\text{and}\,b$" / "$a,b,\,\text{and}\,c$" constructs fused
+  an ad-hoc \text join (or a semicolon-joined inequality pair,
+  "$x\ge0;y\ge0$") with bare math, mixing prose into the math span; each
+  was unwrapped so "and" (or the second inequality) sits in ordinary text
+  outside math, matching this file's own convention already used for the
+  gas-pressure exercise (e.g. "$k=1$, $\frac{dV}{dt}=2$ cm$^{3}$/min").
+  Affected: the cylinder-volume item ("$x\,\text{and}\,y$ are both
+  increasing"), the frustum item's unit list ("$x=10\,\text{in}.,\,y=12\,
+  \text{in.,}\,\text{and}\,z=18\,\text{in}$" -> "$x=10$ in., $y=12$ in.,
+  and $z=18$ in."), the closed-box item's dimension list and matching unit
+  list, the fly-temperature item ("$x\,\text{and}\,y$ are measured in
+  centimeters"), the fluid-speed item's component list and inequality
+  pair, and the tree-diagram item's final "$w=w(r,s),\text{and}\,t=t(r,s)$"
+  (split so "and" precedes a separate $t=t(r,s)$ span).
+- The frustum figure's alt-text description ("with height x, larger
+  radius y, and smaller radius x") reuses $x$ for both the height and the
+  smaller radius, and never mentions $z$ at all. This contradicts the
+  variable assignment given earlier in the very same exercise ("$x$ is
+  the radius of the smaller circle, $y$ is the radius of the larger
+  circle, and $z$ is the height of the frustum"). Verified against the
+  live OpenStax page that the figure caption is verbatim upstream (a
+  genuine source typo, not an extraction artifact), but the internal
+  contradiction with the immediately preceding sentence in the same item
+  makes the intended labeling unambiguous, so corrected the caption to
+  "with height $z$, larger radius $y$, and smaller radius $x$."
+  Separately, that exercise's temperature-Fahrenheit line ("$T=20^\circ
+  \text{F}$" alongside "temperature is expressed in kelvins") was checked
+  against the live page and is also verbatim upstream; left uncorrected
+  since it is not clear whether the unit label or the surrounding
+  "kelvins" convention is the actual error, and the numeric value used in
+  the derivative computation is unaffected either way.
+- $\sqrt{u{(x,y)}^{2}+v{(x,y)}^{2}}$ had redundant braces around
+  $(x,y)$; simplified to $\sqrt{u(x,y)^{2}+v(x,y)^{2}}$.
+- All exercises were checked for mathematical consistency (chain-rule
+  substitutions, implicit-differentiation setups, homogeneous-function
+  checks); no further mathematical corrections were needed.
+
+---
+--- /tmp/raw.tex
++++ vol3-4-5-the-chain-rule.tex
+@@ -15,7 +15,7 @@
+ For the following exercises, use the information provided to solve the problem.
+ 
+ \begin{enumerate}[start=1]
+-\item Let $w(x,y,z)=xy\cos z$, where $x=t,y=t^{2}$, and $z=\text{arcsin}\,t$. Find $\frac{dw}{dt}$.
++\item Let $w(x,y,z)=xy\cos z$, where $x=t,y=t^{2}$, and $z=\arcsin t$. Find $\frac{dw}{dt}$.
+ \item Let $w(t,v)=e^{tv}$ where $t=r+s$ and $v=rs$. Find $\frac{\partial w}{\partial r}$ and $\frac{\partial w}{\partial s}$.
+ \item If $w=5x^{2}+2y^{2},x=-3s+t$, and $y=s-4t$, find $\frac{\partial w}{\partial s}$ and $\frac{\partial w}{\partial t}$.
+ \item If $w=xy^{2},x=5\cos(2t)$, and $y=5\sin(2t)$, find $\frac{dw}{dt}$.
+@@ -34,7 +34,7 @@
+ \item $f(x,y)=x^{4}$, $x=t,y=t$
+ \item Let $w(x,y,z)=x^{2}+y^{2}+z^{2}$, $x=\cos t,y=\sin t$, and $z=e^{t}$. Express $w$ as a function of $t$ and find $\frac{dw}{dt}$ directly. Then, find $\frac{dw}{dt}$ using the chain rule.
+ \item Let $z=x^{2}y$, where $x=t^{2}$ and $y=t^{3}$. Find $\frac{dz}{dt}$.
+-\item Let $u=e^{x}\sin y$, where $x=-ln2t$ and $y=\pi t$. Find $\frac{du}{dt}$ when $x=\ln 2$ and $y=\frac{\pi}{4}$.
++\item Let $u=e^{x}\sin y$, where $x=-\ln(2t)$ and $y=\pi t$. Find $\frac{du}{dt}$ when $x=\ln 2$ and $y=\frac{\pi}{4}$.
+ \end{enumerate}
+ 
+ For the following exercises, find $\frac{dy}{dx}$ using partial derivatives.
+@@ -66,15 +66,15 @@
+ \item $f(x,y)=3x^{2}+y^{2}$
+ \item $f(x,y)=\sqrt{x^{2}+y^{2}}$
+ \item $f(x,y)=x^{2}y-2y^{3}$
+-\item The volume of a right circular cylinder is given by $V(x,y)=\pi x^{2}y$, where $x$ is the radius of the cylinder and y is the cylinder height. Suppose $x$ and $y$ are functions of $t$ given by $x=\frac{1}{2}t$ and $y=\frac{1}{3}t$ so that $x\,\text{and}\,y$ are both increasing with time. How fast is the volume increasing when $x=2$ and $y=\frac{4}{3}$?
++\item The volume of a right circular cylinder is given by $V(x,y)=\pi x^{2}y$, where $x$ is the radius of the cylinder and $y$ is the cylinder height. Suppose $x$ and $y$ are functions of $t$ given by $x=\frac{1}{2}t$ and $y=\frac{1}{3}t$ so that $x$ and $y$ are both increasing with time. How fast is the volume increasing when $x=2$ and $y=\frac{4}{3}$?
+ \item The pressure $P$ of a gas is related to the volume and temperature by the formula $PV=kT$, where temperature is expressed in kelvins. Express the pressure of the gas as a function of both $V$ and $T$. Find $\frac{dP}{dt}$ when $k=1$, $\frac{dV}{dt}=2$ cm$^{3}$/min, $\frac{dT}{dt}=\frac{1}{2}$ K/min, $V=20$ cm$^{3}$, and $T=20^\circ \text{F}$.
+ \item The radius of a right circular cone is increasing at $3$ cm/min whereas the height of the cone is decreasing at $2$ cm/min. Find the rate of change of the volume of the cone when the radius is $13$ cm and the height is $18$ cm.
+-\item The volume of a frustum of a cone is given by the formula $V=\frac{1}{3}\pi z(x^{2}+y^{2}+xy)$, where $x$ is the radius of the smaller circle, $y$ is the radius of the larger circle, and $z$ is the height of the frustum (see figure). Find the rate of change of the volume of this frustum when $x=10\,\text{in}.,\,y=12\,\text{in.,}\,\text{and}\,z=18\,\text{in}$. if $\frac{dz}{dt}=-5,\frac{dx}{dt}=1,\frac{dy}{dt}=1$ (all in/min). \\ \textit{[Figure: A conical frustum (that is, a cone with the pointy end cut off) with height x, larger radius y, and smaller radius x.]}
+-\item A closed box is in the shape of a rectangular solid with dimensions $x,y,\,\text{and}\,z$. (Dimensions are in inches.) Suppose each dimension is changing at the rate of $0.5$ in./min. Find the rate of change of the total surface area of the box when $x=2\,\text{in}.,\,y=3\,\text{in.,}\,\text{and}\,z=1\,\text{in}$.
+-\item The total resistance in a circuit that has three individual resistances represented by $x,y$, and $z$ is given by the formula $R(x,y,z)=\frac{xyz}{yz+xz+xy}$. Suppose at a given time the $x$ resistance is $100\Omega$, the y resistance is $200\Omega$, and the $z$ resistance is $300\Omega$. Also, suppose the $x$ resistance is changing at a rate of $2\Omega/\text{min}$, the $y$ resistance is changing at the rate of $1\Omega/\text{min}$, and the $z$ resistance has no change. Find the rate of change of the total resistance in this circuit at this time.
+-\item The temperature $T$ at a point $(x,y)$ is $T(x,y)$ and is measured using the Celsius scale. A fly crawls so that its position after $t$ seconds is given by $x=\sqrt{1+t}$ and $y=2+\frac{1}{3}t$, where $x\,\text{and}\,y$ are measured in centimeters. The temperature function satisfies $T_{x}(2,3)=4$ and $T_{y}(2,3)=3$. How fast is the temperature increasing on the fly's path after $3$ sec?
+-\item The $x\,\text{and}\,y$ components of a fluid moving in two dimensions are given by the following functions: $u(x,y)=2y$ and $v(x,y)=-2x$; $x\ge0;y\ge0$. The speed of the fluid at the point $(x,y)$ is $s(x,y)=\sqrt{u{(x,y)}^{2}+v{(x,y)}^{2}}$. Find $\frac{\partial s}{\partial x}$ and $\frac{\partial s}{\partial y}$ using the chain rule.
+-\item Let $u=u(x,y,z)$, where $x=x(w,t),y=y(w,t),z=z(w,t),w=w(r,s),\text{and}\,t=t(r,s)$. Use a tree diagram and the chain rule to find an expression for $\frac{\partial u}{\partial r}$.
++\item The volume of a frustum of a cone is given by the formula $V=\frac{1}{3}\pi z(x^{2}+y^{2}+xy)$, where $x$ is the radius of the smaller circle, $y$ is the radius of the larger circle, and $z$ is the height of the frustum (see figure). Find the rate of change of the volume of this frustum when $x=10$ in., $y=12$ in., and $z=18$ in. if $\frac{dz}{dt}=-5,\frac{dx}{dt}=1,\frac{dy}{dt}=1$ (all in/min). \\ \textit{[Figure: A conical frustum (that is, a cone with the pointy end cut off) with height $z$, larger radius $y$, and smaller radius $x$.]}
++\item A closed box is in the shape of a rectangular solid with dimensions $x$, $y$, and $z$. (Dimensions are in inches.) Suppose each dimension is changing at the rate of $0.5$ in./min. Find the rate of change of the total surface area of the box when $x=2$ in., $y=3$ in., and $z=1$ in.
++\item The total resistance in a circuit that has three individual resistances represented by $x,y$, and $z$ is given by the formula $R(x,y,z)=\frac{xyz}{yz+xz+xy}$. Suppose at a given time the $x$ resistance is $100\Omega$, the $y$ resistance is $200\Omega$, and the $z$ resistance is $300\Omega$. Also, suppose the $x$ resistance is changing at a rate of $2\Omega/\text{min}$, the $y$ resistance is changing at the rate of $1\Omega/\text{min}$, and the $z$ resistance has no change. Find the rate of change of the total resistance in this circuit at this time.
++\item The temperature $T$ at a point $(x,y)$ is $T(x,y)$ and is measured using the Celsius scale. A fly crawls so that its position after $t$ seconds is given by $x=\sqrt{1+t}$ and $y=2+\frac{1}{3}t$, where $x$ and $y$ are measured in centimeters. The temperature function satisfies $T_{x}(2,3)=4$ and $T_{y}(2,3)=3$. How fast is the temperature increasing on the fly's path after $3$ sec?
++\item The $x$ and $y$ components of a fluid moving in two dimensions are given by the following functions: $u(x,y)=2y$ and $v(x,y)=-2x$; $x\ge0$, $y\ge0$. The speed of the fluid at the point $(x,y)$ is $s(x,y)=\sqrt{u(x,y)^{2}+v(x,y)^{2}}$. Find $\frac{\partial s}{\partial x}$ and $\frac{\partial s}{\partial y}$ using the chain rule.
++\item Let $u=u(x,y,z)$, where $x=x(w,t),y=y(w,t),z=z(w,t),w=w(r,s)$, and $t=t(r,s)$. Use a tree diagram and the chain rule to find an expression for $\frac{\partial u}{\partial r}$.
+ \end{enumerate}
+ 
+ \end{document}

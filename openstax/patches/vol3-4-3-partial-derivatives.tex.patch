@@ -1,0 +1,59 @@
+Manual review corrections (first review pass), none upstream-source-specific --
+these are typographic/LaTeX-quality fixes to the converter's otherwise
+faithful transcription:
+
+- Exercise 15's "$a\,\text{and}\,b$" (parallelogram sides) and its (a)/(b)/(c)
+  sub-list ("Side a" / "Side b" / "$\text{Angle}\,\theta$") mixed bare prose
+  variables with an ad-hoc `\text{and}` join; unwrapped to plain prose with
+  the variables in math mode: "$a$ and $b$", "Side $a$", "Side $b$",
+  "Angle $\theta$" -- consistent with this repo's convention of keeping
+  English outside math mode.
+- Two further instances of the same "$n\,\text{and}\,R$" / "$x\,\text{and}\,y$"
+  pattern (the pressure-function exercise and the Cobb-Douglas exercise)
+  fixed the same way, to "$n$ and $R$" / "$x$ and $y$".
+- The heat-flow exercise's "$xy\text{-plane}$" glued the variable pair and
+  the word "-plane" into one math span; unwrapped to "$xy$-plane".
+- The heat-equation exercise ("Show that $z=e^{-t}\cos(\frac{x}{c})$
+  satisfies the heat equation ...") was missing its terminal sentence
+  period after the closing display; added.
+---
+--- /tmp/raw.tex
++++ vol3-4-3-partial-derivatives.tex
+@@ -48,11 +48,11 @@
+ \item Find $\frac{\partial z}{\partial x}$ at $(0,1)$ for $z=e^{-x}\cos(y)$. Evaluate the partial derivatives at point $P(0,1)$.
+ \item Given $f(x,y,z)=x^{3}yz^{2}$, find $\frac{\partial^{2}f}{\partial x\partial y}$ and $f_{z}(1,1,1)$.
+ \item Given $f(x,y,z)=2\sin(x+y)$, find $f_{x}(0,\frac{\pi}{2},-4)$, $f_{y}(0,\frac{\pi}{2},-4)$, and $f_{z}(0,\frac{\pi}{2},-4)$.
+-\item The area of a parallelogram with adjacent side lengths that are $a\,\text{and}\,b$, and in which the angle between these two sides is $\theta$, is given by the function $A(a,b,\theta)=ba\sin(\theta)$. Find the rate of change of the area of the parallelogram with respect to the following:
++\item The area of a parallelogram with adjacent side lengths that are $a$ and $b$, and in which the angle between these two sides is $\theta$, is given by the function $A(a,b,\theta)=ba\sin(\theta)$. Find the rate of change of the area of the parallelogram with respect to the following:
+ \begin{enumerate}[label=(\alph*)]
+-  \item Side a
+-  \item Side b
+-  \item $\text{Angle}\,\theta$
++  \item Side $a$
++  \item Side $b$
++  \item Angle $\theta$
+ \end{enumerate}
+ \item Express the volume of a right circular cylinder as a function of two variables:
+ \begin{enumerate}[label=(\alph*)]
+@@ -82,17 +82,17 @@
+ \item Given $f(x,y)=15x^{3}-3xy+15y^{3}$, find all points at which $f_{x}(x,y)=f_{y}(x,y)=0$ simultaneously.
+ \item Show that $z=e^{x}\sin y$ satisfies the equation $\frac{\partial^{2}z}{\partial x^{2}}+\frac{\partial^{2}z}{\partial y^{2}}=0$.
+ \item Show that $f(x,y)=\ln(x^{2}+y^{2})$ solves Laplace's equation $\frac{\partial^{2}z}{\partial x^{2}}+\frac{\partial^{2}z}{\partial y^{2}}=0$.
+-\item Show that $z=e^{-t}\cos(\frac{x}{c})$ satisfies the heat equation $\frac{\partial z}{\partial t}=c^{2}\left( \frac{\partial^{2}z}{\partial x^{2}} \right)$
++\item Show that $z=e^{-t}\cos(\frac{x}{c})$ satisfies the heat equation $\frac{\partial z}{\partial t}=c^{2}\left( \frac{\partial^{2}z}{\partial x^{2}} \right)$.
+ \item Find $\lim_{\Delta x\to0}\frac{f(x+\Delta x,\,y)-f(x,y)}{\Delta x}$ for $f(x,y)=-7x-2xy+7y$.
+ \item Find $\lim_{\Delta y\to0}\frac{f(x,y+\Delta y)-f(x,y)}{\Delta y}$ for $f(x,y)=-7x-2xy+7y$.
+ \item Find $\lim_{\Delta x\to0}\frac{\Delta f}{\Delta x}=\lim_{\Delta x\to0}\frac{f(x+\Delta x,y)-f(x,y)}{\Delta x}$ for $f(x,y)=x^{2}y^{2}+xy+y$.
+ \item Find $\lim_{\Delta x\to0}\frac{\Delta f}{\Delta x}=\lim_{\Delta x\to0}\frac{f(x+\Delta x,y)-f(x,y)}{\Delta x}$ for $f(x,y)=\sin(xy)$.
+-\item The function $P(T,V)=\frac{nRT}{V}$ gives the pressure at a point in a gas as a function of temperature $T$ and volume $V$. The letters $n\,\text{and}\,R$ are constants. Find $\frac{\partial P}{\partial V}$ and $\frac{\partial P}{\partial T}$, and explain what these quantities represent.
+-\item The equation for heat flow in the $xy\text{-plane}$ is $\frac{\partial f}{\partial t}=\frac{\partial^{2}f}{\partial x^{2}}+\frac{\partial^{2}f}{\partial y^{2}}$. Show that $f(x,y,t)=e^{-2t}\sin x\sin y$ is a solution.
++\item The function $P(T,V)=\frac{nRT}{V}$ gives the pressure at a point in a gas as a function of temperature $T$ and volume $V$. The letters $n$ and $R$ are constants. Find $\frac{\partial P}{\partial V}$ and $\frac{\partial P}{\partial T}$, and explain what these quantities represent.
++\item The equation for heat flow in the $xy$-plane is $\frac{\partial f}{\partial t}=\frac{\partial^{2}f}{\partial x^{2}}+\frac{\partial^{2}f}{\partial y^{2}}$. Show that $f(x,y,t)=e^{-2t}\sin x\sin y$ is a solution.
+ \item The basic wave equation is $f_{tt}=f_{xx}$. Verify that $f(x,t)=\sin(x+t)$ and $f(x,t)=\sin(x-t)$ are solutions.
+ \item The law of cosines can be thought of as a function of three variables. Let $x,y$, and $\theta$ be two sides of any triangle where the angle $\theta$ is the included angle between the two sides. Then, $F(x,y,\theta)=x^{2}+y^{2}-2xy\cos \theta$ gives the square of the third side of the triangle. Find $\frac{\partial F}{\partial \theta}$ and $\frac{\partial F}{\partial x}$ when $x=2,y=3$, and $\theta=\frac{\pi}{6}$.
+ \item Suppose the sides of a rectangle are changing with respect to time. The first side is changing at a rate of $2$ in./sec whereas the second side is changing at the rate of $4$ in/sec. How fast is the diagonal of the rectangle changing when the first side measures $16$ in. and the second side measures $20$ in.? (Round answer to three decimal places.)
+-\item A Cobb-Douglas production function is $f(x,y)=200x^{0.7}y^{0.3}$, where $x\,\text{and}\,y$ represent the amount of labor and capital available. Let $x=500$ and $y=1000$. Find $\frac{\partial f}{\partial x}$ and $\frac{\partial f}{\partial y}$ at these values, which represent the marginal productivity of labor and capital, respectively.
++\item A Cobb-Douglas production function is $f(x,y)=200x^{0.7}y^{0.3}$, where $x$ and $y$ represent the amount of labor and capital available. Let $x=500$ and $y=1000$. Find $\frac{\partial f}{\partial x}$ and $\frac{\partial f}{\partial y}$ at these values, which represent the marginal productivity of labor and capital, respectively.
+ \item The apparent temperature index is a measure of how the temperature feels, and it is based on two variables: $h$, which is relative humidity, and $t$, which is the air temperature. $A=0.885t-22.4h+1.20th-0.544$. Find $\frac{\partial A}{\partial t}$ and $\frac{\partial A}{\partial h}$ when $t=20^\circ \text{F}$ and $h=0.90$.
+ \end{enumerate}
+ 

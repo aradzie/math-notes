@@ -1,0 +1,93 @@
+% OpenStax Calculus Volume 3 -- Section 6.7 Exercises: Stokes’ Theorem
+% Exercises reproduced from OpenStax, licensed under CC BY 4.0.
+% Source: https://openstax.org/books/calculus-volume-3/pages/6-7-stokes-theorem
+\documentclass{exercises}
+\title{OpenStax Calculus Volume 3}
+\subtitle{Section 6.7 Exercises: Stokes’ Theorem}
+\sourceurl{https://openstax.org/books/calculus-volume-3/pages/6-7-stokes-theorem}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+
+For the following exercises, without using Stokes' theorem, calculate directly both the flux of $\text{curl}\,\mathbf{F}\cdot \mathbf{N}$ over the given surface and the circulation integral around its boundary, assuming all boundaries have positive orientation.
+
+\begin{enumerate}[start=1]
+\item $\mathbf{F}(x,y,z)=y^{2}\mathbf{i}+z^{2}\mathbf{j}+x^{2}\mathbf{k}$; S is the first-octant portion of plane $x+y+z=1$.
+\item $\mathbf{F}(x,y,z)=z\mathbf{i}+x\mathbf{j}+y\mathbf{k}$; S is hemisphere $z={(a^{2}-x^{2}-y^{2})}^{1/2}$.
+\item $\mathbf{F}(x,y,z)=y^{2}\mathbf{i}+2x\mathbf{j}+5\mathbf{k}$; S is hemisphere $z={(4-x^{2}-y^{2})}^{1/2}$.
+\item $\mathbf{F}(x,y,z)=z\mathbf{i}+2x\mathbf{j}+3y\mathbf{k}$; S is upper hemisphere $z=\sqrt{9-x^{2}-y^{2}}$.
+\item $\mathbf{F}(x,y,z)=(x+2z)\mathbf{i}+(y-x)\mathbf{j}+(z-y)\mathbf{k}$; S is a triangular region with vertices (3, 0, 0), (0, 3/2, 0), and (0, 0, 3).
+\item $\mathbf{F}(x,y,z)=2y\mathbf{i}-6z\mathbf{j}+3x\mathbf{k}$; S is a portion of paraboloid $z=4-x^{2}-y^{2}$ and is above the xy-plane.
+\end{enumerate}
+
+For the following exercises, use Stokes' theorem to evaluate $\iint_{S}(\text{curl}\,\mathbf{F}\cdot \mathbf{N})\,dS$ for the vector fields and surface.
+
+\begin{enumerate}[resume]
+\item $\mathbf{F}(x,y,z)=xy\mathbf{i}-z\mathbf{j}$ and S is the surface of the cube $0\le x\le1,0\le y\le1,0\le z\le1$, except for the face where $z=0$, and using the outward unit normal vector.
+\item $\mathbf{F}(x,y,z)=xy\mathbf{i}+x^{2}\mathbf{j}+z^{2}\mathbf{k}$; and S is the part of paraboloid $z=x^{2}+y^{2}$ below plane $z=y$, and using the outward normal vector.
+\item $\mathbf{F}(x,y,z)=4y\mathbf{i}+z\mathbf{j}+2y\mathbf{k}$ and S is the part of sphere $x^{2}+y^{2}+z^{2}=4$ above plane $z=0$, and using the outward normal vector
+\item Use Stokes' theorem to evaluate $\underset{C}{\int}[2xy^{2}z\,dx+2x^{2}yzdy+(x^{2}y^{2}-2z)dz]$, where C is the curve given by $x=\cos t,y=\sin t,z=\sin t,0\le t\le2\pi$, traversed in the direction of increasing t. \\ \textit{[Figure: A vector field in three dimensional space. The arrows are larger the further they are from the x, y plane. The arrows curve up from below the x, y plane and slightly above it. The rest tend to curve down and horizontally. An oval-shaped curve is drawn through the middle of the space.]}
+\item \techrequired Use a computer algebra system (CAS) and Stokes' theorem to approximate line integral $\underset{C}{\int}(y\,dx+zdy+xdz)$, where C is the intersection of plane $x+y=2$ and surface $x^{2}+y^{2}+z^{2}=2(x+y)$, traversed counterclockwise viewed from the origin.
+\item \techrequired Use a CAS and Stokes' theorem to approximate line integral $\underset{C}{\int}(3y\,dx+2zdy-5xdz)$, where C is the intersection of the xy-plane and hemisphere $z=\sqrt{1-x^{2}-y^{2}}$, traversed counterclockwise viewed from the top---that is, from the positive z-axis toward the xy-plane.
+\item \techrequired Use a CAS and Stokes' theorem to approximate line integral $\underset{C}{\int}[(1+y)z\,dx+(1+z)xdy+(1+x)ydz]$, where C is a triangle with vertices $(1,0,0)$, $(0,1,0)$, and $(0,0,1)$ oriented counterclockwise.
+\item Use Stokes' theorem to evaluate $\iint_{S}\text{curl}\,\mathbf{F}\cdot d\mathbf{S}$, where $\mathbf{F}(x,y,z)=e^{xy}\cos z\mathbf{i}+x^{2}z\mathbf{j}+xy\mathbf{k}$, and S is half of sphere $x=\sqrt{1-y^{2}-z^{2}}$, oriented out toward the positive x-axis.
+\item \techrequired Use a CAS and Stokes' theorem to evaluate $\iint_{S}(\text{curl}\,\mathbf{F}\cdot \mathbf{N})\,dS$, where $\mathbf{F}(x,y,z)=x^{2}y\mathbf{i}+xy^{2}\mathbf{j}+z^{3}\mathbf{k}$ and S is the curve of the part of plane $3x+2y+z=6$ above cylinder $x^{2}+y^{2}=4$, oriented clockwise when viewed from above.
+\item \techrequired Use a CAS and Stokes' theorem to evaluate $\underset{S}{\iint}\text{curl}\,\mathbf{F}\cdot d\mathbf{S}$, where $\mathbf{F}(x,y,z)=(\sin(y+z)-yx^{2}-\frac{y^{3}}{3})\mathbf{i}+x\cos(y+z)\mathbf{j}+\cos(2y)\mathbf{k}$ and S consists of the top and the four sides but not the bottom of the cube with vertices $(\pm1,\pm1,\pm1)$, oriented outward.
+\item \techrequired Use a CAS and Stokes' theorem to evaluate $\underset{S}{\iint}\text{curl}\,\mathbf{F}\cdot d\mathbf{S}$, where $\mathbf{F}(x,y,z)=z^{2}\mathbf{i}-3xy\mathbf{j}+x^{3}y^{3}\mathbf{k}$ and S is the top part of $z=5-x^{2}-y^{2}$ above plane $z=1$, and S is oriented upward.
+\item Use Stokes' theorem to evaluate $\iint_{S}(\text{curl}\,\mathbf{F}\cdot \mathbf{N})\,dS$, where $\mathbf{F}(x,y,z)=z^{2}\mathbf{i}+y^{2}\mathbf{j}+x\mathbf{k}$ and S is a triangle with vertices (1, 0, 0), (0, 1, 0) and (0, 0, 1) with upward orientation.
+\item Use Stokes' theorem to evaluate line integral $\underset{C}{\int}(z\,dx+xdy+ydz)$, where C is a triangle with vertices (3, 0, 0), (0, 0, 2), and (0, 6, 0) traversed in the given order.
+\item Use Stokes' theorem to evaluate $\underset{C}{\int}(\frac{1}{2}y^{2}\,dx+zdy+xdz)$, where C is the curve of intersection of plane $x+z=1$ and ellipsoid $x^{2}+2y^{2}+z^{2}=1$, oriented clockwise from the origin. \\ \textit{[Figure: A diagram of an intersecting plane and ellipsoid in three dimensional space. There is an orange curve drawn to show the intersection.]}
+\item Use Stokes' theorem to evaluate $\iint_{S}(\text{curl}\,\mathbf{F}\cdot \mathbf{N})\,dS$, where $\mathbf{F}(x,y,z)=x\mathbf{i}+y^{2}\mathbf{j}+ze^{xy}\mathbf{k}$ and S is the part of surface $z=1-x^{2}-2y^{2}$ with $z\ge0,\,$ oriented upward.
+\item Use Stokes' theorem to evaluate $\iint_{S}(\text{curl}\,\mathbf{F}\cdot \mathbf{N})\,dS$, for vector field $\mathbf{F}(x,y,z)=z\mathbf{i}+3x\mathbf{j}+2z\mathbf{k}$ where S is surface $z=1-x^{2}-y^{2},z\ge0$, C is boundary circle $x^{2}+y^{2}=1$, and S is oriented in the positive z-direction.
+\item Use Stokes' theorem to evaluate $\iint_{S}(\text{curl}\,\mathbf{F}\cdot \mathbf{N})\,dS$, for vector field $\mathbf{F}(x,y,z)=-\frac{3}{2}y^{2}\mathbf{i}-2xy\mathbf{j}+yz\mathbf{k}$, where S is that part of the surface of plane $x+y+z=1$ contained within triangle C with vertices (1, 0, 0), (0, 1, 0), and (0, 0, 1), traversed counterclockwise as viewed from above.
+\item A certain closed path C in plane $2x+2y+z=1$ is known to project onto unit circle $x^{2}+y^{2}=1$ in the xy-plane. Let c be a constant and let $\mathbf{R}(x,y,z)=x\mathbf{i}+y\mathbf{j}+z\mathbf{k}$. Use Stokes' theorem to evaluate $\int_{C}^{}(c\mathbf{k}\times \mathbf{R})\cdot d\mathbf{r}$.
+\item Use Stokes' theorem and let C be the boundary of surface $z=x^{2}+y^{2}$ with $0\le x\le2$ and $0\le y\le1$, oriented with upward facing normal. Define \[\mathbf{F}(x,y,z)=[\sin(x^{3})+xz]\mathbf{i}+(x-yz)\mathbf{j}+\cos(z^{4})\mathbf{k}\,\text{and evaluate}\,\int_{C}\mathbf{F}\cdot d\mathbf{r}.\]
+\item Let S be hemisphere $x^{2}+y^{2}+z^{2}=4$ with $z\ge0$, oriented upward. Let $\mathbf{F}(x,y,z)=x^{2}e^{yz}\mathbf{i}+y^{2}e^{xz}\mathbf{j}+z^{2}e^{xy}\mathbf{k}$ be a vector field. Use Stokes' theorem to evaluate $\iint_{S}\text{curl}\,\mathbf{F}\cdot d\mathbf{S}$.
+\item Let $\mathbf{F}(x,y,z)=xy\mathbf{i}+(e^{z^{2}}+y)\mathbf{j}+(x+y)\mathbf{k}$ and let S be the graph of function $y=\frac{x^{2}}{9}+\frac{z^{2}}{9}-1$ with $y\le0$ oriented so that the normal vector of S has a positive j component. Use Stokes' theorem to compute integral $\iint_{S}\text{curl}\,\mathbf{F}\cdot d\mathbf{S}$.
+\item Use Stokes' theorem to evaluate $\int_{C}\mathbf{F}\cdot \,d\mathbf{r}$ where $\mathbf{F}(x,y,z)=y\mathbf{i}+z\mathbf{j}+x\mathbf{k}$ and C is a triangle with vertices (0, 0, 0), (2, 0, 0) and $(0,-2,2)$ oriented counterclockwise when viewed from above.
+\item Use the surface integral in Stokes' theorem to calculate the circulation of field F, $\mathbf{F}(x,y,z)=x^{2}y^{3}\mathbf{i}+\mathbf{j}+z\mathbf{k}$ around C, which is the intersection of cylinder $x^{2}+y^{2}=4$ and hemisphere $x^{2}+y^{2}+z^{2}=16,z\ge0$, oriented counterclockwise when viewed from above. \\ \textit{[Figure: A diagram in three dimensions of a vector field and the intersection of a cylinder and hemisphere. The arrows are horizontal and have negative x components for negative y components and have positive x components for positive y components. The curve of intersection between the hemisphere and cylinder is drawn in blue.]}
+\item Use Stokes' theorem to compute $\iint_{S}\text{curl}\,\mathbf{F}\cdot d\mathbf{S}$, where $\mathbf{F}(x,y,z)=\mathbf{i}+xy^{2}\mathbf{j}+xy^{2}\mathbf{k}$ and S is a part of plane $y+z=2$ inside cylinder $x^{2}+y^{2}=1$ and oriented upward. \\ \textit{[Figure: A diagram of a vector field in three dimensional space showing the intersection of a plane and a cylinder. The curve where the plane and cylinder intersect is drawn in blue.]}
+\item Use Stokes' theorem to evaluate $\iint_{S}\text{curl}\,\mathbf{F}\cdot d\mathbf{S}$, where $\mathbf{F}(x,y,z)=-y^{2}\mathbf{i}+x\mathbf{j}+z^{2}\mathbf{k}$ and S is the part of plane $x+y+z=1$ in the first octant and oriented upward $x\ge0,\,y\ge0,\,z\ge0$.
+\item Let $\mathbf{F}(x,y,z)=xy\mathbf{i}+2z\mathbf{j}-2y\mathbf{k}$ and let C be the intersection of plane $x+z=5$ and cylinder $x^{2}+y^{2}=9$, which is oriented counterclockwise when viewed from the top. Compute the line integral of F over C using Stokes' theorem.
+\item \techrequired Use a CAS and let $\mathbf{F}(x,y,z)=xy^{2}\mathbf{i}+(yz-x)\mathbf{j}+e^{yxz}\mathbf{k}$. Use Stokes' theorem to compute the surface integral of curl F over surface S with inward orientation consisting of cube $[0,1]\times [0,1]\times [0,1]$ with the right side missing.
+\item Let S be ellipsoid $\frac{x^{2}}{4}+\frac{y^{2}}{9}+z^{2}=1$ oriented outward and let F be a vector field with component functions that have continuous partial derivatives. Compute $\iint_{s}\text{curl}\,\mathbf{F}\cdot \,d\mathbf{S}$
+\item Let S be the part of paraboloid $z=9-x^{2}-y^{2}$ with $z\ge0$ oriented upward. Verify Stokes' theorem for vector field $\mathbf{F}(x,y,z)=3z\mathbf{i}+4x\mathbf{j}+2y\mathbf{k}$.
+\item \techrequired Use a CAS and Stokes' theorem to evaluate $\int_{C}\mathbf{F}\cdot \,d\mathbf{r}$ if $\mathbf{F}(x,y,z)=(3z-\sin x)\mathbf{i}+(x^{2}+e^{y})\mathbf{j}+(y^{3}-\cos z)\mathbf{k}$, where C is the curve given by $x=\cos t,y=\sin t,z=1$, $0\le t\le2\pi$.
+\item \techrequired Use a CAS and Stokes' theorem to evaluate $\iint_{S}\text{curl}\mathbf{F}\cdot d\mathbf{S}$, where $\mathbf{F}(x,y,z)=2y\mathbf{i}+e^{z}\mathbf{j}-\arctan x\mathbf{k}$ with S as a portion of paraboloid $z=4-x^{2}-y^{2}$ cut off by the xy-plane oriented upward.
+\item \techrequired Use a CAS to evaluate $\iint_{S}\text{curl}\mathbf{F}\cdot d\mathbf{S}$, where $\mathbf{F}(x,y,z)=2z\mathbf{i}+3x\mathbf{j}+5y\mathbf{k}$ and S is the surface defined parametrically by $\mathbf{r}(r,\theta)=r\cos \theta \mathbf{i}+r\sin \theta \mathbf{j}+(4-r^{2})\mathbf{k}$ $(0\le \theta \le2\pi,\,0\le r\le3)$.
+\item Let S be paraboloid $z=a(1-x^{2}-y^{2})$, for $z\ge0$, where $a>0$ is a real number. Let $\mathbf{F}=\langle x-y,y+z,z-x\rangle$. For what value(s) of a (if any) does $\iint_{S}\text{curl}\,\mathbf{F}\cdot \,d\mathbf{S}$ have its maximum value?
+\end{enumerate}
+
+For the following application exercises, the goal is to evaluate $A=\iint_{S}\text{curl}\,\mathbf{F}\cdot \,d\mathbf{S}$ where $\mathbf{F}=\langle xz,-xz,xy\rangle$ and S is the upper half of ellipsoid $x^{2}+y^{2}+8z^{2}=1,\,\text{where}\,z\ge0$.
+
+\begin{enumerate}[resume]
+\item Evaluate a surface integral over a more convenient surface to find the value of A.
+\item Evaluate A using a line integral.
+\item Take paraboloid $z=x^{2}+y^{2}$, for $0\le z\le4$, and slice it with plane $y=0$. Let S be the surface that remains for $y\ge0$, including the planar surface in the xz-plane. Let C be the semicircle and line segment that bounded the cap of S in plane $z=4$ with counterclockwise orientation. Let $\mathbf{F}=\langle2z+y,2x+z,2y+x\rangle$. Evaluate $\iint_{S}\text{curl}\,\mathbf{F}\cdot \,d\mathbf{S}$ \\ \textit{[Figure: A diagram of a vector field in three dimensional space where a paraboloid with vertex at the origin, plane at y=0, and plane at z=4 intersect. The remaining surface is the half of a paraboloid under z=4 and above y=0.]}
+\end{enumerate}
+
+For the following exercises, let S be the disk enclosed by curve
+
+
+$C:\mathbf{r}(t)=\langle \cos \phi \cos t,\sin t,\sin \phi \cos t\rangle$, for $0\le t\le2\pi$, where $0\le \phi \le \frac{\pi}{2}$ is a fixed angle.
+
+\begin{enumerate}[resume]
+\item What is the length of C in terms of $\phi$?
+\item What is the circulation of C of vector field $\mathbf{F}=\langle-y,-z,x\rangle$ as a function of $\phi$?
+\item For what value of $\phi$ is the circulation a maximum?
+\item Circle C in plane $x+y+z=8$ has radius 4 and center (2, 3, 3). Evaluate $\int_{C}\mathbf{F}\cdot d\mathbf{r}$ for $\mathbf{F}=\langle0,-z,2y\rangle$, where C has a counterclockwise orientation when viewed from above.
+\item \textit{[Note: this exercise is reproduced verbatim from OpenStax; the closing instruction ``compute the curl of $\mathbf{v}$ in a clockwise rotation'' does not read as a well-formed mathematical task and may reflect an incomplete or malformed exercise in the source itself.]} Velocity field $\mathbf{v}=\langle0,1-x^{2},0\rangle$, for $|x|\le1\,\text{and}\,|z|\le1$, represents a horizontal flow in the y-direction. Compute the curl of v in a clockwise rotation.
+\item Evaluate integral $\iint_{S}\text{curl}\,\mathbf{F}\cdot \,d\mathbf{S}$ where $\mathbf{F}=-xz\mathbf{i}+yz\mathbf{j}+xye^{z}\mathbf{k}$ and S is the cap of paraboloid $z=5-x^{2}-y^{2}$ above plane $z=3$, and n points in the positive z-direction on S.
+\end{enumerate}
+
+For the following exercises, use Stokes' theorem to find the circulation of the following vector fields around any smooth, simple closed curve C.
+
+\begin{enumerate}[resume]
+\item $\mathbf{F}=\nabla(x\sin ye^{z})$
+\item $\mathbf{F}=\langle y^{2}z^{3},2xyz^{3},3xy^{2}z^{2}\rangle$
+\end{enumerate}
+
+\end{document}

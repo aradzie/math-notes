@@ -1,0 +1,103 @@
+OpenStax's source MathML for exercise 49's second initial condition encodes
+the negative value as <mn>–24</mn> -- an en dash (U+2013) fused directly
+into the numeric token -- instead of the proper separate <mo>-</mo><mn>24</mn>
+structure every sibling exercise in this same group uses. The source for
+exercises 50 and 51 likewise omits punctuation between each differential
+equation and its initial conditions. These source-data defects are repaired
+here rather than generalized in the converter.
+
+The source also runs the shared instruction for exercises 11--30 directly
+onto exercise 10, with no structural separator. The intended boundary is
+unambiguous from the change in task and is restored here. Remaining changes
+put variables in math mode, replace the raw shared [T] marker with the class
+macro, and move prose punctuation and spacing outside math mode.
+
+--- /tmp/raw.tex
++++ vol3-7-1-second-order-linear-equations.tex
+@@ -23,13 +23,18 @@
+ \item $y''+(\frac{x+3}{y})y'=0$
+ \end{enumerate}
+ 
+-For each of the following problems, verify that the given function is a solution to the differential equation. Use a graphing utility to graph the particular solutions for several values of c$_{1}$ and c$_{2}$. What do the solutions have in common?
++For each of the following problems, verify that the given function is a solution to the differential equation. Use a graphing utility to graph the particular solutions for several values of $c_{1}$ and $c_{2}$. What do the solutions have in common?
+ 
+ \begin{enumerate}[resume]
+ \item \techrequired$y''+2y'-3y=0$; $y(x)=c_{1}e^{x}+c_{2}e^{-3x}$
+ \item \techrequired$x^{2}y''-2y-3x^{2}+1=0$; $y(x)=c_{1}x^{2}+c_{2}x^{-1}+x^{2}\ln (x)+\frac{1}{2}$
+ \item \techrequired$y''+14y'+49y=0$; $y(x)=c_{1}e^{-7x}+c_{2}xe^{-7x}$
+-\item \techrequired$6y''-49y'+8y=0$; $y(x)=c_{1}e^{x/6}+c_{2}e^{8x}$ Find the general solution to the linear differential equation.
++\item \techrequired$6y''-49y'+8y=0$; $y(x)=c_{1}e^{x/6}+c_{2}e^{8x}$
++\end{enumerate}
++
++Find the general solution to the linear differential equation.
++
++\begin{enumerate}[resume]
+ \item $y''-3y'-10y=0$
+ \item $y''-7y'+12y=0$
+ \item $y''+4y'+4y=0$
+@@ -55,27 +60,27 @@
+ Solve the initial-value problem.
+ 
+ \begin{enumerate}[resume]
+-\item $y''+5y'+6y=0,\,y(0)=0,\,\,y'(0)=-2$
+-\item $y''+2y'-8y=0,\,y(0)=5,\,\,y'(0)=4$
+-\item $y''+4y=0,\,y(0)=3,\,\,y'(0)=10$
+-\item $y''-18y'+81y=0,\,y(0)=1,\,\,y'(0)=5$
+-\item $y''-y'-30y=0,\,y(0)=1,\,\,y'(0)=-16$
+-\item $4y''+4y'-8y=0,\,y(0)=2,\,\,y'(0)=1$
+-\item $25y''+10y'+y=0,\,y(0)=2,\,\,y'(0)=1$
+-\item $y''+y=0,\,y(\pi)=1,\,\,y'(\pi)=-5$
++\item $y''+5y'+6y=0$, $y(0)=0$, $y'(0)=-2$
++\item $y''+2y'-8y=0$, $y(0)=5$, $y'(0)=4$
++\item $y''+4y=0$, $y(0)=3$, $y'(0)=10$
++\item $y''-18y'+81y=0$, $y(0)=1$, $y'(0)=5$
++\item $y''-y'-30y=0$, $y(0)=1$, $y'(0)=-16$
++\item $4y''+4y'-8y=0$, $y(0)=2$, $y'(0)=1$
++\item $25y''+10y'+y=0$, $y(0)=2$, $y'(0)=1$
++\item $y''+y=0$, $y(\pi)=1$, $y'(\pi)=-5$
+ \end{enumerate}
+ 
+ Solve the boundary-value problem, if possible.
+ 
+ \begin{enumerate}[resume]
+-\item $y''+y'-42y=0,\,y(0)=0,\,\,y(1)=2$
+-\item $9y''+y=0,\,y(\frac{3\pi}{2})=6,\,\,y(0)=-8$
+-\item $y''+10y'+34y=0,\,y(0)=6,\,\,y(\pi)=2$
+-\item $y''+7y'-60y=0,\,y(0)=4,\,\,y(2)=0$
+-\item $y''-4y'+4y=0,\,y(0)=2,\,\,y(1)=-1$
+-\item $y''-5y'=0,\,y(0)=3,\,\,y(-1)=2$
+-\item $y''+9y=0,\,y(0)=4,\,\,y(\frac{\pi}{3})=-4$
+-\item $4y''+25y=0,\,y(0)=2,\,\,y(2\pi)=-2$
++\item $y''+y'-42y=0$, $y(0)=0$, $y(1)=2$
++\item $9y''+y=0$, $y(\frac{3\pi}{2})=6$, $y(0)=-8$
++\item $y''+10y'+34y=0$, $y(0)=6$, $y(\pi)=2$
++\item $y''+7y'-60y=0$, $y(0)=4$, $y(2)=0$
++\item $y''-4y'+4y=0$, $y(0)=2$, $y(1)=-1$
++\item $y''-5y'=0$, $y(0)=3$, $y(-1)=2$
++\item $y''+9y=0$, $y(0)=4$, $y(\frac{\pi}{3})=-4$
++\item $4y''+25y=0$, $y(0)=2$, $y(2\pi)=-2$
+ \item Find a differential equation with a general solution that is $y=c_{1}e^{x/5}+c_{2}e^{-4x}$.
+ \item Find a differential equation with a general solution that is $y=c_{1}e^{x}+c_{2}e^{-4x/3}$.
+ \end{enumerate}
+@@ -86,14 +91,14 @@
+ (a) Solve the initial value problem.
+ 
+ 
+-(b) [T] Use a graphing utility to graph the particular solution.
++(b) \techrequired Use a graphing utility to graph the particular solution.
+ 
+ \begin{enumerate}[resume]
+-\item $y''+64y=0;\,y(0)=3,\,y'(0)=–24$
+-\item $y''-2y'+10y=0\,y(0)=1,\,y'(0)=13$
+-\item $y''+5y'+15y=0\,y(0)=-2,\,y'(0)=7$
++\item $y''+64y=0$; $y(0)=3$, $y'(0)=-24$
++\item $y''-2y'+10y=0$, $y(0)=1$, $y'(0)=13$
++\item $y''+5y'+15y=0$, $y(0)=-2$, $y'(0)=7$
+ \item (Principle of superposition) Prove that if $y_{1}(x)$ and $y_{2}(x)$ are solutions to a linear homogeneous differential equation, $y''+p(x)y'+q(x)y=0$, then the function $y(x)=c_{1}y_{1}(x)+c_{2}y_{2}(x)$, where $c_{1}$ and $c_{2}$ are constants, is also a solution.
+-\item Prove that if a, b, and c are positive constants, then all solutions to the second-order linear differential equation $ay''+by'+cy=0$ approach zero as $x\to \infty$. (Hint: Consider three cases: two distinct roots, repeated real roots, and complex conjugate roots.)
++\item Prove that if $a$, $b$, and $c$ are positive constants, then all solutions to the second-order linear differential equation $ay''+by'+cy=0$ approach zero as $x\to \infty$. (Hint: Consider three cases: two distinct roots, repeated real roots, and complex conjugate roots.)
+ \end{enumerate}
+ 
+ \end{document}
+
+

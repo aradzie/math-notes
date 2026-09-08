@@ -25,7 +25,10 @@
       "Bash(git log *)",
       "Bash(git show *)",
       "Bash(git branch)",
-      "Bash(git branch *)"
+      "Bash(git branch *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(pdftoppm *)"
     ]
   },
   "hooks": {

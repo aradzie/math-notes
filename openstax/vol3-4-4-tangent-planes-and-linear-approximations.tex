@@ -1,0 +1,105 @@
+% OpenStax Calculus Volume 3 -- Section 4.4 Exercises: Tangent Planes and Linear Approximations
+% Exercises reproduced from OpenStax, licensed under CC BY 4.0.
+% Source: https://openstax.org/books/calculus-volume-3/pages/4-4-tangent-planes-and-linear-approximations
+\documentclass{exercises}
+\title{OpenStax Calculus Volume 3}
+\subtitle{Section 4.4 Exercises: Tangent Planes and Linear Approximations}
+\sourceurl{https://openstax.org/books/calculus-volume-3/pages/4-4-tangent-planes-and-linear-approximations}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+
+For the following exercises, find a unit normal vector to the surface at the indicated point.
+
+\begin{enumerate}[start=1]
+\item $z=f(x,y)=x^{3},(2,-1,8)$
+\item $\ln(\frac{x}{y-z})=0$ when $x=y=1$
+\end{enumerate}
+
+For the following exercises, as a useful review for techniques used in this section, find a normal vector and a tangent vector at point $P$.
+
+\begin{enumerate}[resume]
+\item $x^{2}+xy+y^{2}=3,P(-1,-1)$
+\item ${(x^{2}+y^{2})}^{2}=9(x^{2}-y^{2}),P(\sqrt{2},1)$
+\item $xy^{2}-2x^{2}+y+5x=6,P(4,2)$
+\item $2x^{3}-x^{2}y^{2}=3x-y-7,P(1,-2)$
+\item $ze^{x^{2}-y^{2}}-3=0$, $P(2,2,3)$
+\end{enumerate}
+
+For the following exercises, find the equation for the tangent plane to the surface at the indicated point. (Hint: Solve for $z$ in terms of $x$ and $y$.)
+
+\begin{enumerate}[resume]
+\item $-8x-3y-7z=-19,P(1,-1,2)$
+\item $z=-9x^{2}-3y^{2},P(2,1,-39)$
+\item $x^{2}+10xyz+y^{2}+8z^{2}=0,P(-1,-1,-1)$
+\item $z=\ln(10x^{2}+2y^{2}+1),P(0,0,0)$
+\item $z=e^{7x^{2}+4y^{2}}$, $P(0,0,1)$
+\item $xy+yz+zx=11,P(1,2,3)$
+\item $x^{2}+4y^{2}=z^{2},P(3,2,5)$
+\item $x^{3}+y^{3}=3xyz,P(1,2,\frac{3}{2})$
+\item $z=axy,P(1,\frac{1}{a},1)$
+\item $z=\sin x+\sin y+\sin(x+y),P(0,0,0)$
+\item $z=h(x,y)=\ln \sqrt{x^{2}+y^{2}},P(3,4)$
+\item $z=x^{2}-2xy+y^{2},P(1,2,1)$
+\end{enumerate}
+
+For the following exercises, find parametric equations for the normal line to the surface at the indicated point. (Recall that to find the equation of a line in space, you need a point on the line, $P_{0}(x_{0},y_{0},z_{0})$, and a vector $n=\langle a,b,c\rangle$ that is parallel to the line. Then the equation of the line is $x-x_{0}=at,y-y_{0}=bt,z-z_{0}=ct$.)
+
+\begin{enumerate}[resume]
+\item $-3x+9y+4z=-4,P(1,-1,2)$
+\item $z=5x^{2}-2y^{2},P(2,1,18)$
+\item $x^{2}-8xyz+y^{2}+6z^{2}=0,P(1,1,1)$
+\item $z=\ln(3x^{2}+7y^{2}+1),P(0,0,0)$
+\item $z=e^{4x^{2}+6y^{2}},P(0,0,1)$
+\item $z=x^{2}-2xy+y^{2}$ at point $P(1,2,1)$
+\end{enumerate}
+
+For the following exercises, use the figure shown here.
+
+
+\textit{[Figure: A surface in the $xyz$-plane is marked as $z=f(x,y)$. This surface has a tangent plane at $(x_{0},y_{0},z_{0})$, with the corresponding point $(x_{0},y_{0})$ marked on the $xy$-plane. Also marked on the $xy$-plane is the point $(x_{0}+\Delta x,y_{0}+\Delta y)$. From this point, a line is drawn to the surface and three points are marked. The first point is $C$, which is $(x_{0}+\Delta x,y_{0}+\Delta y,z_{0})$, then there is $B$, which is on the tangent plane, and then there is $A$, which is on the surface. The distance between $B$ and $C$ is marked $df(x_{0},y_{0})$.]}
+
+\begin{enumerate}[resume]
+\item The length of line segment $AC$ is equal to what mathematical expression?
+\item The length of line segment $BC$ is equal to what mathematical expression?
+\item Using the figure, explain what the length of line segment $AB$ represents.
+\end{enumerate}
+
+For the following exercises, complete each task.
+
+\begin{enumerate}[resume]
+\item Show that $f(x,y)=e^{xy}x$ is differentiable at point $(1,0)$.
+\item Find the total differential of the function $w=e^{y}\cos(x)+z^{2}$.
+\item Show that $f(x,y)=x^{2}+3y$ is differentiable at every point. In other words, show that $\Delta z=f(x+\Delta x,y+\Delta y)-f(x,y)=f_{x}\Delta x+f_{y}\Delta y+\epsilon_{1}\Delta x+\epsilon_{2}\Delta y$, where both $\epsilon_{1}$ and $\epsilon_{2}$ approach zero as $(\Delta x,\Delta y)$ approaches $(0,0)$.
+\item Find the total differential of the function $z=\frac{xy}{y+x}$ where $x$ changes from $10$ to $10.5$ and $y$ changes from $15$ to $13$.
+\item Let $z=f(x,y)=xe^{y}$. Compute $\Delta z$ from $P(1,2)$ to $Q(1.05,2.1)$ and then find the approximate change in $z$ from point $P$ to point $Q$. Recall $\Delta z=f(x+\Delta x,y+\Delta y)-f(x,y)$, and $dz$ and $\Delta z$ are approximately equal.
+\item The volume of a right circular cylinder is given by $V(r,h)=\pi r^{2}h$. Find the differential $dV$. Interpret the formula geometrically.
+\item See the preceding problem. Use differentials to estimate the volume of aluminum in an enclosed aluminum can with diameter $8.0\,\text{cm}$ and height $12\,\text{cm}$ if the aluminum is $0.04$ cm thick.
+\item Use the differential $dz$ to approximate the change in $z=\sqrt{4-x^{2}-y^{2}}$ as $(x,y)$ moves from point $(1,1)$ to point $(1.01,0.97)$. Compare this approximation with the actual change in the function.
+\item Let $z=f(x,y)=x^{2}+3xy-y^{2}$. Find the exact change in the function and the approximate change in the function as $x$ changes from $2.00$ to $2.05$ and $y$ changes from $3.00$ to $2.96$.
+\item The centripetal acceleration of a particle moving in a circle is given by $a(r,v)=\frac{v^{2}}{r}$, where $v$ is the velocity and $r$ is the radius of the circle. Approximate the maximum percent error in measuring the acceleration resulting from errors of $3\%$ in $v$ and $2\%$ in $r$. (Recall that the percentage error is the ratio of the amount of error over the original amount. So, in this case, the percentage error in $a$ is given by $\frac{da}{a}$.)
+\item The radius $r$ and height $h$ of a right circular cylinder are measured with possible errors of $4\%$ and $5\%$, respectively. Approximate the maximum possible percentage error in measuring the volume (Recall that the percentage error is the ratio of the amount of error over the original amount. So, in this case, the percentage error in $V$ is given by $\frac{dV}{V}$.)
+\item The base radius and height of a right circular cone are measured as $10$ in. and $25$ in., respectively, with a possible error in measurement of as much as $0.1$ in. each. Use differentials to estimate the maximum error in the calculated volume of the cone.
+\item The electrical resistance $R$ produced by wiring resistors $R_{1}$ and $R_{2}$ in parallel can be calculated from the formula $\frac{1}{R}=\frac{1}{R_{1}}+\frac{1}{R_{2}}$. If $R_{1}$ and $R_{2}$ are measured to be $7\Omega$ and $6\Omega$, respectively, and if these measurements are accurate to within $0.05\Omega$, estimate the maximum possible error in computing $R$. (The symbol $\Omega$ represents an ohm, the unit of electrical resistance.)
+\item The area of an ellipse with axes of length $2a$ and $2b$ is given by the formula $A=\pi ab$. Approximate the percent change in the area when $a$ increases by $2\%$ and $b$ increases by $1.5\%$.
+\item The period $T$ of a simple pendulum with small oscillations is calculated from the formula $T=2\pi \sqrt{\frac{L}{g}}$, where $L$ is the length of the pendulum and $g$ is the acceleration resulting from gravity. Suppose that $L$ and $g$ have errors of, at most, $0.5\%$ and $0.1\%$, respectively. Use differentials to approximate the maximum percentage error in the calculated value of $T$.
+\item Electrical power $P$ is given by $P=\frac{V^{2}}{R}$, where $V$ is the voltage and $R$ is the resistance. Approximate the maximum percentage error in calculating power if $120$ $V$ is applied to a $2000-\Omega$ resistor and the possible percent errors in measuring $V$ and $R$ are $3\%$ and $4\%$, respectively.
+\end{enumerate}
+
+For the following exercises, find the linear approximation of each function at the indicated point.
+
+\begin{enumerate}[resume]
+\item $f(x,y)=x\sqrt{y},\,P(1,4)$
+\item $f(x,y)=e^{x}\cos y$, $P(0,0)$
+\item $f(x,y)=\arctan(x+2y),P(1,0)$
+\item $f(x,y)=\sqrt{20-x^{2}-7y^{2}},\,P(2,1)$
+\item $f(x,y,z)=\sqrt{x^{2}+y^{2}+z^{2}},\,P(3,2,6)$
+\item \techrequired Find an equation of the tangent plane to the surface $f(x,y)=x^{2}+y^{2}$ at point $(1,2,5)$, and graph the surface and the tangent plane at the point.
+\item \techrequired Find the equation for the tangent plane to the surface at the indicated point, and graph the surface and the tangent plane: $z=\ln(10x^{2}+2y^{2}+1),P(0,0,0)$.
+\item \techrequired Find an equation of the tangent plane to the surface $z=f(x,y)=\sin(x+y^{2})$ at point $(\frac{\pi}{4},0,\frac{\sqrt{2}}{2})$, and graph the surface and the tangent plane.
+\end{enumerate}
+
+\end{document}

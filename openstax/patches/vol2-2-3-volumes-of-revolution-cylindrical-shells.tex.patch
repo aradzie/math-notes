@@ -1,0 +1,131 @@
+Manual review corrections, all local LaTeX/typographic defects rather than
+mathematical errors, except one probable spurious duplicate condition:
+
+1. Exercise 1 ("Bounded by the curves y=3x,x=0, and y=3..."): unlike its
+   four otherwise-identical siblings in the same list (all of which fuse
+   all three bounding equations into one math span with \,\text{and}\,),
+   this exercise split off the third equation into its own math span with
+   plain ", and " between. Normalized to match the sibling items' own
+   established convention in this file.
+
+2. Exercise "y = sin x^2, x = 0, and x = sqrt(pi)": unparenthesized
+   \sin x^{2} is ambiguous (sin(x^2) vs (sin x)^2) and inconsistent with
+   every other trig argument in this file, which is parenthesized (e.g.
+   \sin(\pi y), \cos(\pi x)). Added parentheses: \sin(x^{2}).
+
+3. Exercise "y = (1+x^2)^3, ...": redundant outer braces around an
+   already-parenthesized base, {(1+x^{2})}^{3}. Removed the redundant
+   braces: (1+x^{2})^{3}.
+
+4. Six exercises in the "use shells ... around the x-axis" list state
+   the x-axis/y-axis as a bare, unmathified fourth boundary condition
+   ("... and the x-axis"), while every other axis mention throughout this
+   entire file (over twenty occurrences) uses $x\text{-axis}$/
+   $y\text{-axis}$. Mathified these six to match this file's own
+   overwhelming, consistent convention.
+
+5. Exercise "x = cuberoot(27y) and x = 3y/4": the source is missing the
+   \, before \text{and} that every sibling item in this file carries,
+   so "27y" and "and" glue together with no separating space
+   (matches a previously found recurring OpenStax MathML/converter
+   spacing defect: an omitted <mspace> before an <mtext> token). Restored
+   the missing \, .
+
+6. Exercise "Consider the region enclosed by the graphs of y=f(x),
+   y=1+f(x), x=0, y=0, and x=a>0...": this is the only region-description
+   list in the whole corpus with five bounding conditions where every
+   sibling-style exercise (including the very same "two curves and two
+   vertical lines" pattern used throughout this file) has exactly four.
+   Given y=f(x) and y=1+f(x) already fully bound the region vertically
+   (they differ by the constant 1, so one is always above the other) and
+   x=0, x=a>0 bound it horizontally, "y=0" fits no natural role here and
+   makes the description an ill-defined five-condition list. Judged this
+   to be a spurious duplicated boundary (a converter/source defect of the
+   same shape as a previously found stray duplicate item) and removed it,
+   restoring the standard four-condition form. Flagging this one as a
+   judgment call in case the upstream source genuinely intends a fifth
+   condition.
+
+7. Final exercise: sentence punctuation trapped inside math mode,
+   "$f^{-1}(y).)$" -- the closing paren belongs to the outer "(Hint: ...)"
+   parenthetical in plain prose, not inside the math span. Corrected to
+   "$f^{-1}(y)$.)".
+
+8. Four "method of shells" application exercises (sphere, cone, ellipsoid,
+   cylinder) have accessibility figure descriptions that mention the same
+   $r$/$h$/$a$/$b$ variables used in the exercise's own math as bare,
+   unmathified letters in plain prose ("radius r", "height h", "a the
+   horizontal distance..."). Matching the corpus's own established
+   precedent (vol3-4-5-the-chain-rule.tex, where equivalent plain-prose
+   figure-description variable mentions were mathified to match the main
+   text), mathified these to $r$/$h$/$a$/$b$. Left the "radius of the path
+   between them is 2 units" donut description alone, since it names a
+   number, not a bare variable letter.
+
+--- /tmp/raw.tex
++++ vol2-2-3-volumes-of-revolution-cylindrical-shells.tex
+@@ -15,7 +15,7 @@
+ For the following exercises, find the volume generated when the region between the two curves is rotated around the given axis. Use both the shell method and the washer method. Use technology to graph the functions and draw a typical slice by hand.
+
+ \begin{enumerate}[start=1]
+-\item \techrequired Bounded by the curves $y=3x,x=0$, and $y=3$ rotated around the $y\text{-axis}$.
++\item \techrequired Bounded by the curves $y=3x,x=0,\,\text{and}\,y=3$ rotated around the $y\text{-axis}$.
+ \item \techrequired Bounded by the curves $y=3x,y=0,\,\text{and}\,x=3$ rotated around the $y\text{-axis}$.
+ \item \techrequired Bounded by the curves $y=3x,y=0,\,\text{and}\,y=3$ rotated around the $x\text{-axis}$.
+ \item \techrequired Bounded by the curves $y=3x,y=0,\,\text{and}\,x=3$ rotated around the $x\text{-axis}$.
+@@ -31,26 +31,26 @@
+ \item $y=\frac{1}{x},x=1,\,\text{and}\,x=100$
+ \item $y=\sqrt{1-x^{2}},x=0,\,\text{and}\,x=1$
+ \item $y=\frac{1}{1+x^{2}},x=0,\,\text{and}\,x=3$
+-\item $y=\sin x^{2},x=0,\,\text{and}\,x=\sqrt{\pi}$
++\item $y=\sin(x^{2}),x=0,\,\text{and}\,x=\sqrt{\pi}$
+ \item $y=\frac{1}{\sqrt{1-x^{2}}},x=0,\,\text{and}\,x=\frac{1}{2}$
+ \item $y=\sqrt{x},x=0,\,\text{and}\,x=1$
+-\item $y={(1+x^{2})}^{3},x=0,\,\text{and}\,x=1$
++\item $y=(1+x^{2})^{3},x=0,\,\text{and}\,x=1$
+ \item $y=5x^{3}-2x^{4},x=0,\,\text{and}\,x=2$
+ \end{enumerate}
+
+ For the following exercises, use shells to find the volume generated by rotating the regions between the given curve and $y=0$ around the $x\text{-axis}$.
+
+ \begin{enumerate}[resume]
+-\item $y=\sqrt{1-x^{2}},x=0,\,x=1$ and the x-axis
+-\item $y=x^{2},x=0,\,x=2$ and the x-axis
+-\item $y=\frac{x^{3}}{2},\,x=0,\,x=2$, and the x-axis
+-\item $y=\frac{2}{x^{2}},\,x=1,\,x=2$, and the x-axis
++\item $y=\sqrt{1-x^{2}},x=0,\,x=1$ and the $x\text{-axis}$
++\item $y=x^{2},x=0,\,x=2$ and the $x\text{-axis}$
++\item $y=\frac{x^{3}}{2},\,x=0,\,x=2$, and the $x\text{-axis}$
++\item $y=\frac{2}{x^{2}},\,x=1,\,x=2$, and the $x\text{-axis}$
+ \item $x=\frac{1}{1+y^{2}},y=4$
+-\item $x=\frac{1+y^{2}}{y},y=1,\,y=4$, and the y-axis
++\item $x=\frac{1+y^{2}}{y},y=1,\,y=4$, and the $y\text{-axis}$
+ \item $x=\sqrt{4-y^{2}},x=0,y=0$
+ \item $x=y^{3}-2y^{2},\,x=0,\,x=9$
+-\item $x=\sqrt{y}+1,\,x=1,\,x=3$, and the x-axis
+-\item $x=\sqrt[3]{27y}\text{and}\,x=\frac{3y}{4}$
++\item $x=\sqrt{y}+1,\,x=1,\,x=3$, and the $x\text{-axis}$
++\item $x=\sqrt[3]{27y}\,\text{and}\,x=\frac{3y}{4}$
+ \end{enumerate}
+
+ For the following exercises, find the volume generated when the region between the curves is rotated around the given axis.
+@@ -84,13 +84,13 @@
+ For the following exercises, use the method of shells to approximate the volumes of some common objects, which are pictured in accompanying figures.
+
+ \begin{enumerate}[resume]
+-\item Use the method of shells to find the volume of a sphere of radius $r$. \\ \textit{[Figure: This figure has two images. The first is a circle with radius r. The second is a basketball.]}
+-\item Use the method of shells to find the volume of a cone with radius $r$ and height $h$. \\ \textit{[Figure: This figure has two images. The first is an upside-down cone with radius r and height h. The second is an ice cream cone.]}
+-\item Use the method of shells to find the volume of an ellipsoid $(x^{2}/a^{2})+(y^{2}/b^{2})=1$ rotated around the $x\text{-axis}$. \\ \textit{[Figure: This figure has two images. The first is an ellipse with a the horizontal distance from the center to the edge and b the vertical distance from the center to the top edge. The second is a watermelon.]}
+-\item Use the method of shells to find the volume of a cylinder with radius $r$ and height $h$. \\ \textit{[Figure: This figure has two images. The first is a cylinder with radius r and height h. The second is a cylindrical candle.]}
++\item Use the method of shells to find the volume of a sphere of radius $r$. \\ \textit{[Figure: This figure has two images. The first is a circle with radius $r$. The second is a basketball.]}
++\item Use the method of shells to find the volume of a cone with radius $r$ and height $h$. \\ \textit{[Figure: This figure has two images. The first is an upside-down cone with radius $r$ and height $h$. The second is an ice cream cone.]}
++\item Use the method of shells to find the volume of an ellipsoid $(x^{2}/a^{2})+(y^{2}/b^{2})=1$ rotated around the $x\text{-axis}$. \\ \textit{[Figure: This figure has two images. The first is an ellipse with $a$ the horizontal distance from the center to the edge and $b$ the vertical distance from the center to the top edge. The second is a watermelon.]}
++\item Use the method of shells to find the volume of a cylinder with radius $r$ and height $h$. \\ \textit{[Figure: This figure has two images. The first is a cylinder with radius $r$ and height $h$. The second is a cylindrical candle.]}
+ \item Use the method of shells to find the volume of the donut created when the circle $x^{2}+y^{2}=4$ is rotated around the line $x=4$. \\ \textit{[Figure: This figure has two images. The first has two ellipses, one inside of the other. The radius of the path between them is 2 units. The second is a doughnut.]}
+-\item Consider the region enclosed by the graphs of $y=f(x),y=1+f(x),x=0,y=0$, and $x=a>0$. What is the volume of the solid generated when this region is rotated around the $y\text{-axis}$? Assume that the function is defined over the interval $[0,a]$.
+-\item Consider the function $y=f(x)$, which decreases from $f(0)=b$ to $f(1)=0$. Set up the integrals for determining the volume, using both the shell method and the disk method, of the solid generated when this region, with $x=0$ and $y=0$, is rotated around the $y\text{-axis}$. Prove that both methods approximate the same volume. Which method is easier to apply? (Hint: Since $f(x)$ is one-to-one, there exists an inverse $f^{-1}(y).)$
++\item Consider the region enclosed by the graphs of $y=f(x),y=1+f(x),x=0$, and $x=a>0$. What is the volume of the solid generated when this region is rotated around the $y\text{-axis}$? Assume that the function is defined over the interval $[0,a]$.
++\item Consider the function $y=f(x)$, which decreases from $f(0)=b$ to $f(1)=0$. Set up the integrals for determining the volume, using both the shell method and the disk method, of the solid generated when this region, with $x=0$ and $y=0$, is rotated around the $y\text{-axis}$. Prove that both methods approximate the same volume. Which method is easier to apply? (Hint: Since $f(x)$ is one-to-one, there exists an inverse $f^{-1}(y)$.)
+ \end{enumerate}
+
+ \end{document}

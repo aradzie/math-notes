@@ -1,0 +1,146 @@
+% OpenStax Calculus Volume 1 -- Section 4.9 Exercises: Newton’s Method
+% Exercises reproduced from OpenStax, licensed under CC BY 4.0.
+% Source: https://openstax.org/books/calculus-volume-1/pages/4-9-newtons-method
+\documentclass{exercises}
+\title{OpenStax Calculus Volume 1}
+\subtitle{Section 4.9 Exercises: Newton’s Method}
+\sourceurl{https://openstax.org/books/calculus-volume-1/pages/4-9-newtons-method}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+
+For the following exercises, write Newton's formula as $x_{n+1}=F(x_{n})$ for solving $f(x)=0$.
+
+\begin{enumerate}[start=1]
+\item $f(x)=x^{2}+1$
+\item $f(x)=x^{3}+2x+1$
+\item $f(x)=\sin x$
+\item $f(x)=e^{x}$
+\item $f(x)=x^{3}+3xe^{x}$
+\end{enumerate}
+
+For the following exercises, solve $f(x)=0$ using the iteration $x_{n+1}=x_{n}-cf(x_{n})$, which differs slightly from Newton's method. Find a $c$ that works and a $c$ that fails to converge, with the exception of $c=0$.
+
+\begin{enumerate}[resume]
+\item $f(x)=x^{2}-4$, with $x_{0}=0$
+\item $f(x)=x^{2}-4x+3$, with $x_{0}=2$
+\item What is the value of ``$c$'' for Newton's method?
+\end{enumerate}
+
+For the following exercises, start at
+
+
+a. $x_{0}=0.6$ and
+
+
+b. $x_{0}=2$.
+
+
+Compute $x_{1}$ and $x_{2}$ using the specified iterative method.
+
+\begin{enumerate}[resume]
+\item $x_{n+1}=x_{n}^{2}-\frac{1}{2}$
+\item $x_{n+1}=2x_{n}(1-x_{n})$
+\item $x_{n+1}=\sqrt{x_{n}}$
+\item $x_{n+1}=\frac{1}{\sqrt{x_{n}}}$
+\item $x_{n+1}=3x_{n}(1-x_{n})$
+\item $x_{n+1}=x_{n}^{2}+x_{n}-2$
+\item $x_{n+1}=\frac{1}{2}x_{n}-1$
+\item $x_{n+1}=|x_{n}|$
+\end{enumerate}
+
+For the following exercises, solve to four decimal places using Newton's method and a computer or calculator. Choose any initial guess $x_{0}$ that is not the exact root.
+
+\begin{enumerate}[resume]
+\item $x^{2}-10=0$
+\item $x^{4}-100=0$
+\item $x^{2}-x=0$
+\item $x^{3}-x=0$
+\item $x+5\cos(x)=0$
+\item $x+\tan(x)=0$, choose $x_{0}\in(-\frac{\pi}{2},\frac{\pi}{2})$
+\item $\frac{1}{1-x}=2$
+\item $1+x+x^{2}+x^{3}+x^{4}=2$
+\item $x^{3}+(x+1)^{3}=10^{3}$
+\item $x=\sin^{2}(x)$
+\end{enumerate}
+
+For the following exercises, use Newton's method to find the fixed points of the function where $f(x)=x$; round to three decimals.
+
+\begin{enumerate}[resume]
+\item $\sin x$
+\item $\tan(x)$ on $x\in(\frac{\pi}{2},\frac{3\pi}{2})$
+\item $e^{x}-2$
+\item $\ln(x)+2$
+\end{enumerate}
+
+Newton's method can be used to find maxima and minima of functions in addition to the roots. In this case apply Newton's method to the derivative function $f'(x)$ to find its roots, instead of the original function. For the following exercises, consider the formulation of the method.
+
+\begin{enumerate}[resume]
+\item To find candidates for maxima and minima, we need to find the critical points $f'(x)=0$. Show that to solve for the critical points of a function $f(x)$, Newton's method is given by $x_{n+1}=x_{n}-\frac{f'(x_{n})}{f''(x_{n})}$.
+\item What additional restrictions are necessary on the function $f$?
+\end{enumerate}
+
+For the following exercises, use Newton's method to find the location of the local minima and/or maxima of the following functions; round to three decimals.
+
+\begin{enumerate}[resume]
+\item Minimum of $f(x)=x^{2}+2x+4$
+\item Minimum of $f(x)=3x^{3}+2x^{2}-16$
+\item Minimum of $f(x)=x^{2}e^{x}$
+\item Maximum of $f(x)=x+\frac{1}{x}$
+\item Maximum of $f(x)=x^{3}+10x^{2}+15x-2$
+\item Maximum of $f(x)=\frac{\sqrt{x}-\sqrt[3]{x}}{x}$
+\item Minimum of $f(x)=x^{2}\sin x$, closest non-zero minimum to $x=0$
+\item Minimum of $f(x)=x^{4}+x^{3}+3x^{2}+12x+6$
+\end{enumerate}
+
+For the following exercises, use the specified method to solve the equation. If it does not work, explain why it does not work.
+
+\begin{enumerate}[resume]
+\item Newton's method, $x^{2}+2=0$
+\item Newton's method, $0=e^{x}$
+\item Newton's method, $0=1+x^{2}$ starting at $x_{0}=0$
+\item Solving $x_{n+1}=-x_{n}^{3}$ starting at $x_{0}=-1$
+\end{enumerate}
+
+For the following exercises, use the secant method, an alternative iterative method to Newton's method. The formula is given by
+
+
+\[x_{n}=x_{n-1}-f(x_{n-1})\frac{x_{n-1}-x_{n-2}}{f(x_{n-1})-f(x_{n-2})}.\]
+
+\begin{enumerate}[resume]
+\item Find a root to $0=x^{2}-x-3$ accurate to three decimal places.
+\item Find a root to $0=\sin x+3x$ accurate to four decimal places.
+\item Find a root to $0=e^{x}-2$ accurate to four decimal places.
+\item Find a root to $\ln(x+2)=\frac{1}{2}$ accurate to four decimal places.
+\item Why would you use the secant method over Newton's method? What are the necessary restrictions on $f$?
+\end{enumerate}
+
+For the following exercises, use both Newton's method and the secant method to calculate a root for the following equations. Use a calculator or computer to calculate how many iterations of each are needed to reach within three decimal places of the exact answer. For the secant method, use the first guess from Newton's method.
+
+\begin{enumerate}[resume]
+\item $f(x)=x^{2}+2x+1,x_{0}=1$
+\item $f(x)=x^{2},x_{0}=1$
+\item $f(x)=\sin x,x_{0}=1$
+\item $f(x)=e^{x}-1,x_{0}=2$
+\item $f(x)=x^{3}+2x+4,x_{0}=0$
+\end{enumerate}
+
+In the following exercises, consider Kepler's equation regarding planetary orbits, $M=E-\epsilon \sin(E)$, where $M$ is the mean anomaly, $E$ is eccentric anomaly, and $\epsilon$ measures eccentricity.
+
+\begin{enumerate}[resume]
+\item Use Newton's method to solve for the eccentric anomaly $E$ when the mean anomaly $M=\frac{\pi}{3}$ and the eccentricity of the orbit $\epsilon=0.25$; round to three decimals.
+\item Use Newton's method to solve for the eccentric anomaly $E$ when the mean anomaly $M=\frac{3\pi}{2}$ and the eccentricity of the orbit $\epsilon=0.8$; round to three decimals.
+\end{enumerate}
+
+The following two exercises consider a bank investment. The initial investment is $\$10{,}000$. After $25$ years, the investment has tripled to $\$30{,}000$.
+
+\begin{enumerate}[resume]
+\item Use Newton's method to determine the interest rate if the interest was compounded annually.
+\item Use Newton's method to determine the interest rate if the interest was compounded continuously.
+\item The total cost for printing $x$ books can be given by the equation $C(x)=1000+12x+(\frac{1}{2})x^{2/3}$. Use Newton's method to find the break-even point if the printer sells each book for $\$20$.
+\end{enumerate}
+
+\end{document}

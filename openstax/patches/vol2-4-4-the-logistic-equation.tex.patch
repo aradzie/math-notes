@@ -1,0 +1,55 @@
+The extracted source omitted the general constant-depletion equation needed to
+define f for the following exercises. Restore the model from the surrounding
+special cases. Also correct derivative notation, math-mode boundaries, and
+punctuation without changing the exercises' substance or blank lines.
+
+--- /tmp/raw.tex
++++ vol2-4-4-the-logistic-equation.tex
+@@ -28,7 +28,11 @@
+ \item \techrequired A butterfly sanctuary is built that can hold $2000$ butterflies, and $400$ butterflies are initially moved in. If after $2$ months there are now $800$ butterflies, when does the population get to $1500$ butterflies?
+ \end{enumerate}
+ 
+-The following problems consider the logistic equation with an added term for depletion, either through death or emigration.
++The following problems consider the logistic equation with an added term $f$ for depletion, either through death or emigration:
++
++\[
++P'=0.4P\left(1-\frac{P}{10000}\right)-f.
++\]
+ 
+ \begin{enumerate}[resume]
+ \item \techrequired The population of trout in a pond is given by $P'=0.4P(1-\frac{P}{10000})-400$, where $400$ trout are caught per year. Use your calculator or computer software to draw a directional field and draw a few sample solutions. What do you expect for the behavior?
+@@ -54,28 +58,28 @@
+ The following problems add in a minimal threshold value for the species to survive, $T$, which changes the differential equation to $P'(t)=rP(1-\frac{P}{K})(1-\frac{T}{P})$.
+ 
+ \begin{enumerate}[resume]
+-\item Draw the directional field of the threshold logistic equation, assuming $K=10,r=0.1,T=2$. When does the population survive? When does it go extinct?
++\item Draw the directional field of the threshold logistic equation, assuming $K=10$, $r=0.1$, and $T=2$. When does the population survive? When does it go extinct?
+ \item For the preceding problem, solve the logistic threshold equation, assuming the initial condition $P(0)=P_{0}$.
+ \item Bengal tigers in a conservation park have a carrying capacity of $100$ and need a minimum of $10$ to survive. If they grow in population at a rate of $1\%$ per year, with an initial population of $15$ tigers, solve for the number of tigers present.
+ \item A forest containing ring-tailed lemurs in Madagascar has the potential to support $5000$ individuals, and the lemur population grows at a rate of $5\%$ per year. A minimum of $500$ individuals is needed for the lemurs to survive. Given an initial population of $600$ lemurs, solve for the population of lemurs.
+-\item The population of Florida panthers in the southwestern tip of Florida has an estimated carrying capacity of $250$ and grows at a rate of $0.25\%$ per year and there must be $25$ for the population to survive. With an initial population of $30$ Florida panthers, how many years will it take to get the Florida panthers off the endangered species list (at least $100)$?
++\item The population of Florida panthers in the southwestern tip of Florida has an estimated carrying capacity of $250$ and grows at a rate of $0.25\%$ per year, and there must be $25$ for the population to survive. With an initial population of $30$ Florida panthers, how many years will it take to get the Florida panthers off the endangered species list (at least $100$)?
+ \end{enumerate}
+ 
+ The following questions consider the Gompertz equation, a modification for logistic growth, which is often used for modeling cancer growth, specifically the number of tumor cells.
+ 
+ \begin{enumerate}[resume]
+-\item The Gompertz equation is given by $P(t)'=\alpha \ln (\frac{K}{P(t)})P(t)$. Draw the directional fields for this equation assuming all parameters are positive, and given that $K=1$.
++\item The Gompertz equation is given by $P'(t)=\alpha \ln(\frac{K}{P(t)})P(t)$. Draw the directional fields for this equation assuming all parameters are positive, and given that $K=1$.
+ \item Assume that for a population, $K=1000$ and $\alpha=0.05$. Draw the directional field associated with this differential equation and draw a few solutions. What is the behavior of the population?
+ \item Solve the Gompertz equation for generic $\alpha$ and $K$ and $P(0)=P_{0}$.
+ \item \techrequired The Gompertz equation has been used to model tumor growth in the human body. Starting from one tumor cell on day $1$ and assuming $\alpha=0.1$ and a carrying capacity of $10$ million cells, how long does it take to reach ``detection'' stage at $5$ million cells?
+ \item \techrequired It is estimated that the world human population reached $3$ billion people in $1959$ and $6$ billion in $1999$. Assuming a carrying capacity of $16$ billion humans, write and solve the differential equation for logistic growth, and determine what year the population reached $7$ billion.
+-\item \techrequired It is estimated that the world human population reached $3$ billion people in $1959$ and $6$ billion in $1999$. Assuming a carrying capacity of $16$ billion humans, write and solve the differential equation for Gompertz growth, and determine what year the population reached $7$ billion. Was logistic growth or Gompertz growth more accurate, considering world population reached $7$ billion on October $31,2011$?
++\item \techrequired It is estimated that the world human population reached $3$ billion people in $1959$ and $6$ billion in $1999$. Assuming a carrying capacity of $16$ billion humans, write and solve the differential equation for Gompertz growth, and determine what year the population reached $7$ billion. Was logistic growth or Gompertz growth more accurate, considering world population reached $7$ billion on October 31, 2011?
+ \item Show that the population grows fastest when it reaches half the carrying capacity for the logistic equation $P'=rP(1-\frac{P}{K})$.
+ \item When does population increase the fastest in the threshold logistic equation $P'(t)=rP(1-\frac{P}{K})(1-\frac{T}{P})$?
+-\item When does population increase the fastest for the Gompertz equation $P(t)'=\alpha \ln (\frac{K}{P(t)})P(t)$?
++\item When does population increase the fastest for the Gompertz equation $P'(t)=\alpha \ln(\frac{K}{P(t)})P(t)$?
+ \end{enumerate}
+ 
+-Below is a table of the populations of whooping cranes in the wild from $1940\,\text{to}\,2000$. The population rebounded from near extinction after conservation efforts began. The following problems consider applying population models to fit the data. Assume a carrying capacity of $10{,}000$ cranes. Fit the data assuming years since $1940$ (so your initial population at time $0$ would be $22$ cranes).
++Below is a table of the populations of whooping cranes in the wild from $1940$ to $2000$. The population rebounded from near extinction after conservation efforts began. The following problems consider applying population models to fit the data. Assume a carrying capacity of $10{,}000$ cranes. Fit the data assuming years since $1940$ (so your initial population at time $0$ would be $22$ cranes).
+ 
+ \begin{enumerate}[resume]
+ \item Find the equation and parameter $r$ that best fit the data for the logistic equation.

@@ -1,0 +1,92 @@
+OpenStax's source MathML for this exercise encodes the sign+variable as a
+single <mi>--y</mi> (an en dash U+2013 glued to the letter "y" inside one
+identifier span), unlike every sibling in the same four-exercise group
+(y+1, y-1, -y+1, -y-1 -- the obvious +/- sign-combination pattern), which
+use the standard separate <mo>-</mo><mi>y</mi> structure. There is nothing
+for extract-exercises.py to systematically convert here (mi is a single
+opaque identifier string, and MI_MAP does whole-string lookup, not
+character substitution) -- the source itself mis-encoded this one
+exercise, so the fix is restored by hand here rather than in the converter.
+
+A manual review found additional mathematical, math-mode, punctuation, and whitespace defects in this generated exercise file. The cumulative diff below preserves all earlier file-specific corrections and adds the reviewed fixes so a future import reproduces the censored local version.
+
+--- /tmp/raw.tex
++++ vol2-4-3-separable-equations.tex
+@@ -12,12 +12,12 @@
+ \maketitle
+ 
+ 
+-Solve the following initial-value problems with the initial condition $y_{0}=0$ and graph the solution.
++Solve the following initial-value problems with the initial condition $y(0)=0$ and graph the solution.
+ 
+ \begin{enumerate}[start=1]
+ \item $\frac{dy}{dt}=y+1$
+ \item $\frac{dy}{dt}=y-1$
+-\item $\frac{dy}{dt}=–y+1$
++\item $\frac{dy}{dt}=-y+1$
+ \item $\frac{dy}{dt}=-y-1$
+ \end{enumerate}
+ 
+@@ -39,16 +39,16 @@
+ Find the solution to the initial-value problem.
+ 
+ \begin{enumerate}[resume]
+-\item $y'=e^{y-x},y(0)=0$
+-\item $y'=y^{2}(x+1),y(0)=2$
+-\item $\frac{dy}{dx}=y^{3}xe^{x^{2}},y(0)=1$
+-\item $\frac{dy}{dt}=y^{2}e^{x}\sin(3x),y(0)=1$
+-\item $y'=\frac{x}{\text{sech}^{2}y},y(0)=0$
+-\item $y'=2xy(1+2y),y(0)=-1$
+-\item $\frac{dx}{dt}=\ln(t)\sqrt{1-x^{2}},x(1)=0$
+-\item $y'=3x^{2}(y^{2}+4),y(0)=0$
+-\item $y'=e^{y}5^{x},y(0)=\ln(\ln(5))$
+-\item $y'=-2x\tan(y),y(0)=\frac{\pi}{6}$
++\item $y'=e^{y-x}$, $y(0)=0$
++\item $y'=y^{2}(x+1)$, $y(0)=2$
++\item $\frac{dy}{dx}=y^{3}xe^{x^{2}}$, $y(0)=1$
++\item $\frac{dy}{dx}=y^{2}e^{x}\sin(3x),\ y(0)=1$
++\item $y'=\frac{x}{\operatorname{sech}^{2}y},\ y(0)=0$
++\item $y'=2xy(1+2y)$, $y(0)=-1$
++\item $\frac{dx}{dt}=\ln(t)\sqrt{1-x^{2}}$, $x(1)=0$
++\item $y'=3x^{2}(y^{2}+4)$, $y(0)=0$
++\item $y'=e^{y}5^{x}$, $y(0)=\ln(\ln 5)$
++\item $y'=-2x\tan(y)$, $y(0)=\frac{\pi}{6}$
+ \end{enumerate}
+ 
+ For the following problems, use a software program or your calculator to generate the directional fields. Solve explicitly and draw solution curves for several initial conditions. Are there some critical initial conditions that change the behavior of the solution?
+@@ -60,7 +60,7 @@
+ \item \techrequired $y'=e^{y}$
+ \item \techrequired $y'=y\ln(x)$
+ \item Most drugs in the bloodstream decay according to the equation $y'=cy$, where $y$ is the concentration of the drug in the bloodstream. If the half-life of a drug is $2$ hours, what fraction of the initial dose remains after $6$ hours?
+-\item A drug is administered intravenously to a patient at a rate $r$ mg/h and is cleared from the body at a rate proportional to the amount of drug still present in the body, $d$. Set up and solve the differential equation, assuming there is no drug initially present in the body.
++\item A drug is administered intravenously to a patient at a rate $r$ mg/h and is cleared from the body at a rate proportional to the amount of drug, $d$, still present in the body. Set up and solve the differential equation, assuming there is no drug initially present in the body.
+ \item \techrequired How often should a drug be taken if its dose is $3$ mg, it is cleared at a rate $c=0.1$ mg/h, and $1$ mg is required to be in the bloodstream at all times?
+ \item A tank contains $1$ kilogram of salt dissolved in $100$ liters of water. A salt solution of $0.1$ kg salt/L is pumped into the tank at a rate of $2$ L/min and is drained at the same rate. Solve for the salt concentration at time $t$. Assume the tank is well mixed.
+ \item A tank containing $10$ kilograms of salt dissolved in $1000$ liters of water has two salt solutions pumped in. The first solution of $0.2$ kg salt/L is pumped in at a rate of $20$ L/min and the second solution of $0.05$ kg salt/L is pumped in at a rate of $5$ L/min. The tank drains at $25$ L/min. Assume the tank is well mixed. Solve for the salt concentration at time $t$.
+@@ -74,21 +74,21 @@
+ \begin{enumerate}[resume]
+ \item The liquid base of an ice cream has an initial temperature of $200^\circ \text{F}$ before it is placed in a freezer with a constant temperature of $0^\circ \text{F}$. After $1$ hour, the temperature of the ice-cream base has decreased to $140^\circ \text{F}$. Formulate and solve the initial-value problem to determine the temperature of the ice cream.
+ \item \techrequired The liquid base of an ice cream has an initial temperature of $210^\circ \text{F}$ before it is placed in a freezer with a constant temperature of $20^\circ \text{F}$. After $2$ hours, the temperature of the ice-cream base has decreased to $170^\circ \text{F}$. At what time will the ice cream be ready to eat? (Assume $30^\circ \text{F}$ is the optimal eating temperature.)
+-\item \techrequired You are organizing an ice cream social. The outside temperature is $80^\circ \text{F}$ and the ice cream is at $10^\circ \text{F}$. After $10$ minutes, the ice cream temperature has risen by $10^\circ \text{F}$. How much longer can you wait before the ice cream melts at $40^\circ \text{F?}$
++\item \techrequired You are organizing an ice cream social. The outside temperature is $80^\circ \text{F}$ and the ice cream is at $10^\circ \text{F}$. After $10$ minutes, the ice cream temperature has risen by $10^\circ \text{F}$. How much longer can you wait before the ice cream melts at $40^\circ \text{F}$?
+ \end{enumerate}
+ 
+ For Exercises 159---162, assume a cooling constant of $k=-0.125$ and assume time $t$ is in minutes.
+ 
+ \begin{enumerate}[resume]
+-\item You have a cup of coffee at temperature $70^\circ \text{C}$ and the ambient temperature in the room is $20^\circ \text{C}$. Assuming a cooling rate $k\,\text{of}\,0.125$, write and solve the differential equation to describe the temperature of the coffee with respect to time.
++\item You have a cup of coffee at temperature $70^\circ \text{C}$ and the ambient temperature in the room is $20^\circ \text{C}$. Assuming a cooling constant of $k=-0.125$, write and solve the differential equation to describe the temperature of the coffee with respect to time.
+ \item \techrequired You have a cup of coffee at temperature $70^\circ \text{C}$ that you put outside, where the ambient temperature is $0^\circ \text{C}$. After $5$ minutes, how much colder is the coffee?
+ \item You have a cup of coffee at temperature $70^\circ \text{C}$ and you immediately pour in $1$ part milk to $5$ parts coffee. The milk is initially at temperature $1^\circ \text{C}$. Write and solve the differential equation that governs the temperature of this coffee.
+ \item You have a cup of coffee at temperature $70^\circ \text{C}$, which you let cool $10$ minutes before you pour in the same amount of milk at $1^\circ \text{C}$ as in the preceding problem. How does the temperature compare to the previous cup after $10$ minutes?
+ \item Solve the generic problem $y'=ay+b$ with initial condition $y(0)=c$.
+-\item Prove the basic continual compounded interest equation. Assuming an initial deposit of $P_{0}$ and an interest rate of $r$, set up and solve an equation for continually compounded interest.
++\item Prove the basic continuously compounded interest equation. Assuming an initial deposit of $P_{0}$ and an interest rate of $r$, set up and solve an equation for continuously compounded interest.
+ \item Assume an initial nutrient amount of $I$ kilograms in a tank with $L$ liters. Assume a concentration of $c$ kg/L being pumped in at a rate of $r$ L/min. The tank is well mixed and is drained at a rate of $r$ L/min. Find the equation describing the amount of nutrient in the tank.
+-\item Leaves accumulate on the forest floor at a rate of $2$ g/cm$^{2}$/yr and also decompose at a rate of $90\%$ per year. Write a differential equation governing the number of grams of leaf litter per square centimeter of forest floor, assuming at time $0$ there is no leaf litter on the ground. Does this amount approach a steady value? What is that value?
+-\item Leaves accumulate on the forest floor at a rate of $4$ g/cm$^{2}$/yr. These leaves decompose at a rate of $10\%$ per year. Write a differential equation governing the number of grams of leaf litter per square centimeter of forest floor. Does this amount approach a steady value? What is that value?
++\item Leaves accumulate on the forest floor at a rate of $2\,\text{g}/\text{cm}^{2}/\text{yr}$ and also decompose at a rate of $90\%$ per year. Write a differential equation governing the number of grams of leaf litter per square centimeter of forest floor, assuming at time $0$ there is no leaf litter on the ground. Does this amount approach a steady value? What is that value?
++\item Leaves accumulate on the forest floor at a rate of $4\,\text{g}/\text{cm}^{2}/\text{yr}$. These leaves decompose at a rate of $10\%$ per year. Write a differential equation governing the number of grams of leaf litter per square centimeter of forest floor. Does this amount approach a steady value? What is that value?
+ \end{enumerate}
+ 
+ \end{document}

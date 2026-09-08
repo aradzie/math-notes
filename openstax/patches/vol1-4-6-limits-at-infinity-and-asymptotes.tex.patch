@@ -1,0 +1,26 @@
+The five accessibility figure descriptions in the first exercise group (locate
+vertical asymptotes from a graph) leave the coordinate references ("x = 1",
+"x = -3", "x = 2", ...) and the final "x-axis" mention as bare upright prose,
+even though they are mathematical variables/expressions. Wrapped in math mode
+("$x = 1$", "$x$-axis") per this repo's review convention for prose that
+should be mathematics.
+
+--- /tmp/raw.tex
++++ vol1-4-6-limits-at-infinity-and-asymptotes.tex
+@@ -15,11 +15,11 @@
+ For the following exercises, examine the graphs. Identify where the vertical asymptotes are located.
+ 
+ \begin{enumerate}[start=1]
+-\item \textit{[Figure: The function graphed decreases very rapidly as it approaches x = 1 from the left, and on the other side of x = 1, it seems to start near infinity and then decrease rapidly.]}
+-\item \textit{[Figure: The function graphed increases very rapidly as it approaches x = -3 from the left, and on the other side of x = -3, it seems to start near negative infinity and then increase rapidly to form a sort of U shape that is pointing down, with the other side of the U being at x = 2. On the other side of x = 2, the graph seems to start near infinity and then decrease rapidly.]}
+-\item \textit{[Figure: The function graphed decreases very rapidly as it approaches x = -1 from the left, and on the other side of x = -1, it seems to start near negative infinity and then increase rapidly to form a sort of U shape that is pointing down, with the other side of the U being at x = 2. On the other side of x = 2, the graph seems to start near infinity and then decrease rapidly.]}
+-\item \textit{[Figure: The function graphed decreases very rapidly as it approaches x = 0 from the left, and on the other side of x = 0, it seems to start near infinity and then decrease rapidly to form a sort of U shape that is pointing up, with the other side of the U being at x = 1. On the other side of x = 1, there is another U shape pointing down, with its other side being at x = 2. On the other side of x = 2, the graph seems to start near negative infinity and then increase rapidly.]}
+-\item \textit{[Figure: The function graphed decreases very rapidly as it approaches x = 0 from the left, and on the other side of x = 0, it seems to start near infinity and then decrease rapidly to form a sort of U shape that is pointing up, with the other side being a normal function that appears as if it will take the entirety of the values of the x-axis.]}
++\item \textit{[Figure: The function graphed decreases very rapidly as it approaches $x = 1$ from the left, and on the other side of $x = 1$, it seems to start near infinity and then decrease rapidly.]}
++\item \textit{[Figure: The function graphed increases very rapidly as it approaches $x = -3$ from the left, and on the other side of $x = -3$, it seems to start near negative infinity and then increase rapidly to form a sort of U shape that is pointing down, with the other side of the U being at $x = 2$. On the other side of $x = 2$, the graph seems to start near infinity and then decrease rapidly.]}
++\item \textit{[Figure: The function graphed decreases very rapidly as it approaches $x = -1$ from the left, and on the other side of $x = -1$, it seems to start near negative infinity and then increase rapidly to form a sort of U shape that is pointing down, with the other side of the U being at $x = 2$. On the other side of $x = 2$, the graph seems to start near infinity and then decrease rapidly.]}
++\item \textit{[Figure: The function graphed decreases very rapidly as it approaches $x = 0$ from the left, and on the other side of $x = 0$, it seems to start near infinity and then decrease rapidly to form a sort of U shape that is pointing up, with the other side of the U being at $x = 1$. On the other side of $x = 1$, there is another U shape pointing down, with its other side being at $x = 2$. On the other side of $x = 2$, the graph seems to start near negative infinity and then increase rapidly.]}
++\item \textit{[Figure: The function graphed decreases very rapidly as it approaches $x = 0$ from the left, and on the other side of $x = 0$, it seems to start near infinity and then decrease rapidly to form a sort of U shape that is pointing up, with the other side being a normal function that appears as if it will take the entirety of the values of the $x$-axis.]}
+ \end{enumerate}
+ 
+ For the following functions $f(x)$, determine whether there is an asymptote at $x=a$. Justify your answer without graphing on a calculator.

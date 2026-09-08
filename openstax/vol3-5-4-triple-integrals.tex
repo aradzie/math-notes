@@ -1,0 +1,141 @@
+% OpenStax Calculus Volume 3 -- Section 5.4 Exercises: Triple Integrals
+% Exercises reproduced from OpenStax, licensed under CC BY 4.0.
+% Source: https://openstax.org/books/calculus-volume-3/pages/5-4-triple-integrals
+\documentclass{exercises}
+\title{OpenStax Calculus Volume 3}
+\subtitle{Section 5.4 Exercises: Triple Integrals}
+\sourceurl{https://openstax.org/books/calculus-volume-3/pages/5-4-triple-integrals}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+
+In the following exercises, evaluate the triple integrals over the rectangular solid box $B$.
+
+\begin{enumerate}[start=1]
+\item $\underset{B}{\iiint}(2x+3y^{2}+4z^{3})\,dV$, where $B=\{(x,y,z)|0\le x\le1,0\le y\le2,0\le z\le3\}$
+\item $\underset{B}{\iiint}(xy+yz+xz)\,dV$, where $B=\{(x,y,z)|1\le x\le2,0\le y\le2,1\le z\le3\}$
+\item $\underset{B}{\iiint}(x\cos y+z)\,dV$, where $B=\{(x,y,z)|0\le x\le1,0\le y\le \pi,-1\le z\le1\}$
+\item $\underset{B}{\iiint}(z\sin x+y^{2})\,dV$, where $B=\{(x,y,z)|0\le x\le \pi,0\le y\le1,-1\le z\le2\}$
+\end{enumerate}
+
+In the following exercises, change the order of integration by integrating first with respect to $z$, then $x$, then $y$.
+
+\begin{enumerate}[resume]
+\item $\int_{0}^{1}\,\int_{1}^{2}\,\int_{2}^{3}(x^{2}+\ln y+z)\,dx\,dy\,dz$
+\item $\int_{-1}^{1}\,\int_{0}^{3}\,\int_{0}^{1}(ze^{x}+2y)\,dx\,dy\,dz$
+\item $\int_{-1}^{2}\,\int_{1}^{3}\,\int_{0}^{4}(x^{2}z+\frac{1}{y})\,dx\,dy\,dz$
+\item $\int_{1}^{2}\,\int_{-2}^{-1}\,\int_{0}^{1}\frac{x+y}{z}\,dx\,dy\,dz$
+\item Let $F$, $G$, and $H$ be continuous functions on $[a,b]$, $[c,d]$, and $[e,f]$, respectively, where $a$, $b$, $c$, $d$, $e$, and $f$ are real numbers such that $a<b$, $c<d$, and $e<f$. Show that \[\int_{a}^{b}\,\int_{c}^{d}\,\int_{e}^{f}F(x)G(y)H(z)\,dz\,dy\,dx=(\int_{a}^{b}F(x)\,dx)(\int_{c}^{d}G(y)\,dy)(\int_{e}^{f}H(z)\,dz).\]
+\item Let $F$, $G$, and $H$ be differentiable functions on $[a,b]$, $[c,d]$, and $[e,f]$, respectively, where $a$, $b$, $c$, $d$, $e$, and $f$ are real numbers such that $a<b$, $c<d$, and $e<f$. Show that \[\int_{a}^{b}\,\int_{c}^{d}\,\int_{e}^{f}F'(x)G'(y)H'(z)\,dz\,dy\,dx=[F(b)-F(a)]\,[G(d)-G(c)]\,[H(f)-H(e)].\]
+\end{enumerate}
+
+In the following exercises, evaluate the triple integrals over the bounded region $E=\{(x,y,z)|a\le x\le b,h_{1}(x)\le y\le h_{2}(x),e\le z\le f\}$.
+
+\begin{enumerate}[resume]
+\item $\underset{E}{\iiint}(2x+5y+7z)\,dV$, where $E=\{(x,y,z)|0\le x\le1,0\le y\le-x+1,1\le z\le2\}$
+\item $\underset{E}{\iiint}(y\ln x+z)\,dV$, where $E=\{(x,y,z)|1\le x\le e,0\le y\le \ln x,0\le z\le1\}$
+\item $\underset{E}{\iiint}(\sin x+\sin y)\,dV$, where $E=\{(x,y,z)|0\le x\le \frac{\pi}{2},-\cos x\le y\le \cos x,-1\le z\le1\}$
+\item $\underset{E}{\iiint}(xy+yz+xz)\,dV$, where $E=\{(x,y,z)|0\le x\le1,-x^{2}\le y\le x^{2},0\le z\le1\}$
+\end{enumerate}
+
+In the following exercises, evaluate the triple integrals over the indicated bounded region $E$.
+
+\begin{enumerate}[resume]
+\item $\underset{E}{\iiint}(x+2yz)\,dV$, where $E=\{(x,y,z)|0\le x\le1,0\le y\le x,0\le z\le5-x-y\}$
+\item $\underset{E}{\iiint}(x^{3}+y^{3}+z^{3})\,dV$, where $E=\{(x,y,z)|0\le x\le2,0\le y\le2x,0\le z\le4-x-y\}$
+\item $\underset{E}{\iiint}y\,dV$, where $E=\{(x,y,z)|-1\le x\le1,-\sqrt{1-x^{2}}\le y\le \sqrt{1-x^{2}},0\le z\le1-x^{2}-y^{2}\}$
+\item $\underset{E}{\iiint}x\,dV$, where $E=\{(x,y,z)|-2\le x\le2,-\sqrt{4-x^{2}}\le y\le \sqrt{4-x^{2}},0\le z\le4-x^{2}-y^{2}\}$
+\end{enumerate}
+
+In the following exercises, evaluate the triple integrals over the bounded region $E$ of the form $E=\{(x,y,z)|g_{1}(y)\le x\le g_{2}(y),c\le y\le d,e\le z\le f\}$.
+
+\begin{enumerate}[resume]
+\item $\underset{E}{\iiint}x^{2}\,dV$, where $E=\{(x,y,z)\mid y^{2}-1\le x\le1-y^{2},-1\le y\le1,1\le z\le2\}$
+\item $\underset{E}{\iiint}(\sin x+y)\,dV$, where $E=\{(x,y,z)|-y^{4}\le x\le y^{4},0\le y\le2,0\le z\le4\}$
+\item $\underset{E}{\iiint}(x-yz)\,dV$, where $E=\{(x,y,z)|-y^{6}\le x\le \sqrt{y},0\le y\le1,-1\le z\le1\}$
+\item $\underset{E}{\iiint}z\,dV$, where $E=\{(x,y,z)|2-2y\le x\le2+\sqrt{y},0\le y\le1,2\le z\le3\}$
+\end{enumerate}
+
+In the following exercises, evaluate the triple integrals over the bounded region
+
+
+\[E=\{(x,y,z)|g_{1}(y)\le x\le g_{2}(y),c\le y\le d,u_{1}(x,y)\le z\le u_{2}(x,y)\}.\]
+
+\begin{enumerate}[resume]
+\item $\underset{E}{\iiint}z\,dV$, where $E=\{(x,y,z)|-y\le x\le y,0\le y\le1,0\le z\le1-x^{4}-y^{4}\}$
+\item $\underset{E}{\iiint}(xz+1)\,dV$, where $E=\{(x,y,z)|0\le x\le \sqrt{y},0\le y\le2,0\le z\le1-x^{2}-y^{2}\}$
+\item $\underset{E}{\iiint}(x-z)\,dV$, where $E=\{(x,y,z)|-\sqrt{1-y^{2}}\le x\le0,0\le y\le \frac{1}{2},0\le z\le1-x^{2}-y^{2}\}$
+\item $\underset{E}{\iiint}(x+y)\,dV$, where $E=\{(x,y,z)|0\le x\le \sqrt{1-y^{2}},0\le y\le1,0\le z\le1-x\}$
+\end{enumerate}
+
+In the following exercises, evaluate the triple integrals over the bounded region
+
+
+$E=\{(x,y,z)|(x,y)\in D,u_{1}(x,y)\le z\le u_{2}(x,y)\}$, where $D$ is the projection of $E$ onto the $xy$-plane.
+
+\begin{enumerate}[resume]
+\item $\underset{D}{\iint}(\int_{1}^{2}(x+z)\,dz)\,dA$, where $D=\{(x,y)|x^{2}+y^{2}\le1\}$
+\item $\underset{D}{\iint}(\int_{1}^{3}x(z+1)\,dz)\,dA$, where $D=\{(x,y)|x^{2}-y^{2}\ge1,1\le x\le \sqrt{5}\}$
+\item $\underset{D}{\iint}(\int_{0}^{10-x-y}(x+2z)\,dz)\,dA$, where $D=\{(x,y)|y\ge0,x\ge0,x+y\le10\}$
+\item $\underset{D}{\iint}(\int_{0}^{4x^{2}+4y^{2}}y\,dz)\,dA$, where $D=\{(x,y)|x^{2}+y^{2}\le4,y\ge1,x\ge0\}$
+\item The solid $E$ bounded by $y^{2}+z^{2}=9$, $z=0$, $x=0$, and $x=5$ is shown in the following figure. Evaluate the integral $\underset{E}{\iiint}z\,dV$ by integrating first with respect to $z$, then $y$, and then $x$. \\ \textit{[Figure: A solid arching shape that reaches its maximum along the $y$-axis with $z=3$. The shape reaches zero at $y=\pm3$, and the graph is truncated at $x=0$ and $x=5$.]}
+\item The solid $E$ bounded by $y=\sqrt{x}$, $x=4$, $y=0$, $z=-2$, and $z=1$ is given in the following figure. Evaluate the integral $\underset{E}{\iiint}xyz\,dV$ by integrating first with respect to $x$, then $y$, and then $z$. \\ \textit{[Figure: A quarter section of an oval cylinder with $z$ from $-2$ to $1$. The solid is bounded by $y=0$ and $x=4$, and the top of the shape runs from $(0,0,1)$ to $(4,2,1)$ in a gentle arc.]}
+\item \techrequired The volume of a solid $E$ is given by the integral $\int_{-2}^{0}\,\int_{x}^{0}\,\int_{0}^{x^{2}+y^{2}}dz\,dy\,dx$. Use a computer algebra system (CAS) to graph $E$ and find its volume. Round your answer to two decimal places.
+\item \techrequired The volume of a solid $E$ is given by the integral $\int_{-1}^{0}\,\int_{-x^{2}}^{0}\,\int_{0}^{1+\sqrt{x^{2}+y^{2}}}dz\,dy\,dx$. Use a CAS to graph $E$ and find its volume $V$. Round your answer to two decimal places.
+\end{enumerate}
+
+In the following exercises, use two circular permutations of the variables $x$, $y$, and $z$ to write new integrals whose values equal the value of the original integral. A circular permutation of $x$, $y$, and $z$ is the arrangement of the variables in one of the following orders: $y$, $z$, and $x$ or $z$, $x$, and $y$.
+
+\begin{enumerate}[resume]
+\item $\int_{0}^{1}\,\int_{1}^{3}\,\int_{2}^{4}(x^{2}z^{2}+1)\,dx\,dy\,dz$
+\item $\int_{1}^{3}\,\int_{0}^{1}\,\int_{0}^{-y+1}(2y+5z+7x)\,dz\,dy\,dx$
+\item $\int_{0}^{1}\,\int_{-y}^{y}\,\int_{0}^{1-x^{4}-y^{4}}e^{x}\,dz\,dx\,dy$
+\item $\int_{-1}^{1}\,\int_{0}^{1}\,\int_{-y^{6}}^{\sqrt{y}}(x+yz)\,dx\,dy\,dz$
+\item Set up the integral that gives the volume of the solid $E$ bounded by $y^{2}=x^{2}+z^{2}$ and $y=a$, where $a>0$ and $y\ge0$.
+\item Set up the integral that gives the volume of the solid $E$ bounded by $x=y^{2}+z^{2}$ and $x=a^{2}$, where $a>0$.
+\item Find the average value of the function $f(x,y,z)=x+y+z$ over the parallelepiped determined by $x=0,x=1,y=0,y=3,z=0$, and $z=5$.
+\item Find the average value of the function $f(x,y,z)=xyz$ over the solid $E=[0,1]\times [0,1]\times [0,1]$ situated in the first octant.
+\item Find the volume of the solid $E$ that lies under the plane $x+y+z=9$ and whose projection onto the $xy$-plane is bounded by $x=\sqrt{y-1},x=0$, and $x+y=7$.
+\item Find the volume of the solid $E$ that lies under the plane $2x+y+z=8$ and whose projection onto the $xy$-plane is bounded by $x=\arcsin y$, $y=0$, and $x=\frac{\pi}{2}$.
+\item Consider the pyramid with the base in the $xy$-plane of $[-2,2]\times [-2,2]$ and the vertex at the point $(0,0,8)$.
+\begin{enumerate}[label=(\alph*)]
+  \item Show that the equations of the planes of the lateral faces of the pyramid are $4y+z=8$, $4y-z=-8$, $4x+z=8$, and $-4x+z=8$.
+  \item Find the volume of the pyramid.
+\end{enumerate}
+\item Consider the pyramid with the base in the $xy$-plane of $[-3,3]\times [-3,3]$ and the vertex at the point $(0,0,9)$.
+\begin{enumerate}[label=(\alph*)]
+  \item Show that the equations of the planes of the side faces of the pyramid are $3x+z=9$, $-3x+z=9$, $-3y+z=9$, and $3y+z=9$.
+  \item Find the volume of the pyramid.
+\end{enumerate}
+\item The solid $E$ bounded by the sphere of equation $x^{2}+y^{2}+z^{2}=r^{2}$ with $r>0$ and located in the first octant is represented in the following figure. \\ \textit{[Figure: The eighth of a sphere of radius 2 with center at the origin for positive $x$, $y$, and $z$.]}
+\begin{enumerate}[label=(\alph*)]
+  \item Write the triple integral that gives the volume of $E$ by integrating first with respect to $z$, then with $y$, and then with $x$.
+  \item Rewrite the integral in part $a$ as an equivalent integral in five other orders.
+\end{enumerate}
+\item The solid $E$ bounded by the equation $9x^{2}+4y^{2}+z^{2}=1$ and located in the first octant is represented in the following figure. \\ \textit{[Figure: In the first octant, a complex shape is shown that is roughly a solid ovoid with center the origin, height 1, width 0.5, and length 0.35.]}
+\begin{enumerate}[label=(\alph*)]
+  \item Write the triple integral that gives the volume of $E$ by integrating first with respect to $z$, then with $y$, and then with $x$.
+  \item Rewrite the integral in part $a$ as an equivalent integral in five other orders.
+\end{enumerate}
+\item Find the volume of the prism with vertices $(0,0,0)$, $(2,0,0)$, $(2,3,0)$, $(0,3,0)$, $(0,0,1)$, and $(2,0,1)$.
+\item Find the volume of the prism with vertices $(0,0,0)$, $(4,0,0)$, $(4,6,0)$, $(0,6,0)$, $(0,0,1)$, and $(4,0,1)$.
+\item The solid $E$ bounded by $z=10-2x-y$ and situated in the first octant is given in the following figure. Find the volume of the solid. \\ \textit{[Figure: A tetrahedron bounded by the $xy$-, $yz$-, and $xz$-planes and a triangle with vertices $(0,0,10)$, $(5,0,0)$, and $(0,10,0)$.]}
+\item The solid $E$ bounded by $z=1-x^{2}$ and $y=5$ and situated in the first octant is given in the following figure. Find the volume of the solid. \\ \textit{[Figure: A complex shape in the first octant with height 1, width 5, and length 1. The shape appears to be a slightly deformed quarter of a cylinder of radius 1 and width 5.]}
+\item The midpoint rule for the triple integral $\underset{B}{\iiint}f(x,y,z)\,dV$ over the rectangular solid box $B$ is a generalization of the midpoint rule for double integrals. The region $B$ is divided into subboxes of equal sizes and the integral is approximated by the triple Riemann sum $\sum_{i=1}^{l}\sum_{j=1}^{m}\sum_{k=1}^{n}f(\bar{x}_{i},\bar{y}_{j},\bar{z}_{k})\Delta V$, where $(\bar{x}_{i},\bar{y}_{j},\bar{z}_{k})$ is the center of the box $B_{ijk}$ and $\Delta V$ is the volume of each subbox. Apply the midpoint rule to approximate $\underset{B}{\iiint}x^{2}\,dV$ over the solid $B=\{(x,y,z)|0\le x\le1,0\le y\le1,0\le z\le1\}$ by using a partition of eight cubes of equal size. Round your answer to three decimal places.
+\item \techrequired
+\begin{enumerate}[label=(\alph*)]
+  \item Apply the midpoint rule to approximate $\underset{B}{\iiint}e^{-x^{2}}\,dV$ over the solid $B=\{(x,y,z)|0\le x\le1,0\le y\le1,0\le z\le1\}$ by using a partition of eight cubes of equal size. Round your answer to three decimal places.
+  \item Use a CAS to improve the above integral approximation in the case of a partition of $n^{3}$ cubes of equal size, where $n=3,4,\ldots,10$.
+\end{enumerate}
+\item Suppose that the temperature in degrees Celsius at a point $(x,y,z)$ of a solid $E$ bounded by the coordinate planes and $x+y+z=5$ is $T(x,y,z)=xz+5z+10$. Find the average temperature over the solid.
+\item Suppose that the temperature in degrees Fahrenheit at a point $(x,y,z)$ of a solid $E$ bounded by the coordinate planes and $x+y+z=5$ is $T(x,y,z)=x+y+xy$. Find the average temperature over the solid.
+\item Show that the volume of a right square pyramid of height $h$ and side length $a$ is $v=\frac{ha^{2}}{3}$ by using triple integrals.
+\item Show that the volume of a regular right hexagonal prism of edge length $a$ is $\frac{3a^{3}\sqrt{3}}{2}$ by using triple integrals.
+\item Show that the volume of a regular right hexagonal pyramid of edge length $a$ is $\frac{a^{3}\sqrt{3}}{2}$ by using triple integrals.
+\item If the charge density at an arbitrary point $(x,y,z)$ of a solid $E$ is given by the function $\rho(x,y,z)$, then the total charge inside the solid is defined as the triple integral $\underset{E}{\iiint}\rho(x,y,z)\,dV$. Assume that the charge density of the solid $E$ enclosed by the paraboloids $x=5-y^{2}-z^{2}$ and $x=y^{2}+z^{2}-5$ is equal to the distance from an arbitrary point of $E$ to the origin. Set up the integral that gives the total charge inside the solid $E$.
+\end{enumerate}
+
+\end{document}

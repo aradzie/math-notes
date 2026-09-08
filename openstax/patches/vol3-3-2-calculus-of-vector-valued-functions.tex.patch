@@ -1,0 +1,238 @@
+This page's source MathML wraps every unit-vector/position-vector symbol
+(r, i, j, k, s, u, a, v in the vector-valued-function exercises) in
+<mstyle mathvariant="bold" mathsize="normal"><mtext>...</mtext></mstyle>,
+but extract-exercises.py's mstyle handling doesn't look at mathvariant, so
+the converter emitted plain \text{r}/\text{i}/\text{j}/\text{k}/etc. instead
+of \mathbf{r}/\mathbf{i}/\mathbf{j}/\mathbf{k}/etc., silently dropping the
+boldface that distinguishes a vector from a scalar throughout the whole
+page. Rewritten to \mathbf{...} here; same systematic converter gap already
+noted for section 3.1's review, patched per-file rather than fixing the
+converter.
+
+Two one-character exceptions where a vector's derivative appeared as plain
+(non-bold, not even \text-wrapped) italic r/u alongside its bold counterpart
+in the same sentence -- $\|r'(t)\|$ next to $\mathbf{r}(t)$ in the speed
+definition, and $u'(t)$ next to $\mathbf{u}(t)$ in a cross-product
+derivative -- were corrected to \mathbf{r}'(t) and \mathbf{u}'(t) for
+consistency with every other occurrence of the same vector-valued function.
+Likewise the bare, unwrapped "T(t)" in "Find the unit tangent vector T(t)"
+was wrapped as $\mathbf{T}(t)$, matching the vector notation used
+throughout.
+
+Also: split two exercises that fused separate equations and connecting
+English ("for", "and") into a single math span with manual \, spacing into
+separate $...$ spans with the conjunction in prose, per the review
+checklist's "keep English outside math mode" rule; wrapped several bare
+prose variables ("value of t", "radius b", "as t approaches", "x-axis",
+"y-axis") in math mode; added parentheses to \ln t^{3} for clarity; removed
+a stray space before a period after $2\pi$; and removed a few instances of
+spurious \, immediately after an opening bracket/pipe that had no visual
+effect.
+
+A later pass found three tangent-vector exercises where the evaluation point
+followed the vector-valued function via a semicolon fused inside one math
+span (e.g. "...\mathbf{k};t=\frac{\pi}{3}$"), unlike a fourth, already-correct
+item in the same list that joins the function and point as two separate
+$...$ spans with "; " between them ("...\mathbf{k}$; $t=\ln(2)$" -- that
+two-span joiner is a different, unaffected construct). Split each of the
+three into two comma-joined spans, e.g. "...\mathbf{k}$, $t=\frac{\pi}{3}$",
+to match this file's established single-span-parameter convention.
+
+--- /tmp/raw.tex
++++ vol3-3-2-calculus-of-vector-valued-functions.tex
+@@ -15,37 +15,37 @@
+ Compute the derivatives of the vector-valued functions.
+ 
+ \begin{enumerate}[start=1]
+-\item $\text{r}(t)=t^{3}\,\text{i}+3t^{2}\,\text{j}+\frac{t^{3}}{6}\,\text{k}$
+-\item $\text{r}(t)=\sin(t)\,\text{i}+\cos(t)\,\text{j}+e^{t}\,\text{k}$
+-\item $\text{r}(t)=e^{-t}\,\text{i}+\sin(3t)\,\text{j}+10\sqrt{t}\,\text{k}$. A sketch of the graph is shown here. Notice the varying periodic nature of the graph. \\ \textit{[Figure: This figure is a 3 dimensional graph. It is a curve inside of a box. The curve starts at the bottom of the box and spirals around the middle, with upward orientation.]}
+-\item $\text{r}(t)=e^{t}\,\text{i}+2e^{t}\,\text{j}+\,\text{k}$
+-\item $\text{r}(t)=\text{i}+\,\text{j}+\,\text{k}$
+-\item $\text{r}(t)=te^{t}\,\text{i}+t\ln(t)\,\text{j}+\sin(3t)\,\text{k}$
+-\item $\text{r}(t)=\frac{1}{t+1}\,\text{i}+\arctan(t)\,\text{j}+\ln t^{3}\,\text{k}$
+-\item $\text{r}(t)=\tan(2t)\,\text{i}+\sec(2t)\,\text{j}+\sin^{2}(t)\,\text{k}$
+-\item $\text{r}(t)=3\,\text{i}+4\sin(3t)\,\text{j}+t\cos(t)\,\text{k}$
+-\item $\text{r}(t)=t^{2}\,\text{i}+te^{-2t}\,\text{j}-5e^{-4t}\,\text{k}$
+-\end{enumerate}
+-
+-For the following problems, find a tangent vector at the indicated value of t.
+-
+-\begin{enumerate}[resume]
+-\item $\text{r}(t)=t\,\text{i}+\sin(2t)\,\text{j}+\cos(3t)\,\text{k};t=\frac{\pi}{3}$
+-\item $\text{r}(t)=3t^{3}\,\text{i}+2t^{2}\,\text{j}+\frac{1}{t}\,\text{k};t=1$
+-\item $\text{r}(t)=3e^{t}\,\text{i}+2e^{-3t}\,\text{j}+4e^{2t}\,\text{k}$; $t=\ln(2)$
+-\item $\text{r}(t)=\cos(2t)\,\text{i}+2\sin t\,\text{j}+t^{2}\,\text{k};t=\frac{\pi}{2}$
++\item $\mathbf{r}(t)=t^{3}\,\mathbf{i}+3t^{2}\,\mathbf{j}+\frac{t^{3}}{6}\,\mathbf{k}$
++\item $\mathbf{r}(t)=\sin(t)\,\mathbf{i}+\cos(t)\,\mathbf{j}+e^{t}\,\mathbf{k}$
++\item $\mathbf{r}(t)=e^{-t}\,\mathbf{i}+\sin(3t)\,\mathbf{j}+10\sqrt{t}\,\mathbf{k}$. A sketch of the graph is shown here. Notice the varying periodic nature of the graph. \\ \textit{[Figure: This figure is a 3 dimensional graph. It is a curve inside of a box. The curve starts at the bottom of the box and spirals around the middle, with upward orientation.]}
++\item $\mathbf{r}(t)=e^{t}\,\mathbf{i}+2e^{t}\,\mathbf{j}+\,\mathbf{k}$
++\item $\mathbf{r}(t)=\mathbf{i}+\,\mathbf{j}+\,\mathbf{k}$
++\item $\mathbf{r}(t)=te^{t}\,\mathbf{i}+t\ln(t)\,\mathbf{j}+\sin(3t)\,\mathbf{k}$
++\item $\mathbf{r}(t)=\frac{1}{t+1}\,\mathbf{i}+\arctan(t)\,\mathbf{j}+\ln(t^{3})\,\mathbf{k}$
++\item $\mathbf{r}(t)=\tan(2t)\,\mathbf{i}+\sec(2t)\,\mathbf{j}+\sin^{2}(t)\,\mathbf{k}$
++\item $\mathbf{r}(t)=3\,\mathbf{i}+4\sin(3t)\,\mathbf{j}+t\cos(t)\,\mathbf{k}$
++\item $\mathbf{r}(t)=t^{2}\,\mathbf{i}+te^{-2t}\,\mathbf{j}-5e^{-4t}\,\mathbf{k}$
++\end{enumerate}
++
++For the following problems, find a tangent vector at the indicated value of $t$.
++
++\begin{enumerate}[resume]
++\item $\mathbf{r}(t)=t\,\mathbf{i}+\sin(2t)\,\mathbf{j}+\cos(3t)\,\mathbf{k}$, $t=\frac{\pi}{3}$
++\item $\mathbf{r}(t)=3t^{3}\,\mathbf{i}+2t^{2}\,\mathbf{j}+\frac{1}{t}\,\mathbf{k}$, $t=1$
++\item $\mathbf{r}(t)=3e^{t}\,\mathbf{i}+2e^{-3t}\,\mathbf{j}+4e^{2t}\,\mathbf{k}$; $t=\ln(2)$
++\item $\mathbf{r}(t)=\cos(2t)\,\mathbf{i}+2\sin t\,\mathbf{j}+t^{2}\,\mathbf{k}$, $t=\frac{\pi}{2}$
+ \end{enumerate}
+ 
+ Find the unit tangent vector for the following parameterized curves.
+ 
+ \begin{enumerate}[resume]
+-\item $\text{r}(t)=6\,\text{i}+\cos(3t)\,\text{j}+3\sin(4t)\,\text{k}$, $0\le t<2\pi$ . Two views of this curve are presented here: \\ \textit{[Figure: This figure has two graphs. The first graph is inside a 3 dimensional box. It has a lattice-look to the graph in the middle of the box, crossing over itself. The second graph is the same as the first, with a different position of the box for a different perspective of the lattice-looking curve.]}
+-\item $\text{r}(t)=\cos t\,\text{i}+\sin t\,\text{j}+\sin t\,\text{k}$, $0\le t<2\pi$.
+-\item $\text{r}(t)=3\cos(4t)\,\text{i}+3\sin(4t)\,\text{j}+5t\,\text{k},1\le t\le2$
+-\item $\text{r}(t)=t\,\text{i}+3t\,\text{j}+t^{2}\,\text{k}$
++\item $\mathbf{r}(t)=6\,\mathbf{i}+\cos(3t)\,\mathbf{j}+3\sin(4t)\,\mathbf{k}$, $0\le t<2\pi$. Two views of this curve are presented here: \\ \textit{[Figure: This figure has two graphs. The first graph is inside a 3 dimensional box. It has a lattice-look to the graph in the middle of the box, crossing over itself. The second graph is the same as the first, with a different position of the box for a different perspective of the lattice-looking curve.]}
++\item $\mathbf{r}(t)=\cos t\,\mathbf{i}+\sin t\,\mathbf{j}+\sin t\,\mathbf{k}$, $0\le t<2\pi$.
++\item $\mathbf{r}(t)=3\cos(4t)\,\mathbf{i}+3\sin(4t)\,\mathbf{j}+5t\,\mathbf{k},1\le t\le2$
++\item $\mathbf{r}(t)=t\,\mathbf{i}+3t\,\mathbf{j}+t^{2}\,\mathbf{k}$
+ \end{enumerate}
+ 
+-Let $\text{r}(t)=t\,\text{i}+t^{2}\,\text{j}-t^{4}\,\text{k}$ and $\text{s}(t)=\sin(t)\,\text{i}+e^{t}\,\text{j}+\cos(t)\,\text{k}$. Here is the graph of the function:
++Let $\mathbf{r}(t)=t\,\mathbf{i}+t^{2}\,\mathbf{j}-t^{4}\,\mathbf{k}$ and $\mathbf{s}(t)=\sin(t)\,\mathbf{i}+e^{t}\,\mathbf{j}+\cos(t)\,\mathbf{k}$. Here is the graph of the function:
+ 
+ 
+ \textit{[Figure: This figure is a 3 dimensional graph. It is inside of a box. The box represents an octant. The curve in the graph starts at the lower left corner of the box and bends upward and out towards the other end of the box.]}
+@@ -54,42 +54,42 @@
+ Find the following.
+ 
+ \begin{enumerate}[resume]
+-\item $\frac{d}{dt}[\text{r}(t^{2})]$
+-\item $\frac{d}{dt}[t^{2}\cdot \text{s}(t)]$
+-\item $\frac{d}{dt}[\text{r}(t)\cdot \text{s}(t)]$
+-\item Compute the first, second, and third derivatives of $\text{r}(t)=3t\,\text{i}+6\ln(t)\,\text{j}+5e^{-3t}\,\text{k}$.
+-\item Find $\text{r}'(t)\cdot \,\text{r}''(t)\,\text{for}\,\text{r}(t)=-3t^{5}\,\text{i}+5t\,\text{j}+2t^{2}\,\text{k}$.
+-\item The acceleration function, initial velocity, and initial position of a particle are\\ $\text{a}(t)=-5\cos t\,\text{i}-5\sin t\,\text{j},\,\text{v}(0)=9\,\text{i}+2\,\text{j},\,\text{and}\,\text{r}(0)=5\,\text{i}$.\\ Find $\text{v}(t)\,\text{and}\,\text{r}(t)$.
+-\item The position vector of a particle is $\text{r}(t)=5\sec(2t)\,\text{i}-4\tan(t)\,\text{j}+7t^{2}\,\text{k}$.
++\item $\frac{d}{dt}[\mathbf{r}(t^{2})]$
++\item $\frac{d}{dt}[t^{2}\cdot \mathbf{s}(t)]$
++\item $\frac{d}{dt}[\mathbf{r}(t)\cdot \mathbf{s}(t)]$
++\item Compute the first, second, and third derivatives of $\mathbf{r}(t)=3t\,\mathbf{i}+6\ln(t)\,\mathbf{j}+5e^{-3t}\,\mathbf{k}$.
++\item Find $\mathbf{r}'(t)\cdot \mathbf{r}''(t)$ for $\mathbf{r}(t)=-3t^{5}\,\mathbf{i}+5t\,\mathbf{j}+2t^{2}\,\mathbf{k}$.
++\item The acceleration function, initial velocity, and initial position of a particle are\\ $\mathbf{a}(t)=-5\cos t\,\mathbf{i}-5\sin t\,\mathbf{j}$, $\mathbf{v}(0)=9\,\mathbf{i}+2\,\mathbf{j}$, and $\mathbf{r}(0)=5\,\mathbf{i}$.\\ Find $\mathbf{v}(t)$ and $\mathbf{r}(t)$.
++\item The position vector of a particle is $\mathbf{r}(t)=5\sec(2t)\,\mathbf{i}-4\tan(t)\,\mathbf{j}+7t^{2}\,\mathbf{k}$.
+ \begin{enumerate}[label=(\alph*)]
+   \item Graph the position function and display a view of the graph that illustrates the asymptotic behavior of the function.
+-  \item Find the velocity as t approaches but is not equal to $\pi/4$ (if it exists).
++  \item Find the velocity as $t$ approaches but is not equal to $\pi/4$ (if it exists).
+ \end{enumerate}
+-\item Find the velocity and the speed of a particle with the position function $\text{r}(t)=(\frac{2t-1}{2t+1})\,\text{i}+\ln(1-4t^{2})\,\text{j}$. The speed of a particle is the magnitude of the velocity and is represented by $\|r'(t)\|$.
++\item Find the velocity and the speed of a particle with the position function $\mathbf{r}(t)=(\frac{2t-1}{2t+1})\,\mathbf{i}+\ln(1-4t^{2})\,\mathbf{j}$. The speed of a particle is the magnitude of the velocity and is represented by $\|\mathbf{r}'(t)\|$.
+ \end{enumerate}
+ 
+-A particle moves on a circular path of radius b according to the function $\text{r}(t)=b\cos(\omega t)\,\text{i}+b\sin(\omega t)\,\text{j}$, where $\omega$ is the angular velocity, $d\theta/dt$.
++A particle moves on a circular path of radius $b$ according to the function $\mathbf{r}(t)=b\cos(\omega t)\,\mathbf{i}+b\sin(\omega t)\,\mathbf{j}$, where $\omega$ is the angular velocity, $d\theta/dt$.
+ 
+ 
+-\textit{[Figure: This figure is the graph of a circle centered at the origin with radius of 3. The orientation of the circle is counter-clockwise. Also, in the fourth quadrant there are two vectors. The first starts on the circle and terminates at the origin. The second vector is tangent at the same point in the fourth quadrant towards the x-axis.]}
++\textit{[Figure: This figure is the graph of a circle centered at the origin with radius of 3. The orientation of the circle is counter-clockwise. Also, in the fourth quadrant there are two vectors. The first starts on the circle and terminates at the origin. The second vector is tangent at the same point in the fourth quadrant towards the $x$-axis.]}
+ 
+ \begin{enumerate}[resume]
+-\item Find the velocity function and show that $\text{v}(t)$ is always orthogonal to $\text{r}(t)$.
++\item Find the velocity function and show that $\mathbf{v}(t)$ is always orthogonal to $\mathbf{r}(t)$.
+ \item Show that the speed of the particle is proportional to the angular velocity.
+-\item Evaluate $\frac{d}{dt}[\,\text{u}(t)\times u'(t)]$ given $\text{u}(t)=t^{2}\,\text{i}-2t\,\text{j}+\,\text{k}$.
+-\item Find the antiderivative of $\text{r}'(t)=\cos(2t)\,\text{i}-2\sin t\,\text{j}+\frac{1}{1+t^{2}}\,\text{k}$ that satisfies the initial condition $\text{r}(0)=3\,\text{i}-2\,\text{j}+\,\text{k}$.
+-\item Evaluate $\int_{0}^{3}\|t\,\text{i}+t^{2}\,\text{j}\|\,dt$.
+-\item An object starts from rest at point $P(1,2,0)$ and moves with an acceleration of $\text{a}(t)=\text{j}+2\,\text{k}$, where $\|\,\text{a}(t)\|$ is measured in feet per second per second. Find the location of the object after $t=2$ sec.
++\item Evaluate $\frac{d}{dt}[\mathbf{u}(t)\times \mathbf{u}'(t)]$ given $\mathbf{u}(t)=t^{2}\,\mathbf{i}-2t\,\mathbf{j}+\,\mathbf{k}$.
++\item Find the antiderivative of $\mathbf{r}'(t)=\cos(2t)\,\mathbf{i}-2\sin t\,\mathbf{j}+\frac{1}{1+t^{2}}\,\mathbf{k}$ that satisfies the initial condition $\mathbf{r}(0)=3\,\mathbf{i}-2\,\mathbf{j}+\,\mathbf{k}$.
++\item Evaluate $\int_{0}^{3}\|t\,\mathbf{i}+t^{2}\,\mathbf{j}\|\,dt$.
++\item An object starts from rest at point $P(1,2,0)$ and moves with an acceleration of $\mathbf{a}(t)=\mathbf{j}+2\,\mathbf{k}$, where $\|\mathbf{a}(t)\|$ is measured in feet per second per second. Find the location of the object after $t=2$ sec.
+ \item Show that if the speed of a particle traveling along a curve represented by a vector-valued function is constant, then the velocity function is always perpendicular to the acceleration function.
+-\item Given $\text{r}(t)=t\,\text{i}+3t\,\text{j}+t^{2}\,\text{k}$ and $\text{u}(t)=4t\,\text{i}+t^{2}\,\text{j}+t^{3}\,\text{k}$, find $\frac{d}{dt}(\,\text{r}(t)\times \text{u}(t))$.
+-\item Given $\text{r}(t)=\langle t+\cos t,t-\sin t\rangle$, find the velocity and the speed at any time.
+-\item Find the velocity vector for the function $\text{r}(t)=\langle e^{t},e^{-t},0\rangle$.
+-\item Find an equation of the tangent line to the curve $\text{r}(t)=\langle e^{t},e^{-t},0\rangle$ at $t=0$.
+-\item Describe and sketch the curve represented by the vector-valued function $\text{r}(t)=\langle6t,6t-t^{2}\rangle$.
+-\item Locate the highest point on the curve $\text{r}(t)=\langle6t,6t-t^{2}\rangle$ and give the value of the function at this point.
++\item Given $\mathbf{r}(t)=t\,\mathbf{i}+3t\,\mathbf{j}+t^{2}\,\mathbf{k}$ and $\mathbf{u}(t)=4t\,\mathbf{i}+t^{2}\,\mathbf{j}+t^{3}\,\mathbf{k}$, find $\frac{d}{dt}(\mathbf{r}(t)\times \mathbf{u}(t))$.
++\item Given $\mathbf{r}(t)=\langle t+\cos t,t-\sin t\rangle$, find the velocity and the speed at any time.
++\item Find the velocity vector for the function $\mathbf{r}(t)=\langle e^{t},e^{-t},0\rangle$.
++\item Find an equation of the tangent line to the curve $\mathbf{r}(t)=\langle e^{t},e^{-t},0\rangle$ at $t=0$.
++\item Describe and sketch the curve represented by the vector-valued function $\mathbf{r}(t)=\langle6t,6t-t^{2}\rangle$.
++\item Locate the highest point on the curve $\mathbf{r}(t)=\langle6t,6t-t^{2}\rangle$ and give the value of the function at this point.
+ \end{enumerate}
+ 
+-The position vector for a particle is $\text{r}(t)=t\,\text{i}+t^{2}\,\text{j}+t^{3}\,\text{k}$. The graph is shown here:
++The position vector for a particle is $\mathbf{r}(t)=t\,\mathbf{i}+t^{2}\,\mathbf{j}+t^{3}\,\mathbf{k}$. The graph is shown here:
+ 
+ 
+ \textit{[Figure: This figure is the graph of a curve in 3 dimensions. The curve is inside of a box. The box represents an octant. The curve begins at the bottom of the box to the left and curves upward to the top right corner.]}
+@@ -100,7 +100,7 @@
+ \item Find the acceleration at time $t=2$ sec.
+ \end{enumerate}
+ 
+-A particle travels along the path of a helix with the equation $\text{r}(t)=\cos(t)\,\text{i}+\sin(t)\,\text{j}+t\,\text{k}$. See the graph presented here:
++A particle travels along the path of a helix with the equation $\mathbf{r}(t)=\cos(t)\,\mathbf{i}+\sin(t)\,\mathbf{j}+t\,\mathbf{k}$. See the graph presented here:
+ 
+ 
+ \textit{[Figure: This figure is the graph of a curve in 3 dimensions. The curve is inside of a box. The box represents an octant. The curve is a helix and begins at the bottom of the box to the right and spirals upward.]}
+@@ -115,7 +115,7 @@
+ \item Find the unit tangent vector for the helix.
+ \end{enumerate}
+ 
+-A particle travels along the path of an ellipse with the equation $\text{r}(t)=\cos t\,\text{i}+2\sin t\,\text{j}+0\,\text{k}$. Find the following:
++A particle travels along the path of an ellipse with the equation $\mathbf{r}(t)=\cos t\,\mathbf{i}+2\sin t\,\mathbf{j}+0\,\mathbf{k}$. Find the following:
+ 
+ \begin{enumerate}[resume]
+ \item Velocity of the particle
+@@ -123,7 +123,7 @@
+ \item Acceleration of the particle at $t=\frac{\pi}{4}$
+ \end{enumerate}
+ 
+-Given the vector-valued function $\text{r}(t)=\langle \tan t,\sec t,0\rangle$ (graph is shown here), find the following:
++Given the vector-valued function $\mathbf{r}(t)=\langle \tan t,\sec t,0\rangle$ (graph is shown here), find the following:
+ 
+ 
+ \textit{[Figure: This figure is the graph of a curve in 3 dimensions. The curve is inside of a box. The box represents an octant. The curve has asymptotes that are the diagonals of the box. The curve is hyperbolic.]}
+@@ -132,30 +132,30 @@
+ \item Velocity
+ \item Speed
+ \item Acceleration
+-\item Find the minimum speed of a particle traveling along the curve $\text{r}(t)=\langle t+\cos t,t-\sin t\rangle$ $t\in[0,2\pi)$.
++\item Find the minimum speed of a particle traveling along the curve $\mathbf{r}(t)=\langle t+\cos t,t-\sin t\rangle$ $t\in[0,2\pi)$.
+ \end{enumerate}
+ 
+-Given $\text{r}(t)=t\,\text{i}+2\sin t\,\text{j}+2\cos t\,\text{k}$ and $\text{u}(t)=\frac{1}{t}\,\text{i}+2\sin t\,\text{j}+2\cos t\,\text{k}$, find the following:
++Given $\mathbf{r}(t)=t\,\mathbf{i}+2\sin t\,\mathbf{j}+2\cos t\,\mathbf{k}$ and $\mathbf{u}(t)=\frac{1}{t}\,\mathbf{i}+2\sin t\,\mathbf{j}+2\cos t\,\mathbf{k}$, find the following:
+ 
+ \begin{enumerate}[resume]
+-\item $\text{r}(t)\times \text{u}(t)$
+-\item $\frac{d}{dt}(\,\text{r}(t)\times \text{u}(t))$
++\item $\mathbf{r}(t)\times \mathbf{u}(t)$
++\item $\frac{d}{dt}(\mathbf{r}(t)\times \mathbf{u}(t))$
+ \item Now, use the product rule for the derivative of the cross product of two vectors and show this result is the same as the answer for the preceding problem.
+ \end{enumerate}
+ 
+-Find the unit tangent vector T(t) for the following vector-valued functions.
++Find the unit tangent vector $\mathbf{T}(t)$ for the following vector-valued functions.
+ 
+ \begin{enumerate}[resume]
+-\item $\text{r}(t)=\langle t,\frac{1}{t}\rangle$. The graph is shown here: \\ \textit{[Figure: This figure is the graph of a hyperbolic curve. The y-axis is a vertical asymptote and the x-axis is the horizontal asymptote.]}
+-\item $\text{r}(t)=\langle t\cos t,t\sin t\rangle$
+-\item $\text{r}(t)=\langle t+1,2t+1,2t+2\rangle$
++\item $\mathbf{r}(t)=\langle t,\frac{1}{t}\rangle$. The graph is shown here: \\ \textit{[Figure: This figure is the graph of a hyperbolic curve. The $y$-axis is a vertical asymptote and the $x$-axis is the horizontal asymptote.]}
++\item $\mathbf{r}(t)=\langle t\cos t,t\sin t\rangle$
++\item $\mathbf{r}(t)=\langle t+1,2t+1,2t+2\rangle$
+ \end{enumerate}
+ 
+ Evaluate the following integrals:
+ 
+ \begin{enumerate}[resume]
+-\item $\int(e^{t}\,\text{i}+\sin t\,\text{j}+\frac{1}{2t-1}\,\text{k})\,dt$
+-\item $\int_{0}^{1}\,\text{r}(t)\,dt$, where $\text{r}(t)=\langle \sqrt[3]{t},\frac{1}{t+1},e^{-t}\rangle$
++\item $\int(e^{t}\,\mathbf{i}+\sin t\,\mathbf{j}+\frac{1}{2t-1}\,\mathbf{k})\,dt$
++\item $\int_{0}^{1}\,\mathbf{r}(t)\,dt$, where $\mathbf{r}(t)=\langle \sqrt[3]{t},\frac{1}{t+1},e^{-t}\rangle$
+ \end{enumerate}
+ 
+ \end{document}

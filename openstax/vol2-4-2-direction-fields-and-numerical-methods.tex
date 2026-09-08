@@ -1,0 +1,160 @@
+% OpenStax Calculus Volume 2 -- Section 4.2 Exercises: Direction Fields and Numerical Methods
+% Exercises reproduced from OpenStax, licensed under CC BY 4.0.
+% Source: https://openstax.org/books/calculus-volume-2/pages/4-2-direction-fields-and-numerical-methods
+\documentclass{exercises}
+\title{OpenStax Calculus Volume 2}
+\subtitle{Section 4.2 Exercises: Direction Fields and Numerical Methods}
+\sourceurl{https://openstax.org/books/calculus-volume-2/pages/4-2-direction-fields-and-numerical-methods}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+
+For the following problems, use the direction field below from the differential equation $y'=-2y$. Sketch the graph of the solution for the given initial conditions.
+
+
+\textit{[Figure: A direction field with horizontal arrows pointing to the right at $0$. The arrows above the $x$-axis point down and to the right. The further away from the $x$-axis, the steeper the arrows are, and the closer to the $x$-axis, the flatter the arrows are. Likewise, the arrows below the $x$-axis point up and to the right. The further away from the $x$-axis, the steeper the arrows are, and the closer to the $x$-axis, the flatter the arrows are.]}
+
+\begin{enumerate}[start=1]
+\item $y(0)=1$
+\item $y(0)=0$
+\item $y(0)=-1$
+\item Are there any equilibria? What are their stabilities?
+\end{enumerate}
+
+For the following problems, use the direction field below from the differential equation $y'=y^{2}-2y$. Sketch the graph of the solution for the given initial conditions.
+
+
+\textit{[Figure: A direction field with horizontal arrows at $y=0$ and $y=2$. The arrows point up for $y>2$ and for $y<0$. The arrows point down for $0<y<2$. The closer the arrows are to these lines, the more horizontal they are, and the further away, the more vertical the arrows are.]}
+
+\begin{enumerate}[resume]
+\item $y(0)=3$
+\item $y(0)=1$
+\item $y(0)=-1$
+\item Are there any equilibria? What are their stabilities?
+\end{enumerate}
+
+Draw the direction field for the following differential equations, then solve the differential equation.
+
+\begin{enumerate}[resume]
+\item $y'=t^{3}$
+\item $y'=e^{t}$
+\item $\frac{dy}{dx}=x^{2}\cos x$
+\item $\frac{dy}{dt}=te^{t}$
+\item $\frac{dx}{dt}=\cosh(t)$
+\end{enumerate}
+
+Draw the direction field for the following differential equations. What can you say about the behavior of the solution? Are there equilibria? What stability do these equilibria have?
+
+\begin{enumerate}[resume]
+\item $y'=y^{2}-1$
+\item $y'=y-x$
+\item $y'=1-y^{2}-x^{2}$
+\item $y'=t^{2}\sin y$
+\item $y'=3y+xy$
+\end{enumerate}
+
+Match the direction field with the given differential equations. Explain your selections.
+
+
+\textit{[Figure: A direction field with arrows pointing down and to the right in quadrants two and three. After crossing the $y$-axis, the arrows change direction and point up to the right.]}
+
+
+\textit{[Figure: A direction field with horizontal arrows pointing to the left in quadrants two and three. In crossing the $y$-axis, the arrows switch and point upward in quadrants one and four.]}
+
+
+\textit{[Figure: A direction field with horizontal arrows pointing to the right on the $x$-axis. Above, the arrows point down and to the right, and below, the arrows point up and to the right. The further from the $x$-axis, the more vertical the arrows become.]}
+
+
+\textit{[Figure: A direction field with horizontal arrows on the $x$- and $y$-axes. The arrows point down and to the right in quadrants one and three. They point up and to the right in quadrants two and four.]}
+
+
+\textit{[Figure: A direction field with arrows pointing up in quadrants two and three, to the right on the $y$-axis, and down in quadrants one and four.]}
+
+\begin{enumerate}[resume]
+\item $y'=-3y$
+\item $y'=-3t$
+\item $y'=e^{t}$
+\item $y'=\frac{1}{2}y+t$
+\item $y'=-ty$
+\end{enumerate}
+
+Match the direction field with the given differential equations. Explain your selections.
+
+
+\textit{[Figure: A direction field with horizontal arrows pointing to the right on the $x$- and $y$-axes. In quadrants one and three, the arrows point up, and in quadrants two and four, they point down.]}
+
+
+\textit{[Figure: A direction field with horizontal arrows pointing to the right on the $x$- and $y$-axes. In quadrants one and three, the arrows point up and to the right, and in quadrants two and four, the arrows point down and to the right.]}
+
+
+\textit{[Figure: A direction field with horizontal arrows pointing to the right on the $x$- and $y$-axes. In quadrants two and three, the arrows point down, and in quadrants one and four, the arrows point up.]}
+
+
+\textit{[Figure: A direction field with horizontal arrows pointing to the right on the $x$-axis. The arrows point up and to the right in all quadrants. The closer the arrows are to the $x$-axis, the more horizontal the arrows are, and the further away they are, the more vertical they are.]}
+
+
+\textit{[Figure: A direction field with horizontal arrows on the $y$-axis. The arrows are also more horizontal closer to $y=1.5$, $y=-1.5$, and the $y$-axis. For $y>1.5$ and $x<0$, for $y<-1.5$ and $x<0$, and for $-1.5<y<1.5$ and $x>0$, the arrows point down. For $y>1.5$ and $x>0$, for $y<-1.5$ and $x>0$, and for $-1.5<y<1.5$ and $x<0$, the arrows point up.]}
+
+\begin{enumerate}[resume]
+\item $y'=t\sin y$
+\item $y'=-t\cos y$
+\item $y'=t\tan y$
+\item $y'=\sin^{2}y$
+\item $y'=y^{2}t^{3}$
+\end{enumerate}
+
+Estimate the following solutions using Euler's method with $n=5$ steps over the interval $t\in[0,1]$. If you are able to solve the initial-value problem exactly, compare your solution with the exact solution. If you are unable to solve the initial-value problem, the exact solution will be provided for you to compare with Euler's method. How accurate is Euler's method?
+
+\begin{enumerate}[resume]
+\item $y'=-3y$, $y(0)=1$
+\item $y'=t^{2}$, $y(0)=2$
+\item $y'=3t-y$, $y(0)=1$. The exact solution is $y=3t+4e^{-t}-3$.
+\item $y'=y+t^{2}$, $y(0)=3$. The exact solution is $y=5e^{t}-2-t^{2}-2t$.
+\item $y'=2t$, $y(0)=0$
+\item \techrequired $y'=e^{x+y}$, $y(0)=-1$. The exact solution is $y=-\ln(e+1-e^{x})$.
+\item $y'=y^{2}\ln(x+1)$, $y(0)=1$. The exact solution is $y=-\frac{1}{(x+1)(\ln(x+1)-1)}$.
+\item $y'=2^{x}$, $y(0)=0$. The exact solution is $y=\frac{2^{x}-1}{\ln 2}$.
+\item $y'=y$, $y(0)=-1$. The exact solution is $y=-e^{x}$.
+\item $y'=-5t$, $y(0)=-2$. The exact solution is $y=-\frac{5}{2}t^{2}-2$.
+\end{enumerate}
+
+Differential equations can be used to model disease epidemics. In the next set of problems, we examine the change of size of two sub-populations of people living in a city: individuals who are infected and individuals who are susceptible to infection. $S$ represents the size of the susceptible population, and $I$ represents the size of the infected population. We assume that if a susceptible person interacts with an infected person, there is a probability $c$ that the susceptible person will become infected. Each infected person recovers from the infection at a rate $r$ and becomes susceptible again. We consider the case of influenza, where we assume that no one dies from the disease, so we assume that the total population size of the two sub-populations is a constant number, $N$. The differential equations that model these population sizes are
+
+
+\[\begin{array}{l}S'=rI-cSI, \\ I'=cSI-rI.\end{array}\]
+
+
+Here $c$ represents the contact rate and $r$ represents the recovery rate.
+
+\begin{enumerate}[resume]
+\item Show that, by our assumption that the total population size is constant, $S+I=N$, you can reduce the system to a single differential equation in $I$: $I'=c(N-I)I-rI$.
+\item Assuming the parameters are $c=0.5$, $N=5$, and $r=0.5$, draw the resulting direction field.
+\item \techrequired Use computational software or a calculator to compute an approximate solution to the initial-value problem $y'=ty$, $y(0)=2$, using Euler's method with a given step size $h$. Find the solution at $t=1$ in terms of $h$. Hint: Here is pseudocode for how to write a computer program to perform Euler's method for $y'=f(t,y)$, $y(0)=y_{0}$:
+\end{enumerate}
+
+Refer to your answer for Exercise 4.106 to solve the following exercises.
+
+\begin{enumerate}[resume]
+\item Solve the initial-value problem for the exact solution.
+\item Draw the direction field.
+\item Compute using $h=1$.
+\item \techrequired Compute using $h=0.1$.
+\item \techrequired Compute using $h=0.001$.
+\item \techrequired Compute using $h=0.0001$.
+\item \techrequired Evaluate the exact solution at $t=1$. Make a table of relative errors between Euler's method solutions and the exact solution. How much does the error change? Can you explain?
+\end{enumerate}
+
+Consider the initial-value problem $y'=-2y,\,y(0)=2$.
+
+\begin{enumerate}[resume]
+\item Show that $y=2e^{-2t}$ solves this initial-value problem.
+\item Draw the direction field of this differential equation.
+\item \techrequired By hand, calculator, or computer, approximate the solution using Euler's method at $t=10$ with $h=5$.
+\item \techrequired By calculator or computer, approximate the solution using Euler's method at $t=10$ with $h=10$.
+\item \techrequired Plot the exact solution and each Euler approximation (for $h=5$ and $h=10$) at each step on the direction field. What do you notice?
+\end{enumerate}
+
+\end{document}

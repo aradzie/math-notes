@@ -1,0 +1,111 @@
+% OpenStax Calculus Volume 2 -- Section 5.3 Exercises: The Divergence and Integral Tests
+% Exercises reproduced from OpenStax, licensed under CC BY 4.0.
+% Source: https://openstax.org/books/calculus-volume-2/pages/5-3-the-divergence-and-integral-tests
+\documentclass{exercises}
+\title{OpenStax Calculus Volume 2}
+\subtitle{Section 5.3 Exercises: The Divergence and Integral Tests}
+\sourceurl{https://openstax.org/books/calculus-volume-2/pages/5-3-the-divergence-and-integral-tests}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+
+For each of the following series, if the divergence test applies, either state that $\lim_{n\to \infty}a_{n}$ does not exist or find $\lim_{n\to \infty}a_{n}$. If the divergence test does not apply, state why.
+
+\begin{enumerate}[start=1]
+\item $a_{n}=\frac{n}{n+2}$
+\item $a_{n}=\frac{n}{5n^{2}-3}$
+\item $a_{n}=\frac{n}{\sqrt{3n^{2}+2n+1}}$
+\item $a_{n}=\frac{(2n+1)(n-1)}{{(n+1)}^{2}}$
+\item $a_{n}=\frac{{(2n+1)}^{2n}}{{(3n^{2}+1)}^{n}}$
+\item $a_{n}=\frac{2^{n}}{3^{n/2}}$
+\item $a_{n}=\frac{2^{n}+3^{n}}{10^{n/2}}$
+\item $a_{n}=e^{-2/n}$
+\item $a_{n}=\cos n$
+\item $a_{n}=\tan n$
+\item $a_{n}=\frac{1-\cos^{2}(1/n)}{\sin^{2}(2/n)}$
+\item $a_{n}={(1-\frac{1}{n})}^{2n}$
+\item $a_{n}=\frac{\ln n}{n}$
+\item $a_{n}=\frac{{(\ln n)}^{2}}{\sqrt{n}}$
+\end{enumerate}
+
+State whether the given $p$-series converges.
+
+\begin{enumerate}[resume]
+\item $\sum_{n=1}^{\infty}\frac{1}{\sqrt{n}}$
+\item $\sum_{n=1}^{\infty}\frac{1}{n\sqrt{n}}$
+\item $\sum_{n=1}^{\infty}\frac{1}{\sqrt[3]{n^{2}}}$
+\item $\sum_{n=1}^{\infty}\frac{1}{\sqrt[3]{n^{4}}}$
+\item $\sum_{n=1}^{\infty}\frac{n^{e}}{n^{\pi}}$
+\item $\sum_{n=1}^{\infty}\frac{n^{\pi}}{n^{2e}}$
+\end{enumerate}
+
+Use the integral test to determine whether the following sums converge.
+
+\begin{enumerate}[resume]
+\item $\sum_{n=1}^{\infty}\frac{1}{\sqrt{n+5}}$
+\item $\sum_{n=1}^{\infty}\frac{1}{\sqrt[3]{n+5}}$
+\item $\sum_{n=2}^{\infty}\frac{1}{n\ln n}$
+\item $\sum_{n=1}^{\infty}\frac{n}{1+n^{2}}$
+\item $\sum_{n=1}^{\infty}\frac{e^{n}}{1+e^{2n}}$
+\item $\sum_{n=1}^{\infty}\frac{2n}{1+n^{4}}$
+\item $\sum_{n=2}^{\infty}\frac{1}{n\ln^{2}n}$
+\end{enumerate}
+
+Express the following sums as $p$-series and determine whether each converges.
+
+\begin{enumerate}[resume]
+\item $\sum_{n=1}^{\infty}2^{-\ln n}$ (Hint: $2^{-\ln n}=1/n^{\ln 2}$.)
+\item $\sum_{n=1}^{\infty}3^{-\ln n}$ (Hint: $3^{-\ln n}=1/n^{\ln 3}$.)
+\item $\sum_{n=1}^{\infty}n2^{-2\ln n}$
+\item $\sum_{n=1}^{\infty}n3^{-2\ln n}$
+\end{enumerate}
+
+Use the estimate $R_{N}\le \int_{N}^{\infty}f(t)\,dt$ to find a bound for the remainder $R_{N}=\sum_{n=1}^{\infty}a_{n}-\sum_{n=1}^{N}a_{n}$ where $a_{n}=f(n)$.
+
+\begin{enumerate}[resume]
+\item $\sum_{n=1}^{1000}\frac{1}{n^{2}}$
+\item $\sum_{n=1}^{1000}\frac{1}{n^{3}}$
+\item $\sum_{n=1}^{1000}\frac{1}{1+n^{2}}$
+\item $\sum_{n=1}^{100}n/2^{n}$
+\end{enumerate}
+
+\techrequired Find the minimum value of $N$ such that the remainder estimate $\int_{N+1}^{\infty}f<R_{N}<\int_{N}^{\infty}f$ guarantees that $\sum_{n=1}^{N}a_{n}$ estimates $\sum_{n=1}^{\infty}a_{n}$, accurate to within the given error.
+
+\begin{enumerate}[resume]
+\item $a_{n}=\frac{1}{n^{2}}$, error $<10^{-4}$
+\item $a_{n}=\frac{1}{n^{1.1}}$, error $<10^{-4}$
+\item $a_{n}=\frac{1}{n^{1.01}}$, error $<10^{-4}$
+\item $a_{n}=\frac{1}{n\ln^{2}n}$, error $<10^{-3}$
+\item $a_{n}=\frac{1}{1+n^{2}}$, error $<10^{-3}$
+\end{enumerate}
+
+In the following exercises, find a value of $N$ such that $R_{N}$ is smaller than the desired error. Compute the corresponding sum $\sum_{n=1}^{N}a_{n}$ and compare it to the given estimate of the infinite series.
+
+\begin{enumerate}[resume]
+\item $a_{n}=\frac{1}{n^{11}}$, error $<10^{-4}$, $\sum_{n=1}^{\infty}\frac{1}{n^{11}}=1.000494\ldots$
+\item $a_{n}=\frac{1}{e^{n}}$, error $<10^{-5}$, $\sum_{n=1}^{\infty}\frac{1}{e^{n}}=\frac{1}{e-1}=0.581976\ldots$
+\item $a_{n}=\frac{n}{e^{n^{2}}}$, error $<10^{-5}$, $\sum_{n=1}^{\infty}n/e^{n^{2}}=0.40488139857\ldots$
+\item $a_{n}=\frac{1}{n^{4}}$, error $<10^{-4}$, $\sum_{n=1}^{\infty}\frac{1}{n^{4}}=\frac{\pi^{4}}{90}=1.08232\ldots$
+\item $a_{n}=\frac{1}{n^{6}}$, error $<10^{-6}$, $\sum_{n=1}^{\infty}\frac{1}{n^{6}}=\frac{\pi^{6}}{945}=1.01734306\ldots$
+\item Find the limit as $n\to \infty$ of $\frac{1}{n}+\frac{1}{n+1}+\cdots+\frac{1}{2n}$. (Hint: Compare to $\int_{n}^{2n}\frac{1}{t}\,dt$.)
+\item Find the limit as $n\to \infty$ of $\frac{1}{n}+\frac{1}{n+1}+\cdots+\frac{1}{3n}$.
+\end{enumerate}
+
+The next few exercises are intended to give a sense of applications in which partial sums of the harmonic series arise.
+
+\begin{enumerate}[resume]
+\item In certain applications of probability, such as the so-called Watterson estimator for predicting mutation rates in population genetics, it is important to have an accurate estimate of the number $H_{k}=(1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{k})$. Recall that $T_{k}=H_{k}-\ln k$ is decreasing. Compute $T=\lim_{k\to \infty}T_{k}$ to four decimal places. (Hint: $\frac{1}{k+1}<\int_{k}^{k+1}\frac{1}{x}\,dx$.)
+\item \techrequired Complete sampling with replacement, sometimes called the coupon collector's problem, is phrased as follows: Suppose you have $N$ unique items in a bin. At each step, an item is chosen at random, identified, and put back in the bin. The problem asks what is the expected number of steps $E(N)$ that it takes to draw each unique item at least once. It turns out that $E(N)=NH_{N}=N(1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{N})$. Find $E(N)$ for $N=10,20,\text{ and }50$.
+\item \techrequired The simplest way to shuffle cards is to take the top card and insert it at a random place in the deck, called top random insertion, and then repeat. We will consider a deck to be randomly shuffled once enough top random insertions have been made that the card originally at the bottom has reached the top and then been randomly inserted. If the deck has $n$ cards, then the probability that the insertion will be below the card initially at the bottom (call this card $B$) is $1/n$. Thus the expected number of top random insertions before $B$ is no longer at the bottom is $n$. Once one card is below $B$, there are two places below $B$ and the probability that a randomly inserted card will fall below $B$ is $2/n$. The expected number of top random insertions before this happens is $n/2$. The two cards below $B$ are now in random order. Continuing this way, find a formula for the expected number of top random insertions needed to consider the deck to be randomly shuffled.
+\item Suppose a scooter can travel $100$ km on a full tank of fuel. Assuming that fuel can be transferred from one scooter to another but can only be carried in the tank, present a procedure that will enable one of the scooters to travel $100H_{N}$ km, where $H_{N}=1+1/2+\cdots+1/N$.
+\item Show that for the remainder estimate to apply on $[N,\infty)$ it is sufficient that $f(x)$ be decreasing on $[N,\infty)$, but $f$ need not be decreasing on $[1,\infty)$.
+\item \techrequired Use the remainder estimate and integration by parts to approximate $\sum_{n=1}^{\infty}n/e^{n}$ within an error smaller than $0.0001$.
+\item Does $\sum_{n=2}^{\infty}\frac{1}{n(\ln n)^{p}}$ converge if $p$ is large enough? If so, for which $p$?
+\item \techrequired Suppose a computer can sum one million terms per second of the divergent series $\sum_{n=1}^{N}\frac{1}{n}$. Use the integral test to approximate how many seconds it will take to add up enough terms for the partial sum to exceed $100$.
+\item \techrequired A fast computer can sum one million terms per second of the divergent series $\sum_{n=2}^{N}\frac{1}{n\ln n}$. Use the integral test to approximate how many seconds it will take to add up enough terms for the partial sum to exceed $100$.
+\end{enumerate}
+
+\end{document}

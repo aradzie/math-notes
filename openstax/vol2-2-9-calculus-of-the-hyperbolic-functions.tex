@@ -1,0 +1,110 @@
+% OpenStax Calculus Volume 2 -- Section 2.9 Exercises: Calculus of the Hyperbolic Functions
+% Exercises reproduced from OpenStax, licensed under CC BY 4.0.
+% Source: https://openstax.org/books/calculus-volume-2/pages/2-9-calculus-of-the-hyperbolic-functions
+\documentclass{exercises}
+\title{OpenStax Calculus Volume 2}
+\subtitle{Section 2.9 Exercises: Calculus of the Hyperbolic Functions}
+\sourceurl{https://openstax.org/books/calculus-volume-2/pages/2-9-calculus-of-the-hyperbolic-functions}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{enumerate}[start=1]
+\item \techrequired Find expressions for $\cosh x+\sinh x$ and $\cosh x-\sinh x$. Use a calculator to graph these functions and ensure your expression is correct.
+\item From the definitions of $\cosh(x)$ and $\sinh(x)$, find their antiderivatives.
+\item Show that $\cosh(x)$ and $\sinh(x)$ satisfy $y''=y$.
+\item Use the quotient rule to verify that $\tanh(x)'=\operatorname{sech}^{2}(x)$.
+\item Derive $\cosh^{2}(x)+\sinh^{2}(x)=\cosh(2x)$ from the definition.
+\item Take the derivative of the previous expression to find an expression for $\sinh(2x)$.
+\item Prove $\sinh(x+y)=\sinh(x)\cosh(y)+\cosh(x)\sinh(y)$ by changing the expression to exponentials.
+\item Take the derivative of the previous expression to find an expression for $\cosh(x+y)$.
+\end{enumerate}
+
+For the following exercises, find the derivatives of the given functions and graph along with the function to ensure your answer is correct.
+
+\begin{enumerate}[resume]
+\item \techrequired $\cosh(3x+1)$
+\item \techrequired $\sinh(x^{2})$
+\item \techrequired $\frac{1}{\cosh(x)}$
+\item \techrequired $\sinh(\ln(x))$
+\item \techrequired $\cosh^{2}(x)+\sinh^{2}(x)$
+\item \techrequired $\cosh^{2}(x)-\sinh^{2}(x)$
+\item \techrequired $\tanh(\sqrt{x^{2}+1})$
+\item \techrequired $\frac{1+\tanh(x)}{1-\tanh(x)}$
+\item \techrequired $\sinh^{6}(x)$
+\item \techrequired $\ln(\operatorname{sech}(x)+\tanh(x))$
+\end{enumerate}
+
+For the following exercises, find the antiderivatives for the given functions.
+
+\begin{enumerate}[resume]
+\item $\cosh(2x+1)$
+\item $\tanh(3x+2)$
+\item $x\cosh(x^{2})$
+\item $3x^{3}\tanh(x^{4})$
+\item $\cosh^{2}(x)\sinh(x)$
+\item $\tanh^{2}(x)\operatorname{sech}^{2}(x)$
+\item $\frac{\sinh(x)}{1+\cosh(x)}$
+\item $\coth(x)$
+\item $\cosh(x)+\sinh(x)$
+\item $(\cosh(x)+\sinh(x))^{n}$
+\end{enumerate}
+
+For the following exercises, find the derivatives for the functions.
+
+\begin{enumerate}[resume]
+\item $\tanh^{-1}(4x)$
+\item $\sinh^{-1}(x^{2})$
+\item $\sinh^{-1}(\cosh(x))$
+\item $\cosh^{-1}(x^{3})$
+\item $\tanh^{-1}(\cos(x))$
+\item $e^{\sinh^{-1}(x)}$
+\item $\ln(\tanh^{-1}(x))$
+\end{enumerate}
+
+For the following exercises, find the antiderivatives for the functions.
+
+\begin{enumerate}[resume]
+\item $\int \frac{dx}{4-x^{2}}$
+\item $\int \frac{dx}{a^{2}-x^{2}}$
+\item $\int \frac{dx}{\sqrt{x^{2}+1}}$
+\item $\int \frac{x\,dx}{\sqrt{x^{2}+1}}$
+\item $\int-\frac{dx}{x\sqrt{1-x^{2}}}$
+\item $\int \frac{e^{x}}{\sqrt{e^{2x}-1}}\,dx$
+\item $\int-\frac{2x}{x^{4}-1}\,dx$
+\end{enumerate}
+
+For the following exercises, use the fact that a falling body with friction equal to velocity squared obeys the equation $dv/dt=g-v^{2}$.
+
+\begin{enumerate}[resume]
+\item Show that $v(t)=\sqrt{g}\tanh((\sqrt{g})t)$ satisfies this equation.
+\item Derive the previous expression for $v(t)$ by integrating $\frac{dv}{g-v^{2}}=dt$.
+\item \techrequired Estimate how far a body has fallen in $12$ seconds by finding the area underneath the curve of $v(t)$.
+\end{enumerate}
+
+For the following exercises, use this scenario: A cable hanging under its own weight has a slope $S=dy/dx$ that satisfies $dS/dx=c\sqrt{1+S^{2}}$. The constant $c$ is the ratio of cable density to tension.
+
+\begin{enumerate}[resume]
+\item Show that $S=\sinh(cx)$ satisfies this equation.
+\item Integrate $dy/dx=\sinh(cx)$ to find the cable height $y(x)$ if $y(0)=1/c$.
+\item Sketch the cable and determine how far down it sags at $x=0$.
+\end{enumerate}
+
+For the following exercises, solve each problem.
+
+\begin{enumerate}[resume]
+\item \techrequired A chain hangs from two posts $2$ m apart to form a catenary described by the equation $y=2\cosh(x/2)-1$. Find the slope of the catenary at the left fence post.
+\item \techrequired A chain hangs from two posts four meters apart to form a catenary described by the equation $y=4\cosh(x/4)-3$. Find the total length of the catenary (arc length).
+\item \techrequired A high-voltage power line is a catenary described by $y=10\cosh(x/10)$. Find the ratio of the area under the catenary to its arc length. What do you notice?
+\item A telephone line is a catenary described by $y=a\cosh(x/a)$. Find the ratio of the area under the catenary to its arc length. Does this confirm your answer for the previous question?
+\item Prove the formula for the derivative of $y=\sinh^{-1}(x)$ by differentiating $x=\sinh(y)$. (Hint: Use hyperbolic trigonometric identities.)
+\item Prove the formula for the derivative of $y=\cosh^{-1}(x)$ by differentiating $x=\cosh(y)$. (Hint: Use hyperbolic trigonometric identities.)
+\item Prove the formula for the derivative of $y=\operatorname{sech}^{-1}(x)$ by differentiating $x=\operatorname{sech}(y)$. (Hint: Use hyperbolic trigonometric identities.)
+\item Prove that $(\cosh(x)+\sinh(x))^{n}=\cosh(nx)+\sinh(nx)$.
+\item Prove the expression for $\sinh^{-1}(x)$. Multiply $x=\sinh(y)=(1/2)(e^{y}-e^{-y})$ by $2e^{y}$ and solve for $y$. Does your expression match the textbook?
+\item Prove the expression for $\cosh^{-1}(x)$. Multiply $x=\cosh(y)=(1/2)(e^{y}+e^{-y})$ by $2e^{y}$ and solve for $y$. Does your expression match the textbook?
+\end{enumerate}
+
+\end{document}

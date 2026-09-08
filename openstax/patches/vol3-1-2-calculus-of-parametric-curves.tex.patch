@@ -1,0 +1,17 @@
+One exercise ("$x=\sqrt{t},\,y=2t+4,\,t=1$") left a fused, comma-only math
+span while restating the same curve (line 80's $x=\sqrt{t}$, $y=2t+4$ with a
+different $t$) inside a \begin{matrix}, matching how every other exercise in
+this and the surrounding lists is formatted. Split into three comma-joined
+spans, "$x=\sqrt{t}$, $y=2t+4$, $t=1$", for consistency.
+
+--- /tmp/raw.tex
++++ vol3-1-2-calculus-of-parametric-curves.tex
+@@ -85,7 +85,7 @@
+
+ \begin{enumerate}[resume]
+ \item $\begin{matrix}x=\frac{1}{2}t^{2}, & y=\frac{1}{3}t^{3}, & t=2\end{matrix}$
+-\item $x=\sqrt{t},\,y=2t+4,\,t=1$
++\item $x=\sqrt{t}$, $y=2t+4$, $t=1$
+ \item Find $t$ intervals on which the curve $x=3t^{2}$, $y=t^{3}-t$ is concave up as well as concave down.
+ \item Determine the concavity of the curve $x=2t+\ln t$, $y=2t-\ln t$.
+ \item Sketch and find the area under one arch of the cycloid $x=r(\theta-\sin \theta)$, $y=r(1-\cos \theta)$.

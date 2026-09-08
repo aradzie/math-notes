@@ -1,0 +1,130 @@
+% OpenStax Calculus Volume 3 -- Section 6.6 Exercises: Surface Integrals
+% Exercises reproduced from OpenStax, licensed under CC BY 4.0.
+% Source: https://openstax.org/books/calculus-volume-3/pages/6-6-surface-integrals
+\documentclass{exercises}
+\title{OpenStax Calculus Volume 3}
+\subtitle{Section 6.6 Exercises: Surface Integrals}
+\sourceurl{https://openstax.org/books/calculus-volume-3/pages/6-6-surface-integrals}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+
+For the following exercises, determine whether the statements are true or false.
+
+\begin{enumerate}[start=1]
+\item If surface S is given by $\{(x,y,z):0\le x\le1,0\le y\le1,z=10\}$, then $\iint_{S}f(x,y,z)\,dS=\int_{0}^{1}\int_{0}^{1}f(x,y,10)\,dx\,dy$.
+\item If surface S is given by $\{(x,y,z):0\le x\le1,0\le y\le1,z=x\}$, then $\iint_{S}f(x,y,z)\,dS=\int_{0}^{1}\int_{0}^{1}f(x,y,x)\,dx\,dy$.
+\item Surface $\mathbf{r}=\langle v\cos u,v\sin u,v^{2}\rangle,\,\text{for}\,0\le u\le \pi,0\le v\le2$, is the same as surface $\mathbf{r}=\langle \sqrt{v}\cos 2u,\sqrt{v}\sin 2u,v\rangle$, for $0\le u\le \frac{\pi}{2},0\le v\le4$.
+\item Given the standard parameterization of a sphere, normal vectors $\mathbf{t}_{u}\times \mathbf{t}_{v}$ are outward normal vectors.
+\end{enumerate}
+
+For the following exercises, find parametric descriptions for the following surfaces.
+
+\begin{enumerate}[resume]
+\item Plane $3x-2y+z=2$
+\item Paraboloid $z=x^{2}+y^{2}$, for $0\le z\le9$.
+\item Plane $2x-4y+3z=16$
+\item The frustum of cone $z^{2}=x^{2}+y^{2},\,\text{for}\,2\le z\le8$
+\item The portion of cylinder $x^{2}+y^{2}=9$ in the first octant, for $0\le z\le3$ \\ \textit{[Figure: A diagram in three dimensions of a section of a cylinder with radius 3. The center of its circular top is (0,0,3). The section exists for x, y, and z between 0 and 3.]}
+\item A cone with base radius r and height h, where r and h are positive constants
+\end{enumerate}
+
+For the following exercises, use a computer algebra system to approximate the area of the following surfaces using a parametric description of the surface.
+
+\begin{enumerate}[resume]
+\item \techrequired Half cylinder $\{(r,\theta,z):r=4,0\le \theta \le \pi,0\le z\le7\}$
+\item \techrequired Plane $z=10-x-y$ above square $|x|\le2,|y|\le2$
+\end{enumerate}
+
+For the following exercises, let S be the hemisphere $x^{2}+y^{2}+z^{2}=4$, with $z\ge0$, and evaluate each surface integral.
+
+\begin{enumerate}[resume]
+\item $\iint_{S}z\,dS$
+\item $\iint_{S}(x-2y)\,dS$
+\item $\iint_{S}(x^{2}+y^{2})z\,dS$
+\end{enumerate}
+
+For the following exercises, evaluate $\iint_{S}\mathbf{F}\cdot \mathbf{N}\,dS$ for vector field F, where N is an upward pointing normal vector to surface S.
+
+\begin{enumerate}[resume]
+\item $\mathbf{F}(x,y,z)=x\mathbf{i}+2y\mathbf{j}-3z\mathbf{k}$, and S is that part of plane $15x-12y+3z=6$ that lies above unit square $0\le x\le1,0\le y\le1$.
+\item $\mathbf{F}(x,y,z)=x\mathbf{i}+y\mathbf{j}$, and S is hemisphere $z=\sqrt{1-x^{2}-y^{2}}$.
+\item $\mathbf{F}(x,y,z)=x^{2}\mathbf{i}+y^{2}\mathbf{j}+z^{2}\mathbf{k}$, and S is the portion of plane $z=y+1$ that lies inside cylinder $x^{2}+y^{2}=1$. \\ \textit{[Figure: A cylinder and an intersecting plane shown in three-dimensions. S is the portion of the plane z = y + 1 inside the cylinder x\textasciicircum{}2 + y \textasciicircum{}2 = 1.]}
+\end{enumerate}
+
+For the following exercises, approximate the mass of the lamina that has the shape of given surface S. Round to four decimal places.
+
+\begin{enumerate}[resume]
+\item \techrequired S is surface $z=4-x-2y,\,\text{with}\,z\ge0,\,x\ge0,\,y\ge0;\,\rho=x$.
+\item \techrequired S is surface $z=x^{2}+y^{2},\,\text{with}\,z\le1;\,\rho=z$.
+\item \techrequired S is surface $x^{2}+y^{2}+z^{2}=5,\,\text{with}\,z\ge1;\,\rho=\theta^{2}$.
+\item Evaluate $\iint_{S}(y^{2}z\mathbf{i}+y^{3}\mathbf{j}+xz\mathbf{k})\cdot \,dS$, where S is the surface of cube $-1\le x\le1,-1\le y\le1,\text{and}\,0\le z\le2$. Assume an outward pointing normal.
+\item Evaluate surface integral $\iint_{S}g\,dS$, where $g(x,y,z)=xz+2x^{2}-3xy$ and S is the portion of plane $2x-3y+z=6$ that lies over unit square R: $0\le x\le1,\,0\le y\le1$.
+\item Evaluate $\iint_{S}(x^{2}+y-z)\,dS$, where $S$ is the surface defined parametrically by $\mathbf{r}(u,v)=(2u+v)\mathbf{i}+(u-2v)\mathbf{j}+(u+3v)\mathbf{k}$ for $0\le u\le1,\,\text{and}\,0\le v\le2$. \\ \textit{[Figure: A three-dimensional diagram of the given surface, which appears to be a steeply sloped plane stretching through the (x,y) plane.]}
+\item \techrequired Evaluate $\iint_{S}(x-y^{2}+z)\,dS$, where S is the surface defined by $\mathbf{r}(u,v)=u^{2}\mathbf{i}+v\mathbf{j}+u\mathbf{k},\,0\le u\le1,\,0\le v\le1$. \\ \textit{[Figure: A three-dimensional diagram of the given surface, which appears to be a curve with edges parallel to the y-axis. It increases in x components and decreases in z components the further it is from the y axis.]}
+\item \techrequired Evaluate $\iint_{S}(x^{2}+y^{2}-z)\,dS$ where $S$ is the surface defined by $\mathbf{r}(u,v)=u\mathbf{i}-u^{2}\mathbf{j}+v\mathbf{k},\,0\le u\le2,\,0\le v\le1$.
+\item Evaluate $\iint_{S}(x^{2}+y^{2})\,dS$, where S is the surface of hemisphere $z=\sqrt{1-x^{2}-y^{2}}$, and above the plane $z=0$.
+\item Evaluate $\iint_{S}(x^{2}+y^{2}+z^{2})\,dS$, where S is the portion of plane $z=x+1$ that lies inside cylinder $x^{2}+y^{2}=1$.
+\item \techrequired Evaluate $\iint_{S}x^{2}z\,dS$, where S is the portion of cone $z^{2}=x^{2}+y^{2}$ that lies between planes $z=1$ and $z=4$. \\ \textit{[Figure: A diagram of the given upward opening cone in three dimensions. The cone is cut by planes z=1 and z=4.]}
+\item \techrequired Evaluate $\iint_{S}(xz/y)\,dS$, where S is the portion of cylinder $x=y^{2}$ that lies in the first octant between planes $z=0,z=5,y=1$, and $y=4$. \\ \textit{[Figure: A diagram of the given cylinder in three-dimensions. It is cut by the planes z=0, z=5, y=1, and y=4.]}
+\item \techrequired Evaluate $\iint_{S}(z+y)\,dS$, where S is the part of the graph of $z=\sqrt{1-x^{2}}$ in the first octant between the xz-plane and plane $y=3$. \\ \textit{[Figure: A diagram of the given surface in three dimensions in the first octant between the xz-plane and plane y=3. The given graph of z= the square root of (1-x\textasciicircum{}2) stretches down in a concave down curve from along (0,y,1) to along (1,y,0). It looks like a portion of a horizontal cylinder with base along the xz-plane and height along the y axis.]}
+\item Evaluate $\iint_{S}xyz\,dS$ if S is the part of plane $z=x+y$ that lies over the triangular region in the xy-plane with vertices (0, 0, 0), (1, 0, 0), and (0, 2, 0).
+\item Find the mass of a lamina of density $\rho(x,y,z)=z$ in the shape of hemisphere $z={(a^{2}-x^{2}-y^{2})}^{1/2}$.
+\item Compute $\iint_{S}\mathbf{F}\cdot \mathbf{N}\,dS$, where $\mathbf{F}(x,y,z)=x\mathbf{i}-5y\mathbf{j}+4z\mathbf{k}$ and N is an outward normal vector of S, where S is the union of two squares $S_{1}:x=0,\,0\le y\le1,\,0\le z\le1$ and $S_{2}:z=1,\,0\le x\le1,\,0\le y\le1$. \\ \textit{[Figure: A diagram in three dimensions. It shows the square formed by the components x=0, 0 <= y <= 1, and 0 <= z <= 1. It also shows the square formed by the components z=1, 0 <= x <= 1, and 0 <= y <= 1.]}
+\item Compute $\iint_{S}\mathbf{F}\cdot \mathbf{N}\,dS$, where $\mathbf{F}(x,y,z)=xy\mathbf{i}+z\mathbf{j}+(x+y)\mathbf{k}$ and N is an upward pointing normal vector $S$, where S is the triangular region of the plane $x+y+z=1$ in the first octant.
+\item Compute $\iint_{S}\mathbf{F}\cdot \mathbf{N}\,dS$, where $\mathbf{F}(x,y,z)=2yz\mathbf{i}+(\tan^{-1}(xz))\mathbf{j}+e^{xy}\mathbf{k}$ and N is an outward normal vector of S, where S is the surface of sphere $x^{2}+y^{2}+z^{2}=1$.
+\item Compute $\iint_{S}\mathbf{F}\cdot \mathbf{N}\,dS$, where $\mathbf{F}(x,y,z)=xyz\mathbf{i}+xyz\mathbf{j}+xyz\mathbf{k}$ and N is an outward normal vector S, where S is the surface of the five faces of the unit cube $0\le x\le1,\,0\le y\le1,\,0\le z\le1$ missing $z=0$.
+\end{enumerate}
+
+For the following exercises, express the surface integral as an iterated double integral by using a projection on S on the yz-plane.
+
+\begin{enumerate}[resume]
+\item $\iint_{S}xy^{2}z^{3}\,dS$; S is the first-octant portion of plane $2x+3y+4z=12$.
+\item $\iint_{S}(x^{2}-2y+z)\,dS$; S is the portion of the graph of $4x+y=8$ bounded by the coordinate planes and plane $z=6$.
+\end{enumerate}
+
+For the following exercises, express the surface integral as an iterated double integral by using a projection on S on the xz-plane
+
+\begin{enumerate}[resume]
+\item $\iint_{S}xy^{2}z^{3}\,dS$; S is the first-octant portion of plane $2x+3y+4z=12$.
+\item $\iint_{S}(x^{2}-2y+z)\,dS$; S is the portion of the graph of $4x+y=8$ bounded by the coordinate planes and plane $z=6$.
+\item Evaluate surface integral $\iint_{S}yz\,dS$, where S is the first-octant part of plane $x+y+z=\lambda$, where $\lambda$ is a positive constant.
+\item Evaluate surface integral $\iint_{S}(x^{2}z+y^{2}z)\,dS$, where S is hemisphere $x^{2}+y^{2}+z^{2}=a^{2},z\ge0$.
+\item Evaluate surface integral $\iint_{S}z\,dS$, where S is surface $z=\sqrt{x^{2}+y^{2}},0\le z\le2$.
+\item Evaluate surface integral $\iint_{S}x^{2}yz\,dS$, where S is the part of plane $z=1+2x+3y$ that lies above rectangle $0\le x\le3\,\text{and}\,0\le y\le2$.
+\item Evaluate surface integral $\iint_{S}yz\,dS$, where S is plane $x+y+z=1$ that lies in the first octant.
+\item Evaluate surface integral $\iint_{S}yz\,dS$, where S is the part of plane $z=y+3$ that lies inside cylinder $x^{2}+y^{2}=1$.
+\end{enumerate}
+
+For the following exercises, use geometric reasoning to evaluate the given surface integrals.
+
+\begin{enumerate}[resume]
+\item $\iint_{S}\sqrt{x^{2}+y^{2}+z^{2}}\,dS$, where S is surface $x^{2}+y^{2}+z^{2}=4,z\ge0$
+\item $\iint_{S}(x\mathbf{i}+y\mathbf{j})\cdot \,dS$, where S is surface $x^{2}+y^{2}=4,1\le z\le3$, oriented with unit normal vectors pointing outward
+\item $\iint_{S}(z\mathbf{k})\cdot \,dS$, where S is disc $x^{2}+y^{2}\le9$ on plane $z=4$, oriented with unit normal vectors pointing upward
+\item A lamina has the shape of a portion of sphere $x^{2}+y^{2}+z^{2}=a^{2}$ that lies within cone $z=\sqrt{x^{2}+y^{2}}$. Let S be the spherical shell centered at the origin with radius a, and let C be the right circular cone with a vertex at the origin and an axis of symmetry that coincides with the z-axis. Determine the mass of the lamina if $\rho(x,y,z)=x^{2}y^{2}z$. \\ \textit{[Figure: A diagram in three dimensions. A cone opens upward with point at the origin and an axis of symmetry that coincides with the z-axis. The upper half of a hemisphere with center at the origin opens downward and is cut off by the xy-plane.]}
+\item A lamina has the shape of a portion of sphere $x^{2}+y^{2}+z^{2}=a^{2}$ that lies within cone $z=\cot \phi_{0}\sqrt{x^{2}+y^{2}}$. Let S be the spherical shell centered at the origin with radius a, and let C be the right circular cone with a vertex at the origin and an axis of symmetry that coincides with the z-axis. Suppose the angle between the sides of the cone and the z-axis is $\phi_{0},\,\text{with}\,0\le \phi_{0}<\frac{\pi}{2}$. Determine the mass of that portion of the shape enclosed in the intersection of S and C. Assume $\rho(x,y,z)=x^{2}y^{2}z$. \\ \textit{[Figure: A diagram in three dimensions. A cone opens upward with point at the origin and an axis of symmetry that coincides with the z-axis. The upper half of a hemisphere with center at the origin opens downward and is cut off by the xy-plane.]}
+\item A paper cup has the shape of an inverted right circular cone of height 6 in. and radius of top 3 in. If the cup is full of water weighing $62.5\,\text{lb}/\text{ft}^{3}$, find the total force exerted by the water on the inside surface of the cup.
+\end{enumerate}
+
+For the following exercises, the heat flow vector field for conducting objects is $\mathbf{F}=-k\nabla T,\,\text{where}\,T(x,y,z)$ is the temperature in the object and $k>0$ is a constant that depends on the material. Find the outward flux of F across the following surfaces S for the given temperature distributions and assume $k=1$.
+
+\begin{enumerate}[resume]
+\item $T(x,y,z)=100e^{-x-y}$; S consists of the faces of cube $|x|\le1,|y|\le1,|z|\le1$.
+\item $T(x,y,z)=-\ln(x^{2}+y^{2}+z^{2})$; S is sphere $x^{2}+y^{2}+z^{2}=a^{2}$.
+\end{enumerate}
+
+For the following exercises, consider the radial fields $\mathbf{F}=\frac{\langle x,y,z\rangle}{{(x^{2}+y^{2}+z^{2})}^{\frac{p}{2}}}=\frac{\mathbf{r}}{\left\| \mathbf{r} \right\|^{p}}$, where p is a real number. Let S consist of spheres A and B centered at the origin with radii $0<a<b$. The total outward flux across S consists of the outward flux across the outer sphere B less the flux into S across inner sphere A.
+
+
+\textit{[Figure: A diagram in three dimensions of two spheres, one contained completely inside the other. Their centers are both at the origin. Arrows point in toward the origin from outside both spheres.]}
+
+\begin{enumerate}[resume]
+\item Find the total flux across S with $p=0$.
+\item Show that for $p=3$ the flux across S is independent of a and b.
+\end{enumerate}
+
+\end{document}
