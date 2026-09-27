@@ -135,41 +135,12 @@ For all real numbers \( x \) and \( y \), \[ |x+y| \le |x|+|y|. \]
 It says the magnitude of a sum is at most the sum of the magnitudes.
 ~~~
 
-!id: k7OhYhdbBx
-!front: Prove the triangle inequality \( |x+y| \le |x|+|y| \) for real numbers.
-!back:
-Let:
-
-- \( x,y \in \mathbb{R} \).
-
-To prove: \( |x+y| \le |x|+|y| \).
-
-- Since \( -|x| \le x \le |x| \) and \( -|y| \le y \le |y| \), adding the inequalities gives \[ -(|x|+|y|) \le x+y \le |x|+|y|. \]
-- Therefore \( |x+y| \le |x|+|y| \).
-~~~
-
 !id: Y7atRaR4qL
 !front: State the reverse triangle inequality for real numbers.
 !back:
 For all real numbers \( x \) and \( y \), \[ \bigl||x|-|y|\bigr| \le |x-y|. \]
 
-Equivalently, \[ |x-y| \ge \bigl||x|-|y|\bigr|. \]
-
 It says the distance between magnitudes is at most the distance between the original numbers.
-~~~
-
-!id: Dk7Wf4xix1
-!front: Derive the reverse triangle inequality from the triangle inequality.
-!back:
-Let:
-
-- \( x,y \in \mathbb{R} \).
-
-To prove: \( \bigl||x|-|y|\bigr| \le |x-y| \).
-
-- Apply the triangle inequality to \( x=(x-y)+y \): \[ |x| \le |x-y|+|y|, \] so \( |x|-|y| \le |x-y| \).
-- Apply the triangle inequality to \( y=(y-x)+x \): \[ |y| \le |x-y|+|x|, \] so \( |y|-|x| \le |x-y| \).
-- Therefore both \( |x|-|y| \) and \( |y|-|x| \) are at most \( |x-y| \), which is exactly \[ \bigl||x|-|y|\bigr| \le |x-y|. \]
 ~~~
 
 !id: Xfru4ruT3x

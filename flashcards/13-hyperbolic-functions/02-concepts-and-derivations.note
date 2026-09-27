@@ -195,75 +195,6 @@ For \( f(x)=e^x \), \[ f_e(x)=\cosh x, \qquad f_o(x)=\sinh x. \]
 So \( e^x=\cosh x+\sinh x \).
 ~~~
 
-!tags: Math Trigonometric Hyperbolic Inverse
-
-!id: D4nH1HVZwn
-!front: Derive the logarithmic formula for \( \operatorname{arcsinh} x \).
-!back:
-Let:
-
-- \( y=\operatorname{arcsinh}x \), so \( x=\sinh y \)
-- \( u=e^y>0 \)
-
-To prove: \( y=\ln\left(x+\sqrt{x^2+1}\right) \).
-
-- From \( x=\dfrac{u-u^{-1}}{2} \), multiply by \( 2u \) to get \( u^2-2xu-1=0 \).
-- Solving the quadratic gives \( u=x\pm\sqrt{x^2+1} \).
-- Since \( u>0 \), the valid root is \( u=x+\sqrt{x^2+1} \).
-- Therefore \( y=\ln u=\ln\left(x+\sqrt{x^2+1}\right) \).
-~~~
-
-!id: lfWiNDqgPw
-!front: Derive the logarithmic formula for \( \operatorname{arccosh} x \), with \( x\ge 1 \).
-!back:
-Let:
-
-- \( y=\operatorname{arccosh}x \), so \( x=\cosh y \)
-- \( y\ge 0 \), the principal branch
-- \( u=e^y>0 \)
-
-To prove: \( y=\ln\left(x+\sqrt{x^2-1}\right) \).
-
-- From \( x=\dfrac{u+u^{-1}}{2} \), multiply by \( 2u \) to get \( u^2-2xu+1=0 \).
-- Solving the quadratic gives \( u=x\pm\sqrt{x^2-1} \).
-- Since \( y\ge 0 \), \( u=e^y\ge 1 \), so the valid root is \( u=x+\sqrt{x^2-1} \).
-- Therefore \( y=\ln u=\ln\left(x+\sqrt{x^2-1}\right) \).
-~~~
-
-!id: ia6XjcBwoK
-!front: Derive the logarithmic formula for \( \operatorname{arctanh} x \), with \( |x|<1 \).
-!back:
-Let:
-
-- \( y=\operatorname{arctanh}x \), so \( x=\tanh y \)
-- \( u=e^{2y}>0 \)
-
-To prove: \( y=\dfrac{1}{2}\ln\left(\dfrac{1+x}{1-x}\right) \).
-
-- From \( x=\dfrac{e^y-e^{-y}}{e^y+e^{-y}} \), multiply numerator and denominator by \( e^y \) to get \( x=\dfrac{u-1}{u+1} \).
-- Solve for \( u \): \( x(u+1)=u-1 \), so \( u=\dfrac{1+x}{1-x} \).
-- Since \( |x|<1 \), this quotient is positive.
-- Therefore \( y=\dfrac{1}{2}\ln u=\dfrac{1}{2}\ln\left(\dfrac{1+x}{1-x}\right) \).
-~~~
-
-!id: QlGvebEQVA
-!front: Derive the logarithmic formula for \( \operatorname{arccoth} x \), with \( |x|>1 \).
-!back:
-Let:
-
-- \( y=\operatorname{arccoth}x \), so \( x=\coth y \)
-- \( u=e^{2y}>0 \)
-
-To prove: \( y=\dfrac{1}{2}\ln\left(\dfrac{x+1}{x-1}\right) \).
-
-- From \( x=\dfrac{e^y+e^{-y}}{e^y-e^{-y}} \), multiply numerator and denominator by \( e^y \) to get \( x=\dfrac{u+1}{u-1} \).
-- Solve for \( u \): \( x(u-1)=u+1 \), so \( u=\dfrac{x+1}{x-1} \).
-- Since \( |x|>1 \), this quotient is positive.
-- Therefore \( y=\dfrac{1}{2}\ln u=\dfrac{1}{2}\ln\left(\dfrac{x+1}{x-1}\right) \).
-~~~
-
-!tags: Math Trigonometric Hyperbolic Concept
-
 !id: IxOiwBEr3S
 !front: How do \( \sin,\cos \) and \( \sinh,\cosh \) differ as solutions of second-order differential equations?
 !back:
@@ -271,21 +202,4 @@ To prove: \( y=\dfrac{1}{2}\ln\left(\dfrac{x+1}{x-1}\right) \).
 - \( \sinh x \) and \( \cosh x \) solve \( y''=y \).
 
 This sign difference explains why differentiating \( \cos x \) introduces a minus sign, while differentiating \( \cosh x \) does not.
-~~~
-
-!id: M8O05dEBbp
-!front: Prove that \( \cosh x \ge 1+\dfrac{x^2}{2} \) for all \( x\in\mathbb{R} \).
-!back:
-Let:
-
-- \( f(x)=\cosh x-1-\dfrac{x^2}{2} \)
-
-To prove: \( f(x)\ge 0 \) for all \( x\in\mathbb{R} \).
-
-- \( f \) is even, so it is enough to prove the claim for \( x\ge 0 \).
-- For \( x\ge 0 \), \( f'(x)=\sinh x-x \).
-- Let \( g(x)=\sinh x-x \). Then \( g(0)=0 \) and \( g'(x)=\cosh x-1\ge 0 \), so \( g(x)\ge 0 \) for \( x\ge 0 \).
-- Hence \( f'(x)\ge 0 \) for \( x\ge 0 \), and since \( f(0)=0 \), \( f(x)\ge 0 \) for \( x\ge 0 \).
-
-![The graph of cosh x compared to the parabola 1+x^2/2, with the gap between them shaded to show cosh x is always at least as large; the two curves touch only at x=0](img/cosh-quadratic-bound.svg)
 ~~~
