@@ -1,6 +1,6 @@
 ---
 name: generate-flashcards
-description: Create, edit, or review Anki math flashcards in this repository's custom `.note` source format, including precise note syntax, metadata handling, LaTeX math, active-recall prompt design, and mathematical correctness checks.
+description: Create, edit, or review Anki `.note` flashcards in this repository. This skill focuses on math; read its linked reference for non-math topics.
 ---
 
 # Generate Math Flashcards
@@ -8,6 +8,8 @@ description: Create, edit, or review Anki math flashcards in this repository's c
 ## Purpose
 
 Create math flashcards in this repository's custom `.note` format. Notes should be short enough that the learner can usually answer in a few sentences while still testing explanation, derivation, comparison, interpretation, assumptions, or failure cases.
+
+For non-math flashcard requests, also read [Non-Math Flashcards](non-math-flashcards.md) before creating, editing, or reviewing notes.
 
 ## Calibration
 
@@ -105,7 +107,7 @@ Metadata scope:
 - Do not place file metadata inside an unfinished note record.
 - Blank lines between metadata and records are allowed and used for readability.
 
-Available note types:
+Math note types used here:
 
 - `Basic Math`: creates one front-to-back card.
 - `Basic Math (and reversed card)`: creates one front-to-back card and one back-to-front card from the same note.
