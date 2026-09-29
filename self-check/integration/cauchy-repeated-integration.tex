@@ -18,7 +18,7 @@
 \begin{enumerate}[resume]
   \item Rewrite the repeated integral as a single integral:
     \[
-      f^{(-n)}(x) = \frac{1}{(n-1)!} \int_a^x (x - t)^{n-1} f(t)\,dt.
+      f^{(-n)}(x) = \frac{1}{(n-1)!}\int_{a}^{x} (x - t)^{n-1}f(t)\,dt.
     \]
   \item What is the role of the factor $\frac{1}{(n-1)!}$?
   \item Why does the kernel $(x - t)^{n-1}$ appear in the formula?
@@ -38,14 +38,14 @@
   \item What is the base case of the induction?
   \item Show that for $n=1$:
     \[
-      f^{(-1)}(x) = \int_a^x f(t)\,dt.
+      f^{(-1)}(x) = \int_{a}^{x} f(t)\,dt.
     \]
   \item What assumption is made in the induction step?
   \item What must be proven in the induction step?
   \item Where is the Leibniz integral rule used in the proof?
   \item Compute:
     \[
-      \frac{d}{dx} \left[ \frac{1}{n!} \int_a^x (x - t)^n f(t)\,dt \right]
+      \frac{d}{dx}\left[ \frac{1}{n!}\int_{a}^{x} (x - t)^{n} f(t)\,dt \right]
     \]
     and explain why it gives the desired recursive relation.
   \item How does the induction step transform an $(n+1)$-fold integral into the desired single-integral form?
@@ -69,7 +69,7 @@
   \item What replaces the factorial $(n-1)!$ in the generalized version?
   \item State the fractional integral version:
     \[
-      (J^\alpha f)(x) = ?
+      (J^{\alpha} f)(x) = ?
     \]
   \item What condition must $\alpha$ satisfy?
   \item What is the name of this generalization?
@@ -91,15 +91,15 @@
 \begin{enumerate}[resume]
   \item Compute:
     \[
-      \int_0^x \int_0^{t_1} t_2 \, dt_2 \, dt_1
+      \int_{0}^{x} \int_{0}^{t_1}t_{2} \, dt_{2} \, dt_{1}
     \]
     using the Cauchy formula.
   \item Compute the $n$-fold integral of $f(t) = 1$.
-  \item Compute the $n$-fold integral of $f(t) = t^k$.
+  \item Compute the $n$-fold integral of $f(t) = t^{k}$.
   \item Show that:
     \[
-      (J^n f)(x) = (f * g_n)(x)
+      (J^{n} f)(x) = (f * g_{n})(x)
     \]
-    for an appropriate kernel $g_n$.
-  \item Verify the formula numerically for a simple function (e.g. $f(t)=e^t$).
+    for an appropriate kernel $g_{n}$.
+  \item Verify the formula numerically for a simple function (e.g. $f(t)=e^{t}$).
 \end{enumerate}

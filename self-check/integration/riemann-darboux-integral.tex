@@ -12,11 +12,11 @@
   \item Define the lower Darboux sum.
   \item What are the quantities
     \[
-      M_i = \sup_{x \in [x_{i-1},x_i]} f(x)
+      M_{i} = \sup_{x \in [x_{i-1},x_i]}f(x)
     \]
     and
     \[
-      m_i = \inf_{x \in [x_{i-1},x_i]} f(x)?
+      m_{i} = \inf_{x \in [x_{i-1},x_i]}f(x)?
     \]
   \item Define the upper Darboux integral.
   \item Define the lower Darboux integral.
@@ -40,7 +40,7 @@
     always true?
   \item Explain why
     \[
-      \sup_P L(f,P) \le \inf_P U(f,P).
+      \sup_{P} L(f,P) \le \inf_{P} U(f,P).
     \]
   \item What does it mean geometrically when the upper and lower integrals are equal?
   \item Why are Darboux sums often considered technically simpler than Riemann sums?
@@ -89,15 +89,15 @@
 \begin{enumerate}[resume]
   \item Compute the lower and upper Darboux sums for a constant function.
   \item Compute the lower and upper Darboux sums for $f(x)=x$ on $[0,1]$ using a uniform partition.
-  \item Derive the Riemann sum for $f(x)=x^2$ on $[0,1]$.
+  \item Derive the Riemann sum for $f(x)=x^{2}$ on $[0,1]$.
   \item Show directly that
     \[
-      \int_0^1 x\,dx = \frac12
+      \int_{0}^{1} x\,dx = \frac{1}{2}
     \]
     using Riemann sums.
   \item Show directly that
     \[
-      \int_0^1 x\,dx = \frac12
+      \int_{0}^{1} x\,dx = \frac{1}{2}
     \]
     using Darboux sums.
   \item For a uniform partition, how do you compute
@@ -115,23 +115,23 @@
 \begin{enumerate}[resume]
   \item What does the expression
     \[
-      \sum_i f(x_i)\Delta x_i
+      \sum_{i} f(x_{i})\Delta x_{i}
     \]
     represent before assigning any geometric or physical interpretation to it?
   \item Why is the integral fundamentally an accumulation operator rather than specifically an area operator?
   \item In the area interpretation of the integral, what do the quantities
     \[
-      f(x_i), \quad \Delta x_i, \quad f(x_i)\Delta x_i
+      f(x_{i}), \quad \Delta x_{i}, \quad f(x_{i})\Delta x_{i}
     \]
     represent geometrically?
   \item Why does
     \[
-      f(x_i)\Delta x_i
+      f(x_{i})\Delta x_{i}
     \]
     approximate the area of a thin rectangle?
   \item What happens to the Riemann sum as
     \[
-      \max \Delta x_i \to 0?
+      \max \Delta x_{i} \to 0?
     \]
   \item Why does the definite integral emerge as a limit of Riemann sums?
   \item If
@@ -155,24 +155,24 @@
       f(x)\Delta x
     \]
     be interpreted both as rectangle area and as accumulated change?
-  \item What determines the interpretation of the integrand~\(f(x)\)?
+  \item What determines the interpretation of the integrand~$f(x)$?
   \item Why is the equality
     \[
-      \int_a^b g'(x)\,dx = g(b)-g(a)
+      \int_{a}^{b} g'(x)\,dx = g(b)-g(a)
     \]
     an accumulation statement?
   \item In the Fundamental Theorem of Calculus, what exactly is being accumulated?
   \item Why does integrating a derivative recover net change?
   \item How does the telescoping intuition appear in
     \[
-      \sum \Delta g_i?
+      \sum \Delta g_{i}?
     \]
   \item Define
     \[
-      A(x)=\int_a^x f(t)\,dt.
+      A(x)=\int_{a}^{x} f(t)\,dt.
     \]
-    What does~\(A(x)\) represent geometrically?
-  \item Why does increasing~\(x\) by a small amount~\(h\) add approximately
+    What does~$A(x)$ represent geometrically?
+  \item Why does increasing~$x$ by a small amount~$h$ add approximately
     \[
       f(x)h
     \]
@@ -197,7 +197,7 @@
     \end{itemize}
   \item Why is
     \[
-      \int_a^b f(x)\,dx
+      \int_{a}^{b} f(x)\,dx
     \]
     not intrinsically an area?
   \item Give examples where the integral represents:
@@ -216,16 +216,12 @@
     \end{itemize}
   \item Explain the pattern:
     \[
-      \text{density} \times \text{small measure}
-      \to
-      \text{accumulated quantity}.
+      \text{density}\times \text{small measure}\to \text{accumulated quantity}.
     \]
   \item Why is the rectangle picture only one geometric realization of integration?
   \item What is the conceptual difference between:
     \[
-      f(x)
-      \quad \text{and} \quad
-      f(x)\,dx?
+      f(x) \quad \text{and}\quad f(x)\,dx?
     \]
   \item Why is
     \[
@@ -239,3 +235,4 @@
     more fundamental than the rectangle interpretation?
   \item What does the Fundamental Theorem of Calculus reveal about the relationship between local structure and global structure?
 \end{enumerate}
+

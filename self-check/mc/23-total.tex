@@ -3,7 +3,7 @@
 \subsection{Type, Domain, and Codomain}
 
 \begin{enumerate}
-  \item Let $f : \mathbb{R}^n \to \mathbb{R}^m$. What is the type (domain and codomain) of the total derivative $Df(\mathbf{x})$ at a point $\mathbf{x} \in \mathbb{R}^n$?
+  \item Let $f : \mathbb{R}^{n} \to \mathbb{R}^{m}$. What is the type (domain and codomain) of the total derivative $Df(\mathbf{x})$ at a point $\mathbf{x}\in \mathbb{R}^{n}$?
   \item How can you interpret $Df(\mathbf{x})$ as a linear map between tangent spaces?
   \item In coordinates, how is $Df(\mathbf{x})$ represented as a matrix? What are its dimensions?
 \end{enumerate}
@@ -12,11 +12,11 @@
 
 \begin{enumerate}[resume]
   \item Starting from the definition of differentiability, write the limit definition of $Df(\mathbf{x})$.
-  \item Show that if $f$ is differentiable at $\mathbf{x}$, then there exists a matrix $J_f(\mathbf{x})$ such that
+  \item Show that if $f$ is differentiable at $\mathbf{x}$, then there exists a matrix $J_{f}(\mathbf{x})$ such that
     \[
-      \lim_{\|\mathbf{h}\| \to 0} \frac{\|f(\mathbf{x}+\mathbf{h}) - f(\mathbf{x}) - J_f(\mathbf{x})\mathbf{h}\|}{\|\mathbf{h}\|} = 0.
+      \lim_{\|\mathbf{h}\| \to 0}\frac{\|f(\mathbf{x}+\mathbf{h}) - f(\mathbf{x}) - J_{f}(\mathbf{x})\mathbf{h}\|}{\|\mathbf{h}\|}= 0.
     \]
-  \item How do the entries of $J_f(\mathbf{x})$ arise from partial derivatives?
+  \item How do the entries of $J_{f}(\mathbf{x})$ arise from partial derivatives?
   \item Why does this limit definition guarantee that the Jacobian gives the \emph{best linear approximation}?
 \end{enumerate}
 
@@ -30,19 +30,19 @@
   \item Define the directional derivative of $f$ at $\mathbf{x}$ in the direction $\mathbf{v}$ using a limit.
   \item Show that the directional derivative can be expressed as
     \[
-      Df(\mathbf{x})[\mathbf{v}] = J_f(\mathbf{x}) \mathbf{v}.
+      Df(\mathbf{x})[\mathbf{v}] = J_{f}(\mathbf{x}) \mathbf{v}.
     \]
-  \item In the scalar-valued case $f : \mathbb{R}^n \to \mathbb{R}$, how is the Jacobian related to the gradient $\nabla f(\mathbf{x})$?
+  \item In the scalar-valued case $f : \mathbb{R}^{n} \to \mathbb{R}$, how is the Jacobian related to the gradient $\nabla f(\mathbf{x})$?
   \item Why does the gradient point in the direction of steepest ascent?
 \end{enumerate}
 
 \subsection{Tangent Planes and Local Linearization}
 
 \begin{enumerate}[resume]
-  \item For $f : \mathbb{R}^n \to \mathbb{R}$, write the equation of the tangent hyperplane at $\mathbf{x}_0$.
-  \item How does the linear map $Df(\mathbf{x}_0)$ define this hyperplane?
-  \item What is the first-order Taylor approximation of $f$ near $\mathbf{x}_0$?
-  \item Why is $Df(\mathbf{x}_0)$ called the \emph{local linearization} of $f$?
+  \item For $f : \mathbb{R}^{n} \to \mathbb{R}$, write the equation of the tangent hyperplane at $\mathbf{x}_{0}$.
+  \item How does the linear map $Df(\mathbf{x}_{0})$ define this hyperplane?
+  \item What is the first-order Taylor approximation of $f$ near $\mathbf{x}_{0}$?
+  \item Why is $Df(\mathbf{x}_{0})$ called the \emph{local linearization} of $f$?
 \end{enumerate}
 
 \subsection{Normal Vector}
@@ -50,7 +50,7 @@
 \begin{enumerate}[resume]
   \item For a level set $f(\mathbf{x}) = c$, what vector is normal to the surface at $\mathbf{x}$?
   \item How is this normal vector expressed in terms of the Jacobian?
-  \item In the case $f : \mathbb{R}^2 \to \mathbb{R}$, how does $\nabla f$ relate to the tangent line?
+  \item In the case $f : \mathbb{R}^{2} \to \mathbb{R}$, how does $\nabla f$ relate to the tangent line?
 \end{enumerate}
 
 \subsection{Linear Map and Best Linear Approximation}
@@ -65,19 +65,19 @@
 \subsection{Jacobian Determinant and Change of Variables}
 
 \begin{enumerate}[resume]
-  \item For $f : \mathbb{R}^n \to \mathbb{R}^n$, what is the Jacobian determinant $\det J_f(\mathbf{x})$?
-  \item How does $\det J_f(\mathbf{x})$ describe local volume (or area) scaling?
-  \item Why does $|\det J_f(\mathbf{x})|$ appear in the change of variables formula for multiple integrals?
-  \item What happens geometrically when $\det J_f(\mathbf{x}) = 0$?
+  \item For $f : \mathbb{R}^{n} \to \mathbb{R}^{n}$, what is the Jacobian determinant $\det J_{f}(\mathbf{x})$?
+  \item How does $\det J_{f}(\mathbf{x})$ describe local volume (or area) scaling?
+  \item Why does $|\det J_{f}(\mathbf{x})|$ appear in the change of variables formula for multiple integrals?
+  \item What happens geometrically when $\det J_{f}(\mathbf{x}) = 0$?
 \end{enumerate}
 
 \subsection{Multivariable Chain Rule}
 
 \begin{enumerate}[resume]
-  \item Let $f : \mathbb{R}^n \to \mathbb{R}^m$ and $g : \mathbb{R}^m \to \mathbb{R}^k$. State the chain rule for $D(g \circ f)(\mathbf{x})$.
+  \item Let $f : \mathbb{R}^{n} \to \mathbb{R}^{m}$ and $g : \mathbb{R}^{m} \to \mathbb{R}^{k}$. State the chain rule for $D(g \circ f)(\mathbf{x})$.
   \item Show that
     \[
-      J_{g \circ f}(\mathbf{x}) = J_g(f(\mathbf{x})) \, J_f(\mathbf{x}).
+      J_{g \circ f}(\mathbf{x}) = J_{g}(f(\mathbf{x})) \, J_{f}(\mathbf{x}).
     \]
   \item How does this relate to composition of linear maps?
 \end{enumerate}
@@ -85,7 +85,7 @@
 \subsection{Connection to Taylor Series}
 
 \begin{enumerate}[resume]
-  \item Write the first-order Taylor expansion of $f : \mathbb{R}^n \to \mathbb{R}^m$ at $\mathbf{x}_0$.
+  \item Write the first-order Taylor expansion of $f : \mathbb{R}^{n} \to \mathbb{R}^{m}$ at $\mathbf{x}_{0}$.
   \item Where does the Jacobian appear in this expansion?
   \item How would higher-order derivatives extend this approximation?
 \end{enumerate}
@@ -93,35 +93,35 @@
 \subsection{Newton's Method for Systems}
 
 \begin{enumerate}[resume]
-  \item Let $F : \mathbb{R}^n \to \mathbb{R}^n$. Write the Newton iteration for solving $F(\mathbf{x}) = \mathbf{0}$.
+  \item Let $F : \mathbb{R}^{n} \to \mathbb{R}^{n}$. Write the Newton iteration for solving $F(\mathbf{x}) = \mathbf{0}$.
   \item How is the Jacobian matrix used in each iteration?
   \item Why does Newton's method rely on local linearization?
-  \item What conditions on $J_F(\mathbf{x})$ are required for the method to work?
+  \item What conditions on $J_{F}(\mathbf{x})$ are required for the method to work?
 \end{enumerate}
 
 \subsection{Mapping Tangent Vectors}
 
 \begin{enumerate}[resume]
-  \item Let $f : \mathbb{R}^n \to \mathbb{R}^m$ and let $\gamma : \mathbb{R} \to \mathbb{R}^n$ be a differentiable curve with $\gamma(0) = x_0$. What is the type (domain and codomain) of $\gamma'(0)$ and of $Df(x_0),\gamma'(0)$?
-  \item Given a curve $\gamma(t)$ with $\gamma(0) = x_0$, write the expression for the tangent vector to the image curve $f(\gamma(t))$ at $t=0$. Which theorem justifies this expression?
+  \item Let $f : \mathbb{R}^{n} \to \mathbb{R}^{m}$ and let $\gamma : \mathbb{R}\to \mathbb{R}^{n}$ be a differentiable curve with $\gamma(0) = x_{0}$. What is the type (domain and codomain) of $\gamma'(0)$ and of $Df(x_{0}),\gamma'(0)$?
+  \item Given a curve $\gamma(t)$ with $\gamma(0) = x_{0}$, write the expression for the tangent vector to the image curve $f(\gamma(t))$ at $t=0$. Which theorem justifies this expression?
   \item State and explain the identity
     \[
-      \frac{d}{dt} f(\gamma(t)) \bigg|_{t=0} = Df(x_0)\,\gamma'(0).
+      \frac{d}{dt}f(\gamma(t)) \bigg|_{t=0}= Df(x_{0})\,\gamma'(0).
     \]
     What are the roles of each term in this equation?
-  \item Why does the Jacobian $Df(x_0)$ depend only on the tangent vector $\gamma'(0)$ and not on the specific curve $\gamma$? What does this imply about its geometric meaning?
-  \item Suppose two curves $\gamma_1(t)$ and $\gamma_2(t)$ satisfy $\gamma_1(0)=\gamma_2(0)=x_0$ and $\gamma_1'(0)=\gamma_2'(0)$. What can you say about the derivatives of their image curves under $f$ at $t=0$?
-  \item Show that for any vector $v \in \mathbb{R}^n$, the curve $\gamma(t) = x_0 + t v$ satisfies
+  \item Why does the Jacobian $Df(x_{0})$ depend only on the tangent vector $\gamma'(0)$ and not on the specific curve $\gamma$? What does this imply about its geometric meaning?
+  \item Suppose two curves $\gamma_{1}(t)$ and $\gamma_{2}(t)$ satisfy $\gamma_{1}(0)=\gamma_{2}(0)=x_{0}$ and $\gamma_{1}'(0)=\gamma_{2}'(0)$. What can you say about the derivatives of their image curves under $f$ at $t=0$?
+  \item Show that for any vector $v \in \mathbb{R}^{n}$, the curve $\gamma(t) = x_{0} + t v$ satisfies
     \[
-      Df(x_0)v = \frac{d}{dt} f(x_0 + t v)\bigg|_{t=0}.
+      Df(x_{0})v = \frac{d}{dt}f(x_{0} + t v)\bigg|_{t=0}.
     \]
     What does this tell you about the relationship between the Jacobian and directional derivatives?
-  \item In what sense can the Jacobian $Df(x_0)$ be viewed as a map between tangent spaces? Write explicitly the mapping it defines.
-  \item Explain what is meant by the statement: ``the Jacobian maps tangent vectors at $x_0$ to tangent vectors at $f(x_0)$.'' What are the spaces involved?
-  \item Consider all curves passing through $x_0$. What structure do their tangent vectors at $t=0$ form? How does the Jacobian act on this structure?
-  \item Why is the Jacobian called the ``best linear approximation'' of $f$ at $x_0$? How does the curve-based interpretation support this claim?
-  \item Let $f : \mathbb{R}^2 \to \mathbb{R}^2$ and let $\gamma(t)$ be a curve through $x_0$. Describe geometrically how the tangent vector $\gamma'(0)$ is transformed by $Df(x_0)$.
-  \item How does the mapping of tangent vectors by $Df(x_0)$ lead to the notion of a tangent line, plane, or hyperplane to the image of $f$?
-  \item If $f : \mathbb{R}^n \to \mathbb{R}$, how does $Df(x_0)$ relate to the gradient $\nabla f(x_0)$? How does this affect the interpretation of $Df(x_0)v$?
-  \item Explain why the Jacobian provides a linear map that approximates how small displacements near $x_0$ are transformed under $f$.
+  \item In what sense can the Jacobian $Df(x_{0})$ be viewed as a map between tangent spaces? Write explicitly the mapping it defines.
+  \item Explain what is meant by the statement: ``the Jacobian maps tangent vectors at $x_{0}$ to tangent vectors at $f(x_{0})$.'' What are the spaces involved?
+  \item Consider all curves passing through $x_{0}$. What structure do their tangent vectors at $t=0$ form? How does the Jacobian act on this structure?
+  \item Why is the Jacobian called the ``best linear approximation'' of $f$ at $x_{0}$? How does the curve-based interpretation support this claim?
+  \item Let $f : \mathbb{R}^{2} \to \mathbb{R}^{2}$ and let $\gamma(t)$ be a curve through $x_{0}$. Describe geometrically how the tangent vector $\gamma'(0)$ is transformed by $Df(x_{0})$.
+  \item How does the mapping of tangent vectors by $Df(x_{0})$ lead to the notion of a tangent line, plane, or hyperplane to the image of $f$?
+  \item If $f : \mathbb{R}^{n} \to \mathbb{R}$, how does $Df(x_{0})$ relate to the gradient $\nabla f(x_{0})$? How does this affect the interpretation of $Df(x_{0})v$?
+  \item Explain why the Jacobian provides a linear map that approximates how small displacements near $x_{0}$ are transformed under $f$.
 \end{enumerate}

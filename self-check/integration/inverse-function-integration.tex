@@ -1,326 +1,223 @@
 \section{Integrating Inverse Functions}
 
 \begin{enumerate}
-
-\item Let \(f:I\to J\) be one-to-one. What does it mean for \(f^{-1}:J\to I\) to be the inverse of \(f\)? State both identities involving \(f\) and \(f^{-1}\).
-
-\item Why is injectivity of \(f\) necessary if we want \(f^{-1}\) to be an ordinary function on \(J=f(I)\)?
-
-\item Suppose \(x=f(t)\). Explain why
-\[
-f^{-1}(x)=t.
-\]
-
-\item In the informal substitution
-\[
-\int f^{-1}(x)\,dx
-=
-\int t f'(t)\,dt,
-\qquad x=f(t),
-\]
-which two transformations are being used?
-
-\item Why should the expression
-\[
-dx=f'(t)\,dt
-\]
-not be regarded as the fundamental rigorous justification of the substitution?
-
-\item What theorem provides the rigorous justification for the transformation
-\[
-\int f^{-1}(x)\,dx
-\longrightarrow
-\int f^{-1}(f(t))f'(t)\,dt?
-\]
-
-\item Let \(F\) be an antiderivative of \(f^{-1}\). Write explicitly what the statement
-\[
-F'=f^{-1}
-\]
-means.
-
-\item Differentiate \(F(f(t))\) using the chain rule.
-
-\item Starting from
-\[
-\frac{d}{dt}F(f(t)),
-\]
-derive in a few lines the identity
-\[
-\frac{d}{dt}F(f(t))=t f'(t).
-\]
-
-\item Why does the identity
-\[
-(F\circ f)'(t)=t f'(t)
-\]
-show that \(F\circ f\) is an antiderivative of \(t f'(t)\)?
-
-\item Explain carefully what is meant by the informal identity
-\[
-\int f^{-1}(x)\,dx
-=
-\int t f'(t)\,dt.
-\]
-In particular, why are the two antiderivatives being written in different variables?
-
-\item State a precise definite-integral version of
-\[
-\int f^{-1}(x)\,dx
-=
-\int t f'(t)\,dt.
-\]
-
-\item Prove that for \(a,b\in I\),
-\[
-\int_{f(a)}^{f(b)} f^{-1}(x)\,dx
-=
-\int_a^b t f'(t)\,dt.
-\]
-
-\item Derive the same definite-integral identity directly from the substitution theorem by setting
-\[
-x=f(t).
-\]
-
-\item In the substitution
-\[
-x=f(t),
-\]
-what happens to the lower and upper bounds \(f(a)\) and \(f(b)\)?
-
-\item Does the identity
-\[
-\int_{f(a)}^{f(b)} f^{-1}(x)\,dx
-=
-\int_a^b t f'(t)\,dt
-\]
-require \(f\) to be increasing? Explain.
-
-\item Suppose \(f\) is decreasing. What is the relative order of \(f(a)\) and \(f(b)\) when \(a<b\), and why does the definite-integral formula still remain valid?
-
-\item Apply integration by parts to
-\[
-\int_a^b t f'(t)\,dt.
-\]
-State clearly your choices of \(u\) and \(dv\).
-
-\item Derive
-\[
-\int_a^b t f'(t)\,dt
-=
-b f(b)-a f(a)-\int_a^b f(t)\,dt.
-\]
-
-\item Combine the inverse-function substitution formula with integration by parts to prove
-\[
-\int_{f(a)}^{f(b)} f^{-1}(x)\,dx
-=
-b f(b)-a f(a)-\int_a^b f(t)\,dt.
-\]
-
-\item Let \(x\in J\) and put
-\[
-b=f^{-1}(x).
-\]
-Show that \(f(b)=x\).
-
-\item Starting from
-\[
-\int_{f(a)}^{f(b)} f^{-1}(u)\,du
-=
-b f(b)-a f(a)-\int_a^b f(t)\,dt,
-\]
-substitute \(b=f^{-1}(x)\) and derive
-\[
-\int_{f(a)}^x f^{-1}(u)\,du
-=
-x f^{-1}(x)-a f(a)
--
-\int_a^{f^{-1}(x)} f(t)\,dt.
-\]
-
-\item Why is the previous formula more precise than the informal identity
-\[
-\int f^{-1}(x)\,dx
-=
-x f^{-1}(x)-\int f(t)\,dt?
-\]
-
-\item In the informal formula
-\[
-\int f^{-1}(x)\,dx
-=
-x f^{-1}(x)-\int f(t)\,dt,
-\]
-what is ambiguous about the last integral?
-
-\item Give a corrected indefinite-integral formula in which the dependence on \(x\) is explicit.
-
-\item Let
-\[
-G(x)
-=
-x f^{-1}(x)
--
-\int_a^{f^{-1}(x)} f(t)\,dt.
-\]
-Differentiate \(G(x)\) directly and verify that
-\[
-G'(x)=f^{-1}(x).
-\]
-
-\item In the previous calculation, which rule is needed to differentiate
-\[
-\int_a^{f^{-1}(x)} f(t)\,dt?
-\]
-
-\item Assuming \((f^{-1})'(x)\) exists, carry out the derivative of
-\[
-x f^{-1}(x)
-\]
-using the product rule.
-
-\item Show explicitly how the terms involving \((f^{-1})'(x)\) cancel when differentiating
-\[
-x f^{-1}(x)
--
-\int_a^{f^{-1}(x)} f(t)\,dt.
-\]
-
-\item Why does the direct differentiation proof of the inverse-function integration formula typically require stronger assumptions than the proof based on
-\[
-(F\circ f)'(t)=t f'(t)?
-\]
-
-\item What hypotheses are sufficient to ensure that the substitution theorem can be applied to
-\[
-\int_{f(a)}^{f(b)} f^{-1}(x)\,dx
-\]
-with \(x=f(t)\)?
-
-\item Which assumptions are needed merely to define \(f^{-1}\), and which additional assumptions are needed for the differentiability or integration arguments?
-
-\item Suppose \(f(t)=t^2\) on \([0,\infty)\). Find \(f^{-1}(x)\) and verify
-\[
-\int f^{-1}(x)\,dx
-=
-\int t f'(t)\,dt
-\]
-by direct computation.
-
-\item For \(f(t)=t^2\) on \([0,\infty)\), derive the usual formula for
-\[
-\int \sqrt{x}\,dx
-\]
-using the inverse-function method.
-
-\item Suppose \(f(t)=e^t\). Use the formula
-\[
-\int f^{-1}(x)\,dx
-=
-\int t f'(t)\,dt
-\]
-to derive an antiderivative of \(\ln x\).
-
-\item Starting from \(f(t)=e^t\), use integration by parts to derive
-\[
-\int \ln x\,dx=x\ln x-x+C.
-\]
-
-\item Suppose \(f(t)=\tan t\) on \((-\pi/2,\pi/2)\). Use the inverse-function method to express
-\[
-\int \arctan x\,dx
-\]
-as an integral in the variable \(t\).
-
-\item Complete the derivation of
-\[
-\int \arctan x\,dx
-\]
-from the previous question.
-
-\item Suppose \(f(t)=\sin t\) on \([-\pi/2,\pi/2]\). Use the inverse-function method to derive a formula for
-\[
-\int \arcsin x\,dx.
-\]
-
-\item Why must the domain of \(\sin t\) be restricted before treating \(\arcsin\) as its inverse?
-
-\item Suppose \(f(t)=t^3+t\). Without finding an explicit formula for \(f^{-1}\), express
-\[
-\int_{f(a)}^{f(b)} f^{-1}(x)\,dx
-\]
-in terms of \(a\), \(b\), and an elementary integral involving \(f\).
-
-\item For \(f(t)=t^3+t\), compute
-\[
-\int_{f(0)}^{f(1)} f^{-1}(x)\,dx
-\]
-without explicitly solving for \(f^{-1}\).
-
-\item Explain geometrically why an identity involving
-\[
-\int f(x)\,dx
-\quad\text{and}\quad
-\int f^{-1}(x)\,dx
-\]
-should be plausible when \(f\) is increasing.
-
-\item If the graph of \(y=f(x)\) is reflected across the line \(y=x\), what graph is obtained?
-
-\item For an increasing positive function \(f\), explain how the rectangle with side lengths \(b\) and \(f(b)\) can be decomposed into areas associated with \(f\) and \(f^{-1}\).
-
-\item Derive the geometric area identity
-\[
-\int_a^b f(t)\,dt
-+
-\int_{f(a)}^{f(b)} f^{-1}(x)\,dx
-=
-b f(b)-a f(a).
-\]
-
-\item Which part of the rigorous analytic proof corresponds geometrically to the fact that the graphs of \(f\) and \(f^{-1}\) are reflections of each other?
-
-\item Explain the role of the fundamental theorem of calculus in passing from an antiderivative statement to a definite-integral identity.
-
-\item Explain the role of the chain rule in the proof.
-
-\item Explain the role of integration by parts in obtaining a formula involving both \(f\) and \(f^{-1}\).
-
-\item Distinguish clearly between the following three statements:
-\[
-(F\circ f)'(t)=t f'(t),
-\]
-\[
-\int_{f(a)}^{f(b)} f^{-1}(x)\,dx
-=
-\int_a^b t f'(t)\,dt,
-\]
-and
-\[
-\int_{f(a)}^{f(b)} f^{-1}(x)\,dx
-=
-b f(b)-a f(a)-\int_a^b f(t)\,dt.
-\]
-What theorem or technique is responsible for each transition?
-
-\item Give a complete proof, from the chain rule and the fundamental theorem of calculus, of
-\[
-\int_{f(a)}^{f(b)} f^{-1}(x)\,dx
-=
-b f(b)-a f(a)-\int_a^b f(t)\,dt.
-\]
-
-\item Reconstruct the entire argument without using the symbolic differential equation
-\[
-dx=f'(t)\,dt.
-\]
-
-\item Finally, explain in your own words why the informal substitution
-\[
-x=f(t),\qquad dx=f'(t)\,dt
-\]
-works in this problem, and identify the rigorous theorem that justifies each symbolic step.
-
+  \item Let $f:I\to J$ be one-to-one. What does it mean for $f^{-1}:J\to I$ to be the inverse of $f$? State both identities involving $f$ and $f^{-1}$.
+  \item Why is injectivity of $f$ necessary if we want $f^{-1}$ to be an ordinary function on $J=f(I)$?
+  \item Suppose $x=f(t)$. Explain why
+    \[
+      f^{-1}(x)=t.
+    \]
+  \item In the informal substitution
+    \[
+      \int f^{-1}(x)\,dx = \int t f'(t)\,dt, \qquad x=f(t),
+    \]
+    which two transformations are being used?
+  \item Why should the expression
+    \[
+      dx=f'(t)\,dt
+    \]
+    not be regarded as the fundamental rigorous justification of the substitution?
+  \item What theorem provides the rigorous justification for the transformation
+    \[
+      \int f^{-1}(x)\,dx \longrightarrow \int f^{-1}(f(t))f'(t)\,dt?
+    \]
+  \item Let $F$ be an antiderivative of $f^{-1}$. Write explicitly what the statement
+    \[
+      F'=f^{-1}
+    \]
+    means.
+  \item Differentiate $F(f(t))$ using the chain rule.
+  \item Starting from
+    \[
+      \frac{d}{dt}F(f(t)),
+    \]
+    derive in a few lines the identity
+    \[
+      \frac{d}{dt}F(f(t))=t f'(t).
+    \]
+  \item Why does the identity
+    \[
+      (F\circ f)'(t)=t f'(t)
+    \]
+    show that $F\circ f$ is an antiderivative of $t f'(t)$?
+  \item Explain carefully what is meant by the informal identity
+    \[
+      \int f^{-1}(x)\,dx = \int t f'(t)\,dt.
+    \]
+    In particular, why are the two antiderivatives being written in different variables?
+  \item State a precise definite-integral version of
+    \[
+      \int f^{-1}(x)\,dx = \int t f'(t)\,dt.
+    \]
+  \item Prove that for $a,b\in I$,
+    \[
+      \int_{f(a)}^{f(b)}f^{-1}(x)\,dx = \int_{a}^{b} t f'(t)\,dt.
+    \]
+  \item Derive the same definite-integral identity directly from the substitution theorem by setting
+    \[
+      x=f(t).
+    \]
+  \item In the substitution
+    \[
+      x=f(t),
+    \]
+    what happens to the lower and upper bounds $f(a)$ and $f(b)$?
+  \item Does the identity
+    \[
+      \int_{f(a)}^{f(b)}f^{-1}(x)\,dx = \int_{a}^{b} t f'(t)\,dt
+    \]
+    require $f$ to be increasing? Explain.
+  \item Suppose $f$ is decreasing. What is the relative order of $f(a)$ and $f(b)$ when $a<b$, and why does the definite-integral formula still remain valid?
+  \item Apply integration by parts to
+    \[
+      \int_{a}^{b} t f'(t)\,dt.
+    \]
+    State clearly your choices of $u$ and $dv$.
+  \item Derive
+    \[
+      \int_{a}^{b} t f'(t)\,dt = b f(b)-a f(a)-\int_{a}^{b} f(t)\,dt.
+    \]
+  \item Combine the inverse-function substitution formula with integration by parts to prove
+    \[
+      \int_{f(a)}^{f(b)}f^{-1}(x)\,dx = b f(b)-a f(a)-\int_{a}^{b} f(t)\,dt.
+    \]
+  \item Let $x\in J$ and put
+    \[
+      b=f^{-1}(x).
+    \]
+    Show that $f(b)=x$.
+  \item Starting from
+    \[
+      \int_{f(a)}^{f(b)}f^{-1}(u)\,du = b f(b)-a f(a)-\int_{a}^{b} f(t)\,dt,
+    \]
+    substitute $b=f^{-1}(x)$ and derive
+    \[
+      \int_{f(a)}^{x} f^{-1}(u)\,du = x f^{-1}(x)-a f(a) - \int_{a}^{f^{-1}(x)}f(t)\,dt.
+    \]
+  \item Why is the previous formula more precise than the informal identity
+    \[
+      \int f^{-1}(x)\,dx = x f^{-1}(x)-\int f(t)\,dt?
+    \]
+  \item In the informal formula
+    \[
+      \int f^{-1}(x)\,dx = x f^{-1}(x)-\int f(t)\,dt,
+    \]
+    what is ambiguous about the last integral?
+  \item Give a corrected indefinite-integral formula in which the dependence on $x$ is explicit.
+  \item Let
+    \[
+      G(x) = x f^{-1}(x) - \int_{a}^{f^{-1}(x)}f(t)\,dt.
+    \]
+    Differentiate $G(x)$ directly and verify that
+    \[
+      G'(x)=f^{-1}(x).
+    \]
+  \item In the previous calculation, which rule is needed to differentiate
+    \[
+      \int_{a}^{f^{-1}(x)}f(t)\,dt?
+    \]
+  \item Assuming $(f^{-1})'(x)$ exists, carry out the derivative of
+    \[
+      x f^{-1}(x)
+    \]
+    using the product rule.
+  \item Show explicitly how the terms involving $(f^{-1})'(x)$ cancel when differentiating
+    \[
+      x f^{-1}(x) - \int_{a}^{f^{-1}(x)}f(t)\,dt.
+    \]
+  \item Why does the direct differentiation proof of the inverse-function integration formula typically require stronger assumptions than the proof based on
+    \[
+      (F\circ f)'(t)=t f'(t)?
+    \]
+  \item What hypotheses are sufficient to ensure that the substitution theorem can be applied to
+    \[
+      \int_{f(a)}^{f(b)}f^{-1}(x)\,dx
+    \]
+    with $x=f(t)$?
+  \item Which assumptions are needed merely to define $f^{-1}$, and which additional assumptions are needed for the differentiability or integration arguments?
+  \item Suppose $f(t)=t^{2}$ on $[0,\infty)$. Find $f^{-1}(x)$ and verify
+    \[
+      \int f^{-1}(x)\,dx = \int t f'(t)\,dt
+    \]
+    by direct computation.
+  \item For $f(t)=t^{2}$ on $[0,\infty)$, derive the usual formula for
+    \[
+      \int \sqrt{x}\,dx
+    \]
+    using the inverse-function method.
+  \item Suppose $f(t)=e^{t}$. Use the formula
+    \[
+      \int f^{-1}(x)\,dx = \int t f'(t)\,dt
+    \]
+    to derive an antiderivative of $\ln x$.
+  \item Starting from $f(t)=e^{t}$, use integration by parts to derive
+    \[
+      \int \ln x\,dx=x\ln x-x+C.
+    \]
+  \item Suppose $f(t)=\tan t$ on $(-\pi/2,\pi/2)$. Use the inverse-function method to express
+    \[
+      \int \arctan x\,dx
+    \]
+    as an integral in the variable $t$.
+  \item Complete the derivation of
+    \[
+      \int \arctan x\,dx
+    \]
+    from the previous question.
+  \item Suppose $f(t)=\sin t$ on $[-\pi/2,\pi/2]$. Use the inverse-function method to derive a formula for
+    \[
+      \int \arcsin x\,dx.
+    \]
+  \item Why must the domain of $\sin t$ be restricted before treating $\arcsin$ as its inverse?
+  \item Suppose $f(t)=t^{3}+t$. Without finding an explicit formula for $f^{-1}$, express
+    \[
+      \int_{f(a)}^{f(b)}f^{-1}(x)\,dx
+    \]
+    in terms of $a$, $b$, and an elementary integral involving $f$.
+  \item For $f(t)=t^{3}+t$, compute
+    \[
+      \int_{f(0)}^{f(1)}f^{-1}(x)\,dx
+    \]
+    without explicitly solving for $f^{-1}$.
+  \item Explain geometrically why an identity involving
+    \[
+      \int f(x)\,dx \quad\text{and}\quad \int f^{-1}(x)\,dx
+    \]
+    should be plausible when $f$ is increasing.
+  \item If the graph of $y=f(x)$ is reflected across the line $y=x$, what graph is obtained?
+  \item For an increasing positive function $f$, explain how the rectangle with side lengths $b$ and $f(b)$ can be decomposed into areas associated with $f$ and $f^{-1}$.
+  \item Derive the geometric area identity
+    \[
+      \int_{a}^{b} f(t)\,dt + \int_{f(a)}^{f(b)}f^{-1}(x)\,dx = b f(b)-a f(a).
+    \]
+  \item Which part of the rigorous analytic proof corresponds geometrically to the fact that the graphs of $f$ and $f^{-1}$ are reflections of each other?
+  \item Explain the role of the fundamental theorem of calculus in passing from an antiderivative statement to a definite-integral identity.
+  \item Explain the role of the chain rule in the proof.
+  \item Explain the role of integration by parts in obtaining a formula involving both $f$ and $f^{-1}$.
+  \item Distinguish clearly between the following three statements:
+    \[
+      (F\circ f)'(t)=t f'(t),
+    \]
+    \[
+      \int_{f(a)}^{f(b)}f^{-1}(x)\,dx = \int_{a}^{b} t f'(t)\,dt,
+    \]
+    and
+    \[
+      \int_{f(a)}^{f(b)}f^{-1}(x)\,dx = b f(b)-a f(a)-\int_{a}^{b} f(t)\,dt.
+    \]
+    What theorem or technique is responsible for each transition?
+  \item Give a complete proof, from the chain rule and the fundamental theorem of calculus, of
+    \[
+      \int_{f(a)}^{f(b)}f^{-1}(x)\,dx = b f(b)-a f(a)-\int_{a}^{b} f(t)\,dt.
+    \]
+  \item Reconstruct the entire argument without using the symbolic differential equation
+    \[
+      dx=f'(t)\,dt.
+    \]
+  \item Finally, explain in your own words why the informal substitution
+    \[
+      x=f(t),\qquad dx=f'(t)\,dt
+    \]
+    works in this problem, and identify the rigorous theorem that justifies each symbolic step.
 \end{enumerate}
+
