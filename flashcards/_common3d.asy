@@ -1,8 +1,8 @@
 // Shared 3D Asymptote helpers.
 //
-// Import with `import common3d;` -- this resolves from any subdirectory
-// because compilation always runs with flashcards/ as the working directory.
-// Parallel to (not merged into) common.asy, which holds 2D-only helpers.
+// Import with `import _common3d;` (see the generate-illustrations skill for
+// how library imports resolve). Builds on _common.asy, which holds the 2D
+// helpers.
 //
 // Everything here is drawn as plain 2D content (pair paths), never path3 /
 // size3(). We only use `three`'s `triple` type and `project()` as pure
@@ -18,7 +18,7 @@
 // repo already works.
 
 import three;    // triple, projection, perspective, cross, unit, project
-import common;   // mathdefaults(), for stylistic parity with 2D files
+import _common;  // mathdefaults(), for stylistic parity with 2D files
 
 // TNB color convention shared by every illustration in this family: T, N, B
 // are always red/green/blue, and a plane's translucent fill always matches

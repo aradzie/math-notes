@@ -3,7 +3,7 @@
 // product n = (q-p) x (s-p) is a normal vector.
 
 import three;
-import common3d;
+import _common3d;
 
 mathdefaults();
 

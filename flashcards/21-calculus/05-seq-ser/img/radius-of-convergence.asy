@@ -4,7 +4,7 @@
 // actually diverges there, since R alone does not determine that.
 
 import graph;
-import common;
+import _common;
 
 size(16cm, 6cm);
 mathdefaults();

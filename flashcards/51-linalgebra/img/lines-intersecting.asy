@@ -1,7 +1,7 @@
 // An independent system of two linear equations, x + y = 4 and x - y = 0:
 // the lines cross at exactly one point, the system's unique solution.
 
-import common;
+import _common;
 
 size(10cm);
 mathdefaults();

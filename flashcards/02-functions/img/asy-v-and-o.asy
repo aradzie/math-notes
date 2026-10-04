@@ -3,7 +3,7 @@
 // horizontal asymptote.
 
 import graph;
-import common;
+import _common;
 
 size(12cm, 8cm);
 mathdefaults();

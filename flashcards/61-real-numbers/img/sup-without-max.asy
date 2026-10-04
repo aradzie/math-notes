@@ -1,7 +1,7 @@
 // A = {-1/n : n in N}. sup A = 0, but 0 is not in A, so A has no maximum.
 
 import graph;
-import common;
+import _common;
 
 texpreamble("\usepackage{amssymb}");
 

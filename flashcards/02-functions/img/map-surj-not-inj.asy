@@ -2,7 +2,7 @@
 // trying to build f^{-1}(b1) doesn't know which one to point to -- shown
 // as two competing red return arrows.
 
-import common;
+import _common;
 
 size(10cm);
 mathdefaults();

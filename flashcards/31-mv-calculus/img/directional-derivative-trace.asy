@@ -10,7 +10,7 @@
 // generate-illustrations SKILL.md, "Flat fills in 3D scenes").
 
 import three;
-import common3d;
+import _common3d;
 
 mathdefaults();
 

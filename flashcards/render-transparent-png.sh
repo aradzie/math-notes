@@ -3,15 +3,15 @@
 # background, via the two-render difference-matting technique: render the
 # scene once with its background forced to black, once to white, then
 # reconstruct true alpha/RGB from the pair (reconstruct-transparent-png.py).
-# See the "SVG vs. PNG output" section of
-# .claude/skills/generate-illustrations/SKILL.md for the full rationale.
+# See .agents/skills/generate-illustrations/png-output.md for the full rationale.
 #
 # Usage: render-transparent-png.sh <asy-render-level> <src.asy> <dest.png>
 #
 # Must be invoked with flashcards/ as the working directory, as
 # flashcards/Makefile does -- both <src.asy> and <dest.png> are paths
 # relative to flashcards/, matching how asy itself is invoked elsewhere in
-# this build so `import common;`/`import common3d;` resolve.
+# this build so root libraries (`import _common;`) resolve; -dir adds the
+# scene's own directory for its local libraries.
 
 set -euo pipefail
 
@@ -35,8 +35,8 @@ if ! grep -qxF "$anchor" "$src"; then
         echo "This script injects 'currentlight.background = ...;' immediately"
         echo "after that line to force a solid render background for each of the"
         echo "two renders it difference-mattes; without that exact anchor line"
-        echo "there is no safe injection point. See the 'SVG vs. PNG output'"
-        echo "section of .claude/skills/generate-illustrations/SKILL.md."
+        echo "there is no safe injection point. See"
+        echo ".agents/skills/generate-illustrations/png-output.md."
     } >&2
     exit 1
 fi
@@ -73,8 +73,8 @@ sed "s/^${anchor}\$/${anchor}\\ncurrentlight.background = white;/" "$src" > "$wh
 # translucent surfaces; this requires a live display, which texlive.sh's
 # podman image provides via a bundled Xvfb -- see flashcards/Makefile's
 # ASY_RENDER comment.
-"$texlive_sh" asy -f png -render="$render_level" -o "${black_asy%.asy}" "$black_asy"
-"$texlive_sh" asy -f png -render="$render_level" -o "${white_asy%.asy}" "$white_asy"
+"$texlive_sh" asy -dir "$src_dir" -f png -render="$render_level" -o "${black_asy%.asy}" "$black_asy"
+"$texlive_sh" asy -dir "$src_dir" -f png -render="$render_level" -o "${white_asy%.asy}" "$white_asy"
 
 "$reconstruct_py" "$black_png" "$white_png" "$out_tmp"
 

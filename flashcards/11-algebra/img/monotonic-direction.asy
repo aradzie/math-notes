@@ -3,7 +3,7 @@
 // (f(a) >= f(b)).
 
 import graph;
-import common;
+import _common;
 
 size(24cm, 9cm);
 mathdefaults();

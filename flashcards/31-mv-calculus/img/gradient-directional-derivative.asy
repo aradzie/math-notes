@@ -4,7 +4,7 @@
 // origin), and D_u f(a) is the signed length of the projection of that
 // gradient onto the unit direction u.
 
-import common;
+import _common;
 
 size(9cm);
 mathdefaults();

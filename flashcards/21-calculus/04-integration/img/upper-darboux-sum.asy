@@ -5,7 +5,7 @@
 // least-upper-bound, not just "the larger endpoint value".
 
 import graph;
-import common;
+import _common;
 
 size(14cm, 8cm, false);
 mathdefaults();

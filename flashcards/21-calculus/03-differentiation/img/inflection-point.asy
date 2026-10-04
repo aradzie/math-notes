@@ -7,7 +7,7 @@
 // each tangent is diagonal rather than horizontal.
 
 import graph;
-import common;
+import _common;
 
 size(24cm, 10cm);
 mathdefaults();

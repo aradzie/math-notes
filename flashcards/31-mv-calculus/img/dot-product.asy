@@ -1,7 +1,7 @@
 // Geometric picture of the dot product: a (blue) and b (red) from a common
 // origin, with theta the angle between them, per a.b = |a||b|cos(theta).
 
-import common;
+import _common;
 
 size(9cm);
 mathdefaults();

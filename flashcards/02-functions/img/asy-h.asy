@@ -3,7 +3,7 @@
 // asymptotes, one in each direction.
 
 import graph;
-import common;
+import _common;
 
 size(12cm, 6cm);
 mathdefaults();

@@ -3,7 +3,7 @@
 // the point where u=1 sits closer to the origin than the point where r=1.
 // The v,s pair along y=-x behaves identically by symmetry.
 
-import common;
+import _common;
 
 size(11cm, 9cm);
 mathdefaults();

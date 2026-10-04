@@ -3,7 +3,7 @@
 // share f'(0) = f''(0) = 0.
 
 import graph;
-import common;
+import _common;
 
 size(20cm, 9cm, false);
 mathdefaults();

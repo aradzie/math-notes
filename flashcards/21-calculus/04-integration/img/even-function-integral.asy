@@ -4,7 +4,7 @@
 // two halves simply double rather than cancel.
 
 import graph;
-import common;
+import _common;
 
 size(12cm, 7cm);
 mathdefaults();

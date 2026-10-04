@@ -5,7 +5,7 @@
 // convergence/divergence behavior.
 
 import graph;
-import common;
+import _common;
 
 size(11cm, 6.5cm);
 mathdefaults();

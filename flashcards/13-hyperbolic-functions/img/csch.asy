@@ -2,7 +2,7 @@
 // sinh vanishes) and a horizontal asymptote y = 0 as x -> +-infinity.
 
 import graph;
-import common;
+import _common;
 
 size(14cm, 12cm, false);
 mathdefaults();

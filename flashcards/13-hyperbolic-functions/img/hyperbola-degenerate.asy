@@ -2,7 +2,7 @@
 // (left); under u=x+y, v=x-y it becomes uv=0, the pair of coordinate axes
 // in the u,v-plane (right).
 
-import common;
+import _common;
 
 size(16cm, 8cm);
 mathdefaults();

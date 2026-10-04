@@ -3,7 +3,7 @@
 // lengths equal to the eigenvalues 3 and 1 -- the principal axes guaranteed
 // by the Spectral Theorem.
 
-import common;
+import _common;
 
 size(9cm);
 mathdefaults();

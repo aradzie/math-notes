@@ -2,7 +2,7 @@
 // under u=x+y, v=x-y: the right branch (x>0) maps to the first-quadrant
 // branch, the left branch (x<0) maps to the third-quadrant branch.
 
-import common;
+import _common;
 
 size(26cm, 9cm);
 mathdefaults();

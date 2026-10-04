@@ -3,7 +3,7 @@
 // equation (r-p).(b x c) = 0.
 
 import three;
-import common3d;
+import _common3d;
 
 mathdefaults();
 

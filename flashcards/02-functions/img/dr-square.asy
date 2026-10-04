@@ -3,7 +3,7 @@
 // the thick red overlay on y >= 0 marks the actual range [0, infinity).
 
 import graph;
-import common;
+import _common;
 
 size(9cm);
 texpreamble("\usepackage{amssymb}");

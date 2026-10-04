@@ -3,7 +3,7 @@
 // whose image under f lies entirely inside that band.
 
 import graph;
-import common;
+import _common;
 
 size(14cm, 12cm);
 mathdefaults();

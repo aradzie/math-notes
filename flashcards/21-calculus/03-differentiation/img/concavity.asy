@@ -8,7 +8,7 @@
 // increasing.
 
 import graph;
-import common;
+import _common;
 
 size(20cm, 16cm, false);
 mathdefaults();

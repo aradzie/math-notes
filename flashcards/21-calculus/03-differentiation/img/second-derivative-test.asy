@@ -3,7 +3,7 @@
 // gives a local maximum.
 
 import graph;
-import common;
+import _common;
 
 size(19cm, 10cm, false);
 mathdefaults();

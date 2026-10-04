@@ -3,7 +3,7 @@
 // particular example, not a feature of oblique asymptotes in general.)
 
 import graph;
-import common;
+import _common;
 
 size(12cm, 8cm);
 mathdefaults();

@@ -5,7 +5,7 @@
 // f(1) = 0.
 
 import graph;
-import common;
+import _common;
 
 size(9cm);
 texpreamble("\usepackage{amssymb}");

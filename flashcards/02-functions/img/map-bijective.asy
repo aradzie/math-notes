@@ -1,7 +1,7 @@
 // Bijective f : A -> B: a perfect one-to-one correspondence -- every point
 // of B is hit exactly once.
 
-import common;
+import _common;
 
 size(10cm);
 mathdefaults();

@@ -4,7 +4,7 @@
 // homogeneous system's solution set under addition and scalar
 // multiplication.
 
-import common;
+import _common;
 
 size(12cm);
 mathdefaults();

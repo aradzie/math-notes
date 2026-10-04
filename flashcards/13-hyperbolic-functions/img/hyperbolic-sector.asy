@@ -4,7 +4,7 @@
 // shaded area -- the hyperbolic angle.
 
 import graph;
-import common;
+import _common;
 
 size(11cm, 9cm);
 mathdefaults();

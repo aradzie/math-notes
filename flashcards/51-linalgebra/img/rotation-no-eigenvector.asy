@@ -3,7 +3,7 @@
 // directions v (blue), each with its own line (dashed), are rotated by
 // theta = 40 degrees to R_theta v (red), landing off those lines.
 
-import common;
+import _common;
 
 size(9cm);
 mathdefaults();

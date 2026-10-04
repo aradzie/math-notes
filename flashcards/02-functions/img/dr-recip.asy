@@ -5,7 +5,7 @@
 // y-axis).
 
 import graph;
-import common;
+import _common;
 
 size(10cm);
 texpreamble("\usepackage{amssymb}");

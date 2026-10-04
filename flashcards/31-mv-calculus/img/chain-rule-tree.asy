@@ -3,7 +3,7 @@
 // dz/dt sums the two root-to-leaf products -- the chain rule read off the
 // tree.
 
-import common;
+import _common;
 
 size(7cm);
 mathdefaults();

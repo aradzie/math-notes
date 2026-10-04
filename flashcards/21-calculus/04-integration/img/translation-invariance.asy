@@ -4,7 +4,7 @@
 // region under f on [a,b], shifted right by c.
 
 import graph;
-import common;
+import _common;
 
 size(15cm, 8cm, false);
 mathdefaults();

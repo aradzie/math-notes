@@ -1,7 +1,6 @@
-// Shared Asymptote helpers.
-//
-// Import with `import common;` -- this resolves from any subdirectory
-// because compilation always runs with flashcards/ as the working directory.
+// Shared 2D Asymptote helpers, for every topic directory. Import with
+// `import _common;` (see the generate-illustrations skill for how library
+// imports resolve).
 
 // Default pen setup used by nearly every illustration in this repository.
 void mathdefaults() {

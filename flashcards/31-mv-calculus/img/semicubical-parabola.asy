@@ -2,7 +2,7 @@
 // where r'(0) = 0 and the curve fails to be regular.
 
 import graph;
-import common;
+import _common;
 
 size(8cm, 8cm);
 mathdefaults();

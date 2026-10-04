@@ -4,7 +4,7 @@
 // mirror image of the region under f on [a,b], with equal area.
 
 import graph;
-import common;
+import _common;
 
 size(14cm, 8cm, false);
 mathdefaults();

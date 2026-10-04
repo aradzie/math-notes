@@ -6,7 +6,7 @@
 // limit R -> infty.
 
 import graph;
-import common;
+import _common;
 
 size(11cm, 7cm, IgnoreAspect);
 mathdefaults();

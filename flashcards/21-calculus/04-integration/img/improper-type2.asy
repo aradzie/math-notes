@@ -5,7 +5,7 @@
 // continuing (dashed) toward the vertical asymptote at x = a as eps -> 0+.
 
 import graph;
-import common;
+import _common;
 
 size(9cm, 7cm);
 mathdefaults();

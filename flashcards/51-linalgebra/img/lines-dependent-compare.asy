@@ -3,7 +3,7 @@
 // the lines either coincide (consistent, infinitely many common points)
 // or are parallel but distinct (inconsistent, no common point).
 
-import common;
+import _common;
 
 size(22cm, 9cm);
 mathdefaults();

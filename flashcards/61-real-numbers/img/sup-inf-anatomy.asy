@@ -3,7 +3,7 @@
 // tied to concrete numbers.
 
 import graph;
-import common;
+import _common;
 
 size(20cm, 6cm);
 mathdefaults();

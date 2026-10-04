@@ -4,7 +4,7 @@
 // signature of that disagreement.
 
 import graph;
-import common;
+import _common;
 
 size(14cm, 12cm);
 mathdefaults();

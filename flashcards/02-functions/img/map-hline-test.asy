@@ -3,7 +3,7 @@
 // Right panel: a parabola, two crossings.
 
 import graph;
-import common;
+import _common;
 
 size(11cm, 5cm);
 mathdefaults();

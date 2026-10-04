@@ -2,7 +2,7 @@
 // build f^{-1}(b4) has nothing to point to -- the attempted red arrow
 // dead-ends before reaching A.
 
-import common;
+import _common;
 
 size(10cm);
 mathdefaults();

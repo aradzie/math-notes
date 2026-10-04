@@ -3,7 +3,7 @@
 // matrix (entries above AND below the diagonal are zero), and the identity
 // matrix is one further-specialized diagonal matrix.
 
-import common;
+import _common;
 
 size(10cm);
 mathdefaults();

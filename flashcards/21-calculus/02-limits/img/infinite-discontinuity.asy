@@ -4,7 +4,7 @@
 // asymptote rather than a hole or a jump.
 
 import graph;
-import common;
+import _common;
 
 size(12cm, 12cm);
 mathdefaults();

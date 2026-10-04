@@ -5,7 +5,7 @@
 // why every such point lands on the curve.
 
 import graph;
-import common;
+import _common;
 
 size(11cm, 9cm);
 mathdefaults();

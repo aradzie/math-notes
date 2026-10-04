@@ -3,7 +3,7 @@
 // plane equation and solving for t.
 
 import three;
-import common3d;
+import _common3d;
 
 mathdefaults();
 

@@ -3,7 +3,7 @@
 // that the graph avoids the line elsewhere.
 
 import graph;
-import common;
+import _common;
 
 size(18cm, 12cm);
 mathdefaults();

@@ -3,7 +3,7 @@
 // tangent line of slope 1/m at the reflected point (f(a),a).
 
 import graph;
-import common;
+import _common;
 
 size(10cm, 10cm);
 mathdefaults();

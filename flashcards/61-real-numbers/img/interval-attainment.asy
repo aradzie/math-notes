@@ -2,7 +2,7 @@
 // [0,1]: max=sup=1 and min=inf=0 are attained (filled endpoints).
 
 import graph;
-import common;
+import _common;
 
 size(16cm, 8cm);
 mathdefaults();

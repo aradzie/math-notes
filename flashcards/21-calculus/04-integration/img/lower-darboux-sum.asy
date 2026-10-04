@@ -5,7 +5,7 @@
 // in contrast to the interior supremum shown in upper_darboux_sum.asy.
 
 import graph;
-import common;
+import _common;
 
 size(14cm, 8cm, false);
 mathdefaults();

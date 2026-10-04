@@ -2,7 +2,7 @@
 // shown dimmed for context.
 
 import graph3;
-import common3d;
+import _common3d;
 
 mathdefaults();
 

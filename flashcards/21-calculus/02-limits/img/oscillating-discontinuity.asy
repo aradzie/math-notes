@@ -4,7 +4,7 @@
 // exists, but not because f blows up like 1/x does.
 
 import graph;
-import common;
+import _common;
 
 size(14cm, 9cm);
 mathdefaults();

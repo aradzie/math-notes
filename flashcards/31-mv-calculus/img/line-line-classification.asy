@@ -3,7 +3,7 @@
 // behind d1 x d2 != 0 together with (p2-p1) . (d1 x d2) != 0.
 
 import three;
-import common3d;
+import _common3d;
 
 mathdefaults();
 

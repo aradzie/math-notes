@@ -12,7 +12,7 @@
 // the same proj() helper.
 
 import three;
-import common3d;
+import _common3d;
 
 mathdefaults();
 

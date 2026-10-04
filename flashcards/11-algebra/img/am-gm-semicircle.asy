@@ -7,7 +7,7 @@
 // CT >= PM, i.e. (a+b)/2 >= sqrt(ab), with equality iff M = C (a = b).
 
 import geometry;
-import common;
+import _common;
 
 size(14cm);
 mathdefaults();

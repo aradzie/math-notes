@@ -2,7 +2,7 @@
 // Solution is everything outside the closed interval [a-c, a+c].
 
 import graph;
-import common;
+import _common;
 
 size(18cm, 6cm);
 mathdefaults();

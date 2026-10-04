@@ -4,7 +4,7 @@
 // = [[1,1],[0,1]]. AB (apply B first, then A) and BA (apply A first, then
 // B) are drawn from the same origin for comparison.
 
-import common;
+import _common;
 
 size(10cm);
 mathdefaults();

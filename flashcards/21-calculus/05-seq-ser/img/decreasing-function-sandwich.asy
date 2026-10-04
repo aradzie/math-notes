@@ -7,7 +7,7 @@
 // int_{n-1}^n f(x) dx.
 
 import graph;
-import common;
+import _common;
 
 size(9cm, 6cm);
 mathdefaults();

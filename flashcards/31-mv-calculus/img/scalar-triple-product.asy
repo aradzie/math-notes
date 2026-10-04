@@ -5,7 +5,7 @@
 // along the b x c direction.
 
 import three;
-import common3d;
+import _common3d;
 
 mathdefaults();
 

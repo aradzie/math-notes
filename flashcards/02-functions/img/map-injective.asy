@@ -1,7 +1,7 @@
 // Injective f : A -> B: distinct points of A map to distinct points of B.
 // b4 is left unhit, showing injectivity says nothing about covering B.
 
-import common;
+import _common;
 
 size(10cm);
 mathdefaults();

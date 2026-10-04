@@ -7,7 +7,7 @@
 // [-R,R], with the curve continuing (dashed) past +-R as R -> infty.
 
 import graph;
-import common;
+import _common;
 
 size(11cm, 6cm);
 mathdefaults();

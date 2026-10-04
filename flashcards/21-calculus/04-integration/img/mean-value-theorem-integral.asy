@@ -5,7 +5,7 @@
 // average value is (b^3-a^3)/(3(b-a)) = 13/3 and c = sqrt(13/3).
 
 import graph;
-import common;
+import _common;
 
 size(14cm, 10cm, false);
 mathdefaults();

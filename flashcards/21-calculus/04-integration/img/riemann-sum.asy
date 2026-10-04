@@ -5,7 +5,7 @@
 // [x_{i-1}, x_i], not just an endpoint.
 
 import graph;
-import common;
+import _common;
 
 size(14cm, 8cm, false);
 mathdefaults();

@@ -5,7 +5,7 @@
 // curve continuing (dashed) past R as R is pushed to infinity.
 
 import graph;
-import common;
+import _common;
 
 size(11cm, 6cm);
 mathdefaults();

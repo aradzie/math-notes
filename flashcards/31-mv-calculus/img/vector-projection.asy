@@ -3,7 +3,7 @@
 // scalar length of that drop (dimension line below the axis), and the
 // remainder a - proj_b a is the perpendicular part of a.
 
-import common;
+import _common;
 
 size(9cm);
 mathdefaults();

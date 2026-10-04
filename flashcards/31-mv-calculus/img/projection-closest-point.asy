@@ -3,7 +3,7 @@
 // shortest, while oblique segments to other points t1.b, t2.b (gray, dashed)
 // are longer -- the right-angle tick at the foot is the Pythagorean reason.
 
-import common;
+import _common;
 
 size(9cm);
 mathdefaults();

@@ -3,7 +3,7 @@
 // first lands exactly on cosh(x0), demonstrating the sum.
 
 import graph;
-import common;
+import _common;
 
 size(14cm, 12cm, false);
 mathdefaults();

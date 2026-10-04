@@ -3,7 +3,7 @@
 // point of B (b4) is shaded but not marked as an image, showing it lies in
 // the codomain without being attained -- the range is a strict subset.
 
-import common;
+import _common;
 
 size(11cm);
 mathdefaults();

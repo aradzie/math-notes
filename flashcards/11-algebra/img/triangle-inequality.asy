@@ -4,7 +4,7 @@
 // most the sum of the other two sides.
 
 import geometry;
-import common;
+import _common;
 
 size(12cm);
 mathdefaults();

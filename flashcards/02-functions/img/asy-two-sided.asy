@@ -2,7 +2,7 @@
 // y = x as x -> +infinity, y = -x as x -> -infinity.
 
 import graph;
-import common;
+import _common;
 
 size(9cm);
 mathdefaults();

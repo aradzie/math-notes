@@ -3,7 +3,7 @@
 // secant line through (a, f(a)) and (b, f(b)).
 
 import graph;
-import common;
+import _common;
 
 size(20cm, 10cm, false);
 mathdefaults();

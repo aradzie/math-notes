@@ -2,7 +2,7 @@
 // with normal vector T.
 
 import graph3;
-import common3d;
+import _common3d;
 
 mathdefaults();
 

@@ -3,7 +3,7 @@
 // x-axis is fixed pointwise (Av = v), but every vector off it is sheared
 // away from its own line -- there is no second, independent eigenvector.
 
-import common;
+import _common;
 
 size(9cm);
 mathdefaults();

@@ -4,7 +4,7 @@
 // "should" pass through.
 
 import graph;
-import common;
+import _common;
 
 size(12cm, 10cm);
 mathdefaults();

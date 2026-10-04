@@ -3,7 +3,7 @@
 // normal n contributes to that perpendicular distance.
 
 import three;
-import common3d;
+import _common3d;
 
 mathdefaults();
 

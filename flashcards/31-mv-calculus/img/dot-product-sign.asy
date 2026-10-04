@@ -3,7 +3,7 @@
 // on the same side as b (green half) give a.b > 0 (acute theta); vectors on
 // the opposite side (red half) give a.b < 0 (obtuse theta).
 
-import common;
+import _common;
 
 size(9cm);
 mathdefaults();

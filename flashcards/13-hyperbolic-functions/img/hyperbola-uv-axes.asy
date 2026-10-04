@@ -3,7 +3,7 @@
 // v-axis along y=-x (where u=x+y=0). In these directions the hyperbola's
 // equation becomes uv=1.
 
-import common;
+import _common;
 
 size(11cm, 9cm);
 mathdefaults();

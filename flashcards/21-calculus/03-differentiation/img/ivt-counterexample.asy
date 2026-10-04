@@ -3,7 +3,7 @@
 // f(a) = -1 and f(b) = 1.
 
 import graph;
-import common;
+import _common;
 
 size(20cm, 10cm);
 mathdefaults();

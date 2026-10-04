@@ -3,7 +3,7 @@
 // asymptote x = 2.
 
 import graph;
-import common;
+import _common;
 
 size(9cm);
 mathdefaults();

@@ -2,7 +2,7 @@
 // Solution is the closed interval [a-c, a+c], centered at a with radius c.
 
 import graph;
-import common;
+import _common;
 
 size(18cm, 6cm);
 mathdefaults();

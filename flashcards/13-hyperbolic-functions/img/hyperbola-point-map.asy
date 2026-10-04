@@ -1,7 +1,7 @@
 // The point (cosh t, sinh t) on x^2-y^2=1 (left) maps to (e^t, e^{-t}) on
 // uv=1 (right) under u=x+y, v=x-y.
 
-import common;
+import _common;
 
 size(16cm, 8cm);
 mathdefaults();

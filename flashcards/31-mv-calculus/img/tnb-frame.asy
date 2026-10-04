@@ -1,7 +1,7 @@
 // The TNB (Tangent/Normal/Binormal) frame at a point on a circular helix.
 
 import graph3;
-import common3d;
+import _common3d;
 
 mathdefaults();
 

@@ -3,7 +3,7 @@
 // Dot spacing is compressed for legibility, not to true numeric scale.
 
 import graph;
-import common;
+import _common;
 
 texpreamble("\usepackage{amssymb}");
 

@@ -4,7 +4,7 @@
 // inside that band. Whether f(c) is even defined plays no role.
 
 import graph;
-import common;
+import _common;
 
 size(14cm, 12cm);
 mathdefaults();

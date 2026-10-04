@@ -3,7 +3,7 @@
 // Delta x_i = x_i - x_{i-1}. Same partition points reused across the other
 // illustrations in this file (riemann_sum, upper/lower Darboux sums).
 
-import common;
+import _common;
 
 size(15cm, 4cm, false);
 mathdefaults();

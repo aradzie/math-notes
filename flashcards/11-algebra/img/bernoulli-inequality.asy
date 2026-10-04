@@ -4,7 +4,7 @@
 // in that domain, with equality only at x = 0.
 
 import graph;
-import common;
+import _common;
 
 size(14cm, 8cm);
 mathdefaults();

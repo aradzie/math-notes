@@ -9,9 +9,8 @@ render pair, by difference matting:
     alpha = 1 - (white - black)
     rgb   = black / alpha
 
-See the "SVG vs. PNG output" section of
-.claude/skills/generate-illustrations/SKILL.md for why this exists and how
-it's wired into flashcards/Makefile (via render-transparent-png.sh).
+See .agents/skills/generate-illustrations/png-output.md for why this exists
+and how it's wired into flashcards/Makefile (via render-transparent-png.sh).
 
 Usage:
     reconstruct-transparent-png.py black.png white.png out.png

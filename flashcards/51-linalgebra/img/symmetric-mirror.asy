@@ -3,7 +3,7 @@
 // off-diagonal pairs are highlighted and connected to show entries
 // reflected across it.
 
-import common;
+import _common;
 
 size(9cm);
 mathdefaults();

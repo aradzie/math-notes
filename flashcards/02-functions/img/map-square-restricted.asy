@@ -5,7 +5,7 @@
 // their whole axis with no excluded part.
 
 import graph;
-import common;
+import _common;
 
 size(9cm);
 texpreamble("\usepackage{amssymb}");

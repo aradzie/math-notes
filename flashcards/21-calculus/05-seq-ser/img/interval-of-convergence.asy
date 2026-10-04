@@ -3,7 +3,7 @@
 // endpoints x = a-R and x = a+R are in I iff the series converges there.
 
 import graph;
-import common;
+import _common;
 
 size(16cm, 6cm);
 mathdefaults();

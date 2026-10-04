@@ -3,7 +3,7 @@
 // the plane) reaches any point r on the plane -- r = p + sb + tc.
 
 import three;
-import common3d;
+import _common3d;
 
 mathdefaults();
 

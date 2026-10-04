@@ -5,7 +5,7 @@
 // there is no cancellation to exploit the way there is for odd f.
 
 import graph;
-import common;
+import _common;
 
 size(11cm, 7cm, IgnoreAspect);
 mathdefaults();

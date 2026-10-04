@@ -4,7 +4,7 @@
 // geometric content of (r - p) . n = 0.
 
 import three;
-import common3d;
+import _common3d;
 
 mathdefaults();
 

@@ -2,7 +2,7 @@
 // under u=x+y, v=x-y to the sector on x^2-y^2=1 ending at (cosh 1,sinh 1)
 // (left), which has half the area, 1/2.
 
-import common;
+import _common;
 
 size(18cm, 8cm);
 mathdefaults();

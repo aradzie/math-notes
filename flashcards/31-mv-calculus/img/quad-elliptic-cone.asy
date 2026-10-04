@@ -3,7 +3,7 @@
 
 import three;
 import graph3;
-import common;
+import _common;
 
 mathdefaults();
 

@@ -4,7 +4,7 @@
 // declared codomain R (thin) untouched.
 
 import graph;
-import common;
+import _common;
 
 size(9cm);
 texpreamble("\usepackage{amssymb}");

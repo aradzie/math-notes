@@ -2,7 +2,7 @@
 // and f(a) = f(b), there exists c in (a,b) with f'(c) = 0.
 
 import graph;
-import common;
+import _common;
 
 size(20cm, 10cm, false);
 mathdefaults();

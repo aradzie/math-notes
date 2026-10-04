@@ -3,7 +3,7 @@
 // and 0 < R < infinity (converges inside (a-R,a+R), endpoints uncertain).
 
 import graph;
-import common;
+import _common;
 
 size(16cm, 8cm);
 mathdefaults();

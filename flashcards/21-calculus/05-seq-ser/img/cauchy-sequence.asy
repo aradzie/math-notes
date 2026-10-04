@@ -2,7 +2,7 @@
 // eventually all terms fall within an epsilon-band of each other.
 
 import graph;
-import common;
+import _common;
 
 size(20cm, 10cm);
 mathdefaults();

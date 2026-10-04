@@ -2,7 +2,7 @@
 // exactly 1 -- e is the point that cuts off unit area under the hyperbola.
 
 import graph;
-import common;
+import _common;
 
 size(11cm, 9cm);
 mathdefaults();

@@ -3,7 +3,7 @@
 // hyperbola arc between them. Its area is ln b.
 
 import graph;
-import common;
+import _common;
 
 size(11cm, 9cm);
 mathdefaults();

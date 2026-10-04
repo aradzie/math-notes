@@ -4,7 +4,7 @@
 // sign area, so they cancel exactly.
 
 import graph;
-import common;
+import _common;
 
 size(12cm, 7cm, IgnoreAspect);
 mathdefaults();

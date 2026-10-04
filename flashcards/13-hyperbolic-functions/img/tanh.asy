@@ -2,7 +2,7 @@
 // asymptotes y = 1 and y = -1 as x -> +-infinity.
 
 import graph;
-import common;
+import _common;
 
 size(14cm, 10cm, false);
 mathdefaults();

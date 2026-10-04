@@ -1,7 +1,7 @@
 // Surjective f : A -> B: every point of B is hit at least once. b1 is hit
 // twice, showing surjectivity says nothing about outputs being unique.
 
-import common;
+import _common;
 
 size(10cm);
 mathdefaults();

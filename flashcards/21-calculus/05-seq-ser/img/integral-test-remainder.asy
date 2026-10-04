@@ -7,7 +7,7 @@
 // from the same heights a_{N+1}, a_{N+2}, ..., just offset by one unit.
 
 import graph;
-import common;
+import _common;
 
 size(11cm, 6.5cm);
 mathdefaults();

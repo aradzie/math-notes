@@ -1,7 +1,7 @@
 // An inconsistent system: two distinct parallel lines share no common
 // point at all.
 
-import common;
+import _common;
 
 size(10cm);
 mathdefaults();

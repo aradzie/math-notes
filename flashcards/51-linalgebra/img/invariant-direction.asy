@@ -3,7 +3,7 @@
 // vector u = (1,0) is not an eigenvector -- its image Au = (2,1) leaves the
 // x-axis, the line u itself lies on.
 
-import common;
+import _common;
 
 size(10cm);
 mathdefaults();

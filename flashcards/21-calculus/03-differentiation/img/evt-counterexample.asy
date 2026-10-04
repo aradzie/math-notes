@@ -3,7 +3,7 @@
 // f has no maximum on the closed bounded interval [a,b].
 
 import graph;
-import common;
+import _common;
 
 size(10cm, 10cm);
 mathdefaults();

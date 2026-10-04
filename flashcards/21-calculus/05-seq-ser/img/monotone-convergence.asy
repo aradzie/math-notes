@@ -2,7 +2,7 @@
 // converges to its supremum L -- which need not equal M, the given bound.
 
 import graph;
-import common;
+import _common;
 
 size(18cm, 10cm);
 mathdefaults();

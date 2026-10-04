@@ -3,7 +3,7 @@
 // them. a x b (purple) is drawn schematically pointing straight up, out of
 // the plane spanned by a and b, per the right-hand rule.
 
-import common;
+import _common;
 
 size(9cm);
 mathdefaults();

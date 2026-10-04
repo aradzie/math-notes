@@ -4,7 +4,7 @@
 // is at most the sum of the other two sides, sqrt(a+b) <= sqrt(a)+sqrt(b).
 
 import geometry;
-import common;
+import _common;
 
 size(10cm);
 mathdefaults();

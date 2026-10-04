@@ -3,7 +3,7 @@
 // uv=1 from (1,1) to (e^t,e^{-t}) has area t (right) -- the map doubles
 // area, matching its Jacobian determinant of 2.
 
-import common;
+import _common;
 
 size(18cm, 8cm);
 mathdefaults();

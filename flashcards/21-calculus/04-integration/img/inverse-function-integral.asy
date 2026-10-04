@@ -5,7 +5,7 @@
 //   b f(b) - a f(a) = int_a^b f(x) dx + int_{f(a)}^{f(b)} f^{-1}(y) dy.
 
 import graph;
-import common;
+import _common;
 
 size(11cm, 15cm, false);
 mathdefaults();

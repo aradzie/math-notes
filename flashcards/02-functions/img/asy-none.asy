@@ -3,7 +3,7 @@
 // the simplified function is itself a line, so it has no horizontal or
 // oblique asymptote either.
 
-import common;
+import _common;
 
 size(8cm);
 mathdefaults();
