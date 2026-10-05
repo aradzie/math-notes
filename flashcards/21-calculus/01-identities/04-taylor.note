@@ -121,8 +121,6 @@ For \( |x| < 1 \):
 \]
 ~~~
 
-!tags: Math Calculus Taylor-Series Trigonometric Identity
-
 !id: LXLge6uY2V
 !front: \[ \sin(x) = \sum \ldots \]
 !back:
@@ -191,8 +189,6 @@ For \( |x| < 1 \) and \( \alpha \in \mathbb{R} \):
 \]
 !extra: If \( \alpha \) is a nonnegative integer, the series terminates and the polynomial identity holds for every real \( x \). Otherwise, endpoints require separate checking.
 ~~~
-
-!tags: Math Calculus Taylor-Series Hyperbolic Identity
 
 !id: UJNCKYXzfb
 !front: \[ \sinh(x) = \sum \ldots \]

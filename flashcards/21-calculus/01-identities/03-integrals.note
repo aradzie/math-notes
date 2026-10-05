@@ -32,7 +32,7 @@
 \]
 ~~~
 
-!tags: Math Calculus Integral Trigonometric Identity
+!tags: Math Calculus Identity Integral Trigonometry
 
 !id: zAVj6GfoZR
 !text: \[ \int {{c2::\sin u::\ldots}} \, du = {{c1::-\cos u::\ldots}} + C \]
@@ -168,7 +168,7 @@
 !text: \[ \int {{c2::\frac{1}{u \sqrt{ u^2 - a^2} }::\ldots}} \, du = {{c1::\frac{1}{a} \sec^{-1} \frac{u}{a}::\ldots}} + C \]
 ~~~
 
-!tags: Math Calculus Integral Hyperbolic Identity
+!tags: Math Calculus Identity Integral Hyperbolic
 
 !id: infeQIluCV
 !text: \[ \int {{c2::\sinh u::\ldots}} \, du = {{c1::\cosh u::\ldots}} + C \]
@@ -248,7 +248,7 @@
 \]
 ~~~
 
-!tags: Math Calculus Integral Identity
+!tags: Math Calculus Identity Integral
 
 !id: r10Saw0GrC
 !text: \[ \int {{c2::u e^u::\ldots}} \, du = {{c1::u e^u - e^u::\ldots}} + C \]

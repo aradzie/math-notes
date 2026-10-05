@@ -40,10 +40,10 @@ styles
     box-shadow: 0 10px 15px rgba(0,0,0,0.1);
   }
 }
-.front {
+.front p {
   text-align: center;
 }
-.back {
+.back p {
   text-align: start;
 }
 .sub {
@@ -53,7 +53,7 @@ styles
 }
 .card p > img:only-child {
   display: block;
-  margin: 0 auto;
+  margin: 1rem auto;
   max-width: 100%;
   max-height: 400px;
 }
@@ -125,10 +125,10 @@ styles
     box-shadow: 0 10px 15px rgba(0,0,0,0.1);
   }
 }
-.front {
+.front p {
   text-align: center;
 }
-.back {
+.back p {
   text-align: start;
 }
 .sub {
@@ -138,7 +138,7 @@ styles
 }
 .card p > img:only-child {
   display: block;
-  margin: 0 auto;
+  margin: 1rem auto;
   max-width: 100%;
   max-height: 400px;
 }
@@ -181,10 +181,10 @@ styles
     box-shadow: 0 10px 15px rgba(0,0,0,0.1);
   }
 }
-.front {
+.front p {
   text-align: center;
 }
-.back {
+.back p {
   text-align: start;
 }
 .cloze {
@@ -201,7 +201,7 @@ styles
 }
 .card p > img:only-child {
   display: block;
-  margin: 0 auto;
+  margin: 1rem auto;
   max-width: 100%;
   max-height: 400px;
 }
