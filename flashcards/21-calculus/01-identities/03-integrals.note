@@ -157,15 +157,81 @@
 ~~~
 
 !id: IBMbxRjYIT
-!text: \[ \int {{c2::\frac{1}{ \sqrt{a^2 - u^2} }::\ldots}} \, du = {{c1::\sin^{-1} \frac{u}{a}::\ldots}} + C \]
+!text: \[ \int {{c2::\frac{1}{ \sqrt{a^2 - u^2} }::\ldots}} \, du = {{c1::\sin^{-1} \frac{u}{a}::\ldots}} + C, \quad a > 0,\ |u| < a \]
+!related:
+\[
+\begin{align*}
+\int \frac{1}{\sqrt{a^2-u^2}} \, du &= \sin^{-1}\frac{u}{a} + C, && a>0,\ |u|<a \\
+\int \frac{-1}{\sqrt{a^2-u^2}} \, du &= \cos^{-1}\frac{u}{a} + C, && a>0,\ |u|<a \\
+\int \frac{1}{\sqrt{u^2+a^2}} \, du &= \sinh^{-1}\frac{u}{a} + C, && a>0 \\
+\int \frac{1}{\sqrt{u^2-a^2}} \, du &= \cosh^{-1}\frac{u}{a} + C, && a>0,\ u>a
+\end{align*}
+\]
+~~~
+
+!id: SabCElSD01
+!text: \[ \int {{c2::\frac{-1}{ \sqrt{a^2 - u^2} }::\ldots}} \, du = {{c1::\cos^{-1} \frac{u}{a}::\ldots}} + C, \quad a > 0,\ |u| < a \]
+!related:
+\[
+\begin{align*}
+\int \frac{1}{\sqrt{a^2-u^2}} \, du &= \sin^{-1}\frac{u}{a} + C, && a>0,\ |u|<a \\
+\int \frac{-1}{\sqrt{a^2-u^2}} \, du &= \cos^{-1}\frac{u}{a} + C, && a>0,\ |u|<a \\
+\int \frac{1}{\sqrt{u^2+a^2}} \, du &= \sinh^{-1}\frac{u}{a} + C, && a>0 \\
+\int \frac{1}{\sqrt{u^2-a^2}} \, du &= \cosh^{-1}\frac{u}{a} + C, && a>0,\ u>a
+\end{align*}
+\]
 ~~~
 
 !id: h01ddvdFDL
-!text: \[ \int {{c2::\frac{1}{a^2 + u^2}::\ldots}} \, du = {{c1::\frac{1}{a} \tan^{-1} \frac{u}{a}::\ldots}} + C \]
+!text: \[ \int {{c2::\frac{1}{a^2 + u^2}::\ldots}} \, du = {{c1::\frac{1}{a} \tan^{-1} \frac{u}{a}::\ldots}} + C, \quad a > 0 \]
+!related:
+\[
+\begin{align*}
+\int \frac{1}{a^2+u^2} \, du &= \frac{1}{a}\tan^{-1}\frac{u}{a} + C, && a>0 \\
+\int \frac{-1}{a^2+u^2} \, du &= \frac{1}{a}\cot^{-1}\frac{u}{a} + C, && a>0 \\
+\int \frac{1}{a^2-u^2} \, du &= \frac{1}{a}\tanh^{-1}\frac{u}{a} + C, && a>0,\ |u|<a \\
+\int \frac{1}{a^2-u^2} \, du &= \frac{1}{a}\coth^{-1}\frac{u}{a} + C, && a>0,\ |u|>a
+\end{align*}
+\]
+~~~
+
+!id: FCRvy1wkbV
+!text: \[ \int {{c2::\frac{-1}{a^2 + u^2}::\ldots}} \, du = {{c1::\frac{1}{a} \cot^{-1} \frac{u}{a}::\ldots}} + C, \quad a > 0 \]
+!related:
+\[
+\begin{align*}
+\int \frac{1}{a^2+u^2} \, du &= \frac{1}{a}\tan^{-1}\frac{u}{a} + C, && a>0 \\
+\int \frac{-1}{a^2+u^2} \, du &= \frac{1}{a}\cot^{-1}\frac{u}{a} + C, && a>0 \\
+\int \frac{1}{a^2-u^2} \, du &= \frac{1}{a}\tanh^{-1}\frac{u}{a} + C, && a>0,\ |u|<a \\
+\int \frac{1}{a^2-u^2} \, du &= \frac{1}{a}\coth^{-1}\frac{u}{a} + C, && a>0,\ |u|>a
+\end{align*}
+\]
 ~~~
 
 !id: 9qP24hPifN
-!text: \[ \int {{c2::\frac{1}{u \sqrt{ u^2 - a^2} }::\ldots}} \, du = {{c1::\frac{1}{a} \sec^{-1} \frac{u}{a}::\ldots}} + C \]
+!text: \[ \int {{c2::\frac{1}{ |u| \sqrt{u^2 - a^2} }::\ldots}} \, du = {{c1::\frac{1}{a} \sec^{-1} \frac{u}{a}::\ldots}} + C, \quad a > 0,\ |u| > a \]
+!related:
+\[
+\begin{align*}
+\int \frac{1}{|u|\sqrt{u^2-a^2}} \, du &= \frac{1}{a}\sec^{-1}\frac{u}{a} + C, && a>0,\ |u|>a \\
+\int \frac{-1}{|u|\sqrt{u^2-a^2}} \, du &= \frac{1}{a}\csc^{-1}\frac{u}{a} + C, && a>0,\ |u|>a \\
+\int \frac{-1}{u\sqrt{a^2-u^2}} \, du &= \frac{1}{a}\operatorname{sech}^{-1}\frac{u}{a} + C, && a>0,\ 0<u<a \\
+\int \frac{-1}{|u|\sqrt{a^2+u^2}} \, du &= \frac{1}{a}\operatorname{csch}^{-1}\frac{u}{a} + C, && a>0,\ u\ne0
+\end{align*}
+\]
+~~~
+
+!id: 2nlG4eU8bT
+!text: \[ \int {{c2::\frac{-1}{ |u| \sqrt{u^2 - a^2} }::\ldots}} \, du = {{c1::\frac{1}{a} \csc^{-1} \frac{u}{a}::\ldots}} + C, \quad a > 0,\ |u| > a \]
+!related:
+\[
+\begin{align*}
+\int \frac{1}{|u|\sqrt{u^2-a^2}} \, du &= \frac{1}{a}\sec^{-1}\frac{u}{a} + C, && a>0,\ |u|>a \\
+\int \frac{-1}{|u|\sqrt{u^2-a^2}} \, du &= \frac{1}{a}\csc^{-1}\frac{u}{a} + C, && a>0,\ |u|>a \\
+\int \frac{-1}{u\sqrt{a^2-u^2}} \, du &= \frac{1}{a}\operatorname{sech}^{-1}\frac{u}{a} + C, && a>0,\ 0<u<a \\
+\int \frac{-1}{|u|\sqrt{a^2+u^2}} \, du &= \frac{1}{a}\operatorname{csch}^{-1}\frac{u}{a} + C, && a>0,\ u\ne0
+\end{align*}
+\]
 ~~~
 
 !tags: Math Calculus Identity Integral Hyperbolic
@@ -244,6 +310,84 @@
 \int \csc u \cot u \, du &= -\csc u + C \\
 \int \operatorname{sech} u \tanh u \, du &= -\operatorname{sech} u + C \\
 \int \operatorname{csch} u \coth u \, du &= -\operatorname{csch} u + C
+\end{align*}
+\]
+~~~
+
+!id: ztPjAdSTUK
+!text: \[ \int {{c2::\frac{1}{ \sqrt{u^2 + a^2} }::\ldots}} \, du = {{c1::\sinh^{-1} \frac{u}{a}::\ldots}} + C, \quad a > 0 \]
+!related:
+\[
+\begin{align*}
+\int \frac{1}{\sqrt{a^2-u^2}} \, du &= \sin^{-1}\frac{u}{a} + C, && a>0,\ |u|<a \\
+\int \frac{-1}{\sqrt{a^2-u^2}} \, du &= \cos^{-1}\frac{u}{a} + C, && a>0,\ |u|<a \\
+\int \frac{1}{\sqrt{u^2+a^2}} \, du &= \sinh^{-1}\frac{u}{a} + C, && a>0 \\
+\int \frac{1}{\sqrt{u^2-a^2}} \, du &= \cosh^{-1}\frac{u}{a} + C, && a>0,\ u>a
+\end{align*}
+\]
+~~~
+
+!id: Tcye6b55BF
+!text: \[ \int {{c2::\frac{1}{ \sqrt{u^2 - a^2} }::\ldots}} \, du = {{c1::\cosh^{-1} \frac{u}{a}::\ldots}} + C, \quad a > 0,\ u > a \]
+!related:
+\[
+\begin{align*}
+\int \frac{1}{\sqrt{a^2-u^2}} \, du &= \sin^{-1}\frac{u}{a} + C, && a>0,\ |u|<a \\
+\int \frac{-1}{\sqrt{a^2-u^2}} \, du &= \cos^{-1}\frac{u}{a} + C, && a>0,\ |u|<a \\
+\int \frac{1}{\sqrt{u^2+a^2}} \, du &= \sinh^{-1}\frac{u}{a} + C, && a>0 \\
+\int \frac{1}{\sqrt{u^2-a^2}} \, du &= \cosh^{-1}\frac{u}{a} + C, && a>0,\ u>a
+\end{align*}
+\]
+~~~
+
+!id: WtH1PZoJ5V
+!text: \[ \int {{c2::\frac{1}{a^2 - u^2}::\ldots}} \, du = {{c1::\frac{1}{a} \tanh^{-1} \frac{u}{a}::\ldots}} + C, \quad a > 0,\ |u| < a \]
+!related:
+\[
+\begin{align*}
+\int \frac{1}{a^2+u^2} \, du &= \frac{1}{a}\tan^{-1}\frac{u}{a} + C, && a>0 \\
+\int \frac{-1}{a^2+u^2} \, du &= \frac{1}{a}\cot^{-1}\frac{u}{a} + C, && a>0 \\
+\int \frac{1}{a^2-u^2} \, du &= \frac{1}{a}\tanh^{-1}\frac{u}{a} + C, && a>0,\ |u|<a \\
+\int \frac{1}{a^2-u^2} \, du &= \frac{1}{a}\coth^{-1}\frac{u}{a} + C, && a>0,\ |u|>a
+\end{align*}
+\]
+~~~
+
+!id: 3qQ4G2JKdw
+!text: \[ \int {{c2::\frac{1}{a^2 - u^2}::\ldots}} \, du = {{c1::\frac{1}{a} \coth^{-1} \frac{u}{a}::\ldots}} + C, \quad a > 0,\ |u| > a \]
+!related:
+\[
+\begin{align*}
+\int \frac{1}{a^2+u^2} \, du &= \frac{1}{a}\tan^{-1}\frac{u}{a} + C, && a>0 \\
+\int \frac{-1}{a^2+u^2} \, du &= \frac{1}{a}\cot^{-1}\frac{u}{a} + C, && a>0 \\
+\int \frac{1}{a^2-u^2} \, du &= \frac{1}{a}\tanh^{-1}\frac{u}{a} + C, && a>0,\ |u|<a \\
+\int \frac{1}{a^2-u^2} \, du &= \frac{1}{a}\coth^{-1}\frac{u}{a} + C, && a>0,\ |u|>a
+\end{align*}
+\]
+~~~
+
+!id: 8dVcpCwsiY
+!text: \[ \int {{c2::\frac{-1}{ u\sqrt{a^2 - u^2} }::\ldots}} \, du = {{c1::\frac{1}{a} \operatorname{sech}^{-1} \frac{u}{a}::\ldots}} + C, \quad a > 0,\ 0 < u < a \]
+!related:
+\[
+\begin{align*}
+\int \frac{1}{|u|\sqrt{u^2-a^2}} \, du &= \frac{1}{a}\sec^{-1}\frac{u}{a} + C, && a>0,\ |u|>a \\
+\int \frac{-1}{|u|\sqrt{u^2-a^2}} \, du &= \frac{1}{a}\csc^{-1}\frac{u}{a} + C, && a>0,\ |u|>a \\
+\int \frac{-1}{u\sqrt{a^2-u^2}} \, du &= \frac{1}{a}\operatorname{sech}^{-1}\frac{u}{a} + C, && a>0,\ 0<u<a \\
+\int \frac{-1}{|u|\sqrt{a^2+u^2}} \, du &= \frac{1}{a}\operatorname{csch}^{-1}\frac{u}{a} + C, && a>0,\ u\ne0
+\end{align*}
+\]
+~~~
+
+!id: ymdNbf9JPA
+!text: \[ \int {{c2::\frac{-1}{ |u|\sqrt{a^2 + u^2} }::\ldots}} \, du = {{c1::\frac{1}{a} \operatorname{csch}^{-1} \frac{u}{a}::\ldots}} + C, \quad a > 0,\ u \ne 0 \]
+!related:
+\[
+\begin{align*}
+\int \frac{1}{|u|\sqrt{u^2-a^2}} \, du &= \frac{1}{a}\sec^{-1}\frac{u}{a} + C, && a>0,\ |u|>a \\
+\int \frac{-1}{|u|\sqrt{u^2-a^2}} \, du &= \frac{1}{a}\csc^{-1}\frac{u}{a} + C, && a>0,\ |u|>a \\
+\int \frac{-1}{u\sqrt{a^2-u^2}} \, du &= \frac{1}{a}\operatorname{sech}^{-1}\frac{u}{a} + C, && a>0,\ 0<u<a \\
+\int \frac{-1}{|u|\sqrt{a^2+u^2}} \, du &= \frac{1}{a}\operatorname{csch}^{-1}\frac{u}{a} + C, && a>0,\ u\ne0
 \end{align*}
 \]
 ~~~
