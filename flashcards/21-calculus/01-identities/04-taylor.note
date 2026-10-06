@@ -276,11 +276,25 @@ For \( |x| < 1 \):
 !id: k5uj5mMZEW
 !front: Compare \( \operatorname{arctan}(x) = \sum \ldots \) and \( \operatorname{arctanh}(x) = \sum \ldots \)
 !back:
-For \( |x| < 1 \):
 \[
 \begin{align*}
-\operatorname{arctan}(x) &= x - \frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + \cdots \\
-\operatorname{arctanh}(x) &= x + \frac{x^3}{3} + \frac{x^5}{5} + \frac{x^7}{7} + \cdots
+\operatorname{arctan}(x) &= x - \frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + \cdots, && |x| \le 1 \\
+\operatorname{arctanh}(x) &= x + \frac{x^3}{3} + \frac{x^5}{5} + \frac{x^7}{7} + \cdots, && |x| < 1
 \end{align*}
 \]
+!extra: Both have radius of convergence \( 1 \). At \( x = \pm 1 \), the \( \arctan \) series converges (alternating series test), while the \( \operatorname{arctanh} \) series diverges (harmonic comparison).
+~~~
+
+!id: M9mnBg8BCS
+!front: Compare the domain of \( \ln x \) with the interval of convergence of its Taylor series centered at \( x=1 \).
+!back:
+- \( \operatorname{dom}(\ln x) = (0,\infty) \).
+- Its Taylor series converges for \( x \in (0,2] \).
+~~~
+
+!id: wRdvUqI6gu
+!front: Compare the domain of \( \arctan x \) with the interval of convergence of its Maclaurin series.
+!back:
+- \( \operatorname{dom}(\arctan x) = \mathbb{R} \).
+- Its Taylor series converges for \( x \in [-1,1] \).
 ~~~
