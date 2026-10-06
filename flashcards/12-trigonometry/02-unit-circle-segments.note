@@ -1,0 +1,99 @@
+!deck: Math Identities
+!tags: Math Trigonometry Geometry
+!type: Basic Math
+
+!id: bkwp2E5Ntn
+!front:
+For a first-quadrant angle \( 0<\theta<\pi/2 \), which segment in the figure has length \( \sin\theta \)?
+
+![Unit circle with O at the origin, P on the first-quadrant arc, A directly below P, B at one zero, T where ray OP meets the tangent x equals one, C at zero one, and U where ray OP meets the tangent y equals one; no trig function names appear on the segments](img/unit-circle-six-segments.svg)
+!back: \( AP \), the vertical projection from \( P=(\cos\theta,\sin\theta) \) to the horizontal axis. Its length is the \( y \)-coordinate of \( P \).
+~~~
+
+!id: DmpeyePqqj
+!front:
+For a first-quadrant angle \( 0<\theta<\pi/2 \), which trig function of \( \theta \) is represented by the length of segment \( AP \)?
+
+![Unit circle with O at the origin, P on the first-quadrant arc, A directly below P, B at one zero, T where ray OP meets the tangent x equals one, C at zero one, and U where ray OP meets the tangent y equals one; no trig function names appear on the segments](img/unit-circle-six-segments.svg)
+!back: \[ \sin\theta \]
+~~~
+
+!id: 4s2ZnpzNbS
+!front:
+For a first-quadrant angle \( 0<\theta<\pi/2 \), which segment in the figure has length \( \cos\theta \)?
+
+![Unit circle with O at the origin, P on the first-quadrant arc, A directly below P, B at one zero, T where ray OP meets the tangent x equals one, C at zero one, and U where ray OP meets the tangent y equals one; no trig function names appear on the segments](img/unit-circle-six-segments.svg)
+!back: \( OA \), the horizontal projection from the origin to the foot of \( P \) on the horizontal axis. Its length is the \( x \)-coordinate of \( P \).
+~~~
+
+!id: E8k9SVAl1v
+!front:
+For a first-quadrant angle \( 0<\theta<\pi/2 \), which trig function of \( \theta \) is represented by the length of segment \( OA \)?
+
+![Unit circle with O at the origin, P on the first-quadrant arc, A directly below P, B at one zero, T where ray OP meets the tangent x equals one, C at zero one, and U where ray OP meets the tangent y equals one; no trig function names appear on the segments](img/unit-circle-six-segments.svg)
+!back: \[ \cos\theta \]
+~~~
+
+!id: cV3yuOqHvG
+!front:
+For a first-quadrant angle \( 0<\theta<\pi/2 \), which segment in the figure has length \( \tan\theta \)?
+
+![Unit circle with O at the origin, P on the first-quadrant arc, A directly below P, B at one zero, T where ray OP meets the tangent x equals one, C at zero one, and U where ray OP meets the tangent y equals one; no trig function names appear on the segments](img/unit-circle-six-segments.svg)
+!back: \( BT \), the vertical segment on \( x=1 \), from \( B=(1,0) \) to \( T=(1,\tan\theta) \). Its length is opposite over adjacent in the triangle with adjacent side \( 1 \).
+~~~
+
+!id: B9izo2eL7W
+!front:
+For a first-quadrant angle \( 0<\theta<\pi/2 \), which trig function of \( \theta \) is represented by the length of segment \( BT \)?
+
+![Unit circle with O at the origin, P on the first-quadrant arc, A directly below P, B at one zero, T where ray OP meets the tangent x equals one, C at zero one, and U where ray OP meets the tangent y equals one; no trig function names appear on the segments](img/unit-circle-six-segments.svg)
+!back: \[ \tan\theta \]
+~~~
+
+!id: p5BxDRrdBb
+!front:
+For a first-quadrant angle \( 0<\theta<\pi/2 \), which segment in the figure has length \( \cot\theta \)?
+
+![Unit circle with O at the origin, P on the first-quadrant arc, A directly below P, B at one zero, T where ray OP meets the tangent x equals one, C at zero one, and U where ray OP meets the tangent y equals one; no trig function names appear on the segments](img/unit-circle-six-segments.svg)
+!back: \( CU \), the horizontal segment on \( y=1 \), from \( C=(0,1) \) to \( U=(\cot\theta,1) \). Its length is adjacent over opposite in the triangle with opposite side \( 1 \).
+~~~
+
+!id: s9VNmgp9Cw
+!front:
+For a first-quadrant angle \( 0<\theta<\pi/2 \), which trig function of \( \theta \) is represented by the length of segment \( CU \)?
+
+![Unit circle with O at the origin, P on the first-quadrant arc, A directly below P, B at one zero, T where ray OP meets the tangent x equals one, C at zero one, and U where ray OP meets the tangent y equals one; no trig function names appear on the segments](img/unit-circle-six-segments.svg)
+!back: \[ \cot\theta \]
+~~~
+
+!id: VC7nF1BHBF
+!front:
+For a first-quadrant angle \( 0<\theta<\pi/2 \), which segment in the figure has length \( \sec\theta \)?
+
+![Unit circle with O at the origin, P on the first-quadrant arc, A directly below P, B at one zero, T where ray OP meets the tangent x equals one, C at zero one, and U where ray OP meets the tangent y equals one; no trig function names appear on the segments](img/unit-circle-six-segments.svg)
+!back: \( OT \), the radial segment from \( O \) to \( T=(1,\tan\theta) \). Its length is \( \sqrt{1+\tan^2\theta}=1/\cos\theta \).
+~~~
+
+!id: K2p97Kg86i
+!front:
+For a first-quadrant angle \( 0<\theta<\pi/2 \), which trig function of \( \theta \) is represented by the length of segment \( OT \)?
+
+![Unit circle with O at the origin, P on the first-quadrant arc, A directly below P, B at one zero, T where ray OP meets the tangent x equals one, C at zero one, and U where ray OP meets the tangent y equals one; no trig function names appear on the segments](img/unit-circle-six-segments.svg)
+!back: \[ \sec\theta \]
+~~~
+
+!id: LuceLCxHIC
+!front:
+For a first-quadrant angle \( 0<\theta<\pi/2 \), which segment in the figure has length \( \csc\theta \)?
+
+![Unit circle with O at the origin, P on the first-quadrant arc, A directly below P, B at one zero, T where ray OP meets the tangent x equals one, C at zero one, and U where ray OP meets the tangent y equals one; no trig function names appear on the segments](img/unit-circle-six-segments.svg)
+!back: \( OU \), the radial segment from \( O \) to \( U=(\cot\theta,1) \). Its length is \( \sqrt{1+\cot^2\theta}=1/\sin\theta \).
+~~~
+
+!id: NoGu8gGpnz
+!front:
+For a first-quadrant angle \( 0<\theta<\pi/2 \), which trig function of \( \theta \) is represented by the length of segment \( OU \)?
+
+![Unit circle with O at the origin, P on the first-quadrant arc, A directly below P, B at one zero, T where ray OP meets the tangent x equals one, C at zero one, and U where ray OP meets the tangent y equals one; no trig function names appear on the segments](img/unit-circle-six-segments.svg)
+!back: \[ \csc\theta \]
+~~~

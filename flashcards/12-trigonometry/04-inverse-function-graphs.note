@@ -1,0 +1,232 @@
+!deck: Math Identities
+!tags: Math Trigonometry Inverse-Functions
+!type: Basic Math
+
+!id: kE1aYt6R2g
+!front: What are the principal values of an inverse trigonometric function?
+!back:
+- The output angles selected by restricting the original trigonometric function to a **one-to-one** branch.
+- The **range** of the inverse function.
+~~~
+
+!type: Cloze Math
+
+!id: uh5XSfdD7B
+!text: The domain of \( \arcsin \) is {{c1::\( [-1,1] \)}}, and its range is {{c1::\( [-\pi/2,\pi/2] \)}}.
+!back extra:
+![Sine restricted to theta from minus pi over two to pi over two and its reflection across y equals x, an increasing arcsine curve from minus one minus pi over two to one pi over two](img/graph-arcsin.svg)
+
+The principal values \( [-\pi/2,\pi/2] \) trace the closed right semicircle.
+
+![Right semicircle emphasized from minus pi over two to pi over two with both endpoints filled, showing every possible principal value of arcsin on the unit circle](img/range-arcsin.svg)
+~~~
+
+!id: 2898u48kql
+!text: The domain of \( \arccos \) is {{c1::\( [-1,1] \)}}, and its range is {{c1::\( [0,\pi] \)}}.
+!back extra:
+![Cosine restricted to zero through pi and its reflection across y equals x, a decreasing arccosine curve from minus one pi to one zero](img/graph-arccos.svg)
+
+The principal values \( [0,\pi] \) trace the closed upper semicircle.
+
+![Upper semicircle emphasized from zero to pi with both endpoints filled, showing every possible principal value of arccos on the unit circle](img/range-arccos.svg)
+~~~
+
+!id: BztlAhmRUq
+!text: The domain of \( \arctan \) is {{c1::\( \mathbb R \)}}, and its range is {{c1::\( (-\pi/2,\pi/2) \)}}.
+!back extra:
+![Central tangent branch and its reflection across y equals x, an increasing arctangent curve through the origin approaching plus and minus pi over two](img/graph-arctan.svg)
+
+The principal values \( (-\pi/2,\pi/2) \) trace the open right semicircle.
+
+![Right semicircle emphasized from minus pi over two to pi over two with both endpoints open, showing the principal values of arctan](img/range-arctan.svg)
+~~~
+
+!id: Xaz9X4XgQ3
+!text: The domain of \( \operatorname{arccot} \) is {{c1::\( \mathbb R \)}}, and its range is {{c1::\( (0,\pi) \)}}.
+!back extra:
+![Cotangent restricted to zero through pi and its reflection across y equals x, a decreasing arccotangent curve approaching pi and zero](img/graph-arccot.svg)
+
+The principal values \( (0,\pi) \) trace the open upper semicircle.
+
+![Upper semicircle emphasized from zero to pi with both endpoints open, showing the principal values of arccot under the zero-to-pi convention](img/range-arccot.svg)
+~~~
+
+!id: ONDmcq3ktC
+!text: The domain of \( \operatorname{arcsec} \) is {{c1::\( (-\infty,-1]\cup[1,\infty) \)}}, and its range is {{c1::\( [0,\pi/2)\cup(\pi/2,\pi] \)}}.
+!back extra:
+![Secant restricted to zero through pi except pi over two and its reflection across y equals x, two arcsecant branches approaching pi over two](img/graph-arcsec.svg)
+
+The principal values \( [0,\pi/2)\cup(\pi/2,\pi] \) trace the upper semicircle with \( \pi/2 \) removed.
+
+![Upper semicircle emphasized with filled endpoints at zero and pi and an open point at pi over two, showing the principal values of arcsec](img/range-arcsec.svg)
+~~~
+
+!id: 7UpMnYLY82
+!text: The domain of \( \operatorname{arccsc} \) is {{c1::\( (-\infty,-1]\cup[1,\infty) \)}}, and its range is {{c1::\( [-\pi/2,0)\cup(0,\pi/2] \)}}.
+!back extra:
+![Cosecant restricted to minus pi over two through zero and zero through pi over two and its reflection across y equals x, two arccosecant branches approaching zero](img/graph-arccsc.svg)
+
+The principal values \( [-\pi/2,0)\cup(0,\pi/2] \) trace the right semicircle with \( 0 \) removed.
+
+![Right semicircle emphasized with filled endpoints at minus pi over two and pi over two and an open point at zero, showing the principal values of arccsc](img/range-arccsc.svg)
+~~~
+
+!type: Cloze Math
+
+!id: WIpisDTzy0
+!text: The principal-value arc of \( \arcsin \) is its range \( {{c1::[-\pi/2,\pi/2]}} \) marked as angles on the unit circle, it becomes {{c1::the closed right semicircle::semicircle}}.
+!back extra:
+![Right semicircle emphasized from minus pi over two to pi over two with both endpoints filled, showing every possible principal value of arcsin on the unit circle](img/range-arcsin.svg)
+
+Sweeping \( \theta \) from \( -\pi/2 \) (bottom) through \( 0 \) to \( \pi/2 \) (top) covers exactly the right half. Both endpoints are included because the range is closed.
+
+So for \( \theta=\arcsin x \), \( \cos\theta\ge0 \), while \( \sin\theta=x \) has the sign of \( x \).
+~~~
+
+!id: no83IqQSSl
+!text: The principal-value arc of \( \arccos \) is its range \( {{c1::[0,\pi]}} \) marked as angles on the unit circle, it becomes {{c1::the closed upper semicircle::semicircle}}.
+!back extra:
+![Upper semicircle emphasized from zero to pi with both endpoints filled, showing every possible principal value of arccos on the unit circle](img/range-arccos.svg)
+
+Sweeping \( \theta \) from \( 0 \) (right) through \( \pi/2 \) to \( \pi \) (left) covers exactly the upper half. Both endpoints are included because the range is closed.
+
+So for \( \theta=\arccos x \), \( \sin\theta\ge0 \), while \( \cos\theta=x \) has the sign of \( x \).
+~~~
+
+!id: o2X97SKHOl
+!text: The principal-value arc of \( \arctan \) is its range \( {{c1::(-\pi/2,\pi/2)}} \) marked as angles on the unit circle, it becomes {{c1::the open right semicircle::semicircle}}.
+!back extra:
+![Right semicircle emphasized from minus pi over two to pi over two with both endpoints open, showing the principal values of arctan](img/range-arctan.svg)
+
+Sweeping \( \theta \) from \( -\pi/2 \) (bottom) through \( 0 \) to \( \pi/2 \) (top) covers exactly the right half. Both endpoints are excluded because the range is open, since tangent is undefined at \( \pm\pi/2 \).
+
+So for \( \theta=\arctan x \), \( \cos\theta>0 \), while \( \sin\theta \) has the sign of \( x=\tan\theta \).
+~~~
+
+!id: SOwgxj9eQf
+!text: The principal-value arc of \( \operatorname{arccot} \) is its range \( {{c1::(0,\pi)}} \) marked as angles on the unit circle, it becomes {{c1::the open upper semicircle::semicircle}}.
+!back extra:
+![Upper semicircle emphasized from zero to pi with both endpoints open, showing the principal values of arccot under the zero-to-pi convention](img/range-arccot.svg)
+
+Sweeping \( \theta \) from \( 0 \) (right) through \( \pi/2 \) to \( \pi \) (left) covers exactly the upper half. Both endpoints are excluded because the range is open, since cotangent is undefined at \( 0 \) and \( \pi \).
+
+So for \( \theta=\operatorname{arccot}x \), \( \sin\theta>0 \), while \( \cos\theta \) has the sign of \( x=\cot\theta \).
+~~~
+
+!id: ptjIK2M45D
+!text: The principal-value arc of \( \operatorname{arcsec} \) is its range \( {{c1::[0,\pi/2)\cup(\pi/2,\pi]}} \) marked as angles on the unit circle, it becomes {{c1::the upper semicircle with \( 0 \) and \( \pi \) included but \( \pi/2 \) excluded::semicircle}}.
+!back extra:
+![Upper semicircle emphasized with filled endpoints at zero and pi and an open point at pi over two, showing the principal values of arcsec](img/range-arcsec.svg)
+
+Sweeping \( \theta \) from \( 0 \) (right) to \( \pi \) (left) covers the upper half. The endpoints \( 0 \) and \( \pi \) are included, but the top point \( \pi/2 \) is removed from the range because secant is undefined there.
+
+So for \( \theta=\operatorname{arcsec}x \), \( \sin\theta\ge0 \), while \( \cos\theta=1/x \) has the sign of \( x \).
+~~~
+
+!id: ijBjm2lUx8
+!text: The principal-value arc of \( \operatorname{arccsc} \) is its range \( {{c1::[-\pi/2,0)\cup(0,\pi/2]}} \) marked as angles on the unit circle, it becomes {{c1::the right semicircle with \( \pm\pi/2 \) included but \( 0 \) excluded::semicircle}}.
+!back extra:
+![Right semicircle emphasized with filled endpoints at minus pi over two and pi over two and an open point at zero, showing the principal values of arccsc](img/range-arccsc.svg)
+
+Sweeping \( \theta \) from \( -\pi/2 \) (bottom) to \( \pi/2 \) (top) covers the right half. The endpoints \( \pm\pi/2 \) are included, but the rightmost point \( 0 \) is removed from the range because cosecant is undefined there.
+
+So for \( \theta=\operatorname{arccsc}x \), \( \cos\theta\ge0 \), while \( \sin\theta=1/x \) has the sign of \( x \).
+~~~
+
+!type: Basic Math
+
+!id: BnwFjLmBaG
+!front: How does the graph of \( y=\arcsin x \) relate to the graph of sine?
+!back:
+![Sine restricted to theta from minus pi over two to pi over two and its reflection across the diagonal y equals x, an increasing inverse curve from minus one minus pi over two to one pi over two](img/graph-arcsin.svg)
+
+Restrict sine to \( [-\pi/2,\pi/2] \), then reflect that branch across \( y=x \). The inverse rises from \( (-1,-\pi/2) \) through \( (0,0) \) to \( (1,\pi/2) \).
+~~~
+
+!id: 62mNRMpWZs
+!front:
+Which inverse trig function has this graph?
+
+![An increasing inverse curve from x minus one at height minus pi over two through the origin to x one at height pi over two](img/graph-arcsin-quiz.svg)
+!back: \[ y=\arcsin x \]
+~~~
+
+!id: HFEBqBu3kB
+!front: How does the graph of \( y=\arccos x \) relate to the graph of cosine?
+!back:
+![Cosine restricted to zero through pi and its reflection across y equals x, a decreasing inverse curve from minus one pi to one zero](img/graph-arccos.svg)
+
+Restrict cosine to \( [0,\pi] \), then reflect that branch across \( y=x \). The inverse decreases from \( (-1,\pi) \) through \( (0,\pi/2) \) to \( (1,0) \).
+~~~
+
+!id: l6vUy12nHk
+!front:
+Which inverse trig function has this graph?
+
+![A decreasing inverse curve from x minus one at height pi through x zero at height pi over two to x one at height zero](img/graph-arccos-quiz.svg)
+!back: \[ y=\arccos x \]
+~~~
+
+!id: 7Ui0di94hQ
+!front: How does the graph of \( y=\arctan x \) relate to the graph of tangent?
+!back:
+![Central increasing tangent branch and its reflection across y equals x, an increasing inverse curve through the origin approaching horizontal lines at plus and minus pi over two](img/graph-arctan.svg)
+
+Restrict tangent to \( (-\pi/2,\pi/2) \), then reflect across \( y=x \). The inverse increases through \( (0,0) \) and approaches the horizontal asymptotes \( y=\pm\pi/2 \).
+~~~
+
+!id: LhetGuZPUt
+!front:
+Which inverse trig function has this graph?
+
+![An increasing curve through the origin, approaching horizontal asymptotes at plus and minus pi over two](img/graph-arctan-quiz.svg)
+!back: \[ y=\arctan x \]
+~~~
+
+!id: 2dvpVXAn5e
+!front: How does the graph of \( y=\operatorname{arccot}x \) relate to the graph of cotangent?
+!back:
+![Cotangent restricted to zero through pi and its reflection across y equals x, a decreasing inverse curve through zero pi over two approaching heights pi and zero](img/graph-arccot.svg)
+
+Restrict cotangent to \( (0,\pi) \), then reflect across \( y=x \). The inverse decreases through \( (0,\pi/2) \), approaching \( y=\pi \) as \( x\to-\infty \) and \( y=0 \) as \( x\to+\infty \).
+~~~
+
+!id: k1K72a3TKK
+!front:
+Which inverse trig function with range \( (0,\pi) \) has this graph?
+
+![A decreasing curve through x zero at height pi over two, approaching height pi on the left and zero on the right](img/graph-arccot-quiz.svg)
+!back: \[ y=\operatorname{arccot}x \]
+~~~
+
+!id: J8ETycE2dF
+!front: How does the graph of \( y=\operatorname{arcsec}x \) relate to the graph of secant?
+!back:
+![Secant restricted to zero through pi except pi over two and its reflection across y equals x, two inverse branches beginning at one zero and minus one pi and approaching pi over two](img/graph-arcsec.svg)
+
+Reflect secant restricted to that range across \( y=x \). The inverse has two branches: \( (1,0) \) approaches \( y=\pi/2 \) from below as \( x\to+\infty \); \( (-1,\pi) \) approaches it from above as \( x\to-\infty \).
+~~~
+
+!id: HIF6yfZV6Y
+!front:
+Which inverse trig function with range \( [0,\pi/2)\cup(\pi/2,\pi] \) has this graph?
+
+![Two branches defined for x at least one or at most minus one, passing through one zero and minus one pi respectively and approaching height pi over two from opposite sides](img/graph-arcsec-quiz.svg)
+!back: \[ y=\operatorname{arcsec}x \]
+~~~
+
+!id: TIHk5LlWQo
+!front: How does the graph of \( y=\operatorname{arccsc}x \) relate to the graph of cosecant?
+!back:
+![Cosecant restricted to minus pi over two through zero and zero through pi over two and its reflection across y equals x, two inverse branches approaching height zero](img/graph-arccsc.svg)
+
+Reflect cosecant restricted to that range across \( y=x \). The inverse has branches through \( (1,\pi/2) \) and \( (-1,-\pi/2) \), both approaching the horizontal asymptote \( y=0 \) as \( |x|\to\infty \).
+~~~
+
+!id: HmyZcey1ES
+!front:
+Which inverse trig function with range \( [-\pi/2,0)\cup(0,\pi/2] \) has this graph?
+
+![Two branches defined for x at least one or at most minus one, passing through one pi over two and minus one minus pi over two and approaching height zero from above and below](img/graph-arccsc-quiz.svg)
+!back: \[ y=\operatorname{arccsc}x \]
+~~~

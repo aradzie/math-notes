@@ -1,0 +1,97 @@
+!deck: Math Identities
+!tags: Math Trigonometry Inverse-Function
+!type: Basic Math
+
+!id: FkMBUjuJ6g
+!front: Simplify \( \sin(\arccos x) \) for \( x\in[-1,1] \), and justify the sign of the result.
+!back:
+Let:
+
+- \( \theta=\arccos x \), so \( \cos\theta=x \) and \( \theta\in[0,\pi] \)
+
+To prove: \( \sin\theta=\sqrt{1-x^2} \).
+
+- The Pythagorean identity gives \( \sin^2\theta=1-\cos^2\theta=1-x^2 \), so \( \sin\theta=\pm\sqrt{1-x^2} \).
+- Since \( \theta\in[0,\pi] \), we have \( \sin\theta\ge 0 \), which selects the \( + \) sign. In the figure, every point of the upper semicircle has height \( \sin\theta\ge 0 \), whatever the sign of \( x=\cos\theta \).
+
+![Upper unit semicircle, the range of arccos from 0 to pi, with two points whose horizontal coordinate x equals cosine theta is positive for one and negative for the other, and whose height sqrt(1-x^2) is never negative](img/invtrig-arccos.svg)
+~~~
+
+!id: eBsyWVS2Qt
+!front: Simplify \( \cos(\arcsin x) \) for \( x\in[-1,1] \), and justify the sign of the result.
+!back:
+Let:
+
+- \( \theta=\arcsin x \), so \( \sin\theta=x \) and \( \theta\in[-\pi/2,\pi/2] \)
+
+To prove: \( \cos\theta=\sqrt{1-x^2} \).
+
+- The Pythagorean identity gives \( \cos^2\theta=1-x^2 \), so \( \cos\theta=\pm\sqrt{1-x^2} \).
+- Since \( \theta\in[-\pi/2,\pi/2] \), we have \( \cos\theta\ge 0 \), which selects the \( + \) sign. In the figure, every point of the right semicircle has horizontal coordinate \( \cos\theta\ge 0 \), whatever the sign of \( x=\sin\theta \).
+
+![Right unit semicircle, the range of arcsin from minus pi over two to pi over two, with two points whose height x equals sine theta is positive for one and negative for the other, and whose horizontal coordinate sqrt(1-x^2) is never negative](img/invtrig-arcsin.svg)
+~~~
+
+!id: Qa8EEZKzal
+!front: Simplify \( \sec(\arctan x) \) for \( x\in\mathbb{R} \), and justify the sign of the result.
+!back:
+Let:
+
+- \( \theta=\arctan x \), so \( \tan\theta=x \) and \( \theta\in(-\pi/2,\pi/2) \)
+
+To prove: \( \sec\theta=\sqrt{1+x^2} \).
+
+- The Pythagorean identity gives \( \sec^2\theta=1+\tan^2\theta=1+x^2 \), so \( \sec\theta=\pm\sqrt{1+x^2} \).
+- Since \( \theta\in(-\pi/2,\pi/2) \), we have \( \cos\theta>0 \), so \( \sec\theta>0 \), which selects the \( + \) sign. In the figure, the horizontal leg is always \( 1>0 \), and the hypotenuse \( \sqrt{1+x^2} \) is the secant, whatever the sign of \( x=\tan\theta \).
+
+![Right unit semicircle without its endpoints, the range of arctan, with two points on the line x equals 1 at heights x equal to tangent theta, positive for one and negative for the other, each joined to the origin by a hypotenuse of length sqrt(1+x^2)](img/invtrig-arctan.svg)
+~~~
+
+!id: 6hYhXfSh6b
+!front: Simplify \( \csc(\operatorname{arccot}x) \) for \( x\in\mathbb{R} \), and justify the sign of the result.
+!back:
+Let:
+
+- \( \theta=\operatorname{arccot}x \), so \( \cot\theta=x \) and \( \theta\in(0,\pi) \)
+
+To prove: \( \csc\theta=\sqrt{1+x^2} \).
+
+- The Pythagorean identity gives \( \csc^2\theta=1+\cot^2\theta=1+x^2 \), so \( \csc\theta=\pm\sqrt{1+x^2} \).
+- Since \( \theta\in(0,\pi) \), we have \( \sin\theta>0 \), so \( \csc\theta>0 \), which selects the \( + \) sign. In the figure, the vertical leg is always \( 1>0 \), and the hypotenuse \( \sqrt{1+x^2} \) is the cosecant, whatever the sign of \( x=\cot\theta \).
+
+![Upper unit semicircle without its endpoints, the range of arccot, with two points on the line y equals 1 at horizontal coordinates x equal to cotangent theta, positive for one and negative for the other, each joined to the origin by a hypotenuse of length sqrt(1+x^2)](img/invtrig-arccot.svg)
+~~~
+
+!id: nAtsJZyoiN
+!front: Simplify \( \tan(\operatorname{arcsec}x) \) for \( |x|\ge 1 \), and justify the sign of the result.
+!back:
+Let:
+
+- \( \theta=\operatorname{arcsec}x \), so \( \sec\theta=x \) and \( \theta\in[0,\pi/2)\cup(\pi/2,\pi] \)
+
+To prove: \( \tan\theta=\operatorname{sgn}(x)\sqrt{x^2-1} \).
+
+- The Pythagorean identity gives \( \tan^2\theta=\sec^2\theta-1=x^2-1 \), so \( \tan\theta=\pm\sqrt{x^2-1} \).
+- For \( x\ge1 \), \( \cos\theta>0 \) forces \( \theta\in[0,\pi/2) \), where \( \tan\theta\ge 0 \).
+- For \( x\le-1 \), \( \cos\theta<0 \) forces \( \theta\in(\pi/2,\pi] \), where \( \tan\theta\le 0 \).
+- So the sign of \( \tan\theta \) is the sign of \( x \). In the figure, the vertical leg \( \sqrt{x^2-1} \) is never negative, and the horizontal leg \( \pm1 \) carries the sign of \( x \).
+
+![Upper unit semicircle without its top point, the range of arcsec, with two points at horizontal coordinates plus and minus 1 and height sqrt(x^2-1), each joined to the origin by a hypotenuse of signed length x equal to secant theta](img/invtrig-arcsec.svg)
+~~~
+
+!id: s1isAfqUBn
+!front: Simplify \( \cot(\operatorname{arccsc}x) \) for \( |x|\ge 1 \), and justify the sign of the result.
+!back:
+Let:
+
+- \( \theta=\operatorname{arccsc}x \), so \( \csc\theta=x \) and \( \theta\in[-\pi/2,0)\cup(0,\pi/2] \)
+
+To prove: \( \cot\theta=\operatorname{sgn}(x)\sqrt{x^2-1} \).
+
+- The Pythagorean identity gives \( \cot^2\theta=\csc^2\theta-1=x^2-1 \), so \( \cot\theta=\pm\sqrt{x^2-1} \).
+- Since \( \theta\in[-\pi/2,\pi/2] \), we have \( \cos\theta\ge 0 \).
+- Since \( \csc\theta=x \), \( \sin\theta \) has the sign of \( x \).
+- So \( \cot\theta=\cos\theta/\sin\theta \) has the sign of \( x \), or is \( 0 \) when \( x=\pm1 \). In the figure, the horizontal leg \( \sqrt{x^2-1} \) is never negative, and the vertical leg \( \pm1 \) carries the sign of \( x \).
+
+![Right unit semicircle without the point at angle zero, the range of arccsc, with two points at horizontal coordinate sqrt(x^2-1) and heights plus and minus 1, each joined to the origin by a hypotenuse of signed length x equal to cosecant theta](img/invtrig-arccsc.svg)
+~~~

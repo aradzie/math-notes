@@ -1,0 +1,151 @@
+!deck: Math Identities
+!tags: Math Trigonometry Functions
+!type: Basic Math
+
+!id: w3wZJGDNjo
+!front: What does the graph of \( y=\sin\theta \) look like?
+!back: ![Two periods of an unlabeled sine graph on theta from minus two pi to two pi, with zeros at integer multiples of pi, peaks at pi over two plus two k pi, and troughs at three pi over two plus two k pi](img/graph-sin.svg)
+~~~
+
+!id: QH8FIolayV
+!front:
+Which trig function has this graph?
+
+![Two periods of a wave passing upward through the origin, with zeros at integer multiples of pi, peaks at pi over two plus two k pi, and troughs at three pi over two plus two k pi](img/graph-sin.svg)
+!back: \[ y=\sin\theta \]
+~~~
+
+!id: XsWiy8x5r2
+!front: What does the graph of \( y=\cos\theta \) look like?
+!back: ![Two periods of an unlabeled cosine graph with value one at zero, zeros at pi over two plus k pi, and troughs at pi plus two k pi](img/graph-cos.svg)
+~~~
+
+!id: ipDY9045zB
+!front:
+Which trig function has this graph?
+
+![A periodic wave with value one at zero, zeros at pi over two plus k pi, and troughs at pi plus two k pi](img/graph-cos.svg)
+!back: \[ y=\cos\theta \]
+~~~
+
+!id: PD8o4HzUQR
+!front: What does the graph of \( y=\tan\theta \) look like?
+!back: ![Increasing tangent branches through integer multiples of pi, separated by vertical asymptotes at pi over two plus integer multiples of pi](img/graph-tan.svg)
+~~~
+
+!id: veOxcqFZak
+!front:
+Which trig function has this graph?
+
+![Increasing branches from negative to positive infinity, with zeros at integer multiples of pi and vertical asymptotes at pi over two plus integer multiples of pi](img/graph-tan.svg)
+!back: \[ y=\tan\theta \]
+~~~
+
+!id: quJOHzXiv0
+!front: What does the graph of \( y=\cot\theta \) look like?
+!back: ![Decreasing cotangent branches between vertical asymptotes at integer multiples of pi, crossing zero halfway between consecutive asymptotes](img/graph-cot.svg)
+~~~
+
+!id: 89XPGICemn
+!front:
+Which trig function has this graph?
+
+![Decreasing branches from positive to negative infinity, with vertical asymptotes at integer multiples of pi and zeros at pi over two plus integer multiples of pi](img/graph-cot.svg)
+!back: \[ y=\cot\theta \]
+~~~
+
+!id: CXq3dMsNBe
+!front: What does the graph of \( y=\sec\theta \) look like?
+!back:
+![Alternating upward and downward secant branches with vertices at plus one and minus one, separated by vertical asymptotes at pi over two plus integer multiples of pi](img/graph-sec.svg)
+
+It has vertical asymptotes at \( \pi/2+k\pi \). Between them are alternating upward and downward U-shaped branches with vertices at \( (2k\pi,1) \) and \( ((2k+1)\pi,-1) \).
+~~~
+
+!id: HBXIBo5msH
+!front:
+Which trig function has this graph?
+
+![Alternating U-shaped branches with vertices at plus one when theta is an even multiple of pi and minus one when theta is an odd multiple of pi, with asymptotes at pi over two plus integer multiples of pi](img/graph-sec.svg)
+!back: \[ y=\sec\theta \]
+~~~
+
+!id: troUUdpI9B
+!front: What does the graph of \( y=\csc\theta \) look like?
+!back:
+![Alternating upward and downward cosecant branches with vertices at plus one and minus one, separated by vertical asymptotes at integer multiples of pi](img/graph-csc.svg)
+
+It has vertical asymptotes at \( k\pi \). Between them are alternating upward and downward U-shaped branches with vertices at \( (\pi/2+2k\pi,1) \) and \( (3\pi/2+2k\pi,-1) \).
+~~~
+
+!id: nBXDAci8gC
+!front:
+Which trig function has this graph?
+
+![Alternating U-shaped branches with vertices at plus one at pi over two plus two k pi and minus one at three pi over two plus two k pi, with asymptotes at integer multiples of pi](img/graph-csc.svg)
+!back: \[ y=\csc\theta \]
+~~~
+
+!type: Cloze Math
+
+!id: fwLfd89w07
+!text: For \( y=\sin\theta \), one full cycle runs over {{c1::\( [0,2\pi] \)}}; the graph repeats after a horizontal shift of {{c1::\( 2\pi \)}}.
+!back extra: ![Two periods of sine, crossing the origin upward, with peaks at one and troughs at minus one](img/graph-sin.svg)
+~~~
+
+!id: 7j9MQ5NTKo
+!text: For \( y=\cos\theta \), one full cycle runs over {{c1::\( [0,2\pi] \)}}; the graph repeats after a horizontal shift of {{c1::\( 2\pi \)}}.
+!back extra: ![Two periods of cosine, starting at one when theta is zero and reaching minus one at pi](img/graph-cos.svg)
+~~~
+
+!id: KLYGlyhS7l
+!text: For \( y=\tan\theta \), the branch through the origin lies on {{c1::\( (-\pi/2,\pi/2) \)}}; the graph repeats after a horizontal shift of {{c1::\( \pi \)}}.
+!back extra: ![Increasing tangent branches crossing zero at integer multiples of pi, separated by vertical asymptotes halfway between them](img/graph-tan.svg)
+~~~
+
+!id: inrBA1T04h
+!text: For \( y=\cot\theta \), the first branch for positive \( \theta \) lies on {{c1::\( (0,\pi) \)}}; the graph repeats after a horizontal shift of {{c1::\( \pi \)}}.
+!back extra: ![Decreasing cotangent branches between vertical asymptotes at integer multiples of pi](img/graph-cot.svg)
+~~~
+
+!id: I0XKrHRHK7
+!text: For \( y=\sec\theta \), the positive branch nearest the origin lies on {{c1::\( (-\pi/2,\pi/2) \)}}; the entire graph repeats after a horizontal shift of {{c1::\( 2\pi \)}}.
+!back extra: ![Alternating secant branches with vertices at one and minus one, separated by vertical asymptotes at the zeros of cosine](img/graph-sec.svg)
+~~~
+
+!id: MyIMcfxAXs
+!text: For \( y=\csc\theta \), the positive branch nearest the origin lies on {{c1::\( (0,\pi) \)}}; the entire graph repeats after a horizontal shift of {{c1::\( 2\pi \)}}.
+!back extra: ![Alternating cosecant branches with vertices at one and minus one, separated by vertical asymptotes at the zeros of sine](img/graph-csc.svg)
+~~~
+
+!type: Basic Math
+
+!id: CYzQxBeFWZ
+!front: Compare the graphs of \( y=\sin\theta \) and \( y=\cos\theta \).
+!back:
+Cosine is sine shifted left by \( \pi/2 \): \( \cos\theta=\sin(\theta+\pi/2) \).
+
+![Sine graph crossing the origin upward and oscillating between minus one and one](img/graph-sin.svg)
+
+![Cosine graph at one when theta is zero and oscillating between minus one and one](img/graph-cos.svg)
+~~~
+
+!id: rfPBZuisda
+!front: Compare the graphs of \( y=\tan\theta \) and \( y=\cot\theta \).
+!back:
+Cotangent is tangent reflected across the horizontal axis and shifted right by \( \pi/2 \): \( \cot\theta=-\tan(\theta-\pi/2) \).
+
+![Increasing tangent branches with zeros at integer multiples of pi and asymptotes halfway between them](img/graph-tan.svg)
+
+![Decreasing cotangent branches with asymptotes at integer multiples of pi and zeros halfway between them](img/graph-cot.svg)
+~~~
+
+!id: efcaykbesg
+!front: Compare the graphs of \( y=\sec\theta \) and \( y=\csc\theta \).
+!back:
+Cosecant is secant shifted right by \( \pi/2 \): \( \csc\theta=\sec(\theta-\pi/2) \).
+
+![Secant graph with alternating U-shaped branches and an upward vertex at zero one](img/graph-sec.svg)
+
+![Cosecant graph with alternating U-shaped branches and an upward vertex at pi over two one](img/graph-csc.svg)
+~~~

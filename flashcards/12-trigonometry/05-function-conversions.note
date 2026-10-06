@@ -1,0 +1,273 @@
+!deck: Math Identities
+!tags: Math Trigonometry Conversion
+!type: Basic Math
+
+!id: 4a0yIpmPBU
+!front: Express \( \cos\theta \) in terms of \( \sin\theta \) only.
+!back:
+\[ \cos\theta=\pm\sqrt{1-\sin^2\theta}. \]
+Choose \( \pm \) as the sign of \( \cos\theta \), set by the quadrant of \( \theta \).
+
+![Right triangle with acute angle theta, hypotenuse one, opposite leg sine theta, and adjacent leg the square root of one minus sine squared theta; each function of theta is a ratio of two sides, up to sign](img/conversion-triangle-sin.svg)
+~~~
+
+!id: 2ZWIcLdiWa
+!front: Express \( \tan\theta \) in terms of \( \sin\theta \) only.
+!back:
+\[ \tan\theta=\frac{\sin\theta}{\cos\theta}=\frac{\sin\theta}{\pm\sqrt{1-\sin^2\theta}}. \]
+Choose \( \pm \) as the sign of \( \cos\theta \). Valid when \( \cos\theta\ne0 \), i.e. \( |\sin\theta|<1 \).
+
+![Right triangle with acute angle theta, hypotenuse one, opposite leg sine theta, and adjacent leg the square root of one minus sine squared theta; each function of theta is a ratio of two sides, up to sign](img/conversion-triangle-sin.svg)
+~~~
+
+!id: 2X5lu0wbxL
+!front: Express \( \cot\theta \) in terms of \( \sin\theta \) only.
+!back:
+\[ \cot\theta=\frac{\cos\theta}{\sin\theta}=\frac{\pm\sqrt{1-\sin^2\theta}}{\sin\theta}. \]
+Choose \( \pm \) as the sign of \( \cos\theta \). Valid when \( \sin\theta\ne0 \).
+
+![Right triangle with acute angle theta, hypotenuse one, opposite leg sine theta, and adjacent leg the square root of one minus sine squared theta; each function of theta is a ratio of two sides, up to sign](img/conversion-triangle-sin.svg)
+~~~
+
+!id: AjJdEBmDDb
+!front: Express \( \sec\theta \) in terms of \( \sin\theta \) only.
+!back:
+\[ \sec\theta=\frac1{\cos\theta}=\frac1{\pm\sqrt{1-\sin^2\theta}}. \]
+Choose \( \pm \) as the sign of \( \cos\theta \). Valid when \( \cos\theta\ne0 \), i.e. \( |\sin\theta|<1 \).
+
+![Right triangle with acute angle theta, hypotenuse one, opposite leg sine theta, and adjacent leg the square root of one minus sine squared theta; each function of theta is a ratio of two sides, up to sign](img/conversion-triangle-sin.svg)
+~~~
+
+!id: 7o4jIOiYcS
+!front: Express \( \csc\theta \) in terms of \( \sin\theta \) only.
+!back:
+\[ \csc\theta=\frac1{\sin\theta}. \]
+No sign choice is needed. Valid when \( \sin\theta\ne0 \).
+
+![Right triangle with acute angle theta, hypotenuse one, opposite leg sine theta, and adjacent leg the square root of one minus sine squared theta; each function of theta is a ratio of two sides, up to sign](img/conversion-triangle-sin.svg)
+~~~
+
+!id: vjFCKrvzgp
+!front: Express \( \sin\theta \) in terms of \( \cos\theta \) only.
+!back:
+\[ \sin\theta=\pm\sqrt{1-\cos^2\theta}. \]
+Choose \( \pm \) as the sign of \( \sin\theta \), set by the quadrant of \( \theta \).
+
+![Right triangle with acute angle theta, hypotenuse one, adjacent leg cosine theta, and opposite leg the square root of one minus cosine squared theta; each function of theta is a ratio of two sides, up to sign](img/conversion-triangle-cos.svg)
+~~~
+
+!id: UUeFjPZUjr
+!front: Express \( \tan\theta \) in terms of \( \cos\theta \) only.
+!back:
+\[ \tan\theta=\frac{\sin\theta}{\cos\theta}=\frac{\pm\sqrt{1-\cos^2\theta}}{\cos\theta}. \]
+Choose \( \pm \) as the sign of \( \sin\theta \). Valid when \( \cos\theta\ne0 \).
+
+![Right triangle with acute angle theta, hypotenuse one, adjacent leg cosine theta, and opposite leg the square root of one minus cosine squared theta; each function of theta is a ratio of two sides, up to sign](img/conversion-triangle-cos.svg)
+~~~
+
+!id: UK7RxR3QRE
+!front: Express \( \cot\theta \) in terms of \( \cos\theta \) only.
+!back:
+\[ \cot\theta=\frac{\cos\theta}{\sin\theta}=\frac{\cos\theta}{\pm\sqrt{1-\cos^2\theta}}. \]
+Choose \( \pm \) as the sign of \( \sin\theta \). Valid when \( \sin\theta\ne0 \), i.e. \( |\cos\theta|<1 \).
+
+![Right triangle with acute angle theta, hypotenuse one, adjacent leg cosine theta, and opposite leg the square root of one minus cosine squared theta; each function of theta is a ratio of two sides, up to sign](img/conversion-triangle-cos.svg)
+~~~
+
+!id: d9fttHEvh7
+!front: Express \( \sec\theta \) in terms of \( \cos\theta \) only.
+!back:
+\[ \sec\theta=\frac1{\cos\theta}. \]
+No sign choice is needed. Valid when \( \cos\theta\ne0 \).
+
+![Right triangle with acute angle theta, hypotenuse one, adjacent leg cosine theta, and opposite leg the square root of one minus cosine squared theta; each function of theta is a ratio of two sides, up to sign](img/conversion-triangle-cos.svg)
+~~~
+
+!id: WaSbzUpVHW
+!front: Express \( \csc\theta \) in terms of \( \cos\theta \) only.
+!back:
+\[ \csc\theta=\frac1{\sin\theta}=\frac1{\pm\sqrt{1-\cos^2\theta}}. \]
+Choose \( \pm \) as the sign of \( \sin\theta \). Valid when \( \sin\theta\ne0 \), i.e. \( |\cos\theta|<1 \).
+
+![Right triangle with acute angle theta, hypotenuse one, adjacent leg cosine theta, and opposite leg the square root of one minus cosine squared theta; each function of theta is a ratio of two sides, up to sign](img/conversion-triangle-cos.svg)
+~~~
+
+!id: uZ5k7fd2AS
+!front: Express \( \sin\theta \) in terms of \( \tan\theta \) only.
+!back:
+\[ \sin\theta=\frac{\tan\theta}{\sec\theta}=\frac{\tan\theta}{\pm\sqrt{1+\tan^2\theta}}. \]
+Choose \( \pm \) as the sign of \( \cos\theta \) (and hence \( \sec\theta \)) in \( \sec^2\theta=1+\tan^2\theta \). Valid wherever \( \tan\theta \) is defined.
+
+![Right triangle with acute angle theta, adjacent leg one, opposite leg tangent theta, and hypotenuse the square root of one plus tangent squared theta; each function of theta is a ratio of two sides, up to sign](img/conversion-triangle-tan.svg)
+~~~
+
+!id: hgxXHKXWlP
+!front: Express \( \cos\theta \) in terms of \( \tan\theta \) only.
+!back:
+\[ \cos\theta=\frac1{\sec\theta}=\frac1{\pm\sqrt{1+\tan^2\theta}}. \]
+Choose \( \pm \) as the sign of \( \cos\theta \) (and hence \( \sec\theta \)) in \( \sec^2\theta=1+\tan^2\theta \): positive in quadrants I and IV, negative in II and III. Valid wherever \( \tan\theta \) is defined.
+
+![Right triangle with acute angle theta, adjacent leg one, opposite leg tangent theta, and hypotenuse the square root of one plus tangent squared theta; each function of theta is a ratio of two sides, up to sign](img/conversion-triangle-tan.svg)
+~~~
+
+!id: syXcE8cx6U
+!front: Express \( \cot\theta \) in terms of \( \tan\theta \) only.
+!back:
+\[ \cot\theta=\frac1{\tan\theta}. \]
+No sign choice is needed. Valid when \( \tan\theta \) is defined and nonzero.
+
+![Right triangle with acute angle theta, adjacent leg one, opposite leg tangent theta, and hypotenuse the square root of one plus tangent squared theta; each function of theta is a ratio of two sides, up to sign](img/conversion-triangle-tan.svg)
+~~~
+
+!id: pqgt0zOrdI
+!front: Express \( \sec\theta \) in terms of \( \tan\theta \) only.
+!back:
+\[ \sec\theta=\pm\sqrt{1+\tan^2\theta}. \]
+Choose \( \pm \) as the sign of \( \cos\theta \) (and hence \( \sec\theta \)), set by the quadrant of \( \theta \). Valid wherever \( \tan\theta \) is defined.
+
+![Right triangle with acute angle theta, adjacent leg one, opposite leg tangent theta, and hypotenuse the square root of one plus tangent squared theta; each function of theta is a ratio of two sides, up to sign](img/conversion-triangle-tan.svg)
+~~~
+
+!id: w4W8LWYMhY
+!front: Express \( \csc\theta \) in terms of \( \tan\theta \) only.
+!back:
+\[ \csc\theta=\frac{\sec\theta}{\tan\theta}=\frac{\pm\sqrt{1+\tan^2\theta}}{\tan\theta}. \]
+Choose \( \pm \) as the sign of \( \cos\theta \) (and hence \( \sec\theta \)) in \( \sec^2\theta=1+\tan^2\theta \). Valid when \( \tan\theta \) is defined and nonzero.
+
+![Right triangle with acute angle theta, adjacent leg one, opposite leg tangent theta, and hypotenuse the square root of one plus tangent squared theta; each function of theta is a ratio of two sides, up to sign](img/conversion-triangle-tan.svg)
+~~~
+
+!id: xvyiogHFLn
+!front: Express \( \sin\theta \) in terms of \( \cot\theta \) only.
+!back:
+\[ \sin\theta=\frac1{\csc\theta}=\frac1{\pm\sqrt{1+\cot^2\theta}}. \]
+Choose \( \pm \) as the sign of \( \sin\theta \) (and hence \( \csc\theta \)) in \( \csc^2\theta=1+\cot^2\theta \): positive in quadrants I and II, negative in III and IV. Valid wherever \( \cot\theta \) is defined.
+
+![Right triangle with acute angle theta, opposite leg one, adjacent leg cotangent theta, and hypotenuse the square root of one plus cotangent squared theta; each function of theta is a ratio of two sides, up to sign](img/conversion-triangle-cot.svg)
+~~~
+
+!id: 6nM0tkvpwd
+!front: Express \( \cos\theta \) in terms of \( \cot\theta \) only.
+!back:
+\[ \cos\theta=\frac{\cot\theta}{\csc\theta}=\frac{\cot\theta}{\pm\sqrt{1+\cot^2\theta}}. \]
+Choose \( \pm \) as the sign of \( \sin\theta \) (and hence \( \csc\theta \)) in \( \csc^2\theta=1+\cot^2\theta \). Valid wherever \( \cot\theta \) is defined.
+
+![Right triangle with acute angle theta, opposite leg one, adjacent leg cotangent theta, and hypotenuse the square root of one plus cotangent squared theta; each function of theta is a ratio of two sides, up to sign](img/conversion-triangle-cot.svg)
+~~~
+
+!id: euZ4jVgAvO
+!front: Express \( \tan\theta \) in terms of \( \cot\theta \) only.
+!back:
+\[ \tan\theta=\frac1{\cot\theta}. \]
+No sign choice is needed. Valid when \( \cot\theta \) is defined and nonzero.
+
+![Right triangle with acute angle theta, opposite leg one, adjacent leg cotangent theta, and hypotenuse the square root of one plus cotangent squared theta; each function of theta is a ratio of two sides, up to sign](img/conversion-triangle-cot.svg)
+~~~
+
+!id: kJ2vDUaQ5u
+!front: Express \( \sec\theta \) in terms of \( \cot\theta \) only.
+!back:
+\[ \sec\theta=\frac{\csc\theta}{\cot\theta}=\frac{\pm\sqrt{1+\cot^2\theta}}{\cot\theta}. \]
+Choose \( \pm \) as the sign of \( \sin\theta \) (and hence \( \csc\theta \)) in \( \csc^2\theta=1+\cot^2\theta \). Valid when \( \cot\theta \) is defined and nonzero.
+
+![Right triangle with acute angle theta, opposite leg one, adjacent leg cotangent theta, and hypotenuse the square root of one plus cotangent squared theta; each function of theta is a ratio of two sides, up to sign](img/conversion-triangle-cot.svg)
+~~~
+
+!id: B6fEm8VplX
+!front: Express \( \csc\theta \) in terms of \( \cot\theta \) only.
+!back:
+\[ \csc\theta=\pm\sqrt{1+\cot^2\theta}. \]
+Choose \( \pm \) as the sign of \( \sin\theta \) (and hence \( \csc\theta \)), set by the quadrant of \( \theta \). Valid wherever \( \cot\theta \) is defined.
+
+![Right triangle with acute angle theta, opposite leg one, adjacent leg cotangent theta, and hypotenuse the square root of one plus cotangent squared theta; each function of theta is a ratio of two sides, up to sign](img/conversion-triangle-cot.svg)
+~~~
+
+!id: RBvpnQIXoG
+!front: Express \( \sin\theta \) in terms of \( \sec\theta \) only.
+!back:
+\[ \sin\theta=\frac{\tan\theta}{\sec\theta}=\frac{\pm\sqrt{\sec^2\theta-1}}{\sec\theta}. \]
+Choose \( \pm \) as the sign of \( \tan\theta \) in \( \tan^2\theta=\sec^2\theta-1 \). Valid wherever \( \sec\theta \) is defined.
+
+![Right triangle with acute angle theta, adjacent leg one, hypotenuse secant theta, and opposite leg the square root of secant squared theta minus one; each function of theta is a ratio of two sides, up to sign](img/conversion-triangle-sec.svg)
+~~~
+
+!id: NhJJriVRGP
+!front: Express \( \cos\theta \) in terms of \( \sec\theta \) only.
+!back:
+\[ \cos\theta=\frac1{\sec\theta}. \]
+No sign choice is needed. Valid wherever \( \sec\theta \) is defined.
+
+![Right triangle with acute angle theta, adjacent leg one, hypotenuse secant theta, and opposite leg the square root of secant squared theta minus one; each function of theta is a ratio of two sides, up to sign](img/conversion-triangle-sec.svg)
+~~~
+
+!id: BbZEbQPFeh
+!front: Express \( \tan\theta \) in terms of \( \sec\theta \) only.
+!back:
+\[ \tan\theta=\pm\sqrt{\sec^2\theta-1}. \]
+Choose \( \pm \) as the sign of \( \tan\theta \), set by the quadrant of \( \theta \). Valid wherever \( \sec\theta \) is defined.
+
+![Right triangle with acute angle theta, adjacent leg one, hypotenuse secant theta, and opposite leg the square root of secant squared theta minus one; each function of theta is a ratio of two sides, up to sign](img/conversion-triangle-sec.svg)
+~~~
+
+!id: cRBkdOCeyb
+!front: Express \( \cot\theta \) in terms of \( \sec\theta \) only.
+!back:
+\[ \cot\theta=\frac1{\tan\theta}=\frac1{\pm\sqrt{\sec^2\theta-1}}. \]
+Choose \( \pm \) as the sign of \( \tan\theta \) in \( \tan^2\theta=\sec^2\theta-1 \). Valid when \( \tan\theta\ne0 \), i.e. \( |\sec\theta|>1 \).
+
+![Right triangle with acute angle theta, adjacent leg one, hypotenuse secant theta, and opposite leg the square root of secant squared theta minus one; each function of theta is a ratio of two sides, up to sign](img/conversion-triangle-sec.svg)
+~~~
+
+!id: QUMV1qkRkD
+!front: Express \( \csc\theta \) in terms of \( \sec\theta \) only.
+!back:
+\[ \csc\theta=\frac{\sec\theta}{\tan\theta}=\frac{\sec\theta}{\pm\sqrt{\sec^2\theta-1}}. \]
+Choose \( \pm \) as the sign of \( \tan\theta \) in \( \tan^2\theta=\sec^2\theta-1 \). Valid when \( \tan\theta\ne0 \), i.e. \( |\sec\theta|>1 \).
+
+![Right triangle with acute angle theta, adjacent leg one, hypotenuse secant theta, and opposite leg the square root of secant squared theta minus one; each function of theta is a ratio of two sides, up to sign](img/conversion-triangle-sec.svg)
+~~~
+
+!id: TPCfNSY7zO
+!front: Express \( \sin\theta \) in terms of \( \csc\theta \) only.
+!back:
+\[ \sin\theta=\frac1{\csc\theta}. \]
+No sign choice is needed. Valid wherever \( \csc\theta \) is defined.
+
+![Right triangle with acute angle theta, opposite leg one, hypotenuse cosecant theta, and adjacent leg the square root of cosecant squared theta minus one; each function of theta is a ratio of two sides, up to sign](img/conversion-triangle-csc.svg)
+~~~
+
+!id: 9ZYEkXjjJd
+!front: Express \( \cos\theta \) in terms of \( \csc\theta \) only.
+!back:
+\[ \cos\theta=\frac{\cot\theta}{\csc\theta}=\frac{\pm\sqrt{\csc^2\theta-1}}{\csc\theta}. \]
+Choose \( \pm \) as the sign of \( \cot\theta \) in \( \cot^2\theta=\csc^2\theta-1 \). Valid wherever \( \csc\theta \) is defined.
+
+![Right triangle with acute angle theta, opposite leg one, hypotenuse cosecant theta, and adjacent leg the square root of cosecant squared theta minus one; each function of theta is a ratio of two sides, up to sign](img/conversion-triangle-csc.svg)
+~~~
+
+!id: vbpKsbol10
+!front: Express \( \tan\theta \) in terms of \( \csc\theta \) only.
+!back:
+\[ \tan\theta=\frac1{\cot\theta}=\frac1{\pm\sqrt{\csc^2\theta-1}}. \]
+Choose \( \pm \) as the sign of \( \cot\theta \) in \( \cot^2\theta=\csc^2\theta-1 \). Valid when \( \cot\theta\ne0 \), i.e. \( |\csc\theta|>1 \).
+
+![Right triangle with acute angle theta, opposite leg one, hypotenuse cosecant theta, and adjacent leg the square root of cosecant squared theta minus one; each function of theta is a ratio of two sides, up to sign](img/conversion-triangle-csc.svg)
+~~~
+
+!id: l25wycNjCA
+!front: Express \( \cot\theta \) in terms of \( \csc\theta \) only.
+!back:
+\[ \cot\theta=\pm\sqrt{\csc^2\theta-1}. \]
+Choose \( \pm \) as the sign of \( \cot\theta \), set by the quadrant of \( \theta \). Valid wherever \( \csc\theta \) is defined.
+
+![Right triangle with acute angle theta, opposite leg one, hypotenuse cosecant theta, and adjacent leg the square root of cosecant squared theta minus one; each function of theta is a ratio of two sides, up to sign](img/conversion-triangle-csc.svg)
+~~~
+
+!id: 1cilaGt2eW
+!front: Express \( \sec\theta \) in terms of \( \csc\theta \) only.
+!back:
+\[ \sec\theta=\frac{\csc\theta}{\cot\theta}=\frac{\csc\theta}{\pm\sqrt{\csc^2\theta-1}}. \]
+Choose \( \pm \) as the sign of \( \cot\theta \) in \( \cot^2\theta=\csc^2\theta-1 \). Valid when \( \cot\theta\ne0 \), i.e. \( |\csc\theta|>1 \).
+
+![Right triangle with acute angle theta, opposite leg one, hypotenuse cosecant theta, and adjacent leg the square root of cosecant squared theta minus one; each function of theta is a ratio of two sides, up to sign](img/conversion-triangle-csc.svg)
+~~~
