@@ -11,75 +11,55 @@ The connection between the net change theorem, differential equations, and Euler
 The net change theorem is the bridge connecting these ideas.
 
 Suppose that
-\[
-  F'(t)=f(t).
-\]
+\[ F'(t)=f(t). \]
 
 Then the net change theorem states:
-\[
-  F(b)-F(a)=\int_{a}^{b} f(t)\,dt \quad \text{or}\quad F(b)=F(a)+\int_{a}^{b} f(t)\,dt.
-\]
+\[ F(b)-F(a)=\int_{a}^{b} f(t)\,dt \quad \text{or}\quad F(b)=F(a)+\int_{a}^{b} f(t)\,dt. \]
 
 The interpretation is:
 
 \begin{itemize}
-  \item $f(t)$ is the instantaneous rate of change,
+  \item \(f(t)\) is the instantaneous rate of change,
   \item the integral accumulates infinitesimal changes,
-  \item the result is the total change in $F$.
+  \item the result is the total change in \(F\).
 \end{itemize}
 
 Now consider a differential equation:
-\[
-  y'(t)=f(t,y(t)).
-\]
+\[ y'(t)=f(t,y(t)). \]
 
-This equation states that the instantaneous change of the unknown function $y$ is determined by the function $f$.
+This equation states that the instantaneous change of the unknown function \(y\) is determined by the function \(f\).
 
-Applying the net change theorem to the unknown solution $y$, we integrate both sides from $t_{0}$ to $t$:
-\[
-  y(t)-y(t_{0})=\int_{t_0}^{t} f(s,y(s))\,ds.
-\]
+Applying the net change theorem to the unknown solution \(y\), we integrate both sides from \(t_{0}\) to \(t\):
+\[ y(t)-y(t_{0})=\int_{t_{0}}^{t} f(s,y(s))\,ds. \]
 
 If the initial value is
-\[
-  y(t_{0})=y_{0},
-\]
+\[ y(t_{0})=y_{0}, \]
 then:
-\[
-  y(t)=y_{0}+\int_{t_0}^{t} f(s,y(s))\,ds.
-\]
+\[ y(t)=y_{0}+\int_{t_{0}}^{t} f(s,y(s))\,ds. \]
 
 This equation has a direct interpretation:
 
 \begin{itemize}
-  \item Start with the initial value $y_{0}$,
-  \item accumulate all infinitesimal changes $f(s,y(s))\,ds$,
-  \item obtain the final value $y(t)$.
+  \item Start with the initial value \(y_{0}\),
+  \item accumulate all infinitesimal changes \(f(s,y(s))\,ds\),
+  \item obtain the final value \(y(t)\).
 \end{itemize}
 
 Thus, a differential equation is fundamentally an accumulation law.
 
 \subsection{Euler's Method as Numerical Integration}
 
-Euler's method arises by approximating the integral with a Riemann sum. Take a small step size $h$. Over the interval $[t_{n},t_{n}+h]$,
-\[
-  y(t_{n+1})-y(t_{n}) = \int_{t_n}^{t_n+h}f(s,y(s))\,ds.
-\]
+Euler's method arises by approximating the integral with a Riemann sum. Take a small step size \(h\). Over the interval \([t_{n},t_{n}+h]\),
+\[ y(t_{n+1})-y(t_{n}) = \int_{t_{n}}^{t_{n}+h}f(s,y(s))\,ds. \]
 
 Euler's approximation assumes that the slope remains approximately constant over this short interval:
-\[
-  f(s,y(s)) \approx f(t_{n},y_{n}).
-\]
+\[ f(s,y(s)) \approx f(t_{n},y_{n}). \]
 
 Therefore,
-\[
-  \int_{t_n}^{t_n+h}f(s,y(s))\,ds \approx h\,f(t_{n},y_{n}).
-\]
+\[ \int_{t_{n}}^{t_{n}+h}f(s,y(s))\,ds \approx h\,f(t_{n},y_{n}). \]
 
 Substituting this approximation gives Euler's update rule:
-\[
-  y_{n+1}=y_{n}+h\,f(t_{n},y_{n}).
-\]
+\[ y_{n+1}=y_{n}+h\,f(t_{n},y_{n}). \]
 
 This is not merely inspired by integration. It \emph{is} numerical integration. Each Euler step performs the following process:
 
@@ -91,9 +71,7 @@ This is not merely inspired by integration. It \emph{is} numerical integration. 
 \end{enumerate}
 
 Thus, every Euler step is a discrete version of the net change theorem:
-\[
-  \text{new value}= \text{old value}+ \text{accumulated change}.
-\]
+\[ \text{new value}= \text{old value}+ \text{accumulated change}. \]
 
 This explains why:
 
@@ -102,4 +80,3 @@ This explains why:
   \item solution curves are called \emph{integral curves},
   \item ODE solvers are often called \emph{integrators}.
 \end{itemize}
-

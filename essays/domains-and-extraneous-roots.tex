@@ -21,22 +21,18 @@
   practical payoff is a simple rule for solving equations: a restriction that arises from a
   step you chose is not an exclusion but a blind spot, to be checked against the original
   problem rather than carried into the answer. The same rule explains the classical
-  ``$2=1$'' fallacies, which are not a separate genre of trickery but ordinary domain
+  ``\(2=1\)'' fallacies, which are not a separate genre of trickery but ordinary domain
   violations in disguise.
 \end{abstract}
 
 \section{Introduction}
 
 Consider an apparently trivial rewriting. The line
-\[
-  y = x + 1
-\]
-is defined for every real number. Multiply numerator and denominator by $x$:
-\[
-  y = \frac{(x+1)\,x}{x}.
-\]
-For every $x \neq 0$ the new expression equals the old one, because the factor $x/x$ is
-just $1$. But at $x = 0$ the new expression reads $0/0$, which has no value. A single point
+\[ y = x + 1 \]
+is defined for every real number. Multiply numerator and denominator by \(x\):
+\[ y = \frac{(x+1)\,x}{x}. \]
+For every \(x \neq 0\) the new expression equals the old one, because the factor \(x/x\) is
+just \(1\). But at \(x = 0\) the new expression reads \(0/0\), which has no value. A single point
 has silently dropped out of the domain.
 
 This raises two questions that turn out to have different answers depending on context.
@@ -51,11 +47,9 @@ surprising amount of confusion. The aim here is to separate them cleanly.
 \subsection{Rational expressions as algebraic objects}
 
 Treated purely as formal fractions --- elements of the field of rational functions
-$\R(x)$ --- the two expressions
-\[
-  \frac{(x+1)\,x}{x} \qquad\text{and}\qquad x+1
-\]
-are genuinely \emph{equal}. The field $\R(x)$ is built from the polynomial ring by
+\(\R(x)\) --- the two expressions
+\[ \frac{(x+1)\,x}{x} \qquad\text{and}\qquad x+1 \]
+are genuinely \emph{equal}. The field \(\R(x)\) is built from the polynomial ring by
 identifying fractions that agree under cross-multiplication, and cancelling a common factor
 is a legal operation in it. At this level there is no notion of ``evaluating at a point,''
 so nothing tracks domains, and the equality is unconditional.
@@ -67,12 +61,8 @@ number and returns one --- the situation changes. A function is not merely a for
 a formula \emph{together with a domain}. The \emph{natural domain} of a rational expression
 is the set of inputs for which the formula yields a value, which means every zero of the
 denominator is excluded. Hence
-\[
-  f(x) = x+1 \quad\text{has domain } \R,
-  \qquad
-  g(x) = \frac{(x+1)\,x}{x} \quad\text{has domain } \R\setminus\{0\}.
-\]
-The functions $f$ and $g$ agree at every point where both are defined, but they do not have
+\[ f(x) = x+1 \quad\text{has domain } \R, \qquad g(x) = \frac{(x+1)\,x}{x} \quad\text{has domain } \R\setminus\{0\}. \]
+The functions \(f\) and \(g\) agree at every point where both are defined, but they do not have
 the same domain, and so, strictly, they are different functions. As algebraic objects they
 coincide; as functions they do not.
 
@@ -81,14 +71,12 @@ coincide; as functions they do not.
 The point of disagreement is a single missing value. Because the surrounding values behave
 perfectly well, the gap is what is called a \emph{removable singularity}: the limit exists
 and matches what the neighbouring points predict,
-\[
-  \lim_{x \to 0} \frac{(x+1)\,x}{x} \;=\; \lim_{x \to 0}(x+1) \;=\; 1.
-\]
-``Removable'' means that one \emph{may} patch the function by declaring $g(0) = 1$, after
-which $g$ becomes identical to $f$. But that patching is a deliberate act; it does not
-happen on its own. As written, the value at $0$ is simply absent --- a hole punched in an
-otherwise complete line. Geometrically, $y = x+1$ and $y = (x+1)x/x$ are the same straight
-line, differing only in that the second is missing the point $(0,1)$.
+\[ \lim_{x \to 0} \frac{(x+1)\,x}{x} \;=\; \lim_{x \to 0}(x+1) \;=\; 1. \]
+``Removable'' means that one \emph{may} patch the function by declaring \(g(0) = 1\), after
+which \(g\) becomes identical to \(f\). But that patching is a deliberate act; it does not
+happen on its own. As written, the value at \(0\) is simply absent --- a hole punched in an
+otherwise complete line. Geometrically, \(y = x+1\) and \(y = (x+1)x/x\) are the same straight
+line, differing only in that the second is missing the point \((0,1)\).
 
 \section{Solving equations: what is actually being asked}
 
@@ -109,8 +97,8 @@ answer; it is a property of our chosen route to the answer.
 
 \subsection{Equivalence-preserving versus one-directional steps}
 
-An algebraic step turns one equation $E_1$ into another $E_2$. The step is
-\emph{equivalence-preserving} when $E_1$ and $E_2$ have exactly the same solution set; in
+An algebraic step turns one equation \(E_{1}\) into another \(E_{2}\). The step is
+\emph{equivalence-preserving} when \(E_{1}\) and \(E_{2}\) have exactly the same solution set; in
 that happy case we may pass freely in either direction. Many steps, however, are
 one-directional: they preserve solutions in one direction but may add or drop them in the
 other. Recognising which kind of step one has just taken is the whole game.
@@ -138,11 +126,11 @@ So the discipline is not ``always keep the restriction'' and not ``always discar
 
 The same principle organises the familiar list of dangerous manipulations.
 \begin{description}
-  \item[Multiplying both sides by $D(x)$.] Every solution of the original equation survives,
-    but the new equation may \emph{gain} spurious solutions at the zeros of $D$. These are the
+  \item[Multiplying both sides by \(D(x)\).] Every solution of the original equation survives,
+    but the new equation may \emph{gain} spurious solutions at the zeros of \(D\). These are the
     classical \emph{extraneous roots}; they must be checked and discarded.
-  \item[Dividing both sides by $D(x)$.] The new equation may \emph{lose} solutions at the
-    zeros of $D$, because those points were quietly assumed nonzero. Never divide by a factor
+  \item[Dividing both sides by \(D(x)\).] The new equation may \emph{lose} solutions at the
+    zeros of \(D\), because those points were quietly assumed nonzero. Never divide by a factor
     that can vanish without separately recording the case where it does.
   \item[Cancelling a common factor within a single expression.] This enlarges the natural
     domain of that expression, filling a hole. The cancelled form has forgotten a restriction
@@ -155,63 +143,50 @@ The same principle organises the familiar list of dangerous manipulations.
 \section{Worked examples}
 
 \begin{example}[A step-induced restriction that must be discarded]
-  Solve $x + 1 = 1$. The solution is plainly $x = 0$. Suppose that, mid-solution, we rewrite
+  Solve \(x + 1 = 1\). The solution is plainly \(x = 0\). Suppose that, mid-solution, we rewrite
   the left-hand side as a fraction:
-  \[
-    \frac{(x+1)\,x}{x} = 1 \qquad (\text{valid only for } x \neq 0).
-  \]
-  Cancelling the common factor (again valid only for $x \neq 0$) returns $x + 1 = 1$, hence
-  $x = 0$. But $x = 0$ is exactly the point our detour excluded. If we obeyed the restriction
+  \[ \frac{(x+1)\,x}{x} = 1 \qquad (\text{valid only for } x \neq 0). \]
+  Cancelling the common factor (again valid only for \(x \neq 0\)) returns \(x + 1 = 1\), hence
+  \(x = 0\). But \(x = 0\) is exactly the point our detour excluded. If we obeyed the restriction
   literally, we would conclude that the equation has \emph{no} solution --- which is false.
-  The restriction $x \neq 0$ was an artifact of the route, not a feature of the problem.
+  The restriction \(x \neq 0\) was an artifact of the route, not a feature of the problem.
   Tracing it to its source, we see the original equation had no such restriction, so we test
-  $x=0$ there: $0 + 1 = 1$ holds. The true solution sat precisely at the excluded point.
+  \(x=0\) there: \(0 + 1 = 1\) holds. The true solution sat precisely at the excluded point.
 \end{example}
 
 \begin{example}[A genuine extraneous root from an original-domain restriction]
   Solve
-  \[
-    \frac{x^2}{x-1} = \frac{1}{x-1}.
-  \]
+  \[ \frac{x^{2}}{x-1} = \frac{1}{x-1}. \]
   Here the denominator is present from the outset, so the original domain already excludes
-  $x = 1$. Multiplying both sides by $x-1$ gives $x^2 = 1$, whose candidates are $x = \pm 1$.
-  The candidate $x = 1$ lies outside the original domain and is therefore extraneous; it is
-  correctly rejected. The solution is $x = -1$. Contrast this with Example~1: there the
+  \(x = 1\). Multiplying both sides by \(x-1\) gives \(x^{2} = 1\), whose candidates are \(x = \pm 1\).
+  The candidate \(x = 1\) lies outside the original domain and is therefore extraneous; it is
+  correctly rejected. The solution is \(x = -1\). Contrast this with Example~1: there the
   excluded point was a solution to keep, here it is a non-solution to discard --- and the only
   way to tell them apart is to ask where the restriction came from.
 \end{example}
 
 \begin{example}[Dividing by a variable and losing a solution]
-  Solve $x^2 = x$. Dividing both sides by $x$ yields $x = 1$, and the solution $x = 0$ has
-  vanished --- because the division silently assumed $x \neq 0$, and $x = 0$ was a genuine
+  Solve \(x^{2} = x\). Dividing both sides by \(x\) yields \(x = 1\), and the solution \(x = 0\) has
+  vanished --- because the division silently assumed \(x \neq 0\), and \(x = 0\) was a genuine
   solution. The safe route never divides by a possibly-zero quantity:
-  \[
-    x^2 - x = 0 \;\Longrightarrow\; x(x-1) = 0 \;\Longrightarrow\; x \in \{0, 1\}.
-  \]
+  \[ x^{2} - x = 0 \;\Longrightarrow\; x(x-1) = 0 \;\Longrightarrow\; x \in \{0, 1\}. \]
 \end{example}
 
 \begin{example}[Squaring and gaining an extraneous root]
-  Solve $\sqrt{x+2} = x$. Squaring gives
-  \[
-    x + 2 = x^2 \;\Longrightarrow\; x^2 - x - 2 = 0 \;\Longrightarrow\; (x-2)(x+1) = 0,
-  \]
-  with candidates $x = 2$ and $x = -1$. Checking in the original equation: $\sqrt{4} = 2$
-  holds, but $\sqrt{1} = 1 \neq -1$ fails. The root $x = -1$ is extraneous, introduced by the
+  Solve \(\sqrt{x+2} = x\). Squaring gives
+  \[ x + 2 = x^{2} \;\Longrightarrow\; x^{2} - x - 2 = 0 \;\Longrightarrow\; (x-2)(x+1) = 0, \]
+  with candidates \(x = 2\) and \(x = -1\). Checking in the original equation: \(\sqrt{4} = 2\)
+  holds, but \(\sqrt{1} = 1 \neq -1\) fails. The root \(x = -1\) is extraneous, introduced by the
   non-injective squaring step. No denominator appeared, yet the same check-against-the-original
   discipline applies.
 \end{example}
 
-\begin{example}[The ``$2 = 1$'' fallacy]
-  Begin with $a = b$ and proceed:
-  \[
-    a = b
-    \;\Rightarrow\; a^2 = ab
-    \;\Rightarrow\; a^2 - b^2 = ab - b^2
-    \;\Rightarrow\; (a+b)(a-b) = b(a-b).
-  \]
-  Now divide both sides by $a - b$ to obtain $a + b = b$, and with $a = b$ this gives
-  $2b = b$, hence $2 = 1$. The fatal step is the division by $a - b$, because the premise
-  $a = b$ makes that factor exactly zero. This is not an exotic trick: it is precisely the
+\begin{example}[The ``\(2 = 1\)'' fallacy]
+  Begin with \(a = b\) and proceed:
+  \[ a = b \;\Rightarrow\; a^{2} = ab \;\Rightarrow\; a^{2} - b^{2} = ab - b^{2} \;\Rightarrow\; (a+b)(a-b) = b(a-b). \]
+  Now divide both sides by \(a - b\) to obtain \(a + b = b\), and with \(a = b\) this gives
+  \(2b = b\), hence \(2 = 1\). The fatal step is the division by \(a - b\), because the premise
+  \(a = b\) makes that factor exactly zero. This is not an exotic trick: it is precisely the
   forbidden move of Example~3 --- dividing by a quantity that vanishes --- staged so that the
   vanishing factor carries the entire content of the equation. Looking around the blind spot
   collapses the whole derivation.
@@ -222,8 +197,8 @@ The same principle organises the familiar list of dangerous manipulations.
 It is striking that these rules seldom appear as boxed theorems, even in careful texts. Part
 of the reason is that, by the time a book treats series solutions or contour integration, it
 \emph{assumes} the reader tracks domains automatically; spelling the rule out would be noise.
-The principle therefore lives in conventions --- the marginal ``$x \neq 0$,'' the ``valid for
-$|x| < 1$'' before a series, the offhand ``checking, this root is extraneous'' --- rather
+The principle therefore lives in conventions --- the marginal ``\(x \neq 0\),'' the ``valid for
+\(|x| < 1\)'' before a series, the offhand ``checking, this root is extraneous'' --- rather
 than in a named result. A reader can absorb it well enough to apply it correctly while never
 having seen it stated.
 
@@ -238,7 +213,7 @@ guarantee --- ``this is wrong; find the flaw'' --- so the task is purely diagnos
 ordinary exercises they would be unkind, since a student would have no signal that a trap is
 present. The honest curricular home of the principle is therefore the extraneous-root check
 in rational equations and the domain restriction on radical equations: those \emph{are}
-standard exercises, merely stripped of the theatrical ``$2 = 1$'' framing so that the
+standard exercises, merely stripped of the theatrical ``\(2 = 1\)'' framing so that the
 mechanism is visible.
 
 \section{A practical checklist}
@@ -258,7 +233,7 @@ mechanism is visible.
 \section{Conclusion}
 
 Two ideas resolve the whole topic. First, equality is relative to what kind of object one
-is handling: as formal expressions, $(x+1)x/x$ and $x+1$ are identical; as functions they
+is handling: as formal expressions, \((x+1)x/x\) and \(x+1\) are identical; as functions they
 differ by a single removable hole. Second, when solving an equation the solution set of the
 original is the fixed target, and a domain restriction introduced by a step is information
 about that step's validity --- a blind spot to be inspected --- not a constraint on the

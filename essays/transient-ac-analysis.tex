@@ -23,9 +23,9 @@ Impedance, Charge, Flux, Voltage \& Current}
 This reference collects the constitutive relations of passive elements, the
 governing equations of first- and second-order transients, and the
 phasor/impedance description of sinusoidal steady state. Throughout, the
-passive sign convention is used: current $i$ enters the terminal at which the
-voltage $v$ is taken to be positive. The imaginary unit is written $\jj$ so as
-not to clash with current, and $\omega = 2\pi f$ denotes angular frequency.
+passive sign convention is used: current \(i\) enters the terminal at which the
+voltage \(v\) is taken to be positive. The imaginary unit is written \(\jj\) so as
+not to clash with current, and \(\omega = 2\pi f\) denotes angular frequency.
 
 \section{Constitutive Relations of Passive Elements}
 
@@ -34,59 +34,41 @@ relate at their terminals.
 
 \subsection{Resistor}
 A resistor obeys Ohm's law instantaneously; it stores no energy.
-\[
-  v(t) = R\,i(t), \qquad i(t) = \frac{v(t)}{R}, \qquad p(t)=v\,i =
-  i^2 R = \frac{v^2}{R}.
-\]
+\[ v(t) = R\,i(t), \qquad i(t) = \frac{v(t)}{R}, \qquad p(t)=v\,i = i^{2} R = \frac{v^{2}}{R}. \]
 
 \subsection{Capacitor --- charge and current}
 A capacitor stores energy in its electric field. Its defining variable is the
-stored charge $q$, proportional to the terminal voltage through the capacitance
-$C$:
-\[
-  q(t) = C\,v(t), \qquad
-  i(t) = \frac{\dd q}{\dd t} = C\,\frac{\dd v}{\dd t}, \qquad
-  v(t) = \frac{1}{C}\int_{-\infty}^{t} i(\tau)\,\dd\tau .
-\]
-With a known initial voltage $v(t_0)$,
-\[
-  v(t) = v(t_0) + \frac{1}{C}\int_{t_0}^{t} i(\tau)\,\dd\tau .
-\]
+stored charge \(q\), proportional to the terminal voltage through the capacitance
+\(C\):
+\[ q(t) = C\,v(t), \qquad i(t) = \frac{\dd q}{\dd t} = C\,\frac{\dd v}{\dd t}, \qquad v(t) = \frac{1}{C}\int_{-\infty}^{t} i(\tau)\,\dd\tau . \]
+With a known initial voltage \(v(t_{0})\),
+\[ v(t) = v(t_{0}) + \frac{1}{C}\int_{t_{0}}^{t} i(\tau)\,\dd\tau . \]
 The voltage across a capacitor cannot change instantaneously for a finite
-current, so $v_C$ is a continuous state variable.
+current, so \(v_{C}\) is a continuous state variable.
 
 \subsection{Inductor --- flux and voltage}
 An inductor stores energy in its magnetic field. Its defining variable is the
-flux linkage $\lambda$, proportional to the current through the inductance $L$:
-\[
-  \lambda(t) = L\,i(t), \qquad
-  v(t) = \frac{\dd \lambda}{\dd t} = L\,\frac{\dd i}{\dd t}, \qquad
-  i(t) = \frac{1}{L}\int_{-\infty}^{t} v(\tau)\,\dd\tau .
-\]
-With a known initial current $i(t_0)$,
-\[
-  i(t) = i(t_0) + \frac{1}{L}\int_{t_0}^{t} v(\tau)\,\dd\tau .
-\]
+flux linkage \(\lambda\), proportional to the current through the inductance \(L\):
+\[ \lambda(t) = L\,i(t), \qquad v(t) = \frac{\dd \lambda}{\dd t} = L\,\frac{\dd i}{\dd t}, \qquad i(t) = \frac{1}{L}\int_{-\infty}^{t} v(\tau)\,\dd\tau . \]
+With a known initial current \(i(t_{0})\),
+\[ i(t) = i(t_{0}) + \frac{1}{L}\int_{t_{0}}^{t} v(\tau)\,\dd\tau . \]
 The current through an inductor cannot change instantaneously for a finite
-voltage, so $i_L$ is a continuous state variable.
+voltage, so \(i_{L}\) is a continuous state variable.
 
 \subsection{Stored energy}
-\[
-  W_C(t) = \tfrac{1}{2}\,C\,v^2 = \frac{q^2}{2C}, \qquad
-  W_L(t) = \tfrac{1}{2}\,L\,i^2 = \frac{\lambda^2}{2L}.
-\]
+\[ W_{C}(t) = \tfrac{1}{2}\,C\,v^{2} = \frac{q^{2}}{2C}, \qquad W_{L}(t) = \tfrac{1}{2}\,L\,i^{2} = \frac{\lambda^{2}}{2L}. \]
 
 \begin{center}
   \begin{tabular}{@{}lccc@{}}
     \hline
     & \textbf{Resistor} & \textbf{Capacitor} & \textbf{Inductor}\\
     \hline
-    $v$--$i$ law      & $v=Ri$                 & $i=C\,\dd v/\dd t$
-    & $v=L\,\dd i/\dd t$\\
-    State variable    & ---                    & $v_C$ (charge
-    $q=Cv$)    & $i_L$ (flux $\lambda=Li$)\\
-    Stored energy     & $0$                    & $\tfrac12 C v^2$
-    & $\tfrac12 L i^2$\\
+    \(v\)--\(i\) law      & \(v=Ri\)                 & \(i=C\,\dd v/\dd t\)
+    & \(v=L\,\dd i/\dd t\)\\
+    State variable    & ---                    & \(v_{C}\) (charge
+    \(q=Cv\))    & \(i_{L}\) (flux \(\lambda=Li\))\\
+    Stored energy     & \(0\)                    & \(\tfrac{1}{2} C v^{2}\)
+    & \(\tfrac{1}{2} L i^{2}\)\\
     Cannot jump       & ---                    & voltage
     & current\\
     \hline
@@ -96,164 +78,103 @@ voltage, so $i_L$ is a continuous state variable.
 \section{First-Order Transients}
 
 A circuit with a single energy-storage element reduces, via Th\'evenin
-reduction of the resistive part, to a first-order linear ODE. Let $x(t)$ be the
-state variable ($v_C$ or $i_L$).
+reduction of the resistive part, to a first-order linear ODE. Let \(x(t)\) be the
+state variable (\(v_{C}\) or \(i_{L}\)).
 
 \subsection{General first-order form}
-\[
-  \frac{\dd x}{\dd t} + \frac{1}{\tau}\,x = \frac{1}{\tau}\,x_\infty,
-  \qquad
-  x(t) = x_\infty + \bigl[x(0^+) - x_\infty\bigr]\,\ee^{-t/\tau}.
-\]
-Here $x(0^+)$ is the value just after the switching instant, $x_\infty$ is the
-final (steady-state) value, and $\tau$ is the time constant.
+\[ \frac{\dd x}{\dd t} + \frac{1}{\tau}\,x = \frac{1}{\tau}\,x_{\infty}, \qquad x(t) = x_{\infty} + \bigl[x(0^+) - x_{\infty}\bigr]\,\ee^{-t/\tau}. \]
+Here \(x(0^+)\) is the value just after the switching instant, \(x_{\infty}\) is the
+final (steady-state) value, and \(\tau\) is the time constant.
 
 \subsection{Time constants}
-\[
-  \tau_{RC} = R_{\mathrm{th}}\,C, \qquad \tau_{RL} = \frac{L}{R_{\mathrm{th}}} .
-\]
-$R_{\mathrm{th}}$ is the Th\'evenin resistance seen by the storage element with
+\[ \tau_{RC} = R_{\mathrm{th}}\,C, \qquad \tau_{RL} = \frac{L}{R_{\mathrm{th}}} . \]
+\(R_{\mathrm{th}}\) is the Th\'evenin resistance seen by the storage element with
 independent sources deactivated.
 
 \subsection{RC circuit: charging and discharging}
-For a capacitor charged through $R$ from a source $V_s$ (initially uncharged):
-\[
-  v_C(t) = V_s\!\left(1-\ee^{-t/RC}\right), \qquad
-  i(t) = \frac{V_s}{R}\,\ee^{-t/RC}.
-\]
-For a capacitor discharging from $V_0$ through $R$:
-\[
-  v_C(t) = V_0\,\ee^{-t/RC}, \qquad
-  i(t) = -\frac{V_0}{R}\,\ee^{-t/RC}.
-\]
+For a capacitor charged through \(R\) from a source \(V_{s}\) (initially uncharged):
+\[ v_{C}(t) = V_{s}\!\left(1-\ee^{-t/RC}\right), \qquad i(t) = \frac{V_{s}}{R}\,\ee^{-t/RC}. \]
+For a capacitor discharging from \(V_{0}\) through \(R\):
+\[ v_{C}(t) = V_{0}\,\ee^{-t/RC}, \qquad i(t) = -\frac{V_{0}}{R}\,\ee^{-t/RC}. \]
 
 \subsection{RL circuit: energizing and de-energizing}
-For an inductor energized through $R$ from $V_s$ (initially zero current):
-\[
-  i_L(t) = \frac{V_s}{R}\!\left(1-\ee^{-Rt/L}\right), \qquad
-  v_L(t) = V_s\,\ee^{-Rt/L}.
-\]
-For an inductor de-energizing from $I_0$ through $R$:
-\[
-  i_L(t) = I_0\,\ee^{-Rt/L}, \qquad
-  v_L(t) = -I_0 R\,\ee^{-Rt/L}.
-\]
+For an inductor energized through \(R\) from \(V_{s}\) (initially zero current):
+\[ i_{L}(t) = \frac{V_{s}}{R}\!\left(1-\ee^{-Rt/L}\right), \qquad v_{L}(t) = V_{s}\,\ee^{-Rt/L}. \]
+For an inductor de-energizing from \(I_{0}\) through \(R\):
+\[ i_{L}(t) = I_{0}\,\ee^{-Rt/L}, \qquad v_{L}(t) = -I_{0} R\,\ee^{-Rt/L}. \]
 
-After $5\tau$ the response is within $0.7\%$ of its final value and is treated
+After \(5\tau\) the response is within \(0.7\%\) of its final value and is treated
 as settled.
 
 \section{Second-Order Transients (Series \& Parallel RLC)}
 
-With both $L$ and $C$ present the natural response satisfies a second-order
-ODE. Writing the source-free equation for the state variable $x$:
-\[
-  \frac{\dd^2 x}{\dd t^2} + 2\alpha\,\frac{\dd x}{\dd t} + \omega_0^2\,x = 0,
-  \qquad
-  s^2 + 2\alpha s + \omega_0^2 = 0,
-  \qquad
-  s_{1,2} = -\alpha \pm \sqrt{\alpha^2 - \omega_0^2}.
-\]
+With both \(L\) and \(C\) present the natural response satisfies a second-order
+ODE. Writing the source-free equation for the state variable \(x\):
+\[ \frac{\dd^{2} x}{\dd t^{2}} + 2\alpha\,\frac{\dd x}{\dd t} + \omega_{0}^{2}\,x = 0, \qquad s^{2} + 2\alpha s + \omega_{0}^{2} = 0, \qquad s_{1,2} = -\alpha \pm \sqrt{\alpha^{2} - \omega_{0}^{2}}. \]
 
 \subsection{Defining parameters}
-\[
-  \omega_0 = \frac{1}{\sqrt{LC}} \;\;(\text{undamped natural freq.}),
-  \qquad
-  \zeta = \frac{\alpha}{\omega_0} \;\;(\text{damping ratio}),
-  \qquad
-  Q = \frac{1}{2\zeta}.
-\]
+\[ \omega_{0} = \frac{1}{\sqrt{LC}} \;\;(\text{undamped natural freq.}), \qquad \zeta = \frac{\alpha}{\omega_{0}} \;\;(\text{damping ratio}), \qquad Q = \frac{1}{2\zeta}. \]
 \begin{center}
   \begin{tabular}{@{}lcc@{}}
     \hline
     \textbf{Quantity} & \textbf{Series RLC} & \textbf{Parallel RLC}\\
     \hline
-    Neper frequency $\alpha$ & $\dfrac{R}{2L}$ & $\dfrac{1}{2RC}$\\
-    Resonant freq. $\omega_0$ & $\dfrac{1}{\sqrt{LC}}$ &
-    $\dfrac{1}{\sqrt{LC}}$\\
-    Quality factor $Q$ & $\dfrac{1}{R}\sqrt{\dfrac{L}{C}}$ &
-    $R\sqrt{\dfrac{C}{L}}$\\
+    Neper frequency \(\alpha\) & \(\dfrac{R}{2L}\) & \(\dfrac{1}{2RC}\)\\
+    Resonant freq. \(\omega_{0}\) & \(\dfrac{1}{\sqrt{LC}}\) &
+    \(\dfrac{1}{\sqrt{LC}}\)\\
+    Quality factor \(Q\) & \(\dfrac{1}{R}\sqrt{\dfrac{L}{C}}\) &
+    \(R\sqrt{\dfrac{C}{L}}\)\\
     \hline
   \end{tabular}
 \end{center}
 
 \subsection{Damping cases}
 \begin{itemize}
-  \item \textbf{Overdamped} ($\alpha > \omega_0$):
-    $x(t) = A_1\ee^{s_1 t} + A_2\ee^{s_2 t}$.
-  \item \textbf{Critically damped} ($\alpha = \omega_0$):
-    $x(t) = (A_1 + A_2 t)\,\ee^{-\alpha t}$.
-  \item \textbf{Underdamped} ($\alpha < \omega_0$):
-    $x(t) = \ee^{-\alpha t}\bigl(A_1\cos\omega_d t + A_2\sin\omega_d t\bigr)$,
-    with damped frequency $\omega_d = \sqrt{\omega_0^2 - \alpha^2}$.
+  \item \textbf{Overdamped} (\(\alpha > \omega_{0}\)):
+    \(x(t) = A_{1}\ee^{s_{1} t} + A_{2}\ee^{s_{2} t}\).
+  \item \textbf{Critically damped} (\(\alpha = \omega_{0}\)):
+    \(x(t) = (A_{1} + A_{2} t)\,\ee^{-\alpha t}\).
+  \item \textbf{Underdamped} (\(\alpha < \omega_{0}\)):
+    \(x(t) = \ee^{-\alpha t}\bigl(A_{1}\cos\omega_{d} t + A_{2}\sin\omega_{d} t\bigr)\),
+    with damped frequency \(\omega_{d} = \sqrt{\omega_{0}^{2} - \alpha^{2}}\).
 \end{itemize}
 
 \section{Sinusoidal Steady State and Phasors}
 
-A sinusoid $x(t) = X_m\cos(\omega t + \phi)$ is represented by the phasor
-$\mathbf{X} = X_m\,\ee^{\jj\phi} = X_m\angle\phi$, recovered through
-\[
-  x(t) = \Re\!\left\{\mathbf{X}\,\ee^{\jj\omega t}\right\}.
-\]
-Time differentiation maps to multiplication by $\jj\omega$, and integration to
-division by $\jj\omega$:
-\[
-  \frac{\dd}{\dd t} \;\longleftrightarrow\; \jj\omega, \qquad
-  \int \dd t \;\longleftrightarrow\; \frac{1}{\jj\omega}.
-\]
+A sinusoid \(x(t) = X_{m}\cos(\omega t + \phi)\) is represented by the phasor
+\(\mathbf{X} = X_{m}\,\ee^{\jj\phi} = X_{m}\angle\phi\), recovered through
+\[ x(t) = \Re\!\left\{\mathbf{X}\,\ee^{\jj\omega t}\right\}. \]
+Time differentiation maps to multiplication by \(\jj\omega\), and integration to
+division by \(\jj\omega\):
+\[ \frac{\dd}{\dd t} \;\longleftrightarrow\; \jj\omega, \qquad \int \dd t \;\longleftrightarrow\; \frac{1}{\jj\omega}. \]
 
 \subsection{Impedance and admittance}
-Impedance $Z = V/I$ generalizes resistance to the complex frequency domain;
-admittance is its reciprocal $Y = 1/Z = G + \jj B$.
-\[
-  Z_R = R, \qquad
-  Z_L = \jj\omega L, \qquad
-  Z_C = \frac{1}{\jj\omega C} = -\frac{\jj}{\omega C}.
-\]
+Impedance \(Z = V/I\) generalizes resistance to the complex frequency domain;
+admittance is its reciprocal \(Y = 1/Z = G + \jj B\).
+\[ Z_{R} = R, \qquad Z_{L} = \jj\omega L, \qquad Z_{C} = \frac{1}{\jj\omega C} = -\frac{\jj}{\omega C}. \]
 In rectangular and polar form,
-\[
-  Z = R + \jj X = |Z|\,\ee^{\jj\theta}, \qquad
-  |Z| = \sqrt{R^2 + X^2}, \qquad
-  \theta = \arctan\!\frac{X}{R},
-\]
-where $X$ is the reactance: $X_L = \omega L > 0$ for an inductor and
-$X_C = -1/(\omega C) < 0$ for a capacitor.
+\[ Z = R + \jj X = |Z|\,\ee^{\jj\theta}, \qquad |Z| = \sqrt{R^{2} + X^{2}}, \qquad \theta = \arctan\!\frac{X}{R}, \]
+where \(X\) is the reactance: \(X_{L} = \omega L > 0\) for an inductor and
+\(X_{C} = -1/(\omega C) < 0\) for a capacitor.
 
 \subsection{Series and parallel combination}
-\[
-  Z_{\text{series}} = \sum_k Z_k, \qquad
-  \frac{1}{Z_{\text{parallel}}} = \sum_k \frac{1}{Z_k}, \qquad
-  Z_{1\parallel 2} = \frac{Z_1 Z_2}{Z_1 + Z_2}.
-\]
+\[ Z_{\text{series}} = \sum_{k} Z_{k}, \qquad \frac{1}{Z_{\text{parallel}}} = \sum_{k} \frac{1}{Z_{k}}, \qquad Z_{1\parallel 2} = \frac{Z_{1} Z_{2}}{Z_{1} + Z_{2}}. \]
 
 \subsection{Resonance}
 Series and parallel RLC circuits resonate when the reactive parts cancel,
-$\omega_0 L = 1/(\omega_0 C)$:
-\[
-  \omega_0 = \frac{1}{\sqrt{LC}}, \qquad
-  f_0 = \frac{1}{2\pi\sqrt{LC}}, \qquad
-  \text{bandwidth } \mathrm{BW} = \frac{\omega_0}{Q}.
-\]
+\(\omega_{0} L = 1/(\omega_{0} C)\):
+\[ \omega_{0} = \frac{1}{\sqrt{LC}}, \qquad f_{0} = \frac{1}{2\pi\sqrt{LC}}, \qquad \text{bandwidth } \mathrm{BW} = \frac{\omega_{0}}{Q}. \]
 
 \section{AC Power}
 
-For voltage and current phasors $\mathbf{V}=V_m\angle\theta_v$,
-$\mathbf{I}=I_m\angle\theta_i$, define the phase difference
-$\theta = \theta_v - \theta_i$ and RMS magnitudes
-$V_{\mathrm{rms}}=V_m/\sqrt2$, $I_{\mathrm{rms}}=I_m/\sqrt2$.
+For voltage and current phasors \(\mathbf{V}=V_{m}\angle\theta_{v}\),
+\(\mathbf{I}=I_{m}\angle\theta_{i}\), define the phase difference
+\(\theta = \theta_{v} - \theta_{i}\) and RMS magnitudes
+\(V_{\mathrm{rms}}=V_{m}/\sqrt{2}\), \(I_{\mathrm{rms}}=I_{m}/\sqrt{2}\).
 
-\[
-  \mathbf{S} = \mathbf{V}_{\mathrm{rms}}\,\mathbf{I}_{\mathrm{rms}}^{*}
-  = P + \jj Q,
-  \qquad
-  |\mathbf{S}| = V_{\mathrm{rms}} I_{\mathrm{rms}}.
-\]
-\[
-  P = V_{\mathrm{rms}} I_{\mathrm{rms}}\cos\theta \;\;(\text{real, \si{\watt}}),
-  \qquad
-  Q = V_{\mathrm{rms}} I_{\mathrm{rms}}\sin\theta
-  \;\;(\text{reactive, \si{\var}}).
-\]
-The power factor is $\mathrm{pf} = \cos\theta = P/|\mathbf{S}|$ --- lagging for
-inductive loads ($\theta>0$) and leading for capacitive loads ($\theta<0$).
+\[ \mathbf{S} = \mathbf{V}_{\mathrm{rms}}\,\mathbf{I}_{\mathrm{rms}}^{*} = P + \jj Q, \qquad |\mathbf{S}| = V_{\mathrm{rms}} I_{\mathrm{rms}}. \]
+\[ P = V_{\mathrm{rms}} I_{\mathrm{rms}}\cos\theta \;\;(\text{real, \si{\watt}}), \qquad Q = V_{\mathrm{rms}} I_{\mathrm{rms}}\sin\theta \;\;(\text{reactive, \si{\var}}). \]
+The power factor is \(\mathrm{pf} = \cos\theta = P/|\mathbf{S}|\) --- lagging for
+inductive loads (\(\theta>0\)) and leading for capacitive loads (\(\theta<0\)).
 
 \end{document}

@@ -3,7 +3,7 @@
 \subsection{Foundational Definitions}
 
 \begin{enumerate}
-  \item What is a partition of an interval $[a,b]$?
+  \item What is a partition of an interval \([a,b]\)?
   \item Define the norm (mesh size) of a partition.
   \item What is a tagged partition?
   \item Define a Riemann sum.
@@ -11,13 +11,9 @@
   \item Define the upper Darboux sum.
   \item Define the lower Darboux sum.
   \item What are the quantities
-    \[
-      M_{i} = \sup_{x \in [x_{i-1},x_i]}f(x)
-    \]
+    \[ M_{i} = \sup_{x \in [x_{i-1},x_{i}]}f(x) \]
     and
-    \[
-      m_{i} = \inf_{x \in [x_{i-1},x_i]}f(x)?
-    \]
+    \[ m_{i} = \inf_{x \in [x_{i-1},x_{i}]}f(x)? \]
   \item Define the upper Darboux integral.
   \item Define the lower Darboux integral.
   \item State the definition of Darboux integrability.
@@ -34,14 +30,10 @@
   \item What happens to lower Darboux sums when a partition is refined?
   \item What happens to upper Darboux sums when a partition is refined?
   \item Why is
-    \[
-      L(f,P) \le U(f,P)
-    \]
+    \[ L(f,P) \le U(f,P) \]
     always true?
   \item Explain why
-    \[
-      \sup_{P} L(f,P) \le \inf_{P} U(f,P).
-    \]
+    \[ \sup_{P} L(f,P) \le \inf_{P} U(f,P). \]
   \item What does it mean geometrically when the upper and lower integrals are equal?
   \item Why are Darboux sums often considered technically simpler than Riemann sums?
   \item Why are Riemann sums closer to the historical intuition of integration?
@@ -72,8 +64,8 @@
   \item State the linearity property of the integral.
   \item State the additivity over intervals property.
   \item State the monotonicity property of the integral.
-  \item If $f$ is continuous on $[a,b]$, why is it integrable?
-  \item Why is every monotone function on $[a,b]$ integrable?
+  \item If \(f\) is continuous on \([a,b]\), why is it integrable?
+  \item Why is every monotone function on \([a,b]\) integrable?
   \item State a criterion for integrability involving discontinuities.
   \item What is the relationship between measure-zero discontinuity sets and integrability?
   \item Why is the Dirichlet function not Riemann integrable?
@@ -88,22 +80,16 @@
 
 \begin{enumerate}[resume]
   \item Compute the lower and upper Darboux sums for a constant function.
-  \item Compute the lower and upper Darboux sums for $f(x)=x$ on $[0,1]$ using a uniform partition.
-  \item Derive the Riemann sum for $f(x)=x^{2}$ on $[0,1]$.
+  \item Compute the lower and upper Darboux sums for \(f(x)=x\) on \([0,1]\) using a uniform partition.
+  \item Derive the Riemann sum for \(f(x)=x^{2}\) on \([0,1]\).
   \item Show directly that
-    \[
-      \int_{0}^{1} x\,dx = \frac{1}{2}
-    \]
+    \[ \int_{0}^{1} x\,dx = \frac{1}{2} \]
     using Riemann sums.
   \item Show directly that
-    \[
-      \int_{0}^{1} x\,dx = \frac{1}{2}
-    \]
+    \[ \int_{0}^{1} x\,dx = \frac{1}{2} \]
     using Darboux sums.
   \item For a uniform partition, how do you compute
-    \[
-      \Delta x?
-    \]
+    \[ \Delta x? \]
   \item Why do continuous functions attain maxima and minima on closed intervals?
   \item Why is compactness important in Darboux integration?
   \item What is the difference between taking a supremum over all lower sums and taking a limit?
@@ -114,77 +100,47 @@
 
 \begin{enumerate}[resume]
   \item What does the expression
-    \[
-      \sum_{i} f(x_{i})\Delta x_{i}
-    \]
+    \[ \sum_{i} f(x_{i})\Delta x_{i} \]
     represent before assigning any geometric or physical interpretation to it?
   \item Why is the integral fundamentally an accumulation operator rather than specifically an area operator?
   \item In the area interpretation of the integral, what do the quantities
-    \[
-      f(x_{i}), \quad \Delta x_{i}, \quad f(x_{i})\Delta x_{i}
-    \]
+    \[ f(x_{i}), \quad \Delta x_{i}, \quad f(x_{i})\Delta x_{i} \]
     represent geometrically?
   \item Why does
-    \[
-      f(x_{i})\Delta x_{i}
-    \]
+    \[ f(x_{i})\Delta x_{i} \]
     approximate the area of a thin rectangle?
   \item What happens to the Riemann sum as
-    \[
-      \max \Delta x_{i} \to 0?
-    \]
+    \[ \max \Delta x_{i} \to 0? \]
   \item Why does the definite integral emerge as a limit of Riemann sums?
   \item If
-    \[
-      g'(x)=f(x),
-    \]
+    \[ g'(x)=f(x), \]
     why does
-    \[
-      f(x)\Delta x
-    \]
+    \[ f(x)\Delta x \]
     approximate the small change
-    \[
-      \Delta g?
-    \]
+    \[ \Delta g? \]
   \item What is the conceptual meaning of
-    \[
-      dg = g'(x)\,dx?
-    \]
+    \[ dg = g'(x)\,dx? \]
   \item Why can the same expression
-    \[
-      f(x)\Delta x
-    \]
+    \[ f(x)\Delta x \]
     be interpreted both as rectangle area and as accumulated change?
-  \item What determines the interpretation of the integrand~$f(x)$?
+  \item What determines the interpretation of the integrand~\(f(x)\)?
   \item Why is the equality
-    \[
-      \int_{a}^{b} g'(x)\,dx = g(b)-g(a)
-    \]
+    \[ \int_{a}^{b} g'(x)\,dx = g(b)-g(a) \]
     an accumulation statement?
   \item In the Fundamental Theorem of Calculus, what exactly is being accumulated?
   \item Why does integrating a derivative recover net change?
   \item How does the telescoping intuition appear in
-    \[
-      \sum \Delta g_{i}?
-    \]
+    \[ \sum \Delta g_{i}? \]
   \item Define
-    \[
-      A(x)=\int_{a}^{x} f(t)\,dt.
-    \]
-    What does~$A(x)$ represent geometrically?
-  \item Why does increasing~$x$ by a small amount~$h$ add approximately
-    \[
-      f(x)h
-    \]
+    \[ A(x)=\int_{a}^{x} f(t)\,dt. \]
+    What does~\(A(x)\) represent geometrically?
+  \item Why does increasing~\(x\) by a small amount~\(h\) add approximately
+    \[ f(x)h \]
     to the accumulated area?
   \item Use the difference quotient to explain why
-    \[
-      A'(x)=f(x).
-    \]
+    \[ A'(x)=f(x). \]
   \item Why does the identity
-    \[
-      A'(x)=f(x)
-    \]
+    \[ A'(x)=f(x) \]
     connect the area interpretation to the antiderivative interpretation?
   \item Why is the Fundamental Theorem of Calculus fundamentally a statement that differentiation and integration are inverse operations?
   \item How does the notion of ``local rate'' connect to ``global accumulation''?
@@ -196,9 +152,7 @@
       \item an accumulated quantity?
     \end{itemize}
   \item Why is
-    \[
-      \int_{a}^{b} f(x)\,dx
-    \]
+    \[ \int_{a}^{b} f(x)\,dx \]
     not intrinsically an area?
   \item Give examples where the integral represents:
     \begin{itemize}
@@ -215,24 +169,15 @@
       \item accumulated total?
     \end{itemize}
   \item Explain the pattern:
-    \[
-      \text{density}\times \text{small measure}\to \text{accumulated quantity}.
-    \]
+    \[ \text{density}\times \text{small measure}\to \text{accumulated quantity}. \]
   \item Why is the rectangle picture only one geometric realization of integration?
   \item What is the conceptual difference between:
-    \[
-      f(x) \quad \text{and}\quad f(x)\,dx?
-    \]
+    \[ f(x) \quad \text{and}\quad f(x)\,dx? \]
   \item Why is
-    \[
-      dx
-    \]
+    \[ dx \]
     best understood as ``a tiny increment of the independent variable''?
   \item Why is the statement
-    \[
-      dg=g'(x)\,dx
-    \]
+    \[ dg=g'(x)\,dx \]
     more fundamental than the rectangle interpretation?
   \item What does the Fundamental Theorem of Calculus reveal about the relationship between local structure and global structure?
 \end{enumerate}
-

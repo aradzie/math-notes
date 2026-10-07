@@ -31,17 +31,15 @@ The purpose of this chapter is to develop both an intuitive and formal
 understanding of
 
 \begin{itemize}
-\item continuous functions,
-\item discontinuities,
-\item piecewise continuous functions,
-\item and their role in integration and differential equations.
+  \item continuous functions,
+  \item discontinuities,
+  \item piecewise continuous functions,
+  \item and their role in integration and differential equations.
 \end{itemize}
 
 Throughout, we work with functions
 
-\[
-f:D\rightarrow\mathbb{R},
-\]
+\[ f:D\rightarrow\mathbb{R}, \]
 
 where the domain \(D\subseteq\mathbb{R}\).
 
@@ -54,21 +52,15 @@ must come first.
 
 \begin{definition}[Limit]
 
-Let \(a\) be an accumulation point of the domain of \(f\).
+  Let \(a\) be an accumulation point of the domain of \(f\).
 
-We say
+  We say
 
-\[
-\lim_{x\to a}f(x)=L
-\]
+  \[ \lim_{x\to a}f(x)=L \]
 
-if for every \(\varepsilon>0\) there exists a \(\delta>0\) such that
+  if for every \(\varepsilon>0\) there exists a \(\delta>0\) such that
 
-\[
-0<|x-a|<\delta
-\quad\Longrightarrow\quad
-|f(x)-L|<\varepsilon.
-\]
+  \[ 0<|x-a|<\delta \quad\Longrightarrow\quad |f(x)-L|<\varepsilon. \]
 
 \end{definition}
 
@@ -88,11 +80,9 @@ with its limiting value.
 
 \begin{definition}[Continuity at a Point]
 
-A function \(f\) is continuous at \(a\) if
+  A function \(f\) is continuous at \(a\) if
 
-\[
-\lim_{x\to a}f(x)=f(a).
-\]
+  \[ \lim_{x\to a}f(x)=f(a). \]
 
 \end{definition}
 
@@ -103,8 +93,8 @@ input.
 
 \begin{definition}[Continuous on an Interval]
 
-A function is continuous on an interval if it is continuous at every point of
-that interval.
+  A function is continuous on an interval if it is continuous at every point of
+  that interval.
 
 \end{definition}
 
@@ -116,21 +106,19 @@ Real analysis offers several equivalent ways to express continuity.
 
 \begin{theorem}
 
-For a function \(f:\mathbb{R}\rightarrow\mathbb{R}\), the following are
-equivalent.
+  For a function \(f:\mathbb{R}\rightarrow\mathbb{R}\), the following are
+  equivalent.
 
-\begin{enumerate}
-\item \(f\) is continuous at \(a\).
+  \begin{enumerate}
+    \item \(f\) is continuous at \(a\).
 
-\item Whenever \(x_n\to a\),
+    \item Whenever \(x_{n}\to a\),
 
-\[
-f(x_n)\to f(a).
-\]
+      \[ f(x_{n})\to f(a). \]
 
-\item The inverse image of every open set is open (topological definition).
+    \item The inverse image of every open set is open (topological definition).
 
-\end{enumerate}
+  \end{enumerate}
 
 \end{theorem}
 
@@ -143,9 +131,7 @@ extends naturally to general metric and topological spaces.
 
 Discontinuities arise whenever
 
-\[
-\lim_{x\to a}f(x)\neq f(a)
-\]
+\[ \lim_{x\to a}f(x)\neq f(a) \]
 
 or the limit does not exist.
 
@@ -157,34 +143,25 @@ However, the failure may occur in several fundamentally different ways.
 
 \begin{example}
 
-Consider
+  Consider
 
-\[
-f(x)=\frac{x^2-1}{x-1},
-\qquad x\neq1.
-\]
+  \[ f(x)=\frac{x^{2}-1}{x-1}, \qquad x\neq1. \]
 
-Since
+  Since
 
-\[
-\frac{x^2-1}{x-1}=x+1,
-\]
+  \[ \frac{x^{2}-1}{x-1}=x+1, \]
 
-we obtain
+  we obtain
 
-\[
-\lim_{x\to1}f(x)=2.
-\]
+  \[ \lim_{x\to1}f(x)=2. \]
 
-The limit exists, but the function is not defined at \(x=1\).
+  The limit exists, but the function is not defined at \(x=1\).
 
-By defining
+  By defining
 
-\[
-f(1)=2,
-\]
+  \[ f(1)=2, \]
 
-the discontinuity disappears.
+  the discontinuity disappears.
 
 \end{example}
 
@@ -199,23 +176,19 @@ A jump discontinuity occurs when the one-sided limits both exist but differ.
 
 \begin{example}
 
-\[
-f(x)=
-\begin{cases}
-0,&x<0,\\
-1,&x\ge0.
-\end{cases}
-\]
+  \[
+    f(x)=
+    \begin{cases}
+      0,&x<0,\\
+      1,&x\ge0.
+    \end{cases}
+  \]
 
-Then
+  Then
 
-\[
-\lim_{x\to0^-}f(x)=0,
-\qquad
-\lim_{x\to0^+}f(x)=1.
-\]
+  \[ \lim_{x\to0^-}f(x)=0, \qquad \lim_{x\to0^+}f(x)=1. \]
 
-Since these limits are unequal, the ordinary limit does not exist.
+  Since these limits are unequal, the ordinary limit does not exist.
 
 \end{example}
 
@@ -227,15 +200,11 @@ Infinite discontinuities occur when the function grows without bound.
 
 The simplest example is
 
-\[
-f(x)=\frac1x.
-\]
+\[ f(x)=\frac{1}{x}. \]
 
 Near the origin,
 
-\[
-|f(x)|\rightarrow\infty.
-\]
+\[ |f(x)|\rightarrow\infty. \]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -243,10 +212,7 @@ Near the origin,
 
 Perhaps the most important counterexample in introductory analysis is
 
-\[
-f(x)=
-\sin\left(\frac1x\right).
-\]
+\[ f(x)= \sin\left(\frac{1}{x}\right). \]
 
 As \(x\rightarrow0\), the oscillations become infinitely frequent.
 
@@ -264,35 +230,25 @@ To describe them, we introduce one-sided limits.
 
 \begin{definition}
 
-The left-hand limit is
+  The left-hand limit is
 
-\[
-\lim_{x\to a^-}f(x),
-\]
+  \[ \lim_{x\to a^-}f(x), \]
 
-while the right-hand limit is
+  while the right-hand limit is
 
-\[
-\lim_{x\to a^+}f(x).
-\]
+  \[ \lim_{x\to a^+}f(x). \]
 
 \end{definition}
 
 \begin{theorem}
 
-The ordinary limit
+  The ordinary limit
 
-\[
-\lim_{x\to a}f(x)
-\]
+  \[ \lim_{x\to a}f(x) \]
 
-exists if and only if
+  exists if and only if
 
-\[
-\lim_{x\to a^-}f(x)
-=
-\lim_{x\to a^+}f(x).
-\]
+  \[ \lim_{x\to a^-}f(x) = \lim_{x\to a^+}f(x). \]
 
 \end{theorem}
 
@@ -305,31 +261,27 @@ jump discontinuities.
 
 \begin{definition}
 
-A function is piecewise continuous on a closed interval \([a,b]\) if
+  A function is piecewise continuous on a closed interval \([a,b]\) if
 
-\begin{enumerate}
-\item it has only finitely many discontinuities;
+  \begin{enumerate}
+    \item it has only finitely many discontinuities;
 
-\item on every open subinterval between consecutive discontinuities it is
-continuous;
+    \item on every open subinterval between consecutive discontinuities it is
+      continuous;
 
-\item every discontinuity has finite left and right limits.
+    \item every discontinuity has finite left and right limits.
 
-\end{enumerate}
+  \end{enumerate}
 
 \end{definition}
 
 For functions defined on
 
-\[
-[0,\infty),
-\]
+\[ [0,\infty), \]
 
 the definition requires every finite interval
 
-\[
-[0,b]
-\]
+\[ [0,b] \]
 
 to satisfy the above conditions.
 
@@ -342,51 +294,45 @@ half-line provided they do not accumulate inside any finite interval.
 
 \begin{example}
 
-Every polynomial is continuous.
+  Every polynomial is continuous.
 
 \end{example}
 
 \begin{example}
 
-Every rational function is continuous wherever its denominator is nonzero.
+  Every rational function is continuous wherever its denominator is nonzero.
 
 \end{example}
 
 \begin{example}
 
-The floor function
+  The floor function
 
-\[
-\lfloor x\rfloor
-\]
+  \[ \lfloor x\rfloor \]
 
-is piecewise continuous.
+  is piecewise continuous.
 
-It has jump discontinuities at every integer.
+  It has jump discontinuities at every integer.
 
 \end{example}
 
 \begin{example}
 
-The sign function
+  The sign function
 
-\[
-\operatorname{sgn}(x)
-\]
+  \[ \operatorname{sgn}(x) \]
 
-is piecewise continuous.
+  is piecewise continuous.
 
 \end{example}
 
 \begin{example}
 
-The function
+  The function
 
-\[
-\sin\left(\frac1x\right)
-\]
+  \[ \sin\left(\frac{1}{x}\right) \]
 
-is not piecewise continuous on any interval containing the origin.
+  is not piecewise continuous on any interval containing the origin.
 
 \end{example}
 
@@ -400,56 +346,48 @@ Proofs are omitted.
 
 \begin{theorem}[Algebra of Continuous Functions]
 
-Sums, differences, products, and scalar multiples of continuous functions are
-continuous.
+  Sums, differences, products, and scalar multiples of continuous functions are
+  continuous.
 
-Whenever defined, quotients of continuous functions are continuous.
+  Whenever defined, quotients of continuous functions are continuous.
 
 \end{theorem}
 
 \begin{theorem}[Composition]
 
-The composition of continuous functions is continuous.
+  The composition of continuous functions is continuous.
 
 \end{theorem}
 
 \begin{theorem}[Extreme Value Theorem]
 
-Every continuous function on a compact interval
+  Every continuous function on a compact interval
 
-\[
-[a,b]
-\]
+  \[ [a,b] \]
 
-attains both a maximum and a minimum.
+  attains both a maximum and a minimum.
 
 \end{theorem}
 
 \begin{theorem}[Intermediate Value Theorem]
 
-If
+  If
 
-\[
-f(a)<c<f(b),
-\]
+  \[ f(a)<c<f(b), \]
 
-then there exists
+  then there exists
 
-\[
-x\in(a,b)
-\]
+  \[ x\in(a,b) \]
 
-such that
+  such that
 
-\[
-f(x)=c.
-\]
+  \[ f(x)=c. \]
 
 \end{theorem}
 
 \begin{theorem}[Uniform Continuity]
 
-Every continuous function on a compact interval is uniformly continuous.
+  Every continuous function on a compact interval is uniformly continuous.
 
 \end{theorem}
 
@@ -461,7 +399,7 @@ One reason continuity is so important is its relationship with integration.
 
 \begin{theorem}
 
-Every continuous function on a closed bounded interval is Riemann integrable.
+  Every continuous function on a closed bounded interval is Riemann integrable.
 
 \end{theorem}
 
@@ -482,7 +420,7 @@ Differentiability is a stronger condition than continuity.
 
 \begin{theorem}
 
-If \(f\) is differentiable at \(a\), then \(f\) is continuous at \(a\).
+  If \(f\) is differentiable at \(a\), then \(f\) is continuous at \(a\).
 
 \end{theorem}
 
@@ -490,9 +428,7 @@ The converse does not hold.
 
 The classical example is
 
-\[
-f(x)=|x|,
-\]
+\[ f(x)=|x|, \]
 
 which is continuous everywhere but not differentiable at the origin.
 
@@ -504,33 +440,33 @@ Functions encountered in analysis can be arranged according to increasing
 regularity.
 
 \[
-\begin{aligned}
-\text{arbitrary functions}
-&\\
-\supset
-\text{Riemann integrable}
-&\\
-\supset
-\text{piecewise continuous}
-&\\
-\supset
-\text{continuous}
-&\\
-\supset
-C^1
-&\\
-\supset
-C^2
-&\\
-\supset
-\cdots
-&\\
-\supset
-C^\infty
-&\\
-\supset
-\text{analytic}.
-\end{aligned}
+  \begin{aligned}
+    \text{arbitrary functions}
+    &\\
+    \supset
+    \text{Riemann integrable}
+    &\\
+    \supset
+    \text{piecewise continuous}
+    &\\
+    \supset
+    \text{continuous}
+    &\\
+    \supset
+    C^{1}
+    &\\
+    \supset
+    C^{2}
+    &\\
+    \supset
+    \cdots
+    &\\
+    \supset
+    C^{\infty}
+    &\\
+    \supset
+    \text{analytic}.
+  \end{aligned}
 \]
 
 Each level imposes additional structure.
@@ -546,12 +482,12 @@ Many physical systems exhibit abrupt but isolated changes.
 Examples include
 
 \begin{itemize}
-\item electrical switches,
-\item relay circuits,
-\item digital signals,
-\item square waves,
-\item pulse trains,
-\item piecewise constant forcing terms in differential equations.
+  \item electrical switches,
+  \item relay circuits,
+  \item digital signals,
+  \item square waves,
+  \item pulse trains,
+  \item piecewise constant forcing terms in differential equations.
 \end{itemize}
 
 These systems are not continuous, yet they remain sufficiently regular for the

@@ -5,15 +5,11 @@
 \begin{enumerate}
   \item What is the general idea behind a change of variables in a double integral?
   \item What is meant by a transformation
-    \[
-      T(u,v) = (x(u,v), y(u,v))?
-    \]
-  \item What conditions must a transformation $T(u,v)$ satisfy in order for the change of variables theorem to apply?
-  \item What is the Jacobian matrix of a transformation $T(u,v) = (x(u,v), y(u,v))$?
+    \[ T(u,v) = (x(u,v), y(u,v))? \]
+  \item What conditions must a transformation \(T(u,v)\) satisfy in order for the change of variables theorem to apply?
+  \item What is the Jacobian matrix of a transformation \(T(u,v) = (x(u,v), y(u,v))\)?
   \item Define the Jacobian determinant:
-    \[
-      J(u,v) = \frac{\partial(x,y)}{\partial(u,v)}.
-    \]
+    \[ J(u,v) = \frac{\partial(x,y)}{\partial(u,v)}. \]
   \item Write the explicit formula for the Jacobian determinant in terms of partial derivatives.
   \item Why does the absolute value of the Jacobian determinant appear in the change-of-variables formula?
   \item What geometric meaning does the Jacobian determinant have?
@@ -26,11 +22,9 @@
 \begin{enumerate}[resume]
   \item State the Change of Variables Theorem for double integrals.
   \item Complete the formula:
-    \[
-      \iint_{R} f(x,y)\, dA = \iint_{S} f(x(u,v), y(u,v)) \left| \frac{\partial(x,y)}{\partial(u,v)}\right| \, du\, dv.
-    \]
-  \item What is the relationship between the regions $R$ and $S$?
-  \item Why is it often easier to integrate over $S$ rather than $R$?
+    \[ \iint_{R} f(x,y)\, dA = \iint_{S} f(x(u,v), y(u,v)) \left| \frac{\partial(x,y)}{\partial(u,v)}\right| \, du\, dv. \]
+  \item What is the relationship between the regions \(R\) and \(S\)?
+  \item Why is it often easier to integrate over \(S\) rather than \(R\)?
   \item Describe the general steps required to compute a double integral using change of variables.
 \end{enumerate}
 
@@ -38,16 +32,12 @@
 
 \begin{enumerate}[resume]
   \item Compute the Jacobian determinant of the transformation:
-    \[
-      x = u^{2} - v^{2}, \quad y = 2uv.
-    \]
+    \[ x = u^{2} - v^{2}, \quad y = 2uv. \]
   \item Compute the Jacobian determinant for:
-    \[
-      x = au + bv, \quad y = cu + dv.
-    \]
-  \item For what condition on $a,b,c,d$ is the transformation invertible?
+    \[ x = au + bv, \quad y = cu + dv. \]
+  \item For what condition on \(a,b,c,d\) is the transformation invertible?
   \item How does the Jacobian determinant behave under composition of transformations?
-  \item If $T$ has Jacobian $J_{T}$ and its inverse has Jacobian $J_{T^{-1}}$, what is the relationship between them?
+  \item If \(T\) has Jacobian \(J_{T}\) and its inverse has Jacobian \(J_{T^{-1}}\), what is the relationship between them?
 \end{enumerate}
 
 \subsection{Polar Coordinates}
@@ -55,31 +45,23 @@
 \begin{enumerate}[resume]
   \item Write the transformation from polar to Cartesian coordinates.
   \item Compute the Jacobian determinant for the polar transformation:
-    \[
-      x = r\cos\theta, \quad y = r\sin\theta.
-    \]
+    \[ x = r\cos\theta, \quad y = r\sin\theta. \]
   \item Why does the area element become
-    \[
-      dA = r\, dr\, d\theta
-    \]
+    \[ dA = r\, dr\, d\theta \]
     in polar coordinates?
   \item Rewrite the integral
-    \[
-      \iint_{R} f(x,y)\, dA
-    \]
+    \[ \iint_{R} f(x,y)\, dA \]
     in polar coordinates.
   \item Describe a region in the plane that is particularly well suited for polar coordinates.
   \item Evaluate conceptually:
-    \[
-      \iint_{R} (x^{2} + y^{2})\, dA
-    \]
+    \[ \iint_{R} (x^{2} + y^{2})\, dA \]
     over a disk using polar coordinates.
 \end{enumerate}
 
 \subsection{Geometric Interpretation}
 
 \begin{enumerate}[resume]
-  \item How does a small rectangle in the $uv$-plane transform under $T$?
+  \item How does a small rectangle in the \(uv\)-plane transform under \(T\)?
   \item How does the Jacobian determinant approximate local area scaling?
   \item What is the geometric interpretation of a negative Jacobian determinant?
   \item Why do we take the absolute value in the change of variables formula?
@@ -88,12 +70,12 @@
 \subsection{Strategy and Problem Solving}
 
 \begin{enumerate}[resume]
-  \item When facing a difficult region $R$, how do you decide on a good transformation?
+  \item When facing a difficult region \(R\), how do you decide on a good transformation?
   \item Why are linear transformations often useful for parallelogram-shaped regions?
   \item How can you transform an elliptical region into a circular region?
   \item What is the advantage of transforming complicated boundaries into rectangular ones?
   \item What common algebra mistakes occur when computing Jacobians?
-  \item Why is it important to rewrite the integrand entirely in terms of $u$ and $v$?
+  \item Why is it important to rewrite the integrand entirely in terms of \(u\) and \(v\)?
   \item What must always be changed: the integrand, the differential, the region?
   \item How can you check whether your transformation is one-to-one?
 \end{enumerate}
@@ -103,10 +85,8 @@
 \begin{enumerate}[resume]
   \item State the change of variables formula for triple integrals.
   \item Write the definition of the Jacobian determinant for a transformation
-    \[
-      (u,v,w) \mapsto (x,y,z).
-    \]
-  \item How does volume scale under a transformation in $\mathbb{R}^{3}$?
+    \[ (u,v,w) \mapsto (x,y,z). \]
+  \item How does volume scale under a transformation in \(\mathbb{R}^{3}\)?
   \item What is the Jacobian determinant for spherical coordinates?
   \item What is the Jacobian determinant for cylindrical coordinates?
 \end{enumerate}
@@ -117,7 +97,7 @@
   \item How can the change of variables theorem be justified using Riemann sums?
   \item Why does the determinant appear naturally in linear approximations?
   \item How does the change-of-variables formula relate to linear algebra?
-  \item In what sense is the Jacobian determinant a multidimensional generalization of $dx/du$?
+  \item In what sense is the Jacobian determinant a multidimensional generalization of \(dx/du\)?
   \item Why is differentiability essential in the theorem?
   \item What would fail if the transformation were not invertible?
   \item How does this theorem connect to the substitution rule in single-variable calculus?

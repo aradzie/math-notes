@@ -9,123 +9,123 @@
 \date{}
 
 \begin{document}
-  \maketitle
+\maketitle
 
-  \section{IEEE-754 Floating Point}
+\section{IEEE-754 Floating Point}
 
-  \subsection{Basic Structure}
+\subsection{Basic Structure}
 
-  \begin{enumerate}
-    \item What are the three components of an IEEE-754 floating point number?
-    \item What is the purpose of the sign bit?
-    \item How is the exponent stored (biased or unbiased)?
-    \item What is the mantissa (significand), and what does it represent?
-    \item Write the general formula for a normalized floating point number.
-    \item For single precision (32-bit), how many bits are allocated to:
-      \begin{itemize}
-        \item sign
-        \item exponent
-        \item fraction
-      \end{itemize}
-    \item For double precision (64-bit), how many bits are allocated to each field?
-  \end{enumerate}
+\begin{enumerate}
+  \item What are the three components of an IEEE-754 floating point number?
+  \item What is the purpose of the sign bit?
+  \item How is the exponent stored (biased or unbiased)?
+  \item What is the mantissa (significand), and what does it represent?
+  \item Write the general formula for a normalized floating point number.
+  \item For single precision (32-bit), how many bits are allocated to:
+    \begin{itemize}
+      \item sign
+      \item exponent
+      \item fraction
+    \end{itemize}
+  \item For double precision (64-bit), how many bits are allocated to each field?
+\end{enumerate}
 
-  \subsection{Exponent and Bias}
+\subsection{Exponent and Bias}
 
-  \begin{enumerate}
-    \item What is the exponent bias in single precision?
-    \item What is the exponent bias in double precision?
-    \item Why is a bias used instead of signed exponent representation?
-    \item How do you recover the true exponent from the stored exponent?
-    \item What exponent value corresponds to zero after bias correction?
-  \end{enumerate}
+\begin{enumerate}
+  \item What is the exponent bias in single precision?
+  \item What is the exponent bias in double precision?
+  \item Why is a bias used instead of signed exponent representation?
+  \item How do you recover the true exponent from the stored exponent?
+  \item What exponent value corresponds to zero after bias correction?
+\end{enumerate}
 
-  \subsection{Normalization}
+\subsection{Normalization}
 
-  \begin{enumerate}
-    \item What does it mean for a floating point number to be normalized?
-    \item Why is there an implicit leading 1 in normalized numbers?
-    \item Write the formula for a normalized IEEE-754 number including the implicit bit.
-    \item What happens when the exponent field is all zeros?
-    \item What happens when the exponent field is all ones?
-  \end{enumerate}
+\begin{enumerate}
+  \item What does it mean for a floating point number to be normalized?
+  \item Why is there an implicit leading 1 in normalized numbers?
+  \item Write the formula for a normalized IEEE-754 number including the implicit bit.
+  \item What happens when the exponent field is all zeros?
+  \item What happens when the exponent field is all ones?
+\end{enumerate}
 
-  \subsection{Special Values}
+\subsection{Special Values}
 
-  \begin{enumerate}
-    \item How is zero represented in IEEE-754?
-    \item Why are there two representations of zero?
-    \item How is infinity represented?
-    \item How is NaN (Not a Number) represented?
-    \item What is the difference between quiet NaN and signaling NaN?
-  \end{enumerate}
+\begin{enumerate}
+  \item How is zero represented in IEEE-754?
+  \item Why are there two representations of zero?
+  \item How is infinity represented?
+  \item How is NaN (Not a Number) represented?
+  \item What is the difference between quiet NaN and signaling NaN?
+\end{enumerate}
 
-  \subsection{Subnormal Numbers}
+\subsection{Subnormal Numbers}
 
-  \begin{enumerate}
-    \item What are subnormal (denormal) numbers?
-    \item Why do subnormal numbers exist?
-    \item How is their representation different from normalized numbers?
-    \item What is the smallest positive subnormal number in single precision?
-    \item What is the trade-off when using subnormal numbers?
-  \end{enumerate}
+\begin{enumerate}
+  \item What are subnormal (denormal) numbers?
+  \item Why do subnormal numbers exist?
+  \item How is their representation different from normalized numbers?
+  \item What is the smallest positive subnormal number in single precision?
+  \item What is the trade-off when using subnormal numbers?
+\end{enumerate}
 
-  \subsection{Precision and Rounding}
+\subsection{Precision and Rounding}
 
-  \begin{enumerate}
-    \item What is machine epsilon?
-    \item How many significant decimal digits does single precision provide?
-    \item How many significant decimal digits does double precision provide?
-    \item What are the common IEEE-754 rounding modes?
-    \item What does ``round to nearest, ties to even'' mean?
-  \end{enumerate}
+\begin{enumerate}
+  \item What is machine epsilon?
+  \item How many significant decimal digits does single precision provide?
+  \item How many significant decimal digits does double precision provide?
+  \item What are the common IEEE-754 rounding modes?
+  \item What does ``round to nearest, ties to even'' mean?
+\end{enumerate}
 
-  \subsection{Range and Limits}
+\subsection{Range and Limits}
 
-  \begin{enumerate}
-    \item What is the largest representable finite number in single precision?
-    \item What is the smallest positive normalized number?
-    \item What is the smallest positive subnormal number?
-    \item How does exponent size affect range?
-    \item How does mantissa size affect precision?
-  \end{enumerate}
+\begin{enumerate}
+  \item What is the largest representable finite number in single precision?
+  \item What is the smallest positive normalized number?
+  \item What is the smallest positive subnormal number?
+  \item How does exponent size affect range?
+  \item How does mantissa size affect precision?
+\end{enumerate}
 
-  \subsection{Conversion and Interpretation}
+\subsection{Conversion and Interpretation}
 
-  \begin{enumerate}
-    \item Convert a decimal number to IEEE-754 format step by step.
-    \item Convert an IEEE-754 bit pattern to decimal.
-    \item How do you interpret the exponent and mantissa fields together?
-    \item What mistakes are common when converting floating point numbers?
-  \end{enumerate}
+\begin{enumerate}
+  \item Convert a decimal number to IEEE-754 format step by step.
+  \item Convert an IEEE-754 bit pattern to decimal.
+  \item How do you interpret the exponent and mantissa fields together?
+  \item What mistakes are common when converting floating point numbers?
+\end{enumerate}
 
-  \subsection{Arithmetic and Errors}
+\subsection{Arithmetic and Errors}
 
-  \begin{enumerate}
-    \item Why is floating point addition not associative?
-    \item Give an example where $(a + b) + c \neq a + (b + c)$.
-    \item What is rounding error?
-    \item What is catastrophic cancellation?
-    \item Why do floating point errors accumulate in iterative computations?
-  \end{enumerate}
+\begin{enumerate}
+  \item Why is floating point addition not associative?
+  \item Give an example where \((a + b) + c \neq a + (b + c)\).
+  \item What is rounding error?
+  \item What is catastrophic cancellation?
+  \item Why do floating point errors accumulate in iterative computations?
+\end{enumerate}
 
-  \subsection{Edge Cases and Pitfalls}
+\subsection{Edge Cases and Pitfalls}
 
-  \begin{enumerate}
-    \item Why can \texttt{0.1} not be represented exactly in binary floating point?
-    \item What happens when overflow occurs?
-    \item What happens when underflow occurs?
-    \item Why should you avoid direct equality comparison of floats?
-    \item How do you safely compare floating point numbers?
-  \end{enumerate}
+\begin{enumerate}
+  \item Why can \texttt{0.1} not be represented exactly in binary floating point?
+  \item What happens when overflow occurs?
+  \item What happens when underflow occurs?
+  \item Why should you avoid direct equality comparison of floats?
+  \item How do you safely compare floating point numbers?
+\end{enumerate}
 
-  \subsection{Implementation Understanding}
+\subsection{Implementation Understanding}
 
-  \begin{enumerate}
-    \item How would you extract the sign, exponent, and mantissa from a 32-bit integer?
-    \item How can bit manipulation be used to inspect a float in memory?
-    \item What is the difference between float and double in terms of memory and precision?
-    \item When should you prefer double over float?
-    \item When might floating point be inappropriate (e.g., finance)?
-  \end{enumerate}
+\begin{enumerate}
+  \item How would you extract the sign, exponent, and mantissa from a 32-bit integer?
+  \item How can bit manipulation be used to inspect a float in memory?
+  \item What is the difference between float and double in terms of memory and precision?
+  \item When should you prefer double over float?
+  \item When might floating point be inappropriate (e.g., finance)?
+\end{enumerate}
 \end{document}

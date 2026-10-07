@@ -1,52 +1,46 @@
-\section{The $D$ Notation}
+\section{The \(D\) Notation}
 
 \begin{enumerate}
-  \item What is the domain and codomain of the function $f(x,y) = x^{2} + y^{2}$?
-  \item What is the domain and codomain of the derivative $Df(x,y)$?
-  \item In general, for a function $f : \mathbb{R}^{m} \to \mathbb{R}^{n}$, what is the type (domain and codomain) of $Df(x)$?
-  \item Why is $Df(x,y)$ considered a linear map rather than just a collection of partial derivatives?
-  \item Compute the partial derivatives $\frac{\partial f}{\partial x}$ and $\frac{\partial f}{\partial y}$ for $f(x,y) = x^{2} + y^{2}$.
-  \item Write the gradient $\nabla f(x,y)$.
-  \item Express $Df(x,y)$ as a row vector (Jacobian matrix).
-  \item Let $h = (h_{1}, h_{2}) \in \mathbb{R}^{2}$. Compute $Df(x,y)(h)$.
-  \item How does the expression $Df(x,y)(h)$ relate to the dot product with the gradient?
-  \item Write the first-order linear approximation of $f(x,y)$ at a point $(x,y)$ using $Df(x,y)$.
-  \item What is the geometric meaning of the vector $\nabla f(x,y)$?
-  \item What does $Df(x,y)(h)$ represent geometrically?
-  \item How does the definition of $Df(x,y)(h)$ relate to the directional derivative?
+  \item What is the domain and codomain of the function \(f(x,y) = x^{2} + y^{2}\)?
+  \item What is the domain and codomain of the derivative \(Df(x,y)\)?
+  \item In general, for a function \(f : \mathbb{R}^{m} \to \mathbb{R}^{n}\), what is the type (domain and codomain) of \(Df(x)\)?
+  \item Why is \(Df(x,y)\) considered a linear map rather than just a collection of partial derivatives?
+  \item Compute the partial derivatives \(\frac{\partial f}{\partial x}\) and \(\frac{\partial f}{\partial y}\) for \(f(x,y) = x^{2} + y^{2}\).
+  \item Write the gradient \(\nabla f(x,y)\).
+  \item Express \(Df(x,y)\) as a row vector (Jacobian matrix).
+  \item Let \(h = (h_{1}, h_{2}) \in \mathbb{R}^{2}\). Compute \(Df(x,y)(h)\).
+  \item How does the expression \(Df(x,y)(h)\) relate to the dot product with the gradient?
+  \item Write the first-order linear approximation of \(f(x,y)\) at a point \((x,y)\) using \(Df(x,y)\).
+  \item What is the geometric meaning of the vector \(\nabla f(x,y)\)?
+  \item What does \(Df(x,y)(h)\) represent geometrically?
+  \item How does the definition of \(Df(x,y)(h)\) relate to the directional derivative?
   \item Compare the expressions:
-    \[
-      Df(x)(h) = 2x \cdot h \quad \text{and}\quad Df(x,y)(h) = 2x \cdot h_{1} + 2y \cdot h_{2}.
-    \]
+    \[ Df(x)(h) = 2x \cdot h \quad \text{and}\quad Df(x,y)(h) = 2x \cdot h_{1} + 2y \cdot h_{2}. \]
     What structural similarity do you observe?
-  \item In the scalar-to-scalar case $f : \mathbb{R}\to \mathbb{R}$, why can $Df(x)$ be identified with multiplication by a number?
-  \item Explain why $Df(x,y)$ can be viewed as the “best linear approximation” of $f$ near $(x,y)$.
-  \item If $h = (1,0)$, what does $Df(x,y)(h)$ compute? What about $h = (0,1)$?
-  \item How would you interpret $Df(x,y)$ acting on an arbitrary direction vector $h$ in terms of rates of change?
+  \item In the scalar-to-scalar case \(f : \mathbb{R}\to \mathbb{R}\), why can \(Df(x)\) be identified with multiplication by a number?
+  \item Explain why \(Df(x,y)\) can be viewed as the “best linear approximation” of \(f\) near \((x,y)\).
+  \item If \(h = (1,0)\), what does \(Df(x,y)(h)\) compute? What about \(h = (0,1)\)?
+  \item How would you interpret \(Df(x,y)\) acting on an arbitrary direction vector \(h\) in terms of rates of change?
 \end{enumerate}
 
 \vspace{5mm}
 
 \begin{center}
   \begin{tabular}{ c l l }
-    Scalar $\to$ Scalar & $f : \mathbb{R}\to \mathbb{R}$          & $Df(x)(h) = f'(x)\,h$            \\
-    Scalar $\to$ Vector & $f : \mathbb{R}\to \mathbb{R}^{n}$      & $Df(x)(h) = f'(x) \cdot h$       \\
-    Vector $\to$ Scalar & $f : \mathbb{R}^{m} \to \mathbb{R}$     & $Df(x)(h) = \nabla f(x) \cdot h$ \\
-    Vector $\to$ Vector & $f : \mathbb{R}^{m} \to \mathbb{R}^{n}$ & $Df(x)(h) = J_{f}(x)\,h$
+    Scalar \(\to\) Scalar & \(f : \mathbb{R}\to \mathbb{R}\)          & \(Df(x)(h) = f'(x)\,h\)            \\
+    Scalar \(\to\) Vector & \(f : \mathbb{R}\to \mathbb{R}^{n}\)      & \(Df(x)(h) = f'(x) \cdot h\)       \\
+    Vector \(\to\) Scalar & \(f : \mathbb{R}^{m} \to \mathbb{R}\)     & \(Df(x)(h) = \nabla f(x) \cdot h\) \\
+    Vector \(\to\) Vector & \(f : \mathbb{R}^{m} \to \mathbb{R}^{n}\) & \(Df(x)(h) = J_{f}(x)\,h\)
   \end{tabular}
 \end{center}
 
 \vspace{5mm}
 
-A hint: Think of $D$ as a type-lifting operator that transforms a function into a new function that returns linear maps
-\[
-  D : ( \mathbb{R}^{m} \to \mathbb{R}^{n} ) \;\to\; ( \mathbb{R}^{m} \to \mathcal{L}(\mathbb{R}^{m}, \mathbb{R}^{n}) )
-\]
-where $\mathcal{L}(\cdot)$ = space of linear maps.
+A hint: Think of \(D\) as a type-lifting operator that transforms a function into a new function that returns linear maps
+\[ D : ( \mathbb{R}^{m} \to \mathbb{R}^{n} ) \;\to\; ( \mathbb{R}^{m} \to \mathcal{L}(\mathbb{R}^{m}, \mathbb{R}^{n}) ) \]
+where \(\mathcal{L}(\cdot)\) = space of linear maps.
 
 \vspace{5mm}
 
-A hint: Think of $Df(x)$ as: ``Give me a direction $h$, and I'll tell you how $f$ changes in that direction.''
-\[
-  Df(x)(h) \approx f(x + h) - f(x)
-\]
+A hint: Think of \(Df(x)\) as: ``Give me a direction \(h\), and I'll tell you how \(f\) changes in that direction.''
+\[ Df(x)(h) \approx f(x + h) - f(x) \]
