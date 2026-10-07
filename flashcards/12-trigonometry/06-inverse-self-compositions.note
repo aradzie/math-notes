@@ -1,0 +1,18 @@
+!deck: Math Identities
+!tags: Math Trigonometry Inverse-Function
+!type: Basic Math
+
+!id: 9vg4uqfmue
+!front: Describe the graph of \( y=\arcsin(\sin x) \): period, range, and where it coincides with \( y=x \).
+!back: ![Graph of arcsin of sine of x on minus 2 pi to 2 pi, a triangle wave of slopes plus and minus one between height pi over two and minus pi over two, touching the dotted line y equals x only between minus pi over two and pi over two](img/graph-arcsin-of-sin.svg)
+~~~
+
+!id: cI7QguVhxv
+!front: Describe the graph of \( y=\arccos(\cos x) \): period, range, symmetry, and where it coincides with \( y=x \).
+!back: ![Graph of arccos of cosine of x on minus 2 pi to 2 pi, a triangle wave of slopes plus and minus one between height 0 and pi, touching the dotted line y equals x only between 0 and pi](img/graph-arccos-of-cos.svg)
+~~~
+
+!id: 5tQhfMsJT4
+!front: Describe the graph of \( y=\arctan(\tan x) \): period, range, where it is undefined, and where it coincides with \( y=x \).
+!back: ![Graph of arctan of tangent of x on minus 2 pi to 2 pi, parallel line segments of slope one between height minus pi over two and pi over two, with open endpoints on the dashed vertical lines at odd multiples of pi over two, touching the dotted line y equals x only on the central segment](img/graph-arctan-of-tan.svg)
+~~~
