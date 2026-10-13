@@ -1,0 +1,50 @@
+!deck: Math Identities
+!tags: Math Trigonometry Hyperbolic
+!type: Cloze Math
+
+!id: Bb9p3BteYW
+!text:
+\[
+{{c3::\sin x::\ldots}}
+=
+{{c1::\frac{ e^{ix} - e^{-ix} }{2i}::\ldots}}
+=
+{{c2::-i \sinh(ix)::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\sin x &= \frac{ e^{ix} - e^{-ix} }{2i} = -i \sinh(ix) \\
+\cos x &= \frac{ e^{ix} + e^{-ix} }{2} = \cosh(ix)
+\end{align*}
+\]
+~~~
+
+!id: S18j80rrx9
+!text:
+\[
+{{c3::\cos x::\ldots}}
+=
+{{c1::\frac{ e^{ix} + e^{-ix} }{2}::\ldots}}
+=
+{{c2::\cosh(ix)::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\sin x &= \frac{ e^{ix} - e^{-ix} }{2i} = -i \sinh(ix) \\
+\cos x &= \frac{ e^{ix} + e^{-ix} }{2} = \cosh(ix)
+\end{align*}
+\]
+~~~
+
+!id: 2NuE6xEcZ6
+!text:
+\[
+{{c3::\tan x::\ldots}}
+=
+{{c1::\frac{ e^{ix} - e^{-ix} }{ i(e^{ix} + e^{-ix}) }::\ldots}}
+=
+{{c2::-i \tanh(ix)::\ldots}}
+\]
+~~~

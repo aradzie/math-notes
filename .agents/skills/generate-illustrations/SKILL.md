@@ -110,3 +110,13 @@ The Makefile works like this:
   - `-o` puts the output next to the source rather than in the working directory.
 - **PNG figures:** built with `render-transparent-png.sh`, which is described in [PNG output](png-output.md).
 - **When it rebuilds:** only targets older than their source or any library they depend on (see Libraries above).
+
+## Find unused files
+
+To list illustration `.asy`, `.svg`, and `.png` files under `flashcards/**/img/` that no `.note` Markdown image references, run:
+
+```sh
+uv run .agents/skills/generate-illustrations/find-unused-illustrations.py
+```
+
+The script prints paths relative to `flashcards/`. It treats an `.asy` source as used when a note references the matching `.svg` or `.png`, and skips `_*.asy` libraries. It only reports files; it does not delete them.

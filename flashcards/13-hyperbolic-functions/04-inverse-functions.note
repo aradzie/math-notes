@@ -1,0 +1,47 @@
+!deck: Math Identities
+!tags: Math Trigonometry Hyperbolic
+!type: Cloze Math
+
+!id: vO4i4jzAVv
+!text:
+\[
+{{c2::\operatorname{arcsinh}(x)::\ldots}}
+=
+{{c1::\ln\left(x + \sqrt{x^2 + 1}\right), \quad x \in \mathbb{R}::\ldots}}
+\]
+!back extra: \[ \operatorname{arcsinh} : \mathbb{R} \to \mathbb{R} \]
+!related:
+\[
+\begin{align*}
+\operatorname{arcsinh}(x) &= \ln\left(x + \sqrt{x^2 + 1}\right), \quad x \in \mathbb{R} \\
+\operatorname{arccosh}(x) &= \ln\left(x + \sqrt{x^2 - 1}\right), \quad x \ge 1
+\end{align*}
+\]
+~~~
+
+!id: A59J7iVA8C
+!text:
+\[
+{{c2::\operatorname{arccosh}(x)::\ldots}}
+=
+{{c1::\ln\left(x + \sqrt{x^2 - 1}\right), \quad x \ge 1::\ldots}}
+\]
+!back extra: \[ \operatorname{arccosh} : [1, \infty) \to [0, \infty) \]
+!related:
+\[
+\begin{align*}
+\operatorname{arcsinh}(x) &= \ln\left(x + \sqrt{x^2 + 1}\right), \quad x \in \mathbb{R} \\
+\operatorname{arccosh}(x) &= \ln\left(x + \sqrt{x^2 - 1}\right), \quad x \ge 1
+\end{align*}
+\]
+~~~
+
+!id: CitnGmGe9P
+!text:
+\[
+{{c2::\operatorname{arctanh}(x)::\ldots}}
+=
+{{c1::\frac{1}{2}\ln\left(\frac{1 + x}{1 - x}\right), \quad |x| < 1::\ldots}}
+\]
+!back extra: \[ \operatorname{arctanh} : (-1, 1) \to \mathbb{R} \]
+~~~

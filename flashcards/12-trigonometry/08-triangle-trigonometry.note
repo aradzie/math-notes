@@ -1,0 +1,32 @@
+!deck: Math Identities
+!tags: Math Trigonometry Geometry
+!type: Basic Math
+
+!id: MkSPgRXdzm
+!front: State the law of sines for a nondegenerate triangle with sides \( a,b,c \) opposite angles \( A,B,C \).
+!back:
+\[ \frac{a}{\sin A}=\frac{b}{\sin B}=\frac{c}{\sin C}. \]
+
+![A nondegenerate triangle ABC with side a opposite angle A, side b opposite angle B, and side c opposite angle C; each vertex angle and its opposite side have matching labels](img/law-of-sines.svg)
+~~~
+
+!id: 2lNLGXvKnj
+!front: State the law of cosines for side \( c \), opposite angle \( C \). How does it include the Pythagorean theorem?
+!back:
+\[ c^2=a^2+b^2-2ab\cos C. \]
+
+![A generic triangle ABC with sides a and b meeting at angle C and opposite side c](img/law-of-cosines.svg)
+
+When \( C=\pi/2 \), the cosine term vanishes, giving \( c^2=a^2+b^2 \).
+
+![The same triangle with C a right angle, so c is the hypotenuse](img/law-of-cosines-right.svg)
+~~~
+
+!id: QHWK5EoZgj
+!front: What is the area of a triangle with sides \( a,b \) enclosing angle \( C \)?
+!back:
+\[ \frac12 ab\sin C \]
+Taking \( a \) as the base, the corresponding height is \( b\sin C \), so the area is \( \frac12 a(b\sin C) \).
+
+![Triangle ABC with base BC of length a, side CA of length b, and included angle C; a perpendicular from A to the line through BC marks the height h equals b times sine C, with the altitude foot shown on the segment BC for an acute example](img/triangle-area-sine.svg)
+~~~

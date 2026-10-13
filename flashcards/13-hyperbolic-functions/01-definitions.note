@@ -1,0 +1,53 @@
+!deck: Math Identities
+!tags: Math Trigonometry Hyperbolic
+!type: Cloze Math
+
+!id: 1t2H3puAGm
+!text:
+\[
+{{c3::\sinh x::\ldots}}
+=
+{{c1::\frac{ e^{x} - e^{-x} }{2}::\ldots}}
+=
+{{c2::-i \sin(ix)::\ldots}}
+\]
+!back extra: ![The graph of sinh x as the sum of two dashed gray exponential halves, e^x/2 and -e^{-x}/2; at a sample point x0, a labeled arrow shows the second half added onto the first landing exactly on sinh(x0)](img/sinh.svg)
+!related:
+\[
+\begin{align*}
+\sinh x &= \frac{e^{x} - e^{-x}}{2} = -i \sin(ix) \\
+\cosh x &= \frac{e^{x} + e^{-x}}{2} = \cos(ix)
+\end{align*}
+\]
+~~~
+
+!id: o0X6gbZK1l
+!text:
+\[
+{{c3::\cosh x::\ldots}}
+=
+{{c1::\frac{ e^{x} + e^{-x} }{2}::\ldots}}
+=
+{{c2::\cos(ix)::\ldots}}
+\]
+!back extra: ![The graph of cosh x as the sum of two dashed gray exponential halves, e^x/2 and e^{-x}/2; at a sample point x0, a labeled arrow shows the second half added onto the first landing exactly on cosh(x0)](img/cosh.svg)
+!related:
+\[
+\begin{align*}
+\sinh x &= \frac{e^{x} - e^{-x}}{2} = -i \sin(ix) \\
+\cosh x &= \frac{e^{x} + e^{-x}}{2} = \cos(ix)
+\end{align*}
+\]
+~~~
+
+!id: cnHOLodTcS
+!text:
+\[
+{{c3::\tanh x::\ldots}}
+=
+{{c1::\frac{ e^{x} - e^{-x} }{ e^{x} + e^{-x} }::\ldots}}
+=
+{{c2::-i \tan(ix)::\ldots}}
+\]
+!back extra: ![The graph of tanh x, an S-shaped curve through the origin bounded between the horizontal asymptotes y=1 and y=-1](img/tanh.svg)
+~~~

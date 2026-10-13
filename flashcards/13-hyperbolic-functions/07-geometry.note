@@ -1,0 +1,59 @@
+!deck: Math Identities
+!tags: Math Trigonometry Hyperbolic
+!type: Basic Math
+
+!id: b1KIhb3ucQ
+!front: Why does \( t \mapsto (\cosh t,\sinh t) \) parametrize the right branch of the unit hyperbola?
+!back:
+For every \( t \in \mathbb{R} \),
+\[ \cosh^2 t - \sinh^2 t = 1, \]
+and \( \cosh t>0 \), so \( (\cosh t,\sinh t) \) lies on the right branch of \( x^2-y^2=1 \).
+
+![The right branch of the unit hyperbola x^2-y^2=1, traced by t -> (cosh t, sinh t); a sample point at parameter t0 has dashed guides down to its coordinates cosh t0 and sinh t0, with the asymptotes y=x and y=-x shown dashed](img/unit-hyperbola-parametrization.svg)
+~~~
+
+!id: nClEzdC7Va
+!front: What does \( t \) represent for the point \( (\cosh t,\sinh t) \) on the unit hyperbola?
+!back:
+It is the hyperbolic angle: twice the signed area of the hyperbolic sector from \( (1,0) \) to \( (\cosh t,\sinh t) \) on \( x^2-y^2=1 \).
+
+Using \( x=\cosh u \), \( y=\sinh u \), the signed sector area is
+\[ \frac{1}{2}\int_0^t (x\,dy-y\,dx) = \frac{1}{2}\int_0^t (\cosh^2 u-\sinh^2 u)\,du = \frac{t}{2}. \]
+
+![The hyperbolic sector swept from (1,0) to (cosh t0, sinh t0) on x^2-y^2=1, shaded, bounded by the two straight radii from the origin and the hyperbola arc between them; its area is t0/2](img/hyperbolic-sector.svg)
+~~~
+
+!id: cxorTaGaCe
+!front: Give a coordinate change that takes \( x^2-y^2=1 \) to \( uv=1 \), and explain why it works.
+!back:
+Set \[ u=x+y,\qquad v=x-y. \]
+
+Then \[ uv=(x+y)(x-y)=x^2-y^2, \]
+
+so \( x^2-y^2=1 \) becomes \( uv=1 \).
+
+![The right branch of x^2-y^2=1 in the x,y-plane, with the u-axis and v-axis directions overlaid as dashed lines along the asymptotes y=x and y=-x, labeled with the map u=x+y, v=x-y](img/hyperbola-uv-axes.svg)
+~~~
+
+!id: BcRlYH18B4
+!front: Under \( u=x+y,\ v=x-y \), what happens to the asymptotes \( y=\pm x \) of \( x^2-y^2=1 \)?
+!back:
+They become the coordinate axes: \( y=x \) gives \( v=0 \) (the \( u \)-axis), and \( y=-x \) gives \( u=0 \) (the \( v \)-axis).
+
+![The right branch of x^2-y^2=1 with the u-axis along y=x and the v-axis along y=-x under u=x+y, v=x-y](img/hyperbola-uv-axes.svg)
+~~~
+
+!id: g5nqBsx0sL
+!front: Under \( u=x+y,\ v=x-y \), what are the new coordinates of the point \( (\cosh t,\sinh t) \) on \( x^2-y^2=1 \)?
+!back:
+\[
+\begin{align*}
+    u &= \cosh t+\sinh t=e^t, \\
+    v &= \cosh t-\sinh t=e^{-t}.
+\end{align*}
+\]
+
+Thus the right branch becomes \[ (u,v)=(e^t,e^{-t}), \] on \( uv=1 \).
+
+![Side by side: the point (cosh t, sinh t) on x^2-y^2=1 on the left, and its image (e^t,e^{-t}) on uv=1 on the right, connected by an arrow labeled u=x+y, v=x-y](img/hyperbola-point-map.svg)
+~~~

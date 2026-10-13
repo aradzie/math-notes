@@ -1,0 +1,29 @@
+!deck: Math Identities
+!tags: Math Trigonometry Hyperbolic Inverse-Function
+!type: Basic Math
+
+!id: sbybmrn4BP
+!front: Simplify \( \sinh(\operatorname{arccosh}x) \) for \( x\ge 1 \), and justify the sign of the result.
+!back:
+Let:
+
+- \( t=\operatorname{arccosh}x \), so \( \cosh t=x \) and \( t\ge 0 \).
+
+To prove: \( \sinh t=\sqrt{x^2-1} \).
+
+- The identity \( \cosh^2 t-\sinh^2 t=1 \) gives \( \sinh^2 t=x^2-1 \).
+- Since \( t\ge 0 \), we have \( \sinh t\ge 0 \), so \( \sinh(\operatorname{arccosh}x)=\sqrt{x^2-1} \).
+~~~
+
+!id: ZgqaMdNJ7v
+!front: Simplify \( \cosh(\operatorname{arcsinh}x) \) for \( x\in\mathbb{R} \), and justify the sign of the result.
+!back:
+Let:
+
+- \( t=\operatorname{arcsinh}x \), so \( \sinh t=x \).
+
+To prove: \( \cosh t=\sqrt{1+x^2} \).
+
+- The identity \( \cosh^2 t-\sinh^2 t=1 \) gives \( \cosh^2 t=1+x^2 \).
+- Since \( \cosh t>0 \) for every real \( t \), we have \( \cosh(\operatorname{arcsinh}x)=\sqrt{1+x^2} \).
+~~~

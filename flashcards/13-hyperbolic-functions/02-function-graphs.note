@@ -1,0 +1,18 @@
+!deck: Math Identities
+!tags: Math Trigonometry Hyperbolic
+!type: Cloze Math
+
+!id: EYuIV2T0F6
+!text: The domain of \( \sinh \) is {{c1::\( (-\infty,\infty) \)}}, and its range is {{c1::\( (-\infty,\infty) \)}}.
+!back extra: ![The graph of sinh x as the sum of two dashed gray exponential halves, e^x/2 and -e^{-x}/2; at a sample point x0, a labeled arrow shows the second half added onto the first landing exactly on sinh(x0)](img/sinh.svg)
+~~~
+
+!id: XhjJttueCB
+!text: The domain of \( \cosh \) is {{c1::\( (-\infty,\infty) \)}}, and its range is {{c1::\( [1,\infty) \)}}.
+!back extra: ![The graph of cosh x as the sum of two dashed gray exponential halves, e^x/2 and e^{-x}/2; at a sample point x0, a labeled arrow shows the second half added onto the first landing exactly on cosh(x0)](img/cosh.svg)
+~~~
+
+!id: U9zPxq5afu
+!text: The domain of \( \tanh \) is {{c1::\( (-\infty,\infty) \)}}, and its range is {{c1::\( (-1,1) \)}}.
+!back extra: ![The graph of tanh x, an S-shaped curve through the origin bounded between the horizontal asymptotes y=1 and y=-1](img/tanh.svg)
+~~~

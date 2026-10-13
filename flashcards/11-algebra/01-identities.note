@@ -73,6 +73,11 @@ a^3 - b^3 &= (a - b)(a^2 + ab + b^2)
 \]
 ~~~
 
+!id: CX2jYAgDcE
+!text: \[ {{c2::x^3 + 1::\ldots}} = {{c1::(x + 1)(x^2 - x + 1)::\ldots}} \]
+!back extra: This is the special case of \[ a^3+b^3=(a+b)(a^2-ab+b^2) \]
+~~~
+
 !id: PPN0ry9wPe
 !text: \[ {{c2::a^3 - b^3::\ldots}} = {{c1::(a - b)(a^2 + ab + b^2)::\ldots}} \]
 !related:
@@ -82,6 +87,11 @@ a^3 + b^3 &= (a + b)(a^2 - ab + b^2) \\
 a^3 - b^3 &= (a - b)(a^2 + ab + b^2)
 \end{align*}
 \]
+~~~
+
+!id: EJqgDIsoVw
+!text: \[ {{c2::x^3 - 1::\ldots}} = {{c1::(x - 1)(x^2 + x + 1)::\ldots}} \]
+!back extra: This is the special case of \[ a^3-b^3=(a-b)(a^2+ab+b^2) \]
 ~~~
 
 !id: h8JcP6dkaa
@@ -113,6 +123,13 @@ a^3 - b^3 &= (a - b)(a^2 + ab + b^2)
 !id: wFwvUoEZdz
 !text: \[ {{c2::a^4 - b^4::\ldots}} = {{c1::(a - b)(a + b)(a^2 + b^2)::\ldots}} \]
 ~~~
+
+!id: v7dDWe7ktR
+!text: \[ {{c2::x^4 - 1::\ldots}} = {{c1::(x - 1)(x + 1)(x^2 + 1)::\ldots}} \]
+!back extra: This is the special case of \[ a^4-b^4=(a-b)(a+b)(a^2+b^2) \]
+~~~
+
+!type: Cloze Math
 
 !id: OQSAifUngK
 !text: \[ {{c2::a^4 + 4b^4::\ldots}} = {{c1::(a^2 - 2ab + 2b^2)(a^2 + 2ab + 2b^2)::\ldots}} \]

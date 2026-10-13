@@ -1,0 +1,192 @@
+!deck: Math Identities
+!tags: Math Trigonometry Hyperbolic
+!type: Cloze Math
+
+!id: 3ihlJFKP2B
+!text:
+\[
+{{c2::\sinh(2x)::\ldots}}
+=
+{{c1::2 \sinh x \cosh x::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\sinh(2x) &= 2 \sinh x \cosh x \\
+\cosh(2x) &= \cosh^2 x + \sinh^2 x \\
+1 &= \cosh^2 x - \sinh^2 x
+\end{align*}
+\]
+~~~
+
+!id: crJ6XXC7NR
+!text:
+\[
+\begin{align*}
+{{c2::\cosh(2x)::\ldots}}
+&=
+{{c1::\cosh^2 x + \sinh^2 x::\ldots}} \\
+\end{align*}
+\]
+!related:
+\[
+\begin{align*}
+\sinh(2x) &= 2 \sinh x \cosh x \\
+\cosh(2x) &= \cosh^2 x + \sinh^2 x \\
+1 &= \cosh^2 x - \sinh^2 x
+\end{align*}
+\]
+~~~
+
+!id: OAqqXLITTd
+!text:
+\[
+{{c2::\cosh^2 x - \sinh^2 x::\sinh, \cosh \ldots}}
+=
+{{c1::1::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\sinh(2x) &= 2 \sinh x \cosh x \\
+\cosh(2x) &= \cosh^2 x + \sinh^2 x \\
+1 &= \cosh^2 x - \sinh^2 x
+\end{align*}
+\]
+~~~
+
+!id: 0wQw88djE2
+!text:
+\[
+{{c2::\cosh x + \sinh x::\sinh, \cosh \ldots}}
+=
+{{c1::e^{x}::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\cosh x + \sinh x &= e^x \\
+\cosh x - \sinh x &= e^{-x} \\
+\end{align*}
+\]
+~~~
+
+!id: ZSy6WMfCAC
+!text:
+\[
+{{c2::\cosh x - \sinh x::\sinh, \cosh \ldots}}
+=
+{{c1::e^{-x}::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\cosh x + \sinh x &= e^x \\
+\cosh x - \sinh x &= e^{-x} \\
+\end{align*}
+\]
+~~~
+
+!id: 8AtSDymXI3
+!text:
+\[
+{{c2::\cosh^2 x::\ldots}}
+=
+{{c1::\frac{\cosh 2x + 1}{2}::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\cosh^2 x &= \frac{\cosh 2x + 1}{2} \\
+\sinh^2 x &= \frac{\cosh 2x - 1}{2}
+\end{align*}
+\]
+~~~
+
+!id: 99v0FRRPn1
+!text:
+\[
+{{c2::\sinh^2 x::\ldots}}
+=
+{{c1::\frac{\cosh 2x - 1}{2}::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\cosh^2 x &= \frac{\cosh 2x + 1}{2} \\
+\sinh^2 x &= \frac{\cosh 2x - 1}{2}
+\end{align*}
+\]
+~~~
+
+!id: IoQ0GSxKeI
+!text:
+\[
+{{c2::\sinh(x + y)::\ldots}}
+=
+{{c1::\sinh x \cosh y + \cosh x \sinh y::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\sinh(x + y) &= \sinh x \cosh y + \cosh x \sinh y \\
+\sinh(x - y) &= \sinh x \cosh y - \cosh x \sinh y \\
+\cosh(x + y) &= \cosh x \cosh y + \sinh x \sinh y \\
+\cosh(x - y) &= \cosh x \cosh y - \sinh x \sinh y
+\end{align*}
+\]
+~~~
+
+!id: ajo8Nwxcgy
+!text:
+\[
+{{c2::\sinh(x - y)::\ldots}}
+=
+{{c1::\sinh x \cosh y - \cosh x \sinh y::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\sinh(x + y) &= \sinh x \cosh y + \cosh x \sinh y \\
+\sinh(x - y) &= \sinh x \cosh y - \cosh x \sinh y \\
+\cosh(x + y) &= \cosh x \cosh y + \sinh x \sinh y \\
+\cosh(x - y) &= \cosh x \cosh y - \sinh x \sinh y
+\end{align*}
+\]
+~~~
+
+!id: TwJDNp3TQA
+!text:
+\[
+{{c2::\cosh(x + y)::\ldots}}
+=
+{{c1::\cosh x \cosh y + \sinh x \sinh y::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\sinh(x + y) &= \sinh x \cosh y + \cosh x \sinh y \\
+\sinh(x - y) &= \sinh x \cosh y - \cosh x \sinh y \\
+\cosh(x + y) &= \cosh x \cosh y + \sinh x \sinh y \\
+\cosh(x - y) &= \cosh x \cosh y - \sinh x \sinh y
+\end{align*}
+\]
+~~~
+
+!id: VVjRGDd2dz
+!text:
+\[
+{{c2::\cosh(x - y)::\ldots}}
+=
+{{c1::\cosh x \cosh y - \sinh x \sinh y::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\sinh(x + y) &= \sinh x \cosh y + \cosh x \sinh y \\
+\sinh(x - y) &= \sinh x \cosh y - \cosh x \sinh y \\
+\cosh(x + y) &= \cosh x \cosh y + \sinh x \sinh y \\
+\cosh(x - y) &= \cosh x \cosh y - \sinh x \sinh y
+\end{align*}
+\]
+~~~

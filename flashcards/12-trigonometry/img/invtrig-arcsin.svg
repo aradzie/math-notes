@@ -31,6 +31,7 @@
 <path d='M172.496 113.776V108.613H177.66' fill='none' stroke='#1940cc' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10.0375' stroke-width='0.5'/>
 </g>
 <g fill='#1a40cc'>
+<use x='339.513446' y='263.844187' xlink:href='#g2-120'/>
 <use x='308.55605' y='261.973456' xlink:href='#g4-49'/>
 </g>
 <g transform='translate(169.761 167.21)scale(.996264)'>
@@ -43,6 +44,7 @@
 <path d='M172.496 113.776V118.94H177.66' fill='none' stroke='#1940cc' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10.0375' stroke-width='0.5'/>
 </g>
 <g fill='#1a40cc'>
+<use x='339.513446' y='300.589601' xlink:href='#g2-120'/>
 <use x='308.55605' y='304.16506' xlink:href='#g4-49'/>
 </g>
 <g transform='translate(169.761 167.21)scale(.996264)'>

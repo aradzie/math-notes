@@ -296,13 +296,7 @@ Each note must stand alone. Anki shows notes individually and in arbitrary order
 
 ## Tooling
 
-To list illustration `.asy`, `.svg`, and `.png` files under `flashcards/**/img/` that no `.note` Markdown image references, run:
-
-```sh
-uv run .agents/skills/generate-flashcards/find-unused-illustrations.py
-```
-
-The script prints paths relative to `flashcards/`. It treats an `.asy` source as used when a note references the matching `.svg` or `.png`, and skips `_*.asy` libraries. It only reports files; it does not delete them.
+To find illustration files that no note references, see "Find unused files" in the generate-illustrations skill.
 
 The [`notatki`](https://github.com/aradzie/notatki) CLI parses, validates, and pretty-prints `.note` files; it is installed as the `@notatki/cli` local npm dependency (see `package.json`).
 
