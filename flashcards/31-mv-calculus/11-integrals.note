@@ -65,5 +65,11 @@ is just three nested ordinary integrals.
 
 !id: fxY1Jf3lEd
 !front: What single pattern do all five vector-calculus integrals share in regards to the result type, and what role does the dot product play in it?
-!back: Every one of them evaluates to a scalar. When the field is vector-valued, the dot product with a vector differential element (\( d\mathbf{r} \) or \( d\mathbf{S} \)) is exactly what reduces the vector integrand to a scalar before integrating; when the field is already scalar, it's simply paired with a scalar element. Seeing a "\( \cdot \)" next to a differential is the signal that two vectors are entering and one scalar is leaving.
+!back:
+Every one of them evaluates to a scalar.
+
+- When the field is vector-valued, the dot product with a vector differential element (\( d\mathbf{r} \) or \( d\mathbf{S} \)) is exactly what reduces the vector integrand to a scalar before integrating;
+- when the field is already scalar, it's simply paired with a scalar element.
+
+Seeing a "\( \cdot \)" next to a differential is the signal that two vectors are entering and one scalar is leaving.
 ~~~

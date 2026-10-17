@@ -1,6 +1,6 @@
-!type: Basic Math
 !deck: Math::Real-Numbers
 !tags: Math Real-Numbers Absolute-Value Inequality
+!type: Basic Math
 
 !id: C3mD0XhGrY
 !front: Define the absolute value \( |x| \) of a real number \( x \).
@@ -9,162 +9,175 @@
 |x| =
 \begin{cases}
     x, & x \ge 0, \\
-    -x, & x < 0.
+   -x, & x < 0.
 \end{cases}
 \]
 
 So \( |x| \) is the nonnegative magnitude of \( x \), ignoring its sign.
 ~~~
 
-!id: OKudtzzxwG
-!front: What are the basic nonnegativity and zero properties of \( |x| \) for \( x \in \mathbb{R} \)?
+!id: nQgWncXCnf
+!front: Explain why \( -|x| \le x \le |x| \).
 !back:
-For every \( x \in \mathbb{R} \):
+If \( x \) is non-negative, then \( |x| = x \), so \( -|x| = -x \le x \le x = |x| \).
 
-- \( |x| \ge 0 \).
-- \( |x| = 0 \) if and only if \( x = 0 \).
+If \( x \) is negative, then \( |x| = -x \), so \( -|x| = x \le x \le -x = |x| \).
 ~~~
 
-!id: bkDNDuoT9y
-!front: Why does \( |-x| = |x| \) for every real number \( x \)?
+!id: mkbLig7hww
+!front: Explain why if \( |x| \le c \), \( c \ge 0 \) is true then \( x \le c \) is true as well.
 !back:
-Absolute value ignores sign. More formally:
+If \( x \) is non-negative, then \( |x| = x \), so \( x \le c \).
 
-- If \( x \ge 0 \), then \( |x|=x \) and \( |-x|=-(-x)=x \).
-- If \( x < 0 \), then \( |x|=-x \) and \( |-x|=-x \), since \( -x>0 \).
-
-So \( |-x|=|x| \) in both cases.
+If \( x \) is negative, then \( |x| = -x \), so \( -x \le c \) which implies \( x \ge -c \). Since \( c \ge 0 \), we have \( -c \le c \), so \( x \le c \).
 ~~~
 
-!id: bSkEfDn71X
-!front: How is \( |x| \) related to \( x^2 \)?
-!back:
-For every real number \( x \), \[ |x|^2 = x^2. \]
-
-Equivalently, \[ |x| = \sqrt{x^2}, \] where \( \sqrt{x^2} \) denotes the nonnegative square root of \( x^2 \).
+!id: OFMTtrXppe
+!front: Explain why if \( x \le c \), \( c \ge 0 \) is true then \( |x| \le c \) is not necessarily true as well.
+!back: Counterexample: Let \( x = -2 \), \( |x| = 2 \) and \( c = 1 \). Then \( -2 \le 1 \) is true, but \( 2 \not \le 1 \).
 ~~~
 
-!id: SOkq1mTQZD
-!front: Interpret \( |x-a| \) geometrically on the real line.
+!id: kffGeUSWDK
+!front: Solve \( |x| \le c \), \( c \ge 0 \).
 !back:
-\( |x-a| \) is the distance between the real numbers \( x \) and \( a \) on the real line.
-
-It is symmetric: \[ |x-a| = |a-x|. \]
+\[ -c \le x \le c \]
+\[ x \in [-c, c] \]
 ~~~
 
-!id: ZeXr2wL93j
-!front: Convert \( |x-a| < r \), with \( r > 0 \), into a double inequality.
+!id: um6DlBSRjb
+!front: Solve \( |x| \ge c \), \( c \ge 0 \).
 !back:
-\[
-    |x-a| < r
-    \quad\Longleftrightarrow\quad
-    -r < x-a < r
-    \quad\Longleftrightarrow\quad
-    a-r < x < a+r.
-\]
-
-So \( |x-a| < r \) means \( x \) lies inside the open interval centered at \( a \) with radius \( r \).
+\[ x \le -c \text{ or } x \ge c \]
+\[ x \in \left( -\infty, -c \right] \cup \left[ c, \infty \right) \]
 ~~~
 
-!id: YVpH3sppeh
-!front: Convert \( |x-a| \le r \), with \( r \ge 0 \), into a double inequality.
+!id: B8fZ2E9XKm
+!front: Solve \( |x - a| \le c \), \( c \ge 0 \).
 !back:
-\[
-    |x-a| \le r
-    \quad\Longleftrightarrow\quad
-    -r \le x-a \le r
-    \quad\Longleftrightarrow\quad
-    a-r \le x \le a+r.
-\]
-
-So \( |x-a| \le r \) means \( x \) lies inside the closed interval centered at \( a \) with radius \( r \).
+\[ -c \le x - a \le c \]
+\[ a - c \le x \le a + c \]
+\[ x \in [a - c, a + c] \]
 ~~~
 
-!id: QUQnqVj8gf
-!front: Convert \( |x-a| > r \), with \( r \ge 0 \), into ordinary inequalities.
+!id: H7Z0dQ5N2m
+!front: Solve \( |x - a| \ge c \), \( c \ge 0 \).
 !back:
-\[
-    |x-a| > r
-    \quad\Longleftrightarrow\quad
-    x-a > r \text{ or } x-a < -r.
-\]
-
-Equivalently, \[ x > a+r \quad\text{or}\quad x < a-r. \]
-
-So \( x \) lies outside the closed interval \( [a-r,a+r] \).
+\[ x - a \le -c \quad \text{or} \quad x - a \ge c \]
+\[ x \le a - c \quad \text{or} \quad x \ge a + c \]
+\[ x \in (-\infty, a-c] \cup [a+c, \infty) \]
 ~~~
 
-!id: 8keu7a5h4b
-!front: Why does \( |x| \le M \), with \( M \ge 0 \), imply both an upper and a lower bound for \( x \)?
+!id: T8cM3K6n5A
+!front: True or false: For real \( a,b \), \( |a| \le |b| \) implies \( a^2 \le b^2 \).
 !back:
-\[
-    |x| \le M
-    \quad\Longleftrightarrow\quad
-    -M \le x \le M.
-\]
+True. Squaring preserves the order of nonnegative real numbers, so
 
-Thus \( M \) is an upper bound for \( x \), and \( -M \) is a lower bound for \( x \).
-!extra:
-The assumption \( M \ge 0 \) matters because \( |x| \) is always nonnegative.
-If \( M < 0 \), no real \( x \) can satisfy \( |x| \le M \).
+\[ |a| \le |b| \Rightarrow |a|^2 \le |b|^2 \Rightarrow a^2 \le b^2 \]
 ~~~
 
-!id: lbGh7NjyEO
-!front: Why does \( |x| < M \), with \( M > 0 \), mean \( x \) is trapped between \( -M \) and \( M \)?
-!back:
-\[
-    |x| < M
-    \quad\Longleftrightarrow\quad
-    -M < x < M.
-\]
-
-This says \( x \) is within distance \( M \) of \( 0 \).
+!id: kxxCWMfyuv
+!front: If \( a^2 \le b^2 \), what inequality does this imply about \( |a| \) and \( |b| \)?
+!back: \[ |a| \le |b| \]
 ~~~
 
-!id: 9BwYi1Dtcm
-!front: Characterize bounded subsets of \( \mathbb{R} \) using absolute value.
-!back: A set \( A \subseteq \mathbb{R} \) is bounded if and only if there exists \( M \ge 0 \) such that \[ |a| \le M \] for every \( a \in A \).
-!extra: This single inequality combines an upper bound \( a \le M \) and a lower bound \( a \ge -M \).
+!id: rPac9OHGod
+!front: Prove the inequality \( ab \le |a| |b| \).
+!back:
+- Case 1: \( a,b \ge 0 \). Then \( |a|=a \), \( |b|=b \), so \( ab=|a||b| \).
+- Case 2: \( a,b \le 0 \). Then \( |a|=-a \), \( |b|=-b \), so \( ab=(-a)(-b)=|a||b| \).
+- Case 3: \( a \) and \( b \) have opposite signs. Say \( a \ge 0 \), \( b \le 0 \). Then \( ab \le 0 \), but \( |a||b| \ge 0 \). So automatically \( ab \le |a||b| \). Same if \( a \le 0 \), \( b \ge 0 \).
 ~~~
 
 !id: OYERfFZfqi
 !front: State the triangle inequality for real numbers.
 !back:
-For all real numbers \( x \) and \( y \), \[ |x+y| \le |x|+|y|. \]
+For all real numbers \( a \) and \( b \), \[ |a+b| \le |a|+|b|. \]
 
 It says the magnitude of a sum is at most the sum of the magnitudes.
+~~~
+
+!id: L38GkTkAdr
+!front: Prove the triangle inequality for real numbers directly from the definition of absolute value.
+!back:
+Let:
+
+- \( a,b\in\mathbb{R} \) and \( M=|a|+|b|\ge 0 \).
+
+To prove: \( |a+b|\le M \).
+
+- The definition of absolute value gives \( -|a|\le a\le |a| \) and \( -|b|\le b\le |b| \).
+- Adding the lower and upper bounds gives \( -M\le a+b\le M \).
+- Since \( M\ge 0 \), the double inequality is equivalent to \( |a+b|\le M=|a|+|b| \).
 ~~~
 
 !id: Y7atRaR4qL
 !front: State the reverse triangle inequality for real numbers.
 !back:
-For all real numbers \( x \) and \( y \), \[ \bigl||x|-|y|\bigr| \le |x-y|. \]
+For all real numbers \( a \) and \( b \), \[ \bigl||a|-|b|\bigr| \le |a-b|. \]
 
 It says the distance between magnitudes is at most the distance between the original numbers.
 ~~~
 
-!id: Xfru4ruT3x
-!front: How does the triangle inequality estimate the distance from \( x \) to \( y \) through an intermediate point \( a \)?
+!id: eorfBwq4bk
+!front: Prove the reverse triangle inequality for real numbers using the triangle inequality.
 !back:
-For all real numbers \( x,a,y \), \[ |x-y| = |(x-a)+(a-y)| \le |x-a|+|a-y|. \]
+Let:
 
-So the direct distance from \( x \) to \( y \) is at most the distance from \( x \) to \( a \) plus the distance from \( a \) to \( y \).
+- \( a,b\in\mathbb{R} \) and \( d=|a-b|\ge 0 \).
+
+To prove: \( \bigl||a|-|b|\bigr|\le d \).
+
+- Since \( a=(a-b)+b \), the triangle inequality gives \( |a|\le d+|b| \), hence \( |a|-|b|\le d \).
+- Since \( b=(b-a)+a \) and \( |b-a|=d \), it also gives \( |b|-|a|\le d \).
+- Together these say \( -d\le |a|-|b|\le d \), which is equivalent to \( \bigl||a|-|b|\bigr|\le d=|a-b| \).
 ~~~
 
-!id: Gn7jJlym99
-!front: How does absolute value behave with products of real numbers?
+!id: CWAazZMbtb
+!front: Prove that \( |a - b| \le |a| + |b| \) for any real \( a, b \).
 !back:
-For all real numbers \( x \) and \( y \), \[ |xy| = |x|\,|y|. \]
+Apply the triangle inequality with \( b \) replaced by \( -b \):
 
-This lets bounds multiply cleanly: if \( |x| \le M \) and \( |y| \le N \), with \( M,N \ge 0 \), then \[ |xy| \le MN. \]
+\[
+\begin{align*}
+|a - b| &= |a + (-b)| \\
+        &\le |a| + |-b| \\
+        &= |a| + |b|
+\end{align*}
+\]
 ~~~
 
-!id: Dx9eDWhbrK
-!front: How does absolute value behave with reciprocals and quotients of real numbers?
+!id: yAqWUYuXhd
+!front: Prove that \( \big| |a| - |b| \big| \le |a + b| \) for any real \( a, b \).
 !back:
-If \( x \ne 0 \), then \[ \left|\frac{1}{x}\right| = \frac{1}{|x|}. \]
+Apply the reverse triangle inequality with \( b \) replaced by \( -b \):
 
-If \( y \ne 0 \), then \[ \left|\frac{x}{y}\right| = \frac{|x|}{|y|}. \]
+\[ \big| |a| - |-b| \big| \le |a - (-b)| \]
+
+Since \( |-b| = |b| \) and \( a - (-b) = a + b \), this becomes
+
+\[ \big| |a| - |b| \big| \le |a + b| \]
+~~~
+
+!id: 8dY5wY36R2
+!front: Prove that \( |a| \le |a - b| + |b| \) for any real \( a, b \).
+!back:
+Write \( a = (a-b) + b \), then apply the triangle inequality:
+
+\[ |a| = |(a-b)+b| \le |a-b| + |b| \]
+~~~
+
+!id: GGbwzkEeEu
+!front: Prove that \( |a+b+c| \le |a| + |b| + |c| \) for any real \( a, b, c \).
+!back:
+Apply the triangle inequality twice, first to \( (a+b) \) and \( c \), then to \( a \) and \( b \):
+
+\[
+\begin{align*}
+|a+b+c| &= |(a+b)+c| \\
+        &\le |a+b| + |c| \\
+        &\le |a| + |b| + |c|
+\end{align*}
+\]
 ~~~
 
 !id: P9KMLP4z9B
@@ -179,13 +192,9 @@ Use the triangle inequality:
         &< \delta+\varepsilon.
 \end{align*}
 \]
-This is the basic estimate behind proving that sums preserve closeness.
 ~~~
 
 !id: RZhId0Cdoh
 !front: If \( |x| \le M \) and \( |x-y| < \varepsilon \), how can you bound \( |y| \)?
-!back:
-Use \( y=x+(y-x) \) and the triangle inequality: \[ |y| \le |x|+|y-x| < M+\varepsilon. \]
-
-So a number close to a bounded number is also bounded, with a slightly larger bound.
+!back: Use \( y=x+(y-x) \) and the triangle inequality: \[ |y| \le |x|+|y-x| < M+\varepsilon. \]
 ~~~

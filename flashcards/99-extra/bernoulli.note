@@ -1,0 +1,42 @@
+!deck: Math::Extra
+!tags: Math Algebra Inequality Bernoulli
+!type: Basic Math
+
+!id: kuEXqIBdRo
+!front: State Bernoulli's inequality.
+!back:
+Bernoulli's inequality states that for any real \( x \ge -1 \) and integer \( n \ge 1 \):
+
+\[ (1+x)^n \ge 1 + nx \]
+
+Equality holds iff \( x = 0 \) or \( n = 1 \).
+~~~
+
+!id: YUDOcdNKEh
+!front: Give a geometric interpretation of Bernoulli's inequality for \( x \ge -1 \) and integer \( n \ge 1 \).
+!back:
+For \( f(x)=(1+x)^n \), the tangent at \( x=0 \) is \( y=1+nx \). When \( n \ge 2 \), the graph is convex on \( [-1,\infty) \), so it lies on or above that tangent, touching it only at \( x=0 \).
+
+![Plot of (1+x)^n for n=3 and its tangent at x=0, with the curve above the tangent](img/bernoulli-inequality.svg)
+
+When \( n=1 \), the graph and tangent coincide.
+~~~
+
+!id: ormoCYzPJz
+!front: Prove Bernoulli's inequality \( (1+x)^n \ge 1 + nx \) for \( x \ge -1 \), integer \( n \ge 1 \).
+!back:
+Proof by induction on \( n \).
+
+Base case \( n = 1 \): \( (1+x)^1 = 1+x = 1 + 1 \cdot x \), so equality holds.
+
+Inductive step: assume \( (1+x)^k \ge 1+kx \) for some \( k \ge 1 \). Since \( x \ge -1 \), \( 1+x \ge 0 \), so multiplying both sides of the inductive hypothesis by \( 1+x \) preserves the inequality:
+\[
+\begin{align*}
+(1+x)^{k+1} &= (1+x)^k(1+x) \\
+            &\ge (1+kx)(1+x) \\
+            &= 1 + (k+1)x + kx^2 \\
+            &\ge 1 + (k+1)x
+\end{align*}
+\]
+since \( kx^2 \ge 0 \).
+~~~

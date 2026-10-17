@@ -68,10 +68,11 @@ Metadata directives set defaults for subsequent note records. Note records conta
 
 This document distinguishes two things that are easy to conflate:
 
-- A **note** is one record in a `.note` file — a `!front:`/`!back:` group (with optional `!related:`/`!extra:`), terminated by `~~~`. It is the unit of authoring: all guidance in this document about drafting, granularity, and splitting content operates on notes.
+- A **note** is one record in a `.note` file — a `!front:`/`!back:` group for Basic Math or a `!text:` group for Cloze Math (each with optional `!related:`/`!extra:`), terminated by `~~~`. It is the unit of authoring: all guidance in this document about drafting, granularity, and splitting content operates on notes.
 - A **card** is a single study item Anki actually shows during review, generated _from_ a note by its note type. A note is the source; a card is the rendered output — a note can produce more than one card:
   - `Basic Math` generates one card per note (front → back).
   - `Basic Math (and reversed card)` generates two cards per note (front → back, and back → front) from the same fields.
+  - `Cloze Math` generates one card per distinct cloze number in `!text:`.
 
 "Flashcard" is used informally elsewhere in this repository (including this skill's own name and title) as the umbrella term for the artifact type as a whole — not as a synonym for either term above.
 
@@ -88,7 +89,7 @@ Rules:
 - The directive name starts immediately after `!` and ends at the first `:`.
 - The field value begins after the `:`. Space after `:` is conventional but not required.
 - A multi-line value continues until the next directive line or the note terminator line `~~~`.
-- Use the exact lowercase directive names already used in this repository: `!type:`, `!deck:`, `!tags:`, `!id:`, `!front:`, `!back:`, `!related:`, and `!extra:`.
+- Use the exact lowercase directive names already used in this repository: `!type:`, `!deck:`, `!tags:`, `!id:`, `!front:`, `!back:`, `!text:`, `!related:`, and `!extra:`.
 
 ### Note Metadata
 
@@ -111,8 +112,27 @@ Math note types used here:
 
 - `Basic Math`: creates one front-to-back card.
 - `Basic Math (and reversed card)`: creates one front-to-back card and one back-to-front card from the same note.
+- `Cloze Math`: creates one card for each distinct cloze number in `!text:`.
 
 Use `Basic Math (and reversed card)` only when both directions are unambiguous and pedagogically useful, such as formulas, identities, named equivalences, and notation conversions. Avoid it for conceptual explanations, theorem hypotheses, one-way implications, or prompts whose reverse side would be vague.
+
+Use `Cloze Math` when the surrounding sentence or formula gives a precise cue
+for a missing statement, name, or expression. Preview each resulting card with
+its other clozes visible. If a visible sibling makes the hidden answer apparent
+through an opposite case, an equivalence, or an immediate consequence, give
+the linked phrases the same cloze number so they are recalled together.
+
+For example, both directions in this comparison should disappear together:
+
+```text
+Concave up iff \( f' \) is {{c1::nondecreasing}};
+concave down iff \( f' \) is {{c1::nonincreasing}}.
+```
+
+Using `c1` and `c2` here would let either visible answer cue the other. Keep
+different numbers when the visible part is useful context for a genuinely
+separate target: in the ordered-field axioms, separate deletions test the axiom
+statement and its name in different cards.
 
 ### Note Records
 
@@ -149,7 +169,7 @@ Every note must be terminated by a line containing exactly:
 ~~~
 ```
 
-Required note fields are `!front:` and `!back:`.
+Required note fields are `!front:` and `!back:` for Basic Math, or `!text:` for Cloze Math.
 
 Optional note fields are `!related:` and `!extra:`.
 
@@ -159,9 +179,10 @@ The `!id:` field, if exists, contains an automatically generated stable note ide
 
 - Use `!front:` for the prompt the learner must answer from memory.
 - Use `!back:` for the required answer, derivation, proof sketch, or explanation.
+- Use `!text:` for Cloze Math text containing deletions such as `{{c1::answer::hint}}`. Each distinct cloze number creates a study card; the hint should identify the kind of answer without revealing it.
 - Use `!related:` for nearby facts, identities, or comparisons that are useful after answering but are not required for correctness.
-- Use `!extra:` for assumptions, warnings, or brief context that would clutter the main answer. A worked example or a recognition case (e.g. a boundary where the concept is undefined or fails) is itself testable and belongs on its own note instead — see "Extracting Worked Examples" below.
-- Keep `!back:` sufficient on its own; do not require `!related:` or `!extra:` to make the answer correct.
+- Use `!extra:` for ancillary assumptions, warnings, or brief context that would clutter the main answer. Keep hypotheses required for correctness in `!back:` or `!text:`. A worked example or a recognition case (e.g. a boundary where the concept is undefined or fails) is itself testable and belongs on its own note instead — see "Extracting Worked Examples" below.
+- Keep the required answer in `!back:` for Basic Math or in the deleted text for Cloze Math; do not require `!related:` or `!extra:` to make it correct.
 
 ### Embedding Illustrations
 
@@ -180,8 +201,8 @@ When a note is inherently visual (a geometric interpretation, a curve, a spatial
 - Preserve existing `!id:` values exactly.
 - For new notes, omit `!id:`; it is generated automatically by the note tools.
 - Put `!id:` first when it is present.
-- Put `!front:` before `!back:`.
-- Put `!related:` and `!extra:` after `!back:` when used.
+- Put `!front:` before `!back:` for Basic Math.
+- Put `!related:` and `!extra:` after `!back:` or `!text:` when used.
 - End every note record with `~~~`.
 - Start the next note or metadata directive only after the previous `~~~`.
 
@@ -207,7 +228,7 @@ When a note is inherently visual (a geometric interpretation, a curve, a spatial
 
 ## Note-Writing Standards
 
-Prefer prompts that test understanding rather than recall. Good fronts often start with:
+Prefer prompts that test understanding when recall alone would be too shallow. Exact theorem and definition recall is useful when the statement itself is the target. Good fronts often start with:
 
 - `Why does ...`
 - `Under what conditions ...`
@@ -222,9 +243,64 @@ Prefer prompts that test understanding rather than recall. Good fronts often sta
 
 Prefer the last pattern over "Verify that X has property P at c" when the point is testing recognition of whether the property holds at all, not confirming a fact already given away by the front.
 
-Design each note at the right granularity. A good note has a focused target and a `!back:` that can usually be answered in a few sentences. If the natural answer is a whole theorem statement, a long definition, a full taxonomy, or a list of many cases, split it into several notes: hypotheses, conclusion, intuition, proof idea, failure case, example, or comparison.
+### Prompt Templates
 
-Use a small number of substantial notes per concept instead of many shallow variants, but do not make one note carry an entire section of material. Increase depth within a topic by moving from definitions to consequences, assumptions, derivations, and failure cases.
+Choose a prompt by what the learner must recall, not by whether it is an imperative
+or a question. Use the same wording within a closely related family. These are
+defaults, not reasons to rewrite a clear note solely for grammatical uniformity.
+
+- **Precise statement of a named result**
+  - Prefer: `State Rolle's Theorem.`
+  - Avoid: `What is Rolle's Theorem?` when the full statement is required;
+    that question could also invite an informal description.
+- **Paired name and statement in Cloze Math**
+  - Prefer: Keep the subject visible. Hide the statement with `c1` and its
+    name with `c2`, so each card has a clear cue for the missing part.
+  - Avoid: Hiding both parts under one cloze number, deleting the entire
+    sentence, or giving a hint that reveals the answer.
+- **Formal definition**
+  - Prefer: `Define an injective function \( f : A \to B \).` or
+    `What does it mean for \( f : A \to B \) to be injective?`
+  - Avoid: `What is injectivity?` if the domain, codomain, or quantifiers would
+    be unclear. Avoid the redundant `State the definition of ...` by default.
+- **Reason or proof**
+  - Prefer: `Why does \( |x|\le c \) imply \( x\le c \) for \( c\ge0 \)?`
+    for an explanation. Use `Prove ...` when a short proof is required.
+  - Avoid: `Prove ...` for intuition alone, or `Explain why ...` when a rigorous
+    proof is required.
+- **Relationship between results**
+  - Prefer: `What is the relationship between Green's theorem and Stokes' theorem?`
+  - Avoid: `State Stokes' theorem and explain how Green's theorem follows from it.`
+    Give the statement and relationship separate notes.
+- **Truth of a mathematical claim**
+  - Prefer: `True or false: For real \( a,b \), \( a\le b \) implies \( a^2\le b^2 \).`
+  - Avoid mixing `True or false: ...` with `Is it true that ...?` in one
+    claim-check family. Avoid `Verify that ...` when the learner must decide
+    whether the claim holds.
+
+For a `True or false:` front, state the domain and quantifiers needed to judge
+the claim. Begin `!back:` with `True.` or `False.`, then give a reason or
+counterexample. A `Does ...?` recognition prompt can remain a question when it
+asks whether an object has a property rather than judging a general claim; do
+not mechanically convert every yes/no prompt to `True or false:`.
+
+Do not combine distinct recall targets just to save a Basic Math note: a
+theorem statement, its proof idea, and its relationship to another theorem
+usually deserve separate fronts. Complementary Cloze Math deletions can share
+one note because they produce separate cards. Keep all hypotheses needed for
+a stated theorem or definition in `!back:` or `!text:`, not only in `!extra:`.
+
+Design each note at the right granularity. A good note has a focused target and
+a `!back:` that can usually be answered in a few sentences. If even a
+well-chunked theorem statement or definition is too long to recall as one
+unit, split it into several notes: hypotheses, conclusion, intuition, proof
+idea, failure case, example, or comparison. Do the same for a full taxonomy
+or a list of many cases.
+
+Use a small number of substantial notes per concept instead of many shallow
+variants, but do not make one note carry an entire section of material.
+Increase depth within a topic by moving from definitions to consequences,
+assumptions, derivations, and failure cases.
 
 ### Chunking Complex Statements
 
@@ -311,12 +387,12 @@ Pass the specific file(s) or directories you just touched — the CLI accepts a 
 ## Workflow
 
 1. Inspect nearby `.note` files for deck, tags, notation, note type, and local style.
-2. Decide whether the topic needs `Basic Math` or `Basic Math (and reversed card)`.
+2. Decide whether the topic needs `Basic Math`, `Basic Math (and reversed card)`, or `Cloze Math`.
 3. Before drafting a new note, check whether an existing note in the target file already tests the same fact under different phrasing (e.g. "Verify that..." vs. "Does... have...?"); reframe it in place (preserving its `!id:`) instead of adding a duplicate — see "Recognition Note Families" above.
 4. Draft notes around focused conceptual targets, not just topic headings or whole theorems.
 5. Verify mathematical correctness, assumptions, and notation consistency.
-6. Check note granularity: each `!back:` should usually fit in a few sentences; split oversized answers into multiple notes.
-7. Verify syntax: metadata outside records, required `!front:` and `!back:` fields, preserved existing `!id:` values, and one `~~~` terminator per note.
+6. Check note granularity: each `!back:` or cloze deletion should have a focused recall target; split oversized answers into multiple notes.
+7. Verify syntax: metadata outside records, required fields for the note type, preserved existing `!id:` values, and one `~~~` terminator per note.
 8. Run `npx notatki insert-id <path/to/file.note>` (see Tooling above) to validate the file, assign missing ids, and pretty-print it.
 
 ## Examples
@@ -359,6 +435,20 @@ Geometrically: if a continuous, differentiable curve starts and ends at the same
 ~~~
 ```
 
+Cloze note testing an axiom's statement and name separately:
+
+```text
+!type: Cloze Math
+!deck: Math::Real-Numbers
+!tags: Math Real-Numbers Axiom Ordered-Field
+
+!text:
+The {{c2::commutative law for addition::axiom name}} field axiom for \( \mathbb{R} \) states that
+
+{{c1::for every \( a,b\in\mathbb{R} \), \( a+b=b+a \)::axiom statement}}.
+~~~
+```
+
 Formula note with a justified reverse:
 
 ```text
@@ -378,18 +468,29 @@ Formula note with a justified reverse:
 ~~~
 ```
 
-Comparison note contrasting a hierarchy of related concepts:
+Comparison note distinguishing two implication directions:
+
+```text
+!type: Basic Math
+!deck: Math::Logic
+!tags: Math Logic Implication Necessary-Sufficient
+
+!front: Compare what it means for \( C \) to be necessary versus sufficient for \( H \): which implication holds in each case?
+!back:
+- Necessary: \( H \implies C \).
+- Sufficient: \( C \implies H \).
+~~~
+```
+
+True-or-false note with an explicit domain and counterexample:
 
 ```text
 !type: Basic Math
 !deck: Math
-!tags: Math Linear-Algebra
+!tags: Math Algebra Inequality
 
-!front: Compare a mapping, a linear mapping, and an affine mapping.
-!back:
-- A mapping is usually another word for a function, often used when emphasizing movement between sets or spaces.
-- A linear mapping is a special kind of function between vector spaces that preserves vector addition and scalar multiplication.
-- An affine mapping is a linear mapping followed by a translation: \( T(v)=L(v)+b \) for fixed \( b \); it reduces to a linear mapping exactly when \( b=0 \).
+!front: True or false: For every real \( x \), \( x^2 \ge x \).
+!back: False. At \( x=\frac{1}{2} \), \( x^2=\frac{1}{4}<\frac{1}{2}=x \).
 ~~~
 ```
 
@@ -426,8 +527,7 @@ Recognition note testing whether the learner recognizes that a property fails to
 
 !front: What are the order and degree of the ordinary differential equation \( \sin(y') + y = 0 \)?
 !back:
-Order \( 1 \), since the highest derivative present is \( y' \).
-
-Degree undefined, since the equation is not polynomial in the derivatives — \( y' \) appears inside \( \sin(\cdot) \), a transcendental function.
+- Order \( 1 \), since the highest derivative present is \( y' \).
+- Degree undefined, since the equation is not polynomial in the derivatives.
 ~~~
 ```

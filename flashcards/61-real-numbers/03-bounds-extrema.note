@@ -1,6 +1,6 @@
-!type: Basic Math
 !deck: Math::Real-Numbers
 !tags: Math Real-Numbers Bounds Extrema
+!type: Basic Math
 
 !id: UnulCNcJun
 !front: What does it mean for a real number \( M \) to be an upper bound of a set \( A \subseteq \mathbb{R} \)?

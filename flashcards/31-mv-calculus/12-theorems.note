@@ -5,6 +5,12 @@
 !id: rl1oPsuMcJ
 !front: State the one-dimensional Fundamental Theorem of Calculus, and describe the general pattern it exemplifies for the vector-calculus integral theorems.
 !back:
+If:
+
+- \( a<b \)
+- \( f \) is continuously differentiable on \( [a,b] \)
+
+then
 \[ \int_a^b f'(x)\,dx = f(b) - f(a). \]
 
 - The left side integrates a derivative over the 1-dimensional interval \( [a,b] \).
@@ -16,51 +22,75 @@ The general pattern: integrating a derivative of a field over a region equals ev
 !id: nlgdhzFbbX
 !front: State the gradient theorem, and identify the type and dimension of each side.
 !back:
+If:
+
+- \( C \) is a piecewise-smooth curve from \( \mathbf{a} \) to \( \mathbf{b} \)
+- \( f \) is continuously differentiable on an open region containing \( C \)
+
+then
 \[ \int_C \nabla f \cdot d\mathbf{r} = f(\mathbf{b}) - f(\mathbf{a}), \qquad C : \mathbf{a} \to \mathbf{b}. \]
 
 - The left side is a scalar line integral (1-dimensional) of the vector field \( \nabla f \) dotted with \( d\mathbf{r} \).
 - The right side is the scalar field \( f \) evaluated on the 0-dimensional boundary \( \{\mathbf{a},\mathbf{b}\} \), with signs.
 
 The derivative \( \nabla \) disappears in favor of the bare field \( f \) on the boundary.
-!extra:
-- \( f \) is continuously differentiable on an open region containing \( C \).
-- \( C \) is piecewise smooth.
 ~~~
 
 !id: KM9F4tejpN
 !front: State Green's theorem, and identify the type and dimension of each side.
 !back:
+If:
+
+- \( D \) is a bounded plane region with piecewise-smooth, positively oriented boundary \( \partial D \)
+- \( P,Q \) are continuously differentiable on an open region containing \( D \) and its boundary
+
+then
 \[ \oint_{\partial D} (P\,dx + Q\,dy) = \iint_D \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right) dA. \]
 
 - The right side integrates the scalar curl \( Q_x - P_y \) (a scalar field) over the 2-dimensional plane region \( D \).
-- The left side integrates the vector field \( (P,Q) \) as a work integral along the 1-dimensional boundary curve \( \partial D \), traversed counterclockwise.
-!extra:
-- \( P, Q \) are continuously differentiable on an open region containing \( D \).
-- \( D \) is a bounded region with piecewise-smooth, positively oriented boundary.
+- The left side integrates the vector field \( (P,Q) \) as a work integral along the 1-dimensional boundary curve \( \partial D \), traversed positively.
 ~~~
 
 !id: VPxVmNIQzF
-!front: State Stokes' theorem, and explain in what sense Green's theorem is a special case of it.
+!front: State Stokes' theorem.
 !back:
+If:
+
+- \( S \) is a compact, oriented, piecewise-smooth surface with piecewise-smooth boundary \( \partial S \)
+- \( \partial S \) has the orientation induced by the chosen surface normal
+- \( \mathbf{F} \) is continuously differentiable on an open region containing \( S \)
+
+then
 \[ \iint_S (\nabla \times \mathbf{F}) \cdot d\mathbf{S} = \oint_{\partial S} \mathbf{F} \cdot d\mathbf{r}. \]
 
 - The left side turns the curl (a vector field) into a scalar flux integrand via \( \cdot\,d\mathbf{S} \), integrated over the 2-dimensional surface \( S \).
 - The right side is \( \mathbf{F} \) integrated as work along the 1-dimensional boundary curve \( \partial S \).
+~~~
 
-Green's theorem is the special case where \( S \) is a flat region in the \( xy \)-plane and \( \mathbf{F} = (P,Q,0) \) has no \( z \)-component: then \( (\nabla\times\mathbf{F})\cdot d\mathbf{S} \) reduces to \( (Q_x-P_y)\,dA \).
-!extra:
-- \( \mathbf{F} \) is continuously differentiable on an open region containing \( S \).
-- \( S \) is an orientable, piecewise-smooth surface whose boundary orientation is compatible with the chosen surface normal.
+!id: GxNmJgXs4J
+!front: What is the relationship between Green's theorem and Stokes' theorem?
+!back:
+Green's theorem is the planar case of Stokes' theorem:
+
+- Let \( D \) be a bounded plane region with piecewise-smooth boundary, and let \( P,Q \) be \( C^1 \) on a neighborhood of \( D \) and its boundary.
+- Take \( S=D \) in the \( xy \)-plane with upward normal, so \( \partial D \) is traversed counterclockwise, and set \( \mathbf{F}=(P,Q,0) \).
+- Then \( (\nabla\times\mathbf{F})\cdot d\mathbf{S}=(Q_x-P_y)\,dA \) and \( \mathbf{F}\cdot d\mathbf{r}=P\,dx+Q\,dy \), giving
+
+\[ \oint_{\partial D}(P\,dx+Q\,dy)=\iint_D(Q_x-P_y)\,dA. \]
 ~~~
 
 !id: I9gs1P5SYb
 !front: State the divergence theorem, and identify the type and dimension of each side.
 !back:
+If:
+
+- \( V \) is a bounded solid with piecewise-smooth boundary \( \partial V \)
+- \( \partial V \) is oriented outward
+- \( \mathbf{F} \) is continuously differentiable on an open region containing \( V \) and its boundary
+
+then
 \[ \iiint_V (\nabla \cdot \mathbf{F})\,dV = \iint_{\partial V} \mathbf{F} \cdot d\mathbf{S}. \]
 
 - The left side integrates the divergence (a scalar field) over the 3-dimensional solid \( V \).
 - The right side is \( \mathbf{F} \) integrated as flux through the 2-dimensional boundary surface \( \partial V \), oriented outward.
-!extra:
-- \( \mathbf{F} \) is continuously differentiable on an open region containing \( V \).
-- \( V \) is a bounded solid with piecewise-smooth boundary.
 ~~~

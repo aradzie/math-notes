@@ -1,6 +1,6 @@
-!type: Basic Math
 !deck: Math::Real-Numbers
 !tags: Math Real-Numbers Density Approximation
+!type: Basic Math
 
 !id: gFzlZo4Svr
 !front: What does it mean for a set \( D \subseteq \mathbb{R} \) to be dense in \( \mathbb{R} \)? Give the equivalent approximation statement.

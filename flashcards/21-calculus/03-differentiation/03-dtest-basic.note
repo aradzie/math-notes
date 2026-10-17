@@ -1,0 +1,136 @@
+!deck: Math::Calculus
+!tags: Math Calculus Differentiation Derivative-Test
+!type: Basic Math
+
+!id: aDupKoJq4Y
+!front: Define a critical point of \( f \).
+!back: An interior point \( c \) of the domain of \( f \) where \( f'(c)=0 \) or \( f'(c) \) does not exist.
+~~~
+
+!id: 6VcIEKZZ1A
+!front: State the first derivative test for a critical point \( c \).
+!back:
+Suppose \( f \) is continuous at \( c \), differentiable on both sides of \( c \), and \( f' \) has the indicated sign throughout each side of a sufficiently small punctured neighborhood.
+
+- \( f'>0 \) on the left and \( f'<0 \) on the right give a strict local maximum at \( c \).
+- \( f'<0 \) on the left and \( f'>0 \) on the right give a strict local minimum at \( c \).
+- The same strict sign on both sides gives no local extremum at \( c \).
+~~~
+
+!id: boP6c53zfl
+!front: Why does a change of \( f' \) from positive to negative across \( c \) give a strict local maximum, assuming \( f \) is continuous at \( c \)?
+!back: \( f \) increases toward \( c \) from the left and decreases away from \( c \) on the right. Continuity at \( c \) then gives \( f(x)<f(c) \) for all sufficiently close \( x\ne c \).
+~~~
+
+!id: BEIh5HME62
+!front: Give an example of a stationary critical point that is not a local extremum. Explain why using the first derivative test.
+!back: For \( f(x)=x^3 \), \( f'(0)=0 \), but \( f'(x)=3x^2>0 \) on both sides of \( 0 \). The function increases through \( 0 \), so there is no local extremum.
+~~~
+
+!id: 447DckKCLU
+!front: True or false: A local extremum requires \( f' \) to have one fixed sign on each side of the point.
+!back: False. Let \( f(0)=0 \) and \( f(x)=x^2(2+\sin(1/x)) \) for \( x\ne0 \). Then \( f(x)>f(0) \) for \( x\ne0 \), so \( 0 \) is a strict local minimum, while \( f' \) takes both signs arbitrarily close to \( 0 \).
+~~~
+
+!id: b9EnyIBnIB
+!front: State the second derivative test for a stationary point \( c \).
+!back:
+Suppose \( f'(c)=0 \) and the finite second derivative \( f''(c) \) exists.
+
+- If \( f''(c)>0 \), \( f \) has a strict local minimum at \( c \).
+- If \( f''(c)<0 \), \( f \) has a strict local maximum at \( c \).
+- If \( f''(c)=0 \), the test is inconclusive.
+
+![A positive second derivative at a stationary point gives a local minimum; a negative one gives a local maximum](img/second-derivative-test.svg)
+~~~
+
+!id: EvNWZkqdHq
+!front: Why does \( f'(c)=0 \) and \( f''(c)>0 \) imply a strict local minimum without assuming \( f'' \) is continuous near \( c \)?
+!back: Since \( f''(c)=\lim_{x\to c} f'(x)/(x-c)>0 \), the quotient is positive for all sufficiently close \( x\ne c \). Thus \( f'<0 \) just left of \( c \) and \( f'>0 \) just right; the first derivative test gives a strict local minimum.
+~~~
+
+!id: XE1jruyK40
+!front: Why is \( f''(c)=0 \) inconclusive in the second derivative test? Give all three possible outcomes at \( c=0 \).
+!back:
+All three examples have \( f'(0)=f''(0)=0 \):
+
+- \( x^4 \) has a strict local minimum at \( 0 \).
+- \( -x^4 \) has a strict local maximum at \( 0 \).
+- \( x^3 \) has neither at \( 0 \).
+
+![The graphs of x to the fourth, negative x to the fourth, and x cubed show a minimum, maximum, and neither when the second derivative vanishes](img/dtest-inconclusive.svg)
+~~~
+
+!id: Bm6b7rubif
+!front: Compare the information used by the first and second derivative tests at a stationary point \( c \).
+!back: The first derivative test uses the signs of \( f' \) on both sides of \( c \). The second uses the single value \( f''(c) \); the first can still classify \( c \) when \( f''(c)=0 \) or does not exist.
+~~~
+
+!id: yJeyjcgKwK
+!front: Why do the derivative tests alone identify only local extrema, not absolute extrema?
+!back: They determine behavior near a point. To identify an absolute extremum, compare function values across the entire domain or interval, including relevant endpoints.
+~~~
+
+!id: DTBs2YanuJ
+!front: Define concave up and concave down for a differentiable function on an interval using tangent lines.
+!back:
+- Concave up: the graph lies on or above each of its tangent lines on the interval.
+- Concave down: the graph lies on or below each of its tangent lines on the interval.
+
+![A concave-down curve lies below its tangent lines; a concave-up curve lies above its tangent lines](img/concavity.svg)
+~~~
+
+!id: ZGlryLD1vr
+!front: How does the monotonicity of \( f' \) characterize the concavity of a differentiable function \( f \) on an interval \( I \)?
+!back:
+- \( f \) is concave up on \( I \) exactly when \( f' \) is nondecreasing there.
+- \( f \) is concave down on \( I \) exactly when \( f' \) is nonincreasing there.
+~~~
+
+!id: yppnQXPAaa
+!front: What does a fixed strict sign of \( f'' \) throughout an interval tell us about concavity there?
+!back: If \( f''>0 \) throughout the interval, \( f' \) is strictly increasing and \( f \) is concave up. If \( f''<0 \) throughout, \( f' \) is strictly decreasing and \( f \) is concave down.
+~~~
+
+!id: fcEiheTRIk
+!front: Define an inflection point of \( f \).
+!back: A point \( c \) where \( f \) is continuous and changes concavity across \( c \): concave up on one side and concave down on the other, or vice versa.
+~~~
+
+!id: 71hpLverT0
+!front: If \( c \) is an inflection point and \( f''(c) \) exists, what must \( f''(c) \) equal? Why?
+!back: \( f''(c)=0 \). Concavity changes direction, so \( f' \) changes from nondecreasing to nonincreasing, or the reverse, and has a local extremum at \( c \). Fermat's theorem applied to \( f' \) gives \( f''(c)=0 \).
+~~~
+
+!id: A86l2fPGvk
+!front: True or false: If \( f''(c)=0 \), then \( c \) is an inflection point.
+!back: False. For \( f(x)=x^4 \), \( f''(0)=0 \), but \( f''(x)=12x^2\ge0 \) on both sides of \( 0 \); the concavity does not change.
+~~~
+
+!id: z9pUtF5wv3
+!front: What condition on the sign of \( f'' \) on either side of \( c \) establishes an inflection point, assuming \( f \) is continuous at \( c \)?
+!back: If \( f'' \) has one strict sign just left of \( c \) and the opposite strict sign just right, then concavity changes at \( c \), so \( c \) is an inflection point. The value \( f''(c) \) need not exist.
+~~~
+
+!id: enILFeHjCX
+!front: Does \( f(x)=x^2 \) have an inflection point? If so, where?
+!back: No. \( f''(x)=2>0 \) everywhere, so \( f \) is concave up throughout \( \mathbb{R} \).
+~~~
+
+!id: dmG8bnxN5o
+!front: Does \( f(x)=x^3 \) have an inflection point? If so, where?
+!back: Yes, at \( x=0 \). Since \( f''(x)=6x \), concavity changes from down on \( (-\infty,0) \) to up on \( (0,\infty) \).
+~~~
+
+!id: 4RYJpbWtby
+!front: Does \( f(x)=\sin x \) have inflection points? If so, where?
+!back:
+Yes, at every \( x=k\pi \), \( k\in\mathbb{Z} \). The second derivative \( f''(x)=-\sin x \) changes sign at each such point.
+
+![The sine curve changes concavity at each integer multiple of pi](img/inflection-point.svg)
+~~~
+
+!id: w67GfuVp2n
+!front: True or false: \( f''(c)>0 \) at a stationary point proves that \( f \) is concave up throughout some neighborhood of \( c \).
+!back: False. Let \( f(0)=0 \) and \( f(x)=x^2+3x^4\sin(1/x) \) for \( x\ne0 \). Then \( f'(0)=0 \) and \( f''(0)=2 \), but \( f''(x)<0 \) at points arbitrarily close to \( 0 \), so \( f \) is not concave up on any neighborhood of \( 0 \).
+~~~
