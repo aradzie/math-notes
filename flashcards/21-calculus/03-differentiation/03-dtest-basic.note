@@ -7,6 +7,20 @@
 !back: An interior point \( c \) of the domain of \( f \) where \( f'(c)=0 \) or \( f'(c) \) does not exist.
 ~~~
 
+!id: hcz4w3RwoE
+!front: Define a stationary point of \( f \).
+!back: An interior point \( c \) of the domain of \( f \) where \( f'(c)=0 \).
+~~~
+
+!id: GsOZf4S5Fd
+!front: How do stationary points and critical points of \( f \) differ?
+!back:
+- Stationary: an interior point \( c \) where \( f'(c)=0 \).
+- Critical: an interior point \( c \) where \( f'(c)=0 \) or \( f'(c) \) does not exist.
+
+Thus every stationary point is critical, but a critical point with undefined derivative is not stationary.
+~~~
+
 !id: 6VcIEKZZ1A
 !front: State the first derivative test for a critical point \( c \).
 !back:

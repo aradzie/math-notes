@@ -83,6 +83,11 @@
 \newenvironment{answer}{\par\smallskip\noindent\textit{Answer.}\enspace}{\par\medskip}
 
 % ---------- Shared math macros ----------
+\DeclareMathOperator{\arcsinh}{arcsinh}
+\DeclareMathOperator{\arccosh}{arccosh}
+\DeclareMathOperator{\arctanh}{arctanh}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Q}{\mathbb{Q}}

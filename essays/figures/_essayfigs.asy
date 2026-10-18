@@ -1,4 +1,4 @@
-// Shared helpers for the figures of trig-inverse-composition.tex: plain black
+// Shared helpers for the essays' figures: plain black
 // curves, gray guides, one blue accent, Computer Modern labels (as set by
 // essay.cls). Standalone on purpose: texlive.sh mounts only the current
 // directory, so a figure built from essays/ cannot import flashcards/_common.
@@ -9,14 +9,16 @@
 //   ../texlive.sh asy -dir figures -f pdf -o figures/trig-inverse-composition-fig-ranges figures/trig-inverse-composition-fig-ranges.asy
 //
 // Figures are about 15.9cm wide (the essay's text width), so \includegraphics
-// at \textwidth keeps labels at their nominal size.
+// at \textwidth keeps labels at their nominal size; a narrower figure is
+// included at its natural size (no width) for the same reason.
 //
 // Skeleton:
 //
 //   import _essayfigs;
 //   setup(8);                       // 1. label size (pt)
 //   setScale(0.8);                  // 2. cm per user unit (or setScale(cx, cy))
-//   T = shift(cell - windowCenter); // 3. optional: place a panel (default identity)
+//   T = shift(cell - windowCenter); // 3. optional: place a panel (default identity),
+//                                   //    or panel(cell, w, sx, sy) for per-panel scales
 //   Window w = Window(x0, x1, y0, y1);
 //   axes(w);                        // 4. axes through the origin
 //   drawParam(w, new pair(real t) { return (t, sin(t)); }, a, b, thinPen);
@@ -61,6 +63,12 @@ struct Window {
     }
     pair center() { return ((x0 + x1) / 2, (y0 + y1) / 2); }
     path box() { return (x0, y0)--(x1, y0)--(x1, y1)--(x0, y1)--cycle; }
+}
+
+// Place window w's center at cell (in canvas user units), stretched by
+// (sx, sy); with setScale(1), cell is in cm and sx, sy are cm per unit.
+void panel(pair cell, Window w, real sx, real sy=sx) {
+    T = shift(cell) * scale(sx, sy) * shift(-w.center());
 }
 
 // ---- primitives -------------------------------------------------------

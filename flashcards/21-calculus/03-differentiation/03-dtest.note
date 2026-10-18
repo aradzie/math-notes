@@ -2,6 +2,10 @@
 !tags: Math Calculus Differentiation Derivative-Test
 !type: Cloze Math
 
+!id: smmXrIvY1D
+!text: A {{c3::stationary point of \( f \)}} is an {{c1::interior point \( c \) of the domain of \( f \)}} at which {{c2::\( f'(c)=0 \)::condition}}.
+~~~
+
 !id: zzKitpg6bx
 !text: A {{c3::critical point of \( f \)}} is an {{c1::interior point \( c \) of the domain of \( f \)}} at which {{c2::either \( f'(c) = 0 \) or \( f'(c) \) fails to exist::condition}}.
 ~~~

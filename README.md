@@ -1,10 +1,11 @@
 # Math Notes
 
-This is my personal repository for self-studying mathematics. It contains three kinds of artifacts:
+This is my personal repository for self-studying mathematics. It contains four kinds of artifacts:
 
 - **Flashcards** — for spaced repetition in [Anki](https://apps.ankiweb.net/).
 - **Self-check questions** — a set of compiled PDFs of self-check questions, one per topic.
 - **Essays** — write-ups of deeper explorations of individual topics.
+- **Workbooks** — ordered questions and proof tasks to work through.
 
 ## Flashcards
 
@@ -23,6 +24,10 @@ The [self-check/](self-check/) directory collects self-check questions covering 
 ## Essays
 
 The [essays/](essays/) directory collects write-ups from conversations where I dug into a math topic in depth, kept around because rereading them later helps the ideas stick. Each essay compiles to its own standalone PDF.
+
+## Workbooks
+
+The [workbooks/](workbooks/) directory contains standalone PDFs of questions and proof tasks to work through.
 
 # Tips on writing flashcards
 
