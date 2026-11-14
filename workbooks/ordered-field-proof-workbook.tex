@@ -1,0 +1,207 @@
+\documentclass{workbook}
+
+\usepackage{enumitem}
+\usepackage{array}
+
+% Change \roomforworkfalse to \roomforworktrue to leave writing space.
+\newif\ifroomforwork
+\roomforworkfalse
+
+\newcommand{\ex}[1]{\item #1\ifroomforwork\par\vspace{4\baselineskip}\fi}
+\newenvironment{exercises}{%
+  \begin{enumerate}[label=\textbf{\thesection.\arabic*},
+    leftmargin=*,itemsep=.52\baselineskip,topsep=.35\baselineskip]
+}{\end{enumerate}}
+
+\title{Elementary Proofs from the Field and Order Axioms}
+\subtitle{A Self-Check and Proof Workbook}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\textbf{Purpose.} Derive familiar algebraic identities and inequalities rigorously, using
+only the stated axioms and results established in earlier exercises.
+
+\textbf{Primitive assumptions.} Work in an ordered field (in particular, the real
+numbers). Use the following axiom formulation:
+\begin{itemize}[leftmargin=*,nosep]
+  \item \emph{Field:} addition and multiplication are associative and commutative;
+  they have identities $0$ and $1$, with $0\ne1$; additive inverses exist;
+  nonzero elements have multiplicative inverses; multiplication distributes over addition.
+  \item \emph{Order:} trichotomy and transitivity of $<$;
+  $a<b\Rightarrow a+t<b+t$;
+  and $0<a,\ 0<b\Rightarrow0<ab$.
+\end{itemize}
+Equality has its usual logical substitution rules. Define
+$a\le b$ to mean $a<b$ or $a=b$; define $a-b:=a+(-b)$; define
+$a/b:=ab^{-1}$ for $b\ne0$. The symbols $2$ and $4$ mean $1+1$ and
+$2+2$, respectively. Do \emph{not} assume general inequality rules for
+multiplication until you have derived them.
+
+\textbf{Proof protocol.} On first encounters, justify every significant step by
+an axiom or an earlier result. On later encounters, a textbook-style sentence
+citing several established facts is sufficient. If a statement is false,
+provide a counterexample; if a hypothesis is redundant, identify it.
+
+\textbf{Suggested workflow.} Attempt one problem at a time. Record the result,
+and its dependencies. The final page provides a blank theorem log.
+
+\section{Additive structure (field axioms only)}
+\begin{exercises}
+\ex{Prove the \emph{additive cancellation law}: $a+c=b+c\implies a=b$.}
+\ex{Prove $a+b\ne a\iff b\ne0$ and $a+b\ne b\iff a\ne0$.
+Deduce that if $a\ne0$ and $b\ne0$, then $a+b\ne a$ and $a+b\ne b$.}
+\ex{Prove that the additive identity is unique: if $a+e=a$ for every $a$, then $e=0$.}
+\ex{Prove that the additive inverse of each element is unique.}
+\ex{Prove $a+b=0\iff b=-a$.}
+\ex{For each statement, prove it or give a counterexample:
+\begin{enumerate}[label=(\alph*),nosep]
+  \item $a+b\ne0\implies a\ne0\text{ or }b\ne0$.
+  \item $a\ne0\text{ or }b\ne0\implies a+b\ne0$.
+  \item $a\ne0\text{ and }b\ne0\implies a+b\ne0$.
+\end{enumerate}}
+\ex{Prove $-0=0$.}
+\ex{Prove $-(-a)=a$.}
+\ex{Prove $-(a+b)=(-a)+(-b)$.}
+\ex{Prove $a-b=0\iff a=b$.}
+\ex{Prove $(a-b)+b=a$.}
+\ex{Prove $a-(b+c)=(a-b)-c$.}
+\ex{Prove $a-(b-c)=(a-b)+c$.}
+\ex{Prove that $a+x=b$ has exactly one solution, namely $x=b-a$.}
+\ex{\textbf{Justification audit.} Determine which field axioms are required for
+$(a+b)+(c+d)=(a+c)+(b+d)$. Explain separately what associativity and
+commutativity contribute.}
+\end{exercises}
+
+\section{Multiplication and distributivity (field axioms only)}
+\begin{exercises}
+\ex{Prove $a\cdot0=0$ for every $a$.}
+\ex{Prove $0\cdot a=0$ for every $a$.}
+\ex{Prove that the multiplicative identity is unique.}
+\ex{Prove that the multiplicative inverse of a nonzero element is unique.}
+\ex{Prove $ac=bc$ and $c\ne0$ imply $a=b$.}
+\ex{Prove $(-1)a=-a$.}
+\ex{Prove $(-a)b=-(ab)$.}
+\ex{Prove $a(-b)=-(ab)$.}
+\ex{Prove $(-a)(-b)=ab$.}
+\ex{Prove $(-1)(-1)=1$ in two ways: directly from the axioms and using earlier results.}
+\ex{Prove $a(b-c)=ab-ac$.}
+\ex{Prove the \emph{zero-product property}: $ab=0\iff a=0$ or $b=0$.}
+\ex{Prove $ab\ne a\iff a\ne0\text{ and }b\ne1$.}
+\ex{For $a,b\ne0$, prove $ab\ne0$ and $(ab)^{-1}=a^{-1}b^{-1}$.}
+\ex{For $a\ne0$, prove that $ax=b$ has the unique solution $x=a^{-1}b$.}
+\ex{\textbf{Error audit.} A purported proof says: ``If $ab=ac$, cancel $a$
+from both sides to obtain $b=c$.'' Identify the missing hypothesis and give
+an explicit counterexample without it.}
+\end{exercises}
+
+\section{Order axioms and sign rules}
+\begin{exercises}
+\ex{Prove that there exists a strictly positive element.}
+\ex{Prove $0<1$ without assuming a positive element unless you first establish its existence.}
+\ex{Prove $a<b\iff0<b-a$.}
+\ex{Prove $a<b\iff-b<-a$.}
+\ex{Prove $a>0\iff-a<0$.}
+\ex{Prove that $a>0$ and $b>0$ imply $a+b>0$.}
+\ex{Prove that $a\ge0$ and $b\ge0$ imply $a+b\ge0$.}
+\ex{Derive $a\ge0,\ b\ge0\implies ab\ge0$ from the stated strict-product axiom.}
+\ex{Prove $a\le b$ and $c\ge0$ imply $ac\le bc$.}
+\ex{Prove $a<b$ and $c>0$ imply $ac<bc$.}
+\ex{Prove $a\le b$ and $c<0$ imply $ac\ge bc$.}
+\ex{Prove $a<b$ and $c<0$ imply $ac>bc$.}
+\ex{Prove $a\ne0\implies a^2>0$.}
+\ex{Prove $a>0\implies a^{-1}>0$.}
+\ex{Prove $0<a<b\implies 0<b^{-1}<a^{-1}$.}
+\end{exercises}
+
+\section{Combining inequalities}
+\begin{exercises}
+\ex{Prove $0\le a\le b\implies a^2\le b^2$.}
+\ex{Prove $a\le b,\ c\le d$, and $a,b,c,d\ge0$ imply $ac\le bd$.}
+\ex{Prove $a<b$ and $c<d$ imply $a+c<b+d$.}
+\ex{In the second problem of this section, show that it is enough to assume
+$b\ge0$ and $c\ge0$ (along with $a\le b$ and $c\le d$).}
+\ex{Prove $a^2+b^2\ge2ab$ for all real $a,b$.}
+\ex{Prove $(a+b)^2\le2(a^2+b^2)$ for all real $a,b$.}
+\ex{Prove $(a+b)^2\ge4ab$ for all real $a,b$.}
+\ex{Prove $a<b\implies a<\dfrac{a+b}{2}<b$.}
+\ex{Prove $0<a<b$ and $0<c<d$ imply $ac<bd$.}
+\ex{Prove that $a\ge0,\ b\ge0$, and $a+b=0$ imply $a=b=0$.}
+\ex{Determine whether $a\le b$ and $c\le d$ alone imply $ac\le bd$.
+Prove the claim or give a counterexample.}
+\ex{For $b,d>0$, prove $\dfrac{a}{b}<\dfrac{c}{d}\iff ad<bc$.}
+\end{exercises}
+
+\section{Absolute values}
+Define $|x|=x$ if $x\ge0$ and $|x|=-x$ if $x<0$.
+\begin{exercises}
+\ex{Prove $|x|\ge0$ for all $x$.}
+\ex{Prove $|x|=0\iff x=0$.}
+\ex{Prove $|-x|=|x|$.}
+\ex{Prove $-|x|\le x\le|x|$.}
+\ex{Prove $|xy|=|x||y|$.}
+\ex{Prove the \emph{triangle inequality}: $|x+y|\le|x|+|y|$.}
+\ex{Prove the \emph{reverse triangle inequality}: $\bigl||x|-|y|\bigr|\le|x-y|$.}
+\ex{Prove $|x-y|=|y-x|$.}
+\ex{For $r\ge0$, prove $|x|\le r\iff-r\le x\le r$.}
+\ex{For $r>0$, prove $|x|<r\iff-r<x<r$.}
+\ex{Prove $\bigl||x|-|y|\bigr|\le|x+y|$.}
+\ex{Prove $|x|\le|y|\iff x^2\le y^2$.}
+\ex{Prove $|ax+by|\le|a||x|+|b||y|$ for all real $a,b,x,y$.}
+\ex{\textbf{Error audit.} Decide whether $|x-y|\le\bigl||x|-|y|\bigr|$
+holds for all $x,y$. If false, provide a counterexample and state a valid
+inequality involving the same quantities.}
+\end{exercises}
+
+\section{Cumulative challenges}
+Use any results established in the preceding sections. No completeness or
+Archimedean property is needed.
+\begin{exercises}
+\ex{Prove that an ordered field has no least strictly positive element.}
+\ex{Given $a<b$, construct $m$ satisfying $a<m<b$.}
+\ex{Prove that for every $x$ there exist $u,v$ such that $u<x<v$.}
+\ex{Prove $|x-z|\le|x-y|+|y-z|$ for all $x,y,z$.}
+\ex{For $\varepsilon>0$, prove that $|x-a|<\varepsilon$ and
+$|x-b|<\varepsilon$ imply $|a-b|<2\varepsilon$.}
+\ex{Prove: if $|x|<\varepsilon$ for every $\varepsilon>0$, then $x=0$.}
+\ex{For $a,b\in\mathbb R$, prove
+$\max\{a,b\}=\dfrac{a+b+|a-b|}{2}$.}
+\ex{For $a,b\in\mathbb R$, prove
+$\min\{a,b\}=\dfrac{a+b-|a-b|}{2}$.}
+\ex{Prove $|a^2-b^2|\le|a-b|(|a|+|b|)$.}
+\ex{Prove $|a+b+c|\le|a|+|b|+|c|$.}
+\ex{Prove $|x|<1\implies1-x^2>0$.}
+\ex{For $a,b>0$, prove $\dfrac{a}{b}+\dfrac{b}{a}\ge2$.}
+\end{exercises}
+
+\clearpage
+\section*{Theorem and proof log}
+Record a theorem's number and the axioms or earlier theorems it needs.
+\par\medskip\noindent
+\renewcommand{\arraystretch}{2.1}
+\begin{tabular}{|p{.11\linewidth}|p{.36\linewidth}|p{.42\linewidth}|}
+\hline
+\textbf{Problem} & \textbf{Theorem / result} & \textbf{Dependencies} \\ \hline
+\rule{0pt}{2.1ex} & & \\ \hline
+\rule{0pt}{2.1ex} & & \\ \hline
+\rule{0pt}{2.1ex} & & \\ \hline
+\rule{0pt}{2.1ex} & & \\ \hline
+\rule{0pt}{2.1ex} & & \\ \hline
+\rule{0pt}{2.1ex} & & \\ \hline
+\rule{0pt}{2.1ex} & & \\ \hline
+\rule{0pt}{2.1ex} & & \\ \hline
+\rule{0pt}{2.1ex} & & \\ \hline
+\rule{0pt}{2.1ex} & & \\ \hline
+\rule{0pt}{2.1ex} & & \\ \hline
+\rule{0pt}{2.1ex} & & \\ \hline
+\rule{0pt}{2.1ex} & & \\ \hline
+\rule{0pt}{2.1ex} & & \\ \hline
+\rule{0pt}{2.1ex} & & \\ \hline
+\rule{0pt}{2.1ex} & & \\ \hline
+\rule{0pt}{2.1ex} & & \\ \hline
+\rule{0pt}{2.1ex} & & \\ \hline
+\end{tabular}
+
+\end{document}
