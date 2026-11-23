@@ -3,7 +3,7 @@
 !tags: Math Function Injective-Surjective
 
 !id: 5IdgxuQIzt
-!front: Define an injective (one-to-one) function \( f : A \to B \), and give the equivalent contrapositive form of the definition.
+!front: Define an injective function \( f : A \to B \), and give the equivalent contrapositive form of the definition.
 !back:
 \( f \) is injective if for all \( x_1, x_2 \in A \):
 \[ x_1 \ne x_2 \implies f(x_1) \ne f(x_2). \]
@@ -16,7 +16,7 @@ The contrapositive form is usually the more useful one in proofs: assume the out
 ~~~
 
 !id: WQK7mhne1i
-!front: Define a surjective (onto) function \( f : A \to B \).
+!front: Define a surjective function \( f : A \to B \).
 !back:
 \( f \) is surjective if every element of the codomain is attained:
 \[ \forall\, b \in B,\ \exists\, a \in A \text{ such that } f(a) = b. \]
@@ -38,9 +38,9 @@ i.e. every element of \( B \) has exactly one preimage in \( A \).
 !id: QpbVHeA51V
 !front: Compare injective, surjective, and bijective functions.
 !back:
-- Injective (one-to-one): distinct inputs always produce distinct outputs; no element of the codomain is hit more than once.
-- Surjective (onto): every element of the codomain is hit at least once; the range equals the whole codomain.
-- Bijective: both injective and surjective at once — every element of the codomain is hit exactly once, giving a one-to-one correspondence between domain and codomain.
+- Injective: distinct inputs always produce distinct outputs; no element of the codomain is hit more than once.
+- Surjective: every element of the codomain is hit at least once; the range equals the whole codomain.
+- Bijective: both injective and surjective — every element of the codomain is hit exactly once.
 ~~~
 
 !id: XPn6GGTji8
@@ -103,4 +103,22 @@ For example, \( f(x) = x^2 \) is not surjective as a map \( \mathbb{R} \to \math
 - Bijective, since both hold. Restricting the domain to \( [0, \infty) \) is exactly what makes \( x^2 \) invertible, with inverse \( \sqrt{x} \).
 
 ![x^2 restricted to \[0,infinity): the horizontal line y=1 crosses once (injective) and the range fills the whole codomain (surjective)](img/map-square-restricted.svg)
+~~~
+
+!type: Basic Math (and reversed card)
+
+!id: ubqbc18nhp
+!front: Injective function
+!back: One-to-one function
+~~~
+
+!id: 5lXCgHyphM
+!front: Surjective function
+!back: Onto function
+~~~
+
+!id: rqYzCimvPh
+!front: Bijective function
+!back: One-to-one correspondence
+!extra: A one-to-one correspondence is both injective and surjective; “one-to-one function” alone means injective.
 ~~~

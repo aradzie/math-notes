@@ -224,7 +224,7 @@ Thus the equivalence classes split \( A \) into nonoverlapping nonempty blocks w
 !front: Given a partition \( \mathcal{P} \) of a set \( A \), define the equivalence relation induced by \( \mathcal{P} \).
 !back:
 For \( a,b \in A \), define
-\[ a \sim b \quad\Longleftrightarrow\quad \text{\( a \) and \( b \) lie in the same block of \( \mathcal{P} \)}. \]
+\[ a \sim b \quad \Longleftrightarrow \quad a \text{ and } b \text{ lie in the same block of } \mathcal{P} \].
 This is an equivalence relation, and its equivalence classes are exactly the blocks of the partition.
 ~~~
 
