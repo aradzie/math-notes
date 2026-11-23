@@ -1,0 +1,302 @@
+\documentclass{workbook}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\setlist[enumerate]{leftmargin=*,itemsep=7pt,topsep=4pt}
+\newcounter{question}
+\newcommand{\q}[1]{\refstepcounter{question}\item[\textbf{Q\thequestion.}] #1}
+\newenvironment{questions}{\begin{enumerate}[label={},leftmargin=0pt,labelsep=0pt,align=left,itemindent=0pt]}{\end{enumerate}}
+\newcommand{\goal}[1]{\textbf{Goal.} #1\par}
+\newcommand{\checkpoint}[1]{\medskip\noindent\fcolorbox{black!25}{black!3}{\begin{minipage}{0.94\linewidth}\textbf{Checkpoint.} #1\end{minipage}}\medskip}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\sn}{S_N}
+\title{The Weierstrass Function}
+\subtitle{A guided discovery workbook}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+This workbook is a sequence of self-check questions, not a lecture and not a collection of completed solutions. You will prove that an infinite trigonometric series is continuous and integrable, construct its antiderivative, derive a self-similarity equation, and ultimately prove nowhere differentiability for one explicit choice of parameters. The final proof uses only trigonometry, geometric sums, and the definition of derivative. Optional problems introduce uniform convergence, H\"older regularity, and a heuristic connection to fractal dimension.
+\end{abstract}
+
+\section*{How to work through the questions}
+Write an answer before proceeding to the next question. State which theorem you are using and verify its hypotheses. When a question asks you to \emph{prove} a claim, avoid substituting a graph or numerical observation. Questions marked $\star$ are optional challenges; the main argument does not depend on them. There are short hints near the end, but no full answer key.
+
+\textbf{Prerequisites:} continuity and differentiation of elementary functions, limits, geometric series, inequalities, basic definite integration, and the Fundamental Theorem of Calculus. You will meet uniform convergence and the Weierstrass M-test through guided questions; consult an introductory analysis text for their formal proofs if needed.
+
+\textbf{Notation:} Throughout, $0<a<1$, $b>1$, and
+\[
+  W(x)=\sum_{n=0}^\infty a^n\cos(\pi b^n x),\qquad
+  W_N(x)=\sum_{n=0}^N a^n\cos(\pi b^n x).
+\]
+We initially allow real $b>1$; in later sections, $b$ is an odd integer. We eventually \emph{fix} $a=\tfrac14$, $b=101$ to give a fully elementary proof of nowhere differentiability. Do not assume every choice of $a,b$ gives a nowhere-differentiable function.
+
+\section{From finite sums to an infinite function}
+\goal{Discover why $W$ is well-defined and bounded.}
+\begin{questions}
+\q{Write $W_0(x)$, $W_1(x)$, and $W_2(x)$ explicitly. Why is every $W_N$ continuous and differentiable on $\R$?}
+\q{For any real $t$, what are the sharp upper bounds for $|\cos t|$ and $|\sin t|$? Use one of them to bound $|a^n\cos(\pi b^n x)|$ independently of $x$.}
+\q{Compute $\sum_{n=0}^N a^n$ and its limit as $N\to\infty$. Exactly where do you use $0<a<1$?}
+\q{Prove, for every $x\in\R$ and $N\geq0$, that $|W_N(x)|\leq (1-a)^{-1}$. Does this inequality alone establish convergence of $W_N(x)$? Explain.}
+\q{For $M>N$, show
+\[
+ |W_M(x)-W_N(x)|\leq\sum_{n=N+1}^M a^n
+ \leq\frac{a^{N+1}}{1-a}.
+\]
+Why does the right-hand side tend to zero regardless of $x$?}
+\q{Use the Cauchy criterion for real sequences to conclude that $W_N(x)$ converges for each fixed $x$. Define $W(x)$ as this limit.}
+\q{Let $M\to\infty$ in the inequality from Q5. Prove the \emph{uniform tail bound}
+\[
+ \boxed{|W(x)-W_N(x)|\leq\frac{a^{N+1}}{1-a}\qquad(x\in\R).}
+\]
+What feature of this estimate is stronger than ordinary pointwise convergence?}
+\end{questions}
+\checkpoint{You should now have an existence proof, a bound $|W(x)|\leq 1/(1-a)$, and an error estimate valid simultaneously for all $x$.}
+
+\section{Why the limit is continuous}
+\goal{Prove continuity without assuming that an arbitrary pointwise limit of continuous functions is continuous.}
+\begin{questions}
+\q{Write the $\varepsilon$--$\delta$ definition of continuity of $W$ at a fixed point $c\in\R$. Indicate which quantities may depend on $\varepsilon$ and $c$.}
+\q{Use the triangle inequality to fill in the argument
+\[
+ |W(x)-W(c)|\leq
+ |W(x)-W_N(x)|+|W_N(x)-W_N(c)|+|W_N(c)-W(c)|.
+\]
+Why is it useful to introduce the finite sum $W_N$?}
+\q{Given $\varepsilon>0$, choose $N$ so that each of the two outer terms is smaller than $\varepsilon/3$ for \emph{all} $x$. Which previous estimate provides this choice?}
+\q{With that $N$ fixed, use continuity of $W_N$ at $c$ to find $\delta>0$ controlling the middle term by $\varepsilon/3$. Assemble the complete proof of continuity of $W$ at $c$.}
+\q{State the general theorem proved by your reasoning: if $f_N$ are continuous and converge uniformly to $f$, what follows? What goes wrong if you only know pointwise convergence?}
+\q{$\star$ Give a simple example of continuous functions on $[0,1]$ converging pointwise to a discontinuous limit. Try $f_N(x)=x^N$. At which endpoint does continuity fail?}
+\end{questions}
+\checkpoint{You have proved that $W$ is continuous at every real number. Differentiability has not yet been established or ruled out.}
+
+\section{Integrability and its logical prerequisites}
+\goal{Distinguish continuity, differentiability, Riemann integrability, and existence of an antiderivative.}
+\begin{questions}
+\q{State a theorem that guarantees Riemann integrability of a continuous function on a closed bounded interval $[c,d]$. Does the theorem require a derivative?}
+\q{Using Q12, show that $W$ is Riemann integrable on every $[c,d]$. Why should you \emph{not} claim from this alone that $\int_0^\infty W(x)\,dx$ converges?}
+\q{Define $I_N=\int_c^d W_N(x)\,dx$ and $I=\int_c^d W(x)\,dx$ (assume $c<d$). Use the integral inequality
+\[
+\left|\int_c^d g(x)\,dx\right|\leq(d-c)\sup_{[c,d]}|g|
+\]
+to show $|I-I_N|\leq(d-c)a^{N+1}/(1-a)$.}
+\q{Evaluate $I_N$ by integrating each of its finitely many terms. Then pass to the limit using Q16 to derive
+\[
+ \boxed{\int_c^d W(x)\,dx
+ =\sum_{n=0}^\infty\frac{a^n}{\pi b^n}
+ [\sin(\pi b^n d)-\sin(\pi b^n c)].}
+\]
+Which step justifies interchanging an \emph{infinite} sum and an integral?}
+\q{Assume $b$ is a positive integer. Evaluate $\int_0^2 W(x)\,dx$. What is the answer for $\int_{2k}^{2k+2}W(x)\,dx$ with integer $k$?}
+\q{Assume $b$ is odd. Show $W(x+2)=W(x)$ and $W(x+1)=-W(x)$. What is the mean value of $W$ over one period?}
+\q{$\star$ For odd integer $b$, show $W(k)=(-1)^k/(1-a)$ for every integer $k$. Explain why continuity and periodicity do \emph{not} imply that $W$ is constant.}
+\end{questions}
+
+\section{The antiderivative: convergence versus differentiation}
+\goal{Construct a differentiable function whose derivative will later turn out to be nowhere differentiable.}
+Define
+\[
+ F(x)=\sum_{n=0}^\infty\frac{a^n}{\pi b^n}\sin(\pi b^n x).
+\]
+\begin{questions}
+\q{Bound the absolute value of the $n$th term of $F$ by $(a/b)^n/\pi$. Why does the majorizing geometric series converge?}
+\q{Prove a uniform tail bound for $F$, analogous to Q7. Express it in terms of $r=a/b$.}
+\q{Using the integral formula from Q17 with $c=0$, show directly that
+\[
+ F(x)=\int_0^x W(t)\,dt,
+\]
+including when $x<0$ (use oriented integrals).}
+\q{State the appropriate part of the Fundamental Theorem of Calculus precisely, including the continuity hypothesis. Conclude that $F'(x)=W(x)$ for all $x\in\R$.}
+\q{Alternatively, differentiate a finite partial sum $F_N$. Verify $F_N'=W_N$. Why is the statement ``$F_N\to F$ uniformly'' \emph{by itself} insufficient to conclude $F_N'\to F'$? What extra information is available here?}
+\q{Compute the \emph{formal} second derivative series. Under the later choice $a=1/4$, $b=101$, do its coefficients tend to zero? Explain why failure of this formal series to converge is \emph{not by itself} a proof that $F''$ fails to exist.}
+\end{questions}
+\checkpoint{You now know $F\in C^1(\R)$, meaning $F'$ exists and is continuous. The stronger statement that $F''$ exists nowhere will follow from a separate proof.}
+
+\section{A function defined in terms of itself}
+\goal{Derive exact self-similarity and use it to describe values at different scales.}
+\begin{questions}
+\q{Separate the $n=0$ term of $W$. Reindex the remaining sum by $m=n-1$ to derive
+\[
+ \boxed{W(x)=\cos(\pi x)+aW(bx).}
+\]
+Carefully check the powers of $a$ and $b$.}
+\q{Do the same for $F$ to obtain
+\[
+ \boxed{F(x)=\frac{\sin(\pi x)}{\pi}+\frac ab F(bx).}
+\]}
+\q{Substitute the functional equation for $W(bx)$ back into Q27. Derive an expression for $W(x)$ involving two explicit cosines and $a^2W(b^2x)$.}
+\q{By induction on $N$, derive
+\[
+ W(x)=\sum_{n=0}^{N}a^n\cos(\pi b^n x)
+       +a^{N+1}W(b^{N+1}x).
+\]
+Use boundedness of $W$ to recover the original infinite series from this identity.}
+\q{Suppose $U:\R\to\R$ is bounded and satisfies $U(x)=\cos(\pi x)+aU(bx)$. Prove that $U=W$: iterate the functional equation and let $N\to\infty$. Why does boundedness matter?}
+\q{Explain in words the two competing changes from scale $n$ to scale $n+1$: the wavelength of a cosine and its amplitude. By what factors do they change?}
+\q{$\star$ When $b$ is an odd integer, use periodicity and the functional equation to identify simple special values such as $W(0)$ and $W(1)$. Check against Q20.}
+\end{questions}
+
+\section{Why termwise differentiation is dangerous}
+\goal{Build intuition for nondifferentiability while distinguishing a warning sign from a proof.}
+\begin{questions}
+\q{Differentiate $W_N$ explicitly:
+\[
+ W_N'(x)=-\pi\sum_{n=0}^{N}(ab)^n\sin(\pi b^n x).
+\]
+What happens to the amplitudes of these derivative terms when $ab>1$?}
+\q{Why is a divergent series of formal derivatives \emph{not enough} to show that $W$ is not differentiable at a point? Give the logical gap: which limit is being interchanged with which other limit?}
+\q{At $x=0$, every $W_N'(0)=0$. Does that prove $W'(0)=0$? Compare with the definition
+\[
+ W'(0)=\lim_{h\to0}\frac{W(h)-W(0)}h.
+\]}
+\q{Write the \emph{negation} of differentiability at $x$: what would it suffice to exhibit about difference quotients along some sequence $h_m\to0$? Is it necessary to prove the quotient tends to $+\infty$ along \emph{every} such sequence?}
+\end{questions}
+
+\section{Main theorem: an elementary proof of nowhere differentiability}
+\goal{Complete a proof from first principles for the explicit parameters
+\[
+ \boxed{a=\tfrac14,\qquad b=101.}
+\]
+For these values, $ab=101/4>1$. You will show that, for every $x$, there are arbitrarily small increments with arbitrarily large absolute difference quotients.}
+
+\textbf{Preparation.} Fix any $x\in\R$ and integer $m\geq1$. Define
+\[
+ h_m^+=\frac1{2b^m},\qquad h_m^-=-\frac1{2b^m},
+\qquad
+ \Delta_m^{\pm}=W(x+h_m^{\pm})-W(x).
+\]
+Split $\Delta_m^{\pm}$ into the summands with $n<m$, the single summand $n=m$, and the tail with $n>m$:
+\[
+ \Delta_m^{\pm}=L_m^{\pm}+C_m^{\pm}+T_m^{\pm}.
+\]
+\begin{questions}
+\q{Verify that $h_m^\pm\to0$ as $m\to\infty$ and $|h_m^\pm|=1/(2b^m)$. Why is the sign allowed to depend on $m$ and $x$?}
+\q{Use the Mean Value Theorem and $|\sin t|\leq1$ to show
+\[
+ |\cos(u+v)-\cos u|\leq|v|.
+\]
+Deduce, for every $n<m$,
+\[
+ a^n|\cos(\pi b^n(x+h_m^\pm))-\cos(\pi b^nx)|
+ \leq \pi a^nb^n|h_m^\pm|.
+\]}
+\q{Sum the preceding inequalities. Compute the geometric sum and prove
+\[
+ |L_m^\pm|\leq\frac{\pi}{2b^m}\sum_{n=0}^{m-1}(ab)^n
+ \leq\frac{\pi}{2(ab-1)}a^m.
+\]
+Where did you use $ab>1$?}
+\q{Bound each high-frequency cosine difference by $2$. Sum the tail to obtain
+\[
+ |T_m^\pm|\leq2\sum_{n=m+1}^{\infty}a^n
+ =\frac{2a}{1-a}a^m.
+\]
+Explain why this estimate does not use differentiability.}
+\q{Put $\theta=\pi b^m x$. Show that the central term equals
+\[
+ C_m^+=a^m(-\sin\theta-\cos\theta),\qquad
+ C_m^-=a^m(\sin\theta-\cos\theta).
+\]
+Which trigonometric identity produces the shift by $\pm\pi/2$?}
+\q{Prove the elementary lemma
+\[
+ \max\{|\sin\theta+\cos\theta|,
+             |\sin\theta-\cos\theta|\}\geq1
+ \qquad(\theta\in\R).
+\]
+\emph{Suggestion:} calculate the sum of the squares of the two expressions.}
+\q{Using Q41, choose one sign $\sigma_m\in\{+,-\}$ (possibly depending on $x,m$) such that $|C_m^{\sigma_m}|\geq a^m$. Combine this with the reverse triangle inequality to prove
+\[
+ |\Delta_m^{\sigma_m}|\geq a^m
+ \left(1-\frac{\pi}{2(ab-1)}-\frac{2a}{1-a}\right).
+\]}
+\q{For $a=1/4$ and $b=101$, verify that
+\[
+ c_0:=1-\frac{\pi}{2(ab-1)}-\frac{2a}{1-a}
+ =\frac13-\frac{2\pi}{97}>0.
+\]
+You may use $\pi<4$ to establish positivity without decimal approximations.}
+\q{Divide the estimate from Q42 by $|h_m^{\sigma_m}|=1/(2b^m)$ to deduce
+\[
+ \left|\frac{W(x+h_m^{\sigma_m})-W(x)}{h_m^{\sigma_m}}\right|
+ \geq2c_0(ab)^m\longrightarrow\infty.
+\]
+What makes the right-hand side unbounded?}
+\q{Suppose for contradiction that $W'(x)$ exists as a finite real number. Show that along \emph{every} sequence $h_m\to0$ with $h_m\ne0$, the difference quotients must converge to $W'(x)$, and hence remain bounded eventually. Identify the contradiction.}
+\q{Where, if anywhere, did you use a special property of $x$? State the final theorem with the parameter values and the exact meaning of ``nowhere differentiable.''}
+\end{questions}
+\checkpoint{You have a complete elementary proof that $\sum_{n\geq0}4^{-n}\cos(\pi 101^n x)$ is continuous everywhere and differentiable nowhere. This is a sufficient example, not a proof of the most general Weierstrass theorem.}
+
+\section{Consequences for the integral and for $F$}
+\goal{Connect the proof to the Fundamental Theorem of Calculus and smoothness classes.}
+\begin{questions}
+\q{For the explicit parameters of Section 7, list which of the following are true, false, or need qualification: $W$ is bounded; $W$ is continuous; $W$ is Riemann integrable on $[0,1]$; $W'$ exists at $0$; $W$ has an antiderivative. Justify each classification.}
+\q{Prove $F\in C^1(\R)$ using the FTC. Now prove $F''(x)$ does \emph{not} exist at any $x$. Which previously proved theorem supplies the second conclusion?}
+\q{Does the fact that $W$ is bounded and periodic imply that $\int_0^\infty W(x)\,dx$ converges? For odd integer $b$, analyze $\int_0^R W$ using $F(R)$, and show that $F$ has no limit as $R\to\infty$. \emph{Hint:} use periodicity and compare $F(2k)$ with $F(2k+t)$ for a fixed $t$ with $F(t)\ne0$. Prove such a $t$ exists.}
+\q{Explain why the equation $F'=W$ is compatible with ``$W$ is nowhere differentiable.'' Distinguish a function being a derivative from that function having its own derivative.}
+\end{questions}
+
+\section{Oscillations, regularity, and fractal structure (optional)}
+\goal{Quantify how the amplitude and frequency compete. This section is enrichment; it is not needed for the previous proofs.}
+\begin{questions}
+\q{$\star$ Define
+\[
+ \alpha=-\frac{\log a}{\log b}.
+\]
+Assuming $ab>1$, prove $0<\alpha<1$ and $a=b^{-\alpha}$. What does $a^n=(b^{-n})^\alpha$ say about amplitude versus wavelength?}
+\q{$\star$ For $0<|h|\leq1$, choose $m\geq0$ with $b^{-(m+1)}<|h|\leq b^{-m}$. Split $W(x+h)-W(x)$ into terms $n<m$ and terms $n\geq m$. Show
+\[
+ |W(x+h)-W(x)|
+ \leq \pi|h|\frac{(ab)^m-1}{ab-1}+\frac{2a^m}{1-a}.
+\]
+Estimate both terms by a constant times $|h|^\alpha$. Thus prove a global H\"older estimate
+\[
+ |W(x+h)-W(x)|\leq C|h|^\alpha.
+\]
+Keep track of where $ab>1$ is needed.}
+\q{$\star$ A covering heuristic: at horizontal scale $\delta=b^{-m}$, vertical oscillations are on the order of $a^m=\delta^\alpha$. If roughly $\delta^{-1}$ horizontal strips are needed and each needs roughly $\delta^\alpha/\delta$ square boxes of side $\delta$, what power of $\delta^{-1}$ describes the total number of boxes?}
+\q{$\star$ The heuristic in Q54 suggests a graph dimension $D\approx2-\alpha=2+\log a/\log b$. For $a=1/4,b=101$, is this number between $1$ and $2$? Why is a box-counting \emph{heuristic} not yet a rigorous dimension theorem?}
+\q{$\star$ Explain why ``self-similar'' should be qualified here: the functional equation for $W$ includes an \emph{added cosine}, not merely a rescaled copy of $W$. Contrast this with exact self-similarity of a simple geometric fractal such as the Cantor set.}
+\end{questions}
+
+\section{Final synthesis: reconstruct the argument from memory}
+Answer these without referring to previous pages.
+\begin{questions}
+\q{Write a five-to-eight-line proof that $W$ is continuous everywhere. Identify precisely where uniformity enters.}
+\q{Prove that $W$ is Riemann integrable on every compact interval, and explain why its integral may be computed term by term.}
+\q{Derive the functional equation for $W$, and explain what makes its solution unique among bounded functions.}
+\q{Give the key strategy of the nowhere-differentiability proof: the chosen increments, the low/central/high frequency decomposition, and the inequality causing the difference quotients to become unbounded.}
+\q{Explain how a nowhere-differentiable function can be the derivative of a $C^1$ function.}
+\q{Find and correct the logical error in each statement: (a) ``A uniform limit of differentiable functions is differentiable.'' (b) ``A function must be differentiable to be Riemann integrable.'' (c) ``If the series of formal derivatives diverges, the original sum is nowhere differentiable.''}
+\end{questions}
+
+\appendix
+\section{Hints (consult only after attempting the question)}
+\begin{itemize}[leftmargin=*]
+\item \textbf{Q4--Q7:} Bounded partial sums need not converge. The essential extra step is the geometric bound on \emph{differences} of partial sums.
+\item \textbf{Q8--Q12:} Choose $N$ \emph{first}, using the uniform error bound. Then choose $\delta$ from continuity of that one finite sum.
+\item \textbf{Q16--Q17:} Absolute value of an integral is at most interval length times a uniform bound. The resulting error goes to zero.
+\item \textbf{Q24:} Uniform convergence of $f_N$ does not imply convergence of $f_N'$. Here the derivative series itself converges uniformly, but the FTC argument is simpler.
+\item \textbf{Q30:} Iterate the relation and bound the remainder by $a^{N+1}\sup |U|$.
+\item \textbf{Q38--Q39:} For low frequencies, use $|\cos(u+v)-\cos u|\leq|v|$ and the identity $\sum_{n=0}^{m-1}r^n=(r^m-1)/(r-1)$.
+\item \textbf{Q40--Q43:} The high-frequency tail costs $2a^{m+1}/(1-a)$. For the central term, the sum of the two candidate squares is $2$; at least one absolute value is $\geq1$.
+\item \textbf{Q44--Q46:} Once one good sign is selected for each $m$, that sequence of signed increments tends to zero. Convergence of a difference quotient would imply boundedness along it.
+\item \textbf{Q49:} If $F(t)=0$ for all $t$, then $F'=W=0$, contradicting $W(0)=1/(1-a)$. Periodicity makes $F(2k+t)=F(t)$.
+\item \textbf{Q53:} From $b^{-(m+1)}<|h|\leq b^{-m}$, derive $a^m=b^{-m\alpha}\leq b^\alpha|h|^\alpha$. Also $|h|(ab)^m\leq a^m$.
+\end{itemize}
+
+\section{Reference statements to learn or prove separately}
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Cauchy criterion in $\R$:} a real sequence converges if and only if it is Cauchy.
+\item \textbf{Uniform convergence:} $f_N\to f$ uniformly on $E$ if $\forall\varepsilon>0\ \exists N_0\ \forall N\geq N_0\ \forall x\in E:\ |f_N(x)-f(x)|<\varepsilon$.
+\item \textbf{Weierstrass M-test:} if $|f_n(x)|\leq M_n$ on $E$ and $\sum M_n<\infty$, then $\sum f_n$ converges absolutely and uniformly on $E$.
+\item \textbf{Continuity theorem:} a uniform limit of continuous functions is continuous.
+\item \textbf{Riemann integrability theorem:} a continuous real-valued function on a closed bounded interval is Riemann integrable.
+\item \textbf{Fundamental Theorem of Calculus, Part I:} if $f$ is continuous on an interval containing $0$ and $x$, then $G(x)=\int_0^x f(t)\,dt$ satisfies $G'(x)=f(x)$.
+\item \textbf{Termwise differentiation (one version):} if $f_n$ are $C^1$ on an interval, $\sum f_n'(x)$ converges uniformly there, and $\sum f_n(x_0)$ converges at one point, then $\sum f_n$ defines a differentiable function with derivative $\sum f_n'$ (with appropriate endpoint interpretation).
+\end{enumerate}
+
+\section*{Further directions}
+After completing the workbook, investigate the general nowhere-differentiability results for $\sum a^n\cos(\pi b^n x)$, the distinction between H\"older continuity and differentiability, and rigorous definitions of box-counting and Hausdorff dimensions. The elementary proof here deliberately uses one convenient parameter pair; it does not establish a dimension formula for the graph.
+\end{document}
